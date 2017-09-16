@@ -1,0 +1,41 @@
+Code;Sol;Traitement;Poids
+A_S1;Riche, humide;Sans;0,15
+A_S2;Riche, humide;Sans;0,02
+A_S3;Riche, humide;Sans;0,16
+A_S4;Riche, humide;Sans;0,37
+A_S5;Riche, humide;Sans;0,22
+A_F1;Riche, humide;Fertilisant;1,34
+A_F2;Riche, humide;Fertilisant;0,14
+A_F3;Riche, humide;Fertilisant;0,02
+A_F4;Riche, humide;Fertilisant;0,08
+A_F5;Riche, humide;Fertilisant;0,08
+A_I1;Riche, humide;Irrigation;0,23
+A_I2;Riche, humide;Irrigation;0,04
+A_I3;Riche, humide;Irrigation;0,34
+A_I4;Riche, humide;Irrigation;0,16
+A_I5;Riche, humide;Irrigation;0,05
+A_FI1;Riche, humide;Les deux;2,03
+A_FI2;Riche, humide;Les deux;0,27
+A_FI3;Riche, humide;Les deux;0,92
+A_FI4;Riche, humide;Les deux;1,07
+A_FI5;Riche, humide;Les deux;2,38
+B_S1;Sablonneux, sec;Sans;0,6
+B_S2;Sablonneux, sec;Sans;1,11
+B_S3;Sablonneux, sec;Sans;0,07
+B_S4;Sablonneux, sec;Sans;0,07
+B_S5;Sablonneux, sec;Sans;0,44
+B_F1;Sablonneux, sec;Fertilisant;1,16
+B_F2;Sablonneux, sec;Fertilisant;0,93
+B_F3;Sablonneux, sec;Fertilisant;0,3
+B_F4;Sablonneux, sec;Fertilisant;0,59
+B_F5;Sablonneux, sec;Fertilisant;0,17
+B_I1;Sablonneux, sec;Irrigation;0,65
+B_I2;Sablonneux, sec;Irrigation;0,08
+B_I3;Sablonneux, sec;Irrigation;0,62
+B_I4;Sablonneux, sec;Irrigation;0,01
+B_I5;Sablonneux, sec;Irrigation;0,03
+B_FI1;Sablonneux, sec;Les deux;0,22
+B_FI2;Sablonneux, sec;Les deux;2,13
+B_FI3;Sablonneux, sec;Les deux;2,33
+B_FI4;Sablonneux, sec;Les deux;1,74
+B_FI5;Sablonneux, sec;Les deux;0,12
