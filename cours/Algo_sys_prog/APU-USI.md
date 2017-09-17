@@ -19,9 +19,9 @@
     - [Désignation des fichiers et répertoire](#designation-des-fichiers-et-repertoire)
 
 
-## Ordinateur
+## I. Ordinateur
 
-### Composants basiques:
+### A. Composants basiques:
 
 - **Microprocesseur**
 
@@ -46,7 +46,7 @@ L'information est stocké sous forme binaire. La taille de la case mémoire est 
 
 
 
-### Le processeur
+### B. Le processeur
 
 Le processeur contient l'**UAL** : Unité Arithmétique et Logique.
 
@@ -79,7 +79,7 @@ Il faut une puissance de calcul de 1 GFLOPS (lire gigaFLOPS) avec un processeur 
 
 
 
-## Les processus
+## II. Les processus
 
 Un processus est une **"occurence"** en mémoire d'un programme éxecutable.
 
@@ -124,7 +124,7 @@ Un processus peut "s'auto-geler" s'il n'a plus rien à faire pendant $\Delta$t, 
 
 
 
-### Jeux d'instructions du processeur
+### A. Jeux d'instructions du processeur
 
 Les **instructions critiques** du processeur accèdent au matériel (par exemple: écriture sur le disque dur) et les **non critiques** ne peuvent pas y accéder. Pour protéger le matériel de demandes illégitimes de processus (malveillants notemment), ils ont rajoutés dans le processeur une case mémoire de 1 bit (0 ou 1) appelé le **mode**.
 
@@ -157,7 +157,7 @@ Pour que le noyau soit chargé en premier lors du démarage de l'ordinateur il y
 
 
 
-### Etats des Processus:
+### B. Etats des Processus:
 
 - En création (en cours de copie sur la RAM et attribution de PID)
 - En attente
@@ -171,7 +171,7 @@ Plus la valeur est élevé plus le processus est prioritaire. Une fois le proces
 
 
 
-### Filiation des processus
+### C. Filiation des processus
 
 ***Un processus n'est créé qu'à l'initiative d'un autre processus (il y a une exception) en passant par le noyau par un appel système.***
 
@@ -181,7 +181,7 @@ Le noyau crée le tout premier processus au démarage de l'ordinateur (init), qu
 
 
 
-### Les librairies de langages
+### D. Les librairies de langages
 
 Ils en existent des nombreuses (python, C, java, etc...) qui ont des fonctions pré-conçus et qui évitent d'avoir à tout recoder. Exemple: la fonction cosinus: cos(x).
 
@@ -189,7 +189,7 @@ Ils en existent des nombreuses (python, C, java, etc...) qui ont des fonctions p
 
 
 
-## Environnements UNIX
+## III. Environnements UNIX
 
 Nom du Noyau: **Linux**
 
