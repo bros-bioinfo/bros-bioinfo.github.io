@@ -36,7 +36,7 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
 **Pour commencer**, il faut:
 - installer git;
-- se faire un comtpe github (et se faire ajouter en contributeur)
+- se faire un compte github (et se faire ajouter en contributeur)
 - se placer dans le répertoire où on veut mettre le dossier avec cd
 - cloner le dossier github localement:
   ```shell
