@@ -12,7 +12,7 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
 
 
-<br>
+
 ### Omics and Bioinformatics
 
 ###### /cours/Omics_and_Bioinformatics/
@@ -22,14 +22,12 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
 
 
-<br>
 ### Traitements des données environnementales
 
 ###### /cours/Stats/
 
 
 
-<br>
 #### Partie Technique
 
 
