@@ -1,9 +1,5 @@
 # Algorithmique, Programmation et Utilisation des Systèmes Informatiques
 
-
-
-[TOC]
-
 ## Ordinateur
 
 ### Composants basiques:
@@ -281,7 +277,3 @@ Processus placé dans le répertoire courant (**CUR_DIR**)
 .	répertoire courant
 
 ~	chemin absolu vers ***HOME_DIR***
-
-:::success
-Yes :tada:
-:::
