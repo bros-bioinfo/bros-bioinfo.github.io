@@ -276,4 +276,4 @@ Processus placé dans le répertoire courant (**CUR_DIR**)
 
 .	répertoire courant
 
-~	chemin absolu vers ***HOME_DIR***
+~	chemin absolu vers ***HOME_DIR*** 
