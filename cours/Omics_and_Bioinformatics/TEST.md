@@ -110,3 +110,11 @@ Quantification of similarity between 2 sequences.
 ​	***Edit Distance or Distance of Levenshtein***: Measure the number of operations in terms of insertions, deletions & substitutions required to transform the sequence S1 into S2.
 
 Managements of indels via gaps (-) and penalties of gap at the creation (+10) and extension (+1)
+
+
+
+# AJOUT DEPUIS PC PIERRE
+
+# AJOUT DEPUIS PC PIERRE
+
+# AJOUT DEPUIS PC PIERRE
