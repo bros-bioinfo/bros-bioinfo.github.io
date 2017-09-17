@@ -2,15 +2,15 @@
 Les analyses numériques, statistiques ou autres, sont devenues indispensables en sciences environnementales, quelle que soit la discipline - sédimentologie, paléo-océanographie, hydrodynamique, biogéochimie, écotoxicologie,  écologie... Elles permettent de rester objectif vis-à-vis des conclusions avancées.
 ## Pourquoi des 'statistiques' en sciences environnementales?
 +   Les objets **naturels** (organismes vivants, masse d'eaux, roches...) sont entachés d'une **forte variabilité** individuelle. Il est donc nécessaire de considérer différents éléments de la population étudiée pour accéder à cette variabilité...
-    > Nombre pommes = 25
-    > Nombre de grosses pommes = 11/25 = **44%** *cela correspond à la valeur juste.*
+    > Nombre pommes = 25  
+    > Nombre de grosses pommes = 11/25 = **44%** *cela correspond à la valeur juste.*  
     > Mais pour 10⁵ ou 10⁶ pommes, il est impossible de déterminer la valeur juste !
 +   Leur étude nécessite de réaliser un **échantillonnage représentatif** de la population, reflétant toute la composition et la complexité de cette population.
     > **ECHANTILLON 1** :
-    > nombre de pommes = 8
-    > Grosses pommes = 2/8 = **25%**
-    > **ECHANTILLON 2** :
-    > nombre de pommes = 8
+    > nombre de pommes = 8  
+    > Grosses pommes = 2/8 = **25%**  
+    > **ECHANTILLON 2** :  
+    > nombre de pommes = 8  
     > Grosses pommes = 4/8 = **50%**  
     > Des echantillons différents peuvent être obtenu au sein même d'une population !
 +   Hors, un **échantillon** ne donnera pas la valeur juste!!! Il ne donne qu'une vision partielle de la population malgré sa représentativité
