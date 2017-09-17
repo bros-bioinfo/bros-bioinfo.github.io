@@ -1,7 +1,3 @@
----
-layout: page
-title: Algorithmique, Programmation et Utilisation des Systèmes Informatiques
----
 {:toc}
 
 # Algorithmique, Programmation et Utilisation des Systèmes Informatiques
