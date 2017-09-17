@@ -4,6 +4,7 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
 
 ### Algorithmique, Programmation et Utilisation des Systèmes Informatiques
+
 ###### /cours/Algo_sys_prog/
 
 - [Fichier du cours: APU-USI](https://bros-bioinfo.github.io/cours/Algo_sys_prog/APU-USI)
@@ -13,6 +14,7 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
 <br>
 ### Omics and Bioinformatics
+
 ###### /cours/Omics_and_Bioinformatics/
 
 - [Fichier du cours: OBI](https://bros-bioinfo.github.io/cours/Omics_and_Bioinformatics/OBI)
@@ -22,6 +24,7 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
 <br>
 ### Traitements des données environnementales
+
 ###### /cours/Stats/
 
 
@@ -34,6 +37,7 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
 **Pour commencer**, il faut:
 - installer git;
+- se faire un comtpe github (et se faire ajouter en contributeur)
 - se placer dans le répertoire où on veut mettre le dossier avec cd
 - cloner le dossier github localement:
   ```shell
