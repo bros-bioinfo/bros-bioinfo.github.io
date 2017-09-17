@@ -1,3 +1,9 @@
+---
+layout: page
+title: Algorithmique, Programmation et Utilisation des Systèmes Informatiques
+---
+{:toc}
+
 # Algorithmique, Programmation et Utilisation des Systèmes Informatiques
 
 ## Ordinateur
@@ -276,4 +282,4 @@ Processus placé dans le répertoire courant (**CUR_DIR**)
 
 .	répertoire courant
 
-~	chemin absolu vers ***HOME_DIR*** 
+~	chemin absolu vers ***HOME_DIR***
