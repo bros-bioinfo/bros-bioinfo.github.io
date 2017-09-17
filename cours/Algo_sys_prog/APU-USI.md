@@ -1,6 +1,6 @@
 # Algorithmique, Programmation et Utilisation des Systèmes Informatiques
 
-- [Algorithmique, Programmation et Utilisation des Systèmes Informatiques](#algorithmique-programmation-et-utilisation-des-systemes-informatiques)
+
   - [Ordinateur](#ordinateur)
     - [Composants basiques:](#composants-basiques)
       - [Le contenu de la RAM:](#le-contenu-de-la-ram)
