@@ -11,7 +11,7 @@ Les analyses numériques, statistiques ou autres, sont devenues indispensables e
     > Grosses pommes = 2/8 = **25%**
     > **ECHANTILLON 2** :
     > nombre de pommes = 8
-    > Grosses pommes = 4/8 = **50%**
+    > Grosses pommes = 4/8 = **50%**  
     > Des echantillons différents peuvent être obtenu au sein même d'une population !
 +   Hors, un **échantillon** ne donnera pas la valeur juste!!! Il ne donne qu'une vision partielle de la population malgré sa représentativité
 +   Des échantillons similaires peuvent provenir de populations différentes !
