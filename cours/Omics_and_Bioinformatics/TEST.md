@@ -8,13 +8,7 @@
 
 ## Introduction
 
-### Definition
-
-- Better understanding the logic behin bioinformatics program.
-
-- Useful for automatically combining several bioinformatics tools (pipeline)
-
-- Automating a repetitive task
+# DELETION
 
 
 ### Data & Formats: DataBanks
@@ -36,6 +30,8 @@
 - molecular type
 
 Databanks store informations as flat files. The organization is line by line: **(Field/Descriptor + Content)** and give meaning to the texts.
+
+# AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT
 
 Text file is different of Word Processing file. Flats file use **ASCII** characters. European databanks use a two letter descriptor while american databanks use longer letters descriptor.
 
