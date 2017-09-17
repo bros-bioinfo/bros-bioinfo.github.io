@@ -1,3 +1,6 @@
+---
+title: Algorithmique, Programmation et Utilisation des Systèmes Informatiques
+---
 # Algorithmique, Programmation et Utilisation des Systèmes Informatiques
 
 - [Algorithmique, Programmation et Utilisation des Systèmes Informatiques](#algorithmique-programmation-et-utilisation-des-systemes-informatiques)
