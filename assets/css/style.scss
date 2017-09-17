@@ -17,6 +17,9 @@ h3{
 h4, h5, h6, p, li,{
   margin-left: 45px;
 }
+li > p{
+  margin-left: 0px;
+}
 
 /* CODE SYNTAX  - MONOKAI THEME */
 .highlight pre { background-color: #272822; }
