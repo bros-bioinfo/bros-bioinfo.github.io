@@ -2,6 +2,8 @@
 
 Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
+------
+## Les Cours
 
 ### Algorithmique, Programmation et Utilisation des Systèmes Informatiques
 
@@ -27,9 +29,8 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 ###### /cours/Stats/
 
 
-
-#### Partie Technique
-
+------
+## Partie Technique
 
 ##### Les commandes git:
 
@@ -44,21 +45,21 @@ Ici on va publier les cours du M1 de Bordeaux. Enjoy !
 
 
 
-**Avant d'éditer le fichier**: il faut se mettre dans le répertoire voulu et:
+**Avant d'éditer le fichier**: il faut se mettre dans la racine du projet et:
 ```shell
 git pull
 ```
-(Cela permet de récupérer les modifications éventuels depuis internet).
+(Cela permet de récupérer les modifications éventuels réalisées par d'autres depuis internet).
 
 
 **Après l'édition du fichier**:
 ```shell
 git add --all ; git commit -m "updates des cours" ; git push --all
 ```
-
-git add: permet d'ajouter les fichiers modifiés à la liste d'envoi;
-git commit: message de changement;
-git push: upload
+S'il y a des problèmes, faites chaques commandes séparément.
+- git add: permet d'ajouter les fichiers modifiés à la liste d'envoi;
+- git commit: message de changement;
+- git push: upload
 
 
 **Convention pour nommer les fichiers (et en déduire l'url):**
