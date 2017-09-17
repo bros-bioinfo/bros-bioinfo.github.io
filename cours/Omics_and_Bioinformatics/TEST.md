@@ -4,11 +4,10 @@
 
 *password: ob2017*
 
-# RETEST TEST TEST TEST
+
 
 ## Introduction
 
-# DELETION
 
 
 ### Data & Formats: DataBanks
@@ -31,7 +30,7 @@
 
 Databanks store informations as flat files. The organization is line by line: **(Field/Descriptor + Content)** and give meaning to the texts.
 
-# AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT AJOUT
+
 
 Text file is different of Word Processing file. Flats file use **ASCII** characters. European databanks use a two letter descriptor while american databanks use longer letters descriptor.
 
@@ -110,11 +109,3 @@ Quantification of similarity between 2 sequences.
 ​	***Edit Distance or Distance of Levenshtein***: Measure the number of operations in terms of insertions, deletions & substitutions required to transform the sequence S1 into S2.
 
 Managements of indels via gaps (-) and penalties of gap at the creation (+10) and extension (+1)
-
-
-
-# AJOUT DEPUIS PC PIERRE
-
-# AJOUT DEPUIS PC PIERRE
-
-# AJOUT DEPUIS PC PIERRE
