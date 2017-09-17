@@ -94,7 +94,7 @@ In a classical study there is 4 steps:
 - Construction of one (or several) trees
 - Determination of robustness of trees
 
-
+# AJOUT 2 EN LIGNE
 
 ### Data selection:
 
@@ -112,4 +112,9 @@ Quantification of similarity between 2 sequences.
 
 Managements of indels via gaps (-) and penalties of gap at the creation (+10) and extension (+1)
 
+<<<<<<< HEAD
 # AJOUT 1 DEPUIS ORDI PIERRE
+=======
+# AJOUT 1 EN LIGNE
+
+>>>>>>> 05bffa017c5c215dfed026fb73556e346b93c7b4
