@@ -1,6 +1,4 @@
-#Omics and Bioinformatics
-
-[TOC]
+# Omics and Bioinformatics
 
 *UE; 4TBI703U*
 
@@ -10,7 +8,7 @@
 
 ## Introduction
 
-###Definition
+### Definition
 
 - Better understanding the logic behin bioinformatics program.
 
@@ -19,7 +17,7 @@
 - Automating a repetitive task
 
 
-###Data & Formats: DataBanks
+### Data & Formats: DataBanks
 
 **Generalist Banks:**
 
@@ -63,7 +61,7 @@ FASTA:	> Protein sequence
 
 
 
-###Tools:
+### Tools:
 
 **NCBI GQUERY**
 
@@ -86,7 +84,7 @@ FASTA:	> Protein sequence
 
 
 
-##Phylogenetics
+## Phylogenetics
 
 Foundation of cladistics: Willi Hennig (1913-1976)
 
@@ -116,6 +114,3 @@ Quantification of similarity between 2 sequences.
 ​	***Edit Distance or Distance of Levenshtein***: Measure the number of operations in terms of insertions, deletions & substitutions required to transform the sequence S1 into S2.
 
 Managements of indels via gaps (-) and penalties of gap at the creation (+10) and extension (+1)
-
-
-
