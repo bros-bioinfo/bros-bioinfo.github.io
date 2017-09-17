@@ -83,6 +83,8 @@ FASTA:	> Protein sequence
 
 Foundation of cladistics: Willi Hennig (1913-1976)
 
+# AJOUT 2 DEPUIS ORDI PIERRE
+
 It's a series of logical rules for searching relationships (parent/child) without using fossils. The purpose is the reconstruction of evolutionary history of species by comparing gene (or protein) sequences of various species. There is two types of data (organism and molecular data).
 
 In a classical study there is 4 steps:
@@ -109,3 +111,5 @@ Quantification of similarity between 2 sequences.
 ​	***Edit Distance or Distance of Levenshtein***: Measure the number of operations in terms of insertions, deletions & substitutions required to transform the sequence S1 into S2.
 
 Managements of indels via gaps (-) and penalties of gap at the creation (+10) and extension (+1)
+
+# AJOUT 1 DEPUIS ORDI PIERRE
