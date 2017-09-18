@@ -1,7 +1,7 @@
 # IMAGE PROCESSING
 ## 1.  Introduction
 In image processing softwares like ImageJ, what's a digital image? how the grays, colors are encoded? how these data are stored in a file?
-ImageJ is a softawre wich is :
+ImageJ is a software wich is :
 +   Free
 +   Open source
 +   Based on Java
