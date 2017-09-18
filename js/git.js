@@ -9,6 +9,7 @@ document.querySelector("#my-github-projects").addEventListener("click", function
               if(rawFile.status === 200 || rawFile.status === 0)
               {
                   var allText = rawFile.responseText;
+                  allText.replace(/^.*path.*$/mg, "");
                   console.log(allText);
               }
           }
