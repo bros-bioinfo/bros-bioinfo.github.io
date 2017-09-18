@@ -14,4 +14,7 @@ console.log(string);
 }, 'text');
 
 */
-$("#gitlist").load("list.php");
+$("#gitlist").load("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/trees/master");
+
+var text1 = $("#gitlist").text();
+console.log(text1);
