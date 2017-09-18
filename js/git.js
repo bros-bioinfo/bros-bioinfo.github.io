@@ -1,20 +1,16 @@
 
-/*$.get( "https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/trees/master?recursive=1", function( data ) {
+$.get( "https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/trees/master?recursive=1", function( data ) {
+data = data.match(/"path": "cours(.+)\n/g);
+var test = String(data).replace("\n","<br>").replace(',','').replace('"path": "cours/',"").replace('"path":',"").replace('"','').replace('"','');
+x = 0
+while (x < 80){
+var test = test.replace("\n","<br>").replace(',','').replace('"path": "cours/',"").replace('cours/',"").replace('"path":',"").replace('"','').replace('"','');
+x++;
+}
 
-  var text1 = data;
-  var text2 = String(text1).match(/"path": (.+)/g);
-  var str = String(text2);
-$("#gitlist").text(String(str));
 
-var string = str;
-string.replace(",","<br><br>");
-document.getElementById("gitlist").innerHTML = string;
-console.log(string);
+$("#gitlist").html(test+"<br>");
+
+console.log(data+"\n");
 
 }, 'text');
-
-*/
-$("#gitlist").load("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/trees/master");
-
-var text1 = $("#gitlist").text();
-console.log(text1);
