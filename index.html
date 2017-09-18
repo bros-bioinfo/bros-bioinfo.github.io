@@ -1,3 +1,7 @@
+...
+<div id="my-github-projects"/>;
+...
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,5 +111,15 @@
 <p><strong>Convention pour nommer les fichiers (et en déduire l’url):</strong></p>
 
 <p>Exemple: <br>
-- Fichier Markdown du TD de stat n°1: stats/td1/td1.md</p></div></body>
+- Fichier Markdown du TD de stat n°1: stats/td1/td1.md</p></div>
+
+<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="/js/git.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#my-github-projects").loadRepositories("bros-bioinfo");
+    });
+</script>
+
+</body>
 </html>
