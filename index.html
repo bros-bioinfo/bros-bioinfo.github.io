@@ -1,125 +1,173 @@
-<?php
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-GitHub-OTP, X-Requested-With
-Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE
-Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-Access-Control-Max-Age: 86400
-?>
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Title</title>
-<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
-<body><div class="container"><h1 id="bienvenue-sur-bros-bionfo">Bienvenue sur Bros-Bionfo</h1>
 
-<p>Ici on va publier les cours du M1 de Bordeaux. Enjoy !</p>
+<body>
 
-<hr>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post.html"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Bros-Bioinfo</h1>
+            <span class="subheading">Les cours du M1 Bioinfo de Bordeaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<div id="gitlist"/></div>;
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <h1 class="post-title">
+                  Listes des url des cours;
+                  <br><br>
+                </h1>
+          <h3 class="post-subtitle">
 
+                  <div id="gitlist"/></div>
 
-<h2 id="les-cours">Les Cours</h2>
+                </h3>
 
+        </div>
+        <hr>
+        <div class="post-preview">
+          <h1 class="post-title">
+                Partie Technique
+                <br><br>
+              </h1>
 
+          <h3 id="les-commandes-git">Les commandes git:</h3>
 
-<h3 id="algorithmique-programmation-et-utilisation-des-systèmes-informatiques">Algorithmique, Programmation et Utilisation des Systèmes Informatiques</h3>
+          <p><strong>Pour commencer</strong>, il faut: <br> - installer git; <br> - se faire un compte github (et se faire ajouter en contributeur) <br> - se placer dans le répertoire où on veut mettre le dossier avec cd <br> - cloner le dossier github localement:
+            <br>
+            <code>shell <br>
+                  git clone https://github.com/bros-bioinfo/bros-bioinfo.github.io.git <br>
+                </code></p>
 
-
-
-<h6 id="coursalgosysprog">/cours/Algo_sys_prog/</h6>
-
-
-
-<h4 id="cours">COURS</h4>
-
-<ul>
-<li><a href="https://bros-bioinfo.github.io/cours/Algo_sys_prog/APU-USI">Fichier du cours: APU-USI</a></li>
-<li><a href="https://bros-bioinfo.github.io/cours/Algo_sys_prog/APU-PROG">Fichier du cours: APU-PROG (à créer)</a></li>
-</ul>
-
-
-
-<h4 id="td">TD</h4>
-
-<ul>
-<li><a href="https://bros-bioinfo.github.io/cours/Algo_sys_prog/TD/TD2/td2">Fichier du TD2: UNIX</a></li>
-</ul>
-
-
-
-<h3 id="omics-and-bioinformatics">Omics and Bioinformatics</h3>
-
-
-
-<h6 id="coursomicsandbioinformatics">/cours/Omics_and_Bioinformatics/</h6>
-
-<ul>
-<li><a href="https://bros-bioinfo.github.io/cours/Omics_and_Bioinformatics/OBI">Fichier du cours: OBI</a></li>
-</ul>
-
-
-
-<h3 id="traitements-des-données-environnementales">Traitements des données environnementales</h3>
-
-
-
-<h6 id="coursstats">/cours/Stats/</h6>
-
-<ul>
-<li><a href="https://bros-bioinfo.github.io/cours/Stats/intro_stats">Intro sur les stats</a></li>
-</ul>
-
-<hr>
-
-
-
-<h2 id="partie-technique">Partie Technique</h2>
-
-
-
-<h5 id="les-commandes-git">Les commandes git:</h5>
-
-<p><strong>Pour commencer</strong>, il faut: <br>
-- installer git; <br>
-- se faire un compte github (et se faire ajouter en contributeur) <br>
-- se placer dans le répertoire où on veut mettre le dossier avec cd <br>
-- cloner le dossier github localement: <br>
-  <code>shell <br>
-  git clone https://github.com/bros-bioinfo/bros-bioinfo.github.io.git <br>
-</code></p>
-
-<p><strong>Avant d’éditer le fichier</strong>: il faut se mettre dans la racine du projet et:</p>
+          <p><strong>Avant d’éditer le fichier</strong>: il faut se mettre dans la racine du projet et:</p>
 
 
 
-<pre class="prettyprint"><code class="language-shell hljs ">git pull</code></pre>
+          <pre class="prettyprint"><code class="language-shell hljs ">git pull</code></pre>
 
-<p>(Cela permet de récupérer les modifications éventuels réalisées par d’autres depuis internet).</p>
+          <p>(Cela permet de récupérer les modifications éventuels réalisées par d’autres depuis internet).</p>
 
-<p><strong>Après l’édition du fichier</strong>:</p>
+          <p><strong>Après l’édition du fichier</strong>:</p>
 
 
 
-<pre class="prettyprint"><code class="language-shell hljs lasso">git add <span class="hljs-subst">--</span><span class="hljs-literal">all</span> ; git commit <span class="hljs-attribute">-m</span> <span class="hljs-string">"updates des cours"</span> ; git push <span class="hljs-subst">--</span><span class="hljs-literal">all</span></code></pre>
+          <pre class="prettyprint"><code class="language-shell hljs lasso">git add <span class="hljs-subst">--</span><span class="hljs-literal">all</span> ; git commit <span class="hljs-attribute">-m</span> <span class="hljs-string">"updates des cours"</span> ; git push <span class="hljs-subst">--</span><span class="hljs-literal">all</span></code></pre>
 
-<p>S’il y a des problèmes, faites chaques commandes séparément. <br>
-- git add: permet d’ajouter les fichiers modifiés à la liste d’envoi; <br>
-- git commit: message de changement; <br>
-- git push: upload</p>
+          <p>S’il y a des problèmes, faites chaques commandes séparément. <br> - git add: permet d’ajouter les fichiers modifiés à la liste d’envoi; <br> - git commit: message de changement; <br> - git push: upload</p>
 
-<p><strong>Convention pour nommer les fichiers (et en déduire l’url):</strong></p>
+          <p><strong>Convention pour nommer les fichiers (et en déduire l’url):</strong></p>
 
-<p>Exemple: <br>
-- Fichier Markdown du TD de stat n°1: stats/td1/td1.md</p></div>
+          <p>Exemple: <br> - Fichier Markdown du TD de stat n°1: stats/td1/td1.md</p>
+        </div>
+      </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="js/git.js" type="text/javascript"></script>
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="js/git.js" type="text/javascript"></script>
 
 </body>
+
 </html>
