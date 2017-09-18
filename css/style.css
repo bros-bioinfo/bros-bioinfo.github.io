@@ -7,6 +7,9 @@ body {
   font-size: 20px;
   color: #333333;
   font-family: 'Lora', 'Times New Roman', serif; }
+br{
+    line-height: 1.5;
+}
 
 p {
   line-height: 1.5;
