@@ -45,14 +45,6 @@ $("#gitlist").append(ulien+"<br>");
 n++;
 }
 
-//var regExplink = /http(.*?)"/g;
-//var matcheslink = regExplink.exec(strarray[1]);
-
-
-
-//console.log("APRES SPLIT:"+test);
-
-
 }, 'text');
 
 
