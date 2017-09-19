@@ -8,39 +8,7 @@ Ici  c'est le github du site:
 où on va publier les cours du M1 de Bordeaux. Enjoy !
 
 ------
-## Les Cours
 
-### Algorithmique, Programmation et Utilisation des Systèmes Informatiques
-
-###### /cours/Algo_sys_prog/
-
-#### COURS
-
-- [Fichier du cours: APU-USI](https://bros-bioinfo.github.io/cours/Algo_sys_prog/APU-USI)
-- [Fichier du cours: APU-PROG (à créer)](https://bros-bioinfo.github.io/cours/Algo_sys_prog/APU-PROG)
-
-#### TD
-
-- [Fichier du TD2: UNIX](https://bros-bioinfo.github.io/cours/Algo_sys_prog/TD/TD2/td2)
-
-
-
-
-### Omics and Bioinformatics
-
-###### /cours/Omics_and_Bioinformatics/
-
-- [Fichier du cours: OBI](https://bros-bioinfo.github.io/cours/Omics_and_Bioinformatics/OBI)
-
-
-### Traitements des données environnementales
-
-###### /cours/Stats/
-
-- [Intro sur les stats](https://bros-bioinfo.github.io/cours/Stats/intro_stats)
-
-
-------
 ## Partie Technique
 
 ##### Les commandes git:
