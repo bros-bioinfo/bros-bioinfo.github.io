@@ -296,3 +296,14 @@ Processus placé dans le répertoire courant (**CUR_DIR**)
 .	répertoire courant
 
 ~	chemin absolu vers ***HOME_DIR***
+
+
+## II. Protections et accès
+
+Pour le système un fichier et un répertoire, c'est pareil. Il possède:
+- un utilisateur = propriétaire
+- un groupe Unix (pas forcément le même que le propriétaire)
+
+Trois type d'accès sont définis:
+- pour un fichier: lecture, écriture, éxecution;
+- pour un répertoire: lecture, écriture, traverser;

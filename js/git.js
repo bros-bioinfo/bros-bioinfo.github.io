@@ -23,3 +23,6 @@ $("#gitlist").html(test);
 console.log(test+"\n");
 
 }, 'text');
+
+
+//(?'datstring'http(.*?)\n)
