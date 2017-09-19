@@ -11,7 +11,12 @@ x++;
 }
 //test = test.match(/$/gmi).join("<br>");
 test = test.replace(/COURS/mg,'<br><a href="http://bros-bioinfo.github.io/COURS');
-test = test.replace(/<br>/mg,'">LIEN</a><br>');
+test = test.replace(/<br>/mg,'"></a><br>');
+
+var regExp = /http(.*?)\n/g;
+var matches = regExp.exec(test);
+var string = ">"+matches+"</a";
+test = test.replace(/><\/a/mg,string);
 
 $("#gitlist").html(test);
 
