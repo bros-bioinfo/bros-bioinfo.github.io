@@ -2,7 +2,7 @@
 
 Ici  c'est le github du site:
 
-[BROS-BIOINFO: https://bros-bioinfo.github.io/](https://bros-bioinfo.github.io/cours/Algo_sys_prog/TD/TD2/td2)
+[BROS-BIOINFO: https://bros-bioinfo.github.io/](https://bros-bioinfo.github.io/)
 
 
 où on va publier les cours du M1 de Bordeaux. Enjoy !
