@@ -37,9 +37,22 @@ We have tree main problems in scientific manipulations:
 
 ## Contrast and brightness
 
-The transfer function can modify the output value of a pixel.
-  $Y = ax+b$
-  a : contrast: speed necessary to go from 0 to 255;
-  b : amount of light;
+The transfer function can modify the output value of a pixel. There is multiple functions possible:
+  - $Y = ax+b$
+    > a : contrast: speed necessary to go from 0 to 255;
+    > b : amount of light;
+
+  - $Y = log(X)$
+  - $Y = \sqrt(X)$
+  - $Y = exp(X)$
 
 The histogram show the "pick" values of the images.
+
+**The process of Histogram** normalisation extends the dynamic range of the image:
+  >$v = (v-min)/(max-min)*255$
+
+**Histogram equalisation** is a cumulative histogram (not used in scientific processing).
+
+## Non uniform illumination
+In microscopy we have to take a "background image" wich is sort of a "blank/sample image", because we assume that we have a constant illumination default during the session.
+We can use it to correct image's illumination. If we don't have the background image we can try to correct the illumination with filters or modelisation.
