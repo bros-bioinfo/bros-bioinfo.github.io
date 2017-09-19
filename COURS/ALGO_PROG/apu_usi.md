@@ -301,9 +301,20 @@ Processus placé dans le répertoire courant (**CUR_DIR**)
 ## II. Protections et accès
 
 Pour le système un fichier et un répertoire, c'est pareil. Il possède:
-- un utilisateur = propriétaire
-- un groupe Unix (pas forcément le même que le propriétaire)
+- un utilisateur = propriétaire (u)
+- un groupe Unix (pas forcément le même que le propriétaire) (g)
+- tous les autres (o)
 
 Trois type d'accès sont définis:
-- pour un fichier: lecture, écriture, éxecution;
+- pour un fichier: lecture(r), écriture(w), éxecution(x);
 - pour un répertoire: lecture, écriture, traverser;
+
+On définit le mode d'accès pour le propriétaire, pour les membres du groupe UNIX, puis pour tous les autres.
+- rwxrwxrwx   //rwx 3 fois pour u g o
+- rw-r-----   //rw pour u; r pour g; et rien pour o
+
+La commande pour changer les droits:
+
+```shell
+chmod
+```
