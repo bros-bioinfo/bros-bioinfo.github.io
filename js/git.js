@@ -1,28 +1,58 @@
 $.get( "https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/trees/master?recursive=1", function( data ) {
 test = String(data).replace(/^((?!md).)*$/gm,"");
 
-x = 0
+x = 0;
 while (x < 80){
 test = test.replace(",","");
 test = test.replace('"path": "','');
 test = test.replace('"','');
 test = test.replace('.md','');
 x++;
+test = test.replace(/\n\n/g,"\n");
 }
-//test = test.match(/$/gmi).join("<br>");
-test = test.replace(/COURS/mg,'<br><a href="http://bros-bioinfo.github.io/COURS');
-test = test.replace(/<br>/mg,'"></a><br>');
 
-var regExp = /http(.*?)\n/g;
-var matches = regExp.exec(test);
-var string = ">"+matches+"</a";
-test = test.replace(/><\/a/mg,string);
 
-$("#gitlist").html(test);
+test = test.replace(/COURS/mg,'<a href="http://bros-bioinfo.github.io/COURS');
+test = test.replace(/\n/g,'"></a>\n');
+test = test.replace(/"><\/a>\n/,'');
+test = test.replace(/README"><\/a>/,'');
+console.log("AVANT SPLIT:"+test);
 
-console.log(test+"\n");
+var strarray = test.split("\n");
+
+console.log("ARRAY:"+ strarray[1]);
+
+
+n = 0;
+while (n < 50){
+var url = strarray[n];
+url = url.replace(/<a href="http:\/\/bros-bioinfo.github.io\/COURS\//gm,'');
+url = url.replace(/"><\/a>/gm,'');
+back = ' → ';
+url = url.replace(/\//gm,back);
+
+
+console.log("URL"+url); 
+
+
+ulien = strarray[n];
+urlreworked = '">'+url+'</a>';
+ulien = ulien.replace(/"><\/a>/gm,urlreworked);
+ulien = ulien.replace(/  /gm,"");
+
+console.log("ulien:"+ulien);
+$("#gitlist").append(ulien+"<br>");
+n++;
+}
+
+//var regExplink = /http(.*?)"/g;
+//var matcheslink = regExplink.exec(strarray[1]);
+
+
+
+//console.log("APRES SPLIT:"+test);
+
 
 }, 'text');
 
 
-//(?'datstring'http(.*?)\n)
