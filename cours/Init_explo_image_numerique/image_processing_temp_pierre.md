@@ -5,8 +5,8 @@
 3.  Analysis
 4.  Using JavaScript in ImageJ - ImageJ API
 
-# Storage of images
-## Storage of gray-level images
+## Storage of images
+### Storage of gray-level images
 
 **Dynamic range** = number of bits per pixel = BPP
 In ImageJ there is no 32bits images;
@@ -22,7 +22,24 @@ There is two main methods of stocking numbers in processor:
   - big endian: left -> right counting, first byte is the most significant;
   - little endian: right -> left counting
 
-## Storage of color images
+### Storage of color images
 - Knowledge of colorspace(RGB, YUV, CMYK)
 
 We have the **Planar format** (plan of each color) vs **Packed format** (most common - all on one line)
+
+
+# Pipeline of processing
+
+We have tree main problems in scientific manipulations:
+- Brightness / contrast
+- non uniform illumination
+- Denoising
+
+## Contrast and brightness
+
+The transfer function can modify the output value of a pixel.
+  $Y = ax+b$
+  a : contrast: speed necessary to go from 0 to 255;
+  b : amount of light;
+
+The histogram show the "pick" values of the images.
