@@ -115,6 +115,6 @@ Thus, **signed 16-bit** numbers are comprised in the range of **[-32767;+32767]*
 
 Now, we've seen the theory, what about gray-level images ?
 
-If you import an image with the wrong 'sign', you get image with inverted areas as shown.
+If you import an image with the wrong 'sign', you get image with inverted areas as shown (right panel).
 
-![]
+![difference](https://4.bp.blogspot.com/-UEztIjD9U2Y/UFmxp-KgfuI/AAAAAAAAAbY/3G4uNvGoGP4/s1600/importSignedUnsigned.png)
