@@ -3,17 +3,17 @@ test = String(data).replace(/^((?!md).)*$/gm,"");
 
 x = 0
 while (x < 80){
-test = test.replace(",","<br>");
+test = test.replace(",","");
 test = test.replace('"path": "','');
 test = test.replace('"','');
 test = test.replace('.md','');
 x++;
 }
 //test = test.match(/$/gmi).join("<br>");
-//test = test.replace(/<br>COURS/gmi,'<br><a //href="bros-bioinfo.github.io/COURS');
-//test = test.match(/$/gmi).join('">LIEN</a><br>');
+test = test.replace(/COURS/mg,'<br><a href="http://bros-bioinfo.github.io/COURS');
+test = test.replace(/<br>/mg,'">LIEN</a><br>');
 
-$("#gitlist").html(test+"<br>");
+$("#gitlist").html(test);
 
 console.log(test+"\n");
 
