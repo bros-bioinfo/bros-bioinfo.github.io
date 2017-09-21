@@ -100,7 +100,7 @@ C-M-s    | M-x isearch-forward-regexp  | Recherche une expression régulière ve
 C-M-r    | M-x isearch-backward-regexp | Recherche une expression régulière vers le début du fichier
 M-%      | M-x query-replace           | Remplacer
 _        | M-x query-replace-regexp    | Remplacer en utilisant une expression régulière
-         |
+
 
 ## Changements de casse
 
@@ -152,7 +152,7 @@ M-$      | M-x ispell-word              | Vérifie l'orthographe du mot
 _        | M-x ispell-region            | Vérifie l'orthographe de la région
 _        | M-x ispell-buffer            | Vérifie l'orthographe du buffer entier
 _        | M-x ispell-change-dictionary | Change le dictionnaire utilisé pour vérifier l'orthographe
-         |
+
 
 ## Pêle-mêle...
 
@@ -175,4 +175,3 @@ _        | M-x handwrite | Transforme votre fichier texte en PostScript prêt à
 _        | M-x dunnet    | Jeu de type « adventure »
 _        | M-x gomoku    | Jeu de go
 _        | M-x doctor    | Le psychanalyste d'emacs. Emacs est votre ami.
-_        |
