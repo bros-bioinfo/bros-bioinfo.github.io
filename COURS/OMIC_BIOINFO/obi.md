@@ -139,6 +139,85 @@ and algorythm of words (k-tuples):
 | L   | -12 | ↑ -1 | ↑ 6 | ↖ 9 | ← 7 | ↖ 12 | ← 10 |
 | E   | -14 | ↑ -3 | ↑ 4 | ↑ 7 | ↖ 8 | ↑ 10 | ↖ 18 |
 
-#### Multiple Alignments
-ClustalW
-Clustal O is recommended
+1. Find the optimal pathway
+
+18 : the start and the final score 0 top left : the end of the reading
+
+Result :
+
+- C--AVALE
+- CHE-VALE
+
+# Multiple Sequence Alignements (MSA)
+
+## Simultaneous Alignement of several sequences
+
+- Dynamic programming
+
+  - Alignement of N sequences in a space of N dimensions
+  - Memory for 5 sequences of 100 aas = 10Gb of ..... ....
+
+## Progressive Algorithms : ClustalW
+
+- Pairwise Alignements for all the combinations of sequences
+- Groups of pairs strating from the closest
+
+  - Hierarchical Ascendant CLassification
+  - Tree of scores
+
+- Multiple Alignement of progressive type (greedy algorithm)
+
+  ##### Progressive Algorithms : Center Star Method
+
+- Step 1 : Pairwise Alignement
+
+  - Multi FASTA
+
+- Step 2 : ....
+
+- Step 3 : Aggregate ALignements
+
+  - Add gap in column, shift others
+
+    ##### CLustalW :
+
+- Step 1 : Pairwise Alignements for all the combination of sequences
+
+- Step 2 : Guide Tree
+
+  - Calcul distance :
+    - $ 1-y/x$  ; x = number of non gap position ; y = identical position
+  - Build the guide tree using :
+
+    - UPGMA
+    - Neighbor-Joining
+
+  - Use to build the phylogenic tree
+
+- Step 3 : Aggregating the alignements
+
+  - Follow the tress :
+
+    - Start from the closest pairs
+    - Compute at each node an alignement using dynamic Programming
+
+  - Three possible cases :
+
+    - Seq vs Seq
+    - Seq vs Partial ALignement
+    - .....
+
+- Or aggregating - Computing the scores with Sum of Pairs (SOPs)
+
+- COns : non re evaluation of the alignements during greedy period Iterative Algorithm : MUSCLE
+
+- Optimization of global scores by iterations
+
+## Multiple sequence alignement programs
+
+Newest version of clustal : Clustal O (Clustal omega) Best :
+
+- Clustal W, O
+- MUSCLE
+- T-Coffee
+(Work in progress)
