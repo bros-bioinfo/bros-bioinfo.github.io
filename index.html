@@ -15,14 +15,8 @@
 </head>
 
 <body>
-<img src="/img/background.png" style="
-    width: 80%;
-    /* display: none; */
-    position: absolute;
-    top: 0px;
-    left: 5%;
-">
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<div style="background-image: url(/img/background.png);height: 100%;position: absolute;z-index: 20;width: 50%;background-repeat: no-repeat;background-size: contain;">&nbsp;</div>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="visibility: hidden;">
     <div class="container">
       <a class="navbar-brand" href="index.html"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +48,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>We 💙 Bioinfo !</h1>
+            <h1 style="visibility:hidden">We 💙 Bioinfo !</h1>
             <span class="subheading">Les cours du M1 Bioinfo de Bordeaux</span>
           </div>
         </div>
