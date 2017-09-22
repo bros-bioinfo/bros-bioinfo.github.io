@@ -371,3 +371,6 @@ footer {
   #gitlist a {
 font-family: 'Roboto Mono', monospace;
   }
+#gitlist a:hover{
+  text-decoration: none;
+}
