@@ -1,4 +1,4 @@
-# Algorithmique, Programmation et Utilisation des Systèmes Informatiques
+# Utilisation des Systèmes Informatiques
 
 
   - [Ordinateur](#ordinateur)
