@@ -376,3 +376,10 @@ font-family: 'Roboto Mono', monospace;
 text-transform: uppercase;
 color: #003e9a;
 }
+#gitlist a div{
+display: table-cell;
+background: #3ba0f7;
+border-radius: 5px;
+padding-left: 4px;
+padding-right: 2px;
+}

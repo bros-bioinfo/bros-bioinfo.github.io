@@ -49,7 +49,7 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
     while (i < tab.length) {
       if (prevurl.indexOf(tab[i]) >= 0) {
 
-        while (space.length < (tab[i]).length) {
+        while (space.length < (tab[i]).length+3) {
           space += "\xa0";
         }
         url = url.replace(tab[i], space)
@@ -58,6 +58,8 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
         }
       }
       url = url.replace(tab[i], "<br>" + tab[i]);
+      url = url.replace(tab[i],'<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> '+tab[i]+"</div>");
+
       i++
     }
 
