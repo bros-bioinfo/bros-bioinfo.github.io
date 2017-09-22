@@ -1,6 +1,6 @@
 $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/trees/master?recursive=1", function(data) {
   test = String(data).replace(/^((?!md).)*$/gm, "");
- 
+
   x = 0;
   while (x < 80) {
     test = test.replace(",", "");
@@ -42,7 +42,7 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
     var SECTION4 = "STATS";
     var space = "\xa0";
 
-    var tab = ["ALGO_PROG", "IMAGE_NUM", "OMIC_BIOINFO", "STATS"];
+    var tab = ["ALGO_PROG", "IMAGE_NUM", "OMIC_BIOINFO", "STATS", "TUTO_&_FICHES"];
     var space = "\xa0";
     var i = 0;
 
