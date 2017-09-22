@@ -24,11 +24,12 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
 
   //FORMATAGE DE L'URL
   n = 0;
-
-  while (n < 80) {
+var nbfichiers = (data.match(/md/g) || []).length;
+console.log("NOMBRES DE FICHIERS:"+nbfichiers);
+  while (n < nbfichiers) {
     m = n - 1;
-    if (m < 0) {
-      m = 11;
+    if (n == 0) {
+      m = nbfichiers;
     }
     var url = strarray[n];
     var prevurl = strarray[m];
@@ -46,19 +47,19 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
     var space = "\xa0";
     var i = 0;
 
-    while (i < tab.length) {
+    while (i < tab.length ) {
       if (prevurl.indexOf(tab[i]) >= 0) {
 
-        while (space.length < (tab[i]).length+3) {
+        while (space.length < (tab[i]).length + 3) {
           space += "\xa0";
         }
-        url = url.replace(tab[i], space)
+        url = url.replace(tab[i], space);
         if (url.indexOf(tab[i + 1]) == -1) {
           url = url.replace("╶─", "╰─");
         }
       }
       url = url.replace(tab[i], "<br>" + tab[i]);
-      url = url.replace(tab[i],'<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> '+tab[i]+"</div>");
+      url = url.replace(tab[i], '<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> ' + tab[i] + "</div>");
 
       i++
     }
