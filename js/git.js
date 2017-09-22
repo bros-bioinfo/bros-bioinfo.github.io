@@ -42,82 +42,81 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
     var SECTION4 = "STATS";
     var space = "\xa0";
 
-    var tab = ["ALGO_PROG","IMAGE_NUM","OMIC_BIOINFO","STATS"];
+    var tab = ["ALGO_PROG", "IMAGE_NUM", "OMIC_BIOINFO", "STATS"];
     var space = "\xa0";
     var i = 0;
 
-    while (i<5)
-    {
-    if (prevurl.indexOf(tab[i]) >= 0) {
+    while (i < tab.length) {
+      if (prevurl.indexOf(tab[i]) >= 0) {
 
-          while (space.length < (tab[i]).length) {
+        while (space.length < (tab[i]).length) {
+          space += "\xa0";
+        }
+        url = url.replace(tab[i], space)
+        if (url.indexOf(tab[i + 1]) == -1) {
+          url = url.replace("╶─", "╰─");
+        }
+      }
+      url = url.replace(tab[i], "<br>" + tab[i]);
+      i++
+    }
+
+
+
+
+    /*
+        //SECTION1
+        if (prevurl.indexOf(SECTION1) >= 0) {
+
+          while (space.length < (SECTION1).length) {
             space += "\xa0";
           }
-          url = url.replace(tab[i], space)
-              if (url.indexOf(tab[i+1]) == -1) {
-                url = url.replace("╶─","╰─");
-              }
+          url = url.replace(SECTION1, space)
+          if (url.indexOf(SECTION2) == -1) {
+            url = url.replace("╶─", "╰─");
+          }
         }
-        url = url.replace(tab[i], "<br>" + tab[i]);
-i++
-    }
+        url = url.replace(SECTION1, "<br>" + SECTION1);
+
+        //SECTION2
+        if (prevurl.indexOf(SECTION2) >= 0) {
+          while (space.length < (SECTION2).length) {
+            space += "\xa0";
+          }
+          url = url.replace(SECTION2, space);
+          if (url.indexOf(SECTION3) == -1) {
+            url = url.replace("╶─", "╰─");
+          }
+        }
+
+        url = url.replace(SECTION2, "<br>" + SECTION2);
 
 
+        //SECTION3
+        if (prevurl.indexOf(SECTION3) >= 0) {
+          while (space.length < (SECTION3).length) {
+            space += "\xa0";
+          }
+          url = url.replace(SECTION3, space);
+          if (url.indexOf(SECTION4) == -1) {
+            url = url.replace("╶─", "╰─");
+          }
+        }
+        url = url.replace(SECTION3, "<br>" + SECTION3);
 
 
-/*
-    //SECTION1
-    if (prevurl.indexOf(SECTION1) >= 0) {
-
-      while (space.length < (SECTION1).length) {
-        space += "\xa0";
-      }
-      url = url.replace(SECTION1, space)
-      if (url.indexOf(SECTION2) == -1) {
-        url = url.replace("╶─", "╰─");
-      }
-    }
-    url = url.replace(SECTION1, "<br>" + SECTION1);
-
-    //SECTION2
-    if (prevurl.indexOf(SECTION2) >= 0) {
-      while (space.length < (SECTION2).length) {
-        space += "\xa0";
-      }
-      url = url.replace(SECTION2, space);
-      if (url.indexOf(SECTION3) == -1) {
-        url = url.replace("╶─", "╰─");
-      }
-    }
-
-    url = url.replace(SECTION2, "<br>" + SECTION2);
-
-
-    //SECTION3
-    if (prevurl.indexOf(SECTION3) >= 0) {
-      while (space.length < (SECTION3).length) {
-        space += "\xa0";
-      }
-      url = url.replace(SECTION3, space);
-      if (url.indexOf(SECTION4) == -1) {
-        url = url.replace("╶─", "╰─");
-      }
-    }
-    url = url.replace(SECTION3, "<br>" + SECTION3);
-
-
-    //SECTION4
-    if (prevurl.indexOf(SECTION4) >= 0) {
-      while (space.length < (SECTION4).length) {
-        space += "\xa0";
-      }
-      url = url.replace(SECTION4, space);
-      if (url.indexOf(SECTION5) == -1) {
-        url = url.replace("╶─", "╰─");
-      }
-    }
-    url = url.replace(SECTION4, "<br>" + SECTION4);
-*/
+        //SECTION4
+        if (prevurl.indexOf(SECTION4) >= 0) {
+          while (space.length < (SECTION4).length) {
+            space += "\xa0";
+          }
+          url = url.replace(SECTION4, space);
+          if (url.indexOf(SECTION5) == -1) {
+            url = url.replace("╶─", "╰─");
+          }
+        }
+        url = url.replace(SECTION4, "<br>" + SECTION4);
+    */
 
 
 
