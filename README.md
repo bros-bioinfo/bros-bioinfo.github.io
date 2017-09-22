@@ -45,3 +45,11 @@ S'il y a des problèmes, faites chaques commandes séparément.
 
 Exemple:
 - Fichier Markdown du TD de stat n°1: stats/td1/td1.md
+
+
+
+
+## TO:DO - sur la page d'accueil:
+- Colorer le sommaire en fonction des niveaux des dossier
+- IRC ?
+- Ranger un peu les dossiers
