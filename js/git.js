@@ -60,67 +60,8 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
       }
       url = url.replace(tab[i], "<br>" + tab[i]);
       url = url.replace(tab[i], '<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> ' + tab[i] + "</div>");
-
       i++
     }
-
-
-
-
-    /*
-        //SECTION1
-        if (prevurl.indexOf(SECTION1) >= 0) {
-
-          while (space.length < (SECTION1).length) {
-            space += "\xa0";
-          }
-          url = url.replace(SECTION1, space)
-          if (url.indexOf(SECTION2) == -1) {
-            url = url.replace("╶─", "╰─");
-          }
-        }
-        url = url.replace(SECTION1, "<br>" + SECTION1);
-
-        //SECTION2
-        if (prevurl.indexOf(SECTION2) >= 0) {
-          while (space.length < (SECTION2).length) {
-            space += "\xa0";
-          }
-          url = url.replace(SECTION2, space);
-          if (url.indexOf(SECTION3) == -1) {
-            url = url.replace("╶─", "╰─");
-          }
-        }
-
-        url = url.replace(SECTION2, "<br>" + SECTION2);
-
-
-        //SECTION3
-        if (prevurl.indexOf(SECTION3) >= 0) {
-          while (space.length < (SECTION3).length) {
-            space += "\xa0";
-          }
-          url = url.replace(SECTION3, space);
-          if (url.indexOf(SECTION4) == -1) {
-            url = url.replace("╶─", "╰─");
-          }
-        }
-        url = url.replace(SECTION3, "<br>" + SECTION3);
-
-
-        //SECTION4
-        if (prevurl.indexOf(SECTION4) >= 0) {
-          while (space.length < (SECTION4).length) {
-            space += "\xa0";
-          }
-          url = url.replace(SECTION4, space);
-          if (url.indexOf(SECTION5) == -1) {
-            url = url.replace("╶─", "╰─");
-          }
-        }
-        url = url.replace(SECTION4, "<br>" + SECTION4);
-    */
-
 
 
     console.log("URL" + url);
