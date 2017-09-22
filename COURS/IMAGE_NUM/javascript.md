@@ -111,3 +111,99 @@ tmp = fooz;
 fooz = baz;
 baz = tmp;
 ```
+```java
+/*
+2017-09-19
+Name
+
+Basics of JS programming
+
+Types
+*/
+
+//number
+var i=10;
+var j=10.12;
+var k=1e16;
+
+IJ.log(i);
+
+// String
+var txt="this is a string";
+var txt1='this is also a string';
+var txt2='doesnot work";
+var txt2 = "c'estle printemps";
+var txt2 = 'c\'estle printemps';
+var concatenate = 'today'+'is tuesday'; // today is tuesday
+var concatenate1= 'value'+txt;//value: this is a string
+
+//Array
+var arr=[];//empty array
+arr[0] = 4;
+arr[1]=6;
+arr[2]=8;
+
+var arr2=[4,6,8];
+
+var len=arr.length; // 3
+var len2 = arr2.length; // length is an attribute of arr2
+
+// functions
+arr.push(10);
+arr.push(12);
+
+// Read the last element of the array
+var last = arr[arr.length-1];
+var first = arr[0];
+
+var arr3 = [10,'text',true,[1,2,3]];
+// ACGT
+//A 1000
+//C 0100
+//G 0010
+//T 0001
+
+// Array of arrays
+var identity = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
+var row = identity[1]; // [0,1,0,0]
+var value = row[1]; // [1]
+
+var value2 = identity[1][1]; // 1
+
+var row3 = identity[2]; // [0,0,2,0]
+var value3 = row3[3]; // [0]
+var myvalue3 = identity[2][3]; // 0
+
+var new_identity = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
+var row2_column0 = new_identity[0 + 4 * 2]; // x + width * y = 0+4*2 = 8
+
+// Object in JS
+var obj = {}, // empty object;
+obj.width = 2;
+obj.height = 2;
+obj.pixels = [12,13,14,15];
+
+IJ.log(obj.width)
+
+var obj2 = {
+  width:3,
+  height:3,
+  pixels[0,1,2,3,4,5,6,7,8]}
+```
+
+- boolean :
+
+  > True False
+
+- number:
+
+  > byte int (32 bits) long (int 64 or 128 bits) float (floating point numbers)
+
+- string
+
+- array (python = list)
+
+- object
+```
+
+(Work in progress)
