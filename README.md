@@ -53,3 +53,4 @@ Exemple:
 - Colorer le sommaire en fonction des niveaux des dossier
 - IRC ?
 - Ranger un peu les dossiers
+- pdf gen
