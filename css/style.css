@@ -373,4 +373,6 @@ font-family: 'Roboto Mono', monospace;
   }
 #gitlist a:hover{
   text-decoration: none;
+text-transform: uppercase;
+color: #003e9a;
 }
