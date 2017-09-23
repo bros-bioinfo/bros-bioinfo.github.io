@@ -1,6 +1,6 @@
 # Javascript
 
-## JS: introduction
+## Introduction
 
 ### JavaScript (or JS)
 
@@ -27,19 +27,25 @@
 
 In a HTML page, the code is written within a \<script> element. It may be located:
 + within the \<head> element
- ```js
+  ```html
   <script type=”text/javascript”>
   console.log(“Hello World”);
   </script>
-  External file: <script
-  type=”text/javascript” src=”myScript.js”></script>
+  ```
++ By calling an external file in html:
+  ```html
+  <script type=”text/javascript” src=”myScript.js”></script>
   ```
 + Everywhere in the \<body> element. **Best place**: At the end of \<body> when the
   page is fully loaded.
-+ BAD!! Directly in HTML element `<p
++ **Deprecated!!** Directly in HTML element `<p
   onclick="alert('Hello');">Click on me </p>`
 
-## JS: comments
+
+# JS: The Basics
+
+
+## Comments
 
 To document the program, you may add comments that won't be executed by the language engine.
 
@@ -55,13 +61,13 @@ Multi-line
 comment
 */
 ```
-## JS: semicolon
+## Semicolon
 Each expression must be ended by a semicolon.
+```javascript
 var i = 1 **;**
 i = i + 3 **;**
 i = 2 * i **;** i = i / 10 **;**
-
-# JS: basics
+```
 
 ## Variables
 
@@ -111,33 +117,37 @@ tmp = fooz;
 fooz = baz;
 baz = tmp;
 ```
-```java
+### Number
+```javascript
 /*
 2017-09-19
 Name
 
 Basics of JS programming
-
-Types
 */
 
-//number
 var i=10;
 var j=10.12;
 var k=1e16;
 
 IJ.log(i);
+```
 
-// String
+### String
+
+```js
 var txt="this is a string";
 var txt1='this is also a string';
-var txt2='doesnot work";
+/*var txt2='doesnot work";
 var txt2 = "c'estle printemps";
-var txt2 = 'c\'estle printemps';
+var txt2 = 'c\'estle printemps';*/
 var concatenate = 'today'+'is tuesday'; // today is tuesday
 var concatenate1= 'value'+txt;//value: this is a string
+```
 
-//Array
+### Array
+
+```js
 var arr=[];//empty array
 arr[0] = 4;
 arr[1]=6;
@@ -147,6 +157,7 @@ var arr2=[4,6,8];
 
 var len=arr.length; // 3
 var len2 = arr2.length; // length is an attribute of arr2
+
 
 // functions
 arr.push(10);
@@ -163,7 +174,11 @@ var arr3 = [10,'text',true,[1,2,3]];
 //G 0010
 //T 0001
 
-// Array of arrays
+```
+
+### Array of Arrays
+
+```js
 var identity = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
 var row = identity[1]; // [0,1,0,0]
 var value = row[1]; // [1]
@@ -176,8 +191,11 @@ var myvalue3 = identity[2][3]; // 0
 
 var new_identity = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
 var row2_column0 = new_identity[0 + 4 * 2]; // x + width * y = 0+4*2 = 8
+```
 
-// Object in JS
+### Object in JS
+
+```js
 var obj = {}, // empty object;
 obj.width = 2;
 obj.height = 2;
