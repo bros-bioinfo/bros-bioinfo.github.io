@@ -5,7 +5,7 @@
 <!-- code_chunk_output -->
 
 * [Javascript](#javascript)
-	* [Introduction](#introduction)
+	* [:file_folder: Introduction](#file_folder-introduction)
 		* [JavaScript (or JS) Versions](#javascript-or-js-versions)
 		* [Features](#features)
 	* [JS: The Basics](#js-the-basics)
@@ -20,7 +20,7 @@
 
 <!-- /code_chunk_output -->
 
-## Introduction
+## :file_folder: Introduction
 
 ### JavaScript (or JS) Versions
 
