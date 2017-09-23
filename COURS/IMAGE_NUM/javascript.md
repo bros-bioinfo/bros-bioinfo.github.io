@@ -20,7 +20,7 @@
 
 <!-- /code_chunk_output -->
 
-## :fa-folder-open-o: Introduction
+## :file_folder: Introduction
 
 ### JavaScript (or JS) Versions
 
