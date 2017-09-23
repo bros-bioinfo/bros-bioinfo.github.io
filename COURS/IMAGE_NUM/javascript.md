@@ -1,6 +1,7 @@
 # Javascript
 
-
+<details>
+  <summary><h5 style="display:inline">Sommaire</h3></summary>
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 <!-- code_chunk_output -->
 
@@ -19,11 +20,11 @@
 			* [Object in JS](#object-in-js)
 
 <!-- /code_chunk_output -->
-
+</details>
 
 ## Introduction
 
-### JavaScript (or JS) Versions 
+### JavaScript (or JS) Versions
 
 - JavaScript 5 (or ECMAScript 5.1)
 - Available in all the browsers
