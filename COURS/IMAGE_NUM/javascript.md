@@ -5,7 +5,7 @@
 <!-- code_chunk_output -->
 
 * [Javascript](#javascript)
-	* [:file_folder: Introduction](#file_folder-introduction)
+	* [Introduction](#introduction)
 		* [JavaScript (or JS) Versions](#javascript-or-js-versions)
 		* [Features](#features)
 	* [JS: The Basics](#js-the-basics)
@@ -20,7 +20,7 @@
 
 <!-- /code_chunk_output -->
 
-## :file_folder: Introduction
+## Introduction
 
 ### JavaScript (or JS) Versions
 
@@ -60,7 +60,7 @@ In a HTML page, the code is written within a \<script> element. It may be locate
   onclick="alert('Hello');">Click on me </p>`
 
 
-## JS: The Basics
+## :green_book: JS: The Basics
 
 
 ### Comments
