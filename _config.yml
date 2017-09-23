@@ -2,3 +2,6 @@ title: Bros-Bioinfo
 description: Les cours du M1 de Bioinfo de Bordeaux.
 
 theme: jekyll-theme-cayman
+
+plugins:
+  - jemoji
