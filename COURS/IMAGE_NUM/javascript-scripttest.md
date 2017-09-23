@@ -231,7 +231,7 @@ var obj2 = {
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-	<script src="https://raw.githubusercontent.com/nghuuphuoc/tocjs/master/dist/js/toc.js"></script>
+	<script type="text/javascript" src="https://raw.githubusercontent.com/nghuuphuoc/tocjs/master/dist/js/toc.js"></script>
 	<script type="text/javascript">
 $(document).ready(function() {
     // Set the width for table of content
