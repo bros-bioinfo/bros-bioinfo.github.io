@@ -5,6 +5,3 @@ theme: jekyll-theme-cayman
 
 plugins:
   - jemoji
-
-gems:
-  - jekyll-octicons
