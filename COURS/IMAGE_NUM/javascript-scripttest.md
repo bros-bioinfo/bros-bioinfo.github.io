@@ -6,7 +6,18 @@
 
 # Javascript
 
-<div id="toc"></div>
+<nav id="toc"></nav>
+<script rel="text/script">
+$(function() {
+  var navSelector = '#toc';
+  var $myNav = $(navSelector);
+  Toc.init($myNav);
+  $('body').scrollspy({
+    target: navSelector
+  });
+});
+</script>
+
 
 ## Introduction
 
