@@ -1,1 +1,1 @@
-$("body").css("fontSize", 60);
+$("body").css("font-size", 60);
