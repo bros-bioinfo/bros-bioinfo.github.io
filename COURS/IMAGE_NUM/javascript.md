@@ -8,7 +8,7 @@
 	* [Introduction](#introduction)
 		* [JavaScript (or JS) Versions](#javascript-or-js-versions)
 		* [Features](#features)
-	* [JS: The Basics](#js-the-basics)
+	* [:green_book: JS: The Basics](#green_book-js-the-basics)
 		* [Comments](#comments)
 		* [Semicolon](#semicolon)
 		* [Variables](#variables)
