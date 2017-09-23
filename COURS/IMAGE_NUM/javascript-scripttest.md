@@ -1,22 +1,4 @@
-<link rel="stylesheet" property="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- add after bootstrap.min.css -->
-<link rel="stylesheet" property="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
-<!-- add after bootstrap.min.js -->
-<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
-
 # Javascript
-
-<nav id="toc"></nav>
-<script rel="text/script">
-$(function() {
-  var navSelector = '#toc';
-  var $myNav = $(navSelector);
-  Toc.init($myNav);
-  $('body').scrollspy({
-    target: navSelector
-  });
-});
-</script>
 
 
 ## Introduction
@@ -248,3 +230,4 @@ var obj2 = {
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+<script src="jsmd.js"></script>
