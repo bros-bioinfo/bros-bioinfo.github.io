@@ -5,5 +5,3 @@ theme: jekyll-theme-cayman
 
 plugins:
   - jemoji
-
-gems: ["emoji_for_jekyll"]
