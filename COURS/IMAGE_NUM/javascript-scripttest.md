@@ -1,6 +1,6 @@
 # Javascript
 
-<div id="toc"></div>
+<div id="toc" class="toc affix-top" style="width: 263px;"></div>
 
 ## Introduction
 
