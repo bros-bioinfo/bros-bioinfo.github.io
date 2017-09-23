@@ -1,24 +1,6 @@
 # Javascript
 
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-<!-- code_chunk_output -->
-
-* [Javascript](#javascript)
-	* [Introduction](#introduction)
-		* [JavaScript (or JS) Versions](#javascript-or-js-versions)
-		* [Features](#features)
-	* [JS: The Basics](#js-the-basics)
-		* [Comments](#comments)
-		* [Semicolon](#semicolon)
-		* [Variables](#variables)
-			* [Number](#number)
-			* [String](#string)
-			* [Array](#array)
-			* [Array of Arrays](#array-of-arrays)
-			* [Object in JS](#object-in-js)
-
-<!-- /code_chunk_output -->
+<div id="toc"></div>
 
 ## Introduction
 
@@ -46,13 +28,13 @@
 In a HTML page, the code is written within a \<script> element. It may be located:
 + within the \<head> element
   ```html
-  <script type=”text/javascript”>
-  console.log(“Hello World”);
+  <script type="text/javascript">
+  console.log("Hello World");
   </script>
   ```
 + By calling an external file in html:
   ```html
-  <script type=”text/javascript” src=”myScript.js”></script>
+  <script type="text/javascript" src="myScript.js"></script>
   ```
 + Everywhere in the \<body> element. **Best place**: At the end of \<body> when the
   page is fully loaded.
@@ -249,3 +231,70 @@ var obj2 = {
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+	<script src="https://raw.githubusercontent.com/nghuuphuoc/tocjs/master/dist/js/toc.js"></script>
+	<script type="text/javascript">
+$(document).ready(function() {
+    // Set the width for table of content
+    $('#toc').width($('#toc').parents().width());
+
+    // Generate table of content
+    /*
+    $('#toc').toc({
+        elementClass: 'toc',
+        ulClass: 'nav',
+        heading: 'Table of Contents',
+        indexingFormats: {
+            'h1': 'upperRoman',
+            'h2': 'number',
+            'h3': 'upperAlphabet',
+            'h4': 'lowerAlphabet',
+            'h5': 'number'
+        }
+    });
+    */
+
+    /*
+    $('#toc').toc({
+        elementClass: 'toc',
+        ulClass: 'nav',
+        heading: 'Table of Contents',
+        indexingFormats: {
+            'h1': 'I',
+            'h2': '1',
+            'h3': 'A',
+            'h4': 'a'
+        }
+    });
+    */
+
+    $('#toc').toc({
+        elementClass: 'toc',
+        ulClass: 'nav',
+        heading: 'Table of Contents',
+        indexingFormats: 'I1Aa'
+    });
+
+    // Scroll to the table of content section when user scroll the mouse
+    $('body').scrollspy({
+        target: '#toc',
+        offset: $('#headerNav').outerHeight(true) + 40
+    });
+
+    setTimeout(function() {
+        var $sideBar = $('#toc');
+        $sideBar.affix({
+            offset: {
+                top: function() {
+                    var offsetTop      = $sideBar.offset().top,
+                        sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10),
+                        navOuterHeight = $('#headerNav').height();
+                    return (this.top = offsetTop - navOuterHeight - sideBarMargin);
+                },
+                bottom: function() {
+                    return (this.bottom = $('footer').outerHeight(true));
+                }
+            }
+        });
+    }, 100);
+});
+</script>

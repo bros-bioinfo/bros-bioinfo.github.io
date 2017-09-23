@@ -46,13 +46,13 @@
 In a HTML page, the code is written within a \<script> element. It may be located:
 + within the \<head> element
   ```html
-  <script type=”text/javascript”>
-  console.log(“Hello World”);
+  <script type="text/javascript">
+  console.log("Hello World");
   </script>
   ```
 + By calling an external file in html:
   ```html
-  <script type=”text/javascript” src=”myScript.js”></script>
+  <script type="text/javascript" src="myScript.js"></script>
   ```
 + Everywhere in the \<body> element. **Best place**: At the end of \<body> when the
   page is fully loaded.
