@@ -245,3 +245,5 @@ var obj2 = {
 ```
 
 (Work in progress)
+```
+<script>console.log("test")</script>
