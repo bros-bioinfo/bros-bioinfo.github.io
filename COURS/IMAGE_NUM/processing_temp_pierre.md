@@ -26,7 +26,7 @@ There is two main methods of stocking numbers in processor:
 - Knowledge of colorspace(RGB, YUV, CMYK)
 
 We have the **Planar format** (plan of each color) vs **Packed format** (most common - all on one line)
-
+<!-- OK JUSQUE LA -->
 
 # Pipeline of processing
 

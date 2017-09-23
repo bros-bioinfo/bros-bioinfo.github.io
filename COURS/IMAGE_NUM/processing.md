@@ -1,4 +1,4 @@
-# IMAGE PROCESSING : PROCESSING
+# IMAGE PROCESSING & PIPELINES
 
 ## Image Enhancement
 
@@ -8,7 +8,7 @@ Because your scientific images are not perfect and the objects of interest are d
 - Non uniform illumination
 - Noise
 
-### Enhancement: Brightness/Contrast and Transfer Function
+### Enhancement: Brightness/Contrast
 
 The brightness and contrast of an image can be enhanced by modifying the **transfer function** or playing with the pixel distribution of the **histogram**. Here is the first part with the transfer function...
 
@@ -51,17 +51,21 @@ $y = 3.5x - 210$
 
 ![Output](https://1.bp.blogspot.com/-A4qAHE-vJuE/VIG23YbzCAI/AAAAAAAABzg/mwcvDAZe1pk/s1600/lut_A.jpg)
 
-In conclusion, the **brightness** corresponds to the y-intercept and the **contrast** to the slope of the transfer function.
+In conclusion, the **brightness** corresponds to the y-intercept and the **contrast** to the slope of the transfer function. The brightness is the amount of light, and the contrast, the speed necessary to go from 0 to 255;
 
-### Enhancement: Brightness/Contrast and Histogram
+There are multiple others transfer functions possible:
+
+- $Y = log(X)$
+- $Y = \sqrt(X)$
+- $Y = exp(X)$
+
+#### 2\. Playing with the histogram
 
 The previous method based on the transfer function is powerful but you have to manually define the slope and the y-intercept of the transfer function. It is faster to directly **modify the histogram**.
 
 Here is our test image...
 
 ![Clown](https://2.bp.blogspot.com/-C9FEiMRgGIY/VIGrSjDPj0I/AAAAAAAAByM/MY8Q_k10rx8/s1600/clownBright_contrast.png)
-
-#### 2\. Playing with the histogram
 
 ![Histogram](https://1.bp.blogspot.com/-Y31cAf4R7-s/VIGtdbV-Z6I/AAAAAAAAByg/BhoqtuXf-P0/s1600/clown_histogram.jpg)
 
