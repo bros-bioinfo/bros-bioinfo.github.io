@@ -1,17 +1,36 @@
 # Javascript
 
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+
+* [Javascript](#javascript)
+	* [Introduction](#introduction)
+		* [JavaScript (or JS) Version](#javascript-or-js-version)
+		* [Features](#features)
+	* [JS: The Basics](#js-the-basics)
+		* [Comments](#comments)
+		* [Semicolon](#semicolon)
+		* [Variables](#variables)
+			* [Number](#number)
+			* [String](#string)
+			* [Array](#array)
+			* [Array of Arrays](#array-of-arrays)
+			* [Object in JS](#object-in-js)
+
+<!-- /code_chunk_output -->
+
+
 ## Introduction
 
-### JavaScript (or JS)
-
-#### Versions
+### JavaScript (or JS) Versions
 
 - JavaScript 5 (or ECMAScript 5.1)
 - Available in all the browsers
 - ECMAScript 2015 (or ECMAScript 6 or ES6)
 - Not all the specs are implemented (browser checking required)
 
-#### Features
+### Features
 - **Imperative** and structured programming (if statement, loops, etc.)
 - **Object-oriented** programming language based on **prototype** for inheritance (no class).
 
@@ -42,10 +61,10 @@ In a HTML page, the code is written within a \<script> element. It may be locate
   onclick="alert('Hello');">Click on me </p>`
 
 
-# JS: The Basics
+## JS: The Basics
 
 
-## Comments
+### Comments
 
 To document the program, you may add comments that won't be executed by the language engine.
 
@@ -61,7 +80,7 @@ Multi-line
 comment
 */
 ```
-## Semicolon
+### Semicolon
 Each expression must be ended by a semicolon.
 ```javascript
 var i = 1 **;**
@@ -69,7 +88,7 @@ i = i + 3 **;**
 i = 2 * i **;** i = i / 10 **;**
 ```
 
-## Variables
+### Variables
 
 ```javascript
 /*
@@ -117,7 +136,7 @@ tmp = fooz;
 fooz = baz;
 baz = tmp;
 ```
-### Number
+#### Number
 ```javascript
 /*
 2017-09-19
@@ -133,7 +152,7 @@ var k=1e16;
 IJ.log(i);
 ```
 
-### String
+#### String
 
 ```js
 var txt="this is a string";
@@ -145,7 +164,7 @@ var concatenate = 'today'+'is tuesday'; // today is tuesday
 var concatenate1= 'value'+txt;//value: this is a string
 ```
 
-### Array
+#### Array
 
 ```js
 var arr=[];//empty array
@@ -176,7 +195,7 @@ var arr3 = [10,'text',true,[1,2,3]];
 
 ```
 
-### Array of Arrays
+#### Array of Arrays
 
 ```js
 var identity = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]];
@@ -193,7 +212,7 @@ var new_identity = [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
 var row2_column0 = new_identity[0 + 4 * 2]; // x + width * y = 0+4*2 = 8
 ```
 
-### Object in JS
+#### Object in JS
 
 ```js
 var obj = {}, // empty object;
