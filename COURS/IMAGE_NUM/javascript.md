@@ -6,7 +6,7 @@
 
 * [Javascript](#javascript)
 	* [Introduction](#introduction)
-		* [JavaScript (or JS) Version](#javascript-or-js-version)
+		* [JavaScript (or JS) Versions](#javascript-or-js-versions)
 		* [Features](#features)
 	* [JS: The Basics](#js-the-basics)
 		* [Comments](#comments)
@@ -23,7 +23,7 @@
 
 ## Introduction
 
-### JavaScript (or JS) Versions
+### JavaScript (or JS) Versions 
 
 - JavaScript 5 (or ECMAScript 5.1)
 - Available in all the browsers
