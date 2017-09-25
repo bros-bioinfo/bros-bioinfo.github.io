@@ -16,7 +16,7 @@ The brightness and contrast of an image can be enhanced by modifying the **trans
 
 The transfer function in ImageJ is defined by a straight line whose formula is:
 
-> **$y = Ax + B$** with A is the slope and B is the y-intercept
+> **y = Ax + B** with A is the slope and B is the y-intercept
 
 Thus, two factors can be modified:
 
@@ -31,7 +31,7 @@ Let's see the influence of these two parameters on the image :
 
 If we modify the Y-intercept, the transfer function is now ...
 
-$y = x - 50$
+y = x - 50
 
 ![Transfer function](https://3.bp.blogspot.com/-wR2rPMh-K10/VIG1HTYz_qI/AAAAAAAABzU/6p-iVxYBJtI/s1600/transferFunction_B.png)
 
@@ -43,7 +43,7 @@ In this case, a pixel value of 50 in the input image is displayed as a **black (
 
 In this case, the **slope is equal to 3.5** leading to a variation of grays (gradient) from black to white restrained in the range of [60;130].
 
-$y = 3.5x - 210$
+y = 3.5x - 210
 
 ![Transfer function](https://2.bp.blogspot.com/-zPrYhek2C94/VIG1FIi9XeI/AAAAAAAABzM/wQrswA6LYwI/s1600/transferFunction_A.png)
 
@@ -55,9 +55,9 @@ In conclusion, the **brightness** corresponds to the y-intercept and the **contr
 
 There are multiple others transfer functions possible:
 
-- $Y = log(X)$
-- $Y = \sqrt(X)$
-- $Y = exp(X)$
+- Y = log(X)
+- Y = \sqrt(X)
+- Y = exp(X)
 
 #### 2\. Playing with the histogram
 
