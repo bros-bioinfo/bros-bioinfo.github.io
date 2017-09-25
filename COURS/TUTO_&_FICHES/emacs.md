@@ -1,4 +1,4 @@
-a# Lancer emacs
+# Lancer emacs
 
 On lance emacs simplement en tapant :
 
