@@ -1,4 +1,4 @@
-a# Lancer emacs
+# Lancer emacs
 
 On lance emacs simplement en tapant :
 
@@ -175,3 +175,5 @@ _        | M-x handwrite | Transforme votre fichier texte en PostScript prêt à
 _        | M-x dunnet    | Jeu de type « adventure »
 _        | M-x gomoku    | Jeu de go
 _        | M-x doctor    | Le psychanalyste d'emacs. Emacs est votre ami.
+
+> Auteur : Marie-Lan Nguyen. Dernière modification : Wed Oct 24 15:08:52 2007 +0000 par Marc Mezzarobba. 
