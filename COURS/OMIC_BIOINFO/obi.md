@@ -167,7 +167,7 @@ Result :
 
 - Multiple Alignement of progressive type (greedy algorithm)
 
-  ### Progressive Algorithms : Center Star Method
+### Progressive Algorithms : Center Star Method
 
 - Step 1 : Pairwise Alignement
 
@@ -179,7 +179,7 @@ Result :
 
   - Add gap in column, shift others
 
-    ### CLustalW :
+### CLustalW :
 
 - Step 1 : Pairwise Alignements for all the combination of sequences
 
