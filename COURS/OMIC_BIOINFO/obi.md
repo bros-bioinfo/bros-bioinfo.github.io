@@ -123,10 +123,10 @@ and algorythm of words (k-tuples):
 - FASTA & BLAST: heuristics
 
 #### Needleman & Wunsch
-- $S(i,j) = max \ of:$
-  1) $se(i,j) + S(i-1, j-1) for \ diagonal$
-  2) $S(i-1,j) + P$
-  3) $S(i,j-1) + P$
+- S(i,j) = max \ of:
+  1) se(i,j) + S(i-1, j-1) for \ diagonal
+  2) S(i-1,j) + P
+  3) S(i,j-1) + P
 
 |     |     | C    | A   | V   | A   | L    | E    |
 | --- | --- | ---- | --- | --- | --- | ---- | ---- |
@@ -186,7 +186,7 @@ Result :
 - Step 2 : Guide Tree
 
   - Calcul distance :
-    - $ 1-y/x$  ; x = number of non gap position ; y = identical position
+    -  1-y/x ; x = number of non gap position ; y = identical position
   - Build the guide tree using :
 
     - UPGMA
