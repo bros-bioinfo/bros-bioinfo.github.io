@@ -1,24 +1,24 @@
 # Javascript
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-<!-- code_chunk_output -->
+- [Javascript](#javascript)
+	- [Introduction](#introduction)
+		- [JavaScript (or JS) Versions](#javascript-or-js-versions)
+		- [Features](#features)
+	- [JS: The Basics](#js-the-basics)
+		- [Comments](#comments)
+		- [Semicolon](#semicolon)
+		- [Variables](#variables)
+			- [Number](#number)
+			- [String](#string)
+			- [Array](#array)
+			- [Array of Arrays](#array-of-arrays)
+			- [Object in JS](#object-in-js)
 
-* [Javascript](#javascript)
-	* [Introduction](#introduction)
-		* [JavaScript (or JS) Versions](#javascript-or-js-versions)
-		* [Features](#features)
-	* [:green_book: JS: The Basics](#green_book-js-the-basics)
-		* [Comments](#comments)
-		* [Semicolon](#semicolon)
-		* [Variables](#variables)
-			* [Number](#number)
-			* [String](#string)
-			* [Array](#array)
-			* [Array of Arrays](#array-of-arrays)
-			* [Object in JS](#object-in-js)
+<!-- /TOC -->
 
-<!-- /code_chunk_output -->
+
 
 ## Introduction
 
@@ -60,7 +60,7 @@ In a HTML page, the code is written within a \<script> element. It may be locate
   onclick="alert('Hello');">Click on me </p>`
 
 
-## :green_book: JS: The Basics
+## JS: The Basics
 
 
 ### Comments
