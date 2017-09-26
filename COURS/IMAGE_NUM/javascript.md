@@ -1,24 +1,24 @@
 # Javascript
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-<!-- code_chunk_output -->
+- [Javascript](#javascript)
+	- [Introduction](#introduction)
+		- [JavaScript (or JS) Versions](#javascript-or-js-versions)
+		- [Features](#features)
+	- [JS: The Basics](#js-the-basics)
+		- [Comments](#comments)
+		- [Semicolon](#semicolon)
+		- [Variables](#variables)
+			- [Number](#number)
+			- [String](#string)
+			- [Array](#array)
+			- [Array of Arrays](#array-of-arrays)
+			- [Object in JS](#object-in-js)
 
-* [Javascript](#javascript)
-	* [Introduction](#introduction)
-		* [JavaScript (or JS) Versions](#javascript-or-js-versions)
-		* [Features](#features)
-	* [:green_book: JS: The Basics](#green_book-js-the-basics)
-		* [Comments](#comments)
-		* [Semicolon](#semicolon)
-		* [Variables](#variables)
-			* [Number](#number)
-			* [String](#string)
-			* [Array](#array)
-			* [Array of Arrays](#array-of-arrays)
-			* [Object in JS](#object-in-js)
+<!-- /TOC -->
 
-<!-- /code_chunk_output -->
+
 
 ## Introduction
 
@@ -60,7 +60,7 @@ In a HTML page, the code is written within a \<script> element. It may be locate
   onclick="alert('Hello');">Click on me </p>`
 
 
-## :green_book: JS: The Basics
+## JS: The Basics
 
 
 ### Comments
@@ -240,8 +240,34 @@ var obj2 = {
 - array (python = list)
 
 - object
+
+### Loop
+
+**while**
+- Step 1 : initialization (start)
+- Step 2 : exit condition
+- Step 3 : increment step
+
+```js
+var i = 1; // initialization
+while(i<=10){ // (exit condition){defining a bloc of code}
+	IJ.log(i);
+	i = i+1; // Incrementation
+}
+```
+**for** (most used loop "for")
+```js
+for(var i = 1;i<=10;i = i + 1){ // all step in here
+	IJ.log(i);
+}
+```
+**for...in** :  exist but not used a lot.
+
+Assignement op :
+```js
+i = i + 1;
+i += 1; // -= ; /= ; *=
+i ++
 ```
 
-(Work in progress)
-```
 <script>console.log("test")</script>
