@@ -80,7 +80,9 @@ comment
 */
 ```
 ### Semicolon
+
 Each expression must be ended by a semicolon.
+
 ```javascript
 var i = 1 **;**
 i = i + 3 **;**
