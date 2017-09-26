@@ -82,13 +82,13 @@ comment
 
 ### Semicolon
 
-
 Each expression must be ended by a semicolon.
 
 ```javascript
-var i = 1 **;**
-i = i + 3 **;**
-i = 2 * i **;** i = i / 10 **;**
+var i = 1 ;
+i = i + 3 ;
+i = 2 * i ; 
+i = i / 10 
 ```
 
 ### Variables
