@@ -114,7 +114,37 @@ Etudier l'histoire des molécules [...]
 ### Modèle d'évolution [...]
 (pdf)
 
+### Choix du modèle d'évolution
+Logiciels Modeltest-Protest
+http://darwin.uvigo.es/software/
 
+### Reconstruction
+
+Toutes les méthodes de reconstruction reposent sur les hypothèses suivantes :
+- Pas de transfert latéral ou de recombinaison (mitochondrie)
+- Les séquences sont homologues (ou alors on teste en connaissance de cause)
+- Chaque position [...]
+(pdf image)
+
+### Méthodes de reconstruction phylogénétique
+
+Méthode de distance : [...]
+
+
+### Parcimonie (pdf)
+
+### Méthode de distance (pdf)
+
+### Maximiser la vraisemblance (pdf)
+
+### Conclusion (pdf)
 
 
 ## 4. Détermination de la robustesse des arbres
+
+La méthode la plus utlisée est celle de bootstrap : test de la méthode de mise en place de l'arbre avec du bruit pour tester la robustesse. Postulat : [...]
+Répétition de la méthode afin d'évaluer statistiquement la méthode via le bootstrap.
+
+### Les étapes du bootstrap (pdf)
+
+### Utiliser la phylogénie pour comprendre la duplication/perte de gènes (pdf)
