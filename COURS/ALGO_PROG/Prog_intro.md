@@ -13,6 +13,7 @@
 		- [Codage Binaire](#codage-binaire)
 		- [Codage des caractères](#codage-des-caractres)
 		- [Type des objets](#type-des-objets)
+
 # Introduction
 
 - Objectifs :
@@ -169,21 +170,21 @@ if (a == b and c == d and
 + long :
   + Pas de limite sauf celle de la mémoire disponible sur la machine.
 
-• String :
-  • Collection ordonnée de caractères.
-  • Si une chaine est encadrée par des **”’** elle peut s ́étendre sur plusieurs lignes.
-  • c=**”** désigne la chaine vide.
-  • Pas de type char (caractère).
-  • Pas de gestion de la mémoire par l’utilisateur.
++ String :
+	- Collection ordonnée de caractères.
+	- Si une chaine est encadrée par des **”’** elle peut s ́étendre sur plusieurs lignes.
+	- c=**”** désigne la chaine vide.
+	- Pas de type char (caractère).
+	- Pas de gestion de la mémoire par l’utilisateur.
 
-Les opérateurs - 1
-  • Affectation :
-    • a = 3
-  • Arithmétique :
-    • + − ∗ / % ∗∗
-  • Comparaison : (attention à ne pas mettre d'espace entre les opérateurs)
-    • < > <= >= == != !
-  • Logique :
-    • or, and, not.
-  • Opérations sur les bits :
-    • << >> | &
+#### Les opérateurs
+- Affectation :
+		- a = 3
++ Arithmétique :
+		- \+ − ∗ / % ∗∗
++ Comparaison : (attention à ne pas mettre d'espace entre les opérateurs)
+	+ < > <= >= == != !
++ Logique :
+	+ or, and, not.
++ Opérations sur les bits :
+	+ << >> | &
