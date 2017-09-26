@@ -318,3 +318,6 @@ La commande pour changer les droits:
 ```shell
 chmod
 ```
+
+### Variable exportées / Non exportées
+Pour accéder au contenu d'une variable,
