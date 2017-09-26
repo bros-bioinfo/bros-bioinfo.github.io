@@ -220,7 +220,7 @@ Opérateurs :
 - **;**, cmd1 ; cmd2 : commande 2 ne sera créée que si la commande 1 sera terminée.
 - **&**, cmd1 & cmd2 : parallelisme de fonctionnement  des processus cmd1 et 2.
 - **&&**, cmd1 && cmd2 : la cmd2 ne sera créée et exécutée que si la cmd1 s\'est terminée sans erreurs.
-- **||**, cm1 || cmd2 :  cmd2 ne sera créée et exécutée que si la cmd1 renvoie une erreur.
+- **\|\|**, cm1 || cmd2 :  cmd2 ne sera créée et exécutée que si la cmd1 renvoie une erreur.
 
 ```bash
 ls && echo OK || echo KO
