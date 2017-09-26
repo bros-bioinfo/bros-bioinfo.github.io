@@ -79,7 +79,7 @@ Multi-line
 comment
 */
 ```
-### Semicolon
+### Semicolon
 Each expression must be ended by a semicolon.
 ```javascript
 var i = 1 **;**
