@@ -113,7 +113,7 @@ Les sites Web :
   - i = "Hello World" (string)
 
 - Une instruction doit commencer en **première** colonne (début de ligne).
-- L'identation est obligatoire pour marquer les blocks.
+- L'indentation est obligatoire pour marquer les blocks.
 - Les instructions composées ont
 
   - une entête suivie de ":"
