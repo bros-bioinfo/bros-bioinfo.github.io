@@ -240,8 +240,34 @@ var obj2 = {
 - array (python = list)
 
 - object
+
+### Loop
+
+**while**
+- Step 1 : initialization (start)
+- Step 2 : exit condition
+- Step 3 : increment step
+
+```js
+var i = 1; // initialization
+while(i<=10){ // (exit condition){defining a bloc of code}
+	IJ.log(i);
+	i = i+1; // Incrementation
+}
+```
+**for** (most used loop "for")
+```js
+for(var i = 1;i<=10;i = i + 1){ // all step in here
+	IJ.log(i);
+}
+```
+**for...in** :  exist but not used a lot.
+
+Assignement op :
+```js
+i = i + 1;
+i += 1; // -= ; /= ; *=
+i ++
 ```
 
-(Work in progress)
-```
 <script>console.log("test")</script>

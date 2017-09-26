@@ -179,7 +179,7 @@ Result :
 
   - Add gap in column, shift others
 
-### CLustalW :
+### ClustalW :
 
 - Step 1 : Pairwise Alignements for all the combination of sequences
 
@@ -220,4 +220,6 @@ Newest version of clustal : Clustal O (Clustal omega) Best :
 - Clustal W, O
 - MUSCLE
 - T-Coffee
+
+
 (Work in progress)

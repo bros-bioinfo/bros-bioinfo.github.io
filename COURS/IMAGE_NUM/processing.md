@@ -99,3 +99,159 @@ All the techniques available tried to model the background image and then to sub
 - Removal of low frequencies in frequency - Fourier - space.
 
 In ImageJ, only the 'Rolling Ball' filter is implemented to subtract the background.
+
+### Denoising
+
+#### What is noise ?
+
+Noise is what is interfering with the signal. Noise corresponds to a defect in the image where the pixel value is not correct.
+
+#### What are the different types of noise ?
+
+##### Additive noise
+SOit une image non bruitée R et la même imafge avec un bruit additif A, chaque pixel j: Ij=Aj+Rj où Aj est une variable aléatoire de moyenne égale à 0.
+
+##### Multiplicative
+
+Soit une image non bruitée R et I la même image avec un bruit multiplicattif B : Ij=Bj*Rj où Bj est une variable aléatoire de moyenne égale à 1.
+
+###DIfferent types
+
+- Gaussian noise : noise following a gaussian distribution defines by a standard deviation.
+- Impulsive noise : (salt and pepper) corresponds to pixels with extreme values (0 and 255 for a 8 bit image).
+
+#### Origin of noise
+
+##### 1. Intrinsic noises due to the sensor
+
+ELectronic circuits of scanning system, lens triggering, background noise, distorsions etc ...
+
+##### 2. External noise
+
+- Dust
+- "Moves" of sensor or of the object of interest.
+- Perturbations atmospheric parameters (clouds, humidity, fog...)
+- Perturbation electromagnetic (influence le capteur directement)
+
+##### 3. Noise due to digital processing
+
+- Producing artefacts
+- Increasing image processing
+
+You have to balance the enhancement
+
+For denoising :
+
+- Collect several small movies [...]
+
+### FIlters
+
+- Filters in frequency space (reciprocal space, FOurier space )
+- FIlters in real space (or spatial domain)
+
+
+#### FIlters in real space (or spatial domain)
+
+- Linear filters  (old one)
+- Non linear filters
+
+Principle of convolution :
+- Convolution is mathematical operation on two functions producing a third function
+- A convulotion mask ("kernel") is superimposed to a sample image A to create a new image B reconstructed pixel by pixel
+- The operator, called a filter, computes each pixels value.
+
+Convolution mask : (search for process)
+
+#### Mean filters
+
+A kernel of size n\*n (3\*3, 5\*5, 7\*7) gives for each pixel, the average of the neighboring pixels in the n*n area.
+This filter attenuates the neighboring pixel values.
+
+Advantaged : easy to compute and very fast. Important noise reduction specially for great kernels.
+Disavantages : important blur ("flou") for great size of kernel.
+
+Blur reduction by weighting the average calculation
+Ex : kernel 5*5
+
+| 1   | 2   | 3   | 2   | 1   |
+| --- | --- | --- | --- | --- |
+| 2   | 7   | 11  | 7   | 2   |
+| 3   | 11  | 17  | 11  | 3   |
+| 2   | 7   | 11  | 7   | 2   |
+| 1   | 2   | 3   | 2   | 1   |
+
+#### Implementations
+
+**Edge management**:
+- Smaller resulting image
+- Edges of the image identical to those of the original image
+- Extra area containing black pixels (value=0)
+- Other possibilities:
+  - Filters ignore the areas outside the image
+  - Mirror relfexion of the orignal image
+  - Image with a "tore" shape
+
+### Non linear filters
+
+- Rank filters
+- Adaptative filters
+
+#### Rank filters
+
+Based on the histogram calculated for the value of the kernel.
+- Sorting of the various pixel values located under the convolution mask of size [...]
+
+#### APlication of the median filters
+
+Impulse nosie : This filter allow to replace an extreme value due to salt and pepper noise by a value close to those of the neighbors
+
+Gaussian noise : 2 advantage
+- Non reduction of brightness levels
+- No shift of contours
+
+#### Other filters
+
+Filters removing noise while preserving the edges (contours).
+
+- Bilateral FIlter (extension of gaussian filter)
+- Filtre à fiddusion anisotropique (based on partial differential equations)
+  - Perona Malik
+
+### In frequency domain
+
+#### Fourier transform
+
+Fourier series : DEcompsition of a periodic function [...] (wiki)
+
+The Fourier transform is an analogue of the theory of Fourier Series for non periodic functions, and allow to associate a frequency spectrum. (wiki)
+
+Definition :
+- Low pass filter/ High pass filter / Band pass filters (wiki)
+
+One application of the Fourier : correction of Point Spread Function (PSF).(wiki)
+
+## Segmentation
+
+Definition : refers to the process of patitioning a digital image into multiple regions.
+Goal : Simplify and/or change the representation of an image into something that is more meaningful and easier to analyze.
+Use : LOcate objects and boundaries (lines, curvesn etc..) in images.
+Result :
+- Set of regionsd that collesctively cover the entire image
+- SEt of contours extracted from the image (see edge detection )
+
+Each of the ....
+
+### Threshold
+
+Technique based on the histogram (wiki/crazybio)
+
+### Automatic Segmentation
+Algo based on histogram : "mixture modeling". Separation of the histogram in two parts modelised by two gaussian.
+
+### Segmentation by contours
+
+Pixels belonging to  contours (or edges) are delineating regions.
+
+### Segmentation by regions
+
+Algo des **K-mean** : Iterative technique for partitioning an image in K clusters. K is a number of population, the softaware is computing this population.
