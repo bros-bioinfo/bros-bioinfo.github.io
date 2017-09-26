@@ -82,6 +82,7 @@ comment
 
 ### Semicolon
 
+
 Each expression must be ended by a semicolon.
 
 ```javascript
