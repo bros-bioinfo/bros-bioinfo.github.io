@@ -25,38 +25,6 @@ print """
       |_   _|
         ```
 """
-print "\nDonnez l'heure de début de l'experience"
-print "------------------------------------------\n"
-
-debut = input()
-print "\nL'heure de début selectionnée est: ",debut,"H\n"
-
-print "\nDites à quelle minute s'il vous plait:"
-print "----------------------------------------\n"
-debutmin = input()
-
-print "\nLes minutes selectionnées sont: ",debutmin,"m\n"
-
-print "\nCombien de minutes dure votre expérience ? :"
-print "----------------------------------------------\n"
-duree = input()
-minrest = (debutmin+duree)%60
-heure = duree/60
-
-fin = debut + heure
-jour = 0
-if fin > 23:
-    jour = fin/24
-    fin = fin % 24
-
-
-
-
-
-
-
-
-
 
 
 print "\n\nDonner l'année:"
@@ -64,6 +32,8 @@ annee=input()
 
 print "\nDonner le mois:"
 imois=raw_input()
+imois=imois.lower()
+
 if imois=="janvier":
     mois=1
 if imois=="fevrier":
@@ -93,7 +63,34 @@ if imois not in ["janvier", "fevrier","mars","avril","mai","juin","juillet","aou
     sys.exit()
 
 print "\nDonner le jour:"
-#jour=input()
+jour=input()
+
+print "\nDonnez l'heure de début de l'experience"
+print "------------------------------------------\n"
+
+debut = input()
+print "\nL'heure de début selectionnée est: ",debut,"H\n"
+
+print "\nDites à quelle minute s'il vous plait:"
+print "----------------------------------------\n"
+debutmin = input()
+
+print "\nLes minutes selectionnées sont: ",debutmin,"m\n"
+
+print "\nCombien de minutes dure votre expérience ? :"
+print "----------------------------------------------\n"
+duree = input()
+minrest = (debutmin+duree)%60
+heure = duree/60
+
+fin = debut + heure
+journ = 0
+if fin > 23:
+    journ = fin/24
+    fin = fin % 24
+
+
+
 
 
 
@@ -101,17 +98,20 @@ if mois == 0 or mois == 2 or mois == 4 or mois == 6 or mois == 9 or mois == 11:
     if jour>30:
         print "Erreur dans la saisie du jour (il n'y a pas autant de jours dans ce mois)"
         sys.exit(0)
+
 if mois == 2:
     if jour>28:
         print "Erreur dans la saisie du jour (il n'y a pas autant de jours dans ce mois)"
         sys.exit(0)
+
 if mois == 1 or mois == 3 or mois == 5 or mois == 7 or mois == 8 or mois == 10 or mois == 12:
     if jour>31:
         print "Erreur dans la saisie du jour (il n'y a pas autant de jours dans ce mois)"
         sys.exit(0)
 
 
-journext = jour + 1
+
+journext = jour + journ
 
 
 if mois == 0 or mois == 2 or mois == 4 or mois == 6 or mois == 9 or mois == 11:
@@ -166,5 +166,5 @@ if mois == 12:
     mois="decembre"
 
 
-print "\nL'expérience finira au",jour,"°jour à",fin,"Heures et",minrest,"minutes."
-print "\nLe jour suivant est: ",journext, mois, annee
+print "\nL'expérience finira à",fin,"Heures et",minrest,"minutes."
+print "\nLe: ",journext, mois, annee
