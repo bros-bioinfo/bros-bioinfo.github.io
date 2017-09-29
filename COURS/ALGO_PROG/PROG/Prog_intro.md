@@ -177,7 +177,7 @@ if (a == b and c == d and
 	- Pas de type char (caractère).
 	- Pas de gestion de la mémoire par l’utilisateur.
 
-#### Les opérateurs
+### Les opérateurs
 - Affectation :
 		- a = 3
 + Arithmétique :
@@ -188,3 +188,245 @@ if (a == b and c == d and
 	+ or, and, not.
 + Opérations sur les bits :
 	+ << >> | &
+
+#### Manipulation simple sur les nombres
++ Diviser un entier par 2 revient à décaler d’un bit vers la
+droite.
++ Multiplier ce nombre par 2 revient à le décaler vers la
+gauche en ajoutant un bit à 0.
++ Exemple :
+  + Codage de 4 = 100
+  + Codage de 2 = 10
+  + Codage de 8 = 1000
+
++ Echanger deux variables
+
+```py
+print ’donnez un nombre’
+nb1=input()
+print ’donnez un autre nombre’
+nb2=input()
+temp=nb1
+nb1=nb2
+nb2=temp
+```
+
+#### Typage dynamique des variables
++ Pour les types simples prédéfinis, pas de déclaration des variables :
+
+```py
+item=1 # type entier
+print item
+item=’la maison’ # type chaine de caracteres
+print item
+```
+
++ Ne pas mélanger les types :
+
+```py
+item=’5’
+item=item+1
+```
+
++ Cette instruction provoquera une erreur : Refus
+d’additionner un entier et une chaine de caractères.
+
+#### Type de Données - Les opérations sur les chaines
++ Surcharge des opérateurs :
+  + Concaténation (ajout) + ’spam’+’42’
+  + Répétition ∗
+  + Formattage %
+  
++ Accès par indiçage :
+``mot=”chaine”``
+	+ mot[2] permet d’obtenir ’a’
+	+ mot[:2] permet d’obtenir ’ch’
+	+ mot[2:] permet d’obtenir ’aine’
+	+ mot[2:4]permet d’obtenir ’ai’
+	+ mot[:-2] permet d’obtenir ’chai’
+
+#### Les chaines de caractères
++ Les chaines sont non modifiables sur place.
+
+```py
+>>> mot[2]=’0’ déclenche une erreur.
+>>> mot='chaine'
+>>> mot[2]='O'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> mot=mot[:2]+'O'+mot[3:]
+>>> mot
+'chOine'
+```
++ On accède aux caractères de cette chaine en le désignant
+par sa position.
+
+#### Les opérations sur les chaines
++ Il est possible d’obtenir la longueur d’une chaine : ``len(mot)`` renvoie le nombre de caractères contenu dans le mot.
++ ``chaine1 in chaine2`` renvoie vrai si chaine2 contient
+chaine1
++ ``chaine1 not in chaine2`` renvoie vrai si chaine2 ne
+contient pas chaine1
++ ``for i in chaine1`` énumère tous les caractères
+contenus dans chaine1
+
++ Transformer une chaine en nombre :
+
+```py
+mot=’’3’’
+numero=int(mot)
+mot2=’’3.2’’
+nombre=float(mot2)
+```
+
++ Transformer un nombre en chaine de caractères :
+
+```py
+num=3
+mot=str(num)
+```
+
++ Comparer deux chaines de caractères :
+
+```py
+s1=’’bleu’’
+s2=’’bleu’’
+s3=’’Bleu’’
+s1==s2 renvoie 1 - vrai
+s1==s3 renvoie 0 - faux
+```
+
+### Les structures de contrôle
++ Tester une condition afin de controler la suite d’instructions à exécuter : **if**
++ Syntaxe :
+
+**if (test booléen) :**
+**instructions si vrai**
+**else :**
+**instructions si faux**
+
++ Exemple :
+
+```py
+if ( a % 2 == 0):
+print “a est pair”
+else :
+print “a est impair”
+```
+
+#### Utilisation des opérateurs booléens
++ Pour les besoins d’une enquête de santé publique, vous avez un échantillon de population où chaque individu est défini 2 variables sexe et taille.
++ La variable sexe peut prendre la valeur ’F’ou ’M’.
++ La variable taille est un entier
++ Pour intégrer un individu dans votre étude, il doit soit être
+une femme (valeur ’F’) et avoir une taille supérieur à 180,
+soit être un homme (valeur ’M’) et avoir une taille inférieur
+à 160.
+
+```py
+print ’donnez une valeur pour le sexe’
+sexe=raw_input()
+print ’donnez une valeur pour la taille’
+taille=input()
+
+if (sexe==’F’ and taille>180) or (sexe==’M’ and taille<160):
+	print ’vous etes integre’
+else:
+	print ’desole vous ne correspondez pas au profil de l etude ’
+```
+
+#### Exercice de logique
++ Sélectionner les animaux dont l’âge est supérieur a 3 jours :
++ La négation de ceci est : animaux dont l’âge est inférieur
+ou égale à 3 jours.
++ Code python :
+
+```py
+if age > 3 :
+	print "selection"
+else:
+	print "ce n’est pas le bon age"
+```
+
+##### Sélection multiple
++ Sélectionner les animaux dont l’âge est supérieur à 3 jours et inférieur à 5 jours:
++ La négation de ceci est : animaux dont l’âge est inférieur ou égale à 3 jours ou supérieur ou égale à 3 jours.
++ Code python :
+
+```py
+if age > 3 and age < 5:
+	print "selection"
+else:
+	print "trop jeune ou trop vieux"
+```
+
++ Parmi les animaux qui ont plus de 3 jours, affecter le code A à ceux qui sont des males et le code B à ceux qui sont des femelles.
++ Code python :
+
+```py
+print "age de votre animal en nb jours ?"
+age = input()
+print "donnez le sexe de cet animal"
+sexe=raw_input()
+if age > 3 :
+	if sexe != ’M’ and sexe != ’F’:
+		print "vous devez saisir F ou M"
+	else :
+		if sexe== ’M’:
+			code = ’A’
+		else:
+			if sexe == ’F’:
+				code = ’B’
+print ’le code est ’, code
+
+```
+**Problèmes ?**
++ Problème de programmation : on accède à la variable code alors que peut-être elle n’est pas définie, cela peut provoquer une erreur d’exécution du programme.
++ Problème de gestion des données : si l’age est inférieur ou égale à 3 aucun traitement n’est effectué, dans la suite des traitements il y aura des animaux pour lequel il n’y a pas de code.
+
+**Une version possible**
+```py
+print "age de votre animal en nb jours ?"
+age = input()
+print "donnez le sexe de cet animal"
+sexe=raw_input()
+code =’’
+if age > 3 :
+	if sexe != ’M’ and sexe != ’F’:
+		print "vous devez saisir F ou M"
+	else :
+		if sexe== ’M’:
+			code = ’A’
+		else:
+			if sexe == ’F’:
+				code = ’B’
+if code != ’’:
+	print ’le code est ’, code
+else :
+	print ’aucun code affecte
+	
+#### La notion de blocs
++ Les blocs sont délémités par l’indentation, c.-à-d. par la mise en page.
++ Les commentaires (commençant par #) sont ignorés.
++ Il est possible de composer - d’imbriquer, des instructions.
++ Bloc d’instructions :
+		Ligne d’entête :
+			première instruction du bloc
+			... ...
+			dernière instruction du bloc.
+			
+**Instructions imbriquées :**
+
+```py
+if embranchement == ‘‘vertebres’’:
+	if classe == ‘‘mammiferes’’:
+		if ordre == ‘‘carnivores’’:
+			if famille == ‘‘felins’’:
+				print ‘‘c’est peut-etre un chat’’
+			print ‘‘c’est en tout cas un mammifere’’
+		elif classe == ‘‘oiseaux’’:
+			print ‘‘c’est peut etre un canari’’
+	print (‘‘la classification des animaux est complexe’’ )
+```
+
