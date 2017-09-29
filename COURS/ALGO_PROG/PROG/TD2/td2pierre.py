@@ -3,6 +3,61 @@
 import sys
 
 
+print "*Programme Horaire*\n"
+print """
+       _..._
+      |_____|
+      |_____|
+      |_____|
+      |_____|
+      |_____|
+     / _____ |
+     ||  '  ||
+     ||  |  ||
+     ||- | -||)
+     ||   \ ||
+     ||__.__||
+     \_______/
+      |_____|
+      |_____|
+      |_____|
+      |_____|
+      |_   _|
+        ```
+"""
+print "\nDonnez l'heure de début de l'experience"
+print "------------------------------------------\n"
+
+debut = input()
+print "\nL'heure de début selectionnée est: ",debut,"H\n"
+
+print "\nDites à quelle minute s'il vous plait:"
+print "----------------------------------------\n"
+debutmin = input()
+
+print "\nLes minutes selectionnées sont: ",debutmin,"m\n"
+
+print "\nCombien de minutes dure votre expérience ? :"
+print "----------------------------------------------\n"
+duree = input()
+minrest = (debutmin+duree)%60
+heure = duree/60
+
+fin = debut + heure
+jour = 0
+if fin > 23:
+    jour = fin/24
+    fin = fin % 24
+
+
+
+
+
+
+
+
+
+
 
 print "\n\nDonner l'année:"
 annee=input()
@@ -38,7 +93,7 @@ if imois not in ["janvier", "fevrier","mars","avril","mai","juin","juillet","aou
     sys.exit()
 
 print "\nDonner le jour:"
-jour=input()
+#jour=input()
 
 
 
@@ -110,4 +165,6 @@ if mois == 11:
 if mois == 12:
     mois="decembre"
 
+
+print "\nL'expérience finira au",jour,"°jour à",fin,"Heures et",minrest,"minutes."
 print "\nLe jour suivant est: ",journext, mois, annee
