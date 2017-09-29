@@ -405,7 +405,8 @@ if code != ’’:
 	print ’le code est ’, code
 else :
 	print ’aucun code affecte
-	
+```
+
 #### La notion de blocs
 + Les blocs sont délémités par l’indentation, c.-à-d. par la mise en page.
 + Les commentaires (commençant par #) sont ignorés.
