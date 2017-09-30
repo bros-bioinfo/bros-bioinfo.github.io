@@ -166,5 +166,4 @@ if mois == 12:
     mois="decembre"
 
 
-print "\nL'expérience finira à",fin,"Heures et",minrest,"minutes."
-print "\nLe: ",journext, mois, annee
+print "\nL'expérience finira à",fin,"H",minrest,"le",journext, mois, annee
