@@ -29,11 +29,10 @@ def hashtag(num): #afficher des hashtags en fonction de num (doit être compris 
 	for i in tab : #on écrit les hashtags en fonction de si i est inférieur à num
 		 if i < num:
 					i += 1
-					print "#*i
+					print "#"*i
 					continue
 	print("C'est fini, quelle belle demi-pyramide !")
-
-	```
+```
 
 
 
@@ -57,7 +56,6 @@ def min(a,b):
 ```python
 def sumnum(a,b,c):
 	print(a+b+c)
-
 ```
 
 ## Exercice 3
@@ -69,7 +67,6 @@ def sumnum(a,b,c):
 def whtisyourname():
 	name=input("Quel est votre nom?\n")
 	print("Hello Mr or Mme ",name)
-
 ```
 
 ## Exercice 4
@@ -81,7 +78,6 @@ def whtisyourname():
 def stringx3():
 	string=input("Tapez votre texte\n")
 	print((string + "\n")*3)
-
 ```
 
 ## Exercice 5
@@ -103,7 +99,6 @@ def stringx3():
 		total2=(total//60)
 		total3= total%60
 		print("L'expérience finira à",total2,"heures",total3,"minutes")
-
 ```
 
 
@@ -292,7 +287,7 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 
 ## Exercice 9
 
-- Répéter une chaîne de caractère en fonction du nombre demandé
+- Répéter une chaîne de caractère en fonction du nombre demandé :
 
 ```python
 def string(x):#x = nombre de fois que l'on display le "string"
