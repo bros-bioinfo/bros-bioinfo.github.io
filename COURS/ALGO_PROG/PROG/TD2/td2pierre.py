@@ -26,7 +26,6 @@ print """
         ```
 """
 
-
 print "\n\nDonner l'année:"
 annee=input()
 
@@ -88,7 +87,6 @@ journ = 0
 if fin > 23:
     journ = fin/24
     fin = fin % 24
-
 
 
 
