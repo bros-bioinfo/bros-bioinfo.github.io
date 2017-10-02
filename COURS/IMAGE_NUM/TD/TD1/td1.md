@@ -2,7 +2,7 @@
 
 **Launch command**:
 
-Lancer imageJ en étant citué dans le répertoir courant.
+**Lancer imageJ en étant citué dans le répertoir courant.
 
 ```shell
 ./run
