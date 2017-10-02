@@ -30,7 +30,6 @@ pour le rectangle
 
 -**Shift + clic** : fais un carré
 
-
 -**ctrl + clic** : sélection qui part du milieu
 
 
