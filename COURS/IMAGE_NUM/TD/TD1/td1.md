@@ -2,7 +2,9 @@
 
 **Launch command**:
 
-**Lancer imageJ en étant citué dans le répertoir courant.
+
+
+Lancer imageJ en étant citué dans le répertoir courant.
 
 ```shell
 ./run
@@ -27,8 +29,16 @@ anaglyph.php
 pour le rectangle
 
 -**Shift + clic** : fais un carré
+
+
+
 -**ctrl + clic** : sélection qui part du milieu
+
+
+
 -**ctrl + shift** + clic : carré qui part du milieu
+
+
 
 outil polygone :** double clic** : ferme le polygone
 
