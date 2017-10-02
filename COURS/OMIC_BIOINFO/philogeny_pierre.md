@@ -59,10 +59,12 @@ On crée des représentations schématiques:
 - Les arbres générés par les prog. de phylogénie sont donnés sous la forme d'expression (noms des TAXA) entre parenthèse et avec des virgules:
 $$(((C,B),A),D)$$
 
-![alt text](http://images.slideplayer.com/36/10578139/slides/slide_25.jpg)
-
 - et on peut indiquer la longueur des branches par:1
 $$(((C:1,B:1),A:3),D:5)$$
+
+
+![alt text](http://images.slideplayer.com/36/10578139/slides/slide_25.jpg)
+
 
 **Résolution des arbres:** On veut obtenir un maximum de bifurcation et évité les multifurcations.
 
