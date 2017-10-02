@@ -57,10 +57,10 @@ On crée des représentations schématiques:
 
 **Format Newick**
 - Les arbres générés par les prog. de phylogénie sont donnés sous la forme d'expression (noms des TAXA) entre parenthèse et avec des virgules:
-$$(((C,B),A),D)$$
+**(((C,B),A),D)**
 
 - et on peut indiquer la longueur des branches par:1
-$$(((C:1,B:1),A:3),D:5)$$
+**(((C:1,B:1),A:3),D:5)**
 
 
 ![alt text](http://images.slideplayer.com/36/10578139/slides/slide_25.jpg)
@@ -69,6 +69,10 @@ $$(((C:1,B:1),A:3),D:5)$$
 **Résolution des arbres:** On veut obtenir un maximum de bifurcation et évité les multifurcations.
 
 Il est important d'avoir des arbres **enracinés**, d'un point de vue biologique.
+
+Un arbre non raciné est un arbre qui n'a pas de point de départ.
+
+![alt text](http://www.evolution-biologique.fr/wp-content/uploads/2.15.jpg)
 
 **Comment raciner un arbre?**:
 La plupart des méthodes produisent des arvres non-racinés car elles détectent des différences entre séquences mais n'ont aucun moyen de les orienter temporellement.
@@ -79,7 +83,7 @@ On peut les positionner grâce:
 
 Les ingrédients de la **phylogénie moléculaire**:
 - Taxons
-- Caractères
+- Caractères (pour nous ce sont les séquences)
   - soit les caractères tels qu'ils sont donnés
     - description morphologique
     - présence/absence
@@ -90,9 +94,11 @@ Les ingrédients de la **phylogénie moléculaire**:
 - Objectifs: Corriger la différence entre le nombre de substitutions observées et leur nombre réel.
 - Différents modèles ont été proposées en tenant compe de la fréquence des bases.
 
+**Modeltest-Protest** -> logiciel qui regarde le meilleur modèle à partir de jeux de séquences.
+
 **Reconstruction d'arbres**:
 Toutes les méthodes de reconstruction reposent sur les hypothèses suivantes:
-- Pas de transfert la téral ou de recombinaison ()
+- Pas de transfert latéral ou de recombinaison ()
 - Séquences sont homologues
 - Chaque position de l'alignement comporte des résidus homologues
 - L'échantillonage est bien réalisé.
