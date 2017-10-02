@@ -383,3 +383,36 @@ border-radius: 5px;
 padding-left: 4px;
 padding-right: 2px;
 }
+#gitlist a div.usi{
+display: table-cell;
+background: #FFA51F!important;
+border-radius: 5px;
+padding-left: 4px;
+padding-right: 2px;
+}
+#gitlist a div.prog{
+display: table-cell;
+background: #41C767!important;
+border-radius: 5px;
+padding-left: 4px;
+padding-right: 2px;
+}
+
+#gitlist a div.td{
+display: table-cell;
+background: #02BFBF!important;
+border-radius: 5px;
+padding-left: 4px;
+padding-right: 2px;
+}
+#gitlist a div.tdnum{
+display: table-cell;
+background: #059595!important;
+border-radius: 5px;
+padding-left: 4px;
+padding-right: 2px;
+}
+#gitlist a:not(:first-child) {
+padding-left: 4px;
+line-height: 1.7;
+}
