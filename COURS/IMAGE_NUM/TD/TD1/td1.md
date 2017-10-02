@@ -35,7 +35,7 @@ pour le rectangle
 
 
 
-outil polygone :** double clic** : ferme le polygone
+outil polygone :**double clic** : ferme le polygone
 
 **Double clic dans la barre d'outil** ImageJ sur un figure pour voir les paramètres (largeur, taille de la flèche ...)
 
