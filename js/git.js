@@ -59,13 +59,15 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
         }
       }
       var TD = "TD"+i;
+
       url = url.replace(tab[i], "<br>" + tab[i]);
       url = url.replace(tab[i], '<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> ' + tab[i] + "</div>");
-      url = url.replace(/ ╶─ PROG ╶─/,' ╶─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─')
-      url = url.replace(/ ╰─ PROG ╶─/,' ╰─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─')
-      url = url.replace(/ ╰─ USI ╶─/,' ╰─ <div style="color:white" class="usi"><i class="fa fa-folder-open" aria-hidden="true"></i> USI\xa0 </div>╶─')
-      url = url.replace(/╶─ TD ╶─/,'╶─ <div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i> TD\xa0 </div>╶─')
-      url = url.replace(TD,'<div style="color:white" class="tdnum"><i class="fa fa-folder-open" aria-hidden="true"></i>'+ TD+'</div>')
+      url = url.replace(/ ╶─ PROG ╶─/,' ╶─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
+      url = url.replace(/ ╰─ PROG ╶─/,' ╰─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
+      url = url.replace(/ ╰─ USI ╶─/,' ╰─ <div style="color:white" class="usi"><i class="fa fa-folder-open" aria-hidden="true"></i> USI\xa0 </div>╶─');
+      url = url.replace(/╶─ TD ╶─/,'╶─ <div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i> TD\xa0 </div>╶─');
+      url = url.replace(TD,'<div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i>'+ TD+'</div>');
+
       i++
     }
 
@@ -80,7 +82,8 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
     urlreworked = '">' + url + '</a>';
     ulien = ulien.replace(/"><\/a>/gm, urlreworked);
     ulien = ulien.replace(/  /gm, "");
-
+    ulien = ulien.replace(/╶─(?!.*╶─)(?:(?!\S+$).)*/gm,' ╶─ <i class="fa fa-file-text-o" style="color:#007bff" aria-hidden="true"></i>\n');
+    ulien = ulien.replace(/╰─(?!.*╶─)(?:(?!\S+$).)*/gm,' ╰─ <i class="fa fa-file-text-o" style="color:#007bff" aria-hidden="true"></i>\n');
     console.log("ulien:" + ulien);
     $("#gitlist").append(ulien + "<br>");
     n++;

@@ -225,7 +225,9 @@ header.masthead {
       font-size: 30px; } }
 
 .post-preview > a {
-  color: #333333; }
+  color: #333333;
+padding-top: 50px;
+}
   .post-preview > a:focus, .post-preview > a:hover {
     text-decoration: none;
     color: #0085A1; }
