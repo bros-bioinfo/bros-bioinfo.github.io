@@ -56,37 +56,40 @@
     </div>
   </header>
 
+
   <!-- Main Content -->
   <div class="container">
     <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+        <h1 class="mx-auto" style="color:#0085A1; width:100%; break-after:auto"> Listes des cours</h1>
+      </div>
+      <div id="gitlist" class="mx-auto"></div>
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-preview">
-          <h1 class="post-title" style="color:#0085A1"> Listes des cours<br>
 
-                </h1>
-          <h3 class="post-subtitle">
-
-                  <div id="gitlist"/></div>
-
-                </h3>
-
-        </div>
         <hr>
-        <div class="post-preview" style="margin-top:200px;">
+        <div class="post-preview" style="margin-top:200px; font-size:13px;box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);padding: 20px;border: 1px solid #c5c5c5cc;" id="readme">
           <h1 class="post-title">
                 Partie Technique
                 <br><br>
               </h1>
 
-          <h3 id="les-commandes-git">Les commandes git:</h3>
+          <h3 id="les-commandes-git">Les commandes git:</h3><br>
 
-          <p><strong>Pour commencer</strong>, il faut: <br> - installer git; <br> - se faire un compte github (et se faire ajouter en contributeur) <br> - se placer dans le répertoire où on veut mettre le dossier avec cd <br> - cloner le dossier github localement:
-            <br>
-            <code>shell <br>
-                  git clone https://github.com/bros-bioinfo/bros-bioinfo.github.io.git <br>
-                </code></p>
+          <p><strong>Pour commencer</strong>, il faut:
+<ul>
+    <li>installer git;</li>
+    <li>se faire un compte github (et se faire ajouter en contributeur)</li>
+    <li>se placer dans le répertoire où on veut mettre le dossier avec cd</li>
+    <li>cloner le dossier github localement:
+</ul></p>
 
-          <p><strong>Avant d’éditer le fichier</strong>: il faut se mettre dans la racine du projet et:</p>
+
+  <code style="background-color:white!important; font-size:14px!important;">
+  git clone https://github.com/bros-bioinfo/bros-bioinfo.github.io.git
+  </code>
+
+
+          <p><strong><br>Avant d’éditer le fichier</strong>: il faut se mettre dans la racine du projet et:</p>
 
 
 
@@ -98,7 +101,7 @@
 
 
 
-          <pre class="prettyprint"><code class="language-shell hljs lasso">git add <span class="hljs-subst">--</span><span class="hljs-literal">all</span> ; git commit <span class="hljs-attribute">-m</span> <span class="hljs-string">"updates des cours"</span> ; git push <span class="hljs-subst">--</span><span class="hljs-literal">all</span></code></pre>
+          <pre class="prettyprint"><code class="language-shell hljs lasso">git add <span class="hljs-subst">--</span><span class="hljs-literal">all</span><br>git commit <span class="hljs-attribute">-m</span> <span class="hljs-string">"updates des cours"</span><br>git push <span class="hljs-subst">--</span><span class="hljs-literal">all</span></code></pre>
 
           <p>S’il y a des problèmes, faites chaques commandes séparément. <br> - git add: permet d’ajouter les fichiers modifiés à la liste d’envoi; <br> - git commit: message de changement; <br> - git push: upload</p>
 
@@ -109,9 +112,7 @@
       </div>
 
       <!-- Pager -->
-      <div class="clearfix">
-        <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
-      </div>
+
     </div>
   </div>
   </div>

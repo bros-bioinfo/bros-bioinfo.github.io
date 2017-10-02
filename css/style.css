@@ -17,13 +17,13 @@ max-height: 50px !important;
 }
 p {
   line-height: 1.5;
-  font-size: 1.6em;
+  /*font-size: 1.6em;*/
   margin: 30px 0; }
   p a {
     text-decoration: underline; }
-.hljs{
-  font-size: 1.5em!important;
-}
+    .hljs{
+      font-size: 1.5em!important;
+    }
 code{
   font-size: 75%!important;
   font-family: "Source Code Pro",monospace!important;
@@ -226,7 +226,7 @@ header.masthead {
 
 .post-preview > a {
   color: #333333;
-padding-top: 50px;
+
 }
   .post-preview > a:focus, .post-preview > a:hover {
     text-decoration: none;
@@ -369,6 +369,27 @@ footer {
   color: white;
   border: 1px solid #0085A1;
   background-color: #0085A1; }
+@media  (min-width: 300px) and (max-width: 650px) {
+#gitlist{
+  font-size: 1em;
+}
+}
+@media (min-width: 650px) and (max-width: 850px) {
+#gitlist{
+  font-size: 1.4em;
+}
+}
+@media (min-width: 851px) and (max-width: 1199px) {
+#gitlist{
+  font-size: 1.7em;
+}
+}
+@media (min-width: 1200px) {
+#gitlist{
+  font-size: 1.8em;
+}
+}
+
 
   #gitlist a {
 font-family: 'Roboto Mono', monospace;
@@ -417,4 +438,13 @@ padding-right: 2px;
 #gitlist a:not(:first-child) {
 padding-left: 4px;
 line-height: 1.7;
+}
+#readme h1, h2, h3, p, ul, li{
+  color: rgb(0, 133, 161)!important;
+}
+#readme ul, li{
+font-size: larger;
+}
+code{
+  background-color: rgb(51, 51, 61)!important;
 }
