@@ -319,3 +319,6 @@ def lenstring():
 	string=list(string)
 	print(len(string),"caractères dans votre phrase !")
 ```
+Voilà pour ces exos ! :)
+
+![](https://media1.giphy.com/media/roeK1IUE3V22k/200.gif#8-grid1)
