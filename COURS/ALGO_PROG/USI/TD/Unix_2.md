@@ -198,3 +198,10 @@ drwxr-xr-x 10 root root    4096 déc.   5  2014 fr
 drwxr-xr-x  4 root root    4096 déc.   5  2014 fr.ISO8859-1
 drwxr-xr-x  4 root root    4096 févr. 24  2016 fr.UTF-8
 ```
+
+```sh
+s3b@s3b-N750BU:~$ which firefox
+/usr/bin/firefox
+s3b@s3b-N750BU:~$ whereis firefox
+firefox: /usr/bin/firefox /usr/lib/firefox /etc/firefox /usr/share/man/man1/firefox.1.gz
+```

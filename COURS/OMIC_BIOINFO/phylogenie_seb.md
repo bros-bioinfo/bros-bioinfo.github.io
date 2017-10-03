@@ -148,3 +148,17 @@ Répétition de la méthode afin d'évaluer statistiquement la méthode via le b
 ### Les étapes du bootstrap (pdf)
 
 ### Utiliser la phylogénie pour comprendre la duplication/perte de gènes (pdf)
+
+# UPGMA
+
+https://en.wikipedia.org/wiki/UPGMA
++ All the method
+
+# Neighbor-Joining
+
+https://en.wikipedia.org/wiki/Neighbor_joining
++ Def and advantage et disvantage
+
+# Maximum likelihood
+https://en.wikipedia.org/wiki/Computational_phylogenetics
++ regroupe toutes les matrices de distance, Bootstrap etc...
