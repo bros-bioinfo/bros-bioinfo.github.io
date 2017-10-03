@@ -393,11 +393,18 @@ footer {
 
   #gitlist a {
 font-family: 'Roboto Mono', monospace;
+text-decoration: none;
   }
 #gitlist a:hover{
-  text-decoration: none;
+text-decoration: none;
 text-transform: uppercase;
 color: #003e9a;
+}
+#gitlist a:focus{
+text-decoration: none;
+}
+#gitlist a:active{
+text-decoration: none;
 }
 #gitlist a div{
 display: table-cell;
