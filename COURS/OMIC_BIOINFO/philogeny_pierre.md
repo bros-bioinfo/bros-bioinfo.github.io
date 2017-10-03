@@ -74,6 +74,9 @@ Un arbre non raciné est un arbre qui n'a pas de point de départ.
 
 ![alt text](http://www.evolution-biologique.fr/wp-content/uploads/2.15.jpg)
 
+![](https://media.tenor.com/images/1d586769a9c3d74506fc10aa37771f9a/tenor.gif)
+
+
 **Comment raciner un arbre?**:
 La plupart des méthodes produisent des arvres non-racinés car elles détectent des différences entre séquences mais n'ont aucun moyen de les orienter temporellement.
 
@@ -98,23 +101,26 @@ Les ingrédients de la **phylogénie moléculaire**:
 
 **Reconstruction d'arbres**:
 Toutes les méthodes de reconstruction reposent sur les hypothèses suivantes:
-- Pas de transfert latéral ou de recombinaison ()
+- Pas de transfert latéral ou de recombinaison.
 - Séquences sont homologues
 - Chaque position de l'alignement comporte des résidus homologues
 - L'échantillonage est bien réalisé.
 
 PLESIOmorphie -copie des autres caractères
 
-Trees: Construction methods
+**Trees: Construction methods**
 
 Etapdes de l'UPGMA
 - calculer la matrice de distance entre tous les séquences appariées.
 - Pour chaque iteration:
   - Chercher la distance la plus petite
   - Mise à jour des matrices de distance en calculant le score moyen.
-![](https://media.tenor.com/images/1d586769a9c3d74506fc10aa37771f9a/tenor.gif)
+
+
 
 ## 4. Détermination de la robustesse des arbres.
 - La méthode la plus utilisée est celle du bootstrap (grilles)
 - Postulat: les caractères évoluent de manière indépendante.
 → Un arbre qui varie beaucoup
+
+![](https://media.giphy.com/media/17Z9AMUpJsV5m/giphy.gif)
