@@ -61,13 +61,12 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
       var TD = "TD"+i;
 
       url = url.replace(tab[i], "<br>" + tab[i]);
-      url = url.replace(tab[i], '<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> ' + tab[i] + "</div>");
-      url = url.replace(/ ╶─ PROG ╶─/,' ╶─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
+      url = url.replace(tab[i], '<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> ' + tab[i] + "</div> ");
+      url = url.replace(/╶─ PROG ╶─/,' ╶─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
       url = url.replace(/ ╰─ PROG ╶─/,' ╰─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
       url = url.replace(/ ╰─ USI ╶─/,' ╰─ <div style="color:white" class="usi"><i class="fa fa-folder-open" aria-hidden="true"></i> USI\xa0 </div>╶─');
-      url = url.replace(/╶─ TD ╶─/,' \xa0╶─ <div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i>TD</div> ╶─');
+      url = url.replace(/╶─ TD ╶─/,' ╶─ <div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i>TD</div> ╶─');
       url = url.replace(TD,'<div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i>'+TD+'</div>');
-
       i++
     }
 
