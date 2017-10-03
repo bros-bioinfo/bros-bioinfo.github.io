@@ -105,6 +105,15 @@ Toutes les méthodes de reconstruction reposent sur les hypothèses suivantes:
 
 PLESIOmorphie -copie des autres caractères
 
+Trees: Construction methods
+
+Etapdes de l'UPGMA
+- calculer la matrice de distance entre tous les séquences appariées.
+- Pour chaque iteration:
+  - Chercher la distance la plus petite
+  - Mise à jour des matrices de distance en calculant le score moyen.
+![](https://media.tenor.com/images/1d586769a9c3d74506fc10aa37771f9a/tenor.gif)
+
 ## 4. Détermination de la robustesse des arbres.
 - La méthode la plus utilisée est celle du bootstrap (grilles)
 - Postulat: les caractères évoluent de manière indépendante.

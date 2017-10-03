@@ -77,3 +77,33 @@ A filter, an "operator", computes each pixel value.
 
 Segmentation refers to the process of partitioning a digital image into multiple regions.
 I simplify and/or change the representation of an image into something that is more meaningful and easier to analyze.
+
+
+--------
+
+**Binary images** (boolean)
+| Img A | Img B | AND | OR  | XoR | NOT(ImgA) |
+| ----- | ----- | --- | --- | --- | --------- |
+| T     | T     | T   | T   | F   | F         |
+| T     | F     | F   | T   | T   | F         |
+| F     | T     | F   | T   | T   | T         |
+| F     | F     | F   | F   | F   | T         |
+
+**Erosion**: Shrinking the object by one pixel.
+**Dilation**: Inflate the object by one pixel.
+
+ Advantages:
+ >Fast method
+ >Erosion useful for splitting touching objects or removing backgrounds pixel
+ >Dilation useful for filling holes
+ >Often used in cycles(s) alternating erosion/dilation
+
+Disadvantages:
+ > Very sensitive to the kernel shape: The objects are distorted and take the shape of the kernel.
+
+**Opening** is an erosion and a dilation after to remove isolated pixels.
+**Closing** is a dilation and a erosion after to fill iner pixels.
+**Cycles** is the number of cycles; it's the maximum diameter of the object to remove (or keep intact).
+**Skeletonization** is a specific erosion where pixels are removed if and only if they don't split the object in two parts. The result is a medial axis of the object equdistant to the object's boundaries.
+**Segmentation by Euclidean distance map and UEPs (Ultimate Eroded Point)**
+**Segmenting by Watershed**
