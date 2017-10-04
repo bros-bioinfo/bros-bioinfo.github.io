@@ -75,7 +75,7 @@ In the histogram, there is no pixel value in the range of [0-50] and of [178-255
 
 ##### 2.2\. Equalization of the histogram
 
-An ideal transfer function based on the **cumulative histogram**.
+An ideal transfer function based on the **cumulative histogram**. One disvantage is that it ehance the noise of the image, it'snot interesting for scientific images.
 
 ### Enhancement: Non uniform illumination
 
