@@ -177,7 +177,7 @@ A **median filter** is an example of a non-linear filter and, if properly design
 + sort the neighbouring pixels into order based upon their intensities
 + replace the original value of the pixel with the median value from the list
 
-A median filter is a **rank-selection (RS) filter**, a particularly harsh member of the family of rank-conditioned rank-selection (RCRS) filters; a much milder member of that family, for example one that selects the closest of the neighboring values when a pixel's value is external in its neighborhood, and leaves it unchanged otherwise, is sometimes preferred, especially in photographic applications.
+A median filter is a **rank-selection (RS) filter**, a particularly harsh member of the family of rank-conditioned rank-selection (RCRS) filters; a much milder member of that family, for example one that selects the closest of the neighboring values when a pixel's value is external in its neighborhood, and leaves it unchanged otherwise, is sometimes preferred, especially in photographic applications. (very effective on salt and pepper)
 
 Median and other RCRS filters are good at removing salt and pepper noise from an image, and also cause relatively **little blurring of edges**, and hence are often used in computer vision applications.
 
