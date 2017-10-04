@@ -102,7 +102,7 @@ In ImageJ, only the 'Rolling Ball' filter is implemented to subtract the backgro
 
 ### Noise
 
-Image noise is random (not present in the object imaged) **variation of brightness or color information** in images, and is usually an aspect of electronic noise. It can be produced by the sensor and circuitry of a scanner or digital camera. Image noise can also originate in film grain and in the unavoidable shot noise of an ideal photon detector. Image noise is an undesirable by-product of image capture that adds spurious and extraneous information.
+Image noise is random (not present in the object imaged) **variation of brightness or color information** in images, and is usually an aspect of electronic noise. It can be produced by the sensor and circuitry of a scanner or digital camera. Image noise can also originate in film grain and in the unavoidable shot noise of an ideal photon detector. Image noise is an undesirable by-product of image capture that adds spurious and extraneous information. (random)
 
 #### Different type of noise
 
