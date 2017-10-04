@@ -108,7 +108,7 @@ Image noise is random (not present in the object imaged) **variation of brightne
 
 ##### 1 Gaussian noise
 
-Gaussian noise is statistical noise having a **probability density function (PDF)** equal to that of the normal distribution, which is also known as the **Gaussian distribution**. In other words, the values that the noise can take on are Gaussian-distributed.
+Gaussian noise is statistical noise having a **probability density function (PDF)** equal to that of the normal distribution, which is also known as the **Gaussian distribution**. In other words, the values that the noise can take on are Gaussian-distributed (in histogram).
 Principal sources of Gaussian noise in digital images arise **during acquisition** e.g. sensor noise caused by poor illumination and/or high temperature, and/or transmission
 
 In digital image processing Gaussian noise can be reduced using a **spatial filter**, though when smoothing an image, an undesirable outcome may result in the blurring of fine-scaled image edges and details because they also correspond to blocked high frequencies. **Conventional spatial filtering techniques** for noise removal include: mean (convolution) filtering, median filtering and Gaussian smoothing.
@@ -119,7 +119,7 @@ In digital image processing Gaussian noise can be reduced using a **spatial filt
 
 ##### 2 Salt and Pepper
 
-Salt-and-pepper noise is a form of noise sometimes seen on images. It is also known as **impulse noise**. This noise can be caused by sharp and sudden disturbances in the image signal. An image containing salt-and-pepper noise will have **dark pixels** in bright regions and **bright pixels** in dark regions. This type of noise can be caused by analog-to-digital converter errors, bit errors in transmission, etc. It can be mostly eliminated by using dark frame subtraction, median filtering and interpolating around dark/bright pixels.
+Salt-and-pepper noise is a form of noise sometimes seen on images. It is also known as **impulse noise**. This noise can be caused by sharp and sudden disturbances in the image signal. An image containing salt-and-pepper noise will have **dark pixels** in bright regions and **bright pixels** in dark regions. This type of noise can be caused by analog-to-digital converter errors, bit errors in transmission, etc. It can be mostly eliminated by using dark frame subtraction, median filtering and interpolating around dark/bright pixels (extreme value of pixels in histogram). 
 
 Dead pixels in an LCD monitor produce a similar, but non-random, display.
 
