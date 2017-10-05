@@ -119,7 +119,7 @@ In digital image processing Gaussian noise can be reduced using a **spatial filt
 
 ##### 2 Salt and Pepper
 
-Salt-and-pepper noise is a form of noise sometimes seen on images. It is also known as **impulse noise**. This noise can be caused by sharp and sudden disturbances in the image signal. An image containing salt-and-pepper noise will have **dark pixels** in bright regions and **bright pixels** in dark regions. This type of noise can be caused by analog-to-digital converter errors, bit errors in transmission, etc. It can be mostly eliminated by using dark frame subtraction, median filtering and interpolating around dark/bright pixels (extreme value of pixels in histogram). 
+Salt-and-pepper noise is a form of noise sometimes seen on images. It is also known as **impulse noise**. This noise can be caused by sharp and sudden disturbances in the image signal. An image containing salt-and-pepper noise will have **dark pixels** in bright regions and **bright pixels** in dark regions. This type of noise can be caused by analog-to-digital converter errors, bit errors in transmission, etc. It can be mostly eliminated by using dark frame subtraction, median filtering and interpolating around dark/bright pixels (extreme value of pixels in histogram).
 
 Dead pixels in an LCD monitor produce a similar, but non-random, display.
 
@@ -177,9 +177,9 @@ A **median filter** is an example of a non-linear filter and, if properly design
 + sort the neighbouring pixels into order based upon their intensities
 + replace the original value of the pixel with the median value from the list
 
-A median filter is a **rank-selection (RS) filter**, a particularly harsh member of the family of rank-conditioned rank-selection (RCRS) filters; a much milder member of that family, for example one that selects the closest of the neighboring values when a pixel's value is external in its neighborhood, and leaves it unchanged otherwise, is sometimes preferred, especially in photographic applications. (very effective on salt and pepper)
+A median filter is a **rank-selection (RS) filter**, a particularly harsh member of the family of rank-conditioned rank-selection (RCRS) filters; a much milder member of that family, for example one that selects the closest of the neighboring values when a pixel's value is external in its neighborhood, and leaves it unchanged otherwise, is sometimes preferred, especially in photographic applications.
 
-Median and other RCRS filters are good at removing salt and pepper noise from an image, and also cause relatively **little blurring of edges**, and hence are often used in computer vision applications.
+Median and other RCRS filters are **good at removing salt and pepper noise** from an image, and also cause relatively **little blurring of edges**, and hence are often used in computer vision applications.
 
 ![Median_filter_example](https://i.imgur.com/vJQtNJi.jpg)
 > By Debivort at en.wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=17001283
@@ -187,10 +187,11 @@ Median and other RCRS filters are good at removing salt and pepper noise from an
 ##### 1.5 Anisotropic diffusion
 
 In image processing and computer vision, anisotropic diffusion, also called **Perona–Malik diffusion**, is a technique aiming at reducing image noise without removing significant parts of the image content, typically edges, lines or other details that are important for the interpretation of the image. Anisotropic diffusion resembles the process that creates a **scale space**, where an image generates a parameterized family of successively more and more blurred images based on a diffusion process. Each of the resulting images in this family are given as a **convolution** between the image and a 2D isotropic Gaussian filter, where the width of the filter increases with the parameter. This diffusion process is a **linear and space-invariant** transformation of the original image. Anisotropic diffusion is a generalization of this diffusion process: it produces a **family of parameterized images**, but each resulting image is a combination between the original image and a filter that depends on the local content of the original image. As a consequence, anisotropic diffusion is a **non-linear and space-variant** transformation of the original image
-(local mean à trouver sur wiki)
+
+
 ##### 1.6 Non-local means
 
-Non-local means is an algorithm in image processing for image denoising. Unlike "local mean" filters, which take the mean value of a group of pixels surrounding a target pixel to smooth the image, non-local means filtering takes a **mean of all pixels in the image**, weighted by how similar these pixels are to the target pixel. This results in much greater post-filtering clarity, and less loss of detail in the image compared with local mean algorithms.
+Non-local means is an algorithm in image processing for image denoising. Unlike **"local mean"** filters, which take the mean value of a group of pixels surrounding a target pixel to smooth the image, non-local means filtering takes a **mean of all pixels in the image**, weighted by how similar these pixels are to the target pixel. This results in much greater post-filtering clarity, and less loss of detail in the image compared with local mean algorithms.
 
 [Références](https://en.wikipedia.org/wiki/Noise_reduction#In_images)
 
@@ -293,7 +294,255 @@ The purpose of detecting sharp changes in image brightness is to capture importa
 Canny edge detection applied to a photograph
 > By JonMcLoone at English Wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=44894482
 
-Sources:(https://fr.wikipedia.org/)
+## Mathematical morphology
 
-http://crazybiocomputing.blogspot.fr/2011/10/mathematical-morphology.html
-+ Continuer 
+**Mathematical morphology (MM)** is a great toolbox for image processing. In ImageJ, most of these operations are available for binary images and are often used to prepare an image before analysis. Moreover, the same operations can be used for gray-level images offering new functionalities in terms of filtering, segmentation,etc.
+
+### Playing with binary images
+
+In a binary image, the pixels are in two states: ON or OFF. Better than saying ON and OFF, the **TRUE and FALSE** keywords are used.
+
+![A_boolean](https://i.imgur.com/3rpDxmo.png)
+A binary image
+
+**What are TRUE and FALSE in a computer ?**
+In programming languages, a condition returns TRUE or FALSE but behind these two keywords, there are numbers where TRUE equal to 1 (one) and FALSE to 0 (zero)
+
+### Boolean
+
+One of the basic functions for binary images (containing TRUE and FALSE pixels) are the **boolean operators** useful to manipulate this kind of images.
+
+#### Operators
+
+##### AND, OR, XOR operators
+
+Here 2 images :
+
+![A_boolean](https://i.imgur.com/f6SnZZe.png)
+![B_boolean](https://i.imgur.com/59hLqd3.png)
+
+Now if we apply the boolean operator on those images :
+
+![boolean_operators](https://i.imgur.com/RH6qbzM.png)
+
+To understand how it works, the simplest way is to fill an **array** where all the combinations of TRUE (value = 255) and FALSE (value = 0) pixels are met :
+
+![boolean_array](https://i.imgur.com/pc5LrfG.jpg)
+
+For example, with the **AND operator**, the pixel of XY-coordinates (131;150) is TRUE in 'A', and TRUE in 'B', the **resulting image A AND B** has a TRUE pixel value at (131;150). Repeat the same approach with the three other cases (TRUE/FALSE, FALSE/TRUE, and FALSE/FALSE).
+
+**To summarize**,
+
++ AND: The resulting pixel is TRUE if and only if a pixel of 'A' is TRUE \*and\* the other of 'B' is TRUE.
++ OR: The resulting pixel is TRUE if and only if a pixel is TRUE \*or\* the other is TRUE \*or\* both are TRUE.
++ XOR (for exclusive OR); The resulting pixel is TRUE if and only if a pixel is TRUE \*or\* the other is TRUE but **not when the two pixels are TRUE**.
+
+The boolean operators are useful when one of the **image acts as a mask** to remove or highlight objects of interest.
+
+### Black and White, TRUE or FALSE?
+
+When playing with **binary images** in ImageJ, that's not really simple to remember if TRUE corresponds to white or black (specially, if you use a lot of different binary functions).
+
+In ImageJ, there are **four** different families of operations working with binary images:
+
++ Image Calculator with boolean operators (AND, OR, and XOR).
++ Thresholding in Image > Adjust> Threshold
++ Morphological operations in Process > Binary
++ Image analysis in Analyze > Analyze Particles...
+
+Unfortunately, **they don't use the same standards**.
+
+In **boolean operators**, FALSE corresponds to black pixels  (pixel value of 0 ) and TRUE to white (255). In contrast, the other families **(morphology and analysis)** assume that a pixel value of 0 is TRUE and 255 is FALSE.
+
+### Basic operators
+
+In MM, the vocabulary used is a little bit different than those used for linear filters. Here, the image is seen as various pixels sets and the two basic operators (erosion and dilation) correspond to the combination of a structuring element with the image. Even though the mathematics underlying these processes are different, this is rather equivalent to a convolution with a mask (or kernel).
+
+For sake of clarity, we consider that white pixels (value of 255) are TRUE.
+
+#### Erosion
+
+In MM, the **erosion** corresponds to the **minimum pixel value** found in the structuring element assuming that the FALSE (value of 0) corresponds to the **background** and TRUE to the object(s) of interest.
+
+![Erosion_ij](https://i.imgur.com/qSqUPIS.png)
+Erosion with ImageJ. A) Original image. B) Eroded image obtained after 3 cycles.
+
+##### 1 Use
+
+Erosion is often used before a** particle analysis** to clean up a segmented (thresholded) image or to separate touching particles.
+
+###### 1.1 Removing noise or unwanted particles
+
+![ErosionIJ_noise_Montage](https://i.imgur.com/qgjl60M.png)
+Removing noisy particles by successive cycles of erosion.
+
+###### 1.2 Separating touching objects of interest
+
+![ErosionIJ_Montage](https://i.imgur.com/XVz4OaQ.png)
+Use of erosion to separate objects of interest. A) Original image. B) Result of the Particles analysis. Only one object (region) is counted. C) Eroded image (several cycles of erosion were required). D) Six objects are now counted by the Particles analysis
+
+##### 2 Erosion calculated with a minimum filter
+
+
+The **binary ImageJ** erosion operator is rather limited because you can't modify the shape of the structuring element. This limitation can be bypassed by using the **minimum filter** and its associated masks.
+
+![cross](https://i.imgur.com/wdAKqF9.png)
+The 'cross' structuring element is available with a filter radius of 0.5 and the 3x3 square with a radius of 1.0.
+
+###### 2.1 Erosion of binary images ...
+
+To remove unwanted particles, this approach is more convenient. Indeed, you don't need to repeat n times the erosion process, just estimate the radius of these particles and run a **minimum filter** whose **radius is a little bit larger** than the measured defects, these particles will disappear.
+
+###### 2.2  ... and of gray-level images
+
+The other main advantage to replace the erosion by a minimum filter is the ability of **working with gray-level images**. In this case, the erosion allows to remove the **lightest image**.
+
+![Erosion_min_noisylena](https://i.imgur.com/qwQezrW.png)
+Original image Lena sprinkled with white dots. B) Eroded image using a 'cross' structuring element (radius = 0.5 in minimum filter).
+
+Another example with a gray-level image... composed of a horizontal blurred gray-level area. In this case, we plan to remove the vertical lines and design a horizontal structuring element. In this case, we'll use erosion with other shapes of structuring elements.
+
+![Erosion_min_blurredhorizontal](https://i.imgur.com/E4rclPS.png)
+A) Original image. B) Eroded image calculated with a horizontal 1x20 structural element. By subtraction, you can get the vertical lines.
+
+Erosion is one of the two basic operators of MM.
+
+#### Dilation
+
+**Morphological dilation** is the second basic operator in MM and the **counterpart** of the erosion.
+
+In Wikipedia, this is defined by the union between the image and the structuring element. And this definition can be extended to the gray-level images as:
+
+**δ(I)(x) = max(I(x + s) )  with s ∈ S**
+where I is the image and S is the structuring element.
+
+Dilation **only works with binary images**. In this implementation, a 3x3 (square ?) structuring element is used expanding the TRUE (white) pixels.
+
+![dilation_IJ](https://i.imgur.com/Qo71huu.png)
+A) Original image. B) Dilated image after 3 cycles of dilation.
+
+##### 1 Use
+
+Dilation is used to **remove pepper noise** (black dots in your image) or **FALSE defects**.
+
+![dilation_fill_holes](https://i.imgur.com/zHrL39r.png)
+A) Original image. B) Dilated image.
+
+##### 2 Dilation of gray-level images : Maximum filter
+
+The equivalent for gray-level images is **the maximum filter**. Here, dilation is used to **remove darkest features** in your image.The Lena's eyes appear **brightest** than those of the original gray-level image.
+
+![dilation_max](https://i.imgur.com/r7LdmbV.png)
+A) Original image Lena converted to 8-bit. B) Dilation using a square 3x3 structuring element (radius = 1 in Maximum filter).
+
+### Influence of the structuring element
+
+One of the main problem of erosion and dilation is the fact that the shape of structuring element **distorts the objects** of interest and can't be used for an analysis (specially if you are interested in areas).
+
+### Gray-level images and morphology
+
+In MM, the gray-level images are considered as a **stack** of binary images, what they called **level sets**.
+
+Mathematical Morphology (MM) only uses **binary images**. However, it is possible to use the same functions with gray-level images by decomposing them into a series of binary images (called level sets).
+
+![morpho_lena-std](https://i.imgur.com/JnRPTFY.png)
+A 256x256 8-bit image of Lena with 32 gray levels
+
+![morpho_level_set](https://i.imgur.com/5CfcFKy.png)
+Decomposition of Lena into level sets.
+
+![morpho_comparison_lena_dilated](https://i.imgur.com/UypU3oi.png)
+Result of: A) three Maximum filters with a radius = 1 applied to the image of Fig. 1 and B)  three dilations of the level sets.
+
+It is possible to work with gray-level images in mathematical morphology, you have to first transform these images into level sets.
+
+### Operators using Erosion/Dilation
+
+#### Hit-or-miss
+
+In Mathematical morphology, the **Hit-or-Miss operator** is useful to describe the **topology** of a graph-like object. Even though this is not implemented − by default − in ImageJ, we can obtain a similar result...
+
+The picture below is a classical example of what can do a Hit-or-Miss operator for describing the topology of the graph (leaves, nodes, corners, etc.).
+
+![graphSkel-256](https://i.imgur.com/puH55vs.png)
+
+The **Hit-or-Miss** (also called Hit-and-Miss) operator is an **erosion-like function** that only works for a specific topology of TRUE and FALSE pixels in a 3x3 kernel (structuring element in the terminology of Mathematical Morphology).
+If the **combination of TRUE and FALSE pixels** in the structuring element exactly match the pixels in the image, then the **pixel underneath the origin** of the structuring element is set to TRUE otherwise it is set to FALSE.
+
+For example, if you want to detect the **lower left** corner of an object of interest, you can design the 3x3 kernel. The **central pixel** corresponds to the **lower left corner**. However, this first version is limited to filled rectangles and can be improved by removing the unnecessary pixels. The **'X' pixels are called 'Don't Care' pixels** because whatever their value ​​(0 or 1), it does not change the topology of the feature detection.
+
+![Sélection_011](https://i.imgur.com/pfT3MZo.png)
+
+As there is four different patterns of corners, you need four kernels.
+
+![Sélection_012](https://i.imgur.com/7Ht2YRd.png)
+
+Applying these four kernels to the image :
+
+![corners](https://i.imgur.com/KO2k9uP.png)
+Detecting corners with a Hit-or-Miss operator. For sake of convenience, the corners were dilated.
+
+![Sélection_014](https://i.imgur.com/4lcW4hL.png)
+
+### Opening and Closing
+
+**Opening and closing** are two important operators from mathematical morphology. They are both **derived** from the fundamental operations of **erosion and dilation**. Like those operators they are normally applied to binary images, although there are also graylevel versions.
+
+#### Opening
+
+![openb](https://i.imgur.com/xAWQDi1.gif)
+
+The basic effect of an **opening** is somewhat like erosion in that it tends to **remove some of the foreground** (bright) pixels from the **edges of regions** of foreground pixels. However it is **less destructive than erosion** in general. As with other morphological operators, the exact operation is determined by a structuring element. The effect of the operator is to preserve foreground regions that have a similar shape to this structuring element, or that can completely contain the structuring element, while eliminating all other regions of foreground pixels.
+
+An opening is defined as an **erosion followed by a dilation** using the **same structuring element** for both operations. The opening operator therefore requires **two inputs**: an image to be opened, and a structuring element.
+
+Graylevel opening consists simply of a graylevel erosion followed by a graylevel dilation.
+
+#### Closing
+
+![closeb](https://i.imgur.com/pa2blIu.gif)
+
+**Closing** is similar in some ways to **dilation** in that it tends to **enlarge the boundaries of foreground** (bright) regions in an image (and shrink background color holes in such regions), but it is less destructive of the original boundary shape. As with other morphological operators, the exact operation is determined by a **structuring element**. The effect of the operator is to **preserve background regions** that have a similar shape to this structuring element, or that can completely contain the structuring element, while eliminating all other regions of background pixels.
+
+Closing is **opening performed in reverse**. It is defined simply as a dilation followed by an erosion using the same structuring element for both operations. The closing operator therefore requires **two inputs**: an image to be closed and a structuring element.
+
+Graylevel closing consists straightforwardly of a graylevel dilation followed by a graylevel erosion.
+
+Opening is the **dual** of closing, i.e. opening the foreground pixels with a particular structuring element is equivalent to closing the background pixels with the same element.
+
+### Skeletonization/Medial Axis Transform
+
+![skelb](https://i.imgur.com/dHgohNy.gif)
+
+**Skeletonization** is a process for reducing foreground regions in a binary image to a **skeletal remnant** that largely preserves the extent and connectivity of the original region while throwing away most of the original foreground pixels. To see how this works, imagine that the foreground regions in the input binary image are made of some uniform slow-burning material. Light fires simultaneously at all points along the boundary of this region and watch the fire move into the interior. At points where the fire traveling from two different boundaries meets itself, the fire will extinguish itself and the points at which this happens form the so called **`quench line'**. This line is the **skeleton**. Under this definition it is clear that thinning produces a sort of skeleton.
+
+The terms **medial axis transform (MAT)** and **skeletonization** are often used interchangeably but we will distinguish between them slightly. The skeleton is simply a **binary image** showing the simple skeleton. The MAT on the other hand is a **graylevel image** where each point on the skeleton has an intensity which represents its distance to a boundary in the original object.
+
+The skeleton/MAT can be produced in **two main ways**. The first is to use some kind of morphological **thinning that successively erodes** away pixels from the boundary (while preserving the end points of line segments) until no more thinning is possible, at which point what is left approximates the skeleton.
+The alternative method is to first **calculate the distance transform** of the image. The skeleton then lies along the **singularities** (i.e. creases or curvature discontinuities) in the distance transform. This latter approach is more suited to calculating the MAT since the MAT is the same as the distance transform but with all points off the skeleton suppressed to zero.
+
+### Distance transform
+
+A **distance transform**, also known as distance map or distance field, is a **derived representation of a digital image**. The choice of the term depends on the point of view on the object in question: whether the initial image is transformed into another representation, or it is simply endowed with an additional map or field.
+
+#### Euclidean distance
+
+In mathematics, the **Euclidean distance** or Euclidean metric is the "ordinary" straight-line distance between two points in **Euclidean space**.
+
+![Coord_system_CA_0.svg_015](https://i.imgur.com/iOc1hr3.png)
+Euclidean space,
+> By Jorge StolfiiThe source code of this SVG is invalid due to 11 errors, caused from superfluous hyphens. - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=6692547
+
+With this distance, **Euclidean space becomes a metric space**.
+
+### Watershed
+
+In the study of image processing, a **watershed** is a transformation defined on a **grayscale image**. The name refers metaphorically to a geological watershed, or drainage divide, which separates adjacent drainage basins. The watershed transformation treats the image it operates upon like a **topographic map**, with the **brightness** of each point **representing its height**, and finds the lines that run along the tops of ridges.
+
+There are different technical definitions of a watershed. In graphs, watershed lines may be defined on the **nodes, on the edges, or hybrid lines** on both nodes and edges. Watersheds may also be defined in the continuous domain. There are also many different algorithms to compute watersheds. Watershed algorithm is used in image processing primarily for segmentation purposes.
+
+
+Sources:
++ https://fr.wikipedia.org/
++ http://crazybiocomputing.blogspot.fr , posted by JC Taveau
++ https://homepages.inf.ed.ac.uk/rbf/HIPR2/morops.htm, ©2003 R. Fisher, S. Perkins, A. Walker and E. Wolfart.
