@@ -109,10 +109,10 @@ def stringx3():
 
 ```python
 	def EDTlab(h,m,duree):
-		import sys
+
 		i=0
 		j=0
-		error=("Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants...")
+		error="Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants..."
 		tab=range(0,100)#création d'une range  pour définir le nombre d'essai du user.
 		for j in tab:
 			if h < 0 or h > 24: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
@@ -121,8 +121,8 @@ def stringx3():
 				h= int(h)
 				j +=1
 				if j > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
-					return print(error)
-					sys.exit(0)
+					return error
+
 		for i in tab:
 			if m < 0 or m > 60: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
 				m=input('Choisissez une valeur comprise entre 0 et 60!\n')
@@ -130,8 +130,8 @@ def stringx3():
 				m= int(m)
 				i+=1
 				if i > 5:
-					return print(error)
-					sys.exit(0)
+					return error
+
 		total=0
 		total=((h*60)+m+duree)
 		total2=(total//60)
@@ -169,7 +169,7 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 		j=0
 		day=0
 		total=0
-		error=("Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants...")
+		error="Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants..."
 		tab=range(0,100)#création d'une range  pour définir le nombre d'essai du user.
 		for j in tab:
 			if h < 0 or h > 24: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
@@ -178,8 +178,8 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 				h= int(h)
 				j +=1
 				if j > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
-					return print(error)
-					sys.exit(0)
+					return error
+
 		for i in tab:
 			if m < 0 or m > 60: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
 				m=input('Choisissez une valeur comprise entre 0 et 60 pour les minutes!\n')
@@ -187,8 +187,8 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 				m= int(m)
 				i+=1
 				if i > 5:
-					return print(error)
-					sys.exit(0)
+					return error
+
 		for i in tab:
 			if duree < 0: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
 				duree=input("Choisissez une valeur supérieure à 0 pour la durée de l'expérience!\n")
@@ -196,7 +196,7 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 				duree= int(duree)
 				i+=1
 				if i > 5:
-					return print(error)
+					return error
 					sys.exit(0)
 		total=((h*60)+m+duree)
 		h=(total//60)
@@ -215,14 +215,14 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 
 ```python
 def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suivant de celui donné
-		import sys
+
 		i=0
 		j=0
 		d2=0
 		m2=0
 		li1=[3,5,7,10,12] #mois comprenant 31j
 		li2=[4,6,9,11] #mois comprenant 30j
-		error=("Vous ne savez pas entrer une date correcte ?\n")
+		error="Vous ne savez pas entrer une date correcte ?"
 		tab=range(0,100)#création d'une range  pour définir le nombre d'essai du user.
 		for i in tab:
 			if d < 1 or d > 31: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
@@ -231,8 +231,8 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 				d= int(d)
 				i +=1
 				if i > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
-					return print(error)
-					sys.exit(0)
+					return error
+					
 		for i in tab:
 			if m < 1 or m > 12: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
 				m=input('Choisissez une valeur comprise entre 1 et 12!\n')
@@ -240,8 +240,8 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 				m= int(m)
 				i+=1
 				if i > 5:
-					return print(error)
-					sys.exit(0)
+					return error
+
 		for i in tab:
 			if y < 0 or y > 99: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
 				y=input('Choisissez une valeur comprise entre 0 et 99!\n')
@@ -249,8 +249,8 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 				y= int(y)
 				i+=1
 				if i > 5:
-					return print(error)
-					sys.exit(0)
+					return error
+
 		d=d+1
 		if d == 32 and m in li1:#on traite chaque mois en fonction du nombre de jours
 			d2=32
