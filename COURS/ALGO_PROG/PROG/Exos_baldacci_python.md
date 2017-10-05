@@ -109,7 +109,7 @@ def stringx3():
 
 ```python
 	def EDTlab(h,m,duree):
-
+		import sys
 		i=0
 		j=0
 		error="Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants..."
@@ -122,6 +122,7 @@ def stringx3():
 				j +=1
 				if j > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
 					return error
+					sys.exit(0)
 
 		for i in tab:
 			if m < 0 or m > 60: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
@@ -131,6 +132,7 @@ def stringx3():
 				i+=1
 				if i > 5:
 					return error
+					sys.exit(0)
 
 		total=0
 		total=((h*60)+m+duree)
@@ -179,6 +181,7 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 				j +=1
 				if j > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
 					return error
+					sys.exit(0)
 
 		for i in tab:
 			if m < 0 or m > 60: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
@@ -188,6 +191,7 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 				i+=1
 				if i > 5:
 					return error
+					sys.exit(0)
 
 		for i in tab:
 			if duree < 0: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
@@ -215,7 +219,7 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 
 ```python
 def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suivant de celui donné
-
+		import sys
 		i=0
 		j=0
 		d2=0
@@ -232,7 +236,8 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 				i +=1
 				if i > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
 					return error
-					
+					sys.exit(0)
+
 		for i in tab:
 			if m < 1 or m > 12: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
 				m=input('Choisissez une valeur comprise entre 1 et 12!\n')
@@ -241,6 +246,7 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 				i+=1
 				if i > 5:
 					return error
+					sys.exit(0)
 
 		for i in tab:
 			if y < 0 or y > 99: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
@@ -250,7 +256,7 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 				i+=1
 				if i > 5:
 					return error
-
+					sys.exit(0)
 		d=d+1
 		if d == 32 and m in li1:#on traite chaque mois en fonction du nombre de jours
 			d2=32
