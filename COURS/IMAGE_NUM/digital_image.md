@@ -857,7 +857,7 @@ There are different technical definitions of a watershed. In graphs, watershed l
 
 
 # Sources
-+ Wikipedia contributors, "Digital image processing," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Digital_image_processing&oldid=803425387 (accessed October 5, 2017).
++ Wikipedia contributors, "Digital image processing," Wikipedia, The Free Encyclopedia, (https://en.wikipedia.org/w/index.php?title=Digital_image_processing&oldid=803425387) (accessed October 5, 2017).
 + Wikipedia contributors, "Noise reduction," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Noise_reduction&oldid=798926923 (accessed October 5, 2017).
 + Wikipedia contributors, "Euclidean distance," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Euclidean_distance&oldid=803746524 (accessed October 5, 2017).
 + https://crazybiocomputing.blogspot.fr/p/image.html , posted by Jean-Christophe T.
