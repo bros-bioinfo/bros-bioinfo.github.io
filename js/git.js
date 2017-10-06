@@ -2,7 +2,7 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
   test = String(data).replace(/^((?!md|pdf).)*$/gm, "");
 
   x = 0;
-  while (x < 80) {
+  while (x < 90) {
     test = test.replace(",", "");
     test = test.replace('"path": "', '');
     test = test.replace('"', '');
@@ -41,7 +41,6 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
     var SECTION2 = "IMAGE_NUM";
     var SECTION3 = "OMIC_BIOINFO";
     var SECTION4 = "STATS";
-    var space = "\xa0";
 
     var tab = ["ALGO_PROG", "IMAGE_NUM", "OMIC_BIOINFO", "STATS", "TUTO_&_FICHES"];
     var space = "\xa0";
@@ -49,12 +48,11 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
 
     while (i < tab.length ) {
       if (prevurl.indexOf(tab[i]) >= 0) {
-
-        while (space.length < (tab[i]).length + 3) {
+        while (space.length < (tab[i]).length + 4) {
           space += "\xa0";
         }
         url = url.replace(tab[i], space);
-        if (url.indexOf(tab[i + 1]) == -1) {
+        if (url.indexOf(tab[i +1]) == -1) {
           url = url.replace("╶─", "╰─");
         }
       }
@@ -62,14 +60,15 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
 
       url = url.replace(tab[i], "<br>" + tab[i]);
       url = url.replace(tab[i], '<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> ' + tab[i] + "</div> ");
-      url = url.replace(/╶─ PROG ╶─/,' ╶─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
+      url = url.replace(/╶─ PROG ╶─/,' \xa0╶─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
       url = url.replace(/ ╰─ PROG ╶─/,' ╰─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
       url = url.replace(/ ╰─ USI ╶─/,' ╰─ <div style="color:white" class="usi"><i class="fa fa-folder-open" aria-hidden="true"></i> USI\xa0 </div>╶─');
       url = url.replace(/╶─ TD ╶─/,' ╶─ <div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i>TD</div> ╶─');
       url = url.replace(TD,'<div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i>'+TD+'</div>');
+
       i++
     }
-
+      url = url.replace(/╰─/gm,"\xa0");
 
 
 
@@ -81,9 +80,10 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
     urlreworked = '">' + url + '</a>';
     ulien = ulien.replace(/"><\/a>/gm, urlreworked);
     ulien = ulien.replace(/  /gm, "");
-    ulien = ulien.replace(/╶─(?!.*╶─)(?:(?!\S+$).)*/gm,' ╶─ <i class="fa fa-file-text-o" style="color:#007bff" aria-hidden="true"></i>\n');
-    ulien = ulien.replace(/╰─(?!.*╶─)(?:(?!\S+$).)*/gm,' ╰─ <i class="fa fa-file-text-o" style="color:#007bff" aria-hidden="true"></i>\n');
+    ulien = ulien.replace(/[ ](?=[^ ]*$)/gm,' <i class="fa fa-file-text-o" style="color:#007bff" aria-hidden="true"></i> ');
     console.log("ulien:" + ulien);
+    ulien = ulien.replace(/ ╶─ /gm,'╶─');
+    ulien = ulien.replace(/╶─/gm,' ╶─ '); //FIX WHITE SPACE
     $("#gitlist").append(ulien + "<br>");
     n++;
   }
