@@ -222,8 +222,35 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 		m2=0
 		li1=[3,5,7,10,12] #mois comprenant 31j
 		li2=[4,6,9,11] #mois comprenant 30j
-		error=("Vous ne savez pas entrer une date correcte ?\n")
+		error="Vous ne savez pas entrer une date correcte ?"
 		tab=range(0,100)#création d'une range  pour définir le nombre d'essai du user.
+		for i in tab:
+			if d > 28 and m == 2 and y%4!=0: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
+				d=input('Choisissez une valeur comprise entre 1 et 28 pour le mois de février en année normale!\n')
+				#type(h) modification du nombre entré de class 'str' à 'int'
+				d= int(d)
+				i +=1
+				if i > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
+					return error
+					sys.exit(0)
+		for i in tab:
+			if d > 29 and m == 2 and y%4==0: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
+				d=input('Choisissez une valeur comprise entre 1 et 29 pour le mois de février en année bisextile!\n')
+				#type(h) modification du nombre entré de class 'str' à 'int'
+				d= int(d)
+				i +=1
+				if i > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
+					return error
+					sys.exit(0)
+		for i in tab:
+			if d > 30 and m in li2: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
+				d=input("Choisissez une valeur comprise entre 1 et 30 pour les mois d'Avril, Juin, Septembre et Novembre!\n")
+				#type(h) modification du nombre entré de class 'str' à 'int'
+				d= int(d)
+				i +=1
+				if i > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
+					return error
+					sys.exit(0)
 		for i in tab:
 			if d < 1 or d > 31: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
 				d=input('Choisissez une valeur comprise entre 1 et 31!\n')
@@ -231,7 +258,7 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 				d= int(d)
 				i +=1
 				if i > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
-					return print(error)
+					return error
 					sys.exit(0)
 		for i in tab:
 			if m < 1 or m > 12: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
@@ -252,29 +279,22 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 					return print(error)
 					sys.exit(0)
 		d=d+1
-		if d == 32 and m in li1:#on traite chaque mois en fonction du nombre de jours
-			d2=32
+		if d == 32 and m in li1: #gestion des changements de mois et d'année !
 			d=1
-			m += 1
-		if m == 12 and d2 == 32:
-			d=1
-			m=1
-			m2=12
-		if y == 99 and d2 == 32 and m2 == 12:
-			d=1
-			m=1
-			y=0
+			m+=1
+			if m == 13:
+				m=1
+				y+=1
 		if d == 31 and m in li2:
-			d2=31
-			d=1 ; m +=1
-		if d == 29 and m == 3 and y%4 != 0: #année normale
-			d2=28
-			d=1 ; m +=1
-		if d == 30 and m == 3 and y%4 == 0: #année bisextile
-			d2=29
-			d=1 ; m+=1
-		if d == 1 and d2 == 28 or d2 == 29 or d2 == 30 or d2 == 31: #changement de l'année quand le jour change et que l'on était en fin d'année
-			y=y+1
+			d=1
+			m+=1
+		if d == 29 and m == 2 and y%4!=0:
+			d=1
+			m+=1
+		if d == 30 and m==2 and y%4 == 0:
+			d=1
+			m+=1
+
 		if d < 9: #ajout d'un 0 avant le chiffre
 			d="0"+str(d)
 		if m < 10:
