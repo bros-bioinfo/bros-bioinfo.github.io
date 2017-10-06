@@ -216,10 +216,7 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 ```python
 def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suivant de celui donné
 		import sys
-		i=0
-		j=0
-		d2=0
-		m2=0
+	
 		li1=[3,5,7,10,12] #mois comprenant 31j
 		li2=[4,6,9,11] #mois comprenant 30j
 		error="Vous ne savez pas entrer une date correcte ?"
