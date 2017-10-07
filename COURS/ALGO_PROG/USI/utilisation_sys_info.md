@@ -29,7 +29,7 @@
 			* [1. Redirection ENTREE STANDARD (STDIN)](#1-redirection-entree-standard-stdin)
 			* [2. Redirection SORTIE STANDARD (STDOUT)](#2-redirection-sortie-standard-stdout)
 			* [3. Redirection SORTIE D'ERREUR STANDARD (STDERR)](#3-redirection-sortie-derreur-standard-stderr)
-		* [D. Le "pipe" ( | )](#d-le-pipe)
+		* [D. Pipe |](#d-pipe)
 		* [E. Accéder au contenu d'une variable](#e-accéder-au-contenu-dune-variable)
 		* [F. Code de retour d'un processus:](#f-code-de-retour-dun-processus)
 		* [G. Enchaînement de pipe (= pipeline)](#g-enchaînement-de-pipe-pipeline)
@@ -322,23 +322,24 @@ Processus placé dans le répertoire courant (**CUR_DIR**)
 
 ## IV. Protections et accès
 
-Pour le système un fichier et un répertoire, c'est pareil. Il possède:
-- un utilisateur = propriétaire (u)
-- un groupe Unix (pas forcément le même que le propriétaire) (g)
-- tous les autres (o)
+Un fichier/répertoire (considéré de la même manière par le système) appartient à:
+- un utilisateur = propriétaire
+- un groupe Unix (pas forcement celui de son propriétaire) Trois type d'accès sont définis :
+- pour un fichier : lecture, écriture, exécution
+- pour un répertoire : lecture, écriture, traverser
 
-Trois type d'accès sont définis:
-- pour un fichier: lecture(r), écriture(w), éxecution(x);
-- pour un répertoire: lecture, écriture, traverser;
+On définit le mode d'accès : accès à la lecture **( r )**, écriture **(w)**, execution/traverser **(x)** pour propriétaire **(u)**, les membres du groupe Unix **(g)**, tous les autres **(o)**.
 
-On définit le mode d'accès pour le propriétaire, pour les membres du groupe UNIX, puis pour tous les autres.
-- rwxrwxrwx   //rwx 3 fois pour u g o
-- rw-r-----   //rw pour u; r pour g; et rien pour o
+rwx | rwx | rwx
+--- | --- | ---
+u   | g   | o
 
-La commande pour changer les droits:
+Exemple : rw-r----- foot.txt
 
-```shell
-chmod
+Les droits d'accès sont modifiable par code unix : **chmod**
+
+```sh
+chmod u=+rwx,g=+rw,o=+r toto.txt
 ```
 
 ## V. SHELL
@@ -463,7 +464,7 @@ Saisissez « ls --help » pour plus d'informations.
 ```
 
 
-### D. Pipe | 
+### D. Pipe |
 
 Le pipe permet à la commande 2 de prendre les résultats créés par la commande 1 **(STDOUT1 => STDIN2)**.
 
