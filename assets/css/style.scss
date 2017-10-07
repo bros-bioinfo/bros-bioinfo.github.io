@@ -4,9 +4,7 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono');
 
-.highlight {font-family: 'Fira Mono'!important;}
-
-
+.main-content code {font-family: 'Fira Mono'!important; font-size: 1rem!important}
 .highlight .hll { background-color:#2b222f !important}
 .highlight  { background: #2b222f !important; color: #f8f8f2!important }
 .highlight .c { color: #75715e!important } /* Comment */
