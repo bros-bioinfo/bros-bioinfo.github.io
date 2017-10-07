@@ -255,7 +255,7 @@ Il y a deux moyens:
 
 - un diplomatique: envoyer un signal  TERM (valeur: 9) via la commande :
 
-  ```bash
+  ```console
   kill -9 PID
   ```
 
@@ -264,7 +264,7 @@ Il y a deux moyens:
 
 - un non-diplomatique: envoyer un signal KILL (valeur 15) instantané via la commande:
 
-  ```bash
+  ```console
   kill -15 PID
   ```
 
@@ -338,7 +338,7 @@ Exemple : rw-r----- foot.txt
 
 Les droits d'accès sont modifiable par code unix : **chmod**
 
-```sh
+```console
 chmod u=+rwx,g=+rw,o=+r toto.txt
 ```
 
@@ -348,7 +348,7 @@ chmod u=+rwx,g=+rw,o=+r toto.txt
 
 La variable c'est le **nom d'une case mémoire** de la RAM.
 
-```bash
+```console
 foo=42
 bar=FOO
 ```
@@ -403,7 +403,7 @@ Exercice:
 
 - Envoyer un mail sans navigateur
 
-```bash
+```console
 sgoncal1@goya:~$ Mail -s "RDV" pierre.jacquet@etu.u-bordeaux.fr
 Coucou :p .
 .
@@ -411,7 +411,7 @@ Cc:
 ```
 - Envoyer un mail via message.txt :
 
-```bash
+```console
 sgoncal1@goya:~$ Mail -s "RDV" pierre.jacquet@etu.u-bordeaux.fr <./message.txt
 ```
 
@@ -420,7 +420,7 @@ sgoncal1@goya:~$ Mail -s "RDV" pierre.jacquet@etu.u-bordeaux.fr <./message.txt
 
 Le signe de STDOUT pour intéragir : **>**.
 
-```bash
+```console
 sgoncal1@goya:~$ ls > result.dat
 sgoncal1@goya:~$ cat result.dat
 42
@@ -450,13 +450,13 @@ UtilisationUnix
 
 Le signe de STDERR : **2>**
 
-```bash
+```console
 sgoncal1@goya:~$ ls -z
 ls : option invalide -- 'z'
 Saisissez « ls --help » pour plus d\'informations.
 ```
 
-```bash
+```console
 sgoncal1@goya:~$ ls -z 2> erreur.txt
 sgoncal1@goya:~$ cat erreur.txt
 ls : option invalide -- 'z'
@@ -470,7 +470,7 @@ Le pipe \| permet à la commande 2 de prendre les résultats créés par la comm
 
 Exemple : compter le nombre de lignes de erreur.txt via le résultat de cat.
 
-```bash
+```console
 sgoncal1@goya:~$ cat erreur.txt | wc -l
 2
 ```
@@ -483,7 +483,7 @@ On peut enchaîner plusieurs commandes à la suite et effectuer donc un **filtra
 foo="XIII 13" => affectation
 $NOM_VARIABLE => accès contenu
 
-```bash
+```console
 sgoncal1@goya:~$ foo="XIII 13"
 sgoncal1@goya:~$ $foo
 XIII: command not found
@@ -505,7 +505,7 @@ Le code de retour correpond à un petit entier. Le code retour lorsqu\'il vaut 0
 Exemple :
 - Commande ls :
 
-```bash
+```console
 sgoncal1@goya:~$ ls
 42                                    message.txt     tdstat.zip
 Algo_cours                            PYTHON          test2.R
@@ -527,7 +527,7 @@ sgoncal1@goya:~$ echo $?
 Les numéros d'erreur de la commande sont au niveau du manuel de la commande, avec **l\'état de fin d\'exécution**.
 
 Mais :
-```bash
+```console
 sgoncal1@goya:~$ man ls
 sgoncal1@goya:~$ echo $?
 0
@@ -535,7 +535,7 @@ sgoncal1@goya:~$ echo $?
 
 Cette commande garde en mémoire la terminaison de la **dernière commande**.
 
-```bash
+```console
 sgoncal1@goya:~$ ls -z
 ls : option invalide -- 'z'
 Saisissez « ls --help » pour plus d'informations.
@@ -550,7 +550,7 @@ sgoncal1@goya:~$ echo $TOTO
 
 Pour avoir le nombre de fichiers/dossiers dans le répertoire courant :
 
-```bash
+```console
 sgoncal1@goya:~$ ls | wc -l
 22
 ```
@@ -566,7 +566,7 @@ Opérateurs :
 - **&&**, cmd1 && cmd2 : la cmd2 ne sera créée et exécutée que si la cmd1 s\'est terminée sans erreurs.
 - **\|\|**, cm1 || cmd2 :  cmd2 ne sera créée et exécutée que si la cmd1 renvoie une erreur.
 
-```bash
+```console
 ls && echo OK || echo KO
 42                                    message.txt     tdstat.zip
 Algo_cours                            PYTHON          test2.R
@@ -581,7 +581,7 @@ OK
 
 On est géné par la commande ls, donc on va rediriger le résultat :
 
-```bash
+```console
 sgoncal1@goya:~$ ls > /dev/null && echo OK || echo KO
 OK
 sgoncal1@goya:~$ ls -z > /dev/null && echo OK || echo KO
@@ -592,7 +592,7 @@ KO
 
 Il faut rediriger la sortie d\'erreur :
 
-```bash
+```console
 sgoncal1@goya:~$ ls -z 2> /dev/null > /dev/null && echo OK || echo KO
 KO
 ```
@@ -607,7 +607,7 @@ Si on ajoute les () : (ls | wc -l); alors le sous-shell généré, donc un nouve
 
 Exemple :
 
-```bash
+```console
 F1=foo.txt
 F2=bar.txt
 (cat $F1 || cat $F2) | wc -l
