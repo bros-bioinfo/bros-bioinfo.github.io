@@ -1,6 +1,6 @@
 # INTRODUCTION PHYLOGENIE
 
-Phylogénie repose historiquement sur la cladistic.
+La Phylogénie repose historiquement sur la cladistic.
 
 ## Taxonomie
 
@@ -32,7 +32,7 @@ Exemples :
 On va chercher à maximiser un score. L'alignement multiple (**CLUSTAL W, MUSCLE**) permet d'identifier une region commune à la séquence (en simultanée). L'alignement avec le score le plus élevé peut représenté le scénario le plus probable. Il faut pouvoir expertiser un alignement multiple :
 - ajout et extension de gap
 - maximisation score avec ajout d'acide aminés
-- trouver des régions bien conserver (utilistion pour phylogénie ?)
+- trouver des régions bien conservée (utilistion pour phylogénie ?)
 L'alignement multiple permet de se concentrer sur des blocs et permet de déterminer le meilleur **marqueur moléculaire**. On se focalise sur des régions particulières pour la construction d'un arbres : des **blocs**.
 
 ## 3. Construction d'un (ou plusieurs) arbres
@@ -42,7 +42,7 @@ C'est une représentation schématique. Elle permet de mettre en évidence :
 - les relations de parentés entre des espèces/**TAXA**
 - les **branches**(ou arrètes) définissent les relations de descendance
 - les **noeuds** internes représente les ancêtres hypothétiques commun au descendant (aucune données sur lui)
-L'arbre peut être enraciné ou pas, selon qu'on est parvenu à identifier les ancêtres communs.[...] L'arbre peut avoir un maximum de 2 feuilles par noeuds (si les calculs sont bons).
+L'arbre peut être enraciné ou pas, selon qu'on est parvenu à identifier les ancêtres communs. L'arbre peut avoir un maximum de 2 feuilles par noeuds (si les calculs sont bons).
 
 ### Type d'arbre : (pdf image )
 

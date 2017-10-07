@@ -1,6 +1,16 @@
 # Introduction à la phylogénie
 
-- **Clades (Groupe monophylétiques)**: groupe dont les membres sont plus apparentés entre eux qu'avec aucun autre organisme. Groupe incluant un ancêtre et tous ses descendans.
+La phylogénie repose historiquement sur la cladistique.
+## Taxonomie
+
+Ordre, famille, genre, espèces.
+- Relation de parenté relative
+- Ancêtre commun exclusif
+- Groupe frère (sister group)
+
+La phylogénie n'est pas la généalogie, il faut chercher des **groupes frères** et non l'ancêtre.
+
+- **Clades (Groupe monophylétiques)**: Groupe dont les membres sont plus apparentés entre eux qu'avec aucun autres organisme. Groupe incluant un ancêtre et tous ses descendants
 
 - **Groupe paraphylétiques**: Groupe n'incluant pas tous les descendants de son ancêtre.
 
@@ -11,7 +21,7 @@
 La première étape consiste à choisir un **marqueur moléculaire** adapté au groupe taxonomique étudié. L'évolution des séquences choisies devrait vérifier ce que l'on veut calculer.
 
 - Mixer ARNr et ARNt : non-sens.
-- ARNr stable → espèces divergentes (marqueurs utilisés pour l'arbre de la vie).
+- ARNr stable → espèces divergentes; Premier arbre de la vie : fait avec ARNr 16S (1970). L'ARNr était le marqueur incontournable (mais aujourd'hui trop stable)
 - ADN mitochondrial a un taux de mutation 17 fois supérieur à celui de l'ADN nucléaire → organismes proches.
 
 Exemple de sélection des données:
@@ -36,15 +46,24 @@ Les alignements Multiples sont très importants. On a plusieurs algorithmes:
 - Probcons
 - T-Coffee
 
+L'alignement multiple (**CLUSTAL W, MUSCLE**) permet d'identifier une region commune à la séquence (en simultanée). L'alignement avec le score le plus élevé peut représenté le scénario le plus probable. Il faut pouvoir expertiser un alignement multiple :
+- ajout et extension de gap
+- maximisation score avec ajout d'acide aminés
+- trouver des régions bien conservée (utilistion pour phylogénie ?)
+L'alignement multiple permet de se concentrer sur des blocs et permet de déterminer le meilleur **marqueur moléculaire**. On se focalise sur des régions particulières pour la construction d'un arbres : des **blocs**.
+
+
 ## 3. Construction d'un (ou plusieurs arbres)
 
-On crée des représentations schématiques:
-- Des relations de parentés entre des espèces/TAXA
-- Les branches définissent les relations de descendance
-- Les noeuds internes de l'arbre représente les ancêtres hypothétiques commun aux descendants.
-- L'abre peut être enraciné ou pas, selon qu'on est parvenu à identifier l'ancêtre commun à toutes les feuilles.
+Est-ce qu'on va trouver le bon arbre ? 1 ou plusieurs ? Choix ?
+C'est une représentation schématique. Elle permet de mettre en évidence :
+- les relations de parentés entre des espèces/**TAXA**
+- les **branches**(ou arrètes) définissent les relations de descendance
+- les **noeuds** internes représente les ancêtres hypothétiques commun au descendant (aucune données sur lui)
+L'arbre peut être enraciné ou pas, selon qu'on est parvenu à identifier les ancêtres communs. L'arbre peut avoir un maximum de 2 feuilles par noeuds (si les calculs sont bons).
 
-**Composition d'un arbre:**
+
+### Composition d'un arbre:
 >Branches (arrêtes en informatique);
 >Noeuds
 >Root (racines)
@@ -55,8 +74,10 @@ On crée des représentations schématiques:
 - Phylogramme (distance génétique)
 - Arbre Ultramétrique (temps écoulé)
 
+> Note : distance génétique = nombre de différence entres les taxons;
+
 **Format Newick**
-- Les arbres générés par les prog. de phylogénie sont donnés sous la forme d'expression (noms des TAXA) entre parenthèse et avec des virgules:
+- Les arbres générés par les programmes de phylogénie sont donnés sous la forme d'expression (nom des TAXA) entres paranthèse et avec des virgules :
 **(((C,B),A),D)**
 
 - et on peut indiquer la longueur des branches par:1
@@ -66,7 +87,9 @@ On crée des représentations schématiques:
 ![alt text](http://images.slideplayer.com/36/10578139/slides/slide_25.jpg)
 
 
-**Résolution des arbres:** On veut obtenir un maximum de bifurcation et évité les multifurcations.
+### Résolution des arbres
+
+On veut obtenir un maximum de bifurcation et évité les polytomies (même racine) ou multifurcation (> 3 par noeuds).
 
 Il est important d'avoir des arbres **enracinés**, d'un point de vue biologique.
 
@@ -77,12 +100,13 @@ Un arbre non raciné est un arbre qui n'a pas de point de départ.
 ![](https://media.tenor.com/images/1d586769a9c3d74506fc10aa37771f9a/tenor.gif)
 
 
-**Comment raciner un arbre?**:
+### Comment raciner un arbre?:
 La plupart des méthodes produisent des arvres non-racinés car elles détectent des différences entre séquences mais n'ont aucun moyen de les orienter temporellement.
 
 On peut les positionner grâce:
-- à un groupe externe de séquences connues ***a priori*** comme externes au groupe d'intérêt. La racine correspond alors à la branche qui relie les deux groupes.
-- Quand on n'a aucune possibilité de décider quel taxon peut servir de groupe, on place souvent la racine au millieu de l'arbre.
+1- à un groupe externe de séquences connues ***a priori*** comme externes au groupe d'intérêt. La racine correspond alors à la branche qui relie les deux groupes.
+
+2- Quand on a aucune possibilité de décider quel taxon peut servir de groupe, on place souvent la racine au millieu de l'arbre.
 
 Les ingrédients de la **phylogénie moléculaire**:
 - Taxons
