@@ -310,9 +310,9 @@ s1==s3 renvoie 0 - faux
 
 ```py
 if ( a % 2 == 0):
-print “a est pair”
+print "a est pair"
 else :
-print “a est impair”
+print "a est impair"
 ```
 
 #### Utilisation des opérateurs booléens
