@@ -255,7 +255,7 @@ Il y a deux moyens:
 
 - un diplomatique: envoyer un signal  TERM (valeur: 9) via la commande :
 
-  ```php
+  ```bash
   kill -9 PID
   ```
 
@@ -264,7 +264,7 @@ Il y a deux moyens:
 
 - un non-diplomatique: envoyer un signal KILL (valeur 15) instantané via la commande:
 
-  ```php
+  ```bash
   kill -15 PID
   ```
 
