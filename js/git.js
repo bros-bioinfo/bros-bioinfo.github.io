@@ -68,6 +68,7 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
       url = url.replace(/╶─ TD ╶─/,' ╶─ <div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i> TD</div> ╶─');
       url = url.replace(TD,'<div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i> '+TD+'</div>');
       url = url.replace(/╶─ PYTHON ╶─/,' ╶─ <div style="color:white" class="python"><i class="fa fa-code" aria-hidden="true"></i> PYTHON</div> ╶─');
+      url = url.replace(/╶─ WEB ╶─/,' ╶─ <div style="color:white" class="web"><i class="fa fa-html5" aria-hidden="true"></i> WEB\xa0</div> ╶─');
       i++
     }
 
