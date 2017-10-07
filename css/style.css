@@ -435,6 +435,14 @@ border-radius: 5px;
 padding-left: 4px;
 padding-right: 2px;
 }
+#gitlist a div.python{
+display: table-cell;
+background: #C2509C !important;
+border-radius: 5px;
+padding-left: 4px;
+padding-right: 2px;
+}
+
 #gitlist a div.tdnum{
 display: table-cell;
 background: #059595!important;
