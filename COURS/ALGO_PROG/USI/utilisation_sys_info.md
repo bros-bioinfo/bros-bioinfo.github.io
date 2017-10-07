@@ -463,7 +463,7 @@ Saisissez « ls --help » pour plus d'informations.
 ```
 
 
-### D. Le "pipe" ( | )
+### D. Pipe | 
 
 Le pipe permet à la commande 2 de prendre les résultats créés par la commande 1 **(STDOUT1 => STDIN2)**.
 
