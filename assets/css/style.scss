@@ -2,7 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
-
+/*
 h1, h2, h3, h4, h5, h6{
 
 }
@@ -17,9 +17,12 @@ h3{
   text-decoration: underline;
 }
 
-h4, h5, h6, p, li,{
+h4, h5, h6, p,{
   margin-left: 45px;
 }
+
+
 li > p{
   margin-left: 0px;
 }
+*/
