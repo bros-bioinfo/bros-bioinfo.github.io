@@ -29,7 +29,7 @@
 			* [1. Redirection ENTREE STANDARD (STDIN)](#1-redirection-entree-standard-stdin)
 			* [2. Redirection SORTIE STANDARD (STDOUT)](#2-redirection-sortie-standard-stdout)
 			* [3. Redirection SORTIE D'ERREUR STANDARD (STDERR)](#3-redirection-sortie-derreur-standard-stderr)
-		* [D. Pipe |](#d-pipe)
+		* [D. Pipe](#d-pipe)
 		* [E. Accéder au contenu d'une variable](#e-accéder-au-contenu-dune-variable)
 		* [F. Code de retour d'un processus:](#f-code-de-retour-dun-processus)
 		* [G. Enchaînement de pipe (= pipeline)](#g-enchaînement-de-pipe-pipeline)
@@ -464,9 +464,9 @@ Saisissez « ls --help » pour plus d'informations.
 ```
 
 
-### D. Pipe |
+### D. Pipe
 
-Le pipe permet à la commande 2 de prendre les résultats créés par la commande 1 **(STDOUT1 => STDIN2)**.
+Le pipe \| permet à la commande 2 de prendre les résultats créés par la commande 1 **(STDOUT1 => STDIN2)**.
 
 Exemple : compter le nombre de lignes de erreur.txt via le résultat de cat.
 
