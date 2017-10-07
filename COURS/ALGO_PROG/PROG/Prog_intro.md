@@ -155,10 +155,10 @@ if (a == b and c == d and
 | Type d'objet | Exemple                                      |
 | ------------ | -------------------------------------------- |
 | Nombres      | 124 3.02 9999L 4.0e+2 3+4j                   |
-| Chaines      | ’spam’ “d’guido”                             |
-| Listes       | [1,[2,’trois’],4]                            |
-| Tuples       | (1,’spam’,4,’U’,0)                           |
-| Dictionnaire | {’nourriture’ : ’confiture’, ’gout’: ’miam’} |
+| Chaines      | "spam" "d’guido"                             |
+| Listes       | [1,[2,"trois"],4]                            |
+| Tuples       | (1,"spam",4,"U",0)                           |
+| Dictionnaire | {"nourriture" : "confiture", "gout": "miam"} |
 
 
 + integer :
@@ -202,9 +202,9 @@ gauche en ajoutant un bit à 0.
 + Echanger deux variables
 
 ```py
-print ’donnez un nombre’
+print "donnez un nombre"
 nb1=input()
-print ’donnez un autre nombre’
+print "donnez un autre nombre"
 nb2=input()
 temp=nb1
 nb1=nb2
@@ -217,14 +217,14 @@ nb2=temp
 ```py
 item=1 # type entier
 print item
-item=’la maison’ # type chaine de caracteres
+item="la maison" # type chaine de caracteres
 print item
 ```
 
 + Ne pas mélanger les types :
 
 ```py
-item=’5’
+item="5"
 item=item+1
 ```
 
@@ -233,23 +233,23 @@ d’additionner un entier et une chaine de caractères.
 
 #### Type de Données - Les opérations sur les chaines
 + Surcharge des opérateurs :
-  + Concaténation (ajout) + ’spam’+’42’
+  + Concaténation (ajout) + "spam"+"42"
   + Répétition ∗
   + Formattage %
-  
+
 + Accès par indiçage :
 ``mot=”chaine”``
-	+ mot[2] permet d’obtenir ’a’
-	+ mot[:2] permet d’obtenir ’ch’
-	+ mot[2:] permet d’obtenir ’aine’
-	+ mot[2:4]permet d’obtenir ’ai’
-	+ mot[:-2] permet d’obtenir ’chai’
+	+ mot[2] permet d’obtenir "a"
+	+ mot[:2] permet d’obtenir "ch"
+	+ mot[2:] permet d’obtenir "aine"
+	+ mot[2:4]permet d’obtenir "ai"
+	+ mot[:-2] permet d’obtenir "chai"
 
 #### Les chaines de caractères
 + Les chaines sont non modifiables sur place.
 
 ```py
->>> mot[2]=’0’ déclenche une erreur.
+>>> mot[2]="0" déclenche une erreur.
 >>> mot='chaine'
 >>> mot[2]='O'
 Traceback (most recent call last):
@@ -274,9 +274,9 @@ contenus dans chaine1
 + Transformer une chaine en nombre :
 
 ```py
-mot=’’3’’
+mot="3"
 numero=int(mot)
-mot2=’’3.2’’
+mot2="3.2"
 nombre=float(mot2)
 ```
 
@@ -290,9 +290,9 @@ mot=str(num)
 + Comparer deux chaines de caractères :
 
 ```py
-s1=’’bleu’’
-s2=’’bleu’’
-s3=’’Bleu’’
+s1="bleu"
+s2="bleu"
+s3="Bleu"
 s1==s2 renvoie 1 - vrai
 s1==s3 renvoie 0 - faux
 ```
@@ -317,23 +317,23 @@ print “a est impair”
 
 #### Utilisation des opérateurs booléens
 + Pour les besoins d’une enquête de santé publique, vous avez un échantillon de population où chaque individu est défini 2 variables sexe et taille.
-+ La variable sexe peut prendre la valeur ’F’ou ’M’.
++ La variable sexe peut prendre la valeur "F"ou "M".
 + La variable taille est un entier
 + Pour intégrer un individu dans votre étude, il doit soit être
-une femme (valeur ’F’) et avoir une taille supérieur à 180,
-soit être un homme (valeur ’M’) et avoir une taille inférieur
+une femme (valeur "F") et avoir une taille supérieur à 180,
+soit être un homme (valeur "M") et avoir une taille inférieur
 à 160.
 
 ```py
-print ’donnez une valeur pour le sexe’
+print "donnez une valeur pour le sexe"
 sexe=raw_input()
-print ’donnez une valeur pour la taille’
+print "donnez une valeur pour la taille"
 taille=input()
 
-if (sexe==’F’ and taille>180) or (sexe==’M’ and taille<160):
-	print ’vous etes integre’
+if (sexe=="F" and taille>180) or (sexe=="M" and taille<160):
+	print "vous etes integre"
 else:
-	print ’desole vous ne correspondez pas au profil de l etude ’
+	print "desole vous ne correspondez pas au profil de l etude "
 ```
 
 #### Exercice de logique
@@ -370,15 +370,15 @@ age = input()
 print "donnez le sexe de cet animal"
 sexe=raw_input()
 if age > 3 :
-	if sexe != ’M’ and sexe != ’F’:
+	if sexe != "M" and sexe != "F":
 		print "vous devez saisir F ou M"
 	else :
-		if sexe== ’M’:
-			code = ’A’
+		if sexe== "M":
+			code = "A"
 		else:
-			if sexe == ’F’:
-				code = ’B’
-print ’le code est ’, code
+			if sexe == "F":
+				code = "B"
+print "le code est ", code
 
 ```
 **Problèmes ?**
@@ -391,20 +391,20 @@ print "age de votre animal en nb jours ?"
 age = input()
 print "donnez le sexe de cet animal"
 sexe=raw_input()
-code =’’
+code =""
 if age > 3 :
-	if sexe != ’M’ and sexe != ’F’:
+	if sexe != "M" and sexe != "F":
 		print "vous devez saisir F ou M"
 	else :
-		if sexe== ’M’:
-			code = ’A’
+		if sexe== "M":
+			code = "A"
 		else:
-			if sexe == ’F’:
-				code = ’B’
-if code != ’’:
-	print ’le code est ’, code
+			if sexe == "F":
+				code = "B"
+if code != "":
+	print "le code est ", code
 else :
-	print ’aucun code affecte
+	print "aucun code affecte"
 ```
 
 #### La notion de blocs
@@ -416,18 +416,17 @@ else :
 			première instruction du bloc
 			... ...
 			dernière instruction du bloc.
-			
+
 **Instructions imbriquées :**
 
 ```py
-if embranchement == ‘‘vertebres’’:
-	if classe == ‘‘mammiferes’’:
-		if ordre == ‘‘carnivores’’:
-			if famille == ‘‘felins’’:
-				print ‘‘c’est peut-etre un chat’’
-			print ‘‘c’est en tout cas un mammifere’’
-		elif classe == ‘‘oiseaux’’:
-			print ‘‘c’est peut etre un canari’’
-	print (‘‘la classification des animaux est complexe’’ )
+if embranchement == "vertebres":
+	if classe == "mammiferes":
+		if ordre == "carnivores":
+			if famille == "felins":
+				print "c’est peut-etre un chat"
+			print "c’est en tout cas un mammifere"
+		elif classe == "oiseaux":
+			print "c’est peut etre un canari"
+	print ("la classification des animaux est complexe" )
 ```
-
