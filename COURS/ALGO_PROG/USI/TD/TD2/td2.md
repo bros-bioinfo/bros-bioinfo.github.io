@@ -26,7 +26,7 @@ s3b@s3b-N750BU:~$ echo
 (voir terminal)
 
 #### 1.4 du sh ~
-```sh
+```console
 s3b@s3b-N750BU:~$ du sh ~
 4	/home/s3b/.gnupg/private-keys-v1.d
 12	/home/s3b/.gnupg
@@ -85,7 +85,7 @@ On peut éditer la ligne de commande :
 
 ## 3) Visite de l'arborescence utilisateur
 ### 3.1
-```sh
+```console
 s3b@s3b-N750BU:~$ pwd
 /home/s3b
 s3b@s3b-N750BU:~$ cd ..
@@ -96,12 +96,12 @@ s3b
 s3b@s3b-N750BU:/home$
 ```
 ### 3.2
-```sh
+```console
 s3b@s3b-N750BU:/home$ ls e s3b/ //après TAB
 s3b@s3b-N750BU:/home$ cd e s3b/
 ```
 ### 3.3
-```sh
+```console
 s3b@s3b-N750BU:~$ cd Bureau/
 s3b@s3b-N750BU:~/Bureau$ pwd
 /home/s3b/Bureau
@@ -113,7 +113,7 @@ s3b@s3b-N750BU:~/Bureau$ cd
 
 ### 3.6 ls -option
 
-```sh
+```console
 s3b@s3b-N750BU:/$ ls -larth
 total 52M
 drwxr-xr-x   2 root root 4,0K avril 19  2016 snap
@@ -149,7 +149,7 @@ drwxrwxrwt  20 root root 4,0K sept. 15 09:58 tmp
 
 ## 4) Création et supression de répertoire
 
-```sh
+```console
 s3b@s3b-N750BU:~$ mkdir Projets
 s3b@s3b-N750BU:~$ mkdir tmp
 s3b@s3b-N750BU:~$ mkdir eclair
@@ -176,7 +176,7 @@ rmdir: échec de suppression de '/home/s3b': Permission non accordée
 ```
 ## 5) Manipilation de fichiers
 ### 5.1 Copie
-```sh
+```console
 s3b@s3b-N750BU:~$ mkdir test
 s3b@s3b-N750BU:~$ cd test
 s3b@s3b-N750BU:~/test$ touch doc1.html
@@ -190,7 +190,7 @@ s3b@s3b-N750BU:~/test$ ls ~/temp/
 doc1.html  doc2.html
 ```
 ### 5.2 Suppression
-```sh
+```console
 s3b@s3b-N750BU:~/test$ rm doc2.html
 s3b@s3b-N750BU:~/test$ ls
 doc1.html
@@ -206,7 +206,7 @@ rm : supprimer fichier vide 'doc2.html' ? y
 
 ### 5.3 Déplacement et renommage
 #### 5.3.1
-```sh
+```console
 s3b@s3b-N750BU:~$ cd ~/test/
 s3b@s3b-N750BU:~/test$ ls
 doc1.html
@@ -222,7 +222,7 @@ s3b@s3b-N750BU:~/test$ ls -F ..
 s3b@s3b-N750BU:~/test$ ls -F
 doc.html
 ```
-```sh
+```console
 s3b@s3b-N750BU:~$ mkdir test_dir
 s3b@s3b-N750BU:~$ mkdir test_dir/essai
 s3b@s3b-N750BU:~$ cd test_dir/
@@ -238,7 +238,7 @@ s3b@s3b-N750BU:~/test_dir$ touch texte1.txt texte2.txt
 s3b@s3b-N750BU:~/test_dir$ ls
 essai  texte1.txt  texte2.txt
 ```
-```sh
+```console
 s3b@s3b-N750BU:~/test_dir$ mkdir textes
 s3b@s3b-N750BU:~/test_dir$ mv texte1.txt texte2.txt textes/
 s3b@s3b-N750BU:~/test_dir$ ls
@@ -247,7 +247,7 @@ s3b@s3b-N750BU:~/test_dir$ cd textes/
 s3b@s3b-N750BU:~/test_dir/textes$ ls
 texte1.txt  texte2.txt
 ```
-```sh
+```console
 s3b@s3b-N750BU:~/test_dir/textes$ mv t* ..
 s3b@s3b-N750BU:~/test_dir/textes$ ls
 s3b@s3b-N750BU:~/test_dir/textes$ ls ..
@@ -268,7 +268,7 @@ s3b@s3b-N750BU:~/test_dir/essai$ cd ../textes/
 s3b@s3b-N750BU:~/test_dir/textes$ ls
 autre_essai.txt  essai.txt
 ```
-```sh
+```console
 s3b@s3b-N750BU:~/test_dir/textes$ cd ..
 s3b@s3b-N750BU:~/test_dir$ cp essai textes
 cp: omission du répertoire 'essai'
