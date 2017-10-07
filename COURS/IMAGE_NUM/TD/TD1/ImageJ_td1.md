@@ -6,7 +6,7 @@
 
 Lancer imageJ en étant citué dans le répertoir courant.
 
-```shell
+```console
 ./run
 ```
 
@@ -53,5 +53,3 @@ Dans Image/Transfer : **rotation** de l'image
 Dans Image/scale :**redimentionner** l'image
 
 Dans Analyze/Plot profile : analyse les valeurs d'un tracé (et possibilité de save au format .csv)
-
-

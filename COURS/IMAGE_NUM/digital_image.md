@@ -1,6 +1,9 @@
 # IMAGE PROCESSING : DIGITAL IMAGE
 
 > This course is proposed by all the sources at the end of this document. The data below are not own by us. It's a filtering of all the data that we could gather to ehance our notes.
+<details>
+  <summary><b style="font-size:25px">SOMMAIRE<br></b></summary>
+  <p>
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
@@ -95,6 +98,8 @@
 
 <!-- /TOC -->
 
+</p></details>
+
 ## 1\. DIGITAL IMAGE
 
 In image processing softwares like ImageJ, what's a digital image? how the grays, colors are encoded? how these data are stored in a file? ImageJ is a software wich is :
@@ -176,7 +181,7 @@ RGB (for **Red,Green, Blue**) is the most common color space used by computers. 
 
 CMY (or its variant CMYK) color space uses as primary colors: **cyan, magenta, and yellow**. This color space used by printers is interesting because, this is an example of a **subtractive color model**. When you **add color(s), you converge towards black color**.
 
-##### CMY color space
+#### CMY color space
 
 In this color space, **(0,0,0)CMY is white and (255,255,255)CMY is black**. As shown, the primary colors cyan, magenta, and yellow have respectively the values (255,0,0)CMY, (0,255,0)CMY, and (0,0,255)CMY. For example, green is equal to (255,0,255)CMY corresponding to the complementary color in RGB (0,255,0)RGB.
 
@@ -245,7 +250,7 @@ Just look at some key numbers in the ramp image...
   - . . . . . .
   - 11111111 11111111~2~ = -110
 
-#### 3 - What about signed or unsigned 8-bit image?
+#### 3- What about signed or unsigned 8-bit image?
 
 In ImageJ, the only option called '8-bit' corresponds to **unsigned 8-bit numbers** (from 0 to 255) and there is no way to import a signed 8-bit image (-127 to +127).
 
