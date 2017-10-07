@@ -4,7 +4,7 @@
 @import "{{ site.theme }}";
 
 .highlight {
-    background: #282C34; //DONE
+    background: #282C34!important; //DONE
     .lineno { color: #4B5363!important;}
 
     .c     { color: #667689!important; font-style: italic!important } // Comment
