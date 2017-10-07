@@ -1,6 +1,6 @@
 # 1- Alias
 
-```sh
+```console
 sgoncal1@goya:~$ source .bashrc
 sgoncal1@goya:~$ man du
 sgoncal1@goya:~$ man man
@@ -25,7 +25,7 @@ espaces                   sentinelle.csv                        test2.R
 
 # 2- Protection
 
-```sh
+```console
 sgoncal1@goya:~$ ls -l
 total 8900
 drwxr-xr-x 2 sgoncal1 grp30001    4096 sept. 19 16:58 42
@@ -47,7 +47,7 @@ drwxr-xr-x 2 sgoncal1 grp30001    4096 sept. 11 18:39 TDM_R
 drwxr-xr-x 3 sgoncal1 grp30001    4096 sept. 19 15:40 UtilisationUnix
 ```
 
-```sh
+```console
 sgoncal1@goya:~$ chmod u=-r+w test-droits.txt
 sgoncal1@goya:~$ ls -l
 total 8900
@@ -77,7 +77,7 @@ Hello World !
 ```
 # 3-  Visite de l'arborescence d'Unix
 
-```sh
+```console
 sgoncal1@goya:~$ cd /
 sgoncal1@goya:/$ ls
 sgoncal1@goya:/$ ls -l
@@ -117,7 +117,7 @@ lrwxrwxrwx   1 root root       26 mai   23 02:48 vmlinuz -> boot/vmlinuz-4.9.0-3
 lrwxrwxrwx   1 root root       26 juin  22 13:15 vmlinuz.old -> boot/vmlinuz-4.9.0-3-amd64
 ```
 
-```sh
+```console
 sgoncal1@goya:/$ cd bin/
 sgoncal1@goya:/bin$ ls -l
 total 17076
@@ -138,7 +138,7 @@ lrwxrwxrwx 1 root root       5 sept. 22  2016 btrfsck -> btrfs
 ...
 ```
 
-```sh
+```console
 sgoncal1@goya:/bin$ cd ../tmp/
 sgoncal1@goya:/tmp$ ls -l
 total 36
@@ -176,7 +176,7 @@ crw-rw-rw-  1 root     root        1,   7 sept. 26 13:06 full
 crw-rw-rw-  1 root     root       10, 229 sept. 26 13:07 fuse
 ```
 
-```sh
+```console
 sgoncal1@goya:/dev$ cd ../usr/share/man
 sgoncal1@goya:/usr/share/man$ ls -l
 total 2516
@@ -199,7 +199,7 @@ drwxr-xr-x  4 root root    4096 déc.   5  2014 fr.ISO8859-1
 drwxr-xr-x  4 root root    4096 févr. 24  2016 fr.UTF-8
 ```
 
-```sh
+```console
 s3b@s3b-N750BU:~$ which firefox
 /usr/bin/firefox
 s3b@s3b-N750BU:~$ whereis firefox

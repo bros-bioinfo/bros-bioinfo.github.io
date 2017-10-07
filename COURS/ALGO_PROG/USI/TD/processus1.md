@@ -6,7 +6,7 @@
 
 ### 2 Première vision des processus
 
-```sh
+```console
 s3b@s3b-N750BU:~$ xload
 
 ^Z
