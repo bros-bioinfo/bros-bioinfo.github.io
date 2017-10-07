@@ -1,22 +1,44 @@
 # Utilisation des Systèmes Informatiques
 
 
-  - [Ordinateur](#ordinateur)
-    - [Composants basiques:](#composants-basiques)
-      - [Le contenu de la RAM:](#le-contenu-de-la-ram)
-    - [Le processeur](#le-processeur)
-  - [Les processus](#les-processus)
-    - [Jeux d'instructions du processeur](#jeux-dinstructions-du-processeur)
-    - [Etats des Processus:](#etats-des-processus)
-    - [Filiation des processus](#filiation-des-processus)
-    - [Les librairies de langages](#les-librairies-de-langages)
-  - [Environnements UNIX](#environnements-unix)
-    - [Propriétaire et groupe (unix)](#proprietaire-et-groupe-unix)
-    - [Comment tuer un processus](#comment-tuer-un-processus)
-    - [Système de Fichiers](#systeme-de-fichiers)
-      - [Physique](#physique)
-      - [Logique](#logique)
-    - [Désignation des fichiers et répertoire](#designation-des-fichiers-et-repertoire)
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+
+* [Utilisation des Systèmes Informatiques](#utilisation-des-systèmes-informatiques)
+	* [I. Ordinateur](#i-ordinateur)
+		* [A. Composants basiques:](#a-composants-basiques)
+			* [Le contenu de la RAM:](#le-contenu-de-la-ram)
+		* [B. Le processeur](#b-le-processeur)
+	* [II. Les processus](#ii-les-processus)
+		* [A. Jeux d'instructions du processeur](#a-jeux-dinstructions-du-processeur)
+		* [B. Etats des Processus:](#b-etats-des-processus)
+		* [C. Filiation des processus](#c-filiation-des-processus)
+		* [D. Les librairies de langages](#d-les-librairies-de-langages)
+	* [III. Environnements UNIX](#iii-environnements-unix)
+		* [Propriétaire et groupe (unix)](#propriétaire-et-groupe-unix)
+		* [Comment tuer un processus](#comment-tuer-un-processus)
+		* [Système de Fichiers](#système-de-fichiers)
+			* [Physique](#physique)
+			* [Logique](#logique)
+		* [Désignation des fichiers et répertoire](#désignation-des-fichiers-et-répertoire)
+	* [IV. Protections et accès](#iv-protections-et-accès)
+	* [V. SHELL](#v-shell)
+		* [A. Variable exportées / Non exportées](#a-variable-exportées-non-exportées)
+		* [B. Fenêtre "TERMINAL"](#b-fenêtre-terminal)
+		* [C. Redirections](#c-redirections)
+			* [1. Redirection ENTREE STANDARD (STDIN)](#1-redirection-entree-standard-stdin)
+			* [2. Redirection SORTIE STANDARD (STDOUT)](#2-redirection-sortie-standard-stdout)
+			* [3. Redirection SORTIE D'ERREUR STANDARD (STDERR)](#3-redirection-sortie-derreur-standard-stderr)
+		* [D. Le "pipe" ( | )](#d-le-pipe)
+		* [E. Accéder au contenu d'une variable](#e-accéder-au-contenu-dune-variable)
+		* [F. Code de retour d'un processus:](#f-code-de-retour-dun-processus)
+		* [G. Enchaînement de pipe (= pipeline)](#g-enchaînement-de-pipe-pipeline)
+		* [H. Enchaînement de processus](#h-enchaînement-de-processus)
+* [Annexe](#annexe)
+	* [Outils Libres et Non Libres sur PC](#outils-libres-et-non-libres-sur-pc)
+
+<!-- /code_chunk_output -->
+
 
 
 ## I. Ordinateur
@@ -298,7 +320,7 @@ Processus placé dans le répertoire courant (**CUR_DIR**)
 ~	chemin absolu vers ***HOME_DIR***
 
 
-## II. Protections et accès
+## IV. Protections et accès
 
 Pour le système un fichier et un répertoire, c'est pareil. Il possède:
 - un utilisateur = propriétaire (u)
@@ -319,6 +341,304 @@ La commande pour changer les droits:
 chmod
 ```
 
-### Variable exportées / Non exportées
-Pour accéder au contenu d'une variable,
-t
+## V. SHELL
+
+### A. Variable exportées / Non exportées
+
+La variable c'est le **nom d'une case mémoire** de la RAM.
+
+```bash
+foo=42
+bar=FOO
+```
+Dans notre cas :
+- foo sera en **non exportée** ; bar en **exportée**. Il n'y a aucune différence pour le processus entre variable exportée ou non.
+- Lors de l'héritage d'un processus enfant, le processus parent va transmettre les informations (ppid etc...) notamment les **info exportées** (bar=FOO exportée mais pas foo). La variable est transmise par **copie**, elles ne sont pas partagées entre le processus parent et enfant (la modification de l'une n'entrainera pas la modifcation de l'autre).
+
+### B. Fenêtre "TERMINAL"
+
+Processus qui s'execute dans le terminal : **shell** (interprète de commande)
+
+Histoire : classifié du moins vers le plus de services rendus
+- **sh**(c'est la base)
+- csh
+- tcsh
+- ksh
+- **zsh** (Sun/Solaris)
+- **bash** (Linux)
+etc...
+
+Système par défaut : GNU/Linux (programmes et application/noyau). Par défaut, **bash** est installé mais on peut installer zsh.
+Le shell est commun à **tous les système Unix**.
+
+### C. Redirections
+
+Participe à la puissance du shell.
+> Note : Windows : powershell un équivalent à bash mais moins efficace. Au final Windows à installer le bash au final.
+
+**Opération d'E/S** (entrée/sortie) : c'est un transfert d'informations d'un endroit vers un autres endroit dans la machine.
+
+**Flot d'E/S d'un processus** : c'est les E/S activent dans le processus.
+
+- Processus => fichier (par exemple le traitement de texte lors de la sauvegarde sur DD).
+- fichier => Processus (chargement du fichier)
+- Processus => périphérique (imprimer le fichier, affichage écran)
+- périphérique => Processus (scanner, clavier, souris)
+- Processus => processus
+
+Mais si on lit de la musique via le processus de lecture, normalement il y aurait des coupures. En réalité, le porcessus n'envoie pas le .raw directement dans les hauts parleurs, mais au niveau de la **carte autdio** qui contient une **RAM**. Le rôle du processus est de décompresser, lire et envoyer lors de son ordonnance le contenu du .raw(ou au bon format) dans la mémoire vive de la carte audio. C'est la carte audio qui envoie la musique, et la mémoire se remplit au fur et à mesure des ordonnances.
+
+3 entrées sont définies dans un processus :
+
+- Dans un processus, il y a aussi un **tableau de descripteur de fichier**. Ce tableau est connecté au **STDIN**(égale entrée standard), connecté au clavier.
+- Il est aussi connecté au **STDOUT** qui correspond à la fenêtre du terminal.
+- Pour les messages d'erreurs en retour à l'utilisateur, c'est le **STDERR** qui renvoie aussi au terminal.
+
+#### 1. Redirection ENTREE STANDARD (STDIN)
+
+Le signe de STDIN pour intéragir : **<**
+
+Exercice:
+
+- Envoyer un mail sans navigateur
+
+```bash
+sgoncal1@goya:~$ Mail -s "RDV" pierre.jacquet@etu.u-bordeaux.fr
+Coucou :p .
+.
+Cc:
+```
+- Envoyer un mail via message.txt :
+
+```bash
+sgoncal1@goya:~$ Mail -s "RDV" pierre.jacquet@etu.u-bordeaux.fr <./message.txt
+```
+
+#### 2. Redirection SORTIE STANDARD (STDOUT)
+
+
+Le signe de STDOUT pour intéragir : **>**.
+
+```bash
+sgoncal1@goya:~$ ls > result.dat
+sgoncal1@goya:~$ cat result.dat
+42
+Algo_cours
+Bureau
+cours_algo_protection.md
+espaces
+Lancer emacs | Bros-Bioinfo_fichiers
+Lancer emacs | Bros-Bioinfo.pdf
+message.txt
+PYTHON
+R
+result.dat
+sentinelle.csv
+STAT
+TD_ALGO
+TDM_R
+tdstat.zip
+test2.R
+test-droits.txt
+test-droits.txt~
+toto.txt
+UtilisationUnix
+```
+
+#### 3. Redirection SORTIE D'ERREUR STANDARD (STDERR)
+
+Le signe de STDERR : **2>**
+
+```bash
+sgoncal1@goya:~$ ls -z
+ls : option invalide -- 'z'
+Saisissez « ls --help » pour plus d\'informations.
+```
+
+```bash
+sgoncal1@goya:~$ ls -z 2> erreur.txt
+sgoncal1@goya:~$ cat erreur.txt
+ls : option invalide -- 'z'
+Saisissez « ls --help » pour plus d'informations.
+```
+
+
+### D. Le "pipe" ( | )
+
+Le pipe permet à la commande 2 de prendre les résultats créés par la commande 1 **(STDOUT1 => STDIN2)**.
+
+Exemple : compter le nombre de lignes de erreur.txt via le résultat de cat.
+
+```bash
+sgoncal1@goya:~$ cat erreur.txt | wc -l
+2
+```
+
+On peut enchaîner plusieurs commandes à la suite et effectuer donc un **filtrage** (commande en pipeline = filtres).
+
+
+### E. Accéder au contenu d'une variable
+
+foo="XIII 13" => affectation
+$NOM_VARIABLE => accès contenu
+
+```bash
+sgoncal1@goya:~$ foo="XIII 13"
+sgoncal1@goya:~$ $foo
+XIII: command not found
+sgoncal1@goya:~$ echo bonjour
+bonjour
+sgoncal1@goya:~$ echo $foo
+XIII 13
+```
+
+### F. Code de retour d'un processus:
+
+2 types de terminaisons d\'un processus :
+- normal (fin du processus, quit)
+- anormal (suite à des erreurs)
+
+Lorsque le processus est en état de terminaison, il laisse un **code de retour** (ou code d\'erreur de retour) que le noyau conserve dans une variable : **?** .
+Le code de retour correpond à un petit entier. Le code retour lorsqu\'il vaut 0, c\'est une **terminaison normale**. Sinon c\'est une **terminaison anormale** (de manière générale 0 est la terminaison normale).
+
+Exemple :
+- Commande ls :
+
+```bash
+sgoncal1@goya:~$ ls
+42                                    message.txt     tdstat.zip
+Algo_cours                            PYTHON          test2.R
+Bureau                                R               test-droits.txt
+cours_algo_protection.md              result.dat      test-droits.txt~
+erreur.txt                            sentinelle.csv  toto.txt
+espaces                               STAT            UtilisationUnix
+Lancer emacs | Bros-Bioinfo_fichiers  TD_ALGO
+Lancer emacs | Bros-Bioinfo.pdf       TDM_R
+sgoncal1@goya:~$ echo $?
+0
+sgoncal1@goya:~$ ls -z
+ls : option invalide -- 'z'
+Saisissez « ls --help » pour plus d'informations.
+sgoncal1@goya:~$ echo $?
+2
+```
+
+Les numéros d'erreur de la commande sont au niveau du manuel de la commande, avec **l\'état de fin d\'exécution**.
+
+Mais :
+```bash
+sgoncal1@goya:~$ man ls
+sgoncal1@goya:~$ echo $?
+0
+```
+
+Cette commande garde en mémoire la terminaison de la **dernière commande**.
+
+```bash
+sgoncal1@goya:~$ ls -z
+ls : option invalide -- 'z'
+Saisissez « ls --help » pour plus d'informations.
+sgoncal1@goya:~$ TOTO=$?
+sgoncal1@goya:~$ echo $TOTO
+2
+```
+
+> Note : attention il n'y a pas d'espace entre TOTO et le signe égal.
+
+### G. Enchaînement de pipe (= pipeline)
+
+Pour avoir le nombre de fichiers/dossiers dans le répertoire courant :
+
+```bash
+sgoncal1@goya:~$ ls | wc -l
+22
+```
+
+Chaque commande produit un code de retour, quelle est donc sa valeur ? Plus importante des valeurs : c'est la **dernière commande**. Car s'il y a une erreur dans les précédentes commandes, le pipeline fera un retour d'erreur non localisé(il faudra enquêter nous même). Le code de retour du pipeline est donc la dernière commande du pipeline.
+Plus on ajoute des processus en pipe, plus le filtrage va être précis (exemple: les nombres premiers)
+
+### H. Enchaînement de processus
+
+Opérateurs :
+- **;**, cmd1 ; cmd2 : commande 2 ne sera créée que si la commande 1 sera terminée.
+- **&**, cmd1 & cmd2 : parallelisme de fonctionnement  des processus cmd1 et 2.
+- **&&**, cmd1 && cmd2 : la cmd2 ne sera créée et exécutée que si la cmd1 s\'est terminée sans erreurs.
+- **\|\|**, cm1 || cmd2 :  cmd2 ne sera créée et exécutée que si la cmd1 renvoie une erreur.
+
+```bash
+ls && echo OK || echo KO
+42                                    message.txt     tdstat.zip
+Algo_cours                            PYTHON          test2.R
+Bureau                                R               test-droits.txt
+cours_algo_protection.md              result.dat      test-droits.txt~
+erreur.txt                            sentinelle.csv  toto.txt
+espaces                               STAT            UtilisationUnix
+Lancer emacs | Bros-Bioinfo_fichiers  TD_ALGO
+Lancer emacs | Bros-Bioinfo.pdf       TDM_R
+OK
+```
+
+On est géné par la commande ls, donc on va rediriger le résultat :
+
+```bash
+sgoncal1@goya:~$ ls > /dev/null && echo OK || echo KO
+OK
+sgoncal1@goya:~$ ls -z > /dev/null && echo OK || echo KO
+ls : option invalide -- 'z'
+Saisissez « ls --help » pour plus d'informations.
+KO
+```
+
+Il faut rediriger la sortie d\'erreur :
+
+```bash
+sgoncal1@goya:~$ ls -z 2> /dev/null > /dev/null && echo OK || echo KO
+KO
+```
+
+/dev/null : c\'est le **"trou noir"**, rien ne ressort, les données sont irrécupérables.
+
+Des commandes placées entre **()** provoque l\'exécution des commandes dans un **sous-shell**.
+
+ls | wc -l : le processus bash est parent du processus ls et wc -l. Le STDOUT de ls est redirigé dans le STDIN de wc -l.
+
+Si on ajoute les () : (ls | wc -l); alors le sous-shell généré, donc un nouveau processus bash devient enfant du bash du shell principal.
+
+Exemple :
+
+```bash
+F1=foo.txt
+F2=bar.txt
+(cat $F1 || cat $F2) | wc -l
+```
+- 0 = STDIN
+- 1 = STDOUT
+- 2 = STDERR
+
+![test](https://i.imgur.com/MD2eE1m.jpg)
+
+
+# Annexe
+## Outils Libres et Non Libres sur PC
+
+- **Navigateur Web :** firefox
+- **Traitement de texte** : Libre office
+- **Audio** (convertisseur numérique-analogique dans PC): Audacious
+  - mp3(propriétaire), ogg(libre) : compression numérique à perte.
+  - cd audio(raw, wav, flac, etc...) : format non compressé.
+- **Vidéo**: 2 outils à installer => vlc et  mplayer
+  - mp4(h264,h265) , mov, wmv, ....
+- **Traitement d'image**:
+  - GIMP (libre), photoshop (propriétaire)
+  - Inkscape (traitement vectoriel)
+- **Messagerie/chat**:
+  - Skype(microsoft) : pas d'intimité car mircrosoft peut enregistrer infos.
+  - Facetime (apple) : pareil que skype.
+  - XMPP (libre) mais faut que l'autre interlocuteur soit sous XMPP aussi.
+- **Twitter et Facebook** : censure parfois abusive, impuissance de l'utilisateur(censure privée).
+  → **Mastodon** : réseaux social libre.
+- **Smartphone messagerie** :
+  - SMS : libre pour la lecture (opérateur peut le lire)
+  - Telegram(dangereux car algo non connu),
+  - Signal(EFF : defense des droits)(chiffrage des sms et appel, utilise le réseau),
+  - whatsapps (pris une partie de Signal).
