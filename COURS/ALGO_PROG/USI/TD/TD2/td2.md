@@ -5,7 +5,7 @@ Permet de sortir du terminal.
 
 #### 1.2 Commandes
 
-```bash
+```console
 s3b@s3b-N750BU:~$ who
 s3b      tty7         2017-09-14 12:31 (:0)
 s3b@s3b-N750BU:~$ date
