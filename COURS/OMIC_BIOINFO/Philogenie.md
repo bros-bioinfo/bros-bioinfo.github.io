@@ -97,10 +97,12 @@ Un arbre non raciné est un arbre qui n'a pas de point de départ.
 
 ![alt text](http://www.evolution-biologique.fr/wp-content/uploads/2.15.jpg)
 
-![](https://media.tenor.com/images/1d586769a9c3d74506fc10aa37771f9a/tenor.gif)
 
 
 ### Comment raciner un arbre?:
+
+![](https://media.giphy.com/media/17Z9AMUpJsV5m/giphy.gif)
+
 La plupart des méthodes produisent des arvres non-racinés car elles détectent des différences entre séquences mais n'ont aucun moyen de les orienter temporellement.
 
 On peut les positionner grâce:
@@ -130,7 +132,7 @@ Toutes les méthodes de reconstruction reposent sur les hypothèses suivantes:
 - Chaque position de l'alignement comporte des résidus homologues
 - L'échantillonage est bien réalisé.
 
-PLESIOmorphie -copie des autres caractères
+Plesiomorphie -copie des autres caractères
 
 **Trees: Construction methods**
 
@@ -146,5 +148,3 @@ Etapdes de l'UPGMA
 - La méthode la plus utilisée est celle du bootstrap (grilles)
 - Postulat: les caractères évoluent de manière indépendante.
 → Un arbre qui varie beaucoup
-
-![](https://media.giphy.com/media/17Z9AMUpJsV5m/giphy.gif)
