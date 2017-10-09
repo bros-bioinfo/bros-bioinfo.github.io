@@ -1,4 +1,4 @@
-# ImageJ TD1
+## ImageJ TD1
 
 **Launch command**:
 
@@ -52,4 +52,10 @@ Dans Image/lookup table (LUT) : **inverser les couleurs**
 Dans Image/Transfer : **rotation** de l'image
 Dans Image/scale :**redimentionner** l'image
 
-Dans Analyze/Plot profile : analyse les valeurs d'un tracé (et possibilité de save au format .csv)
+Dans **Analyze/Plot profile** : analyse les valeurs d'un tracé (et possibilité de save au format .csv)
+
+Tracer l'histograme = **ctrl+H**
+
+
+**Process/Enhance contrast** -> **normaliser** (Normaliser une image (voir cours)) ou **equaliser** (attention car augmente le bruit)
+**Process/subtract background** : ajuster les défauts d'éclairage (il faut jouer sur le rayon qui doit être suppérieur aux objets d'interrêts) ou masque de convolution
