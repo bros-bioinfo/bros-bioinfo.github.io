@@ -2,13 +2,13 @@
 
 On lance emacs simplement en tapant :
 
-```
+```console
 prao ~ $ emacs
 ```
 
 Pour éditer un fichier précis :
 
-```
+```console
 prao ~ $ emacs monbofichier.html
 ```
 
@@ -176,4 +176,4 @@ _        | M-x dunnet    | Jeu de type « adventure »
 _        | M-x gomoku    | Jeu de go
 _        | M-x doctor    | Le psychanalyste d'emacs. Emacs est votre ami.
 
-> Auteur : Marie-Lan Nguyen. Dernière modification : Wed Oct 24 15:08:52 2007 +0000 par Marc Mezzarobba. 
+> Auteur : Marie-Lan Nguyen. Dernière modification : Wed Oct 24 15:08:52 2007 +0000 par Marc Mezzarobba.

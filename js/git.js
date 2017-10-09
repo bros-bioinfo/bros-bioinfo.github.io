@@ -24,7 +24,7 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
 
   //FORMATAGE DE L'URL
   n = 0;
-var nbfichiers = (data.match(/md/g) || []).length;
+var nbfichiers = (data.match(/md|pdf/g) || []).length;
 console.log("NOMBRES DE FICHIERS:"+nbfichiers);
   while (n < nbfichiers) {
     m = n - 1;
@@ -58,10 +58,21 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
           url = url.replace("╶─", "╰─");
         }
       }
+      var TD = "TD"+i;
+
       url = url.replace(tab[i], "<br>" + tab[i]);
-      url = url.replace(tab[i], '<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> ' + tab[i] + "</div>");
+      url = url.replace(tab[i], '<div style="color:white"><i class="fa fa-folder-open" aria-hidden="true"></i> ' + tab[i] + "</div> ");
+      url = url.replace(/╶─ PROG ╶─/,' ╶─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
+      url = url.replace(/ ╰─ PROG ╶─/,' ╰─ <div style="color:white" class="prog"><i class="fa fa-folder-open" aria-hidden="true"></i> PROG </div>╶─');
+      url = url.replace(/ ╰─ USI ╶─/,' ╰─ <div style="color:white" class="usi"><i class="fa fa-folder-open" aria-hidden="true"></i> USI\xa0 </div>╶─');
+      url = url.replace(/╶─ TD ╶─/,' ╶─ <div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i> TD</div> ╶─');
+      url = url.replace(TD,'<div style="color:white" class="td"><i class="fa fa-folder-open" aria-hidden="true"></i> '+TD+'</div>');
+      url = url.replace(/╶─ PYTHON ╶─/,' ╶─ <div style="color:white" class="python"><i class="fa fa-code" aria-hidden="true"></i> PYTHON</div> ╶─');
+      url = url.replace(/╶─ WEB ╶─/,' ╶─ <div style="color:white" class="web"><i class="fa fa-html5" aria-hidden="true"></i> WEB\xa0</div> ╶─');
       i++
     }
+
+
 
 
     console.log("URL" + url);
@@ -72,7 +83,12 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
     urlreworked = '">' + url + '</a>';
     ulien = ulien.replace(/"><\/a>/gm, urlreworked);
     ulien = ulien.replace(/  /gm, "");
-
+    ulien = ulien.replace(/╶─(?!.*╶─)(?:(?!\S+$).)*/gm,' ╶─ <i class="fa fa-file-text-o" style="color:#007bff" aria-hidden="true"></i>\n');
+    ulien = ulien.replace(/╰─(?!.*╶─)(?:(?!\S+$).)*/gm,' ╰─ <i class="fa fa-file-text-o" style="color:#007bff" aria-hidden="true"></i>\n');
+    ulien = ulien.replace(/ ╶─ /gm,'╶─');
+    ulien = ulien.replace(/╶─/gm,' ╶─ '); //FIX WHITE SPACE
+    ulien = ulien.replace(/ ╰─ /gm,'╰─');
+    ulien = ulien.replace(/╰─/gm,' ╰─ '); //FIX SECOND WHITE SPACE
     console.log("ulien:" + ulien);
     $("#gitlist").append(ulien + "<br>");
     n++;
