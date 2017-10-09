@@ -101,12 +101,11 @@ Un arbre non raciné est un arbre qui n'a pas de point de départ.
 
 ### Comment raciner un arbre?:
 
-![](https://media.giphy.com/media/17Z9AMUpJsV5m/giphy.gif)
 
 La plupart des méthodes produisent des arvres non-racinés car elles détectent des différences entre séquences mais n'ont aucun moyen de les orienter temporellement.
 
 On peut les positionner grâce:
-1- à un groupe externe de séquences connues ***a priori*** comme externes au groupe d'intérêt. La racine correspond alors à la branche qui relie les deux groupes.
+1- à un **groupe externe** de séquences connues ***a priori*** comme externes au groupe d'intérêt. La racine correspond alors à la branche qui relie les deux groupes.
 
 2- Quand on a aucune possibilité de décider quel taxon peut servir de groupe, on place souvent la racine au millieu de l'arbre.
 
@@ -145,6 +144,29 @@ Etapdes de l'UPGMA
 
 
 ## 4. Détermination de la robustesse des arbres.
-- La méthode la plus utilisée est celle du bootstrap (grilles)
+- La méthode la plus utilisée est celle du **bootstrap** (grilles)
 - Postulat: les caractères évoluent de manière indépendante.
 → Un arbre qui varie beaucoup
+
+## Méthode des distances
+
+**UPGMA**
+https://en.wikipedia.org/wiki/UPGMA
+
+Calcule les distances entre toutes les séquences appariées.
+-> trouve la plus petite valeur de distance
+->
+
+All the method
+**Neighbor-Joining**
+https://en.wikipedia.org/wiki/Neighbor_joining
+
+calcul la matrice Q.
+
+**Maximum likelihood** ou maximum de ressemblance
+
+https://en.wikipedia.org/wiki/Computational_phylogenetics
+
+Outils : phyML ; RaxML
+Méthode utilisé en mathématique et statistique.
+regroupe toutes les matrices de distance, Bootstrap etc...
