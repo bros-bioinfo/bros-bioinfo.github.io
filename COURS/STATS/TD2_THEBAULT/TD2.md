@@ -86,7 +86,7 @@
 
 - ***Représentation graphique*** :
 
-![](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/STATS/TD2_THEBAULT/graphe4.jpeg?raw=true)
+![](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/STATS/TD2_THEBAULT/graphe5.jpeg?raw=true)
 
 - La ligne bleue est la droite du modèle linéaire simple avec seulement le renouvellement
 - La ligne rouge est  la droite du modèle linéaire multiple
