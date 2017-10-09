@@ -5,7 +5,7 @@
 **http://data.library.virginia.edu/diagnostic-plots/**  
     -> Pour mieux comprendre les graphiques.
 
-    ![](/net/cremi/bbothorel/bros-bioinfo.github.io/COURS/STATS/TD2_THEBAULT/graphe1.jpeg)
+![](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/STATS/TD2_THEBAULT/graphe1.jpeg?raw=true)
 
 ## a) **Residuals vs Fitted**
 - les points doivent être répartis de manière homogène de part et d'autre de la "droite"
@@ -47,12 +47,15 @@
 - x11();plot(sent$Cd_foie, sent$Cd_muscle, pch=16,cex=1.5, xlab="Cd foie", ylab="Cd muscles")
 - **abline**(lm, col="red", lwd=2) #permet de projeter la droite sur le graphique.
 
+![](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/STATS/TD2_THEBAULT/graphe2.jpeg?raw=true)
+
 
 ## **II] Exo sur les bactéries** :
 
 ### Question : Abondance des bactéries en fonction du temps
     Corrélation et non régression ?
 
+![](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/STATS/TD2_THEBAULT/graphe3.jpeg?raw=true)
 - premier plot => non linéaire.
 - on fait donc uniquement des tests de corrélation
   - **Kendall** => pour des données plus petites =/= **Spearman** (sensible aux erreurs et divergences dans les données)
@@ -67,9 +70,25 @@
 - lm(log(Condition)~Renouvellement*Hauteur,data)->LMM
 - le fait d'utiliser le log doit être déterminé en amont en regardant les données
 - on fait du factoriel **renouvellement * hauteur**
+
+![](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/STATS/TD2_THEBAULT/graphe4.jpeg?raw=true)
+
 - on applique les mêmes tests que pour la régression linéaire (***voir I]***)
 - d'après les tests on trouve que seul l'effet de renouvellement a un impact (car p-value < 0.05)
 
 - on teste ensuite avec le modèle "+" :  **lm(log(Condition)~Renouvellement+Hauteur,data)->LMM**
   - On trouve une équation du type : **LogIC=-0,106*Renouv-0,06*HAuteur+3,86**
   - d'après ce test : le renouvellement est encore le seul a avoir un impact. On peut donc refaire un modèle simple en ne prenant en compte que ce dernier.
+- Modèle linéaire : **lm(log(Condition)~Renouvellement,data)->LM**
+- summary(LM) #Lire le "Multiple R squared'=56%, p-value ***
+  - On remarque que les coefficients ne sont pas les mêmes pour la régression multiple
+  - Le temps de renouvellement est calculé sur les résidus de la hauteur et inversement (régression partielle)
+
+- ***Représentation graphique*** :
+
+![](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/STATS/TD2_THEBAULT/graphe4.jpeg?raw=true)
+
+- La ligne bleue est la droite du modèle linéaire simple avec seulement le renouvellement
+- La ligne rouge est  la droite du modèle linéaire multiple
+
+![](https://media3.giphy.com/media/7bWtoBmjn6fAI/giphy.gif)
