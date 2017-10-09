@@ -8,7 +8,7 @@
 - Les scripts ne marchent que pour python 3.5 vu que j'ai codé en utilisant ce shell là.
 	- Faites attention à l'indentation si jamais vous copiez-collez le script
 - Sachez que j'utilise la fonction def pour définir une variable ce qui me permet ensuite de lancer le script avec une seule ligne dans python.
-- Cette exercice était pris du moodle de Taveau en prog' python [(voir)](https://moodle1.u-bordeaux.fr/mod/page/view.php?id=130387). Il fallait construire un demi triangle de hashtags :
+- Cet exercice était pris du moodle de Taveau en prog' python [(voir)](https://moodle1.u-bordeaux.fr/mod/page/view.php?id=130387). Il fallait construire un demi triangle de hashtags :
 
 Sur l'image c'est du code pyton 2.7 que j'ai modifié pour cet exemple:
 
@@ -343,3 +343,78 @@ def lenstring():
 Voilà pour ces exos ! :)
 
 ![](https://media1.giphy.com/media/roeK1IUE3V22k/200.gif#8-grid1)
+
+# Je vous mets ici les fonctions vues avec Tata :
+
+- Demander un nombre puis :
+ - Afficher la table de multiplication d'un nombre
+
+```python
+def multplication():
+    nb=input("Entrez le nombre dont vous voulez la table de multiplication\n")
+    nb=int(nb)
+    tab=range(1,11,1)
+    for i in tab:
+        somme = i * nb
+        print (somme)
+```
+
+- Table de multiplications des nombres compris entre nb1 et nb2 :
+
+```python
+def multiplicationinternombre(nb1,nb2):
+
+    if (nb1 > nb2):		#si jamais nb1 > nb2
+        nb1,nb2=nb2,nb1 #permet d'intervertir nb1 et nb2
+    print ("\n)")
+
+    for j in range(nb1,nb2+1):
+        print("Table de multiplication de",j)
+        for i in range(1,11,1):
+            print (j,"*",i, "=",i*j)
+        print ("\n")
+```
+
+- Entrer des poids d'animaux, en faire la somme et donner le maximum :
+
+```python
+def poidsanimaux():
+
+    maxi = 0
+    somme = 0
+    for i in range(1,11,1):
+        poids=input("Quel est le poids\n")
+        poids=int(poids)
+        somme = poids + somme
+        if poids > maxi:
+            maxi = poids
+    print ("La somme des poids est", somme," le max est :", maxi)
+```
+
+- Poids de différents animaux, somme et maximum pour chaques animaux :
+
+```python
+def poids():
+
+    for animal in ('souris','rats','cobayes'):
+        maxi = 0
+        somme = 0
+        print ("Combien de",animal,"avez-vous?")
+        nb=input()
+        nb=int(nb) #pas utile pour python 2.7
+        for i in range(nb):
+            poids=input("Quel est le poids\n")
+            poids=int(poids)
+            somme = somme + poids
+            if poids > maxi:
+                maxi = poids
+
+        print ("Poids total : ",somme, "pour les", animal)
+        print ("Le poids le plus haut est : ", maxi, "pour les", animal)
+```
+
+- Transformer une chaîne ADN en ARN complémentaire :
+
+```python
+var = encoursdeproduction
+```
