@@ -220,7 +220,7 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 ```python
 def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suivant de celui donné
 		import sys
-	
+
 		li1=[3,5,7,10,12] #mois comprenant 31j
 		li2=[4,6,9,11] #mois comprenant 30j
 		error="Vous ne savez pas entrer une date correcte ?"
@@ -315,9 +315,7 @@ def dateplus1(d,m,y): #day : DD month: MM year: YY -> on affichera le jour suiva
 ```python
 def string(x):#x = nombre de fois que l'on display le "string"
     str1 = input("Tapez la phrase que vous voulez répéter:\n")
-    print((str1+"\n")*x)def string(x):#x = nombre de fois que l'on display le "string"
-    str1 = input("Tapez la phrase que vous voulez répéter:\n")
-    print(str1)
+    print((str1+"\n")*x)
 ```
 
 ## Exercice 10
@@ -328,7 +326,7 @@ def string(x):#x = nombre de fois que l'on display le "string"
 def charn2(): #demande une chaine de caractère, la convertie en list et donne la deuxième lettre
 	string=input("Tapez votre phrase ou mot\n")
 	string=list(string)
-	print(string[1]
+	print(string[1])
 ```
 
 
@@ -340,7 +338,7 @@ def charn2(): #demande une chaine de caractère, la convertie en list et donne l
 def lenstring():
 	string=input("Tapez votre chaine de caractères:\n")
 	string=list(string)
-	print(len(string),"caractères dans votre phrase !")
+	print(len(string)),"caractères dans votre phrase !")
 ```
 Voilà pour ces exos ! :)
 
