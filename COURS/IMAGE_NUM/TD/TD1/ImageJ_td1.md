@@ -1,4 +1,4 @@
-## ImageJ TD1
+# **ImageJ TD1**
 
 **Launch command**:
 
@@ -13,18 +13,7 @@ Lancer imageJ en étant citué dans le répertoir courant.
 **New Image**
 > File > New image (Ctrl + N)
 
-**réponses crazybiocomputing**
-
-thUNdER.ht
-
-
-
-Ofkh.r.
-
-
-anaglyph.php
-
-**les commandes**
+## **Commandes de base**
 
 pour le rectangle
 
@@ -32,8 +21,6 @@ pour le rectangle
 
 -**ctrl + clic** : sélection qui part du milieu
 -**ctrl + shift** + clic : carré qui part du milieu
-
-
 
 outil polygone :**double clic** : ferme le polygone
 
@@ -47,28 +34,35 @@ outil polygone :**double clic** : ferme le polygone
 
 -**"+" et "-"** au clavier pour zoomer sur l'image
 
-Dans Image/color/split channel : **séparer les trois couleurs**.
+## **Image**
 
-Dans Image/lookup table (LUT) : **inverser les couleurs**
+**Image/color/split channel** : séparer les trois couleurs.
 
-Dans Image/Transfer : **rotation** de l'image
-Dans Image/scale :**redimentionner** l'image
+**Image/lookup table (LUT)** : inverser les couleurs
 
-Dans **Analyze/Plot profile** : analyse les valeurs d'un tracé (et possibilité de save au format .csv)
+**Image/Transfer** : rotation de l'image
+
+**Image/scale** :redimentionner l'image
+
+**Analyze/Plot profile** : analyse les valeurs d'un tracé (et possibilité de save au format .csv)
 
 Tracer l'histograme = **ctrl+H**
 
-Rappel de cours : il existe deux types de bruit
+**Stacks** : menu pour fusionner les images, découper l'image en plusieurs parties, superposer, annimer etc...
+
+## **Process**
+
+Rappel de cours : **il existe deux types de bruit**
 
 - **Gaussien**
 - **Poivre et sel** (salt and paper)
 
-## Process
+**Process/Noise/add specific noise** or /salt and paper :ajouter du bruit sur l'image
 
 **Process/Filters/shaw circular masks** : visualiser le masque
 
 **Process/Filters/mean** :choisir le rayon du masque et l'appliquer (attention plus on augmente le rayon et plus l'image est floue)
-**Process/Filters/gaussian blur** :
+**Process/Filters/gaussian blur** : marche super bien sur du salt and paper (rend le fond tout lisse)
 
 
 **Process/Enhance contrast** -> **normaliser** (Normaliser une image (voir cours))
