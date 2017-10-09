@@ -48,7 +48,9 @@ outil polygone :**double clic** : ferme le polygone
 -**"+" et "-"** au clavier pour zoomer sur l'image
 
 Dans Image/color/split channel : **séparer les trois couleurs**.
+
 Dans Image/lookup table (LUT) : **inverser les couleurs**
+
 Dans Image/Transfer : **rotation** de l'image
 Dans Image/scale :**redimentionner** l'image
 
@@ -56,6 +58,20 @@ Dans **Analyze/Plot profile** : analyse les valeurs d'un tracé (et possibilité
 
 Tracer l'histograme = **ctrl+H**
 
+Rappel de cours : il existe deux types de bruit
 
-**Process/Enhance contrast** -> **normaliser** (Normaliser une image (voir cours)) ou **equaliser** (attention car augmente le bruit)
-**Process/subtract background** : ajuster les défauts d'éclairage (il faut jouer sur le rayon qui doit être suppérieur aux objets d'interrêts) ou masque de convolution
+- **Gaussien**
+- **Poivre et sel** (salt and paper)
+
+## Process
+
+**Process/Filters/shaw circular masks** : visualiser le masque
+
+**Process/Filters/mean** :choisir le rayon du masque et l'appliquer (attention plus on augmente le rayon et plus l'image est floue)
+**Process/Filters/gaussian blur** :
+
+
+**Process/Enhance contrast** -> **normaliser** (Normaliser une image (voir cours))
+ou **equaliser** (attention car augmente le bruit)
+
+**Process/subtract background** : ajuster les défauts d'éclairage (il faut jouer sur le rayon qui doit être suppérieur aux objets d'interrêts) ou **masque de convolution**
