@@ -179,6 +179,11 @@ Les arbres fournis par cette méthode sont **non polarisés**, cependant l'utili
 
 Enfin, les méthodes de vraisemblance sont plus **probabilistes**. En se fondant sur le **taux de substitution** pour chaque élément de base (nucléotide pour des séquences d'ADN) au cours du temps, on estime la vraisemblance de la position et de la longueur des branches de l'arbre.
 
+**Former des racines**
+
+Si l'on a obtenu un arbre non enraciné par une des méthodes ci-dessus, on peut tenter d'en trouver la racine par la méthode de l’**outgroup ou du point médian**.
++ Celle de l’outgroup (groupe extérieur ou extragroupe) consiste à ajouter aux séquences traitées, avant le calcul de l'arbre, une très éloignée : le nœud-racine sera le père de cette séquence.
++ Celle du point médian consiste à affecter à chaque nœud de l'arbre une séquence correspondant au consensus de ses fils, et choisir comme racine le nœud dont la séquence est la plus proche de la séquence consensus de toutes les feuilles.
 
 ## 4. Détermination de la robustesse des arbres.
 
