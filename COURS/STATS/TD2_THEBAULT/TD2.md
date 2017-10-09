@@ -1,6 +1,6 @@
 # Cours de TD Thébault 9/10/2017
 
-[//**Lien pour les fichiers csv**\\\](http://dept-info.labri.fr/~thebault/STAT/)
+[**Lien pour les fichiers csv**](http://dept-info.labri.fr/~thebault/STAT/)
 
 **http://data.library.virginia.edu/diagnostic-plots/**  
     -> Pour mieux comprendre les graphiques.
