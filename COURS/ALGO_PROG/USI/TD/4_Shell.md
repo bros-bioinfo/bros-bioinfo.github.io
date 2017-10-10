@@ -116,3 +116,22 @@ do
   commandes
 done
 ```
+**expr**
+
+```bash
+expr 3 + 4
+```
+
+**Boucle while**:
+
+```bash
+while expression
+do
+  commandes
+done
+```
+**La conditionnelle if**:
+
+```bash
+if expr-bool
+```
