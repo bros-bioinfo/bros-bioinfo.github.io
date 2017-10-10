@@ -5,6 +5,15 @@ code= raw_input()
 print "\nsaisir un code motif"
 motif = raw_input()
 
+lencode = code
+counter = 0
+for i in range(len(lencode)):
+    if lencode[:len(motif)] == motif:
+        counter += 1
+    lencode = lencode[1:]
+
+print counter
+
 nbmotif = code.count(motif)
 ARN=""
 
@@ -24,7 +33,7 @@ for i in code:
     ARN += i
 
 print "\nLa séquence traduite est:",ARN
-print "\nNombre de motif dans la séquence",nbmotif
+#print "\nNombre de motif dans la séquence",nbmotif
 
 
 
