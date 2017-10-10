@@ -146,3 +146,18 @@ else
 
 fi
 ```
+
+## III. Les scripts SHELLs
+
+On commence son script par:
+```bash
+#! /bin/bash #(permet de choisir son shell)
+```
+Ensuite on écrit la suite de commandes que l'on souhaite:
+
+```bash
+set $(date);
+echo $5
+```
+
+Le passage d'argument à 1 script-shell
