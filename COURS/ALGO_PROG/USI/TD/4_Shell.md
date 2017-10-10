@@ -5,7 +5,7 @@
 ### 2) Phase de substitutions
 Une commande UNIX simple:
 
-```bash
+```console
 mot0 [mot1 mot2 mot3 ...] [redirections]
 #commande [arguments] [redirections]
 ```
@@ -13,14 +13,14 @@ Il y a trois phases de substitutions:
 
 #### a) Remplacement de VARIABLES
 Exemples:
-```bash
+```console
 foo=XIII
 echo foo
 echo $foo #return la valeur de foo: XIII
 ```
 Ici le shell remplace ***echo $foo*** par ***echo XIII*** avant l'execution de la commande
 
-```bash
+```console
 RAC=/bin
 echo $RAC/pwd
 #on obtient /bin/pwd
@@ -31,7 +31,7 @@ $RAC/pwd
 
 On peut créer des **vecteurs de variables:**
 
-```bash
+```console
 set mot1 mot2 mot3
 echo $2 #return mot2
 echo $1 #return mot1
@@ -41,10 +41,15 @@ echo $# #return le nombre d'éléments du vecteur
 echo $1,$2,$3
 shift
 echo $1,$2,$3 # décale la liste vers la gauche $1 est perdu et est remplacé par $2
-echo $0   #return le nom du processus qui execute $0 (ici bash)
+echo $0   #return le nom du processus qui execute $0 (ici console)
 echo $$   #return le PID sur shell
 echo $!   #return le PID du dernier processus détaché
-
+```
+Les préfixes:
+```console
+PREFIXE="TMP"
+M1=$PREFIXE1
+M2=$PREFIXE2
 ```
 
 #### b) Remplacement de COMMANDES
