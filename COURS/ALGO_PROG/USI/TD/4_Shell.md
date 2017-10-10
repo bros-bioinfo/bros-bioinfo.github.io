@@ -134,4 +134,15 @@ done
 
 ```bash
 if expr-bool
+then
+  liste de commandes
+
+elif expr-bool
+then
+  liste de commandes
+
+else
+  liste de commandes
+
+fi
 ```
