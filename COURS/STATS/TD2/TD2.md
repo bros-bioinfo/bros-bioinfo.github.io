@@ -3,7 +3,7 @@
 [**Lien pour les fichiers csv**](http://dept-info.labri.fr/~thebault/STAT/)
 
 **http://data.library.virginia.edu/diagnostic-plots/**
-    -> Pour mieux comprendre les graphiques.
+    ***Pour mieux comprendre les graphiques.***
 
 ![](graphe1.jpeg?raw=true)
 
@@ -30,7 +30,9 @@
   - p-value < 0.05 rejet de H0 => échantillon **non issu d'une distribution suivant une loi normale**
   - Dans cet exemple on ne tient pas compte du test de Shapiro-Wilks car il y a plus de 30 données; les conditions d'application sont respectées on peut envisager un modèle linéaire.
 - Test de corrélation de Bravais-Pearson :
-  - **cor.test(sent$Cd_muscle, sent$Cd_foie, method = "pearson")**
+- ```R
+    cor.test(sent$Cd_muscle, sent$Cd_foie, method = "pearson")
+    ```
   - H0 : pas de corrélation entre les variables
   - p-value < 0.05 => rejet de H0, les variables sont donc **corrélées**.
 
@@ -46,9 +48,9 @@
 
 ```R
 x11();plot(sent$Cd_foie, sent$Cd_muscle, pch=16,cex=1.5, xlab="Cd foie", ylab="Cd muscles")
-```
 
-- **abline**(lm, col="red", lwd=2) #permet de projeter la droite sur le graphique.
+abline(lm, col="red", lwd=2) #permet de projeter la droite sur le graphique.
+```
 
 ![](graphe2.jpeg?raw=true)
 
@@ -56,7 +58,9 @@ x11();plot(sent$Cd_foie, sent$Cd_muscle, pch=16,cex=1.5, xlab="Cd foie", ylab="C
 ## **II] Exo sur les bactéries** :
 
 ### Question : Abondance des bactéries en fonction du temps
-    Corrélation et non régression ?
+
+
+Corrélation et non régression ?
 
 ![](graphe3.jpeg?raw=true)
 - premier plot => non linéaire.
@@ -69,8 +73,9 @@ x11();plot(sent$Cd_foie, sent$Cd_muscle, pch=16,cex=1.5, xlab="Cd foie", ylab="C
 ## **III] Exo sur la régression multiple** :
 
 ### Question : Condition/Renouvellement/Hauteur y a-t-il des relations entre ces variables?
-
-- lm(log(Condition)~Renouvellement*Hauteur,data)->LMM
+- ```R
+  lm(log(Condition)~Renouvellement*Hauteur,data)->LMM
+  ```
 - le fait d'utiliser le log doit être déterminé en amont en regardant les données
 - on fait du factoriel **renouvellement * hauteur**
 
@@ -79,11 +84,24 @@ x11();plot(sent$Cd_foie, sent$Cd_muscle, pch=16,cex=1.5, xlab="Cd foie", ylab="C
 - on applique les mêmes tests que pour la régression linéaire (***voir I]***)
 - d'après les tests on trouve que seul l'effet de renouvellement a un impact (car p-value < 0.05)
 
-- on teste ensuite avec le modèle "+" :  **lm(log(Condition)~Renouvellement+Hauteur,data)->LMM**
-  - On trouve une équation du type : **LogIC=-0,106*Renouv-0,06*HAuteur+3,86**
+- on teste ensuite avec le modèle "+" :
+  ```R
+  lm(log(Condition)~Renouvellement+Hauteur,data)->LMM
+  ```
+  - On trouve une équation du type :
+    ```R
+    LogIC=-0,106*Renouv-0,06*HAuteur+3,86**
+    ```
   - d'après ce test : le renouvellement est encore le seul a avoir un impact. On peut donc refaire un modèle simple en ne prenant en compte que ce dernier.
-- Modèle linéaire : **lm(log(Condition)~Renouvellement,data)->LM**
-- summary(LM) #Lire le "Multiple R squared'=56%, p-value ***
+- Modèle linéaire :
+  ```R
+  lm(log(Condition)~Renouvellement,data)->LM
+  ```
+
+- Summary:
+  ```R
+  summary(LM) #Lire le "Multiple R squared'=56%, p-value ***
+  ```
   - On remarque que les coefficients ne sont pas les mêmes pour la régression multiple
   - Le temps de renouvellement est calculé sur les résidus de la hauteur et inversement (régression partielle)
 
