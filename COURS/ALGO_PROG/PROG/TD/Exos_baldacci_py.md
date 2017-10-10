@@ -337,7 +337,6 @@ def charn2(): #demande une chaine de caractère, la convertie en list et donne l
 ```python
 def lenstring():
 	string=input("Tapez votre chaine de caractères:\n")
-	string=list(string)
 	print(len(string)),"caractères dans votre phrase !")
 ```
 Voilà pour ces exos ! :)
@@ -416,5 +415,32 @@ def poids():
 - Transformer une chaîne ADN en ARN complémentaire :
 
 ```python
-var = encoursdeproduction
+def DNAintoRNA():
+	chaine = raw_input("Entrez votre chaîne de nucléotides:\n")
+	chaine = chaine.upper()
+	DNA=list(chaine)
+	RNA=""
+	for lettre in DNA:
+		if lettre == "A":
+			RNA+="U"
+		elif lettre == "T":
+			RNA+="A"
+		elif lettre == "G":
+			RNA+="C"
+		elif lettre == "C":
+			RNA+="G"
+		else:
+			RNA+="?"
+	print RNA
+```
+
+- Trouver le nombre de fois qu'apparaît un motif dans une chaîne :
+
+```python
+def countMotif():
+	chaine = raw_input("Entrez votre chaîne de nucléotides:\n")
+	motif = raw_input("Quel motif voulez-vous chercher ?\n")
+	chaine = chaine.upper()
+	motif = motif.upper()
+	print "Il y a ",chaine.count(motif),"fois", motif,"dans votre séquence !"
 ```
