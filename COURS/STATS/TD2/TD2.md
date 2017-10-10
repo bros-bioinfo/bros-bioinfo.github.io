@@ -44,7 +44,10 @@
 
 ### Réalisation de la représentation graphique :
 
-- x11();plot(sent$Cd_foie, sent$Cd_muscle, pch=16,cex=1.5, xlab="Cd foie", ylab="Cd muscles")
+```R
+x11();plot(sent$Cd_foie, sent$Cd_muscle, pch=16,cex=1.5, xlab="Cd foie", ylab="Cd muscles")
+```
+
 - **abline**(lm, col="red", lwd=2) #permet de projeter la droite sur le graphique.
 
 ![](graphe2.jpeg?raw=true)
