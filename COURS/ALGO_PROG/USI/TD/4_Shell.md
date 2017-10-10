@@ -1,5 +1,5 @@
 # SHELL
-## Fonctionnement du SHELL
+## I. Fonctionnement du SHELL
 ### 1) Phase de suivie
 
 ### 2) Phase de substitutions
@@ -11,11 +11,10 @@ mot0 [mot1 mot2 mot3 ...] [redirections]
 ```
 Il y a trois phases de substitutions:
 
-#### a) Remplacement de VARIABLES
+#### a) Remplacement de VARIABLES $
 Exemples:
 ```bash
 foo=XIII
-echo foo
 echo $foo #return la valeur de foo: XIII
 ```
 Ici le shell remplace ***echo $foo*** par ***echo XIII*** avant l'execution de la commande
@@ -49,12 +48,71 @@ Les préfixes:
 ```bash
 PREFIXE="TMP_"
 M1=${PREFIXE}1
-echo $M1 #return M
+echo $M1 #return TMP_1
 ```
 
-#### b) Remplacement de COMMANDES
+#### b) Remplacement de COMMANDES $()
+```bash
+$(commande simple)
+echo $(date) : $(who | wc -l) utilisateurs sur $(hostname)
+# > mardi 10 octobre 2017, 14:49:19 (UTC+0200) : 3 utilisateurs sur marquet
+
+set $(date); echo $5 #vectorise la date et renvoie le 5eme terme... l'heure
+```
 
 #### c) Remplacement de CHEMINS
 
+**Trois motifs**:
+  - (*) : suite éventuellement vide de charactère(s)
+  - (?) : un charactère random
+  - [alphabet]:
+    - [AEIOUY] → [AEIOUYaeiouy]
+    - [A-Z] → alphabet de A à Z
+    - [3-7] → 3 4 5 6 7
+
+```bash
+echo /bin/[a-c]? #echo tous les chemins commençant par a b ou c et ayant un seul charactère après.
+```
+
+
 ### 3) Phase d'execution
 Si commande interne celle-ci est executée, sinon recherche de la commande dans le **Path**.
+
+## II. Mecanismes de Quotation (controle plus fin des substitutions)
+
+### 1) Despecialisation:
+```bash
+echo * #echo la liste des fichiers du dossier courant
+echo \* #echo le charactère *
+```
+### 2) Simple quote \'
+
+La simple quote neutralise toutes les substitutions.
+
+```bash
+echo '$date' #renvoie $date
+```
+
+### 3) Double quote \"
+
+La double quote inhibe la substitution de chemin.
+
+```bash
+echo '/bin/[a-c]?' # return /bin/[a-c]?
+N = '/bin/[a-c]?'
+echo $N #renvoie /bin/[a-c]? puis substitution de chemin: cherche les chemins et echo toute la liste.
+
+echo '$N' #renvoie $N
+echo "$N" #renvoie /bin/[a-c]?
+```
+
+## III. Structure de contrôle
+
+**Boucle for**:
+
+```bash
+for variable in liste delement
+do
+  commandes
+done
+```
