@@ -31,8 +31,8 @@
   - Dans cet exemple on ne tient pas compte du test de Shapiro-Wilks car il y a plus de 30 données; les conditions d'application sont respectées on peut envisager un modèle linéaire.
 - Test de corrélation de Bravais-Pearson :
 - ```R
-    cor.test(sent$Cd_muscle, sent$Cd_foie, method = "pearson")
-    ```
+  cor.test(sent$Cd_muscle, sent$Cd_foie, method = "pearson")
+  ```
   - H0 : pas de corrélation entre les variables
   - p-value < 0.05 => rejet de H0, les variables sont donc **corrélées**.
 
