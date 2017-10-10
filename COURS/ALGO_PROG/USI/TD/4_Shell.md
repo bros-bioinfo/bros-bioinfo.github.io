@@ -63,7 +63,7 @@ set $(date); echo $5 #vectorise la date et renvoie le 5eme terme... l'heure
 #### c) Remplacement de CHEMINS
 
 **Trois motifs**:
-  - (*) : suite éventuellement vide de charactère(s)
+  - (*) : suite éventuellement vide de charactère(s). En début de motif l'étoile, n'intercepte pas les fichiers qui commencent par un point.
   - (?) : un charactère random
   - [alphabet]:
     - [AEIOUY] → [AEIOUYaeiouy]
