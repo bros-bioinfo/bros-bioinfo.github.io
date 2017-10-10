@@ -2,8 +2,7 @@
 
 [**Lien pour les fichiers csv**](http://dept-info.labri.fr/~thebault/STAT/)
 
-**http://data.library.virginia.edu/diagnostic-plots/**
-    ***Pour mieux comprendre les graphiques.***
+**[http://data.library.virginia.edu/diagnostic-plots/](http://data.library.virginia.edu/diagnostic-plots/)** - lien pour mieux comprendre les graphiques
 
 ![](graphe1.jpeg?raw=true)
 
