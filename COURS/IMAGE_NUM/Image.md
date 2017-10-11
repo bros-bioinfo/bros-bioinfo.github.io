@@ -506,6 +506,9 @@ The simplest method of image segmentation is called the **thresholding method**.
 
 The key of this method is to select the threshold value (or values when multiple-levels are selected). Several popular methods are used in industry including the maximum entropy method, Otsu's method (maximum variance), and **k-means clustering**.
 
+### Otsu's method (ImageJ)
+Finir avec une image binaire : "background","Zone of interest". 
+
 ### Clustering methods
 
 The K-means algorithm is an iterative technique that is used to partition an image into **K clusters**. The basic algorithm is :
