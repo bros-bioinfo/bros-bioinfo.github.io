@@ -85,20 +85,20 @@ def stringx3():
 - Version sans def :
 
 ```python
-		total=0
-		print("Quelle est l\'heure de début?\n")
-		h=input()
-		h = int(h)
-		print("Quelles sont les minutes de début?\n")
-		m=input()
-		m=int(m)
-		print("Combien de temps va durer l'expérience(en min)\n")
-		duree=input()
-		duree=int(duree)
-		total=((h*60)+m+duree)
-		total2=(total//60)
-		total3= total%60
-		print("L'expérience finira à",total2,"heures",total3,"minutes")
+total=0
+print("Quelle est l\'heure de début?\n")
+h=input()
+h = int(h)
+print("Quelles sont les minutes de début?\n")
+m=input()
+m=int(m)
+print("Combien de temps va durer l'expérience(en min)\n")
+duree=input()
+duree=int(duree)
+total=((h*60)+m+duree)
+total2=(total//60)
+total3= total%60
+print("L'expérience finira à",total2,"heures",total3,"minutes")
 ```
 
 
@@ -108,42 +108,43 @@ def stringx3():
 - EDTlab v2.0 ajout des conditions empêchant l'utilisateur de faire nawak.
 
 ```python
-	def EDTlab(h,m,duree):
-		import sys
-		i=0
-		j=0
-		error="Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants..."
-		tab=range(0,100)#création d'une range  pour définir le nombre d'essai du user.
-		for j in tab:
-			if h < 0 or h > 24: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
-				h=input('Choisissez une valeur comprise entre 0 et 24!\n')
-				#type(h) modification du nombre entré de class 'str' à 'int'
-				h= int(h)
-				j +=1
-				if j > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
-					return error
-					sys.exit(0)
+def EDTlab(h,m,duree):
+	import sys
+	i=0
+	j=0
+	error="Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants..."
+	tab=range(0,100)#création d'une range  pour définir le nombre d'essai du user.
+	for j in tab:
+		if h < 0 or h > 24: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
+			h=input('Choisissez une valeur comprise entre 0 et 24!\n')
+			#type(h) modification du nombre entré de class 'str' à 'int'
+			h= int(h)
+			j +=1
+			if j > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
+				return error
+				sys.exit(0)
 
-		for i in tab:
-			if m < 0 or m > 60: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
-				m=input('Choisissez une valeur comprise entre 0 et 60!\n')
-				#type(m) modification du nombre entré de class 'str' à 'int'
-				m= int(m)
-				i+=1
-				if i > 5:
-					return error
-					sys.exit(0)
+	for i in tab:
+		if m < 0 or m > 60: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
+			m=input('Choisissez une valeur comprise entre 0 et 60!\n')
+			#type(m) modification du nombre entré de class 'str' à 'int'
+			m= int(m)
+			i+=1
+			if i > 5:
+				return error
+				sys.exit(0)
 
-		total=0
-		total=((h*60)+m+duree)
-		total2=(total//60)
-		total3= total%60
-		print("L'expérience finira à",total2,"heures",total3,"et minutes")
+	total=0
+	total=((h*60)+m+duree)
+	total2=(total//60)
+	total3= total%60
+	print("L'expérience finira à",total2,"heures",total3,"et minutes")
 ```
 
 ## Exercice 6
 
 - Avec 4 variables déterminer laquelle est la plus grande en prenant en compte les égalités
+
 ```python
 def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une valeur
 	import sys
@@ -165,52 +166,52 @@ def give4var(a,b,c,d): #si jamais les valeurs  sont égales on ne donne qu'une v
 - Ajout du changement de jour à "EDTlab"
 
 ```python
-	def EDTlab(h,m,duree):
-		import sys #permet d'importer la library sys (ici pour pouvoir quitter le prog une fois que le user a grillé toutes ses chances de mettre des valeurs valides)
-		i=0
-		j=0
-		day=0
-		total=0
-		error="Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants..."
-		tab=range(0,100)#création d'une range  pour définir le nombre d'essai du user.
-		for j in tab:
-			if h < 0 or h > 24: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
-				h=input('Choisissez une valeur comprise entre 0 et 24 pour les heures!\n')
-				#type(h) modification du nombre entré de class 'str' à 'int'
-				h= int(h)
-				j +=1
-				if j > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
-					return error
-					sys.exit(0)
+def EDTlab(h,m,duree):
+	import sys #permet d'importer la library sys (ici pour pouvoir quitter le prog une fois que le user a grillé toutes ses chances de mettre des valeurs valides)
+	i=0
+	j=0
+	day=0
+	total=0
+	error="Vous n'aviez qu'à pas essayer de mettre des nombres extravaguants..."
+	tab=range(0,100)#création d'une range  pour définir le nombre d'essai du user.
+	for j in tab:
+		if h < 0 or h > 24: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
+			h=input('Choisissez une valeur comprise entre 0 et 24 pour les heures!\n')
+			#type(h) modification du nombre entré de class 'str' à 'int'
+			h= int(h)
+			j +=1
+			if j > 5: #on definit une limite de coup pour le user puis on quitte le programme si trop de tentatives
+				return error
+				sys.exit(0)
 
-		for i in tab:
-			if m < 0 or m > 60: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
-				m=input('Choisissez une valeur comprise entre 0 et 60 pour les minutes!\n')
-				#type(m) modification du nombre entré de class 'str' à 'int'
-				m= int(m)
-				i+=1
-				if i > 5:
-					return error
-					sys.exit(0)
+	for i in tab:
+		if m < 0 or m > 60: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
+			m=input('Choisissez une valeur comprise entre 0 et 60 pour les minutes!\n')
+			#type(m) modification du nombre entré de class 'str' à 'int'
+			m= int(m)
+			i+=1
+			if i > 5:
+				return error
+				sys.exit(0)
 
-		for i in tab:
-			if duree < 0: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
-				duree=input("Choisissez une valeur supérieure à 0 pour la durée de l'expérience!\n")
-				#type(m) modification du nombre entré de class 'str' à 'int'
-				duree= int(duree)
-				i+=1
-				if i > 5:
-					return error
-					sys.exit(0)
-		total=((h*60)+m+duree)
-		h=(total//60)
-		m= total%60
-		if h < 24: #ajout du changement de jour
-			print("L'expérience finira à",h,"heures",m,"et minutes")
-		if h > 23:
-			day=h//24
-			h=h%24
-			print("L'expérience finira",day,"jour(s) après son lancement à",h,"heures et",m,"minutes.")
+	for i in tab:
+		if duree < 0: #tant que le user mets un nombre trop grand ou trop petit, on lui demande de rentrer un nouveau nombre
+			duree=input("Choisissez une valeur supérieure à 0 pour la durée de l'expérience!\n")
+			#type(m) modification du nombre entré de class 'str' à 'int'
+			duree= int(duree)
+			i+=1
+			if i > 5:
+				return error
+				sys.exit(0)
+	total=((h*60)+m+duree)
+	h=(total//60)
+	m= total%60
+	if h < 24: #ajout du changement de jour
+		print("L'expérience finira à",h,"heures",m,"et minutes")
+	if h > 23:
+		day=h//24
+		h=h%24
+		print("L'expérience finira",day,"jour(s) après son lancement à",h,"heures et",m,"minutes.")
 ```
 
 ## Exercice 8
