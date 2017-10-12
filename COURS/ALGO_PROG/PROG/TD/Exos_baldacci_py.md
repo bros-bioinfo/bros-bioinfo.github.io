@@ -429,7 +429,7 @@ def DNAintoRNA():
 			RNA+="C"
 		elif lettre == "C":
 			RNA+="G"
-		else:
+		else: # print "en position", lettre," vous avez un caractère interdit", DNA[lettre] sys.exit(1)
 			RNA+="?"
 	print RNA
 ```
@@ -443,4 +443,40 @@ def countMotif():
 	chaine = chaine.upper()
 	motif = motif.upper()
 	print "Il y a ",chaine.count(motif),"fois", motif,"dans votre séquence !"
+```
+
+- Demander combien de poids moléculaires il veut saisir:
+- Combien d'enzymes il  veut saisir:
+- Créer une liste de noms d'enzymes:
+- Pour chacun des noms demander le poids (l'intégrer dans une liste)
+- Afficher l'enzyme "enzyme" a le poids "poids":
+- Afficher le nom des enzymes qui ont un poids au-dessus de la moyenne des valeurs:
+
+```python
+def poidsmolenz():
+	import sys
+	print "Combien de poids et d'enzymes voulez-vous saisir ?"
+	print "Combien d'enzymes differentes avez-vous ?"
+	nb = input()
+
+	maxi=0
+	moypoids=0
+	listenz = []
+	listpoids = []
+
+	for enz in range(nb):
+	  listenz.append(raw_input("Entrez le nom de vos enzymes:"))
+	for poids in range(nb):
+	  listpoids.append(input("Entrez vos poids moleculaires:"))
+	for i in range(len(listpoids)):
+	    if maxi < listpoids[i]:
+	        maxi=listpoids[i]
+	for i in range(len(listenz)):
+	  print "L'enzyme :",listenz[i],"a pour poids moleculaire :",listpoids[i]
+	print "Le poids le plus eleve est de :",maxi
+	moypoids = sum(listpoids)/len(listpoids)
+	for i in range(len(listpoids)):
+	    if listpoids[i] > moypoids:
+	        print listenz[i],"a un poids moleculaire superieur a la moyenne !"
+	print "Le poids moleculaire moyen est de :",moypoids
 ```
