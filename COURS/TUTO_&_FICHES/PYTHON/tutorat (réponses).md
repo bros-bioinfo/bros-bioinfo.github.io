@@ -3,7 +3,7 @@
 ## SEANCE DU 10/09/17
 
 
-**1. l'utilisateur entre une valeur et le programme compte jusqu'à ce nombre n ...**
+**1. l'utilisateur entre une valeur et le programme compte jusqu'à ce nombre (nb) ...**
 
 
 ```python
@@ -25,7 +25,7 @@ while i < nb:
         print i,'est impair'
 ```
 
-**3.  generer un nombre aléatoire entre 1 et 10; l'utilisateur entre un nombre, si c'est plus afficher "c'est plus", et si c'est moins afficher "c'est moins" **
+**3.  generer un nombre aléatoire entre 1 et 10; l'utilisateur entre un nombre, si c'est plus afficher "c'est plus", et si c'est moins afficher "c'est moins"**
 
 ```python
 import random #appeller la fonction
@@ -47,7 +47,7 @@ while x != True:
 ```
 
 
-**4. : Générer une liste et afficher la deuxième valeur**
+**4. : Générer une liste et afficher la deuxième valeur de la liste**
 ```python
 liste =[] # il faut la declarer avant de la remplire
 
@@ -60,12 +60,12 @@ print liste[2]
 **5. compter de 1 a 10 et stocker tous les nombres dans une liste**
 
 ```python
-lol =[]
+liste =[]
 nb=input("compter jusqu'a combien?")
 i=0
 
 while i < nb:
-    lol.append(i)
+    liste.append(i)
     i=i+1
 
 print (lol)
@@ -76,6 +76,6 @@ i=0
 #imprimer élement par element
 
 while i < len(lol):
-    print lol[i]
+    print liste[i]
     i=i+1
 ```
