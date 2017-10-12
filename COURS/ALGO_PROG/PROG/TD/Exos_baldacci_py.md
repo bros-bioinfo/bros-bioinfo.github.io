@@ -480,3 +480,4 @@ def poidsMolEnz():
 	        print listenz[i],"a un poids moleculaire superieur a la moyenne !"
 	print "Le poids moleculaire moyen est de :",moypoids
 ```
+![](https://media0.giphy.com/media/14rd1m73LY0BCo/200.gif#105-grid3)
