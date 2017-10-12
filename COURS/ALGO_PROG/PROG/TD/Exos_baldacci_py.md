@@ -453,8 +453,8 @@ def countMotif():
 - Afficher le nom des enzymes qui ont un poids au-dessus de la moyenne des valeurs:
 
 ```python
-def poidsmolenz():
-	import sys
+def poidsMolEnz():
+
 	print "Combien de poids et d'enzymes voulez-vous saisir ?"
 	print "Combien d'enzymes differentes avez-vous ?"
 	nb = input()
