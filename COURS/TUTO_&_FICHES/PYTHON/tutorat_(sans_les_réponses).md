@@ -9,6 +9,8 @@
 
 **3. Ecrire un scrpte pour generer un nombre aléatoire entre 1 et 10; l'utilisateur entre un nombre, si c'est plus afficher "c'est plus", et si c'est moins afficher "c'est moins"**
 
+Pour générer un nombre aléatoire :
+
 ```python
 import random #appeller la fonction rand
 
