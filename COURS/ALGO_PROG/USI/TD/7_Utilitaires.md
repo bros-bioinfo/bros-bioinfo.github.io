@@ -45,6 +45,8 @@
 ```bash
 cp atrier1 atrier2 ; cat -n atrier2 > atrier3 ; sort -r -g atrier3 > atrier4 ; cut -f 2- atrier4 > atrierfinal
 rm atrier2 atrier3 atrier4
+cat atrier1
+cat atrierfinal
 ```
 > Je n'ai pas réussi à faire fonctionner avec les **pipes** en utilisant un seul fichier si quelqu'un a la soluce...vous pouvez l'intégrer au-dessus de ce commentaire ! Thanks
 
@@ -53,7 +55,7 @@ rm atrier2 atrier3 atrier4
 
 ### Exercice 2.7 :
 
-- Trier le fichier date en fonction des années puis des mois et enfin des jours
+- Trier le fichier **dates** en fonction des années puis des mois et enfin des jours
 
 ```bash
 sort -g dates > dates1
@@ -64,19 +66,41 @@ sort -g dates > dates1
 > Soit l'exercice était simplissime, soit c'est un coup de bol que la première colonne s'accorde bien avec la colonne des années...encore une fois petit mystère pour moi !  
 Je pense quand même qu'il faut faire autre chose...si jamais vous avez l'idée ; ajoutez la :)
 
-# Exercice 3.1 :
+### Exercice 3.1 :
 
 - Trouvez parmi vos **fichiers** dont le nom commence par **point** ceux qui contiennent le mot
 **PATH**
 
 
 ```bash
-cd ; grep --exclude-dir='.*' -n PATH .*
+cd ; grep --exclude-dir='.*' PATH .*
 ```
 
 ![](../imgs/grep.png)
-> **cd** pour revenir à la **racine** ; **exlude-dir='/*'** pour exclure tous les **dossiers** vu que l'on cherche uniquement des **fichiers**.
+> **cd** pour revenir à la **racine** ; **exclude-dir='/*'** pour exclure tous les **dossiers** vu que l'on cherche uniquement des **fichiers**.
 
-# Exercice 3.2 :
+### Exercice 3.2 :
 - Je vais utiliser le fichier avec les définitions de l'exo de Tata pour cet exercice "listes.py"
-- [EXO TATA](../imgs/listes.py)
+- [Download listes.py](../imgs/listes.py) et l'enregistrer dans le dossier où vous travaillez.
+
+- Extraction des lignes de commentaires :
+  - `grep -e# listes.py` on récupère toutes les lignes où apparaissent le symbole **#**
+  - `grep -w ^def listes.py` on récupère les **lignes des définitions** pour avoir le **nom des fonctions**
+
+![](../imgs/grep2.png)
+
+- Transformez cette commande en script où le nom du fichier traité sera
+passé en paramètre
+
+  - grep.sh - **chmod u=+rwx grep.sh** :
+
+  ```bash
+  #!/bin/bash
+  #script-shell name = grep.sh
+  #entrez votre nom de fichier
+  grep -w ^def $1
+  ```
+
+  - Faire `grep.sh listes.py` dans le terminal
+
+![](../imgs/grepsh.png)
