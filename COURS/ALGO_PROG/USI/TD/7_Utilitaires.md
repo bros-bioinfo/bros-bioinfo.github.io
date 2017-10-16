@@ -104,3 +104,16 @@ passé en paramètre
   - Faire `grep.sh listes.py` dans le terminal
 
 ![](../imgs/grepsh.png)
+
+### Exercice 3.3 :
+
+- Trouver dans toutes les pages de manuel de commandes **commençant par "a"** les lignes contenant le mot **each**, **because** ou **new** ; même si ces derniers commencent par une majuscule.  
+***Conseil*** : Utiliser **zgrep** pour les fichiers compressés
+
+- `find -name 'a*' -print0 | xargs -0 zgrep -i "each" | find -name 'a*' -print0 | xargs -0 zgrep -i "because" |find -name 'a*' -print0 | xargs -0 zgrep -i "new"`
+
+> SI jamais vous n'êtes pas dans le **répertoire /usr/share/man/man1** quand vous lancez la commande vous devez le préciser dans le **find**  
+Donc je trouve que c'était compliqué...si jamais quelqu'un a plus simple :help:  
+le **-i** pour chercher en **majuscule et minuscule** ; **zgrep** pour les **fichiers compressés (.gz)** ; et répétition pour chaque **pipe** parce que ça marchait pas autrement pour moi...
+
+![](../imgs/zgrep.png)
