@@ -134,3 +134,29 @@ le **-i** pour chercher en **majuscule et minuscule** ; **zgrep** pour les **fic
   - `grep -E " "+:+" "+.....+" " exemples_grep.txt`
 
     ![](../imgs/grep3.4.3.png)
+
+- Ecrire une commande qui affiche **toutes les lignes** qui contiennent **un espace**, suivi d’**une virgule**,suivie de **0,1 ou plusieurs caractères quelconques**, suivi d’**un point**.
+
+  > J'ai du **modifier** le fichier **exemple_grep.txt** pour **ajouter un espace avant une virgule** parce qu'il n'y en avait pas...
+
+  - `grep -E  " "+","+.\*+"." exemples_grep.txt`
+
+    ![](../imgs/grep3.4.4.png)
+
+- Ecrire une commande qui affiche **toutes les lignes** qui **commencent par un caractère différent** de
+l’**espace** et de **E**.
+
+  - `grep -v '^[" "E]' exemples_grep.txt`
+
+    ![](../imgs/grep3.4.5.png)
+
+- Ecrire une commande qui affiche **toutes les lignes** qui contiennent des **mots entiers** commençant par **li** et se terminant par un **s**.
+
+  - `grep -w \li.\*s$ exemples_grep.txt`
+  > Je trouve la question ambigue ... On sait pas trop si on doit afficher les lignes avec uniquement le mot **lignes** ou celles avec des mots commençant par **li** et finissant par un **s**...
+
+  ![](../imgs/grep3.4.6.png)
+
+> Je m'arrête là pour le moment parce que...
+
+![](/home/yrodill/bros-bioinfo.github.io/camegonfle.gif)
