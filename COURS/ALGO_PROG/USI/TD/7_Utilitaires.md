@@ -110,10 +110,27 @@ passé en paramètre
 - Trouver dans toutes les pages de manuel de commandes **commençant par "a"** les lignes contenant le mot **each**, **because** ou **new** ; même si ces derniers commencent par une majuscule.  
 ***Conseil*** : Utiliser **zgrep** pour les fichiers compressés
 
-- `find -name 'a*' -print0 | xargs -0 zgrep -i "each" | find -name 'a*' -print0 | xargs -0 zgrep -i "because" |find -name 'a*' -print0 | xargs -0 zgrep -i "new"`
+  - `find -name 'a*' -print0 | xargs -0 zgrep -i "each" | find -name 'a*' -print0 | xargs -0 zgrep -i "because" |find -name 'a*' -print0 | xargs -0 zgrep -i "new"`
 
-> SI jamais vous n'êtes pas dans le **répertoire /usr/share/man/man1** quand vous lancez la commande vous devez le préciser dans le **find**  
-Donc je trouve que c'était compliqué...si jamais quelqu'un a plus simple :help:  
+> SI jamais vous n'êtes pas dans le **répertoire /usr/share/man/man1** quand vous lancez la commande vous devez le préciser dans le **find**.  
+Donc je trouve que c'était compliqué...si jamais quelqu'un a plus simple -> ![](../imgs/help.png)![](../imgs/help.png)![](../imgs/help.png)  
 le **-i** pour chercher en **majuscule et minuscule** ; **zgrep** pour les **fichiers compressés (.gz)** ; et répétition pour chaque **pipe** parce que ça marchait pas autrement pour moi...
 
 ![](../imgs/zgrep.png)
+
+### Exercice 3.4 :
+
+- Ecrire une commande qui affiche **toutes les lignes** du fichier **exemples_grep.txt** qui contiennent le mot **ligne** suivi de **deux chiffres**
+  - `grep -E ligne.\[0-9]\[0-9] exemples_grep.txt`
+
+    ![](../imgs/grep3.4.1.png)
+
+- Ecrire une commande qui affiche **toutes les lignes** qui contiennent le symbole **":"** en fin de ligne.
+  - `grep -E :$ exemples_grep.txt`
+
+    ![](../imgs/grep3.4.2.png)
+
+- Ecrire une commande qui affiche **toutes les lignes** qui contiennent **un espace**, suivi du symbole **":"**, suivis d’**un espace**, suivi de **cinq caractères quelconques**, suivi à nouveau d’**un espace**.
+  - `grep -E " "+:+" "+.....+" " exemples_grep.txt`
+
+    ![](../imgs/grep3.4.3.png)
