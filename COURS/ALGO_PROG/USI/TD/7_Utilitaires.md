@@ -1,5 +1,7 @@
 # **TD7 Utilisation des systèmes informatiques : "Utilitaires(1)"**
 
+- Biblio pour grep : [ici](http://www.funix.org/fr/unix/grep-find.htm) et [ici](http://www.tuteurs.ens.fr/unix/exercices/solutions/grep-sol.html)
+
 ## 1) *Présentation du script-shell :*
 
 - *__Petit rappel__* : utiliser la commande **chmod u=+rwx nomdufichier** pour administrer les droits du fichier
@@ -159,4 +161,4 @@ l’**espace** et de **E**.
 
 > Je m'arrête là pour le moment parce que...
 
-![](/home/yrodill/bros-bioinfo.github.io/camegonfle.gif)
+![](../imgs/camegonfle.gif)
