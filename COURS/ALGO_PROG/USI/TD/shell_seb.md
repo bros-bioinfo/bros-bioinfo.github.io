@@ -2,17 +2,17 @@
 
 
 
-##1. Phase de saisie
+## 1. Phase de saisie
 
 **CMD UNIX SIMPLE**
 
 cmd [arg1 arg2 arg3 ....] [Redirection]
 
-##2. Phase de substitution
+## 2. Phase de substitution
 
-###a) Remplacement de variable
+### a) Remplacement de variable
 
-####$Variable
+#### $Variable
 
 ```bash
 FOO = XIII
@@ -33,7 +33,7 @@ echo $RAC/pwd
 ```
 Cela affiche **/bin/pwd**, pour ensuite exécuter la commande répertoriée dans le répertoire bin.
 
-####Vecteur de variable
+#### Vecteur de variable
 
 **set** mot1 mot2 mot3 ...
 
@@ -83,7 +83,7 @@ sgoncal1@goya:~$ echo $!
 + **!** contient le pid du dernier processus détaché, c'est à dire hors shell
 + **#** contient le nombre d'arguments.
 
-####Prefixe TMP
+#### Prefixe TMP
 
 
 ```bash
@@ -104,9 +104,9 @@ TMP2
 ```
 > NOTE : les {} premettent de dire que l'on demande le PREFIXE.
 
-###b) Remplacement de commandes
+### b) Remplacement de commandes
 
-####$(commande simple)
+#### $(commande simple)
 
 ```bash
 sgoncal1@goya:~$ echo $(date) : $(who | wc -l) utilisateur sur $(hostname)
