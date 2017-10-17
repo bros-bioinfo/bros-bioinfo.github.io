@@ -132,7 +132,7 @@ sgoncal1@goya:~$ heure
 
 **ATTENTION** : on utilise des "simple quote" cad **'...' **
 
-###c) Remplacement de chemin
+### c) Remplacement de chemin
 
 #### Trois motifs
 
