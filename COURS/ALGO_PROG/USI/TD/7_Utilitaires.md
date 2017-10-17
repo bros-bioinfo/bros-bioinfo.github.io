@@ -60,13 +60,14 @@ cat atrierfinal
 - Trier le fichier **dates** en fonction des années puis des mois et enfin des jours
 
 ```bash
-sort -g dates > dates1
+sort -k 3 -k 2 -k 1 dates > dates1
 ```
 
 ![](../imgs/sort.png)
 
 > Soit l'exercice était simplissime, soit c'est un coup de bol que la première colonne s'accorde bien avec la colonne des années...encore une fois petit mystère pour moi !  
-Je pense quand même qu'il faut faire autre chose...si jamais vous avez l'idée ; ajoutez la :)
+Je pense quand même qu'il faut faire autre chose...si jamais vous avez l'idée ; ajoutez la :)  
+J'ai corrigé mon erreur du sort -g grâce à Seb' :)
 
 ### Exercice 3.1 :
 
