@@ -152,7 +152,7 @@ sgoncal1@goya:~$ echo /bin/[a-c]?
 
 Ici, il n'y a aucune substitution de variable ou de commande. Par contre il y aura une substitution de chemin :  [a-c]?
 
-##Mecanisme de quotation (pour contrôler plus finement les substitutions)
+## Mecanisme de quotation (pour contrôler plus finement les substitutions)
 
 **Despécialisation** : \
 
@@ -192,7 +192,7 @@ sgoncal1@goya:~$ echo $N
 > NOTE : toujours visualiser dans l'ordre les différentes substitutions avant la dernière phase  : l'execution.
 
 
-##3. Phase d'execution
+## 3. Phase d'execution
 
 + Si cmd interne alors elle sera exécutée.
 + Sinon il y aura recherche de la cmd dans PATH
