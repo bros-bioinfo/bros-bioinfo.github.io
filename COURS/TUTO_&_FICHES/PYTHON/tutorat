@@ -135,8 +135,9 @@ def fibo(nbr):
     print(list[-1])
 
 #MAIN
-nbr=input("Choisissez votre nombre\n")
-fibo(nbr)
+nbr=1
 
-while nbr != quit
+while nbr != 0:
+    nbr=int(input("CHoisissez votre nombre\n"))
+    fibo(nbr)
 ```
