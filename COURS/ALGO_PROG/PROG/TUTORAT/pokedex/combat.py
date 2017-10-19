@@ -12,28 +12,6 @@ from pick import pick
 from pick import Picker
 import time
 
-'''def addIA(listeIA):
-
-    IAname=[]
-    IAname.append(raw_input("Comment s'appelle l'IA que vous voulez ajouter ?\n "))
-    IAtype=raw_input("Quel est le type de votre IA ? ")
-    IAname.append(IAtype)
-    IALifePoints=input("Combien votre IA a de PV ? ")
-    IAname.append(IALifePoints)
-    IALevel=input("Quel est le level de votre IA ? ")
-    IAname.append(IALevel)
-    ATK1=raw_input("Quel est le nom de sa premiere attaque ? ")
-    IAname.append(ATK1)
-    ATK2=raw_input("Quel est le nom de sa deuxieme attaque ? ")
-    IAname.append(ATK2)
-    ATK3=raw_input("Quel est le nom de sa troiseme attaque ? ")
-    IAname.append(ATK3)
-    ATK4=raw_input("Quel est le nom de sa quatrieme attaque ? ")
-    IAname.append(ATK4)
-    listeIA.append(IAname)
-    print listeIA
-    save1(listeIA)'''
-
 def addIA(listeIA):
     os.system('clear')
     print """
@@ -46,15 +24,21 @@ def addIA(listeIA):
 
     """
     name=raw_input("  Quel est le nom de votre PNJ ? ")
-    poketype=raw_input("  Quel est le type de votre PNJ ? ")
+    name=name.upper()
+    IAtype=raw_input("  Quel est le type de votre PNJ ? ")
+    IAtype=IAtype.upper()
     PV=input("  Combien votre PNJ a de PV ? ")
     Level=input("  Quel est le level de votre PNJ ? ")
     Attaque1=raw_input("  Entrez le nom de la premiere attaque:  ")
+    Attaque1=Attaque1.upper()
     Attaque2=raw_input("  Entrez le nom de la premiere attaque:  ")
+    Attaque2=Attaque2.upper()
     Attaque3=raw_input("  Entrez le nom de la premiere attaque:  ")
+    Attaque3=Attaque3.upper()
     Attaque4=raw_input("  Entrez le nom de la premiere attaque:  ")
+    Attaque4=Attaque4.upper()
 
-    IA=[name,poketype,PV,Level,Attaque1,Attaque2,Attaque3,Attaque4]
+    IA=[name,IAtype,PV,Level,Attaque1,Attaque2,Attaque3,Attaque4]
     listeIA.append(IA)
     save1(listeIA)
 

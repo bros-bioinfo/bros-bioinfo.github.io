@@ -33,13 +33,19 @@ def addpokemon(pokedex):
 
     """
     name=raw_input("  Quel est le nom de votre Biokemon ? ")
+    name=name.upper()
     poketype=raw_input("  Quel est le type de votre Biokemon ? ")
+    poketype=poketype.upper()
     PV=input("  Combien votre Biokemon a de PV ? ")
     Level=input("  Quel est le level de votre Biokemon ? ")
     Attaque1=input("  Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque1=Attaque1.upper()
     Attaque2=input("  Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque2=Attaque2.upper()
     Attaque3=input("  Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque3=Attaque3.upper()
     Attaque4=input("  Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque4=Attaque4.upper()
 
     pokemon=[name,poketype,PV,Level,Attaque1,Attaque2,Attaque3,Attaque4]
     pokedex.append(pokemon)
