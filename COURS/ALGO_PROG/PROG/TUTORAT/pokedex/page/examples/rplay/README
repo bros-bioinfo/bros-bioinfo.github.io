@@ -1,0 +1,6 @@
+This example was written as a music server for my Raspberry Pi which
+drives my audio system from CD images stored on a Linux box. I use
+this program daily. In this example I have a number of different
+bindings and utilize a number of text widget tricks that I discovered
+by experimentation as well as using multiple threads to run the mp3
+player while keeping the GUI fairly responsive.

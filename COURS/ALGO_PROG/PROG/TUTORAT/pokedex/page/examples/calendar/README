@@ -1,0 +1,6 @@
+
+This is the code I use as part of a CairoDock applet.
+
+If execution does not look like the image in the documentation, it is
+probably do to the fact that the system you are running on does not
+have the same set of fonts. So play with the font settings.

@@ -1,0 +1,100 @@
+# $Id: text.wgt,v 1.8 2002/03/09 21:55:30 cgavin Exp $
+
+##############################################################################
+#
+# Visual TCL - A cross-platform application development environment
+#
+# Copyright (C) 2001 Damon Courtney
+#
+# Description file for Tk Widget
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+##############################################################################
+#
+
+Class       Text
+Lib     core
+
+Icon        icon_text.gif
+InsertCmd   vTcl::widgets::core::text::insertCmd
+TreeLabel   Text Widget
+DefaultOptions  -background white -height 4 -width 10 -wrap word \
+              -font \$vTcl(actual_gui_font_text_name) -foreground black \
+              -highlightbackground \$vTcl(actual_gui_bg)
+
+#DefaultValues    -highlightbackground -highlightcolor \
+                -selectbackground -selectforeground
+if {$vTcl(pr,balloon)} { ;# Rozen
+    ClassOption     -_tooltip
+}
+SpecialOpt -wrap        "wrap"    choice  "none char word"
+#ClassOption -loadcommand                    ;# Rozen
+#OptionConfigCmd -loadcommand get vTcl::widgets::core::texet::get_load_cmd
+#OptionConfigCmd -loadcommand update vTcl::widgets::core::text::update_load_cmd
+#OptionConfigCmd -loadcommand config vTcl::widgets::core::text::config_load_cmd
+Function "Fill Container"  vTcl::widgets::core::text::fill_container
+
+namespace eval vTcl::widgets::core::text {
+
+    proc fill_container {} {
+		 # Rozen function to expand widget to fill container.
+		 set w $::vTcl(w,widget)
+		 # Code block below special case for when text box is primary
+		 # component of a Custom widget
+	     set parent [winfo parent $w]
+		 set parent_class [winfo class $parent]
+		 if {$parent_class == "Custom"} {
+		 	set w $parent
+         }
+
+	     vTcl:fill_container $w
+    }
+
+    proc insertCmd {target} {
+        global vTcl
+        #$target configure -font $vTcl(actual_gui_font_text_name)
+        $target insert end Text
+    }
+    # procs below added by Rozen to handle the loadcommand option.
+    proc get_load_cmd {target} {
+        # Called by vTcl:widget:register_widget_custom in widget.tcl
+        # At this point I don't know what it should return.
+
+        return "-loadcmd"
+    }
+    proc update_load_cmd {target var} {
+        global vTcl
+        # Called to load the current value into the prop manager (propmgr.tcl)
+        if {[info exist vTcl($target,-loadcommand)]} {
+            set $var $vTcl($target,-loadcommand)
+        } else {
+            return
+        }
+    }
+    proc config_load_cmd {target var} {
+        # Called when the value is changed by the prop manager.
+        global vTcl
+        # I should just store the var in the appropiate vTcl variable.
+        set vTcl($target,-loadcommand) $var
+        set ::widgets::${target}::ClassOption(-loadcommand) $var
+        set ::widgets::${target}::options(-loadcommand) $var
+        set ::widgets::${target}::save(-loadcommand) [expr {$var != ""}]
+
+    }
+}
+
+
+

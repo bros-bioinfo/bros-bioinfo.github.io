@@ -1,0 +1,67 @@
+Introduction
+=========================
+
+
+PAGE is a tool which helps to create Tkinter GUI interfaces for use within Python programs.  It is a rework or extension of the program Visual Tcl (Vtcl) so that Vtcl now produces Python code. Faced with the problem of building an application driven by a single GUI window, PAGE will facilitate designing the GUI and building a working skeletal Python program emphasizing the ttk widgets. As other windows are required, they are designed with PAGE and incorporated into the application by importing the generated python module.
+
+
+It is aimed at a user who wants to rapidly construct a GUI and is willing to compromise generality for ease and speed of construction. It is a helper tool. It does not build an entire application but rather is aimed at building a single GUI window.  It is not a Python Interactive Design Environment(IDE). Stated in other words, PAGE generates a Python class which implements a single GUI window and also supplies all of the boiler-plate code for execution or instantiating the GUI object. If, like me, you have difficulty remembering all the little tricks of getting a GUI to show up on the screen, PAGE can show you code that will work.
+
+The 4.9 release fixes bugs related to state values of a few of widgets. It also improves the Widget Tree by changing the lables to display the class and the alias of the widget.
+
+The 4.8.9 release fixes a bug occuring for Windows users who install PAGE in custom locations where the path name includes blanks. Small changes to the documentation about event bindings. A new example has been added. A change has been made to the menu creation to avoid some confusing error messages which can occur with menu bars.
+
+The 4.8.8 fixes a bug that occurs when no .pagerc file exists.
+
+The 4.8.7 release fixes a Custom widget bug, includes modifications to font handling, context menus, Windows installation, and has revised documentation.
+
+The 4.8.6 release allows the Toplevel widget to be deleted by closing the window.
+
+The 4.8.5 release fixes font bugs related to About and the Error windows.
+
+The 4.8.4 release fixes bug which interferes with the saving of the
+support module in certain cases when PAGE should update the support module.
+
+The 4.8.3 release fixes bug which prevents opening existing project files.
+
+The 4.8.2 release fixes bug which prevents PAGE opening when a .pagerc
+file is missing.
+
+The 4.8.1 release fixes the bug which prevents PAGE from opening in Windows. 
+
+The 4.8 release includes support for Custom widgets which are widgets for which the Python implementation is left to the user. The widgets handles have been enlarged and colored to facilitate selection. A function which expands a widget to fill its container has been added to some widgets. I have fixed some bug within the font handling code and that may require that fonts in existing PAGE projects be re-specified.
+
+
+The 4.7 release includes support for binding events to top level windows and reorganizes the generated code for greater clarity and provides variable parameter lists for the init function in the support module using the Python convention of *vargs, **kwargs. Important fixes for Cut, Copy, and Paste and for the TCombobox widget.
+
+The 4.6 release includes new function. a) Shows generated code in separate console windows. b) Allows loading of consol windows without geberating code. c) Allows the opening of users favorite IDE with saved versions of the generated code.
+
+The 4.5 release supports the placement of the GUI at the default location as determined by the window manager.
+
+The 4.4 release supports popup or context menus. Also, support for ttk menubuttons has been removed pending more debugging. Finally, support for function definition has been removed.
+
+The 4.2 release contains changes which facilitate rework.  This involves important changes that split the generated code between two Python files; one to contain the GUI code and a support file containing the custom code necessary for the application and the necessary linkages between them.
+
+The 4.0 release contains sufficient advances including
+
+* Significant improvements in the specification and clarity of Preferences.
+
+* Significant work with color and associated connections with Ttk styles.  Emphesis on readablity of generated style code.
+
+* Better support for OS X. 
+
+* Better support for the Scale and TScale widgets.
+
+* Better support for Toplevel widgets. You can now change attributes; background and cursor, for example.
+
+* Corrected problems with the TMenubutton.
+
+* Replaced a very old and Visual Tcl modified version of BWidgets.
+
+* Shifted emphesis to Python 2.7 from 2.6.
+
+* Added the Ttk Sizegrip widget.
+
+* Corrected numerous bugs.
+
+

@@ -1,0 +1,6 @@
+
+This is one GUI which I am using in the construction of a Photo
+Library program. It shows the use of a custom widget, a scrolled
+canvas which I found on the web. It also shows the use of popup
+windows bound to individual buttons within the custom widges and
+Control-q bound to the toplevel widget.

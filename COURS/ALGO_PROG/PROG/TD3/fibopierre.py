@@ -1,22 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-a+b=c
-b+c=
-0+1=1
-1+1=2
-1+2=3
-2+3=5
-3+5=8
-"""
-
-
 a= 1
 b=1
 c=1
 
-print "Donnez la limite:"
+'''
+print "Donnez la limite à Fibonacci:"
 max = input()
 print "\n"
 
@@ -26,3 +16,11 @@ while (c < max):
     a = b
     b = c
     print c
+
+'''
+
+U = []
+U[0]=0
+U[1]=1
+
+print U[0]

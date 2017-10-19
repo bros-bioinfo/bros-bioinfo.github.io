@@ -1,0 +1,5 @@
+
+This is an example of a project which contains two simple windows w1
+and w2.  It illustrates how the support module for window 1 creates
+window 2 and passing it a parameter which is used to set a label. A
+proress bar counts down as window 2 closes. Start with execution of W1.

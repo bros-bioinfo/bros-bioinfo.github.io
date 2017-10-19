@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Menus &mdash; PAGE 4.9 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '4.9',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PAGE 4.9 documentation" href="index.html" />
+    <link rel="next" title="Rework" href="rework.html" />
+    <link rel="prev" title="Using PAGE" href="use.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="rework.html" title="Rework"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="use.html" title="Using PAGE"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PAGE 4.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="menus">
+<h1>Menus<a class="headerlink" href="#menus" title="Permalink to this headline">¶</a></h1>
+<p>PAGE supports toplevel menubars and context menus often called popup
+menus.
+PAGE does not support menubuttons.</p>
+<p>A popup menu is essentially a callback function bound to a selected
+widget.  Of course, that binding is specified using the Bindings
+Window.</p>
+<p>There is a Menu Editor which facilitates the creation and modification
+of all the menus for PAGE.</p>
+<p>Creation of Menu Bars can be confusing because PAGE bridges Tcl and
+Python.  Let me try to explain!  When you create a toplevel window and
+populate it, you are actually building an interactive tcl program that
+will later be translated into Python modules.  If you populated the
+toplevel widget with a button PAGE binds Button 1 in such a way that
+when you click on it, all kinds of magic occurs - the Attribute Editor
+opens for business, and menus may popup allowing you to cut and copy,
+specify bindings, etc. - you don&#8217;t actually invoke any callback you
+associated with the button.</p>
+<p>With the menu bar, things are different, in that the menu does
+function in the tcl world.  That is, if you specified a cascade sub
+menu, say File, in the menu bar, and then you click on File in the
+menu bar the cascade menu opens so you can see it.  I think that is
+good because it allows you to see the structure of the menu bar as you
+create it.  However, if you put in a command entry like Quit and tie
+it to the function &#8220;quit&#8221;, which you intend to implement in the Python
+world, and then in PAGE click on Quit in a menu, Tcl/Tk will attempt
+to execute &#8220;quit&#8221;.  However, there is no tcl &#8220;quit&#8221; function defined
+in PAGE; therefore, you would get a Error window stating &#8220;invalid
+command name &#8220;quit&#8221;.  To avoid this confusing Error message, I have
+change PAGE in version 4.8.9 to prepend a &#8220;#&#8221; to the actual command
+entered in the Menu Editor though it is not shown in the Menu Editor
+window, so that selecting a command in the menu bar a comment is
+invoked, i.e, nothing happens; it&#8217;s a comment. When the Python code is
+created, the &#8220;#&#8221; is. of course, removed.  These modifications are in
+effect for menu commands newly specified or modified. Menus commands
+specified with earlier version can still give rise to the error. If
+you see such an error message, you may confidently select OK and
+continue working with PAGE or you can change the offending command
+entry - just one character will do as I did with the examples - and
+then continue.</p>
+<p>The confusion does not occur with context (popup) menus because they
+are callback functions and, therefore, never visible in PAGE.</p>
+<div class="section" id="menu-creation">
+<h2>Menu Creation<a class="headerlink" href="#menu-creation" title="Permalink to this headline">¶</a></h2>
+<p>The menu capability that I use most is the menubar at the top of a top
+level window.
+To create such a menu bar, one selects the Toplevel widget and then invokes
+the Menu Editor in one of several ways</p>
+<ol class="arabic simple">
+<li>select &lt;click-to-edit&gt; menu field in the Attribute Editor,</li>
+<li>right click in the Toplevel widget and select Widget-&gt;Edit Menu,</li>
+<li>right click on the Toplevel widget
+in the Widget Tree and select Widget-&gt;Edit Menu.</li>
+</ol>
+<p>As you edit the menu you will see the menu bar changes appear in the
+Toplevel Widget; you will not see any of the cascade menus appear.</p>
+<p>To create a popup menu one selects the Popupmenu widget in the Widget
+Toolbar. Then right click on the Popupmenu widget and select
+Widget-&gt;Edit Menu. You can also select the widget and the
+&lt;click-to-edit&gt; menu field in the Attribute Editor.  You do not place
+it in the toplevel window because that would have no meaning.
+However, there are menu attributes such as colors and fonts that can
+be modified in the Attribute Editor.  As you edit the popup menu you
+will not see anything changes in PAGE windows.  You can have more than
+one popup window and a popup window can be associated with more than
+one widget. The popup menus are called Popupmenu1, Popupmenu2, etc.;
+in turn, they are implemented in corresponding class functions called
+popup1, popup2, etc.</p>
+<p>Note that while the Widget Tree shows menu bars as child widgets of a
+toplevel widget, context widgets are shown as child widgets of the
+root widget.  The difference is because the context menus are
+associated with child widgets only by binding events, usually mouse
+buttons, to the widgets.</p>
+</div>
+<div class="section" id="menu-editor">
+<h2>Menu Editor<a class="headerlink" href="#menu-editor" title="Permalink to this headline">¶</a></h2>
+<p>The Menu Editor creates menus. It is invoked as above.</p>
+<p>Some of the items in a menu may be simple commands like &#8220;Quit&#8221;
+which invokes your quit function. Others are cascade menus like File
+which are sub-menu of items like &#8220;New&#8221;, &#8220;Open&#8221;, &#8220;Save&#8221;, etc. To
+specify an action like the &#8220;Quit&#8221; example,</p>
+<ul class="simple">
+<li>Select the &lt;Menu&gt; item at the top of the left field.</li>
+<li>Insert-&gt;Command.</li>
+<li>Select the entry &#8220;New Command&#8221;.</li>
+<li>Go to the label entry on the right hand side of the editor and
+change the label to Quit and hit the enter key.</li>
+<li>Go to the command entry and enter the name of your quit command and
+hit the return key.</li>
+<li>You can change any of the options shown in the right window of the
+Menu Editor, like background color, font, etc.</li>
+<li>Images are added to the menu item by selecting the ellipsis to the
+right of the image option and using the file open dialog to select
+the image file.</li>
+<li>Use the arrow buttons or Move menu to move the selection up or down
+as desired.</li>
+</ul>
+<p>To put in a cascade menu like File,</p>
+<ul class="simple">
+<li>Select the &lt;Menu&gt; item at the top of the left field.</li>
+<li>Insert-&gt;New Cascade.</li>
+<li>Go to the label entry on the right and Enter File.</li>
+<li>Use the arrow buttons or Move menu to move the selection up or down
+as desired.</li>
+</ul>
+<p>To add Open to the File menu,</p>
+<ul class="simple">
+<li>Select File on the left.</li>
+<li>Insert-&gt;Command</li>
+<li>Select &#8220;New Command&#8221;</li>
+<li>Change its name as above.</li>
+<li>Specify the command as above.</li>
+<li>Move it up or down as desired.</li>
+</ul>
+<p>Of course, you can add cascaded menus to cascaded menus, etc..</p>
+<p>When you are all done hit the Check Button on the right.</p>
+<p>The menu editing window is repeated below:</p>
+<img alt="_images/menu.jpg" src="_images/menu.jpg" />
+<p>When adding entries to a cascade menu, that entry can be another
+cascade menu. See the reference to the example below.</p>
+<p>When creating a menu, one can start by adding either commands which is
+most common case or a cascade menu which leads to a second level menu.
+Some of the Tcl/Tk documentation for menus bars say that one should
+only place cascade items in a menubar.  However, I have found it
+useful and intuitive to have all kinds of items in the menu bar.</p>
+<p>I have modified the Menu Editor to allow one to change various colors
+of individual menu items as well as the fonts for individual items.
+Then it occurred to me that one should be able to set preferences for
+default values of menu fonts and foreground and background colors. I
+have modified the Preference processing to do that.  I have not
+allowed one to set preferences for active foreground or background
+values. The net setting are in the Fonts and Colors tabs; in the main
+PAGE menu go to File-&gt;Preferences...-&gt;Fonts or
+File-&gt;Preferences...-&gt;Colors.</p>
+<p>Points about adding images to menu entries:</p>
+<ul class="simple">
+<li>At this point Tkinter will only work with GIF and PGM/PPM images
+from files. If for example, you have a jpeg you will have to convert
+it one of the acceptable formats.</li>
+<li>Also, when adding images to a menu and you have text as well, it is
+necessary to set the appropriate value in the compound attribute
+telling PAGE whether the image is to be on the left, right, top,
+bottom or center.</li>
+<li>The menu.py example does not work as well under XP as it does
+under Linux Mint 12. Specifically, the image and label specified for
+the left button of the menubar are replaced with &#8220;(image)&#8221;.  I
+rashly think this is a Tk bug.</li>
+</ul>
+<p>I have included menu.tcl in the examples subdirectory to illustrate
+some of the things that I have done to test the menu bar
+facility. Load it, generate the Python and execute it. I wrote the
+example to test the change in menu fonts and colors as well as having
+several images and several level of cascaded menus.  I certainly do
+not advocate using weird images, colors and fonts all over the
+place. But you can.</p>
+<p>I am uncertain about the best way to handle fonts in menus.  PAGE now
+sets a variable that is used as the default menu font and that
+specification is forced everywhere in the menu that is not specified
+otherwise. However, once specified it is fixed. You cannot change it
+without re-specifying it everywhere it is used.  I may revisit this issue.</p>
+<p>The radio menu entry type has options &#8220;value&#8221; and
+&#8220;variable&#8221; which need attention.  When a radio button is selected, the
+variable is set to value. That is, if variable is x and value is a
+then x is set to a, when the radio button is selected. The way the
+menu editor works is that when a radio entry is added to a
+menu, the label and value are set to &#8220;NewRadio&#8221; and the variable is set
+to &#8220;selectedButton&#8221;. If you wish to use the variable setting then you
+must change the variable to a different value, one you wish to
+use. PAGE will change create the correct Tkinter Variable Class of
+type string. It will also threat the value of the value field as a
+string constant. Change that field to a value that works with your
+application. Bare in mind that with radio entries in a menu they must
+all share a singe variable.</p>
+<p>The Check menu entry type has options &#8220;onvalue&#8221;, &#8220;offvalue&#8221;, and
+&#8220;variable&#8221; much like radio entries.  The main difference is that the
+check entry expects that each entry will have its own variable; they
+are not shared.  Again, the PAGE implements the variables as StringVar
+objects and &#8220;onvalue&#8221; and &#8220;offvalue&#8221; as string constants. The variable
+stuff associated with menus can be bypassed by specifying distinct
+functions in the command options or by passing distinct parameters to
+the command function using the lambda function.</p>
+</div>
+<div class="section" id="menu-modification">
+<h2>Menu Modification<a class="headerlink" href="#menu-modification" title="Permalink to this headline">¶</a></h2>
+<p>To modify a menubar, one needs to open the Menu Editor for the menu
+bar. That can be done several ways.</p>
+<p>One way to open the Menu Editor is to select the Menu widget in the
+Widget Tree with Button-1 then select the &lt;click-to-edit&gt; field in the
+Attribute Editor window. The Attribute Editor can also be used to
+change the menu font, menu colors, etc.</p>
+<p>Another way is to select the Menu Widget in the Widget Tree with
+Button-3. Then select Widget-&gt;Edit Menu....</p>
+<p>Yet another way way is to select the Toplevel widget and then the
+&lt;click-to-edit&gt; field next to the menu label in the Attribute Editor.</p>
+<p>Also, select the Toplevel widget in the Widget Tree with Button-3,
+then Widget-&gt;Edit Menu Bar.</p>
+</div>
+<div class="section" id="popup-menu-binding">
+<h2>Popup Menu Binding<a class="headerlink" href="#popup-menu-binding" title="Permalink to this headline">¶</a></h2>
+<p>The final topic to cover is the binding of popup menus to individual
+widgets.  Popup menus are usually activated by mouse events bound to
+particular widgets.  The Tk documentation discusses bindings of mouse
+events to widgets for different OS&#8217;s and PAGE attempts to follow those
+conventions.  This is one of the above mentioned hacks.  Note that a
+GUI may have more that one context menu and also more that one widget
+may be bound to a context menu.  As an example, <a class="reference internal" href="examples.html#lib-demo"><em>Lib Demo</em></a> a
+photo album like example which displays a number of thumbnail images
+each of which can invoke the same popup menu.</p>
+<p>PAGE implements the callback functions for popups as class methods of
+the toplevel class because these functions are generated by
+PAGE. Other callback functions are generated as skeletal functions in
+the support module.  Callback functions for context menus and the
+menus themselves have special names.  The context menus have PAGE
+generated names like Popupmenu1, Popupmenu2, etc. and the containing
+callback functions are popup1, popup2, etc.  The latter names are
+reserved for pupup callback functions. This is part of the hack
+mentioned in the last paragraph. Since there is a close relation
+between the menu names and callback names, Popupmenu&lt;n&gt; and popup&lt;n&gt;, do
+not modify menu aliases.</p>
+<p>If a popup menu is bound to a widget it is applicable for all
+subwidgets of that widget. So if you bind a popup menu to the toplevel
+widget and also bind another popup menu to a subwidget, say a button
+then hitting the popup button, Button-3 in Linux, both menus will
+popup.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Menus</a><ul>
+<li><a class="reference internal" href="#menu-creation">Menu Creation</a></li>
+<li><a class="reference internal" href="#menu-editor">Menu Editor</a></li>
+<li><a class="reference internal" href="#menu-modification">Menu Modification</a></li>
+<li><a class="reference internal" href="#popup-menu-binding">Popup Menu Binding</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="use.html"
+                        title="previous chapter">Using PAGE</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="rework.html"
+                        title="next chapter">Rework</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/menu.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="rework.html" title="Rework"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="use.html" title="Using PAGE"
+             >previous</a> |</li>
+        <li><a href="index.html">PAGE 4.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2008 - 2017 Donald Rozenberg.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

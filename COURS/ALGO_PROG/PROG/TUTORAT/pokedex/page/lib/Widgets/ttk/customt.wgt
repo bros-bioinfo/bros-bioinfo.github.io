@@ -1,0 +1,117 @@
+# $Id: text.wgt,v 1.8 2002/03/09 21:55:30 cgavin Exp $
+
+##############################################################################
+#
+# Visual TCL - A cross-platform application development environment
+#
+# Copyright (C) 2001 Damon Courtney
+#
+# Description file for Tk Widget
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+##############################################################################
+#
+
+Class       Customt
+Lib         ttk
+
+Icon        ../lib/Widgets/ttk/custom-small.png
+
+CreateCmd  vTcl::widgets::ttk::custom::CreateCmd
+
+#InsertCmd   vTcl::widgets::ttk::custom::insertCmd
+TreeLabel   Custom widget
+DefaultOptions  -background white -height 4 -width 10 -wrap word \
+              -font \$vTcl(actual_gui_font_text_name) -foreground black \
+              -highlightbackground \$vTcl(actual_gui_bg)
+
+lappend vTcl(complex_class) Customt
+
+#DefaultValues    -highlightbackground -highlightcolor \
+                -selectbackground -selectforeground
+if {$vTcl(pr,balloon)} { ;# Rozen
+    ClassOption     -_tooltip
+}
+#SpecialOpt -wrap        "wrap"    choice  "none char word"
+#ClassOption -loadcommand                    ;# Rozen
+#OptionConfigCmd -loadcommand get vTcl::widgets::ttk::texet::get_load_cmd
+#OptionConfigCmd -loadcommand update vTcl::widgets::ttk::text::update_load_cmd
+#OptionConfigCmd -loadcommand config vTcl::widgets::ttk::text::config_load_cmd
+
+namespace eval vTcl::widgets::ttk::customt {
+
+    proc CreateCmd {target args} {
+    global vTcl
+    namespace eval ::widgets::${target}::options {}
+    namespace eval ::widgets::${target}::save    {}
+    namespace eval ::widgets::${target}.01::options {}
+    namespace eval ::widgets::${target}.01::save    {}
+    namespace eval ::widgets::${target}.02::options {}
+    namespace eval ::widgets::${target}.02::save    {}
+    namespace eval ::widgets::${target}.03::options {}
+    namespace eval ::widgets::${target}.03::save    {}
+    frame $target  -height 75 -width 125 -class Custom
+    text $target.01  -background white  -foreground black \
+            -font $vTcl(actual_gui_font_text_name)  -height 3 -width 10 \
+            -insertborderwidth 3
+        pack $target.01 -in $target -fill both -expand yes
+        vTcl:DefineAlias "$target" "Custom1" vTcl:WidgetProc "Toplevel1" 1
+
+        $target.01 insert end "Custom\nwidget"  ;# insert caption
+    }
+
+    proc insertCmd {target} {
+        global vTcl
+        $target.01 configure -font $vTcl(actual_gui_font_text_name)
+        $target.01 insert end "Custom\nwidget"
+        vTcl:DefineAlias "$target" "Custom1" vTcl:WidgetProc "Toplevel1" 1
+    }
+
+    proc dumpCmd {target basename} {
+        global vTcl basenames classes
+        set result [vTcl:dump_widget_opt $target $basename]
+    }
+
+    # procs below added by Rozen to handle the loadcommand option.
+    proc get_load_cmd {target} {
+        # Called by vTcl:widget:register_widget_custom in widget.tcl
+        # At this point I don't know what it should return.
+
+        return "-loadcmd"
+    }
+    proc update_load_cmd {target var} {
+        global vTcl
+        # Called to load the current value into the prop manager (propmgr.tcl)
+        if {[info exist vTcl($target,-loadcommand)]} {
+            set $var $vTcl($target,-loadcommand)
+        } else {
+            return
+        }
+    }
+    proc config_load_cmd {target var} {
+        # Called when the value is changed by the prop manager.
+        global vTcl
+        # I should just store the var in the appropiate vTcl variable.
+        set vTcl($target,-loadcommand) $var
+        set ::widgets::${target}::ClassOption(-loadcommand) $var
+        set ::widgets::${target}::options(-loadcommand) $var
+        set ::widgets::${target}::save(-loadcommand) [expr {$var != ""}]
+
+    }
+}
+
+
+

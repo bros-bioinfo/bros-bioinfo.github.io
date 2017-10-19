@@ -1,0 +1,5 @@
+
+This subdirectory contains a bind example where the button 
+responds to selection with <Button-1> via the command attribute 
+set in the Attribute Editor and to <Button-2> and <Button-3> via 
+bind commands created using the Binding Window.
