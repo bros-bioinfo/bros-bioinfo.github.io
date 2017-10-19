@@ -155,20 +155,30 @@ def starter():
     """
     time.sleep(1)
 
-def fillListATK():
-    os.system('clear')
-    for i in range(1,5): #on choisit 4 attaques
-        attaque=raw_input("\n Nommer votre attaque: ")
-        listeATK.append(attaque)
-    print "1: ",listeATK[0],"          2: ",listeATK[1],"\n3: ",listeATK[2],"          4: ",listeATK[3]
-
-def chooseATK(listeATK):
-    ATK=input("\n Quelle attaque utiliser ? (1,2,3,4)\n")
-    print pokedex[0][0]," utilise l'attaque",listeATK[ATK-1]," !"
-
-def randomDMG():
-    DMG=random.randint(1,5)
-    print "\n Votre attaque fait ",DMG ,"degats !"
+def fight(listeIA,pokedex):
+    csvfile2=open("biokeIA.txt","r")
+    starter2()
+    IA=random.randint(0,len(listeIA))
+    print "Vous entrez en duel avec",listeIA[IA][0]
+    ATK=random.randint(4,7)
+    print listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
+    DMG2=random.randint(1,10)
+    print listeIA[IA][0]," fait ",DMG2 ,"degats !"
+    csvfile = open("biokemon.txt","r")
+    starter()
+    print "\n"
+    for j in range(len(pokedex)):
+        print pokedex[j][0]
+    print "\n"
+    select=raw_input("Entrez le nom du biokemon que vous voulez utiliser: ")
+    if select == pokedex[0][0]:
+        i = 0
+    if select == pokedex[1][0]:
+        i = 1
+    print "\nQuelle attaque voulez-vous utiliser ?\n\
+_______________________________________\n"
+    print "1:", pokedex[i][4],"          2: ",pokedex[i][5],"\n"
+    print "3:", pokedex[i][6],"          4: ",pokedex[i][7],"\n"
 
 
 ############################"MENU HERE"##########################
