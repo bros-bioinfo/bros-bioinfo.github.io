@@ -10,6 +10,8 @@ from pick import pick
 from pick import Picker
 import time
 
+
+
 def save(pokedex):
     os.system('clear')
     csvfile = "biokemon.txt"
@@ -64,13 +66,20 @@ def showpokemon():
 
         i+=1
 
-
+def showallpokemon():
+    os.system('clear')
+    print " "
+    i=0
+    while i < len(pokedex):
+        poketest=pokedex[i][0]
+        print " - ",pokedex[i][0]
+        i+=1
 
 def moypv(somme):
     os.system('clear')
     i=0
     while i < len(pokedex):
-        somme=somme+pokedex[i][2]
+        somme=somme+int(pokedex[i][2])
         i+=1
     moyenne=somme/len(pokedex)
     print "Les Biokemons ont en moyenne: ",moyenne," PV"
@@ -155,36 +164,20 @@ def starter():
     """
     time.sleep(1)
 
-def fight(listeIA,pokedex):
-    csvfile2=open("biokeIA.txt","r")
-    starter2()
-    IA=random.randint(0,len(listeIA))
-    print "Vous entrez en duel avec",listeIA[IA][0]
-    ATK=random.randint(4,7)
-    print listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
-    DMG2=random.randint(1,10)
-    print listeIA[IA][0]," fait ",DMG2 ,"degats !"
-    csvfile = open("biokemon.txt","r")
-    starter()
-    print "\n"
-    for j in range(len(pokedex)):
-        print pokedex[j][0]
-    print "\n"
-    select=raw_input("Entrez le nom du biokemon que vous voulez utiliser: ")
-    if select == pokedex[0][0]:
-        i = 0
-    if select == pokedex[1][0]:
-        i = 1
-    print "\nQuelle attaque voulez-vous utiliser ?\n\
-_______________________________________\n"
-    print "1:", pokedex[i][4],"          2: ",pokedex[i][5],"\n"
-    print "3:", pokedex[i][6],"          4: ",pokedex[i][7],"\n"
-
 
 ############################"MENU HERE"##########################
 def menu():
     os.system('clear')
-    options = [     '┃   ⚛ Ajouter un Biokemon                                     ┃',     '┃   👁 Afficher un Biokemon                                    ┃',     '┃   ✚ Afficher les PV moyen des Biokemons                     ┃',     "┃   ✚ Afficher les Biokemons au dessus d'un seuil de PV       ┃",     '┃   ⛥ Afficher les Biokemons qui ont un certains type         ┃',     "┃   ⬆ Monter le niveau d'un Biokemon                          ┃",     '┃   ⚔ Combattre                                               ┃',     '┃   🚶Exit                                                    ┃']
+    options = [     '┃   ⚛ Ajouter un Biokemon                                     ┃',
+'┃   👁 Afficher un Biokemon                                    ┃',
+'┃   👁 Afficher la liste des Biokemons                         ┃',
+'┃   ✚ Afficher les PV moyen des Biokemons                     ┃',
+"┃   ✚ Afficher les Biokemons au dessus d'un seuil de PV       ┃",
+'┃   ⛥ Afficher les Biokemons qui ont un certains type         ┃',
+"┃   ⬆ Monter le niveau d'un Biokemon                          ┃",
+'┃   ⚔ Combattre                                               ┃',
+'┃   🚶Exit                                                    ┃']
+
     option, index= pick(options, menus, indicator=' >')
 
 #choix=input("Sélectionnez une option: ")
@@ -193,18 +186,18 @@ def menu():
     if (index==1):
         showpokemon()
     if (index==2):
-        moypv(somme)
+        showallpokemon()
     if (index==3):
-        uppv()
+        moypv(somme)
     if (index==4):
-        samepokemon()
+        uppv()
     if (index==5):
-        levelup()
+        samepokemon()
     if (index==6):
-        fillListATK()
-        chooseATK(listeATK)
-        randomDMG()
-    if (index ==7):
+        levelup()
+    if (index==7):
+        from combat import *
+    if (index ==8):
         exit()
 
 

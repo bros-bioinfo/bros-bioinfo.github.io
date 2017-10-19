@@ -60,7 +60,7 @@ def fight(listeIA,pokedex):
     DMG2=random.randint(1,10)
     print listeIA[IA][0]," fait ",DMG2 ,"degats !"
     csvfile = open("biokemon.txt","r")
-    starter()
+    starter1()
     print "\n"
     for j in range(len(pokedex)):
         print pokedex[j][0]
@@ -93,6 +93,7 @@ def save(listeIA):
     with open(csvfile, "a") as output:
         writer = csv.writer(output, lineterminator='\n')
         writer.writerows(listeIA)
+
 def closecurrentfile():
     csvfile.close()
 
