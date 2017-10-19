@@ -66,14 +66,13 @@ def fight(listeIA,pokedex):
         print pokedex[j][0]
     print "\n"
     select=raw_input("Entrez le nom du biokemon que vous voulez utiliser: ")
-    if select == pokedex[0][0]:
-        i = 0
-    if select == pokedex[1][0]:
-        i = 1
+    for k in range(len(pokedex)):
+        if k == select:
+            return k
     print "\nQuelle attaque voulez-vous utiliser ?\n\
 _______________________________________\n"
-    print "1:", pokedex[i][4],"          2: ",pokedex[i][5],"\n"
-    print "3:", pokedex[i][6],"          4: ",pokedex[i][7],"\n"
+    print "1:", pokedex[k][4],"          2: ",pokedex[k][5],"\n"
+    print "3:", pokedex[k][6],"          4: ",pokedex[k][7],"\n"
 
 
 
