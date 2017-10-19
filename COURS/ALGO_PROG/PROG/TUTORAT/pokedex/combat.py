@@ -49,15 +49,11 @@ def addIA(listeIA):
 
 
 
-def fight(listeIA,pokedex):
+def selecte(listeIA,pokedex):
     csvfile2=open("biokeIA.txt","r")
     starter2()
-    IA=random.randint(0,len(listeIA))
+    IA=random.randint(0,len(listeIA)-1)
     print "Vous entrez en duel avec",listeIA[IA][0]
-    ATK=random.randint(4,7)
-    print listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
-    DMG2=random.randint(1,10)
-    print listeIA[IA][0]," fait ",DMG2 ,"degats !"
     csvfile = open("biokemon.txt","r")
     starter1()
     print "\n"
@@ -69,10 +65,19 @@ def fight(listeIA,pokedex):
     for k in range(len(pokedex)):
         if k == select:
             return k
-    print "\nQuelle attaque voulez-vous utiliser ?\n\
-____________________________________\n"
+        
+def fight(pokedex,k,select):
+    c=input("Quelle attaque voulez-vous utiliser ?\n\
+____________________________________\n")
     print "1:", pokedex[k][4],"          2: ",pokedex[k][5],"\n"
     print "3:", pokedex[k][6],"          4: ",pokedex[k][7],"\n"
+    print select, "lance ", pokedex[k][c+3]
+
+
+    ATK=random.randint(4,7)
+    print listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
+    DMG2=random.randint(1,10)
+    print listeIA[IA][0]," fait ",DMG2 ,"degats !"
 
 
 
@@ -100,8 +105,11 @@ def closecurrentfile():
 
 
 #MAIN
+k=0
+select=0
 pokedex=[]
 listeIA=[]
 #starter()
 #addIA(listeIA)
-fight(listeIA,pokedex)
+selecte(listeIA,pokedex)
+fight(pokedex,k,select)
