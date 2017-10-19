@@ -48,7 +48,7 @@ def selecte(pokedex):
     option=names
     option, index= pick(option, selector, indicator=' >')
     os.system('clear')
-    print "Vous avez choisi "+option
+    print "Vous avez choisi ",option
     k=index
     return k
 
@@ -77,22 +77,21 @@ def fight(pokedex,player):
 
 def starter1():
     with open('biokemon.txt') as inputfile:
-        for row in csv.reader(inputfile):
-            pokedex.append(row)
+        if not pokedex:
+            for row in csv.reader(inputfile):
+                pokedex.append(row)
 
 def starter2():
     with open('biokeIA.txt') as inputfile:
-        for row in csv.reader(inputfile):
-            listeIA.append(row)
+        if not listeIA:
+            for row in csv.reader(inputfile):
+                listeIA.append(row)
 def save(listeIA):
     csvfile = open("biokeIA.txt","r")
     #Assuming res is a list of lists
     with open(csvfile, "a") as output:
         writer = csv.writer(output, lineterminator='\n')
         writer.writerows(listeIA)
-
-def closecurrentfile():
-    csvfile.close()
 
 
 
@@ -102,7 +101,3 @@ select=0
 IA=0
 pokedex=[]
 listeIA=[]
-#starter()
-#addIA(listeIA)
-player=selecte(pokedex)
-fight(pokedex,player)

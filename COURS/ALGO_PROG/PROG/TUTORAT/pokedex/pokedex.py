@@ -197,6 +197,8 @@ def menu():
         levelup()
     if (index==7):
         from combat import *
+        player=selecte(pokedex)
+        fight(pokedex,player)
     if (index ==8):
         exit()
 
@@ -229,7 +231,6 @@ menus="""
 
 
 pokedex=[]
-listeATK=[]
 somme=0
 continuer=True
 
