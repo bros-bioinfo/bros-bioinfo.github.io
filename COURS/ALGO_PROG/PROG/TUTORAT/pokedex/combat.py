@@ -72,7 +72,21 @@ def fight(pokedex,player):
     option, index= pick(option, atk, indicator=' >')
     os.system('clear')
     print pokedex[k][0], "lance ", pokedex[k][index+4]
-
+    if index+4 == 4:
+        dmg=random.randint(10,20)
+        print listeIA[IA][0]," prends ",dmg," degats !"
+    if index+4 == 5:
+        dmg=random.randint(10,15)
+        print listeIA[IA][0]," prends ",dmg," degats !"
+    if index+4 == 6:
+        dmg=random.randint(5,10)
+        print listeIA[IA][0]," prends ",dmg," degats !"
+    if index+4 == 7:
+        dmg=random.randint(1,5)
+        print listeIA[IA][0]," prends ",dmg," degats !"
+    print "\n"
+    PV=int(listeIA[IA][2])-dmg
+    print "Il reste ",PV," a ",listeIA[IA][0]," !"
 
     ATK=random.randint(4,7)
     print listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
