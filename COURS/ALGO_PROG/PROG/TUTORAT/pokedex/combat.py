@@ -8,6 +8,9 @@ import os
 import Image
 import csv
 import random
+from pick import pick
+from pick import Picker
+import time
 
 def fillListATK():
     listeATK=[]
@@ -49,29 +52,36 @@ def addIA(listeIA):
 
 
 
-def selecte(listeIA,pokedex):
+def selecte(pokedex):
+    csvfile = open("biokemon.txt","r")
+    starter1()
+    print "\n"
+    names=[]
+    for j in range(len(pokedex)):
+        names.append(pokedex[j][0])
+    print names
+
+    selector="Entrez le nom du biokemon que vous voulez utiliser: "
+    option=names
+    option, index= pick(option, selector, indicator=' >')
+    print "Vous avez choisi "+option
+    k=index
+    return k
+
+def fight(pokedex,player):
+    k=int(player)
     csvfile2=open("biokeIA.txt","r")
     starter2()
     IA=random.randint(0,len(listeIA)-1)
     print "Vous entrez en duel avec",listeIA[IA][0]
-    csvfile = open("biokemon.txt","r")
-    starter1()
     print "\n"
-    for j in range(len(pokedex)):
-        print pokedex[j][0]
-    print "\n"
-    select=raw_input("Entrez le nom du biokemon que vous voulez utiliser: ")
-    select=select.upper()
-    for k in range(len(pokedex)):
-        if k == select:
-            return k
-        
-def fight(pokedex,k,select):
-    c=input("Quelle attaque voulez-vous utiliser ?\n\
+    print ("Quelle attaque voulez-vous utiliser ?\n\
 ____________________________________\n")
     print "1:", pokedex[k][4],"          2: ",pokedex[k][5],"\n"
     print "3:", pokedex[k][6],"          4: ",pokedex[k][7],"\n"
-    print select, "lance ", pokedex[k][c+3]
+    c=input("\n")
+    print "\n"
+    print pokedex[k][0], "lance ", pokedex[k][c+3]
 
 
     ATK=random.randint(4,7)
@@ -108,9 +118,10 @@ def closecurrentfile():
 #MAIN
 k=0
 select=0
+IA=0
 pokedex=[]
 listeIA=[]
 #starter()
 #addIA(listeIA)
-selecte(listeIA,pokedex)
-fight(pokedex,k,select)
+player=selecte(pokedex)
+fight(pokedex,player)
