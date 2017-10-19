@@ -86,7 +86,7 @@ def fight(pokedex,player):
         print listeIA[IA][0]," prends ",dmg," degats !"
     print "\n"
     PV=int(listeIA[IA][2])-dmg
-    print "Il reste ",PV," a ",listeIA[IA][0]," !"
+    print "Il reste ",PV," PV a ",listeIA[IA][0]," !"
 
     ATK=random.randint(4,7)
     print listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
