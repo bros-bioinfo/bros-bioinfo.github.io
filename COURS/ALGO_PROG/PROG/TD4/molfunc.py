@@ -1,13 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import os
+import sys
 
 def sezienz(nbenz):
+    os.system('clear')
     print "\nVeuillez saisir vos enzymes:"
     for i in range (0,nbenz):
         saisie=raw_input()
         enzlist.append(saisie)
 
 def sezipoids(enzlist):
+    os.system('clear')
     print "\n-------------------------------------------------"
     print "\nVeuillez saisir le poids de vos enzymes:"
     for n in range(len(enzlist)):
@@ -17,6 +21,7 @@ def sezipoids(enzlist):
 
 
 def showListEP(enzlist,poidslist):
+    os.system('clear')
     print "\n-------------------------------------------------"
     print "\nVoici la liste de vos enzymes et de leurs poids:"
     for m in range(len(enzlist)):
@@ -24,6 +29,7 @@ def showListEP(enzlist,poidslist):
 
 
 def showMaxP(max,enzlist,poidslist):
+    os.system('clear')
     for p in range(len(enzlist)):
         if max < poidslist[p]:
             max = poidslist[p]
@@ -32,6 +38,7 @@ def showMaxP(max,enzlist,poidslist):
 
 
 def showMoy(somme,enzlist,poidslist):
+    os.system('clear')
     for k in range (len(enzlist)):
         somme = somme + poidslist[k]
 
@@ -40,6 +47,7 @@ def showMoy(somme,enzlist,poidslist):
 
 
 def showMoyplus(enzlist,poidslist,moyenne):
+    os.system('clear')
     print "\nLes enzymes dont le poids est supérieur à la moyenne sont: "
 
     for h in range (len(enzlist)):
@@ -49,6 +57,7 @@ def showMoyplus(enzlist,poidslist,moyenne):
 def continueroupas():
     print "\nVoulez vous continuer ?"
     continuer = raw_input("(Y / N) :   ")
+    continuer = continuer.upper()
     if continuer == N:
         sys.exit()
 
@@ -63,18 +72,15 @@ enzlist=[]
 poidslist=[]
 continuer = "Y"
 
-print "\nCombien voulez-vous rentrer d'enzymes ?"
-nbenz= input()
-sezienz(nbenz)
-sezipoids(enzlist)
-
 while continuer == "Y":
+    os.system('clear')
     print '''
-    \n-------------------------------------------------
-    \nQue voulez vous faire:
-    \n [1] afficher la liste des Enzymes et leur poids.
-    \n [2] afficher l'Enzyme ayant le poids maximum.
-    \n [3] afficher la moyenne des poids des Enzymes.
+
+    \n Que voulez vous faire:
+    \n [1] rentrer le nom et le poids de vos enzymes
+    \n [2] afficher la liste des Enzymes et leur poids.
+    \n [3] afficher l'Enzyme ayant le poids maximum.
+    \n [4] afficher la moyenne des poids des Enzymes.
     \n [0] fermer le programme.
     \n-------------------------------------------------
     '''
@@ -84,14 +90,25 @@ while continuer == "Y":
         sys.exit()
 
     elif choix==1:
+        os.system('clear')
+        print "\nCombien voulez-vous rentrer d'enzymes ?"
+        nbenz= input()
+        sezienz(nbenz)
+        sezipoids(enzlist)
+
+    elif choix==2:
         showListEP(enzlist,poidslist)
         continueroupas()
 
-    elif choix==2:
+    elif choix==3:
         showMaxP(max,enzlist,poidslist)
         continueroupas()
 
-    elif choix==3:
+    elif choix==4:
         moyenne=showMoy(somme,enzlist,poidslist)
         showMoyplus(enzlist,poidslist,moyenne)
         continueroupas()
+
+    else:
+        print "Choix invalide - fin du programme"
+        sys.exit()
