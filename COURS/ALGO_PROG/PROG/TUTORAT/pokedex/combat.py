@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import tkinter
-from Tkinter import *
 import os
 import Image
 import csv
