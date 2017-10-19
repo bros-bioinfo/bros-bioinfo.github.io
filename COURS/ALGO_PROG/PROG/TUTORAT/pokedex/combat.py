@@ -12,9 +12,8 @@ from pick import pick
 from pick import Picker
 import time
 
-def addIA(listeIA):
+'''def addIA(listeIA):
 
-    listeIA=[]
     IAname=[]
     IAname.append(raw_input("Comment s'appelle l'IA que vous voulez ajouter ?\n "))
     IAtype=raw_input("Quel est le type de votre IA ? ")
@@ -32,7 +31,32 @@ def addIA(listeIA):
     ATK4=raw_input("Quel est le nom de sa quatrieme attaque ? ")
     IAname.append(ATK4)
     listeIA.append(IAname)
-    save(listeIA)
+    print listeIA
+    save1(listeIA)'''
+
+def addIA(listeIA):
+    os.system('clear')
+    print """
+  -._    _.--'"`'--._    _.--'"`'--._    _.--'"`'--._    _
+      '-:`.'|`|"':-.  '-:`.'|`|"':-.  '-:`.'|`|"':-.  '.` :
+    '.  '.  | |  | |'.  '.  | |  | |'.  '.  | |  | |'.  '.:
+      '.  '.| |  | |  '.  '.| |  | |  '.  '.| |  | |  '.  '
+        '.  `.:_ | :_.' '.  `.:_ | :_.' '.  `.:_ | :_.' '.
+           `-..,..-'       `-..,..-'       `-..,..-'
+
+    """
+    name=raw_input("  Quel est le nom de votre PNJ ? ")
+    poketype=raw_input("  Quel est le type de votre PNJ ? ")
+    PV=input("  Combien votre PNJ a de PV ? ")
+    Level=input("  Quel est le level de votre PNJ ? ")
+    Attaque1=raw_input("  Entrez le nom de la premiere attaque:  ")
+    Attaque2=raw_input("  Entrez le nom de la premiere attaque:  ")
+    Attaque3=raw_input("  Entrez le nom de la premiere attaque:  ")
+    Attaque4=raw_input("  Entrez le nom de la premiere attaque:  ")
+
+    IA=[name,poketype,PV,Level,Attaque1,Attaque2,Attaque3,Attaque4]
+    listeIA.append(IA)
+    save1(listeIA)
 
 
 
@@ -86,12 +110,13 @@ def starter2():
         if not listeIA:
             for row in csv.reader(inputfile):
                 listeIA.append(row)
-def save(listeIA):
-    csvfile = open("biokeIA.txt","r")
+def save1(pokedex):
+    os.system('clear')
+    csvfile = "biokeIA.txt"
     #Assuming res is a list of lists
     with open(csvfile, "a") as output:
         writer = csv.writer(output, lineterminator='\n')
-        writer.writerows(listeIA)
+        writer.writerows(pokedex)
 
 
 

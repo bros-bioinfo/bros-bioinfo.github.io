@@ -7,3 +7,4 @@ JUJU,EAU,20,2,P,O,U,R
 a,r,2,2,a,b,c,d
 a,b,2,3,5,g,h,j
 pot,pot,3,3,p,o,u,i
+Professeur Chen,Intello,1,1,a,b,c,d

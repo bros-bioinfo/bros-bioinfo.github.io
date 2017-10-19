@@ -169,6 +169,7 @@ def starter():
 def menu():
     os.system('clear')
     options = [     '┃   ⚛ Ajouter un Biokemon                                     ┃',
+'┃   ⚛ Ajouter une IA                                          ┃',
 '┃   👁 Afficher un Biokemon                                    ┃',
 '┃   👁 Afficher la liste des Biokemons                         ┃',
 '┃   ✚ Afficher les PV moyen des Biokemons                     ┃',
@@ -184,22 +185,25 @@ def menu():
     if (index==0):
         addpokemon(pokedex)
     if (index==1):
-        showpokemon()
+        from combat import *
+        addIA(listeIA)
     if (index==2):
-        showallpokemon()
+        showpokemon()
     if (index==3):
-        moypv(somme)
+        showallpokemon()
     if (index==4):
-        uppv()
+        moypv(somme)
     if (index==5):
-        samepokemon()
+        uppv()
     if (index==6):
-        levelup()
+        samepokemon()
     if (index==7):
+        levelup()
+    if (index==8):
         from combat import *
         player=selecte(pokedex)
         fight(pokedex,player)
-    if (index ==8):
+    if (index ==9):
         exit()
 
 
