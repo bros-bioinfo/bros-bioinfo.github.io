@@ -46,7 +46,6 @@ def addIA(listeIA):
     IAname.append(ATK4)
     listeIA.append(IAname)
     save(listeIA)
-    print listeIA
 
 
 
@@ -66,13 +65,16 @@ def fight(listeIA,pokedex):
         print pokedex[j][0]
     print "\n"
     select=raw_input("Entrez le nom du biokemon que vous voulez utiliser: ")
+    select=select.upper()
     for k in range(len(pokedex)):
         if k == select:
             return k
     print "\nQuelle attaque voulez-vous utiliser ?\n\
-_______________________________________\n"
+____________________________________\n"
     print "1:", pokedex[k][4],"          2: ",pokedex[k][5],"\n"
     print "3:", pokedex[k][6],"          4: ",pokedex[k][7],"\n"
+
+
 
 
 
