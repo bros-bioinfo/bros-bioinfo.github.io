@@ -21,15 +21,23 @@ def save(pokedex):
 
 def addpokemon(pokedex):
     os.system('clear')
-    print pokedex
-    name=raw_input("Quel est le nom de votre Biokemon ? ")
-    poketype=raw_input("Quel est le type de votre Biokemon ? ")
-    PV=input("Combien votre Biokemon a de PV ? ")
-    Level=input("Quel est le level de votre Biokemon ? ")
-    Attaque1=input("Quelle est la valeur d'attaque de votre Biokemon ? ")
-    Attaque2=input("Quelle est la valeur d'attaque de votre Biokemon ? ")
-    Attaque3=input("Quelle est la valeur d'attaque de votre Biokemon ? ")
-    Attaque4=input("Quelle est la valeur d'attaque de votre Biokemon ? ")
+    print """
+  -._    _.--'"`'--._    _.--'"`'--._    _.--'"`'--._    _
+      '-:`.'|`|"':-.  '-:`.'|`|"':-.  '-:`.'|`|"':-.  '.` :
+    '.  '.  | |  | |'.  '.  | |  | |'.  '.  | |  | |'.  '.:
+      '.  '.| |  | |  '.  '.| |  | |  '.  '.| |  | |  '.  '
+        '.  `.:_ | :_.' '.  `.:_ | :_.' '.  `.:_ | :_.' '.
+           `-..,..-'       `-..,..-'       `-..,..-'
+
+    """
+    name=raw_input("  Quel est le nom de votre Biokemon ? ")
+    poketype=raw_input("  Quel est le type de votre Biokemon ? ")
+    PV=input("  Combien votre Biokemon a de PV ? ")
+    Level=input("  Quel est le level de votre Biokemon ? ")
+    Attaque1=input("  Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque2=input("  Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque3=input("  Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque4=input("  Quelle est la valeur d'attaque de votre Biokemon ? ")
 
     pokemon=[name,poketype,PV,Level,Attaque1,Attaque2,Attaque3,Attaque4]
     pokedex.append(pokemon)
@@ -37,7 +45,10 @@ def addpokemon(pokedex):
 
 def showpokemon():
     os.system('clear')
-    kelpokemon=raw_input("Quel est le nom de votre Biokemon ? ")
+    print """
+
+    """
+    kelpokemon=raw_input("  Quel est le nom de votre Biokemon ? ")
     i=0
     while i < len(pokedex):
         poketest=pokedex[i][0]
@@ -163,7 +174,7 @@ def randomDMG():
 ############################"MENU HERE"##########################
 def menu():
     os.system('clear')
-    options = [     '┃   Ajouter un Biokemon                                       ┃',     '┃   Afficher un Biokemon                                      ┃',     '┃   PV moyen des Biokemons                                    ┃',     "┃   Biokemons au dessus d'un certain seuil de PV              ┃",     '┃   Afficher les Biokemons qui ont un certains type           ┃',     "┃   Monter le niveau d'un Biokemon                            ┃",     '┃   Combattre                                                 ┃',     '┃   Exit                                                      ┃']
+    options = [     '┃   ⚛ Ajouter un Biokemon                                     ┃',     '┃   👁 Afficher un Biokemon                                    ┃',     '┃   ✚ Afficher les PV moyen des Biokemons                     ┃',     "┃   ✚ Afficher les Biokemons au dessus d'un seuil de PV       ┃",     '┃   ⛥ Afficher les Biokemons qui ont un certains type         ┃',     "┃   ⬆ Monter le niveau d'un Biokemon                          ┃",     '┃   ⚔ Combattre                                               ┃',     '┃   🚶Exit                                                    ┃']
     option, index= pick(options, menus, indicator=' >')
 
 #choix=input("Sélectionnez une option: ")
@@ -195,8 +206,7 @@ def menu():
 ######################"END MENU"######################
 
 menus="""
-   ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-  ╭--------------------------------------------------------------╮
+  ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
   ┃                                                              ┃
   ┃ ██████╗ ██╗ ██████╗ ██╗  ██╗███████╗██████╗ ███████╗██╗  ██╗ ┃
   ┃ ██╔══██╗██║██╔═══██╗██║ ██╔╝██╔════╝██╔══██╗██╔════╝╚██╗██╔╝ ┃
@@ -204,14 +214,13 @@ menus="""
   ┃ ██╔══██╗██║██║   ██║██╔═██╗ ██╔══╝  ██║  ██║██╔══╝   ██╔██╗  ┃
   ┃ ██████╔╝██║╚██████╔╝██║  ██╗███████╗██████╔╝███████╗██╔╝ ██╗ ┃
   ┃ ╚═════╝ ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═╝ ┃
-  ┃      __                                                      ┃
-  ┃   __|  |__                        _____     _____            ┃
-  ┃  |__    __|                      |  A  |   |  B  |           ┃
-  ┃     |__|                         |_____|   |_____|           ┃
   ┃                                                              ┃
-  ╰--------------------------------------------------------------╯
-  ╰--------------------------------------------------------------╯
- /                                                                \\
+  ┃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁┃
+   ┃      __                                                    ┃
+   ┃   __|  |__                        _____     _____          ┃
+   ┃  |__    __|                      |  A  |   |  B  |         ┃
+   ┃     |__|                         |_____|   |_____|         ┃
+   ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 """
 
 
