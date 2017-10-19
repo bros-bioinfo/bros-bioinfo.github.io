@@ -26,9 +26,12 @@ def addpokemon(pokedex):
     poketype=raw_input("Quel est le type de votre Biokemon ? ")
     PV=input("Combien votre Biokemon a de PV ? ")
     Level=input("Quel est le level de votre Biokemon ? ")
+    Attaque1=input("Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque2=input("Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque3=input("Quelle est la valeur d'attaque de votre Biokemon ? ")
+    Attaque4=input("Quelle est la valeur d'attaque de votre Biokemon ? ")
 
-
-    pokemon=[name,poketype,PV,Level]
+    pokemon=[name,poketype,PV,Level,Attaque1,Attaque2,Attaque3,Attaque4]
     pokedex.append(pokemon)
     save(pokedex)
 
@@ -39,10 +42,15 @@ def showpokemon():
     while i < len(pokedex):
         poketest=pokedex[i][0]
         if poketest==kelpokemon:
-            print "\n Le Biokemon se nomme ",pokedex[i][0]
-            print " Il est de type ",pokedex[i][1]
-            print " Il a ",pokedex[i][2]," PV"
-            print " Il est level ",pokedex[i][3]
+            print "\n Le Biokemon se nomme",pokedex[i][0]
+            print " Il est de type",pokedex[i][1]
+            print " Il a",pokedex[i][2]," PV"
+            print " Il est level",pokedex[i][3]
+            print " Sa première attaque  est:    ",pokedex[i][4]
+            print " Sa deuxième attaque  est:    ",pokedex[i][5]
+            print " Sa troisième attaque est:    ",pokedex[i][6]
+            print " Sa quatrième attaque est:    ",pokedex[i][7]
+
         i+=1
 
 
@@ -213,7 +221,7 @@ listeATK=[]
 somme=0
 continuer=True
 
+starter()
 while continuer:
-    starter()
     menu()
     oncontinue()
