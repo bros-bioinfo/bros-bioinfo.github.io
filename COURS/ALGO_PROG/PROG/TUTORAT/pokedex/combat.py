@@ -9,6 +9,8 @@ import random
 from pick import pick
 from pick import Picker
 import time
+import tkinter
+from Tkinter import *
 
 def addIA(listeIA):
     os.system('clear')
