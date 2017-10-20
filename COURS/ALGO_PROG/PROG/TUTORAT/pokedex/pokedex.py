@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
-import Image
+#import Image
 import csv
 import random
 from pick import pick
