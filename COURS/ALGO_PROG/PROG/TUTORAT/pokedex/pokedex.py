@@ -246,6 +246,7 @@ somme=0
 continuer=True
 
 starter()
+credit()
 while continuer:
     menu()
     oncontinue()
