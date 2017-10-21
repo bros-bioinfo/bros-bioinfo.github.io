@@ -14,7 +14,7 @@ from Tkinter import *
 def pause():
     paused=""
     while paused != "A":
-        paused=getpass.getpass("\nPause : appuyer sur A+ENTER pour continuer le combat\n")
+        paused=getpass.getpass("\nAppuyer sur A pour continuer\n")
         paused=paused.upper()
         if pause != "A":
             print "Allez, un petit effort, c'est pas si dur de trouver cette touche..."
@@ -68,11 +68,12 @@ def selecte(pokedex):
     return k
 
 def fight(pokedex,player):
+    from draw import *
     k=int(player)
     csvfile2=open("biokeIA.txt","r")
     starter2()
     IA=random.randint(0,len(listeIA)-1)
-    print "Vous entrez en duel contre",listeIA[IA][0]," !!\nPrepare your anus !\n"
+    print "Vous entrez en duel contre",listeIA[IA][0]
     PV=int(listeIA[IA][2])
     PV2=int(pokedex[k][2])
     CP1=2
@@ -82,19 +83,24 @@ def fight(pokedex,player):
     choice=0
     while (PV > 0 and PV2 >0) :
         #partie fight JOUEUR
-        print "\nQuelle attaque voulez-vous utiliser ?\n"
-        print "1: ",pokedex[k][4]," CP: ",CP1,"/2","\n"
-        print "2: ",pokedex[k][5]," CP: ",CP2,"/4","\n"
-        print "3: ",pokedex[k][6]," CP: ",CP3,"/6","\n"
-        print "4: ",pokedex[k][7]," CP: ",CP4,"/20","\n"
-        choice=getpass.getpass("")
-        choice=int(choice)
+        atk="\nQuelle attaque voulez-vous utiliser ?\n"
+        attaque1="CP: "+str(CP1)+"/2     | "+pokedex[k][4]
+        attaque2="CP: "+str(CP2)+"/4     | "+pokedex[k][5]
+        attaque3="CP: "+str(CP3)+"/6     | "+pokedex[k][6]
+        attaque4="CP: "+str(CP4)+"/20   | "+pokedex[k][7]
+        option=[attaque1,attaque2,attaque3,attaque4]
+        option, index= pick(option,atk, indicator=' >')
+        #choice=getpass.getpass("")
+        #choice=int(choice)
+        choice=index+1
         while (CP1 == 0 and choice+3 == 4) or (CP2 == 0 and choice+3 == 5) or (CP3 == 0 and choice+3 == 6) or (CP4 == 0 and choice+3 == 7):
             choice=getpass.getpass("Il vous faut choisir une autre attaque, vous n'avez plus assez de CP !!\n")
             choice=int(choice)
         atk=pokedex[k][choice+3]
         os.system('clear')
-        print pokedex[k][0], "lance ", atk,"\n"
+        print "\n\n\n      ",pokedex[k][0], "lance ", atk," ! \n"
+        time.sleep(2)
+        os.system('clear')
         if choice+3 == 4:
             CP1 -= 1
             dmg=random.randint(0,20)
@@ -119,12 +125,11 @@ def fight(pokedex,player):
             PV=PV-dmg
             if dmg == 0:
                 print "ECHEC CRITIQUE !"
-
-        print listeIA[IA][0]," prends ",dmg," degats !"
+        print "\n\n  ",listeIA[IA][0]," prends ",dmg," de degats !"
         if PV <= 0:
             print listeIA[IA][0]," est au tapis !"
         else:
-            print "Il reste ",PV," PV a ",listeIA[IA][0]," !\n"
+            print "   Il reste ",PV," PV a ",listeIA[IA][0]," !\n"
         if PV <0:
             print pokedex[k][0], " a gagne son du-du-du-duueeeeel !"
             print """
@@ -144,7 +149,9 @@ def fight(pokedex,player):
         #partie fight IA
         if PV > 0:
             ATK=random.randint(4,7)
-            print listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
+            print "\n\n\n   ",listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
+            time.sleep(2)
+            os.system('clear')
             print "\n"
             if ATK == 4:
                 DMG2=random.randint(0,20)
@@ -166,11 +173,11 @@ def fight(pokedex,player):
                 PV2=PV2-DMG2
                 if DMG2 == 0:
                     print "ECHEC CRITIQUE !"
-            print pokedex[k][0]," prends ",DMG2," degats !"
+            print "\n\n  ",pokedex[k][0]," prends ",DMG2," de degats !"
             if PV2 <= 0:
                 print pokedex[k][0]," est au tapis !"
             else:
-                print "Il reste ",PV2," PV a ",pokedex[k][0]," !\n"
+                print "   Il reste ",PV2," PV a ",pokedex[k][0]," !\n"
             if PV2 <0:
                 print pokedex[k][0]," est mort au combat !!\n"
                 print """
@@ -210,6 +217,8 @@ def save1(pokedex):
     with open(csvfile, "a") as output:
         writer = csv.writer(output, lineterminator='\n')
         writer.writerows(pokedex)
+
+def pvbar():
 
 
 
