@@ -9,7 +9,7 @@ from pick import pick
 from pick import Picker
 import time
 from Tkinter import *
-
+from draw import*
 
 
 

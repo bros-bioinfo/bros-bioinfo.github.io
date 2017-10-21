@@ -10,14 +10,11 @@ from pick import pick
 from pick import Picker
 import time
 from Tkinter import *
+from draw import *
+
 
 def pause():
-    paused=""
-    while paused != "A":
-        paused=getpass.getpass("\nAppuyer sur A pour continuer\n")
-        paused=paused.upper()
-        if pause != "A":
-            print "Allez, un petit effort, c'est pas si dur de trouver cette touche..."
+    raw_input("   █ Appuyez sur ENTER pour continuer █")
 
 def addIA(listeIA):
     os.system('clear')
@@ -68,12 +65,26 @@ def selecte(pokedex):
     return k
 
 def fight(pokedex,player):
-    from draw import *
+
+    animcombat()
+
     k=int(player)
     csvfile2=open("biokeIA.txt","r")
     starter2()
     IA=random.randint(0,len(listeIA)-1)
-    print "Vous entrez en duel contre",listeIA[IA][0]
+    print "\n  Vous entrez en duel contre",listeIA[IA][0],"\n\n"
+
+    #BARRES HP + PERSO (PAS TROUVE POUR METTRE DANS DEF A CAUSE DES PV)
+    pvbarre=int(listeIA[IA][2])
+    pvbarremanquant=50-pvbarre
+    pvbarrejoueur=int(pokedex[k][2])
+    pvbarremanquantjoueur=50-pvbarrejoueur
+    print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
+    versus()
+    print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
+    pause()
+    # FIN HP + PERSO ANIMATION
+
     PV=int(listeIA[IA][2])
     PV2=int(pokedex[k][2])
     CP1=2
@@ -97,7 +108,19 @@ def fight(pokedex,player):
             choice=getpass.getpass("Il vous faut choisir une autre attaque, vous n'avez plus assez de CP !!\n")
             choice=int(choice)
         atk=pokedex[k][choice+3]
+
+        #BARRES HP + PERSO (PAS TROUVE POUR METTRE DANS DEF A CAUSE DES PV)
         os.system('clear')
+        pvbarre=PV
+        pvbarremanquant=50-pvbarre
+        pvbarrejoueur=PV2
+        pvbarremanquantjoueur=50-pvbarrejoueur
+        print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
+        versus()
+        print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
+        # FIN HP + PERSO ANIMATION
+
+
         print "\n\n\n      ",pokedex[k][0], "lance ", atk," ! \n"
         time.sleep(2)
         os.system('clear')
@@ -125,6 +148,19 @@ def fight(pokedex,player):
             PV=PV-dmg
             if dmg == 0:
                 print "ECHEC CRITIQUE !"
+
+        #BARRES HP + PERSO (PAS TROUVE POUR METTRE DANS DEF A CAUSE DES PV)
+        os.system('clear')
+        pvbarre=PV
+        pvbarremanquant=50-pvbarre
+        pvbarrejoueur=PV2
+        pvbarremanquantjoueur=50-pvbarrejoueur
+        print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
+        versus()
+        print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
+        # FIN HP + PERSO ANIMATION
+
+
         print "\n\n  ",listeIA[IA][0]," prends ",dmg," de degats !"
         if PV <= 0:
             print listeIA[IA][0]," est au tapis !"
@@ -148,6 +184,18 @@ def fight(pokedex,player):
 
         #partie fight IA
         if PV > 0:
+
+            #BARRES HP + PERSO (PAS TROUVE POUR METTRE DANS DEF A CAUSE DES PV)
+            os.system('clear')
+            pvbarre=PV
+            pvbarremanquant=50-pvbarre
+            pvbarrejoueur=PV2
+            pvbarremanquantjoueur=50-pvbarrejoueur
+            print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
+            versus()
+            print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
+            # FIN HP + PERSO ANIMATION
+
             ATK=random.randint(4,7)
             print "\n\n\n   ",listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
             time.sleep(2)
@@ -173,13 +221,26 @@ def fight(pokedex,player):
                 PV2=PV2-DMG2
                 if DMG2 == 0:
                     print "ECHEC CRITIQUE !"
+
+
+            #BARRES HP + PERSO (PAS TROUVE POUR METTRE DANS DEF A CAUSE DES PV)
+            os.system('clear')
+            pvbarre=PV
+            pvbarremanquant=50-pvbarre
+            pvbarrejoueur=PV2
+            pvbarremanquantjoueur=50-pvbarrejoueur
+            print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
+            versus()
+            print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
+            # FIN HP + PERSO ANIMATION
+
             print "\n\n  ",pokedex[k][0]," prends ",DMG2," de degats !"
             if PV2 <= 0:
-                print pokedex[k][0]," est au tapis !"
+                print "  "+pokedex[k][0]," est au tapis !"
             else:
                 print "   Il reste ",PV2," PV a ",pokedex[k][0]," !\n"
             if PV2 <0:
-                print pokedex[k][0]," est mort au combat !!\n"
+                print "  "+pokedex[k][0]," est mort au combat !!\n"
                 print """
   ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███
  ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
@@ -218,7 +279,6 @@ def save1(pokedex):
         writer = csv.writer(output, lineterminator='\n')
         writer.writerows(pokedex)
 
-def pvbar():
 
 
 
