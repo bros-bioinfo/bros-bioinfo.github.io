@@ -14,7 +14,7 @@ from draw import *
 
 
 def pause():
-    raw_input("   █ Appuyez sur ENTER pour continuer █")
+    raw_input("\n   █ Appuyez sur ENTER pour continuer █")
 
 def addIA(listeIA):
     os.system('clear')
