@@ -1,12 +1,66 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
 title: Bros-Bioinfo
+email: pierre@ja-jacquet.com
 description: Les cours du M1 de Bioinfo de Bordeaux.
+url: https://bros-bioinfo.github.io/ # the base hostname & protocol for your site
+keywords: ["Programming", "JS", "PYTHON"]
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          Europe/Paris
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
 
-theme: jekyll-theme-cayman
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
 
-gems:
-  - jekyll-default-layout
-
-plugins:
-  - jemoji
-  - jekyll-sitemap
-  - jekyll-seo-tag
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: bros-bioinfo
+  avatar: leonids-logo.png
+  job: "Student"
+  bio: "Student. Bordeaux France"
+  email: pierre@ja-jacquet.com
+  disqus-shortname: bros-bioinfo #username
+  twitter:  #username
+  facebook: #username
+  google:
+    plus: #username
+    analytics: UA-101771575-3
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: bros-bioinfo #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  codepen: #username
+  telegram: #username

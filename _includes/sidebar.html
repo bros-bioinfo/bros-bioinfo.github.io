@@ -1,0 +1,37 @@
+{% if page.author %} {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %} {% endif %}
+
+<div class="cover-card table-cell table-middle">
+  {% if author.avatar %}
+  <img src="{{ site.url }}/img/{{ author.avatar }}" alt="" class="avatar">
+  {% endif %}
+  <a href="{{ site.url }}/" class="author_name">{{ author.name }}</a>
+  <!--<span class="author_job">{{ author.job }}</span>
+  <span class="author_bio mbm">{{ author.bio }}</span>-->
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="{{ site.url }}/">home</a>
+        <span>/</span>
+      </li>
+    <!--  {% for page in site.pages %} {% if page.title %}
+      <li class="nav-item">
+        <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
+        {% unless forloop.last %}
+          <span>/</span>
+        {% endunless %}
+      </li>
+      {% endif %} {% endfor %}-->
+    </ul>
+    <a type="text" href="javascript:toggleDiv('content');" id="button1" value="LES AUTRES COURS">LES AUTRES COURS</a>
+    <div id="content" style="display:none">
+      <div id="gitlist" class="mx-auto"></div>
+    </div>
+<br><br>
+
+  <a type="text" href="javascript:toggleDiv('content2');" id="button2" value="SOMMAIRE DU COURS">SOMMAIRE DU COURS</a>
+  <div id="content2" style="display:none">
+  <div id="toc"></div>
+ </div>
+  </nav>
+  {% include social-links.html %}
+</div>
