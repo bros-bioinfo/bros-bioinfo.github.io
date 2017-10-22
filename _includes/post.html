@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article id="post-page" >
+    <a href=""><h2>{{ page.title }}</h2></a>
+    <time>{{ page.date | date_to_string }}</time>
+    <div class="content" >
+            {{ content }}
+    </div>
+</article>
+    {% include  disqus.html %}
