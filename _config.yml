@@ -3,6 +3,9 @@ description: Les cours du M1 de Bioinfo de Bordeaux.
 
 theme: jekyll-theme-cayman
 
+gems:
+  - jekyll-default-layout
+
 plugins:
   - jemoji
   - jekyll-sitemap
