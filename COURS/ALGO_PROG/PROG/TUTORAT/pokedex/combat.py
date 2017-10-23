@@ -12,7 +12,15 @@ import time
 from Tkinter import *
 from draw import *
 
-
+def echec():
+    print """
+            ███████╗ ██████╗██╗  ██╗███████╗ ██████╗     ██████╗██████╗ ██╗████████╗██╗ ██████╗ ██╗   ██╗███████╗    ██╗
+            ██╔════╝██╔════╝██║  ██║██╔════╝██╔════╝    ██╔════╝██╔══██╗██║╚══██╔══╝██║██╔═══██╗██║   ██║██╔════╝    ██║
+            █████╗  ██║     ███████║█████╗  ██║         ██║     ██████╔╝██║   ██║   ██║██║   ██║██║   ██║█████╗      ██║
+            ██╔══╝  ██║     ██╔══██║██╔══╝  ██║         ██║     ██╔══██╗██║   ██║   ██║██║▄▄ ██║██║   ██║██╔══╝      ╚═╝
+            ███████╗╚██████╗██║  ██║███████╗╚██████╗    ╚██████╗██║  ██║██║   ██║   ██║╚██████╔╝╚██████╔╝███████╗    ██╗
+            ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝     ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝   ╚═╝ ╚══▀▀═╝  ╚═════╝ ╚══════╝    ╚═╝
+"""
 def pause():
     raw_input("\n   █ Appuyez sur ENTER pour continuer █")
 
@@ -94,7 +102,7 @@ def fight(pokedex,player):
     choice=0
     while (PV > 0 and PV2 >0) :
         #partie fight JOUEUR
-        atk="\nQuelle attaque voulez-vous utiliser ?\n"
+        atk="\n     Quelle attaque voulez-vous utiliser ?\n"
         attaque1="CP: "+str(CP1)+"/2     | "+pokedex[k][4]
         attaque2="CP: "+str(CP2)+"/4     | "+pokedex[k][5]
         attaque3="CP: "+str(CP3)+"/6     | "+pokedex[k][6]
@@ -105,8 +113,19 @@ def fight(pokedex,player):
         #choice=int(choice)
         choice=index+1
         while (CP1 == 0 and choice+3 == 4) or (CP2 == 0 and choice+3 == 5) or (CP3 == 0 and choice+3 == 6) or (CP4 == 0 and choice+3 == 7):
-            choice=getpass.getpass("Il vous faut choisir une autre attaque, vous n'avez plus assez de CP !!\n")
-            choice=int(choice)
+            print "     Il vous faut choisir une autre attaque, vous n'avez plus assez de CP !!\n"
+            time.sleep(2)
+            os.system('clear')
+            atk="\nQuelle attaque voulez-vous utiliser ?\n"
+            attaque1="CP: "+str(CP1)+"/2     | "+pokedex[k][4]
+            attaque2="CP: "+str(CP2)+"/4     | "+pokedex[k][5]
+            attaque3="CP: "+str(CP3)+"/6     | "+pokedex[k][6]
+            attaque4="CP: "+str(CP4)+"/20   | "+pokedex[k][7]
+            option=[attaque1,attaque2,attaque3,attaque4]
+            option, index= pick(option,atk, indicator=' >')
+            #choice=getpass.getpass("")
+            #choice=int(choice)
+            choice=index+1
         atk=pokedex[k][choice+3]
 
         #BARRES HP + PERSO (PAS TROUVE POUR METTRE DANS DEF A CAUSE DES PV)
@@ -126,28 +145,37 @@ def fight(pokedex,player):
         os.system('clear')
         if choice+3 == 4:
             CP1 -= 1
-            dmg=random.randint(0,20)
+            dmg=random.randint(9,15)
+            if dmg == 9:
+                dmg=0
+                echec()
+                time.sleep(2)
             PV=PV-dmg
-            if dmg == 0:
-                print "ECHEC CRITIQUE !"
         if choice+3 == 5:
             CP2 -= 1
-            dmg=random.randint(0,15)
+            dmg=random.randint(6,12)
+            if dmg == 6:
+                dmg=0
+                echec()
+                time.sleep(2)
             PV=PV-dmg
-            if dmg == 0:
-                print "ECHEC CRITIQUE !"
         if choice+3 == 6:
             CP3 -= 1
-            dmg=random.randint(0,10)
+            dmg=random.randint(4,9)
             PV=PV-dmg
-            if dmg == 0:
-                print "ECHEC CRITIQUE !"
+            if dmg == 4:
+                dmg=0
+                echec()
+                time.sleep(2)
+            PV=PV-dmg
         if choice+3 == 7:
             CP4 -= 1
-            dmg=random.randint(0,6)
+            dmg=random.randint(0,5)
             PV=PV-dmg
             if dmg == 0:
-                print "ECHEC CRITIQUE !"
+                echec()
+                time.sleep(2)
+            PV=PV-dmg
 
         #BARRES HP + PERSO (PAS TROUVE POUR METTRE DANS DEF A CAUSE DES PV)
         os.system('clear')
@@ -160,22 +188,20 @@ def fight(pokedex,player):
         print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
         # FIN HP + PERSO ANIMATION
 
-
-        print "\n\n  ",listeIA[IA][0]," prends ",dmg," de degats !"
+        print "\n\n"
+        print "     ",listeIA[IA][0]," prends ",dmg," degats !"
         if PV <= 0:
-            print listeIA[IA][0]," est au tapis !"
-        else:
-            print "   Il reste ",PV," PV a ",listeIA[IA][0]," !\n"
+            print "     ",listeIA[IA][0]," est au tapis !"
         if PV <0:
-            print pokedex[k][0], " a gagne son du-du-du-duueeeeel !"
+            print "     ",pokedex[k][0], " a gagne son du-du-du-duueeeeel !"
             print """
 
-██╗   ██╗██╗ ██████╗████████╗ ██████╗ ██████╗ ██╗   ██╗
-██║   ██║██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗╚██╗ ██╔╝
-██║   ██║██║██║        ██║   ██║   ██║██████╔╝ ╚████╔╝
-╚██╗ ██╔╝██║██║        ██║   ██║   ██║██╔══██╗  ╚██╔╝
- ╚████╔╝ ██║╚██████╗   ██║   ╚██████╔╝██║  ██║   ██║
-  ╚═══╝  ╚═╝ ╚═════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝
+            ██╗   ██╗██╗ ██████╗████████╗ ██████╗ ██████╗ ██╗   ██╗
+            ██║   ██║██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗╚██╗ ██╔╝
+            ██║   ██║██║██║        ██║   ██║   ██║██████╔╝ ╚████╔╝
+            ╚██╗ ██╔╝██║██║        ██║   ██║   ██║██╔══██╗  ╚██╔╝
+             ╚████╔╝ ██║╚██████╗   ██║   ╚██████╔╝██║  ██║   ██║
+              ╚═══╝  ╚═╝ ╚═════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝
 
   """
         else:
@@ -197,29 +223,40 @@ def fight(pokedex,player):
             # FIN HP + PERSO ANIMATION
 
             ATK=random.randint(4,7)
-            print "\n\n\n   ",listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
+            print "\n\n\n       ",listeIA[IA][0]," lance l'attaque ",listeIA[IA][ATK]," !"
 
             print "\n"
             if ATK == 4:
-                DMG2=random.randint(0,20)
+                DMG2=random.randint(9,15)
+                if DMG2 == 9:
+                    DMG2=0
+                    os.system('clear')
+                    echec()
+                    time.sleep(2)
                 PV2=PV2-DMG2
-                if DMG2 == 0:
-                    print "ECHEC CRITIQUE !"
             if ATK == 5:
-                DMG2=random.randint(0,15)
+                DMG2=random.randint(6,12)
+                if DMG2 == 6:
+                    DMG2=0
+                    os.system('clear')
+                    echec()
+                    time.sleep(2)
                 PV2=PV2-DMG2
-                if DMG2 == 0:
-                    print "ECHEC CRITIQUE !"
             if ATK == 6:
-                DMG2=random.randint(0,10)
+                DMG2=random.randint(4,9)
+                if DMG2 == 4:
+                    DMG2=0
+                    os.system('clear')
+                    echec()
+                    time.sleep(2)
                 PV2=PV2-DMG2
-                if DMG2 == 0:
-                    print "ECHEC CRITIQUE !"
             if ATK == 7:
-                DMG2=random.randint(0,6)
-                PV2=PV2-DMG2
+                DMG2=random.randint(0,5)
                 if DMG2 == 0:
-                    print "ECHEC CRITIQUE !"
+                    os.system('clear')
+                    echec()
+                    time.sleep(2)
+                PV2=PV2-DMG2
             time.sleep(2)
             os.system('clear')
 
@@ -234,35 +271,20 @@ def fight(pokedex,player):
             print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
             # FIN HP + PERSO ANIMATION
 
-            print "\n\n  ",pokedex[k][0]," prends ",DMG2," de degats !"
+            print "\n\n     ",pokedex[k][0]," prends ",DMG2," degats !"
             if PV2 <= 0:
-                print "  "+pokedex[k][0]," est au tapis !"
+                print "     ",pokedex[k][0]," est au tapis !"
                 print """
-                  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███
-                 ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
-                ▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
-                ░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄
-                ░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒
-                 ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
-                  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░
-                ░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░
-                      ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░
+                              ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███
+                             ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
+                            ▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
+                            ░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄
+                            ░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒
+                             ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
+                              ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░
+                            ░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░
+                                  ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░
                 """
-            else:
-                print "   Il reste ",PV2," PV a ",pokedex[k][0]," !\n"
-            if PV2 <0:
-                print "  "+pokedex[k][0]," est mort au combat !!\n"
-                print """
-                  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███
-                 ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
-                ▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
-                ░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄
-                ░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒
-                 ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
-                  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░
-                ░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░
-                      ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░
-                                                                      ░                   """
             else:
                 pause()
                 os.system('clear')
