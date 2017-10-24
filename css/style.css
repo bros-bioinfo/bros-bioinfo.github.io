@@ -558,3 +558,13 @@ code{
 #calendar h2.centered{
   display: none!important
 }
+#caledanr row{
+  display: block!important;
+  padding-left: 15%!important;
+  padding-right: 15%!important;
+}
+@media  (min-width: 765px) and (max-width: 1600px) {
+#weeknum{
+  font-size: 0.9em;
+}
+}
