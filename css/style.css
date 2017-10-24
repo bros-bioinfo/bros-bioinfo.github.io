@@ -565,6 +565,6 @@ code{
 }
 @media  (min-width: 765px) and (max-width: 1600px) {
 #weeknum{
-  font-size: 0.9em;
+  font-size: 0.9em!important;
 }
 }
