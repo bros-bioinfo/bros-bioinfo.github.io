@@ -15,7 +15,7 @@ max-height: 50px !important;
 p {
   line-height: 1.5;
 font-size: larger!important;
-  margin: 30px 0; 
+  margin: 30px 0;
  text-align:justify;
 }
 
@@ -511,4 +511,54 @@ input[type="text"]:focus{
 }
 #toc a{
 color: #143687!important;
+}
+
+/* ---------CALENDAR----------- */
+
+
+#calendar .my-5{
+  margin:0px!important;
+}
+#calendar #masterYear-small{
+  display:none!important;
+}
+#calendar #masterTrack-small{
+    display:none!important;
+}
+#calendar .hidden-lg{
+  display: none!important;
+}
+#calendar .pt-5{
+  padding-top:35px!important;
+}
+#calendar .row {
+  overflow: auto;
+}
+
+@media (min-width: 768px){
+
+#calendar .container {
+    width:100%!important;
+    max-width: 100%;
+    padding-right:0px!important;
+}
+}
+@media (min-width: 576px){
+#calendar .container {
+    width: 100%!important;
+    max-width: 100%;
+    padding-right:0px!important;
+}
+}
+#calendar h2.centered {
+     display: inline;
+     padding-left: 50px;
+     padding-right: 50px;
+}
+#calendar h2.centered:after {
+     content: "   ";
+     white-space: pre;
+}
+#calendar .course{
+  border:none!important;
 }
