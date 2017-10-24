@@ -87,6 +87,7 @@ def fight(pokedex,player):
     pvbarremanquant=50-pvbarre
     pvbarrejoueur=int(pokedex[k][2])
     pvbarremanquantjoueur=50-pvbarrejoueur
+    print "\n\n"
     print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
     versus()
     print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
@@ -134,6 +135,7 @@ def fight(pokedex,player):
         pvbarremanquant=50-pvbarre
         pvbarrejoueur=PV2
         pvbarremanquantjoueur=50-pvbarrejoueur
+        print "\n\n"
         print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
         versus()
         print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
@@ -183,6 +185,7 @@ def fight(pokedex,player):
         pvbarremanquant=50-pvbarre
         pvbarrejoueur=PV2
         pvbarremanquantjoueur=50-pvbarrejoueur
+        print "\n\n"
         print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
         versus()
         print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
@@ -217,6 +220,7 @@ def fight(pokedex,player):
             pvbarremanquant=50-pvbarre
             pvbarrejoueur=PV2
             pvbarremanquantjoueur=50-pvbarrejoueur
+            print "\n\n"
             print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
             versus()
             print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
@@ -266,6 +270,7 @@ def fight(pokedex,player):
             pvbarremanquant=50-pvbarre
             pvbarrejoueur=PV2
             pvbarremanquantjoueur=50-pvbarrejoueur
+            print "\n\n"
             print "       "+str(pvbarre) +"/50"+"   "+ '█' * pvbarre +'░'*pvbarremanquant+" : HP |      " +listeIA[IA][0]
             versus()
             print "\n                                                 "+pokedex[k][0]+"      | HP: " + '█' * pvbarrejoueur +'░'*pvbarremanquantjoueur +"   "+str(pvbarrejoueur) +"/50"
