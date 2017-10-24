@@ -555,6 +555,6 @@ code{
 #calendar .course{
   border:none!important;
 }
-#calendar row + h2{
+#calendar h2.centered{
   display: none!important
 }
