@@ -242,7 +242,7 @@ menus="""
 """
 
 
-
+#MAIN
 pokedex=[]
 somme=0
 continuer=True
