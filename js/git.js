@@ -16,16 +16,16 @@ $.get("https://api.github.com/repos/bros-bioinfo/bros-bioinfo.github.io/git/tree
   test = test.replace(/\n/g, '"></a>\n');
   test = test.replace(/"><\/a>\n/, '');
   test = test.replace(/README"><\/a>/, '');
-  console.log("AVANT SPLIT:" + test);
+  //console.log("AVANT SPLIT:" + test);
 
   var strarray = test.split("\n");
 
-  console.log("ARRAY:" + strarray[1]);
+  //console.log("ARRAY:" + strarray[1]);
 
   //FORMATAGE DE L'URL
   n = 0;
 var nbfichiers = (data.match(/md|pdf/g) || []).length;
-console.log("NOMBRES DE FICHIERS:"+nbfichiers);
+//console.log("NOMBRES DE FICHIERS:"+nbfichiers);
   while (n < nbfichiers) {
     m = n - 1;
     if (n == 0) {
@@ -75,7 +75,7 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
 
 
 
-    console.log("URL" + url);
+  //  console.log("URL" + url);
 
     //COMPACTAGE
 
@@ -89,7 +89,7 @@ console.log("NOMBRES DE FICHIERS:"+nbfichiers);
     ulien = ulien.replace(/╶─/gm,' ╶─ '); //FIX WHITE SPACE
     ulien = ulien.replace(/ ╰─ /gm,'╰─');
     ulien = ulien.replace(/╰─/gm,' ╰─ '); //FIX SECOND WHITE SPACE
-    console.log("ulien:" + ulien);
+  //  console.log("ulien:" + ulien);
     $("#gitlist").append(ulien + "<br>");
     n++;
   }
