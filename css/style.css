@@ -558,7 +558,7 @@ code{
 #calendar h2.centered{
   display: none!important
 }
-#calendar row{
+#calendar .row{
   display: block!important;
   padding-left: 15%!important;
   padding-right: 15%!important;
