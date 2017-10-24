@@ -163,7 +163,7 @@ body {
         transform: translate3d(0, 100%, 0); } }
 
 header.masthead {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background: no-repeat center center;
   background-color: #777777;
   background-attachment: scroll;
