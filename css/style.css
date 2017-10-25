@@ -369,6 +369,11 @@ footer {
   color: white;
   border: 1px solid #0085A1;
   background-color: #0085A1; }
+
+#gitlist{
+  z-index: 20;
+  position: relative;
+}
 @media  (min-width: 300px) and (max-width: 650px) {
 #gitlist{
   font-size: 1em;
@@ -460,6 +465,14 @@ padding-right: 2px;
 padding-left: 4px;
 line-height: 1.7;
 }
+#gitlist a div.algo{
+  display: table-cell;
+  background: #C74141 !important;
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
 #readme h1, h2, h3, p, ul, li{
   color: rgb(0, 133, 161)!important;
 }
