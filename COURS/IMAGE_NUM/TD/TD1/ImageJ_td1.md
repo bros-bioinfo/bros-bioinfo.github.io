@@ -70,9 +70,27 @@ ou **equaliser** (attention car augmente le bruit)
 
 **Process/subtract background** : ajuster les défauts d'éclairage (il faut jouer sur le rayon qui doit être suppérieur aux objets d'interrêts) ou **masque de convolution**
 
+### Transformer l'image dans l'espace fréquentielle
+
+**FFT** -> Fast fourier Transform
+
+**Process/FFT :** représentation d'un spectre de puissance correspondant au module
+
+**Process/FFT :** retrouver l'image d'origine
+
+**Process/FFT/FD Math
+
+
+
 ### Process/Binary
 
-Menu qui va permettre notament de compter et d'identifier des objets dans une image. Le menu **Analyse/Analyse particles** permet d'ouvrir et compter les objets. Attention, si ils se touchent, comptent que pour 1. **Outlines** permet de délimiter et compter les objets, on peut alors jouer sur la taille et la forme.
+Menu qui va permettre notament de compter et d'identifier des objets dans une image. Le menu **Analyse/Analyse particles** permet d'ouvrir et compter les objets. Attention, si ils se touchent, comptent que pour 1.
+
+
+
+![alt text](https://media.giphy.com/media/pgqmxOMSYfX2g/giphy.gif)
+
+**Outlines** permet de délimiter et compter les objets, on peut alors jouer sur la taille et la forme.
 
 Voir **Analyse/set measurement**
 
