@@ -45,13 +45,17 @@ Dans tous les cas :
 
 **1. Sous windows**
 
-MIKTex
+MIKTex [le lien de téléchargement](https://miktex.org/download)
 
-un éditeur de texte: TexMaker
+un éditeur de texte: TexMaker [le lien de téléchargement](http://www.xm1math.net/texmaker/index_fr.html)
 
 **2. Sous linux**
 
 TexLive
+  Commande linux :
+  ```
+  sudo apt-get texlive-full
+  ```
 
 un éditeur de texte: emacs
 
@@ -76,13 +80,13 @@ Il est fortement recommandé d'avoir l'extension .tex lors de la création d'un 
 LaTex permet de créer différents types de document : un article scientifique ? Un livre ? Une lettre ? Un rapport ? Un CV ? ...
 Le choix de la classe va déterminer un certain nombre de paramètres par défaut, comme par exemple les marges, mais aussi fournir des instructions supplémentaires spécifiques.
 
-* article
+* ARTICLE
 
 Document d'environ une dizaine de pages, composé de parties et de sous partie.
 Cette classe est réservée aux "petits" documents. Le titre est sur la même page que le début du texte.
 
 
-* report
+* REPORT
 
 Pour des rapports longs, des thèses, des petits livres.
 Cette classe dispose d'une page de titre séparée, suivie d'une page blanche.
@@ -90,14 +94,15 @@ Le corps du rapport est peut être décomposé en parties, sections, sous-sectio
 Cette classe propose aussi un environnement abstract pour la mise en forme automatique d'un résumé.
 
 
-* book
+* BOOK
 
 Pour écrire de véritables livres, avec cette fois ci des chapitres à disposition, avec les mêmes caractéristiques que pour la classe report.
 
 
-* slides, beamer
+* SLIDES, BEAMER
 
 Pour faire des présentations orales
+[pour ceux que ça intéresse de faire des diapos en LaTex](https://math-linux.com/latex-4/article/introduction-a-beamer-faire-une-presentation-en-latex)
 
 
 Pour les exemples je me servirais de mon rapport de stage, ce qui suit des % sont des commentaires (très utile de commenter son code !!!)
@@ -118,24 +123,26 @@ entre {} la classe choisie
 ### Les packages
 
 Il existe de nombreux packages mais après avoir déterminé la classe de son document, ce sont des éléments indispensables qui permettent de bien gérer son document.
-
-    %packages de base pour le choix de l'encodage, de la langue
-    \usepackage[utf8]{inputenc}
-    \usepackage[french,english]{babel}
-    \usepackage[T1]{fontenc}
+```latex
+%packages de base pour le choix de l'encodage, de la langue
+\usepackage[utf8]{inputenc}
+\usepackage[french,english]{babel}
+\usepackage[T1]{fontenc}
+```
 
 Le package inputenc sert pour l'encodage d'entrée, i.e le codage des caractères utilisés dans le fichier source et sert pour taper les accents "é" au lieu de \'{e} par exemple.
 
 Le package fontenc permet quant à lui permet de prendre en charge les caractères accentués à la sortie du fichier.
 
-    %packages pour les illustrations, la police, les marges, l'insertion de liens, de pages pdf
-    \usepackage{graphicx}
-    \usepackage{lmodern}
-    \usepackage{libertine}
-    \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-    \usepackage[colorlinks=true]{hyperref}
-    \usepackage{pdfpages}
-
+```latex
+%packages pour les illustrations, la police, les marges, l'insertion de liens, de pages pdf
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{libertine}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{pdfpages}
+```
 
 ### Squelette d'un bon document
 
@@ -148,16 +155,18 @@ Le package fontenc permet quant à lui permet de prendre en charge les caractèr
 
 * Écrire les "options" de mise en page que l'on souhaite
 
-      \setlength{\parindent}{40pt}
-      \setlength{\parskip}{1.5ex}
+```latex
+\setlength{\parindent}{40pt}
+\setlength{\parskip}{1.5ex}
 
-      %commandes créées
+%commandes créées
 
-      % informations sur le document
-      \author{Nom Prénom}
-      \title{Titre}
-      \date{jj/mm/aaaa}
-      \makeatletter %pour réutiliser les infos comme des variables
+% informations sur le document
+\author{Nom Prénom}
+\title{Titre}
+\date{jj/mm/aaaa}
+\makeatletter %pour réutiliser les infos comme des variables
+```
 
 
 
@@ -221,57 +230,53 @@ Parfois des commandes n'existent pas et il faut les créer, par exemple:
 
 ### Faire une page de garde (un exemple)
 
-
-      \begin{titlepage}
-          \begin{sffamily}
-            \enlargethispage{2cm} %diminuer la marge du bas
-                  \begin{center}
-                      %logo et cadre du stage où s'inscrit la formation
-                      \raisebox{-0.3cm}{\includegraphics[width=100pt, height=100pt, scale=0.2]{nom.png}}
-                      %
-                      \textsc{\LARGE{Université de Poitiers}}
-                      %
-                      \raisebox{-0.3cm}{\includegraphics[width=100pt, height=75pt, scale=0.2]{nom.png}}\\[1.5cm]
-                      %
-                      \textsc{\Large{Faculté des Sciences Fondamentales et Appliquées}} \\[1cm]
-                      %
-                      \includegraphics[width=100pt, height=100pt, scale=0.2]{nom.png}\\[1cm]
-                      %
-                      \textsc{\large{Stage de Validation de L3 Génie Bio-Informatique}}\\
-                  \end{center}
-                  %
-                  %Titre
-                  %
-                  \HRule \\
-                  \begin{center}
-                      {\huge \bfseries \@title \\}
-                  \end{center}
-                  \HRule \\[0.3cm]
-                  %
-                  \begin{center}
-
-                      %nom de l'auteur du prérapport
-                      \begin{center}
-                          \Large \@author\\ \@date\\
-                      \end{center}
-                    %
-
-                    %logo du lieu d'accueil du stage
-                    \includegraphics[width=100pt, height=100pt, scale=0.2]{nom.png}\\
-                    %Nom des maître de stage\begin{center}
-                    \large \emph{Maîtres de stage:}
-                    Mme Gaëlle \textsc{Skapin}, Mme Rita \textsc{Zrour}, M Éric \textsc{Andres}, Mme Mousumi \textsc{Dutt} \\
-                    \large \emph{Lieu:}
-                    Laboratoire de recherche XLIM, Futuroscope\\[1cm]
-                  \end{center}
-
-          \end{sffamily}
-          %
-      \end{titlepage}
+```latex
+\begin{titlepage}
+    \begin{sffamily}
+    \enlargethispage{2cm} %diminuer la marge du bas
+        \begin{center}
+            %logo et cadre du stage où s'inscrit la formation
+            \raisebox{-0.3cm}{\includegraphics[width=100pt, height=100pt, scale=0.2]{nom.png}}
+            %
+            \textsc{\LARGE{Université de Poitiers}}
+            %
+            \raisebox{-0.3cm}{\includegraphics[width=100pt, height=75pt, scale=0.2]{nom.png}}\\[1.5cm]
+            %
+            \textsc{\Large{Faculté des Sciences Fondamentales et Appliquées}} \\[1cm]
+            %
+            \includegraphics[width=100pt, height=100pt, scale=0.2]{nom.png}\\[1cm]
+            %
+            \textsc{\large{Stage de Validation de L3 Génie Bio-Informatique}}\\
+        \end{center}
+        %
+        %Titre
+        %
+        \HRule \\
+        \begin{center}
+              {\huge \bfseries \@title \\}
+        \end{center}
+        \HRule \\[0.3cm]
+        %
+        \begin{center}
+            %nom de l'auteur du prérapport
+            \begin{center}
+                \Large \@author\\ \@date\\
+            \end{center}
+            %
+            %logo du lieu d'accueil du stage
+            \includegraphics[width=100pt, height=100pt, scale=0.2]{nom.png}\\
+            %Nom des maître de stage\begin{center}
+            \large \emph{Maîtres de stage:}
+            Mme Gaëlle \textsc{Skapin}, Mme Rita \textsc{Zrour}, M Éric \textsc{Andres}, Mme Mousumi \textsc{Dutt} \\
+            \large \emph{Lieu:}
+            Laboratoire de recherche XLIM, Futuroscope\\[1cm]
+        \end{center}
+    \end{sffamily}
+    %
+\end{titlepage}
+```
 
 ### Insérer des annexes
-
-
 
 ### Rédaction de mon papier : en un seul ou en plusieurs fichiers ?
 
@@ -290,3 +295,6 @@ BREF c'est une fiche qui peut aider mais ça reste pas un manuel
 ### Les manuels et endroits où vous trouverez de l'aide
 
 [Rédaction en LaTex](https://www.bibl.ulaval.ca/fichiers_site/services/formation-latex-ul.pdf)
+[Groupe francophone d'aide en LaTex](https://www.gutenberg.eu.org/-TeXniques-)
+[xm1maths.fr](http://www.xm1math.net/doculatex/)
+[LaTex project](http://www.latex-project.org/help/documentation/)
