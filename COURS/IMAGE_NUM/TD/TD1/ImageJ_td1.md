@@ -34,6 +34,8 @@ outil polygone :**double clic** : ferme le polygone
 
 -**"+" et "-"** au clavier pour zoomer sur l'image
 
+Tracer l'histograme = **ctrl+H**
+
 ## **Image**
 
 **Image/color/split channel** : séparer les trois couleurs.
@@ -45,8 +47,6 @@ outil polygone :**double clic** : ferme le polygone
 **Image/scale** :redimentionner l'image
 
 **Analyze/Plot profile** : analyse les valeurs d'un tracé (et possibilité de save au format .csv)
-
-Tracer l'histograme = **ctrl+H**
 
 **Stacks** : menu pour fusionner les images, découper l'image en plusieurs parties, superposer, annimer etc...
 
@@ -69,3 +69,31 @@ Rappel de cours : **il existe deux types de bruit**
 ou **equaliser** (attention car augmente le bruit)
 
 **Process/subtract background** : ajuster les défauts d'éclairage (il faut jouer sur le rayon qui doit être suppérieur aux objets d'interrêts) ou **masque de convolution**
+
+### Process/Binary
+
+Menu qui va permettre notament de compter et d'identifier des objets dans une image. Le menu **Analyse/Analyse particles** permet d'ouvrir et compter les objets. Attention, si ils se touchent, comptent que pour 1. **Outlines** permet de délimiter et compter les objets, on peut alors jouer sur la taille et la forme.
+
+Voir **Analyse/set measurement**
+
+**Make Binary :** transforme l'image en image binaire
+
+**Erod** erosion des objets; plusieurs cycles peuvent être requis pour les séparer.
+
+**Dilatation :** inverse de l'érosion
+
+**Iteration :** ouvre un menu où il est possible de changer le nombre d'itération qui seront appliqués
+
+**Skeletonization :** donne l'axe médian
+
+**Process/Image calculator :** superposer avec des *opérateurs logiques*.
+
+Rappel :
+* True = White
+* False = Black
+
+**Analyse/set measurement :** donne des informations sur l'image, plusieurs case à cocher qui renvoie des valeurs concernant l'aire, la position, feret etc...
+
+## Plugins
+
+**Plugins/Macro/Record :** permet de renvoyer les commandes en javascript des actions que l'on fait avec l'interface graphique.
