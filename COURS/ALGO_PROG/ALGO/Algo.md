@@ -24,7 +24,46 @@ Le domaine qui étudie les algorithmes est appelé l'algorithmique. L'algorithmi
 
 ## II. Pile et File
 
+### Les piles (LIFO = Last in First OUT)
 
+
+Les piles sont des structures de données contenant des éléments qui peuvent apparaitre en plusieurs exemplaires.
+Les piles possèdent 2 opérations:
+
+- empiler (P,e) qui ajoute l'élement
+- depiler (P) qui enlève un élement
+
+et qui vérifie la propriété suivante:
+"Si un élément **e** est ajoute avant l'élement **f** alors **e** sera enlevé après **f**"
+
+Les pile sont aussi appelées LIFO pour "Last un First out". Voici un emplacement possible des piles:
+```python
+def creer_pile():
+  return[]
+
+def empiler(pile,element):
+  pile.append(element)
+
+def depiler(pile):
+  return pile.pop()
+```
+
+**Exemple d'utilisation:**
+- P= créer pile()
+- empiler(P,2)
+- empiler(P,1)
+- e=depiler(P)
+- print (e)
+- e=depiler(P)
+- print(e)
+
+### Les files (FIFO = First in first OUT)
+
+Les files sont des structures de données contenant des elements qui peuvent apparaître en plusieurs exemplaires et qui possèdent 2 opération:
+- enfiler (F,e) qui ajoute un élemetn dans la file
+- defiler (F) qui enlève un élement de la file
+
+Un élement **e** est ajouté avant l'élément **b** alors l'élément **e** sera enlevé avant l'élément **b**.
 ## III. La récursivité
 ## IV. Recherche d'un élément dans un tableur
 ## V. Listes
