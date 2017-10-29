@@ -1,9 +1,9 @@
 /* =========================================================
  * bootstrap-treeview.css v1.2.0
  * =========================================================
- * Copyright 2013 Jonathan Miles 
+ * Copyright 2013 Jonathan Miles
  * Project URL : http://www.jondmiles.com/bootstrap-treeview
- *	
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -34,4 +34,140 @@
 .treeview .node-disabled {
 	color: silver;
 	cursor: not-allowed;
+}
+
+#menugeneral{
+	text-align: left!important;
+	color:white!important;
+}
+
+#menugeneral h1,#menugeneral h2,#menugeneral h3,#menugeneral h4{
+	color:white!important;
+}
+
+#menugeneral .form-control{
+	background: white!important;
+	border:1px solid white!important;
+}
+#menugeneral #recent a{
+color: white!important;
+font-weight: bold!important;
+}
+#menugeneral #recent a:hover{
+color: white!important;
+}
+#menugeneral .list-group a{
+	padding-left: 12px!important;
+}
+#menugeneral .search-result{
+color:#ff8700 !important;
+}
+
+/* ==========================================================================
+   Calendar Section
+   ========================================================================== */
+
+.calendar {
+    font-size: 12px;
+    color: #000;
+}
+
+.week {
+    font-size  : 24px;
+    font-weight: 300;
+    font-family:'Raleway';
+    color      : #333;
+}
+
+.calendar ul {
+   font-size: 14px;
+}
+
+.student-group {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    margin: 5px;
+
+}
+.course {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    margin: 5px;
+
+}
+
+/* ---------CALENDAR----------- */
+
+
+#calendar .my-5{
+  margin:0px!important;
+}
+#calendar #masterYear-small{
+  display:none!important;
+}
+#calendar #masterTrack-small{
+    display:none!important;
+}
+#calendar .hidden-lg{
+  display: none!important;
+}
+#calendar .pt-5{
+  padding-top:35px!important;
+}
+#calendar .row {
+  overflow: auto;
+}
+
+@media (min-width: 768px){
+
+#calendar .container {
+    width:100%!important;
+    max-width: 100%;
+    padding-right:0px!important;
+}
+}
+@media (min-width: 576px){
+#calendar .container {
+    width: 100%!important;
+    max-width: 100%;
+    padding-right:0px!important;
+}
+}
+#calendar h2.centered {
+     display: inline;
+     padding-left: 50px;
+     padding-right: 50px;
+}
+#calendar h2.centered:after {
+     content: "   ";
+     white-space: pre;
+}
+#calendar .course{
+  border:none!important;
+}
+#calendar h2.centered{
+  display: none!important
+}
+#calendar .row{
+  display: block!important;
+  padding-left: 15%!important;
+  padding-right: 15%!important;
+}
+@media  (min-width: 765px) and (max-width: 1600px) {
+#weeknum{
+  font-size: 0.9em!important;
+}
+}
+#calendar li{
+color:rgb(3, 54, 65) !important;
+}
+#calendar #weekForward{
+	padding: 0!important;
+border: 0!important;
+}
+#calendar #weekBackward{
+	border: 0!important;
+	padding: 0!important;
 }

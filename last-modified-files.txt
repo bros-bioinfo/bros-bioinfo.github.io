@@ -1,7 +1,6 @@
 <!DOCTYPE html> <html> <head></head> <body>
 <a href="https://bros-bioinfo.github.io/COURS/ALGO_PROG/ALGO/Algo">Algo</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/TUTO_FICHES/emacs">emacs</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/TUTO_COURS/TUTO_&_FICHES/LaTex_FICHES/LaTex">LaTex</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/TUTO_FICHES/LaTex">LaTex</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/reponse_tutorat">reponse_tutorat</a><br>
 </body></html>

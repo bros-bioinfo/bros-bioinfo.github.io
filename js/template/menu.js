@@ -116,9 +116,9 @@ onNodeSelected: function(event, node) {
 var search = function(e) {
   var pattern = $("#input-search").val();
   var options = {
-    ignoreCase: true,
-    exactMatch: false,
-    revealResults: true
+    ignoreCase: $("#chk-ignore-case").is(":checked"),
+    exactMatch: $("#chk-exact-match").is(":checked"),
+    revealResults: $("#chk-reveal-results").is(":checked")
   };
   var results = $searchableTree.treeview("search", [ pattern, options ]);
 
