@@ -176,3 +176,6 @@ echo '<!DOCTYPE html> <html> <head></head> <body>'| cat - last-modified-files.tx
 echo '</body></html>' >> last-modified-files.txt
 
 rm last-modified-filestemp.txt
+
+
+git add --all; git commit -m $1; git push --all
