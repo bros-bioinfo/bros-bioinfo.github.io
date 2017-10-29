@@ -71,7 +71,7 @@ showBorder: false,
 showIcon: true,
 showCheckbox: false,
 expandIcon: "glyphicon glyphicon-folder-close",
-collapseIcon: "glyphicon glyphicon-folder-open",
+collapseIcon: "fa fa-folder-open",
 tags: ["available"],
 showTags: true,
 
