@@ -156,6 +156,8 @@ function expandNode(nodeId) {
 //});
 
 $("#recent").load("last-modified-files.txt");
+$("a[href="#"]").attr("href", "#fh5co-work");
+
 
 
 
