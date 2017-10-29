@@ -46,14 +46,24 @@ function getTree() {
   ]},
   {"type":"directory",text:"TUTO_FICHES",nodes:[
     {"type":"directory",text:"PYTHON",custom:"10271345",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/1-variables-et-types-python.pdf",text:"1-variables-et-types-python.pdf",custom:"10271345"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/2-conditionnelles-boucles.pdf",text:"2-conditionnelles-boucles.pdf",custom:"10271345"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/3-fonctions.pdf",text:"3-fonctions.pdf",custom:"10271345"},
       {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/reponse_tutorat",text:"reponse_tutorat",custom:"10271345"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_python.pdf",text:"tutorat_python.pdf",custom:"10271345"},
       {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_(réponses)",text:"tutorat_(réponses)",custom:"10271345"},
       {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_(sans_les_réponses)",text:"tutorat_(sans_les_réponses)",custom:"10271345"},
     ]},
+    {"type":"directory",text:"WEB",custom:"10271345",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-1.pdf",text:"IMAJS-1.pdf",custom:"10271345"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-2.pdf",text:"IMAJS-2.pdf",custom:"10271345"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-3.pdf",text:"IMAJS-3.pdf",custom:"10271345"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-4.pdf",text:"IMAJS-4.pdf",custom:"10271345"},
+    ]},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/apprendre_python3_5(G_Swinnen).pdf",text:"apprendre_python3_5(G_Swinnen).pdf",custom:"10271345"},
     {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/emacs",text:"emacs",custom:"10271345"},
     {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/LaTex",text:"LaTex",custom:"10271345"},
-  ]},
-  {"type":"report","directories":9,"files":24}
+  ]}
 ]
 ;
 return data;
@@ -65,8 +75,9 @@ enableLinks: true,
 showBorder: false,
 showIcon: true,
 showCheckbox: false,
-expandIcon: "glyphicon glyphicon-folder-close",
-collapseIcon: "glyphicon glyphicon-folder-open",
+expandIcon: "fa fa-folder",
+collapseIcon: "fa fa-folder-open",
+emptyIcon: "fa fa-file-text-o",
 tags: ["available"],
 showTags: true,
 

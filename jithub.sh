@@ -7,7 +7,7 @@ echo 'function getTree() {
   var data = ' > js/menu.js #I'm a noob so i create the js directly - i don't know how to load json into javascript next
 
 
-/usr/bin/tree COURS/* -f -D -P '*\.md' --dirsfirst --prune -C -J >> js/menu.js #output JSON TREE \o/ YEAHHH
+/usr/bin/tree COURS/* -f --noreport -D -P '*\.md|*\.pdf' --dirsfirst --prune -C -J >> js/menu.js #output JSON TREE \o/ YEAHHH
 
 
 filename="js/menu.js"
@@ -70,8 +70,9 @@ enableLinks: true,
 showBorder: false,
 showIcon: true,
 showCheckbox: false,
-expandIcon: "glyphicon glyphicon-folder-close",
+expandIcon: "fa fa-folder",
 collapseIcon: "fa fa-folder-open",
+emptyIcon: "fa fa-file-text-o",
 tags: ["available"],
 showTags: true,
 
