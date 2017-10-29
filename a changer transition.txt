@@ -1,2 +1,0 @@
-config: tout les liens vers pierre.github  ne pas oublier --- https
-git js aussi
