@@ -2,67 +2,67 @@ function getTree() {
   var data = 
 [
   {"type":"directory",text:"ALGO_PROG",nodes:[
-    {"type":"directory",text:"ALGO",custom:"10271345",nodes:[
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/ALGO/Algo",text:"Algo",custom:"10271345"},
+    {"type":"directory",text:"ALGO",custom:"10241623",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/ALGO/Algo",text:"Algo",custom:"10241622"},
     ]},
-    {"type":"directory",text:"PROG",custom:"10271345",nodes:[
-      {"type":"directory",text:"TD",custom:"10271345",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/PROG/TD/Exos_baldacci_py",text:"Exos_baldacci_py",custom:"10271345"},
+    {"type":"directory",text:"PROG",custom:"10261402",nodes:[
+      {"type":"directory",text:"TD",custom:"10241514",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/PROG/TD/Exos_baldacci_py",text:"Exos_baldacci_py",custom:"10241514"},
       ]},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/PROG/Intro_programmation",text:"Intro_programmation",custom:"10271345"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/PROG/Intro_programmation",text:"Intro_programmation",custom:"10241514"},
     ]},
-    {"type":"directory",text:"USI",custom:"10271345",nodes:[
-      {"type":"directory",text:"TD",custom:"10271345",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/1_Unix",text:"1_Unix",custom:"10271345"},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"10271345"},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/3_Processus",text:"3_Processus",custom:"10271345"},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/4_Shell",text:"4_Shell",custom:"10271345"},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/7_Utilitaires",text:"7_Utilitaires",custom:"10271345"},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/shell_seb",text:"shell_seb",custom:"10271345"},
+    {"type":"directory",text:"USI",custom:"10241514",nodes:[
+      {"type":"directory",text:"TD",custom:"10241514",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/1_Unix",text:"1_Unix",custom:"10241514"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"10241514"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/3_Processus",text:"3_Processus",custom:"10241514"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/4_Shell",text:"4_Shell",custom:"10241514"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/7_Utilitaires",text:"7_Utilitaires",custom:"10241514"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/TD/shell_seb",text:"shell_seb",custom:"10241514"},
       ]},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/Utilisation_systeme_info",text:"Utilisation_systeme_info",custom:"10271345"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/ALGO_PROG/USI/Utilisation_systeme_info",text:"Utilisation_systeme_info",custom:"10241514"},
     ]},
   ]},
   {"type":"directory",text:"IMAGE_NUM",nodes:[
-    {"type":"directory",text:"TD",custom:"10271345",nodes:[
-      {"type":"directory",text:"TD1",custom:"10271345",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"10271345"},
+    {"type":"directory",text:"TD",custom:"10241514",nodes:[
+      {"type":"directory",text:"TD1",custom:"1026  924",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"1026  924"},
       ]},
     ]},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/IMAGE_NUM/Image",text:"Image",custom:"10271345"},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/IMAGE_NUM/Javascript",text:"Javascript",custom:"10271345"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/IMAGE_NUM/Image",text:"Image",custom:"10241514"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/IMAGE_NUM/Javascript",text:"Javascript",custom:"10241514"},
   ]},
   {"type":"directory",text:"OMIC_BIOINFO",nodes:[
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/OMIC_BIOINFO/Omic_bioinfo",text:"Omic_bioinfo",custom:"10271345"},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/OMIC_BIOINFO/Philogenie",text:"Philogenie",custom:"10271345"},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"10271345"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/OMIC_BIOINFO/Omic_bioinfo",text:"Omic_bioinfo",custom:"10241514"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/OMIC_BIOINFO/Philogenie",text:"Philogenie",custom:"10241514"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"10241514"},
   ]},
   {"type":"directory",text:"STATS",nodes:[
-    {"type":"directory",text:"TD2",custom:"10271345",nodes:[
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/STATS/TD2/TD2",text:"TD2",custom:"10271345"},
+    {"type":"directory",text:"TD2",custom:"10241514",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/STATS/TD2/TD2",text:"TD2",custom:"10241514"},
     ]},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/STATS/Intro_stats",text:"Intro_stats",custom:"10271345"},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/STATS/seqChronoSeb",text:"seqChronoSeb",custom:"10271345"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/STATS/Intro_stats",text:"Intro_stats",custom:"10241514"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/STATS/seqChronoSeb",text:"seqChronoSeb",custom:"10241514"},
   ]},
   {"type":"directory",text:"TUTO_FICHES",nodes:[
-    {"type":"directory",text:"PYTHON",custom:"10271345",nodes:[
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/1-variables-et-types-python.pdf",text:"1-variables-et-types-python.pdf",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/2-conditionnelles-boucles.pdf",text:"2-conditionnelles-boucles.pdf",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/3-fonctions.pdf",text:"3-fonctions.pdf",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/reponse_tutorat",text:"reponse_tutorat",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_python.pdf",text:"tutorat_python.pdf",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_(réponses)",text:"tutorat_(réponses)",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_(sans_les_réponses)",text:"tutorat_(sans_les_réponses)",custom:"10271345"},
+    {"type":"directory",text:"PYTHON",custom:"10311021",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/1-variables-et-types-python.pdf",text:"1-variables-et-types-python.pdf",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/2-conditionnelles-boucles.pdf",text:"2-conditionnelles-boucles.pdf",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/3-fonctions.pdf",text:"3-fonctions.pdf",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/reponse_tutorat",text:"reponse_tutorat",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_python.pdf",text:"tutorat_python.pdf",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_(réponses)",text:"tutorat_(réponses)",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/tutorat_(sans_les_réponses)",text:"tutorat_(sans_les_réponses)",custom:"10311021"},
     ]},
-    {"type":"directory",text:"WEB",custom:"10271345",nodes:[
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-1.pdf",text:"IMAJS-1.pdf",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-2.pdf",text:"IMAJS-2.pdf",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-3.pdf",text:"IMAJS-3.pdf",custom:"10271345"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-4.pdf",text:"IMAJS-4.pdf",custom:"10271345"},
+    {"type":"directory",text:"WEB",custom:"10311021",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-1.pdf",text:"IMAJS-1.pdf",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-2.pdf",text:"IMAJS-2.pdf",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-3.pdf",text:"IMAJS-3.pdf",custom:"10311021"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-4.pdf",text:"IMAJS-4.pdf",custom:"10311021"},
     ]},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/apprendre_python3_5(G_Swinnen).pdf",text:"apprendre_python3_5(G_Swinnen).pdf",custom:"10271345"},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/emacs",text:"emacs",custom:"10271345"},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/LaTex",text:"LaTex",custom:"10271345"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/apprendre_python3_5(G_Swinnen).pdf",text:"apprendre_python3_5(G_Swinnen).pdf",custom:"10311021"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/emacs",text:"emacs",custom:"10311021"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/LaTex",text:"LaTex",custom:"10311021"},
   ]}
 ]
 ;
