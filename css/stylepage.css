@@ -513,6 +513,10 @@ input[type="text"]:focus{
 color: #143687!important;
 }
 
+.row{
+  margin-left: auto!important;
+  margin-right:auto!important;
+}
 /* ---------CALENDAR-----------
 
 
