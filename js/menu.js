@@ -46,8 +46,8 @@ function getTree() {
       {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/STATS/seqChronoSeb",text:"seqChronoSeb",custom:"10271345"},
     ]},
   ]},
-  {"type":"directory",href:"#fh5co-work",text:"TUTO_ALLER_PLUS_LOIN",nodes:[
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_ALLER_PLUS_LOIN/plusloin",text:"plusloin",custom:"112 1815"},
+  {"type":"directory",href:"#fh5co-work",text:"POUR_ALLER_PLUS_LOIN",nodes:[
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/POUR_ALLER_PLUS_LOIN/plusloin",text:"plusloin",custom:"112 1815"},
   ]},
   {"type":"directory",href:"#fh5co-work",text:"TUTO_FICHES",nodes:[
     {"type":"directory",href:"#fh5co-work",text:"PYTHON",custom:"10271345",nodes:[
