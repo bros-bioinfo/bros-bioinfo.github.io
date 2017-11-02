@@ -517,6 +517,9 @@ color: #143687!important;
   margin-left: auto!important;
   margin-right:auto!important;
 }
+.social-links ul li a.social-link-item{
+  color: white!important;
+}
 /* ---------CALENDAR-----------
 
 
