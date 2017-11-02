@@ -27,8 +27,73 @@
 
       <!-- MENU HERE -->
       <div id="gitlist" class="mx-auto"></div>
+
+
+
+      <!-- MENU HERE SORRY FOR THIS HTML STRUCTURE BTW -->
+      <div class="container" id="menugeneral" style="margin-top:50px">
+
+
+
+      <div class="container" style="margin-bottom:20px">
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input-search" class="sr-only">Search Tree:</label>
+                <input class="form-control" id="input-search" placeholder="Chercher un cours..." value="" type="input">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="checkbox" style="display:none">
+                <label>
+                  <input class="checkbox" id="chk-ignore-case" value="false" type="checkbox">
+                  Ignore Case
+                </label>
+              </div>
+              <div class="checkbox" style="display:none">
+                <label>
+                  <input class="checkbox" id="chk-exact-match" value="false" type="checkbox">
+                  Exact Match
+                </label>
+              </div>
+              <div class="checkbox" style="display:none">
+                <label>
+                  <input class="checkbox" id="chk-reveal-results" value="false" type="checkbox">
+                  Reveal Results
+                </label>
+              </div>
+              <button type="button" class="btn btn-primary" id="btn-search">Chercher !</button>
+              <button type="button" class="btn btn-default" id="btn-clear-search">Reset</button>
+
+            </div>
+      </div>
+      </div>
+      <div class="container">
+      <div class="row">
+              <div class="col-md-6">
+              <h4 style="padding-left:15px; color:#19408f" >COURS</h2>
+                <div id="tree"></div>
+
+              </div>
+              <div class="col-md-4">
+                <h4 style="color:#19408f">Les derniers fichiers modifiés</h2>
+                  <div id="recent"></div>
+              </div>
+          </div>
+      </div>
+
+
+      </div>
+
       <!-- END MENU -->
-			<div id="tree"></div>
+
+
+
+
+
+      <!-- END MENU -->
+
     </div>
 <br><br>
 
