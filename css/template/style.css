@@ -1431,6 +1431,7 @@ padding-top: 5px;
 }
 .cover{
   background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%)!important;
+  z-index: 255;
 }
 
 .cover a{
@@ -1441,4 +1442,15 @@ padding-top: 5px;
 }
 .node-selected a{
   color:white!important;
+}
+@media (min-width: 601px) {
+#sidebarre{
+  overflow-y: auto;
+  height: 100vh;
+}
+}
+
+@media (max-width: 600px) {
+#sidebarre{
+}
 }
