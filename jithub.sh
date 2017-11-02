@@ -26,7 +26,7 @@ do
             sed -i "${lineNo}s/$nameextractf\"/$nameextractf\",name:\"$nameextractf\"/" js/menu.js
     fi
     if [[ $ligne == *"directory"* ]]; then
-      sed -i "${lineNo}s/,href:\"[^\"]*\"/,href:\"#menucours\"/" js/menu.js
+      sed -i "${lineNo}s/,href:\"[^\"]*\"/,href:\"#fh5co-work\"/" js/menu.js
     fi
     lineNo=$((lineNo+1))
 done < "$filename"
