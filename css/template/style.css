@@ -1453,4 +1453,10 @@ padding-top: 5px;
 @media (max-width: 989px) {
 #sidebarre{
 }
+.avatar{
+  display: none;
+}
+.social-links{
+  display: none;
+}
 }
