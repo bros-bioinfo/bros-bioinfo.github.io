@@ -250,13 +250,13 @@ th {
   a[href^="javascript:"]:after {
     content: "";
   }
-
+/*
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
+*/
   thead {
     display: table-header-group;
   }
@@ -1902,7 +1902,7 @@ kbd kbd {
   font-weight: bold;
   box-shadow: none;
 }
-
+/*
 pre {
   display: block;
   padding: 9.5px;
@@ -1915,7 +1915,7 @@ pre {
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
+}*/
 /*pre code {
   padding: 0;
   font-size: inherit;
