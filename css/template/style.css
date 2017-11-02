@@ -1433,6 +1433,6 @@ padding-top: 5px;
   background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%)!important;
 }
 
-.cover a{
+.cover div:not(#tree) a{
   color:white!important;
 }
