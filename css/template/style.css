@@ -1439,3 +1439,6 @@ padding-top: 5px;
 #tree a{
   color:#428BCA!important;
 }
+.node-selected a{
+  color:white!important;
+}
