@@ -1434,14 +1434,11 @@ padding-top: 5px;
 }
 
 .cover a{
-  color:white!important;
+  color:white;
 }
 #tree a{
-  color:#428BCA!important;
+  color:#428BCA;
 }
 .node-selected a{
   color:white!important;
-}
-pre{
-
 }
