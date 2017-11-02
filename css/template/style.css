@@ -1429,3 +1429,10 @@ padding-top: 5px;
 .table{
   margin-bottom:0px!important;
 }
+.cover{
+  background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%)!important;
+}
+
+.cover a{
+  color:white!important;
+}
