@@ -121,7 +121,7 @@ hr {
 pre {
   overflow: auto;
 }
-
+/*
 code,
 kbd,
 pre,
@@ -129,7 +129,7 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-
+*/
 button,
 input,
 optgroup,
@@ -1872,7 +1872,7 @@ address {
   font-style: normal;
   line-height: 1.42857;
 }
-
+/*
 code,
 kbd,
 pre,
@@ -1887,7 +1887,7 @@ code {
   background-color: #f9f2f4;
   border-radius: 4px;
 }
-
+*/
 kbd {
   padding: 2px 4px;
   font-size: 90%;
@@ -1916,7 +1916,7 @@ pre {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-pre code {
+/*pre code {
   padding: 0;
   font-size: inherit;
   color: inherit;
@@ -1924,7 +1924,7 @@ pre code {
   background-color: transparent;
   border-radius: 0;
 }
-
+*/
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
