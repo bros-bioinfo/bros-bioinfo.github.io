@@ -57,7 +57,7 @@ function validating(question, number) {
 
       var checkreponse = $('#reponse').val();
 
-      if (checkreponse == question[reponse]) {
+      if (checkreponse != question[reponse]) {
         $('#yes').hide();
         $('#nope').hide();
         $('#nope').show();
