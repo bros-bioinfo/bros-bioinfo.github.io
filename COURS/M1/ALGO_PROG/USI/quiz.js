@@ -81,6 +81,7 @@ var number = generatequestion(question);
 validating(question, number);
 
 $("#next").on("click", function() { //à chaque click sur le bouton next on relance tout
+  $('#reponse').val('');//vide la barre
   $("#yes").hide();
   $('#nope').hide();
   var number = generatequestion(question);
