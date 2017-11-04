@@ -9,8 +9,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 <style>
-.alert{
+.yes{
     display: none;
+}
+.nope{
+  display: none;
 }
 </style>
 </head>
@@ -24,10 +27,17 @@
     <input type="quiz" class="form-control" id="reponse" placeholder="Entrez votre réponse">
   </div>
 
-  <div class="alert alert-success alert-dismissable">
+  <div class="alert alert-success alert-dismissable" id="yes">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
           YEP! C'est ça !
     </div>
+
+    <div class="alert alert-warning alert-dismissable" id="nope">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Mhhh nan c'est pas ça...
+      </div>
+
+
 <br>
     <button type="button" class="btn btn-primary" id="next">Une autre !</button>
   </div>

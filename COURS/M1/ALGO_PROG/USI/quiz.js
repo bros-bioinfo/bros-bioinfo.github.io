@@ -58,11 +58,19 @@ function validating(question, number) {
       var checkreponse = $('#reponse').val();
 
       if (checkreponse == question[reponse]) {
+        $('#yes').hide();
+        $('#nope').hide();
+        $('#nope').show();
+      }
+
+      if (checkreponse == question[reponse]) {
         console.log(reponse);
-        $('.alert').show()
+        $('#nope').hide();
+        $('#yes').show()
         event.preventDefault();
         event.stopPropagation();
       }
+
     }
   });
 }
@@ -73,7 +81,8 @@ var number = generatequestion(question);
 validating(question, number);
 
 $("#next").on("click", function() { //à chaque click sur le bouton next on relance tout
-  $(".alert").hide();
+  $("#yes").hide();
+  $('#nope').hide();
   var number = generatequestion(question);
   validating(question, number);
 
