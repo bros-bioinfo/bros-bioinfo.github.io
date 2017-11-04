@@ -29,7 +29,9 @@ questiondone = [];
 function generatequestion(question) {
 
   if (questiondone.length >= nbquestion) { //On regarde si le test est fini avant d'aller plus loin
-    console.log("TEST FINI !")
+    console.log("TEST FINI !");
+    $('#question').text('TEST TERMINE');
+    $('#reponse').val('');//vide la barre
     return;
   }
 
