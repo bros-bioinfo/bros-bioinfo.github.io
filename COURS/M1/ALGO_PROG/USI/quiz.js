@@ -17,7 +17,7 @@ var question = [
   "Afficher un calendrier",
   "cal",
 
-  'Afficher 'Bonjour' dans la console',
+  'Afficher "Bonjour" dans la console',
   'echo "Bonjour"'
 ];
 
