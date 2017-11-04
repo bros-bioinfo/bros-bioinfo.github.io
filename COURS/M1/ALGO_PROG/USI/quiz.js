@@ -21,7 +21,7 @@ var question = [
   'echo "Bonjour"'
 ];
 
-var range = 4; //nombre d'élements dans la liste
+var range = 12; //nombre d'élements dans la liste
 var nbquestion = Math.floor(range / 2);
 
 questiondone = [];
