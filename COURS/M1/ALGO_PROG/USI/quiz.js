@@ -236,7 +236,7 @@ function generatequestion(question) {
 
     $('#reponse').val(''); //vide la barre
 
-    $('#tablerep').show(); 
+    $('#tablerep').show();
     for (i=0; i<question.length;i=i+2){
     $('<tr><td>'+question[i]+":</td> <td><code style='float:right; text-align:right'>"+question[i+1]+'</code></td></tr>').appendTo('#listereponses');
   }
