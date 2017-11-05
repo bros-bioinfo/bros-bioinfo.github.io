@@ -189,9 +189,9 @@ function randomgif(){
       url: "https://tv.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=palmashow&tag="+giftag,
       type: "GET",
       success: function(response) {
-          console.log("This works too");
+          //console.log("This works too");
           //debugger
-          console.log(response.data.image_url); // here is where I'm having an issue!
+          //console.log(response.data.image_url); // here is where I'm having an issue!
           var url=response.data.image_url;
           $('#gif').attr("src",url);
 
@@ -254,7 +254,7 @@ function generatequestion(question) {
   $('#question').text(question[number]); //écrit la question
 
   questiondone.push(number);
-  console.log(questiondone);
+  console.log("Question effectuées: "+questiondone);
   return number
 }
 
@@ -302,6 +302,7 @@ $("#next").on("click", function() { //à chaque click sur le bouton next on rela
   $('#reponse').val(''); //vide la barre
   $("#yes").hide();
   $('#nope').hide();
+  var number ="";
   var number = generatequestion(question);
   validating(question, number);
 
