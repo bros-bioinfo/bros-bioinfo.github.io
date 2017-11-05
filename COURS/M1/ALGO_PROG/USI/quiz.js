@@ -210,6 +210,8 @@ function generatequestion(question) {
     $('#question').text('TEST TERMINE');
     $('#note').text("Note: "+note+"/"+nbquestion);
     $('#scoretext').show();
+    $("#gif").css("display","table");
+    $('#gif').show();
     if (note == palier0){
       $('#scoretext').text("Note: "+note+"/"+nbquestion+" |  T'as essayé au moins ??");
       $('#gif').attr("src","https://memegenerator.net/img/images/600x600/343322/cereal-guy-angry.jpg");
