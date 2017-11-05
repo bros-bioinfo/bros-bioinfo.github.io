@@ -194,6 +194,8 @@ function randomgif(){
           //debugger
           //console.log(response.data.image_url); // here is where I'm having an issue!
           var url=response.data.image_url;
+          $("#gif").css("display","table");
+          $('#gif').show();
           $('#gif').attr("src",url);
 
       }
@@ -207,7 +209,7 @@ function generatequestion(question) {
     console.log("TEST FINI !");
     $('#question').text('TEST TERMINE');
     $('#note').text("Note: "+note+"/"+nbquestion);
-
+    $('#scoretext').show();
     if (note == palier0){
       $('#scoretext').text("Note: "+note+"/"+nbquestion+" |  T'as essayé au moins ??");
       $('#gif').attr("src","https://memegenerator.net/img/images/600x600/343322/cereal-guy-angry.jpg");
