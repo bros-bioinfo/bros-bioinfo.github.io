@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
@@ -21,23 +22,38 @@
     #tablerep {
       display: none;
     }
-    #scoretext{
+
+    #scoretext {
       display: none;
     }
-    #gif{
+
+    #gif {
       display: none;
+    }
+
+    .form-group {
+      -webkit-box-shadow: 2px 3px 8px -2px rgba(0,0,0,0.75);
+      -moz-box-shadow: 2px 3px 8px -2px rgba(0,0,0,0.75);
+      box-shadow: 2px 3px 8px -2px rgba(0,0,0,0.75);
+      padding: 50px;
     }
   </style>
 </head>
 
 <body>
+    <i class="fa fa-arrow-circle-left" aria-hidden="true" style="position:absolute; top:20px; left:20px; color:#007BFF"><a href="https://bros-bioinfo.github.io"> Retour à l'accueil</a></i>
 
   <div class="container" style="margin-top:50px;">
-    <h1 style="color:#0756AB">Les commandes UNIX</h1><br>
+ <h1 style="color:#0756AB">Les commandes UNIX</h1><br>
+    <div id="block1" style="margin-bottom: 50px">
+      <h3 id="numquestion" style="display:inline-block;color:#007BFF"></h3>
+      <span style="float:right"><button type="button" class="btn btn-primary" id="next" style="float:right">Passer à la question suivante</button></span>
+    </div>
 
     <div class="form-group">
-      <h3 id="numquestion"></h3><br>
-      <label for="exampleInputEmail1" id="question">Réponse</label><label id="note" style="float:right"></label>
+
+
+      <i class="fa fa-keyboard-o fa-2x" aria-hidden="true" style="margin-right:10px"></i><label for="exampleInputEmail1" id="question" style="font-size:1.5em">Réponse</label><label id="note" style="float:right"></label>
       <input type="quiz" class="form-control" id="reponse" placeholder="Entrez votre réponse">
       <small id="emailHelp" class="form-text text-muted">Appuyez sur la touche ENTRER pour valider. De manière générale utilisez des guillemets double (") et ne mettez des espaces que si c'est nécessaire</small>
     </div>
@@ -51,9 +67,7 @@
     </div>
 
 
-    <br>
-    <button type="button" class="btn btn-primary" id="next">Passer à la question suivante</button>
-    <br>
+
 
     <!-- fin DE TEST -->
     <h4 id="scoretext" style="margin-top:50px;"></h4>
@@ -72,7 +86,7 @@
 
   </div>
 
-  <div class="container" style="margin-top:15px">
+  <div class="container" style="margin-top:25px">
     <div class="row">
       <div class="col-sm">
         <div id="disqus_thread"></div>
