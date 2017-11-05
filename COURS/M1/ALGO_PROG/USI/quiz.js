@@ -179,7 +179,7 @@ function randomgif(){
     giftag="geek"
   }
   $.ajax({
-      url: "http://tv.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=palmashow&tag="+giftag,
+      url: "https://tv.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=palmashow&tag="+giftag,
       type: "GET",
       success: function(response) {
           console.log("This works too");
