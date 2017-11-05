@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Quiz: Les commandes UNIX</title>
   <meta charset="utf-8">
@@ -8,86 +9,93 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-<style>
-#yes{
-  display: none;
-}
-#nope{
-  display: none;
-}
-#tablerep{
-  display: none;
-}
-</style>
+  <style>
+    #yes {
+      display: none;
+    }
+
+    #nope {
+      display: none;
+    }
+
+    #tablerep {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container" style="margin-top:50px;">
-  <h1 style="color:#0756AB">Les commandes UNIX</h1><br>
+  <div class="container" style="margin-top:50px;">
+    <h1 style="color:#0756AB">Les commandes UNIX</h1><br>
 
-  <div class="form-group">
-    <h3 id="numquestion"></h3><br>
-    <label for="exampleInputEmail1" id="question">Réponse</label><label id="note" style="float:right"></label>
-    <input type="quiz" class="form-control" id="reponse" placeholder="Entrez votre réponse">
-     <small id="emailHelp" class="form-text text-muted">De manière générale utilisez des guillemets double (") et ne mettez des espaces que si c'est nécessaire</small>
-  </div>
+    <div class="form-group">
+      <h3 id="numquestion"></h3><br>
+      <label for="exampleInputEmail1" id="question">Réponse</label><label id="note" style="float:right"></label>
+      <input type="quiz" class="form-control" id="reponse" placeholder="Entrez votre réponse">
+      <small id="emailHelp" class="form-text text-muted">De manière générale utilisez des guillemets double (") et ne mettez des espaces que si c'est nécessaire</small>
+    </div>
 
-  <div class="alert alert-success alert-dismissable" id="yes">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          Yep! C'est la bonne réponse ! Tu as le droit à un gif aléatoire :)
+    <div class="alert alert-success alert-dismissable" id="yes">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Yep! C'est la bonne réponse ! Tu as le droit à un gif aléatoire :)
     </div>
 
     <div class="alert alert-warning alert-dismissable" id="nope">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            Mhhh nan c'est pas ça...
-      </div>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Mhhh nan c'est pas ça...
+    </div>
 
 
-<br>
+    <br>
     <button type="button" class="btn btn-primary" id="next">Une autre !</button>
     <br>
 
     <!-- fin DE TEST -->
     <h4 id="scoretext" style="margin-top:50px;"></h4>
     <img style="margin-top:10px" src="" id="gif" width="auto" height="200px"></img>
-        <table class="table table-hover table-responsive" style="margin-top:50px" id="tablerep">
-        <thead class="thead-inverse" style="background: #1290ff; color: white;">
-          <tr>
-            <th>Question</th>
-            <th>Commande</th>
-          </tr>
-        </thead>
-        <tbody id="listereponses">
-        </tbody>
-      </table>
+    <table class="table table-hover table-responsive" style="margin-top:50px" id="tablerep">
+      <thead class="thead-inverse" style="background: #1290ff; color: white;">
+        <tr>
+          <th>Question</th>
+          <th>Commande</th>
+        </tr>
+      </thead>
+      <tbody id="listereponses">
+      </tbody>
+    </table>
   </div>
 
-</div>
-<div id="disqus_thread"></div>
+  </div>
 
-
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+  </div>
   <script src="quiz.js"></script>
 
   <script>
-
-  /**
-  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-  /*
-  var disqus_config = function () {
-  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-  */
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://bros-bioinfo.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document,
+        s = d.createElement('script');
+      s.src = 'https://bros-bioinfo.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
 </body>
+
 </html>
