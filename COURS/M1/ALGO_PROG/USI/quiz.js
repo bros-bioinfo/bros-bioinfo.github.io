@@ -263,24 +263,24 @@ function generatequestion(question) {
 
 function validating(question, number) {
   $(document).keypress(function(event) {
-    reponse = number + 1
+
 
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if (keycode == '13') { //détecte la touche entrée
-
+      indexreponse = number + 1
       var checkreponse = $('#reponse').val();
 
-      if (checkreponse != question[reponse]) {
+      if (checkreponse != question[indexreponse]) {
         $('#yes').hide();
         $('#nope').hide();
         $('#nope').show();
       }
 
-      if (checkreponse == question[reponse]) {
-        console.log(reponse);
+      if (checkreponse == question[indexreponse]) {
+        console.log("L'index de la réponse est: "+indexreponse);
         $('#nope').hide();
-        $('#yes').show()
-        note=note+1
+        $('#yes').show();
+        note=note+1;
         $('#note').text("Note: "+note+"/"+nbquestion);
         randomgif();
 
