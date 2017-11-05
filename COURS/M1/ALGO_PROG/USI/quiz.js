@@ -170,6 +170,7 @@ var palier4= Math.floor(nbquestion *0.8);
 
 questiondone = [];
 note=0;
+stop=0;//pour éviter le spam de la touche entrée si on a une bonne réponse
 
 function randomgif(){
   var gifnum = Math.floor(Math.random() * 4) + 1
@@ -261,31 +262,32 @@ function generatequestion(question) {
 
 
 
-function validating(question, number) {
+function validating(question, getnumber) {
+ indexreponse = getnumber + 1;
   $(document).keypress(function(event) {
-
 
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if (keycode == '13') { //détecte la touche entrée
-      indexreponse = number + 1
+
       var checkreponse = $('#reponse').val();
 
       if (checkreponse != question[indexreponse]) {
         $('#yes').hide();
-        $('#nope').hide();
         $('#nope').show();
       }
 
+      if (stop==0){
       if (checkreponse == question[indexreponse]) {
         console.log("L'index de la réponse est: "+indexreponse);
-        $('#nope').hide();
-        $('#yes').show();
         note=note+1;
         $('#note').text("Note: "+note+"/"+nbquestion);
         randomgif();
-
+        $('#nope').hide();
+        $('#yes').show();
+        stop=1;
         event.preventDefault();
         event.stopPropagation();
+        }
       }
 
     }
@@ -299,15 +301,11 @@ var number = generatequestion(question);
 validating(question, number);
 
 $("#next").on("click", function() { //à chaque click sur le bouton next on relance tout
-  $('#reponse').val(''); //vide la barre
-  $("#yes").hide();
   $('#nope').hide();
-  var number ="";
-  var number = generatequestion(question);
-  validating(question, number);
-
-
-
-
-
+  $("#yes").hide();
+  $('#reponse').val(''); //vide la barre
+  stop=0;
+  var getnumber ="";
+  var getnumber = generatequestion(question);
+  validating(question, getnumber);
 });
