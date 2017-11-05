@@ -458,7 +458,7 @@ background-image: -ms-repeating-linear-gradient(top left, #abcef2 0%, #2b3262 10
   bottom: 0;
   margin-top: -150px;
   z-index: 10;
-  padding-bottom: 7em;
+/*  padding-bottom: 7em;*/
 }
 @media screen and (max-width: 768px) {
   #fh5co-intro {
