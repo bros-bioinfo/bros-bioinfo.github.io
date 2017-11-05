@@ -34,7 +34,7 @@ var question = [
   'Afficher la taille occupée sur le disque par chacun des éléments du dossier courant',
   'du *',
 
-  'Afficher la taille occupée sur le disque par chacun des éléments du dossier courant en omettant les dossiers en ajoutant un suffixe',
+  'Afficher la taille occupée sur le disque par chacun des éléments du dossier courant en omettant les dossiers et en ajoutant un suffixe',
   'du -sh *',
 
 //ls
@@ -103,7 +103,7 @@ var question = [
   "kill",
 //alias
 
-  "Créer l'alias permettant d'imprimer 'bonjour' dans la console en tapant juste la commande brosbio",
+  "Créer l'alias permettant d'imprimer 'bonjour' dans la console en tapant juste la commande brosbio - (utilisez des doubles guillemets)",
   'alias brosbio="echo bonjour"',
 
   "Supprimer l'alias brosbio",
@@ -160,6 +160,13 @@ var question = [
 
 var range = question.length; //nombre d'élements dans la liste
 var nbquestion = Math.floor(range / 2);
+var palier0= Math.floor(nbquestion *0);
+var palier1= Math.floor(nbquestion *0.2);
+var palier2= Math.floor(nbquestion *0.4);
+var palier3= Math.floor(nbquestion *0.6);
+var palier4= Math.floor(nbquestion *0.8);
+
+
 
 questiondone = [];
 note=0;
@@ -199,9 +206,43 @@ function generatequestion(question) {
     console.log("TEST FINI !");
     $('#question').text('TEST TERMINE');
     $('#note').text("Note: "+note+"/"+nbquestion);
+
+    if (note == palier0){
+      $('#scoretext').text("Note: "+note+"/"+nbquestion+" |  T'as essayé au moins ??");
+      $('#gif').attr("src","https://memegenerator.net/img/images/600x600/343322/cereal-guy-angry.jpg");
+    }
+
+    if (note >= palier1){
+      $('#scoretext').text("Note: "+note+"/"+nbquestion+" |  Mouai c'est pas terrible terrible");
+      $('#gif').attr("src","http://www.buzzly.fr/uploads/thumb/650/4112655501207.jpg");
+    }
+
+    if (note >= palier2){
+      $('#scoretext').text("Note: "+note+"/"+nbquestion+" |  Allez courage faut réapprendre !");
+      $('#gif').attr("src","https://static.mmzstatic.com/wp-content/uploads/2015/11/kaamelott-film-tournage.jpg");
+    }
+
+    if (note >= palier3){
+      $('#scoretext').text("Note: "+note+"/"+nbquestion+" |  Nice pas mal ça !");
+      $('#gif').attr("src","http://static.mmzstatic.com/wp-content/uploads/2015/11/kaamelott-retour-bohort.jpg");
+    }
+
+    if (note >= palier4){
+      $('#scoretext').text("Note: "+note+"/"+nbquestion+" |  Richard Stallman is that you ??");
+      $('#gif').attr("src","https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAcQAAAAJDE1MDcxYWUzLWFmNzktNDU2Mi1hYmY0LWRiN2UzYjQ3ZmY3Yw.jpg");
+    }
+
+
+
     $('#reponse').val(''); //vide la barre
+
+    $('#tablerep').show(); 
+    for (i=0; i<question.length;i=i+2){
+    $('<tr><td>'+question[i]+":</td> <td><code style='float:right; text-align:right'>"+question[i+1]+'</code></td></tr>').appendTo('#listereponses');
+  }
     return;
   }
+
 
   var number = Math.floor(Math.random() * range / 2) * 2; //génére un nombre impair aléatoire
   while (questiondone.indexOf(number) >= 0) { // ON CHECK SI LE NOMBRE EST DEJA SORTI DANS LES QUESTIONS
