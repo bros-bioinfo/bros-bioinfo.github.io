@@ -1,0 +1,72 @@
+function getTree() {
+  var data = 
+[
+  {"type":"directory",href:"#fh5co-work",name:"M1","contents":[
+    {"type":"directory",href:"#fh5co-work",name:"ALGO_PROG","time":"Nov  7 13:42","contents":[
+      {"type":"directory",href:"#fh5co-work",name:"ALGO","time":"Nov  7 15:36","contents":[
+        {"type":"file",href:"COURS/M1/ALGO_PROG/ALGO/Algo.md",name:"Algo.md","time":"Nov  7 13:42"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",name:"PROG","time":"Nov  7 13:42","contents":[
+        {"type":"directory",href:"#fh5co-work",name:"TD","time":"Nov  7 13:42","contents":[
+          {"type":"file",href:"COURS/M1/ALGO_PROG/PROG/TD/Exos_baldacci_py.md",name:"Exos_baldacci_py.md","time":"Nov  7 13:42"},
+        ]},
+        {"type":"file",href:"COURS/M1/ALGO_PROG/PROG/Intro_programmation.md",name:"Intro_programmation.md","time":"Nov  7 13:42"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",name:"USI","time":"Nov  7 13:42","contents":[
+        {"type":"directory",href:"#fh5co-work",name:"TD","time":"Nov  7 13:42","contents":[
+          {"type":"file",href:"COURS/M1/ALGO_PROG/USI/TD/1_Unix.md",name:"1_Unix.md","time":"Nov  7 13:42"},
+          {"type":"file",href:"COURS/M1/ALGO_PROG/USI/TD/2_Unix.md",name:"2_Unix.md","time":"Nov  7 13:42"},
+          {"type":"file",href:"COURS/M1/ALGO_PROG/USI/TD/3_Processus.md",name:"3_Processus.md","time":"Nov  7 13:42"},
+          {"type":"file",href:"COURS/M1/ALGO_PROG/USI/TD/4_Shell.md",name:"4_Shell.md","time":"Nov  7 13:42"},
+          {"type":"file",href:"COURS/M1/ALGO_PROG/USI/TD/7_Utilitaires.md",name:"7_Utilitaires.md","time":"Nov  7 13:42"},
+          {"type":"file",href:"COURS/M1/ALGO_PROG/USI/TD/shell_seb.md",name:"shell_seb.md","time":"Nov  7 13:42"},
+        ]},
+        {"type":"file",href:"COURS/M1/ALGO_PROG/USI/Utilisation_systeme_info.md",name:"Utilisation_systeme_info.md","time":"Nov  7 13:42"},
+      ]},
+    ]},
+    {"type":"directory",href:"#fh5co-work",name:"IMAGE_NUM","time":"Nov  7 13:42","contents":[
+      {"type":"directory",href:"#fh5co-work",name:"TD","time":"Nov  7 13:42","contents":[
+        {"type":"directory",href:"#fh5co-work",name:"TD1","time":"Nov  7 13:42","contents":[
+          {"type":"file",href:"COURS/M1/IMAGE_NUM/TD/TD1/ImageJ_td1.md",name:"ImageJ_td1.md","time":"Nov  7 13:42"},
+        ]},
+      ]},
+      {"type":"file",href:"COURS/M1/IMAGE_NUM/Image.md",name:"Image.md","time":"Nov  7 13:42"},
+      {"type":"file",href:"COURS/M1/IMAGE_NUM/Javascript.md",name:"Javascript.md","time":"Nov  7 13:42"},
+    ]},
+    {"type":"directory",href:"#fh5co-work",name:"OMIC_BIOINFO","time":"Nov  7 13:42","contents":[
+      {"type":"file",href:"COURS/M1/OMIC_BIOINFO/Omic_bioinfo.md",name:"Omic_bioinfo.md","time":"Nov  7 13:42"},
+      {"type":"file",href:"COURS/M1/OMIC_BIOINFO/Philogenie.md",name:"Philogenie.md","time":"Nov  7 13:42"},
+      {"type":"file",href:"COURS/M1/OMIC_BIOINFO/Recherche_sequence.md",name:"Recherche_sequence.md","time":"Nov  7 13:42"},
+    ]},
+    {"type":"directory",href:"#fh5co-work",name:"STATS","time":"Nov  7 13:42","contents":[
+      {"type":"directory",href:"#fh5co-work",name:"TD2","time":"Nov  7 13:42","contents":[
+        {"type":"file",href:"COURS/M1/STATS/TD2/TD2.md",name:"TD2.md","time":"Nov  7 13:42"},
+      ]},
+      {"type":"file",href:"COURS/M1/STATS/Intro_stats.md",name:"Intro_stats.md","time":"Nov  7 13:42"},
+      {"type":"file",href:"COURS/M1/STATS/seqChronoSeb.md",name:"seqChronoSeb.md","time":"Nov  7 13:42"},
+    ]},
+  ]},
+  {"type":"directory",href:"#fh5co-work",name:"POUR_ALLER_PLUS_LOIN","contents":[
+    {"type":"file",href:"COURS/POUR_ALLER_PLUS_LOIN/plusloin.md",name:"plusloin.md","time":"Nov  7 13:42"},
+  ]},
+  {"type":"directory",href:"#fh5co-work",name:"TUTO_FICHES","contents":[
+    {"type":"directory",href:"#fh5co-work",name:"PYTHON","time":"Oct 31 10:21","contents":[
+      {"type":"file",href:"COURS/TUTO_FICHES/PYTHON/1-variables-et-types-python.pdf",name:"1-variables-et-types-python.pdf","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/PYTHON/2-conditionnelles-boucles.pdf",name:"2-conditionnelles-boucles.pdf","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/PYTHON/3-fonctions.pdf",name:"3-fonctions.pdf","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/PYTHON/reponse_tutorat.md",name:"reponse_tutorat.md","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/PYTHON/tutorat_python.pdf",name:"tutorat_python.pdf","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/PYTHON/tutorat_(réponses).md",name:"tutorat_(réponses).md","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/PYTHON/tutorat_(sans_les_réponses).md",name:"tutorat_(sans_les_réponses).md","time":"Oct 31 10:21"},
+    ]},
+    {"type":"directory",href:"COURS/TUTO_FICHES/WEB",name:"WEB","time":"Oct 31 10:21","contents":[
+      {"type":"file",href:"COURS/TUTO_FICHES/WEB/IMAJS-1.pdf","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/WEB/IMAJS-2.pdf","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/WEB/IMAJS-3.pdf","time":"Oct 31 10:21"},
+      {"type":"file",href:"COURS/TUTO_FICHES/WEB/IMAJS-4.pdf","time":"Oct 31 10:21"},
+    ]},
+    {"type":"file",href:"COURS/TUTO_FICHES/apprendre_python3_5(G_Swinnen).pdf","time":"Oct 31 10:21"},
+    {"type":"file",href:"COURS/TUTO_FICHES/emacs.md","time":"Oct 31 10:21"},
+    {"type":"file",href:"COURS/TUTO_FICHES/LaTex.md","time":"Oct 31 10:21"},
+  ]}
+]

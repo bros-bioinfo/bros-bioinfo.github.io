@@ -1,12 +1,24 @@
-from pilefile import *
+def creer_pile():
+    return[]
 
+def empiler(pile,element):
+    pile.append(element)
 
-def enfiler(F,e,etiquette):
-    depiler(F)
+def depiler(pile):
+    return pile.pop()
+
+def creer_file():
+    etiquette=0
+    file1=creer_pile()
+    empiler(file1,etiquette)
+    return file1
+
+def enfiler(F,e):
+    etiquette=depiler(F)
     empiler(F,e)
     etiquette=etiquette+1
     empiler(F,etiquette)
-    return etiquette
+
 
 
 def defiler(F):
@@ -18,7 +30,7 @@ def defiler(F):
         empiler(F2,a)
         index=index-1
 
-    depiler(F2)
+    depiler(F2) #on defile
 
     etiquette=etiquette-1
     i=0
@@ -28,26 +40,23 @@ def defiler(F):
         i=i+1
 
     print F
-
     empiler(F,etiquette)
     return F
 
 
 
 #MAIN
-F=creer_pile()
-F2=creer_pile()
-etiquette=0
+F=creer_file()
+F2=creer_file()
 
 
-empiler(F,etiquette)
 
-etiquette=enfiler(F,1,etiquette)
-etiquette=enfiler(F,2,etiquette)
-etiquette=enfiler(F,3,etiquette)
-etiquette=enfiler(F,4,etiquette)
-etiquette=enfiler(F,5,etiquette)
-etiquette=enfiler(F,6,etiquette)
+enfiler(F,1)
+enfiler(F,2)
+enfiler(F,3)
+enfiler(F,4)
+enfiler(F,5)
+enfiler(F,6)
 
 defiler(F)
 F=defiler(F)
