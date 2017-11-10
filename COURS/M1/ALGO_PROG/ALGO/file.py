@@ -13,12 +13,12 @@ def creer_file():
     empiler(file1,etiquette)
     return file1
 
+
 def enfiler(F,e):
     etiquette=depiler(F)
     empiler(F,e)
     etiquette=etiquette+1
     empiler(F,etiquette)
-
 
 
 def defiler(F):
@@ -39,9 +39,9 @@ def defiler(F):
         empiler(F,b)
         i=i+1
 
-    print F
+    #print F
     empiler(F,etiquette)
-    return F
+    return F.pop()
 
 
 
