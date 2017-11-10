@@ -6,7 +6,10 @@ function getTree() {
       {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"117 1536",nodes:[
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/ALGO/Algo",text:"Algo",custom:"117 1342"},
       ]},
-      {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"117 1342",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"11101126",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"PROJET",custom:"11101126",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/PROG/PROJET/Compte_rendu",text:"Compte_rendu",custom:"11101144"},
+        ]},
         {"type":"directory",href:"#fh5co-work",text:"TD",custom:"117 1342",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/PROG/TD/Exos_baldacci_py",text:"Exos_baldacci_py",custom:"117 1342"},
         ]},
