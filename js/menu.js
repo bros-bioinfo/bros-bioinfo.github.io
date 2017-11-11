@@ -70,7 +70,7 @@ function getTree() {
     ]},
     {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/apprendre_python3_5(G_Swinnen).pdf",text:"apprendre_python3_5(G_Swinnen).pdf",custom:"11101501"},
     {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/emacs",text:"emacs",custom:"11101501"},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/LaTex",text:"LaTex",custom:"11102249"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/LaTex",text:"LaTex",custom:"1111  726"},
   ]}
 ]
 ;

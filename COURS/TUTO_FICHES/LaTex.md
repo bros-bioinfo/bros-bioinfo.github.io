@@ -171,6 +171,7 @@ Le package fontenc permet quant à lui permet de prendre en charge les caractèr
 \makeatletter %pour réutiliser les infos comme des variables
 ```
 
+
 **2. corps du document**
 
 *Sommaire*
@@ -213,11 +214,13 @@ La première chose à faire est de commencer de le document, comme une phrase qu
 \end{document}
 ```
 
+
 *Liste des figures*
 
 ```latex
 \listoffigures
 ```
+
 
 *Bibliographie*
 
@@ -228,6 +231,7 @@ un fichier bibtex ET une commande pour créer la bibliographie dans votre docume
 \bibliographystyle{plain}
 \bibliography{mabib}
 ```
+
 Ce genre de configuration permet au rédacteur du document de faire sa bibliographie avec les documents qu'il référence (qu'il cite) dans son document.
 
 
@@ -256,6 +260,7 @@ Il est tout aussi important de bien structurer son document en chapitres (class 
 \subparagraph{Intitulé du sous-paragraphe}
 ```
 
+
 [un peu de doc au cas où](http://www.xm1math.net/doculatex/structure.html)
 
 
@@ -271,6 +276,7 @@ Quand on insère une illustration, il est indispensable à notre niveau de lége
 \caption{\label{Figpole} Titre de mon illustration}
 \end{figure}
 ```
+
 Pour centrer l'image j'utilise la commande \centering.
 Scale correspond à l'échelle de l'image qu'il est possible de modifier pour permettre de changer la taille de l'image.
 \label{} permet de poser une étiquette sur la figure pour permettre de la référencer dans le texte du document par exemple :
@@ -285,6 +291,7 @@ Scale correspond à l'échelle de l'image qu'il est possible de modifier pour pe
 La figure \ref{Figoeuvre} montre 3 exemples d'oeuvres réalisées par l'artiste en utilisant les outils informatiques et la géométrie discrète.
 Le principe des œuvres réalisées par l'artiste est de modéliser ses constructions avant de les réaliser. Les objets sont contenus dans une boîte englobante de taille 25*25*25 et l'ensemble des cubes d'un objet sont connectés. Ce contexte artistique est pleinement en relation avec le contexte scientifique. C'est pourquoi il est nécessaire de comprendre certaines notions de bases de géométrie discrète pour comprendre le sujet sur lequel j'ai pu travailler.
 ```
+
 La commande \ref{} permet de faire appel à l'étiquette que l'on a posé lorsque l'on a inséré l'illustration et LaTex se charge seul de mettre le numéro de la figure.
 
 
@@ -322,6 +329,7 @@ Il existe plusieurs méthodes, un exemple rapide, efficace et qui fonctionne bie
  \end{figure}
 ```
 
+
 **3. lister des éléments**
 
 *avec numérotation*
@@ -335,7 +343,9 @@ Il existe plusieurs méthodes, un exemple rapide, efficace et qui fonctionne bie
 \end{enumerate}
 ```
 
+
 *énumération d'éléments simple*
+
 ```latex
 \begin{itemize}
 \item énumération1...
@@ -345,12 +355,14 @@ Il existe plusieurs méthodes, un exemple rapide, efficace et qui fonctionne bie
 \end{itemize}
 ```
 
+
 **4. citer une référence bibliographique**
 
 En partant du principe que le fichier bibtex a été bien fait, que la bibliographie a bien été insérée dans le document, il suffit de faire
 ```latex
 \cite{ref_doc_dans_fichier_bibtex}
 ```
+
 
 **5. les trucs qui peuvent servir**
 
@@ -362,11 +374,13 @@ Il suffit de modifier la valeur de sorte que ça corresponde à ce que l'on souh
 \vspace{-2em}
 ```
 
+
 *faire un saut de page*
 
 ```latex
 \clearpage
 ```
+
 
 *insérer une page blanche*
 
@@ -376,6 +390,8 @@ Il suffit de modifier la valeur de sorte que ça corresponde à ce que l'on souh
 \thispagestyle{empty}
 \newpage
 ```
+Ce sera uitile si par exemple on ne fait pas un rapport assez gros pour utiliser la class report mais que l'on souhaite avoir une page blanche après la page de garde.
+
 
 *faire un résumé*
 
@@ -451,9 +467,12 @@ Parfois des commandes n'existent pas et il faut les créer, par exemple:
 \end{titlepage}
 ```
 
+
 ### Insérer des annexes
 
+
 *commande indispensable*
+
 ```latex
 \appendix
 ```
@@ -461,6 +480,7 @@ Parfois des commandes n'existent pas et il faut les créer, par exemple:
 ```latex
 \includepdf[pages={1-3}]{nom_du_fichier_sans_extension}
 ```
+
 
 ### Rédaction de mon papier : en un seul ou en plusieurs fichiers ?
 
@@ -481,10 +501,10 @@ Mais pas pour un rapport de stage...
 
 Je vous renvoie vers la [documentation 1](http://www.tuteurs.ens.fr/logiciels/latex/bibtex.html) ou la [documentation 2](https://openclassrooms.com/courses/redigez-des-documents-de-qualite-avec-latex/la-bibliographie-1)
 
+
 ### Faire un CV
 
 Je complèterais cet item plus tard... Il faut d'abord que je fasse le mien !
-
 
 BREF c'est une fiche qui peut aider mais ça n'est pas un manuel !
 Cependant avec ces infos, il est possible de faire un rapport de projet, un rapport de stage complet, et si vous avez des questions n'hésitez pas !
