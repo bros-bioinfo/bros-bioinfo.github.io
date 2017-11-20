@@ -65,6 +65,7 @@ Les files sont des structures de données contenant des elements qui peuvent app
 
 Un élement **e** est ajouté avant l'élément **b** alors l'élément **e** sera enlevé avant l'élément **b**.
 ## III. La récursivité
+
 ## IV. Recherche d'un élément dans un tableur
 ## V. Listes
 ## VI. Complexité
