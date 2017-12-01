@@ -1,0 +1,435 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACGTpierre.py	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	1;"	kind:file	line:1
+ACGTpierre.py	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	1;"	kind:file	line:1
+ACGTpierre.py	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	1;"	kind:file	line:1
+ARN	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^ARN=""$/;"	kind:variable	line:18
+ARN	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	/^ARN=""$/;"	kind:variable	line:9
+ARN	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^ARN=""$/;"	kind:variable	line:8
+D	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^D = creer_dictionnaire()$/;"	kind:variable	line:143
+EX1.py	../COURS/M1/ALGO_PROG/PROG/TD5/EX1.py	1;"	kind:file	line:1
+EX1.py	../COURS/M1/ALGO_PROG/PROG/TD6/EX1.py	1;"	kind:file	line:1
+F	../COURS/M1/ALGO_PROG/ALGO/file.py	/^F=creer_file()$/;"	kind:variable	line:49
+F	../COURS/M1/ALGO_PROG/ALGO/file.py	/^F=defiler(F)$/;"	kind:variable	line:62
+F	../COURS/M1/ALGO_PROG/ALGO/file.py	/^F=defiler(F)$/;"	kind:variable	line:63
+F	../COURS/M1/ALGO_PROG/ALGO/file.py	/^F=defiler(F)$/;"	kind:variable	line:64
+F	../COURS/M1/ALGO_PROG/ALGO/file.py	/^F=defiler(F)$/;"	kind:variable	line:65
+F	../COURS/M1/ALGO_PROG/ALGO/file.py	/^F=defiler(F)$/;"	kind:variable	line:66
+F2	../COURS/M1/ALGO_PROG/ALGO/file.py	/^F2=creer_file()$/;"	kind:variable	line:50
+IA	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^IA=0$/;"	kind:variable	line:326
+T1	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^T1=creer_tableau()$/;"	kind:variable	line:73
+T1	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^T1 = creer_tableau()$/;"	kind:variable	line:113
+U	../COURS/M1/ALGO_PROG/PROG/TD3/fibopierre.py	/^U = []$/;"	kind:variable	line:22
+U0	../COURS/M1/ALGO_PROG/ALGO/inspect.py	/^U0=3$/;"	kind:variable	line:23
+Un	../COURS/M1/ALGO_PROG/ALGO/inspect.py	/^Un=2*U(n-1) + 1 si n>1$/;"	kind:variable	line:24
+a	../COURS/M1/ALGO_PROG/ALGO/composition.py	/^a=composition(4)$/;"	kind:variable	line:13
+a	../COURS/M1/ALGO_PROG/PROG/TD/TD3/fibopierre.py	/^    a = b$/;"	kind:variable	line:26
+a	../COURS/M1/ALGO_PROG/PROG/TD/TD3/fibopierre.py	/^a= 1$/;"	kind:variable	line:15
+a	../COURS/M1/ALGO_PROG/PROG/TD3/fibopierre.py	/^a= 1$/;"	kind:variable	line:4
+addIA	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^def addIA(listeIA):$/;"	kind:function	line:27
+addpokemon	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def addpokemon(pokedex):$/;"	kind:function	line:25
+animcombat	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/draw.py	/^def animcombat():$/;"	kind:function	line:87
+annee	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        annee = annee + 1$/;"	kind:variable	line:137
+annee	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^annee=input()$/;"	kind:variable	line:30
+annee	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        annee = annee + 1$/;"	kind:variable	line:139
+annee	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^annee=input()$/;"	kind:variable	line:31
+appartient_au_dictionnaire	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^def appartient_au_dictionnaire ( D,  cle ) :$/;"	kind:function	line:80
+b	../COURS/M1/ALGO_PROG/ALGO/composition.py	/^b=part(5,9)$/;"	kind:variable	line:37
+b	../COURS/M1/ALGO_PROG/PROG/TD/TD3/fibopierre.py	/^    b = c$/;"	kind:variable	line:27
+b	../COURS/M1/ALGO_PROG/PROG/TD/TD3/fibopierre.py	/^b=1$/;"	kind:variable	line:16
+b	../COURS/M1/ALGO_PROG/PROG/TD3/fibopierre.py	/^b=1$/;"	kind:variable	line:5
+back	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	/^def back():$/;"	kind:function	line:71
+c	../COURS/M1/ALGO_PROG/PROG/TD/TD3/fibopierre.py	/^    c = a + b$/;"	kind:variable	line:25
+c	../COURS/M1/ALGO_PROG/PROG/TD/TD3/fibopierre.py	/^c=1$/;"	kind:variable	line:17
+c	../COURS/M1/ALGO_PROG/PROG/TD3/fibopierre.py	/^c=1$/;"	kind:variable	line:6
+carre	../COURS/TUTO_FICHES/openclassroompython.py	/^def carre(valeur):$/;"	kind:function	line:65
+chaine	../COURS/TUTO_FICHES/openclassroompython.py	/^chaine="bonjour les zeros"$/;"	kind:variable	line:35
+choix	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^    choix = input("Saisissez votre choix: ");$/;"	kind:variable	line:87
+choix	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^    choix = input("Saisissez votre choix: ");$/;"	kind:variable	line:114
+choix	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^choix = input("Quel est votre choix? ")$/;"	kind:variable	line:50
+code	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^code= raw_input()$/;"	kind:variable	line:4
+code	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	/^code= raw_input()$/;"	kind:variable	line:4
+code	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^code= raw_input()$/;"	kind:variable	line:4
+codemotif	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^    codemotif = codemotif[1:]$/;"	kind:variable	line:15
+codemotif	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^codemotif = code$/;"	kind:variable	line:10
+combat.py	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	1;"	kind:file	line:1
+composition	../COURS/M1/ALGO_PROG/ALGO/composition.py	/^def composition(n):$/;"	kind:function	line:1
+composition.py	../COURS/M1/ALGO_PROG/ALGO/composition.py	1;"	kind:file	line:1
+continuer	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^continuer = "Y"$/;"	kind:variable	line:73
+continuer	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^continuer = "Y"$/;"	kind:variable	line:97
+continuer	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^continuer=True$/;"	kind:variable	line:248
+continueroupas	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^def continueroupas():$/;"	kind:function	line:57
+continueroupas	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^def continueroupas():$/;"	kind:function	line:51
+counter	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^counter = 0$/;"	kind:variable	line:9
+counter	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^counter = 0$/;"	kind:variable	line:11
+credit	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/draw.py	/^def credit():$/;"	kind:function	line:8
+creer_dictionnaire	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^def creer_dictionnaire():$/;"	kind:function	line:9
+creer_file	../COURS/M1/ALGO_PROG/ALGO/file.py	/^def creer_file():$/;"	kind:function	line:10
+creer_file	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def creer_file():$/;"	kind:function	line:51
+creer_pile	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^def creer_pile():$/;"	kind:function	line:5
+creer_pile	../COURS/M1/ALGO_PROG/ALGO/file.py	/^def creer_pile():$/;"	kind:function	line:1
+creer_pile	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def creer_pile():$/;"	kind:function	line:1
+creer_pile	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^def creer_pile():$/;"	kind:function	line:5
+creer_tableau	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def creer_tableau():$/;"	kind:function	line:4
+creer_tableau	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^def creer_tableau():$/;"	kind:function	line:9
+d	../zonetest/sommaire.py	/^d=[]$/;"	kind:variable	line:59
+day	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^    day = hf\/24 ### Pas de float$/;"	kind:variable	line:27
+day	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^    day = int(day)$/;"	kind:variable	line:28
+day	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^day=0 ### Jour$/;"	kind:variable	line:18
+day_d	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^day_d = input()$/;"	kind:variable	line:4
+day_d	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^day_d = int(day_d)$/;"	kind:variable	line:13
+day_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        day_f = day_f-28$/;"	kind:variable	line:42
+day_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        day_f = day_f-30$/;"	kind:variable	line:36
+day_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        day_f = day_f-31$/;"	kind:variable	line:30
+day_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^day_f = day_d+1$/;"	kind:variable	line:22
+debut	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^debut = input()$/;"	kind:variable	line:43
+debut	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^debut = input()$/;"	kind:variable	line:70
+debut	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^debut = input()$/;"	kind:variable	line:71
+debutmin	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^debutmin = input()$/;"	kind:variable	line:48
+debutmin	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^debutmin = input()$/;"	kind:variable	line:75
+debutmin	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^debutmin = input()$/;"	kind:variable	line:76
+defiler	../COURS/M1/ALGO_PROG/ALGO/file.py	/^def defiler(F):$/;"	kind:function	line:24
+depiler	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^def depiler(pile):$/;"	kind:function	line:20
+depiler	../COURS/M1/ALGO_PROG/ALGO/file.py	/^def depiler(pile):$/;"	kind:function	line:7
+depiler	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def depiler(pile):$/;"	kind:function	line:13
+depiler	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^def depiler(pile):$/;"	kind:function	line:20
+dico.py	../COURS/M1/ALGO_PROG/ALGO/dico.py	1;"	kind:file	line:1
+displayResultEnz	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^def displayResultEnz(listenz): #affiche chaque nom d'enzyme présent dans la liste$/;"	kind:function	line:9
+displayResultPoids	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^def displayResultPoids(listenz): #affiche chaque valeur de poids moleculaires de la liste$/;"	kind:function	line:13
+dragon	../COURS/M1/ALGO_PROG/ALGO/turtle2.py	/^def dragon(i,p):$/;"	kind:function	line:7
+draw.py	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/draw.py	1;"	kind:file	line:1
+duree	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^duree = input()$/;"	kind:variable	line:54
+duree	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^duree = input()$/;"	kind:variable	line:81
+duree	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^duree = input()$/;"	kind:variable	line:82
+e	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^e = "COUCOU"$/;"	kind:variable	line:144
+e	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^e="COUCOU"$/;"	kind:variable	line:74
+e	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^e = "COUCOU"$/;"	kind:variable	line:114
+echec	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^def echec():$/;"	kind:function	line:15
+ecrire	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^def ecrire(table):$/;"	kind:function	line:58
+empiler	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^def empiler(pile, element):$/;"	kind:function	line:16
+empiler	../COURS/M1/ALGO_PROG/ALGO/file.py	/^def empiler(pile,element):$/;"	kind:function	line:4
+empiler	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def empiler(pile,element):$/;"	kind:function	line:10
+empiler	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^def empiler(pile, element):$/;"	kind:function	line:16
+enfiler	../COURS/M1/ALGO_PROG/ALGO/file.py	/^def enfiler(F,e):$/;"	kind:function	line:17
+enfiler	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def enfiler(file, element):$/;"	kind:function	line:54
+enzlist	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^enzlist=[]$/;"	kind:variable	line:15
+enzlist	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^enzlist=[]$/;"	kind:variable	line:71
+enzlist	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^enzlist=[]$/;"	kind:variable	line:95
+err	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^err = False$/;"	kind:variable	line:27
+exec_menu	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	/^def exec_menu(choice):$/;"	kind:function	line:38
+exit	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def exit():$/;"	kind:function	line:128
+exit	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	/^def exit():$/;"	kind:function	line:75
+f	../COURS/M1/ALGO_PROG/ALGO/inspect.py	/^def f(a,b):$/;"	kind:function	line:3
+factoriel	../COURS/M1/ALGO_PROG/ALGO/inspect.py	/^def factoriel(n):$/;"	kind:function	line:16
+factoriel	../COURS/M1/ALGO_PROG/ALGO/recursive.py	/^def factoriel(n):$/;"	kind:function	line:6
+fibopierre.py	../COURS/M1/ALGO_PROG/PROG/TD/TD3/fibopierre.py	1;"	kind:file	line:1
+fibopierre.py	../COURS/M1/ALGO_PROG/PROG/TD3/fibopierre.py	1;"	kind:file	line:1
+fight	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^def fight(pokedex,player):$/;"	kind:function	line:75
+file.py	../COURS/M1/ALGO_PROG/ALGO/file.py	1;"	kind:file	line:1
+fillListEnz	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^def fillListEnz(nb): #créer la liste contenant le nom des enzymes$/;"	kind:function	line:1
+fillListPoids	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^def fillListPoids(nb): #créer la liste contenant la valeur des poids moléculaires$/;"	kind:function	line:5
+fin	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^    fin = fin % 24$/;"	kind:variable	line:62
+fin	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^fin = debut + heure$/;"	kind:variable	line:58
+fin	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    fin = fin % 24$/;"	kind:variable	line:89
+fin	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^fin = debut + heure$/;"	kind:variable	line:85
+fin	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    fin = fin % 24$/;"	kind:variable	line:90
+fin	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^fin = debut + heure$/;"	kind:variable	line:86
+findMaxi	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^def findMaxi(maxi,listpoids): #détermine la valeur maximale des poids moléculaires et l'affiche$/;"	kind:function	line:17
+flocon	../COURS/M1/ALGO_PROG/ALGO/turtle1.py	/^def flocon(i,p):$/;"	kind:function	line:4
+g	../COURS/M1/ALGO_PROG/ALGO/inspect.py	/^def g(c,a):$/;"	kind:function	line:6
+hd	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^hd = input()$/;"	kind:variable	line:4
+hd	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^hd = int(hd)$/;"	kind:variable	line:13
+hd	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure_seb.py	/^hd = input()$/;"	kind:variable	line:4
+hd	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure_seb.py	/^hd = int(hd)$/;"	kind:variable	line:11
+heure	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^heure = duree\/60$/;"	kind:variable	line:56
+heure	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^heure = duree\/60$/;"	kind:variable	line:83
+heure	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^heure = duree\/60$/;"	kind:variable	line:84
+heure.py	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	1;"	kind:file	line:1
+heure_seb.py	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure_seb.py	1;"	kind:file	line:1
+hf	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^    hf = hf%24$/;"	kind:variable	line:29
+hf	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^    hf = int(hf)$/;"	kind:variable	line:30
+hf	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^hf = ht + hd ### Heure final $/;"	kind:variable	line:23
+ht	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^ht = int(ht) ### Pas de float$/;"	kind:variable	line:22
+ht	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^ht = temps\/60 ### Multiple en heure de la durée de l'expérience $/;"	kind:variable	line:21
+i	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^i=3$/;"	kind:variable	line:9
+i	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^i=i+2$/;"	kind:variable	line:12
+i	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^        i =  "A"$/;"	kind:variable	line:31
+i	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^        i =  "G"$/;"	kind:variable	line:25
+i	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^        i =  "U"$/;"	kind:variable	line:22
+i	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^        i = "C"$/;"	kind:variable	line:28
+i	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	/^        i =  "A"$/;"	kind:variable	line:22
+i	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	/^        i =  "G"$/;"	kind:variable	line:16
+i	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	/^        i =  "U"$/;"	kind:variable	line:13
+i	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	/^        i = "C"$/;"	kind:variable	line:19
+i	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^        i =  "A"$/;"	kind:variable	line:31
+i	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^        i =  "G"$/;"	kind:variable	line:25
+i	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^        i =  "U"$/;"	kind:variable	line:22
+i	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^        i = "C"$/;"	kind:variable	line:28
+i	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^i=0$/;"	kind:variable	line:3
+i	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^i=0$/;"	kind:variable	line:65
+i	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^i=0$/;"	kind:variable	line:89
+i	../COURS/TUTO_FICHES/openclassroompython.py	/^i=0 # c'est la variablecompteur que nous allons incrémenter dans la boucle$/;"	kind:variable	line:26
+imois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^imois=imois.lower()$/;"	kind:variable	line:34
+imois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^imois=raw_input()$/;"	kind:variable	line:33
+imois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^imois=imois.lower()$/;"	kind:variable	line:35
+imois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^imois=raw_input()$/;"	kind:variable	line:34
+indice	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^        indice = p$/;"	kind:variable	line:41
+indice	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^indice = 0$/;"	kind:variable	line:6
+indice	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^indice = 0$/;"	kind:variable	line:68
+indice	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^indice = 0$/;"	kind:variable	line:92
+input	../COURS/M1/ALGO_PROG/PROG/TD/TD3/td3pierre.py	/^    input = input()$/;"	kind:variable	line:30
+input	../COURS/M1/ALGO_PROG/PROG/TD3/td3pierre.py	/^    input = input()$/;"	kind:variable	line:30
+inserer_association	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^def inserer_association( D,  cle ,  valeur ):$/;"	kind:function	line:23
+inserer_element	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def inserer_element(T,id,e):$/;"	kind:function	line:16
+inserer_element	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^def inserer_element(T, id, e):$/;"	kind:function	line:24
+inspect.py	../COURS/M1/ALGO_PROG/ALGO/inspect.py	1;"	kind:file	line:1
+j	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^j = 0$/;"	kind:variable	line:15
+jj_mm_aaaa.py	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	1;"	kind:file	line:1
+jour	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^    jour = fin\/24$/;"	kind:variable	line:61
+jour	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^jour = 0$/;"	kind:variable	line:59
+jour	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^jour=input()$/;"	kind:variable	line:65
+jour	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^jour=input()$/;"	kind:variable	line:66
+journ	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    journ = fin\/24$/;"	kind:variable	line:88
+journ	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^journ = 0$/;"	kind:variable	line:86
+journ	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    journ = fin\/24$/;"	kind:variable	line:89
+journ	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^journ = 0$/;"	kind:variable	line:87
+journext	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        journext = 1$/;"	kind:variable	line:136
+journext	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        journext=journext%28$/;"	kind:variable	line:124
+journext	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        journext=journext%31$/;"	kind:variable	line:117
+journext	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        journext=journext%31$/;"	kind:variable	line:130
+journext	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^journext = jour + journ$/;"	kind:variable	line:112
+journext	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        journext = 1$/;"	kind:variable	line:138
+journext	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        journext=journext%28$/;"	kind:variable	line:126
+journext	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        journext=journext%31$/;"	kind:variable	line:119
+journext	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        journext=journext%31$/;"	kind:variable	line:132
+journext	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^journext = jour + journ$/;"	kind:variable	line:114
+k	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^k=0$/;"	kind:variable	line:324
+lencode	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^    lencode = lencode[1:]$/;"	kind:variable	line:13
+lencode	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^lencode = code$/;"	kind:variable	line:8
+levelup	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def levelup():$/;"	kind:function	line:117
+lire	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^def lire(table):$/;"	kind:function	line:67
+listeIA	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^listeIA=[]$/;"	kind:variable	line:328
+listenz	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^listenz = []$/;"	kind:variable	line:36
+listes.py	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	1;"	kind:file	line:1
+listpoids	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^listpoids = []$/;"	kind:variable	line:37
+main_menu	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	/^def main_menu():$/;"	kind:function	line:24
+max	../COURS/M1/ALGO_PROG/PROG/TD/TD3/fibopierre.py	/^max = input()$/;"	kind:variable	line:20
+max	../COURS/M1/ALGO_PROG/PROG/TD/TD3/poidspierre.py	/^    max = input()$/;"	kind:variable	line:8
+max	../COURS/M1/ALGO_PROG/PROG/TD/TD3/td3pierre.py	/^max = input()$/;"	kind:variable	line:24
+max	../COURS/M1/ALGO_PROG/PROG/TD3/poidspierre.py	/^    max = input()$/;"	kind:variable	line:8
+max	../COURS/M1/ALGO_PROG/PROG/TD3/td3pierre.py	/^max = input()$/;"	kind:variable	line:24
+max	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^        max = poidslist[p]$/;"	kind:variable	line:40
+max	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^max = 0$/;"	kind:variable	line:5
+max	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^max = 0$/;"	kind:variable	line:67
+max	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^max = 0$/;"	kind:variable	line:91
+maxi	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^maxi=0$/;"	kind:variable	line:38
+md	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^md = input()$/;"	kind:variable	line:6
+md	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^md = int(md)$/;"	kind:variable	line:14
+md	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure_seb.py	/^md = input()$/;"	kind:variable	line:6
+md	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure_seb.py	/^md = int(md)$/;"	kind:variable	line:12
+menu	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def menu():$/;"	kind:function	line:176
+menu1	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	/^def menu1():$/;"	kind:function	line:52
+menu2	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	/^def menu2():$/;"	kind:function	line:62
+menu_actions	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	/^menu_actions  = {}$/;"	kind:variable	line:17
+menu_actions	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	/^menu_actions = {$/;"	kind:variable	line:83
+mf	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^mf = temps % 60 ### Restes en minutes pour la fin$/;"	kind:variable	line:20
+minrest	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	/^minrest = (debutmin+duree)%60$/;"	kind:variable	line:55
+minrest	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^minrest = (debutmin+duree)%60$/;"	kind:variable	line:82
+minrest	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^minrest = (debutmin+duree)%60$/;"	kind:variable	line:83
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        mois = 1$/;"	kind:variable	line:135
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        mois = mois +1$/;"	kind:variable	line:118
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        mois = mois +1$/;"	kind:variable	line:125
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^        mois = mois +1$/;"	kind:variable	line:131
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="aout"$/;"	kind:variable	line:156
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="avril"$/;"	kind:variable	line:148
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="decembre"$/;"	kind:variable	line:164
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="février"$/;"	kind:variable	line:144
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="janvier"$/;"	kind:variable	line:142
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="juillet"$/;"	kind:variable	line:154
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="juin"$/;"	kind:variable	line:152
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="mai"$/;"	kind:variable	line:150
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="mars"$/;"	kind:variable	line:146
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="novembre"$/;"	kind:variable	line:162
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="octobre"$/;"	kind:variable	line:160
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois="septembre"$/;"	kind:variable	line:158
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=1$/;"	kind:variable	line:37
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=10$/;"	kind:variable	line:55
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=11$/;"	kind:variable	line:57
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=12$/;"	kind:variable	line:59
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=2$/;"	kind:variable	line:39
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=3$/;"	kind:variable	line:41
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=4$/;"	kind:variable	line:43
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=5$/;"	kind:variable	line:45
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=6$/;"	kind:variable	line:47
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=7$/;"	kind:variable	line:49
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=8$/;"	kind:variable	line:51
+mois	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	/^    mois=9$/;"	kind:variable	line:53
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        mois = 1$/;"	kind:variable	line:137
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        mois = mois +1$/;"	kind:variable	line:120
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        mois = mois +1$/;"	kind:variable	line:127
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^        mois = mois +1$/;"	kind:variable	line:133
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="aout"$/;"	kind:variable	line:158
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="avril"$/;"	kind:variable	line:150
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="decembre"$/;"	kind:variable	line:166
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="février"$/;"	kind:variable	line:146
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="janvier"$/;"	kind:variable	line:144
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="juillet"$/;"	kind:variable	line:156
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="juin"$/;"	kind:variable	line:154
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="mai"$/;"	kind:variable	line:152
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="mars"$/;"	kind:variable	line:148
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="novembre"$/;"	kind:variable	line:164
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="octobre"$/;"	kind:variable	line:162
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois="septembre"$/;"	kind:variable	line:160
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=1$/;"	kind:variable	line:38
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=10$/;"	kind:variable	line:56
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=11$/;"	kind:variable	line:58
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=12$/;"	kind:variable	line:60
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=2$/;"	kind:variable	line:40
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=3$/;"	kind:variable	line:42
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=4$/;"	kind:variable	line:44
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=5$/;"	kind:variable	line:46
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=6$/;"	kind:variable	line:48
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=7$/;"	kind:variable	line:50
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=8$/;"	kind:variable	line:52
+mois	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	/^    mois=9$/;"	kind:variable	line:54
+mol.py	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	1;"	kind:file	line:1
+molfunc.py	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	1;"	kind:file	line:1
+molfunc2.py	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	1;"	kind:file	line:1
+month_T	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^month_T = [1,3,5,7,8,10,12]$/;"	kind:variable	line:18
+month_d	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^month_d = input()$/;"	kind:variable	line:6
+month_d	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^month_d = int(month_d)$/;"	kind:variable	line:14
+month_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        month_f = month_d+1$/;"	kind:variable	line:31
+month_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        month_f = month_d+1$/;"	kind:variable	line:37
+month_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        month_f = month_d+1$/;"	kind:variable	line:43
+month_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        month_f = month_f-12$/;"	kind:variable	line:33
+month_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        month_f = month_f-12$/;"	kind:variable	line:39
+month_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^month_f = month_d$/;"	kind:variable	line:23
+month_t	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^month_t= [4,6,9,11]$/;"	kind:variable	line:19
+motif	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^motif = raw_input()$/;"	kind:variable	line:6
+motif	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	/^motif = raw_input()$/;"	kind:variable	line:6
+motif	../COURS/M1/ALGO_PROG/PROG/TD4/ACGTpierre.py	/^motif = raw_input()$/;"	kind:variable	line:6
+moyenne	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^moyenne = 0$/;"	kind:variable	line:7
+moyenne	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^moyenne = somme \/ len(enzlist)$/;"	kind:variable	line:49
+moyenne	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^        moyenne=showMoy(somme,enzlist,poidslist)$/;"	kind:variable	line:108
+moyenne	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^moyenne = 0$/;"	kind:variable	line:69
+moyenne	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^        moyenne=showMoy(somme,table)$/;"	kind:variable	line:135
+moyenne	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^moyenne = 0$/;"	kind:variable	line:93
+moypoids	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^moypoids=0$/;"	kind:variable	line:39
+moypv	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def moypv(somme):$/;"	kind:function	line:85
+mytab	../COURS/M1/ALGO_PROG/ALGO/tableautrie.py	/^mytab=[,2,5,8,9,2,1,3,1,58,9,1,47,96,2,15,5,2,1,565,2,2,855,78,212]$/;"	kind:variable	line:24
+n	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^n=0$/;"	kind:variable	line:4
+n	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^n=0$/;"	kind:variable	line:66
+n	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^n=0$/;"	kind:variable	line:90
+nb	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^nb = input()$/;"	kind:variable	line:35
+nb	../COURS/TUTO_FICHES/openclassroompython.py	/^nb=7$/;"	kind:variable	line:17
+nb	../COURS/TUTO_FICHES/openclassroompython.py	/^nb=7$/;"	kind:variable	line:25
+nbenz	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^nbenz= input()$/;"	kind:variable	line:12
+nbenz	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^        nbenz= input()$/;"	kind:variable	line:95
+nbenz	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^        nbenz= input()$/;"	kind:variable	line:122
+nbmotif	../COURS/M1/ALGO_PROG/PROG/TD/TD3/ACGTpierre.py	/^nbmotif = code.count(motif)$/;"	kind:variable	line:17
+nbmotif	../COURS/M1/ALGO_PROG/PROG/TD3/ACGTpierre.py	/^nbmotif = code.count(motif)$/;"	kind:variable	line:8
+obtenir_element	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^def obtenir_element(T, id):$/;"	kind:function	line:87
+obtenir_valeur	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^def obtenir_valeur ( D,  cle ) :$/;"	kind:function	line:115
+oncontinue	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def oncontinue():$/;"	kind:function	line:131
+openclassroompython.py	../COURS/TUTO_FICHES/openclassroompython.py	1;"	kind:file	line:1
+part	../COURS/M1/ALGO_PROG/ALGO/composition.py	/^def part(n,k):     # fonction recursive$/;"	kind:function	line:25
+path_to_dict	../zonetest/sommaire.py	/^def path_to_dict(path):$/;"	kind:function	line:34
+pause	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^def pause():$/;"	kind:function	line:24
+pilefile.py	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	1;"	kind:file	line:1
+player	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^        player=selecte(pokedex)$/;"	kind:variable	line:211
+poidsMoy	../COURS/M1/ALGO_PROG/USI/imgs/listes.py	/^def poidsMoy(moypoids): #determine le poids moleculaire moyen des enzymes et donne quelles enzymes ont un poids supérieur à la moyenne$/;"	kind:function	line:23
+poidslist	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^poidslist=[]$/;"	kind:variable	line:16
+poidslist	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^poidslist=[]$/;"	kind:variable	line:72
+poidslist	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^poidslist=[]$/;"	kind:variable	line:96
+poidsmax	../COURS/M1/ALGO_PROG/PROG/TD/TD3/poidspierre.py	/^            poidsmax = saisie$/;"	kind:variable	line:15
+poidsmax	../COURS/M1/ALGO_PROG/PROG/TD/TD3/poidspierre.py	/^    poidsmax = 0$/;"	kind:variable	line:10
+poidsmax	../COURS/M1/ALGO_PROG/PROG/TD/TD3/td3pierre.py	/^        poidsmax = input$/;"	kind:variable	line:32
+poidsmax	../COURS/M1/ALGO_PROG/PROG/TD/TD3/td3pierre.py	/^poidsmax = 0$/;"	kind:variable	line:22
+poidsmax	../COURS/M1/ALGO_PROG/PROG/TD3/poidspierre.py	/^            poidsmax = saisie$/;"	kind:variable	line:15
+poidsmax	../COURS/M1/ALGO_PROG/PROG/TD3/poidspierre.py	/^    poidsmax = 0$/;"	kind:variable	line:10
+poidsmax	../COURS/M1/ALGO_PROG/PROG/TD3/td3pierre.py	/^        poidsmax = input$/;"	kind:variable	line:32
+poidsmax	../COURS/M1/ALGO_PROG/PROG/TD3/td3pierre.py	/^poidsmax = 0$/;"	kind:variable	line:22
+poidspierre.py	../COURS/M1/ALGO_PROG/PROG/TD/TD3/poidspierre.py	1;"	kind:file	line:1
+poidspierre.py	../COURS/M1/ALGO_PROG/PROG/TD3/poidspierre.py	1;"	kind:file	line:1
+pokedex	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^pokedex=[]$/;"	kind:variable	line:327
+pokedex	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^pokedex=[]$/;"	kind:variable	line:246
+pokedex.py	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	1;"	kind:file	line:1
+pokedexmenutest.py	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedexmenutest.py	1;"	kind:file	line:1
+rechercher_rec	../COURS/M1/ALGO_PROG/ALGO/tableautrie.py	/^def rechercher_rec(tab,e,i):$/;"	kind:function	line:1
+rechercher_recdicoto	../COURS/M1/ALGO_PROG/ALGO/tableautrie.py	/^def rechercher_recdicoto(tab,e):$/;"	kind:function	line:9
+recursive.py	../COURS/M1/ALGO_PROG/ALGO/recursive.py	1;"	kind:file	line:1
+remplacer_element	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^def remplacer_element(T, id, e):$/;"	kind:function	line:63
+renverser_pile	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def renverser_pile( P ):$/;"	kind:function	line:58
+saisie	../COURS/M1/ALGO_PROG/PROG/TD/TD3/poidspierre.py	/^        saisie = input()$/;"	kind:variable	line:13
+saisie	../COURS/M1/ALGO_PROG/PROG/TD3/poidspierre.py	/^        saisie = input()$/;"	kind:variable	line:13
+saisie	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^    saisie=raw_input()$/;"	kind:variable	line:19
+saisiepoids	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^    saisiepoids=input()$/;"	kind:variable	line:27
+samepokemon	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def samepokemon():$/;"	kind:function	line:106
+save	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def save(pokedex):$/;"	kind:function	line:16
+save1	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^def save1(pokedex):$/;"	kind:function	line:312
+select	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^select=0$/;"	kind:variable	line:325
+selecte	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^def selecte(pokedex):$/;"	kind:function	line:59
+sezienz	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^def sezienz(nbenz):$/;"	kind:function	line:6
+sezienz	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^def sezienz(nbenz,table):$/;"	kind:function	line:6
+sezipoids	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^def sezipoids(enzlist):$/;"	kind:function	line:13
+showListEP	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^def showListEP(enzlist,poidslist):$/;"	kind:function	line:23
+showListEP	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^def showListEP():$/;"	kind:function	line:20
+showMaxP	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^def showMaxP(max,enzlist,poidslist):$/;"	kind:function	line:31
+showMaxP	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^def showMaxP(max,table):$/;"	kind:function	line:28
+showMoy	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^def showMoy(somme,enzlist,poidslist):$/;"	kind:function	line:40
+showMoy	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^def showMoy(somme,table):$/;"	kind:function	line:37
+showMoyplus	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^def showMoyplus(enzlist,poidslist,moyenne):$/;"	kind:function	line:49
+showMoyplus	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^def showMoyplus(table,moyenne):$/;"	kind:function	line:45
+showallpokemon	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def showallpokemon():$/;"	kind:function	line:76
+showpokemon	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def showpokemon():$/;"	kind:function	line:55
+sommaire.py	../zonetest/sommaire.py	1;"	kind:file	line:1
+somme	../COURS/M1/ALGO_PROG/PROG/TD/TD3/poidspierre.py	/^        somme = somme + saisie$/;"	kind:variable	line:16
+somme	../COURS/M1/ALGO_PROG/PROG/TD/TD3/poidspierre.py	/^    somme = 0$/;"	kind:variable	line:11
+somme	../COURS/M1/ALGO_PROG/PROG/TD/TD3/td3pierre.py	/^    somme = input$/;"	kind:variable	line:34
+somme	../COURS/M1/ALGO_PROG/PROG/TD3/poidspierre.py	/^        somme = somme + saisie$/;"	kind:variable	line:16
+somme	../COURS/M1/ALGO_PROG/PROG/TD3/poidspierre.py	/^    somme = 0$/;"	kind:variable	line:11
+somme	../COURS/M1/ALGO_PROG/PROG/TD3/td3pierre.py	/^    somme = input$/;"	kind:variable	line:34
+somme	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^    somme = somme + poidslist[k]$/;"	kind:variable	line:47
+somme	../COURS/M1/ALGO_PROG/PROG/TD4/mol.py	/^somme = 0$/;"	kind:variable	line:8
+somme	../COURS/M1/ALGO_PROG/PROG/TD4/molfunc.py	/^somme = 0$/;"	kind:variable	line:70
+somme	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^somme = 0$/;"	kind:variable	line:94
+somme	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^somme=0$/;"	kind:variable	line:247
+starter	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def starter():$/;"	kind:function	line:137
+starter1	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^def starter1():$/;"	kind:function	line:301
+starter2	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/combat.py	/^def starter2():$/;"	kind:function	line:307
+suite	../COURS/M1/ALGO_PROG/ALGO/recursive.py	/^def suite(n):$/;"	kind:function	line:15
+supprimer_association	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^def supprimer_association ( D,  cle ):$/;"	kind:function	line:54
+supprimer_element	../COURS/M1/ALGO_PROG/ALGO/pilefile.py	/^def supprimer_element(T,id):$/;"	kind:function	line:31
+supprimer_element	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^def supprimer_element(T, id):$/;"	kind:function	line:41
+table	../COURS/M1/ALGO_PROG/PROG/TD6/molfunc2.py	/^table={}$/;"	kind:variable	line:98
+table	../COURS/TUTO_FICHES/openclassroompython.py	/^def table(nb):$/;"	kind:function	line:55
+tableau.py	../COURS/M1/ALGO_PROG/ALGO/tableau.py	1;"	kind:file	line:1
+tableautrie.py	../COURS/M1/ALGO_PROG/ALGO/tableautrie.py	1;"	kind:file	line:1
+td1.py	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1.py	1;"	kind:file	line:1
+td1_seb.py	../COURS/M1/ALGO_PROG/PROG/TD/TD1/td1_seb.py	1;"	kind:file	line:1
+td2pierre.py	../COURS/M1/ALGO_PROG/PROG/TD/TD2/td2pierre.py	1;"	kind:file	line:1
+td2pierre.py	../COURS/M1/ALGO_PROG/PROG/TD2/td2pierre.py	1;"	kind:file	line:1
+td3pierre.py	../COURS/M1/ALGO_PROG/PROG/TD/TD3/td3pierre.py	1;"	kind:file	line:1
+td3pierre.py	../COURS/M1/ALGO_PROG/PROG/TD3/td3pierre.py	1;"	kind:file	line:1
+temps	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^temps = input()$/;"	kind:variable	line:8
+temps	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^temps = int(temps)$/;"	kind:variable	line:15
+temps	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure.py	/^temps = temps + md ### Sommes totale en minutes $/;"	kind:variable	line:19
+temps	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure_seb.py	/^temps = input()$/;"	kind:variable	line:8
+temps	../COURS/M1/ALGO_PROG/PROG/TD/TD1/heure_seb.py	/^temps = int(temps)$/;"	kind:variable	line:13
+test	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^test=appartient_au_dictionnaire(D,"test3")$/;"	kind:variable	line:156
+test	../COURS/M1/ALGO_PROG/ALGO/tableau.py	/^test = obtenir_element(T1, 7)$/;"	kind:variable	line:125
+turtle1.py	../COURS/M1/ALGO_PROG/ALGO/turtle1.py	1;"	kind:file	line:1
+turtle2.py	../COURS/M1/ALGO_PROG/ALGO/turtle2.py	1;"	kind:file	line:1
+uppv	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/pokedex.py	/^def uppv():$/;"	kind:function	line:95
+valeur	../COURS/M1/ALGO_PROG/ALGO/dico.py	/^valeur=obtenir_valeur(D,"test3")$/;"	kind:variable	line:159
+versus	../COURS/M1/ALGO_PROG/PROG/TUTORAT/pokedex/draw.py	/^def versus():$/;"	kind:function	line:40
+writelist	../zonetest/sommaire.py	/^def writelist():$/;"	kind:function	line:44
+years_d	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^years_d = input()$/;"	kind:variable	line:8
+years_d	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^years_d = int(years_d)$/;"	kind:variable	line:15
+years_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        years_f = years_d+1$/;"	kind:variable	line:34
+years_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^        years_f = years_d+1$/;"	kind:variable	line:40
+years_f	../COURS/M1/ALGO_PROG/PROG/TD/TD1/jj_mm_aaaa.py	/^years_f = years_d$/;"	kind:variable	line:24

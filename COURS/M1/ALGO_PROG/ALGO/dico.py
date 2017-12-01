@@ -7,9 +7,9 @@ def creer_pile():
 
 
 def creer_dictionnaire():
-    index=0
+    index = 0
     dico1 = creer_pile()
-    empiler(dico1,index)
+    empiler(dico1, index)
     return dico1
 
 
@@ -20,9 +20,9 @@ def empiler(pile, element):
 def depiler(pile):
     return pile.pop()
 
-def inserer_association ( D,  cle ,  valeur  ):
-    index=depiler(D)
-    P2=creer_pile()
+def inserer_association( D,  cle ,  valeur ):
+    index = depiler(D)
+    P2 = creer_pile()
     i=0
     indexP2=0
     while i < index: #on dépile tout le dico dans une pile P2
@@ -51,7 +51,7 @@ def inserer_association ( D,  cle ,  valeur  ):
     empiler(D,valeur)
     empiler(D,index)
 
-def supprimer_association ( D,  cle ) :
+def supprimer_association ( D,  cle ):
     index=depiler(D)
     P2=creer_pile()
     i=0

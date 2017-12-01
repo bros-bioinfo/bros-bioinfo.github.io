@@ -1,0 +1,46 @@
+body{
+    background-image:url("https://wallpaperscraft.com/image/spots_background_light_blur_68629_1920x1080.jpg");
+    color:white;
+}
+
+#image{
+    width:100px;
+    height:auto;
+}
+
+#cv{
+    display: table;
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center; 
+}
+
+h1{
+    color: rgb(0, 204, 255);
+    text-decoration: underline;
+}
+h2{
+    margin-top:80px;
+    color: rgb(0, 204, 255);
+}
+
+p{
+    font-size: 18px;
+}
+
+button{
+    background-color:rgb(55, 131, 255);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border:1px solid rgba(0, 204, 255,.1);
+    border-radius: 10px;
+}
+
+.bordered{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding:10px;
+}
