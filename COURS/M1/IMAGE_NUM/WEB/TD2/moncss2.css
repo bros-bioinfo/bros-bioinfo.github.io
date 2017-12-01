@@ -1,0 +1,15 @@
+.compact{
+    height:600px;
+    width:750px;
+}
+
+.centered{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navb{
+    position: relative;
+    top:-35vh;
+}
