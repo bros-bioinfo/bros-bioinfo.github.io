@@ -64,7 +64,93 @@ Les files sont des structures de données contenant des elements qui peuvent app
 - defiler (F) qui enlève un élement de la file
 
 Un élement **e** est ajouté avant l'élément **b** alors l'élément **e** sera enlevé avant l'élément **b**.
+
 ## III. La récursivité
+
+### III.1 La pile d'execution
+
+Dans un programme , à chaque execution d'une fonction, le contenu des variables locales, le contenu des paramètres de la fonction et la ligne d'execution du code sont enregistrés dans une zone de la mémoire appelee la **pile d'execution**.
+
+La pile d'execution est unique et commune à tout le programme. Au debut du programme, la ligne courante d'xecution ainsi que les variables du programme sont empilees dans la pile.
+
+Ensuite, au cours de l'execution du programme, à chaque execution d'une fonction f, les variables locales, la ligne courante d'execution dans f, ainsi que les paramètres sont empilés dans la pile.
+
+L'execution du programme continue donc à partir de la ligne courante de f qui a été initialisée à la premiere ligne de . Lorsque la fonction f se termine, toutes les données empilées par f sont dépilées et perdues. Seules la valeur de retour est gardée en mémoire.
+
+L'execution du programme continue alors à la ligne courante d'execution de la fonction située en haut de la pile. Cela correspond à la dernière fonction appelee par le programme.
+
+Par exemple, lorsque l'on execute le programme suivant :
+
+```py
+def g(a):
+    print "g("+str(a)+")"
+    return 1000
+def h(a):
+  print "h("+str(a)+")"
+  return 2000
+
+def f(a):
+  print("f("+str(a)+")")
+  v = g(a+1)
+  print(v)
+  v = h(a+2)
+  print(v)
+f(1)
+print("fin")
+```
+On obtient sur le terminal le resultat suivant :
+```bash
+f(1)
+g(2)
+1000
+h(3)
+2000
+fin
+```
+La pile evolue suivant le schema suivant : (dans cette figure nous avons décidé d'empliler la valeur de retour des fontion dans la pile)
+(Schema sur cachier)
+
+Sous python, il est possible d'inspecter la pile avec le module **inspect**. Voici un exemple :
+
+```py
+import inspect
+def f(a,b):
+  g(a+1,b+1)
+def g(c,d):
+  print("La pile est :")
+  print(inspect.stack())
+  print("")
+  print("les donnees de la fonction sont :")
+  print(inspect.stack()[0])
+  print("")
+  print("les variables de la fonction situees en haut de la pile sont :")
+  print(inspect.getargvalues(inspect.stack()[0][0]))
+  f(1,2)
+```
+Le terminale affiche :
+```bash
+La pile est :
+[(<frame object at 0x7fa8d5f7e938>, 'autreExemple.py', 6, 'g', ['  print(inspect.stack())\n'], 0), (<frame object at 0x7fa8d5f803f0>, 'autreExemple.py', 3, 'f', ['  g(a+1,b+1)\n'], 0), (<frame object at 0x7fa8d60ee050>, 'autreExemple.py', 14, '<module>', ['f(1,2)\n'], 0)]
+
+les donnees de la fonction sont :
+(<frame object at 0x7fa8d5f7e938>, 'autreExemple.py', 9, 'g', ['  print(inspect.stack()[0])\n'], 0)
+
+les variables de la fonction situees en haut de la pile sont :
+ArgInfo(args=['c', 'd'], varargs=None, keywords=None, locals={'c': 2, 'd': 3})
+```
+### III.2 La recursivite
+On dit qu'une fonction f est recursive ,si, durant l'execution de f, la fonction f est de nouveau appelée. Autrement dit, la fonction f est recursive, si au cours du programme,la fonction f apparait au moins 2 fois en même temps dans la pile d'execution.
+
+Voici un exemple de programme recursif qui permet de calculer n!=1*2*3*....\*n :
+
+```py
+def factoriel(n):
+  if n == 0:
+    return 1
+  return factoriel(n-1)*n
+print (factoriel(3))
+```
+
 
 ## IV. Recherche d'un élément dans un tableur
 ## V. Listes

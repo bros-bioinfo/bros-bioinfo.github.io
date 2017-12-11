@@ -1,3 +1,2 @@
 <!DOCTYPE html> <html> <head></head> <body>
-<a href="https://bros-bioinfo.github.io/COURS/TUTO_FICHES/correctionQCM">correctionQCM</a><br>
 </body></html>
