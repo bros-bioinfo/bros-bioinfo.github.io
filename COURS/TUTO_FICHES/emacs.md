@@ -39,7 +39,7 @@ C-x s    | M-x save-some-buffers         | Sauvegarder tous les buffers en cours
 C-x C-b  | M-x list-buffers              | Avoir la liste de tous les buffers.
 C-x b    | M-x switch-to-buffer          | Changer de buffer
 C-x C-q  | M-x vc-toggle-read-only       | Passer le buffer en lecture seule, ou lecture-écriture (selon l'état de départ)
-C-x o    | M-x other-window              | Passer à une autre fenêtre
+C-x 0    | M-x other-window              | Ferme la fenêtre courante
 C-x 1    | M-x delete-other-windows      | Faire disparaître toutes les fenêtres sauf la fenêtre courante
 C-x 2    | M-x split-window-horizontally | Partage la fenêtre courante en 2, horizontalement
 C-x 3    | M-x split-window-vertically   | Partage la fenêtre courante en 2, verticalement
