@@ -256,7 +256,7 @@ Il y a deux moyens:
 - un diplomatique: envoyer un signal  TERM (valeur: 9) via la commande :
 
   ```console
-  kill -9 PID
+  kill -15 PID
   ```
 
   ​
@@ -265,7 +265,7 @@ Il y a deux moyens:
 - un non-diplomatique: envoyer un signal KILL (valeur 15) instantané via la commande:
 
   ```console
-  kill -15 PID
+  kill -9 PID
   ```
 
 
