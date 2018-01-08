@@ -52,7 +52,7 @@ function getTree() {
     ]},
     {"type":"directory",href:"#fh5co-work",text:"SEMESTRE2",custom:"18  939",nodes:[
       {"type":"directory",href:"#fh5co-work",text:"BDD",custom:"18  939",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/bdd",text:"bdd",custom:"18  939"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/bdd",text:"bdd",custom:"18  946"},
       ]},
     ]},
   ]},
