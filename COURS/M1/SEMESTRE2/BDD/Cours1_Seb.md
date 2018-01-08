@@ -7,7 +7,7 @@ Réf PDF : www.labri.fr/~maabout/M1BI
 ### Une base de donnée relationnelle
 Une relation est une **table** (tableau) où chaque colonne définie un **attribut** (ou champ) et chaque ligne désigne un **enregistrement** (tuple ou n-tuplet).
 Chaque relation a un **nom**.
-![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](~/Images/table.png)
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/table.png)
 
 **Contraintes**:
 + 2 relations de la même BD ont forcément des noms différents.
@@ -38,29 +38,29 @@ Composée d'un ensemble d'**opérations**. Certaines sont **unaires** (une seule
 #### 1.1-Projection
 Prend une table et supprime certaines colonnes.
 *Notation* : 
-![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](~/Images/notationProj.png)
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationProj.png)
 
-![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](~/Images/projection.png)
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/projection.png)
 
 Noter que par défaut les doublons ne sont pas éliminés mais il est possible de spécifier une option afin de les éviter (50 employés à Pessac et 20 à Bx : Ville? on aura une table avec deux lignes Bx et Pessac).
 
 #### 1.2-Sélection
 Permet d'extraire des lignes d'une table qui satisfait une condition.
 *Notation*:
-![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](~/Images/notationSelec.png)
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationSelec.png)
 
 *Exemple*:
-![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](~/Images/selec.png)
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/selec.png)
 
 #### 1.3-Produit cartésien:
 Permet de **concaténer** chaque ligne d'une table à chaque ligne d'une deuxième table.
 *Notation*:
-![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](~/Images/notationprodCart.png)
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationprodCart.png)
 
 *Remarques* : 
 + les attributs de la table résultant du produit sont ceux de 2 tables.
 *Exemple* : R(A,B) * S(C,D,E) => Résultat(A,B,C,D,E)
-![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](~/Images/prodCart.png)
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](prodCart.png)
 
 Note : Nombre de ligne de Résultat = nombre de ligne de R * nombre de ligne de S
 
