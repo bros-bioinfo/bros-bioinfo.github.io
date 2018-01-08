@@ -4,7 +4,7 @@ Mail : maabout@labri.fr
 Réf PDF : www.labri.fr/~maabout/M1BI
 
 ## I-Définitions
-###Une base de donnée relationnelle
+### Une base de donnée relationnelle
 Une relation est une **table** (tableau) où chaque colonne définie un **attribut** (ou champ) et chaque ligne désigne un **enregistrement** (tuple ou n-tuplet).
 Chaque relation a un **nom**.
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](~/Images/table.png)
