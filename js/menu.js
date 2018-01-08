@@ -2,51 +2,53 @@ function getTree() {
   var data = 
 [
   {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
-    {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"12151834",nodes:[
-      {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"18  926",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/ALGO/algo",text:"algo",custom:"12151834"},
-      ]},
-      {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"12151834",nodes:[
-        {"type":"directory",href:"#fh5co-work",text:"PROJET",custom:"12151834",nodes:[
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/PROG/PROJET/Compte_rendu",text:"Compte_rendu",custom:"12151834"},
+    {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"18  934",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"12151834",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"18  926",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/algo",text:"algo",custom:"12151834"},
         ]},
+        {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"12151834",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"PROJET",custom:"12151834",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/PROJET/Compte_rendu",text:"Compte_rendu",custom:"12151834"},
+          ]},
+          {"type":"directory",href:"#fh5co-work",text:"TD",custom:"12151834",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/TD/Exos_baldacci_py",text:"Exos_baldacci_py",custom:"12151834"},
+          ]},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/Intro_programmation",text:"Intro_programmation",custom:"12151834"},
+        ]},
+        {"type":"directory",href:"#fh5co-work",text:"USI",custom:"18  926",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"TD",custom:"12151834",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/1_Unix",text:"1_Unix",custom:"12151834"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"12151834"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/3_Processus",text:"3_Processus",custom:"12151834"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/4_Shell",text:"4_Shell",custom:"12151834"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/7_Utilitaires",text:"7_Utilitaires",custom:"12151834"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/shell_seb",text:"shell_seb",custom:"12151834"},
+          ]},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/Utilisation_systeme_info",text:"Utilisation_systeme_info",custom:"12151834"},
+        ]},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"18  927",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"TD",custom:"12151834",nodes:[
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/PROG/TD/Exos_baldacci_py",text:"Exos_baldacci_py",custom:"12151834"},
+          {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"12151834",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"12151834"},
+          ]},
         ]},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/PROG/Intro_programmation",text:"Intro_programmation",custom:"12151834"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image",text:"Image",custom:"12151834"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript",text:"Javascript",custom:"12151834"},
       ]},
-      {"type":"directory",href:"#fh5co-work",text:"USI",custom:"18  926",nodes:[
-        {"type":"directory",href:"#fh5co-work",text:"TD",custom:"12151834",nodes:[
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/USI/TD/1_Unix",text:"1_Unix",custom:"12151834"},
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"12151834"},
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/USI/TD/3_Processus",text:"3_Processus",custom:"12151834"},
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/USI/TD/4_Shell",text:"4_Shell",custom:"12151834"},
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/USI/TD/7_Utilitaires",text:"7_Utilitaires",custom:"12151834"},
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/USI/TD/shell_seb",text:"shell_seb",custom:"12151834"},
+      {"type":"directory",href:"#fh5co-work",text:"OMIC_BIOINFO",custom:"18  928",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Omic_bioinfo",text:"Omic_bioinfo",custom:"12151834"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Philogenie",text:"Philogenie",custom:"12151834"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"12151834"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"STATS",custom:"18  929",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"TD2",custom:"12151834",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD2/TD2",text:"TD2",custom:"12151834"},
         ]},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/USI/Utilisation_systeme_info",text:"Utilisation_systeme_info",custom:"12151834"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Intro_stats",text:"Intro_stats",custom:"12151834"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Sequence_chronologique",text:"Sequence_chronologique",custom:"18  929"},
       ]},
-    ]},
-    {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"18  927",nodes:[
-      {"type":"directory",href:"#fh5co-work",text:"TD",custom:"12151834",nodes:[
-        {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"12151834",nodes:[
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"12151834"},
-        ]},
-      ]},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/IMAGE_NUM/Image",text:"Image",custom:"12151834"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/IMAGE_NUM/Javascript",text:"Javascript",custom:"12151834"},
-    ]},
-    {"type":"directory",href:"#fh5co-work",text:"OMIC_BIOINFO",custom:"18  928",nodes:[
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/OMIC_BIOINFO/Omic_bioinfo",text:"Omic_bioinfo",custom:"12151834"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/OMIC_BIOINFO/Philogenie",text:"Philogenie",custom:"12151834"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"12151834"},
-    ]},
-    {"type":"directory",href:"#fh5co-work",text:"STATS",custom:"18  929",nodes:[
-      {"type":"directory",href:"#fh5co-work",text:"TD2",custom:"12151834",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/STATS/TD2/TD2",text:"TD2",custom:"12151834"},
-      ]},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/STATS/Intro_stats",text:"Intro_stats",custom:"12151834"},
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/STATS/Sequence_chronologique",text:"Sequence_chronologique",custom:"18  929"},
     ]},
   ]},
   {"type":"directory",href:"#fh5co-work",text:"POUR_ALLER_PLUS_LOIN",nodes:[
