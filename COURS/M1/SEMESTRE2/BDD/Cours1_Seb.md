@@ -60,7 +60,7 @@ Permet de **concaténer** chaque ligne d'une table à chaque ligne d'une deuxiè
 *Remarques* : 
 + les attributs de la table résultant du produit sont ceux de 2 tables.
 *Exemple* : R(A,B) * S(C,D,E) => Résultat(A,B,C,D,E)
-![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](prodCart.png)
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/prodCart.png)
 
 Note : Nombre de ligne de Résultat = nombre de ligne de R * nombre de ligne de S
 
