@@ -81,6 +81,44 @@ Employé * Res1 => Res2 = {"N°SS":[123,321,312],"Nom":[Dupond,Dupont,Martin],"V
 
 + On sélectionne le nom des employés où il y a égalité des N°Service.
 PI^(_Nom) (SIGMA^(_Employé.N°Service = Res1.N°Service)(Res2)) => Res3={"Nom":[Dupond,Dupond]}
+
+#### 1.4-Jointure
+C'est un cas particulier de produit cartésien : 2 lignes sont concaténées si et seulement si elles ont les mêmes valeurs sur les attributs communs : 
+*Notation* : 
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationJointure.png)
+
+*Exemple* :
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/exempleJointure.png)
+
+#### 1.5-Renommage
+Permet de changer le nom d'un ou de pluseiurs attributs.
+*Notation* : 
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationRenom.png)
+
+*Exemple*
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/exempleRenom.png)
+
+Ex : PI^(_Nom)(SIGMA^(_Nom Service = Compta)(THO^(_Resp => N°SS)(Service)**jointure**Employé))
+
+#### 1.6-Opération ensembliste : Union, Intersection, Différence
+*Notation* : 
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationEnsembl.png)
+
+*Exemple* : 
+![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/exempleEnsembl.png)
+
+Ex : 
++ Afficher le nom et N°SS des employés qui sont aussi étudiants 
+PI^(_N°SS,Nom)(Employé) **intersection** PI^(_N°SS,Nom)(Etudiant)
+
++ Afficher les étduiants qui ne sont pas employés
+PI^(_N°SS,Nom)(Etudiant) __ PI^(_N°SS,Nom)(Employé)
+
++ Afficher les personnes qui ont une adresse mail à l'iniversité
+PI^(_N°SS,Nom)(Employé) **union** PI^(_N°SS,Nom)(Etduiant)
+
+
+
 ### SQL
 ## III-Insertion, Suppression, Modification
 ### Modification de la structure d'une BD
