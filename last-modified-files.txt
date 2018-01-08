@@ -1,3 +1,2 @@
 <!DOCTYPE html> <html> <head></head> <body>
-<a href="https://bros-bioinfo.github.io/COURS/M1/ALGO_PROG/ALGO/algo">algo</a><br>
 </body></html>

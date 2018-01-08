@@ -1,10 +1,12 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Bros-bioinfo</title>
@@ -13,12 +15,12 @@
 	<meta name="keywords" content="Bioinfo Unix Stallman bioinfofr Master Bordeaux" />
 	<meta name="author" content="Bros-Bioinfo" />
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
 	<meta name="twitter:title" content="" />
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
@@ -48,109 +50,121 @@
 
 
 	<style>
+		#colour-variations {
+			padding: 10px;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			width: 140px;
+			position: fixed;
+			left: 0;
+			top: 100px;
+			z-index: 999999;
+			background: #fff;
+			/*border-radius: 4px;*/
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			-webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			-moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			-ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+		}
 
-	#colour-variations {
-		padding: 10px;
-		-webkit-transition: 0.5s;
-	  	-o-transition: 0.5s;
-	  	transition: 0.5s;
-		width: 140px;
-		position: fixed;
-		left: 0;
-		top: 100px;
-		z-index: 999999;
-		background: #fff;
-		/*border-radius: 4px;*/
-		border-top-right-radius: 4px;
-		border-bottom-right-radius: 4px;
-		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-	}
-	#colour-variations.sleep {
-		margin-left: -140px;
-	}
-	#colour-variations h3 {
-		text-align: center;;
-		font-size: 11px;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		color: #777;
-		margin: 0 0 10px 0;
-		padding: 0;;
-	}
-	#colour-variations ul,
-	#colour-variations ul li {
-		padding: 0;
-		margin: 0;
-	}
-	#colour-variations li {
-		list-style: none;
-		display: block;
-		margin-bottom: 5px!important;
-		float: left;
-		width: 100%;
-	}
-	#colour-variations li a {
-		width: 100%;
-		position: relative;
-		display: block;
-		overflow: hidden;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		-ms-border-radius: 4px;
-		border-radius: 4px;
-		-webkit-transition: 0.4s;
-		-o-transition: 0.4s;
-		transition: 0.4s;
-	}
-	#colour-variations li a:hover {
-	  	opacity: .9;
-	}
-	#colour-variations li a > span {
-		width: 33.33%;
-		height: 20px;
-		float: left;
-		display: -moz-inline-stack;
-		display: inline-block;
-		zoom: 1;
-		*display: inline;
-	}
+		#colour-variations.sleep {
+			margin-left: -140px;
+		}
+
+		#colour-variations h3 {
+			text-align: center;
+			;
+			font-size: 11px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: #777;
+			margin: 0 0 10px 0;
+			padding: 0;
+			;
+		}
+
+		#colour-variations ul,
+		#colour-variations ul li {
+			padding: 0;
+			margin: 0;
+		}
+
+		#colour-variations li {
+			list-style: none;
+			display: block;
+			margin-bottom: 5px!important;
+			float: left;
+			width: 100%;
+		}
+
+		#colour-variations li a {
+			width: 100%;
+			position: relative;
+			display: block;
+			overflow: hidden;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-ms-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-transition: 0.4s;
+			-o-transition: 0.4s;
+			transition: 0.4s;
+		}
+
+		#colour-variations li a:hover {
+			opacity: .9;
+		}
+
+		#colour-variations li a>span {
+			width: 33.33%;
+			height: 20px;
+			float: left;
+			display: -moz-inline-stack;
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+		}
 
 
-	.option-toggle {
-		position: absolute;
-		right: 0;
-		top: 0;
-		margin-top: 5px;
-		margin-right: -30px;
-		width: 30px;
-		height: 30px;
-		background: #b85061;
-		text-align: center;
-		border-top-right-radius: 4px;
-		border-bottom-right-radius: 4px;
-		color: #fff;
-		cursor: pointer;
-		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
-	}
-	.option-toggle i {
-		top: 2px;
-		position: relative;
-	}
-	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
-		color:  #fff;
-		text-decoration: none;
-		outline: none;
-	}
+		.option-toggle {
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin-top: 5px;
+			margin-right: -30px;
+			width: 30px;
+			height: 30px;
+			background: #b85061;
+			text-align: center;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			color: #fff;
+			cursor: pointer;
+			-webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			-moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			-ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+		}
+
+		.option-toggle i {
+			top: 2px;
+			position: relative;
+		}
+
+		.option-toggle:hover,
+		.option-toggle:focus,
+		.option-toggle:active {
+			color: #fff;
+			text-decoration: none;
+			outline: none;
+		}
 	</style>
 
-		<link rel="stylesheet" href="css/bootstrap-treeview.css">
-	  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap-treeview.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 	<!-- Modernizr JS -->
 	<script src="js/template/modernizr-2.6.2.min.js"></script>
@@ -159,28 +173,40 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
-	<body>
+</head>
+
+<body>
 	<header role="banner" id="fh5co-header">
-			<div class="container">
-				<!-- <div class="row"> -->
-			    <nav class="navbar navbar-default">
-		        <div class="navbar-header">
-		        	<!-- Mobile Toggle Menu Button -->
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		         <a class="navbar-brand" href="index.html">Bros-bioinfo</a>
-		        </div>
-		        <div id="navbar" class="navbar-collapse collapse">
-		          <ul class="nav navbar-nav navbar-right">
-		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
-		            <li class="active"><a href="https://github.com/bros-bioinfo/bros-bioinfo.github.io"><span>Github</span></a></li>
-		          </ul>
-		        </div>
-			    </nav>
-			  <!-- </div> -->
-		  </div>
+		<div class="container">
+			<!-- <div class="row"> -->
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					 aria-controls="navbar">
+						<i></i>
+					</a>
+					<a class="navbar-brand" href="index.html">Bros-bioinfo</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active">
+							<a href="#" data-nav-section="home">
+								<span>Home</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="https://github.com/bros-bioinfo/bros-bioinfo.github.io">
+								<span>Github</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- </div> -->
+		</div>
 	</header>
-<a href="img/mclb.mp4" style="height:6vw; width:10%;position: absolute;top: 2vw;left: 9%;max-width: 150px;"></a>
+	<a href="img/mclb.mp4" style="height:6vw; width:10%;position: absolute;top: 2vw;left: 9%;max-width: 150px;"></a>
 
 	<section id="fh5co-home" data-section="home" style="background-image: url(img/backgroundblured.png);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
@@ -189,7 +215,8 @@
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<h1 class="to-animate">We <a href="https://bros-bioinfo.github.io/img/mclb.mp4" style="border-bottom:0px!important">💙</a> Bioinfo !</h1>
+							<h1 class="to-animate">We
+								<a href="https://bros-bioinfo.github.io/img/mclb.mp4" style="border-bottom:0px!important">💙</a> Bioinfo !</h1>
 							<h2 class="to-animate">Les COURS du M1 de Bioinformatique de Bordeaux</h2>
 						</div>
 					</div>
@@ -199,7 +226,9 @@
 		<div class="slant"></div>
 	</section>
 
-			<a href="#" class="gotop js-gotop" id="tothetop"><i class="icon-arrow-up2"></i></a>
+	<a href="#" class="gotop js-gotop" id="tothetop">
+		<i class="icon-arrow-up2"></i>
+	</a>
 
 	<section id="fh5co-intro">
 		<div class="container">
@@ -210,10 +239,12 @@
 					<div class="fh5co-text">
 						<i class="fh5co-intro-icon icon-book-open"></i>
 						<h2>Les Cours</h2>
-						<p>Sommaire des cours du Master <br>
-							Fait avec amour
+						<p>Sommaire des cours du Master
+							<br> Fait avec amour
 						</p>
-						<p><a href="#fh5co-work" class="btn btn-primary">Voir</a></p>
+						<p>
+							<a href="#fh5co-work" class="btn btn-primary">Voir</a>
+						</p>
 					</div>
 				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(img/calendar.jpg);">
@@ -222,9 +253,11 @@
 					<div class="fh5co-text">
 						<i class="fh5co-intro-icon icon-calendar"></i>
 						<h2>L'emploi du temps du Master</h2>
-						<p>Le Fameux <br>
-							C'est le même</p>
-						<p><a href="#fh5co-testimonials" class="btn btn-primary">Voir</a></p>
+						<p>Le Fameux
+							<br> C'est le même</p>
+						<p>
+							<a href="#fh5co-testimonials" class="btn btn-primary">Voir</a>
+						</p>
 					</div>
 				</div>
 				<div class="fh5co-block to-animate" style="background-image: url(img/github.jpg);">
@@ -233,17 +266,20 @@
 					<div class="fh5co-text">
 						<i class="fh5co-intro-icon icon-social-github"></i>
 						<h2>Comment participer</h2>
-						<p>Les instructions pour participer et s'inscrire au github.
-							C'est pas compliqué!
+						<p>Les instructions pour participer et s'inscrire au github. C'est pas compliqué!
 						</p>
-						<p><a href="#fh5co-services" class="btn btn-primary">Viendez !</a></p>
+						<p>
+							<a href="#fh5co-services" class="btn btn-primary">Viendez !</a>
+						</p>
 					</div>
 				</div>
 			</div>
 
 		</div>
 
-<a href="http://bros-bioinfo.github.io/COURS/TUTO_FICHES/USI/quiz.html" style="color:white;"><button type="button" class="btn btn-primary" id="next" style="margin-right:auto;margin-left:auto;display:table;background:#393e46!important;">Quiz sur les commandes Unix</button></a>
+		<a href="http://bros-bioinfo.github.io/COURS/TUTO_FICHES/USI/quiz.html" style="color:white;">
+			<button type="button" class="btn btn-primary" id="next" style="margin-right:auto;margin-left:auto;display:table;background:#393e46!important;">Quiz sur les commandes Unix</button>
+		</a>
 
 
 	</section>
@@ -259,73 +295,70 @@
 							<div class="container">
 								<div class="row">
 
-							<!-- MENU HERE SORRY FOR THIS HTML STRUCTURE BTW -->
-							<div class="container" id="menugeneral" style="margin-top:50px">
+									<!-- MENU HERE SORRY FOR THIS HTML STRUCTURE BTW -->
+									<div class="container" id="menugeneral" style="margin-top:50px">
 
 
 
-							<div class="container" style="margin-bottom:20px">
-									<div class="row">
+										<div class="container" style="margin-bottom:20px">
+											<div class="row">
 
-										<div class="col-md-6">
-											<div class="form-group">
-												<label for="input-search" class="sr-only">Search Tree:</label>
-												<input class="form-control" id="input-search" placeholder="Chercher un cours..." value="" type="input">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label for="input-search" class="sr-only">Search Tree:</label>
+														<input class="form-control" id="input-search" placeholder="Chercher un cours..." value="" type="input">
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="checkbox" style="display:none">
+														<label>
+															<input class="checkbox" id="chk-ignore-case" value="false" type="checkbox"> Ignore Case
+														</label>
+													</div>
+													<div class="checkbox" style="display:none">
+														<label>
+															<input class="checkbox" id="chk-exact-match" value="false" type="checkbox"> Exact Match
+														</label>
+													</div>
+													<div class="checkbox" style="display:none">
+														<label>
+															<input class="checkbox" id="chk-reveal-results" value="false" type="checkbox"> Reveal Results
+														</label>
+													</div>
+													<button type="button" class="btn btn-primary" id="btn-search">Chercher !</button>
+													<button type="button" class="btn btn-default" id="btn-clear-search">Reset</button>
+
+												</div>
 											</div>
 										</div>
-										<div class="col-md-4">
-											<div class="checkbox" style="display:none">
-												<label>
-													<input class="checkbox" id="chk-ignore-case" value="false" type="checkbox">
-													Ignore Case
-												</label>
-											</div>
-											<div class="checkbox" style="display:none">
-												<label>
-													<input class="checkbox" id="chk-exact-match" value="false" type="checkbox">
-													Exact Match
-												</label>
-											</div>
-											<div class="checkbox" style="display:none">
-												<label>
-													<input class="checkbox" id="chk-reveal-results" value="false" type="checkbox">
-													Reveal Results
-												</label>
-											</div>
-											<button type="button" class="btn btn-primary" id="btn-search">Chercher !</button>
-											<button type="button" class="btn btn-default" id="btn-clear-search">Reset</button>
+										<div class="container">
+											<div class="row">
+												<div class="col-md-6">
+													<h4 style="padding-left:15px; color:#19408f">COURS</h2>
+														<div id="tree"></div>
 
+												</div>
+												<div class="col-md-4">
+													<h4 style="color:#19408f">Les derniers fichiers modifiés</h2>
+														<div id="recent"></div>
+												</div>
+											</div>
 										</div>
-							</div>
-							</div>
-							<div class="container">
-							<div class="row">
-											<div class="col-md-6">
-											<h4 style="padding-left:15px; color:#19408f" >COURS</h2>
-												<div id="tree"></div>
 
-											</div>
-											<div class="col-md-4">
-												<h4 style="color:#19408f">Les derniers fichiers modifiés</h2>
-													<div id="recent"></div>
-											</div>
+
 									</div>
+
+									<!-- END MENU -->
+
+
+
+
+								</div>
 							</div>
-
-
-							</div>
-
-							<!-- END MENU -->
-
-
-
-
 						</div>
 					</div>
-				</div>
-			</div>
 
-		</div>
+				</div>
 	</section>
 
 	<section id="fh5co-testimonials" data-section="testimonials">
@@ -339,107 +372,117 @@
 			</div>
 
 		</div>
-		<div id="calendar" style="overflow:hidden" ></div>
+		<div id="calendar" style="overflow:hidden"></div>
 	</section>
 
 
-		<section id="fh5co-services" data-section="services" style="color:white!importantS">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 section-heading text-left" style="margin-bottom:5px">
-						<h2 class=" left-border to-animate">Comment participer au Github ?</h2>
-						<div class="row">
-							<div class="col-md-8 subtext to-animate">
-								<h3>Tout le monde peut participer !</h3>
-							</div>
+	<section id="fh5co-services" data-section="services" style="color:white!importantS">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-left" style="margin-bottom:5px">
+					<h2 class=" left-border to-animate">Comment participer au Github ?</h2>
+					<div class="row">
+						<div class="col-md-8 subtext to-animate">
+							<h3>Tout le monde peut participer !</h3>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12 col-sm-12 fh5co-service to-animate">
-						<i class="icon to-animate-2 icon-social-github"></i>
-						<h3>1. Demander l'accès au github</h3>
-						<p>Demandez à l'un des M1 qui participe de vous ajouter en tant que contributeur sur le site.</p>
-					</div>
-					<div class="col-md-12 col-sm-12 fh5co-service to-animate">
-						<i class="icon to-animate-2 icon-cloud-download"></i>
-						<h3>2. Sur Linux installer la commande (tree)</h3>
-						<p>Vous pouvez faire sur Ubuntu ou Debian: sudo apt-get install tree</p>
-					</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-social-github"></i>
+					<h3>1. Demander l'accès au github</h3>
+					<p>Demandez à l'un des M1 qui participe de vous ajouter en tant que contributeur sur le site.</p>
+				</div>
+				<div class="col-md-12 col-sm-12 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-cloud-download"></i>
+					<h3>2. Sur Linux installer la commande (tree)</h3>
+					<p>Vous pouvez faire sur Ubuntu ou Debian: sudo apt-get install tree</p>
+				</div>
 
 
-					<div class="col-md-12 col-sm-12 fh5co-service to-animate">
-						<i class="icon to-animate-2 icon-arrow-right"></i>
-						<h3>3. Se placer dans le répertoire que l'on souhaite</h3>
-						<p>Pour initialiser le github (commande): <b>     git clone https://github.com/bros-bioinfo/bros-bioinfo.github.io.git</b></p>
-						<p>Avant l'édition d'un fichier pour récupérer les modifications en local:<b>     git pull</b></p>
-						<p>Une fois l'édtition d'un fichier terminé:<b>     jithub.sh [message à ajouter décrivant la modification]</b></p>
+				<div class="col-md-12 col-sm-12 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-arrow-right"></i>
+					<h3>3. Se placer dans le répertoire que l'on souhaite</h3>
+					<p>Pour initialiser le github (commande):
+						<b> git clone https://github.com/bros-bioinfo/bros-bioinfo.github.io.git</b>
+					</p>
+					<p>Avant l'édition d'un fichier pour récupérer les modifications en local:
+						<b> git pull</b>
+					</p>
+					<p>Une fois l'édtition d'un fichier terminé:
+						<b> jithub.sh [message à ajouter décrivant la modification]</b>
+					</p>
 
-					</div>
+				</div>
 
-					<div class="col-md-12 col-sm-12 fh5co-service to-animate">
-						<i class="icon to-animate-2 icon-cup"></i>
-						<h3>4. Enjoy !</h3>
-						<p>Vous aurez sans doute d'autres question, et on est là pour vous aider. De plus il est FORTEMENT probable qu'il puisse y avoir des bugs de temps en temps. Veuillez nous en excuser.</p>
-					</div>
+				<div class="col-md-12 col-sm-12 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-cup"></i>
+					<h3>4. Enjoy !</h3>
+					<p>Vous aurez sans doute d'autres question, et on est là pour vous aider. De plus il est FORTEMENT probable qu'il puisse
+						y avoir des bugs de temps en temps. Veuillez nous en excuser.</p>
+				</div>
 
+
+
+			</div>
+		</div>
+	</section>
+
+
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop">
+			<i class="icon-arrow-up2"></i>
+		</a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
 
 
 				</div>
 			</div>
-		</section>
+			<div class="row">
+				<div class="col-md-12 text-center">
 
-
-		<footer id="footer" role="contentinfo">
-			<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
-			<div class="container">
-				<div class="">
-					<div class="col-md-12 text-center">
-
-
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 text-center">
-
-					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 
 
 
-		<!-- jQuery -->
-		<script src="js/template/jquery.min.js"></script>
-		<!-- jQuery Easing -->
-		<script src="js/template/jquery.easing.1.3.js"></script>
-		<!-- Bootstrap -->
-		<script src="js/template/bootstrap.min.js"></script>
-		<!-- Waypoints -->
-		<script src="js/template/jquery.waypoints.min.js"></script>
-		<!-- Stellar Parallax -->
-		<script src="js/template/jquery.stellar.min.js"></script>
-		<!-- Counter -->
-		<script src="js/template/jquery.countTo.js"></script>
-		<!-- Magnific Popup -->
-		<script src="js/template/jquery.magnific-popup.min.js"></script>
-		<script src="js/template/magnific-popup-options.js"></script>
+	<!-- jQuery -->
+	<script src="js/template/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/template/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/template/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/template/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/template/jquery.stellar.min.js"></script>
+	<!-- Counter -->
+	<script src="js/template/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/template/jquery.magnific-popup.min.js"></script>
+	<script src="js/template/magnific-popup-options.js"></script>
 
-		<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
-		<script src="js/template/jquery.style.switcher.js"></script>
+	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+	<script src="js/template/jquery.style.switcher.js"></script>
 
 
 
-		<!-- End demo purposes only -->
-		<script src="js/bootstrap-treeview.js"></script>
-		<script src="js/menu.js"></script>
+	<!-- End demo purposes only -->
+	<script src="js/bootstrap-treeview.js"></script>
+	<script src="js/menu.js"></script>
 
-		<!-- Main JS (Do not remove) -->
-		<script src="js/template/main.js"></script>
-		<!--CALENDAR-->
-	  <script>$('#calendar').load('https://master-bioinfo-bordeaux.github.io #calendar');</script>
-	  <script type="text/javascript" src="https://master-bioinfo-bordeaux.github.io/data/news_json.js"></script>
-	 <script type="text/javascript" src="js/msbifub.js"></script>
-	  <script type="text/javascript" src="js/calendar.js"></script>
-		</body>
-	</html>
+	<!-- Main JS (Do not remove) -->
+	<script src="js/template/main.js"></script>
+	<!--CALENDAR-->
+	<script>$('#calendar').load('https://master-bioinfo-bordeaux.github.io #calendar');</script>
+	<script type="text/javascript" src="https://master-bioinfo-bordeaux.github.io/data/news_json.js"></script>
+	<script type="text/javascript" src="js/msbifub.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>
+</body>
+
+</html>
