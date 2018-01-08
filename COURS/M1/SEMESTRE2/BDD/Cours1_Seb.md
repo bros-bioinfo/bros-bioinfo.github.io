@@ -1,6 +1,7 @@
 # Base de donnée
 
 Mail : maabout@labri.fr
+
 Réf PDF : www.labri.fr/~maabout/M1BI
 
 ## I-Définitions
@@ -18,6 +19,7 @@ Remarque : 2 attributs qui se trouvent dans 2 tables différentes peuvent avoir 
 Dans une base, on peut avoir des tables:
 + Employé (**N°SS**,Nom,Ville,Salaire,*N°Service*)
 + Service (*N°Service*,Nom,Etage,**Responsable**)
+
 Note : 
 + N°Service permet d'établir une relation entre l'employé et le service. 
 + Nom est différent entre les deux tables. 
@@ -37,6 +39,7 @@ Composée d'un ensemble d'**opérations**. Certaines sont **unaires** (une seule
 
 #### 1.1-Projection
 Prend une table et supprime certaines colonnes.
+
 *Notation* : 
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationProj.png)
 
@@ -46,6 +49,7 @@ Noter que par défaut les doublons ne sont pas éliminés mais il est possible d
 
 #### 1.2-Sélection
 Permet d'extraire des lignes d'une table qui satisfait une condition.
+
 *Notation*:
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationSelec.png)
 
@@ -54,6 +58,7 @@ Permet d'extraire des lignes d'une table qui satisfait une condition.
 
 #### 1.3-Produit cartésien:
 Permet de **concaténer** chaque ligne d'une table à chaque ligne d'une deuxième table.
+
 *Notation*:
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationprodCart.png)
 
@@ -65,25 +70,33 @@ Permet de **concaténer** chaque ligne d'une table à chaque ligne d'une deuxiè
 Note : Nombre de ligne de Résultat = nombre de ligne de R * nombre de ligne de S
 
 + Cas où un même nom d'attribut apparaît dans les 2 tables : 
-Ex : R(A,B) * S(B,C) => Résultat(A,R.B,S.B,C)
+
+Ex : R(A,B) \* S(B,C) => Résultat(A,**R.B**,**S.B**,C)
 
 + le résultat de chaque opération de l'algèbre est une table. On peut donc combiner plusieurs opéartions successives.
+
 Ex : afficher le nom des employés habitant Pessac.
-PI^_(Nom) (SIGMA^(_Vile = Pessac)(Employé)) => Résultat = {"Nom" :[Dupont,Martin]}
+
+PI,,(Nom),, (SIGMA,,(Vile = Pessac),,(Employé)) => Résultat = {"Nom" :[Dupont,Martin]}
+
 On a d'abord fait une sélection et on a ensuite appliqué la projection.
 
 Ex : afficher le nom des employés qui travaillent au Service Compta. 
 + On extrait le n° du Service dont le nom est Compta.
+
 PI^(_N°Service) (SIGMA^(_NomService = Compta)(Service)) => Res1 : {"N°Service" : [1]}
 
-+ On combine Res 1 avec Employé : 
++ On combine Res 1 avec Employé :
+
 Employé * Res1 => Res2 = {"N°SS":[123,321,312],"Nom":[Dupond,Dupont,Martin],"Ville":[Bx,Pessac,Pessac],"Employé.N°Service":[1,1,2],"Res1.N°Service":[1,1,1]}
 
 + On sélectionne le nom des employés où il y a égalité des N°Service.
+
 PI^(_Nom) (SIGMA^(_Employé.N°Service = Res1.N°Service)(Res2)) => Res3={"Nom":[Dupond,Dupond]}
 
 #### 1.4-Jointure
 C'est un cas particulier de produit cartésien : 2 lignes sont concaténées si et seulement si elles ont les mêmes valeurs sur les attributs communs : 
+
 *Notation* : 
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationJointure.png)
 
@@ -92,6 +105,7 @@ C'est un cas particulier de produit cartésien : 2 lignes sont concaténées si 
 
 #### 1.5-Renommage
 Permet de changer le nom d'un ou de pluseiurs attributs.
+
 *Notation* : 
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/notationRenom.png)
 
@@ -109,12 +123,15 @@ Ex : PI^(_Nom)(SIGMA^(_Nom Service = Compta)(THO^(_Resp => N°SS)(Service)**join
 
 Ex : 
 + Afficher le nom et N°SS des employés qui sont aussi étudiants 
+
 PI^(_N°SS,Nom)(Employé) **intersection** PI^(_N°SS,Nom)(Etudiant)
 
 + Afficher les étduiants qui ne sont pas employés
+
 PI^(_N°SS,Nom)(Etudiant) __ PI^(_N°SS,Nom)(Employé)
 
 + Afficher les personnes qui ont une adresse mail à l'iniversité
+
 PI^(_N°SS,Nom)(Employé) **union** PI^(_N°SS,Nom)(Etduiant)
 
 
