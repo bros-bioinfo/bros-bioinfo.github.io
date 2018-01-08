@@ -77,7 +77,7 @@ Ex : R(A,B) \* S(B,C) => Résultat(A,**R.B**,**S.B**,C)
 
 Ex : afficher le nom des employés habitant Pessac.
 
-PI,,(Nom),, (SIGMA,,(Vile = Pessac),,(Employé)) => Résultat = {"Nom" :[Dupont,Martin]}
+PI^(_Nom) (SIGMA^(\_Vile = Pessac)^(\_Employé)) => Résultat = {"Nom" :[Dupont,Martin]}
 
 On a d'abord fait une sélection et on a ensuite appliqué la projection.
 
