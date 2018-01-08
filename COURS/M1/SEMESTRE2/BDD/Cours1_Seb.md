@@ -77,14 +77,14 @@ Ex : R(A,B) \* S(B,C) => Résultat(A,**R.B**,**S.B**,C)
 
 Ex : afficher le nom des employés habitant Pessac.
 
-PI^(_Nom) (SIGMA^(\_Vile = Pessac)^(\_Employé)) => Résultat = {"Nom" :[Dupont,Martin]}
+PI<sub>Nom</sub> (SIGMA<sub>Vile = Pessac</sub>)(Employé)) => Résultat = {"Nom" :[Dupont,Martin]}
 
 On a d'abord fait une sélection et on a ensuite appliqué la projection.
 
 Ex : afficher le nom des employés qui travaillent au Service Compta. 
 + On extrait le n° du Service dont le nom est Compta.
 
-PI^(_N°Service) (SIGMA^(_NomService = Compta)(Service)) => Res1 : {"N°Service" : [1]}
+PI<sub>N°Service</sub> (SIGMA<sub>NomService = Compta</sub>(Service)) => Res1 : {"N°Service" : [1]}
 
 + On combine Res 1 avec Employé :
 
@@ -92,7 +92,7 @@ Employé * Res1 => Res2 = {"N°SS":[123,321,312],"Nom":[Dupond,Dupont,Martin],"V
 
 + On sélectionne le nom des employés où il y a égalité des N°Service.
 
-PI^(_Nom) (SIGMA^(_Employé.N°Service = Res1.N°Service)(Res2)) => Res3={"Nom":[Dupond,Dupond]}
+PI<sub>Nom</sub> (SIGMA<sub>Employé.N°Service = Res1.N°Service</sub>(Res2)) => Res3={"Nom":[Dupond,Dupond]}
 
 #### 1.4-Jointure
 C'est un cas particulier de produit cartésien : 2 lignes sont concaténées si et seulement si elles ont les mêmes valeurs sur les attributs communs : 
@@ -112,7 +112,7 @@ Permet de changer le nom d'un ou de pluseiurs attributs.
 *Exemple*
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/exempleRenom.png)
 
-Ex : PI^(_Nom)(SIGMA^(_Nom Service = Compta)(THO^(_Resp => N°SS)(Service)**jointure**Employé))
+Ex : PI<sub>Nom</sub> (SIGMA<sub>Nom Service = Compta</sub>(THO<sub>Resp => N°SS</sub>(Service)**jointure**Employé))
 
 #### 1.6-Opération ensembliste : Union, Intersection, Différence
 *Notation* : 
@@ -124,17 +124,15 @@ Ex : PI^(_Nom)(SIGMA^(_Nom Service = Compta)(THO^(_Resp => N°SS)(Service)**join
 Ex : 
 + Afficher le nom et N°SS des employés qui sont aussi étudiants 
 
-PI^(_N°SS,Nom)(Employé) **intersection** PI^(_N°SS,Nom)(Etudiant)
+PI<sub>N°SS,Nom</sub>(Employé) **intersection** PI<sub>N°SS,Nom</sub>(Etudiant)
 
 + Afficher les étduiants qui ne sont pas employés
 
-PI^(_N°SS,Nom)(Etudiant) __ PI^(_N°SS,Nom)(Employé)
+PI<sub>N°SS,Nom</sub>(Etudiant) __ PI<sub>N°SS,Nom</sub>(Employé)
 
 + Afficher les personnes qui ont une adresse mail à l'iniversité
 
-PI^(_N°SS,Nom)(Employé) **union** PI^(_N°SS,Nom)(Etduiant)
-
-
+PI<sub>N°SS,Nom</sub>(Employé) **union** PI<sub>N°SS,Nom</sub>(Etduiant)
 
 ### SQL
 ## III-Insertion, Suppression, Modification
