@@ -13,7 +13,7 @@ while i < nb:
     print(i)
 ```
 
-**2. : lesquels sont pair/impaire**
+**2. : lesquels sont pair/impair**
 ```python
 nb=input("compter jusqu'a combien?")
 i=0
