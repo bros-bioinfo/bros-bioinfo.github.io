@@ -299,27 +299,43 @@ est équivalent à : &pi;<sub>NomImmeuble</sub>(&sigma;<sub>NomGérant=Doug</sub
 *Remarque*: SQL n'élimine pas les doublons.
 
 ```sql
-SELECT      NomImmeuble
-FROM        Appart
+SELECT  NomImmeuble
+FROM    Appart
 ```
 Pour éliminer les doublons, on utilise la **clause DISTINCT**.
 
 ```sql
-SELECT      DISTINCT    NomImmeuble
-FROM        Appart
+SELECT  DISTINCT    NomImmeuble
+FROM    Appart
 ```
 
 + Ex3
 La profession du gérant de Koudalou.
 
 ```sql
-SELECT      Profession
-FROM        Personne,Immeuble
-WHERE       NomGerant = "Nom" AND
-            Immeuble = "Koudalou"
+SELECT  Profession
+FROM    Personne,Immeuble
+WHERE   NomGerant = "Nom" AND
+        Immeuble = "Koudalou"
+```
++ Ex4
+La superficie de l'appart de Rachel
+
+```sql
+SELECT  Supercie
+FROM    Appart,Occupant
+WHERE   Appart.NomImmeuble=Occupant.NomImmeuble AND
+        Appart.NAppart=Occupant.NOccupant AND
+        NomOccupant = "Rachel"
 ```
 
++ Ex5
+La profession du gérant de l'appart de Rachel.
 
+```sql
+SELECT  Profession
+FROM    Personne,Occupant,Immeuble
+WHERE   
 ## III-Insertion, Suppression, Modification
 ### Modification de la structure d'une BD
 ## IV-Contrainte d'intégrité
