@@ -112,7 +112,7 @@ Permet de changer le nom d'un ou de pluseiurs attributs.
 *Exemple*
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/exempleRenom.png)
 
-Ex : PI<sub>Nom</sub> (SIGMA<sub>Nom Service = Compta</sub>(THO<sub>Resp => N°SS</sub>(Service)**jointure**Employé))
+Ex : PI<sub>Nom</sub> (SIGMA<sub>Nom Service = Compta</sub>(RHO<sub>Resp => N°SS</sub>(Service)**jointure**Employé))
 
 #### 1.6-Opération ensembliste : Union, Intersection, Différence
 *Notation* : 
@@ -153,7 +153,17 @@ NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais l
 *Remarque* : on a le me résultat avec 
 + PI<sub>Superficie</sub>(SIGMA<sub>NomOccupant = Rachel</sub>(Occupant) **jointure** Appart) 
 
-+ Occupant **
+4- Profession du gérant de l'immeuble où Rachel habite
+
++ SIGMA<sub>NomOccupant = Rachel</sub>(Occupant) => Res1
++ Res1 **jointure** Immeuble => Res2 (1 ligne et 8 colonnes)
++ RHO<sub>NomGérant => Nom</sub> => Res3 
++ Res3 **jointure** Personne => Res4 (1ligne et 10 colonnes)
++ PI<sub>Profession</sub>(Res4) => |Profession|
+                                    |---------|
+                                    |Rentier|
+ 
+
 ### SQL
 ## III-Insertion, Suppression, Modification
 ### Modification de la structure d'une BD
