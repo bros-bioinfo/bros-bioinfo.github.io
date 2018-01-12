@@ -160,7 +160,9 @@ NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais l
 + RHO<sub>NomGérant => Nom</sub> => Res3 
 + Res3 **jointure** Personne => Res4 (1ligne et 10 colonnes)
 + PI<sub>Profession</sub>(Res4) 
+
 **Résultat**:
+
 |Profession|
 |---------|
 |Rentier|
