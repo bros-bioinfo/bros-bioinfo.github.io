@@ -134,6 +134,26 @@ PI<sub>N°SS,Nom</sub>(Etudiant) __ PI<sub>N°SS,Nom</sub>(Employé)
 
 PI<sub>N°SS,Nom</sub>(Employé) **union** PI<sub>N°SS,Nom</sub>(Etduiant)
 
+### TD-1 : Requêtes 
+1- Afficher le nom des personnes qui habitent Koudalou
+
++ PI<sub>NomOccupant</sub>(SIGMA<sub>NomImmeuble=Koudalou</sub>(Occupant))
+
+2- Afficher le nom des immeubles.
+
+NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais la table Immeuble est censé contenir tous les immeubles : projection.
+
++ PI<sub>NomImmeuble</sub>(Immeuble)
+
+3- Superficie de l'appart occupé par Rachel
+
++ Occupant **jointure** Appart => 5 lignes et 6 colonnes
++ PI<sub>Superficie</sub>(SIGMA<sub>NomOccupant = Rachel</sub>(Occupant **jointure** Appart))
+
+*Remarque* : on a le me résultat avec 
++ PI<sub>Superficie</sub>(SIGMA<sub>NomOccupant = Rachel</sub>(Occupant) **jointure** Appart) 
+
++ Occupant **
 ### SQL
 ## III-Insertion, Suppression, Modification
 ### Modification de la structure d'une BD

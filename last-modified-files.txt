@@ -1,31 +1,3 @@
 <!DOCTYPE html> <html> <head></head> <body>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/algo">algo</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/Intro_programmation">Intro_programmation</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/PROJET/Compte_rendu">Compte_rendu</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/TD/Exos_baldacci_py">Exos_baldacci_py</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/1_Unix">1_Unix</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/2_Unix">2_Unix</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/3_Processus">3_Processus</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/4_Shell">4_Shell</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/7_Utilitaires">7_Utilitaires</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/shell_seb">shell_seb</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/Utilisation_systeme_info">Utilisation_systeme_info</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image">Image</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript">Javascript</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1">ImageJ_td1</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Omic_bioinfo">Omic_bioinfo</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Philogenie">Philogenie</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Recherche_sequence">Recherche_sequence</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Intro_stats">Intro_stats</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Sequence_chronologique">Sequence_chronologique</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD2/TD2">TD2</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/bdd">bdd</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/Cours1_Seb">Cours1_Seb</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/STATS/Sequence_chronologique">Sequence_chronologique</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/POUR_ALLER_PLUS_LOIN/emacs">emacs</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/POUR_ALLER_PLUS_LOIN/LaTex">LaTex</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/POUR_ALLER_PLUS_LOIN/plusloin">plusloin</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/reponse_tutorat">reponse_tutorat</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/TUTO_FICHES/USI/correctionQCM">correctionQCM</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/html">html</a><br>
 </body></html>
