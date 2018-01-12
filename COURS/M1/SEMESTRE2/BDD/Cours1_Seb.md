@@ -77,14 +77,14 @@ Ex : R(A,B) \* S(B,C) => Résultat(A,**R.B**,**S.B**,C)
 
 Ex : afficher le nom des employés habitant Pessac.
 
-&pi;;<sub>Nom</sub> (SIGMA<sub>Vile = Pessac</sub>)(Employé)) => Résultat = {"Nom" :[Dupont,Martin]}
+&pi;;<sub>Nom</sub> (&sigma;<sub>Vile = Pessac</sub>)(Employé)) => Résultat = {"Nom" :[Dupont,Martin]}
 
 On a d'abord fait une sélection et on a ensuite appliqué la projection.
 
 Ex : afficher le nom des employés qui travaillent au Service Compta. 
 + On extrait le n° du Service dont le nom est Compta.
 
-&pi;<sub>N°Service</sub> (SIGMA<sub>NomService = Compta</sub>(Service)) => Res1 : {"N°Service" : [1]}
+&pi;<sub>N°Service</sub> (&sigma;<sub>NomService = Compta</sub>(Service)) => Res1 : {"N°Service" : [1]}
 
 + On combine Res 1 avec Employé :
 
@@ -92,7 +92,7 @@ Employé * Res1 => Res2 = {"N°SS":[123,321,312],"Nom":[Dupond,Dupont,Martin],"V
 
 + On sélectionne le nom des employés où il y a égalité des N°Service.
 
-&pi;<sub>Nom</sub> (SIGMA<sub>Employé.N°Service = Res1.N°Service</sub>(Res2)) => Res3={"Nom":[Dupond,Dupond]}
+&pi;<sub>Nom</sub> (&sigma;<sub>Employé.N°Service = Res1.N°Service</sub>(Res2)) => Res3={"Nom":[Dupond,Dupond]}
 
 #### 1.4-Jointure
 C'est un cas particulier de produit cartésien : 2 lignes sont concaténées si et seulement si elles ont les mêmes valeurs sur les attributs communs : 
@@ -112,7 +112,7 @@ Permet de changer le nom d'un ou de pluseiurs attributs.
 *Exemple*
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/exempleRenom.png)
 
-Ex : &pi;<sub>Nom</sub> (SIGMA<sub>Nom Service = Compta</sub>(RHO<sub>Resp => N°SS</sub>(Service)**jointure**Employé))
+Ex : &pi;<sub>Nom</sub> (&sigma;<sub>Nom Service = Compta</sub>(&rho;<sub>Resp => N°SS</sub>(Service)**&Delta;**Employé))
 
 #### 1.6-Opération ensembliste : Union, Intersection, Différence
 *Notation* : 
@@ -128,16 +128,16 @@ Ex :
 
 + Afficher les étduiants qui ne sont pas employés
 
-&pi;<sub>N°SS,Nom</sub>(Etudiant) __ &pi;<sub>N°SS,Nom</sub>(Employé)
+&pi;<sub>N°SS,Nom</sub>(Etudiant) - &pi;<sub>N°SS,Nom</sub>(Employé)
 
 + Afficher les personnes qui ont une adresse mail à l'université
 
-&pi;<sub>N°SS,Nom</sub>(Employé) **union** &pi;<sub>N°SS,Nom</sub>(Etudiant)
+&pi;<sub>N°SS,Nom</sub>(Employé) **U** &pi;<sub>N°SS,Nom</sub>(Etudiant)
 
 ### TD-1 : Requêtes 
 1- Afficher le nom des personnes qui habitent Koudalou
 
-+ &pi;<sub>NomOccupant</sub>(SIGMA<sub>NomImmeuble=Koudalou</sub>(Occupant))
++ &pi;<sub>NomOccupant</sub>(&sigma;<sub>NomImmeuble=Koudalou</sub>(Occupant))
 
 2- Afficher le nom des immeubles.
 
@@ -147,18 +147,18 @@ NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais l
 
 3- Superficie de l'appart occupé par Rachel
 
-+ Occupant **jointure** Appart => 5 lignes et 6 colonnes
-+ &pi;<sub>Superficie</sub>(SIGMA<sub>NomOccupant = Rachel</sub>(Occupant **jointure** Appart))
++ Occupant **&Delta;&Delta;** Appart => 5 lignes et 6 colonnes
++ &pi;<sub>Superficie</sub>(&sigma;<sub>NomOccupant = Rachel</sub>(Occupant **&Delta;&Delta;** Appart))
 
 *Remarque* : on a le même résultat avec 
-+ &pi;<sub>Superficie</sub>(SIGMA<sub>NomOccupant = Rachel</sub>(Occupant) **jointure** Appart) 
++ &pi;<sub>Superficie</sub>(&sigma;<sub>NomOccupant = Rachel</sub>(Occupant) **&Delta;&&Delta;** Appart) 
 
 4- Profession du gérant de l'immeuble où Rachel habite
 
-+ SIGMA<sub>NomOccupant = Rachel</sub>(Occupant) => Res1
-+ Res1 **jointure** Immeuble => Res2 (1 ligne et 8 colonnes)
-+ RHO<sub>NomGérant => Nom</sub> => Res3 
-+ Res3 **jointure** Personne => Res4 (1ligne et 10 colonnes)
++ &sigma;<sub>NomOccupant = Rachel</sub>(Occupant) => Res1
++ Res1 **&Delta;&Delta;** Immeuble => Res2 (1 ligne et 8 colonnes)
++ &rho;<sub>NomGérant => Nom</sub> => Res3 
++ Res3 **&Delta;&Delta;** Personne => Res4 (1ligne et 10 colonnes)
 + &pi;<sub>Profession</sub>(Res4) 
 
 **Résultat**:
@@ -169,11 +169,11 @@ NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais l
 
 5- Afficher la superficie de l'appart occupé par Rachel ainsi que la profession du gérant de cet appart
 
-+ SIGMA<sub>NomOccupant = Rachel</sub>(Occupant) => Res1
-+ Res1 **jointure** Appart => Res2
-+ Res2 **jointure** Immeuble => Res3
-+ RHO<sub>NomGérant => Nom</sub> => Res4 
-+ Res4 **jointure** Personne => Res5
++ &sigma;<sub>NomOccupant = Rachel</sub>(Occupant) => Res1
++ Res1 **&Delta;&Delta;** Appart => Res2
++ Res2 **&Delta;&Delta;** Immeuble => Res3
++ &rho;<sub>NomGérant => Nom</sub> => Res4 
++ Res4 **&Delta;&Delta;** Personne => Res5
 + &pi;<sub>Superficie,Profession</sub>(Res5) 
 
 6- Afficher ke N° et le nom d'immeuble des apparts qui ne sont pas occupés
@@ -206,9 +206,9 @@ NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais l
 |K          | W         |
 |K          | A         |
 
-+ RHO<sub> NomOccupant => NomOccupant1</sub>(&pi;<sub>NomImmeuble,NomOccupant</sub>(Occupant)) => Res2
++ &rho;<sub> NomOccupant => NomOccupant1</sub>(&pi;<sub>NomImmeuble,NomOccupant</sub>(Occupant)) => Res2
 
-+ Res1 **jointure** Res2 => Res3 (NomImmeuble,NomOccupant,NomOccupant1)
++ Res1 **&Delta;&Delta;** Res2 => Res3 (NomImmeuble,NomOccupant,NomOccupant1)
 
 |NomImmeuble|NomOccupant|NomOccupant1|
 |-----------|-----------|------------|
@@ -228,11 +228,11 @@ NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais l
 
 Pour éliminer les liges où on a le même nom, il suffit de sélectionner celles où les noms sont différents.
 
-+ SIGMA<sub>NomOccupant != NomOccupant1</sub>(Res3) => Res4
++ &sigma;<sub>NomOccupant != NomOccupant1</sub>(Res3) => Res4
 
 Pour éviter les paires de type (Ra,W) et (W,Ra), il suffit de comparer les deux noms : 
 
-+ SIGMA<sub>NomOccupant < NomOccupant1 </sub>(Res4) => Res5
++ &sigma;<sub>NomOccupant < NomOccupant1 </sub>(Res4) => Res5
 
 > Note : le **<** s'applique aux caractères (ordre alpahabetique) 
 
