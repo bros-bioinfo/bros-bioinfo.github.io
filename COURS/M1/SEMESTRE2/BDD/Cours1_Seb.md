@@ -124,7 +124,7 @@ Ex : &pi;<sub>Nom</sub> (&sigma;<sub>Nom Service = Compta</sub>(&rho;<sub>Resp =
 Ex : 
 + Afficher le nom et N°SS des employés qui sont aussi étudiants 
 
-&pi;<sub>N°SS,Nom</sub>(Employé) **intersection** &pi;<sub>N°SS,Nom</sub>(Etudiant)
+&pi;<sub>N°SS,Nom</sub>(Employé) **&Lamda;** &pi;<sub>N°SS,Nom</sub>(Etudiant)
 
 + Afficher les étduiants qui ne sont pas employés
 
