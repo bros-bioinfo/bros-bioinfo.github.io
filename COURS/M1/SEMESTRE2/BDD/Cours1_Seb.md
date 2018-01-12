@@ -262,10 +262,12 @@ Forme générale d'une requête SQL :
 + SELECT correspond à la projection sur les résultats
 
 **Exemples**:
-+ Ex1 
++ Ex1
+
+```sql
 2- SELECT   NomImmeuble
 1- FROM     Immeuble
-
+```
 est équivalent à : &pi;<sub>NomImmeuble</sub>(Immeuble)
 
 Résultat : 
@@ -276,9 +278,11 @@ Résultat :
 |Barabas    |
 
 + Ex2
+```sql
 3- SELECT   NomImmeuble
 1- FROM     Immeuble
 2- WHERE    NomGérant = Doug
+```
 
 est équivalent à : &pi;<sub>NomImmeuble</sub>(&sigma;<sub>NomGérant=Doug</sub>(Immeuble))
 
@@ -294,16 +298,25 @@ est équivalent à : &pi;<sub>NomImmeuble</sub>(&sigma;<sub>NomGérant=Doug</sub
 
 *Remarque*: SQL n'élimine pas les doublons.
 
+```sql
 SELECT      NomImmeuble
 FROM        Appart
-
+```
 Pour éliminer les doublons, on utilise la **clause DISTINCT**.
 
+```sql
 SELECT      DISTINCT    NomImmeuble
 FROM        Appart
+```
 
 + Ex3
+La profession du gérant de Koudalou.
 
+```sql
+SELECT      Profession
+FROM        Personne,Immeuble
+WHERE       NomGérant = Nom
+```
 
 
 
