@@ -281,7 +281,7 @@ Résultat :
 ```sql
 3- SELECT   NomImmeuble
 1- FROM     Immeuble
-2- WHERE    NomGérant = "Doug"
+2- WHERE    NomGerant = "Doug"
 ```
 
 est équivalent à : &pi;<sub>NomImmeuble</sub>(&sigma;<sub>NomGérant=Doug</sub>(Immeuble))
@@ -315,7 +315,7 @@ La profession du gérant de Koudalou.
 ```sql
 SELECT      Profession
 FROM        Personne,Immeuble
-WHERE       NomGérant = "Nom" AND
+WHERE       NomGerant = "Nom" AND
             Immeuble = "Koudalou"
 ```
 
