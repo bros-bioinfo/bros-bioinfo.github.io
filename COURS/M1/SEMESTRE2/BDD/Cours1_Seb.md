@@ -336,6 +336,8 @@ La profession du gérant de l'appart de Rachel.
 SELECT  Profession
 FROM    Personne,Occupant,Immeuble
 WHERE   
+````
+
 ## III-Insertion, Suppression, Modification
 ### Modification de la structure d'une BD
 ## IV-Contrainte d'intégrité
