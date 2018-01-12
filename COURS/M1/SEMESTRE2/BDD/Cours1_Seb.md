@@ -130,9 +130,9 @@ PI<sub>N°SS,Nom</sub>(Employé) **intersection** PI<sub>N°SS,Nom</sub>(Etudian
 
 PI<sub>N°SS,Nom</sub>(Etudiant) __ PI<sub>N°SS,Nom</sub>(Employé)
 
-+ Afficher les personnes qui ont une adresse mail à l'iniversité
++ Afficher les personnes qui ont une adresse mail à l'université
 
-PI<sub>N°SS,Nom</sub>(Employé) **union** PI<sub>N°SS,Nom</sub>(Etduiant)
+PI<sub>N°SS,Nom</sub>(Employé) **union** PI<sub>N°SS,Nom</sub>(Etudiant)
 
 ### TD-1 : Requêtes 
 1- Afficher le nom des personnes qui habitent Koudalou
@@ -150,7 +150,7 @@ NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais l
 + Occupant **jointure** Appart => 5 lignes et 6 colonnes
 + PI<sub>Superficie</sub>(SIGMA<sub>NomOccupant = Rachel</sub>(Occupant **jointure** Appart))
 
-*Remarque* : on a le me résultat avec 
+*Remarque* : on a le même résultat avec 
 + PI<sub>Superficie</sub>(SIGMA<sub>NomOccupant = Rachel</sub>(Occupant) **jointure** Appart) 
 
 4- Profession du gérant de l'immeuble où Rachel habite
@@ -166,6 +166,79 @@ NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais l
 |Profession|
 |---------|
 |Rentier|
+
+5- Afficher la superficie de l'appart occupé par Rachel ainsi que la profession du gérant de cet appart
+
++ SIGMA<sub>NomOccupant = Rachel</sub>(Occupant) => Res1
++ Res1 **jointure** Appart => Res2
++ Res2 **jointure** Immeuble => Res3
++ RHO<sub>NomGérant => Nom</sub> => Res4 
++ Res4 **jointure** Personne => Res5
++ PI<sub>Superficie,Profession</sub>(Res5) 
+
+6- Afficher ke N° et le nom d'immeuble des apparts qui ne sont pas occupés
+
++ PI<sub>NomImmeuble,N°Appart</sub>(Appart) - PI<sub>NomImmeuble,N°Appart</sub>(Occupant)
+
+7- Le nom des immeubles dont tous les apparts sont occupés.
+
+*Principe* : l'ensemble de tous les immeubles moins ceux qui ont au moins un appartement libre
+
++ PI<sub>NomImmeuble</sub>(Immeuble) => Res1
++ PI<sub>NomImmeuble</sub>(PI<sub>NomImmeuble,N°Appart</sub>(Appart) - PI<sub>NomImmeuble,N°Appart</sub>(Occupant)) => Res2
++ Res1 - Res2 
+
+**Resultat** : 
+
+|NomImmeuble|
+|---------|
+|Barabas|
+ 
+ 8- Afficher les paires de personnes qui sont voisines cad habitent le même immeuble
+
++ PI<sub>NomImmeuble,NomOccupant</sub>(Occupant) => Res1
+
+|NomImmeuble|NomOccupant|
+|-----------|-----------|
+|K          | Ra        |
+|B          | D         |
+|B          | Ro        |
+|K          | W         |
+|K          | A         |
+
++ RHO<sub> NomOccupant => NomOccupant1</sub>(PI<sub>NomImmeuble,NomOccupant</sub>(Occupant)) => Res2
+
++ Res1 **jointure** Res2 => Res3 (NomImmeuble,NomOccupant,NomOccupant1)
+
+|NomImmeuble|NomOccupant|NomOccupant1|
+|-----------|-----------|------------|
+|K          | Ra        |Ra          |
+|K          |Ra         |W           |
+|K          |Ra         |A           |
+|B          |D          |D           |
+|B          | D         |Ro          |
+|B          |Ro         |D           |
+|B          | Ro        |Ro          |
+|K          |W          |Ra          |
+|K          |W          |W           |
+|K          | W         |A           |
+|K          |A          |Ra          |
+|K          |A          |W           |
+|K          |A          |A           |
+
+Pour éliminer les liges où on a le même nom, il suffit de sélectionner celles où les noms sont différents.
+
++ SIGMA<sub>NomOccupant != NomOccupant1</sub>(Res3) => Res4
+
+Pour éviter les paires de type (Ra,W) et (W,Ra), il suffit de comparer les deux noms : 
+
++ SIGMA<sub>NomOccupant < NomOccupant1 </sub>(Res4) => Res5
+
+> Note : le **<** s'applique aux caractères (ordre alpahabetique) 
+
+
+
+
  
 
 ### SQL
