@@ -309,6 +309,110 @@ SELECT COUNT(NomImmeuble) AS NombreAppart
 FROM    Appart
 ```
 
++ Autre fonction d'agrégation : MIN,MAX,AVG,...
+
+*Exemple* : Afficher la superficie moyenne des apparts
+
+```sql
+SELECT  AVG(SUperficie)
+FROM    Appart
+```
+
+#### Requêtes imbriquées
+
+Dans la clause WHERE on peut utiliser des requêtes pour exprimer les conditons.
+
+*Exemple* : Afficher les plus grands appartements (tous les attributs).
+
+```sql
+SELECT  A1.*
+FROM    Appart A1
+WHERE   Superficie = (SELECT MAX(A2.Superficie)
+                     FROM   Appart A2)
+```
++ **A1.\*** : tous les attributs de A1.
+
+#### Regroupement : 
+
+On peut vouloir appliquer les fonctions d'agrégations à des groupes d'enregistrements.
+
+*Exemple* : Pour chaque immeuble, afficher son nom ainsi que la supericie maximum de ses apparts.
+
+On veut donc construire des groupes de lignes de sorte que deux lignes sont dans le même groupe si et seulement si elles partagent la valeur du nom d'immeuble.
+
+```sql
+SELECT  NomImmeuble, MAX(Superficie)
+FROM    Appart
+GROUP BY NomImmeuble
+```
+Dans l'exemple, la clause GROUP BY construit deux groupes. Chacun correspond à une valeur de NomImmeuble (et il y a 2 valeurs distincts pour cet attribut).
+
+A chacun de ces 2 groupes, la fonction MAX(Superficie) est appliqué.
+
+**Résultat**:
+
+|NomImmeuble|MAX(Superfcie)|
+|-----------|--------------|
+| Koudalou  |200           |
+|Barabas    |250           |
+
++ Pour chaque immeuble, afficher son nom ainsi que le nombre de ses apparts ayant une superifcie supérieure à 100.
+
+```sql
+4 SELECT  NomImmeuble,COUNT(*)
+1 FROM    Appart
+2 WHERE   Superficie > 100
+3 GROUP BY NomImmeuble
+```
+
+#### Condition sur les fonctions d'aggrégation
+
+La clause WHERE permet de poser des conditons sur des lignes.
+
+*Exemple* : Afficher le nom des immeubles qui ont plus de 3 apparts.
+
+```sql
+SELECT  NomImmeuble
+FROM    Appart
+GROUP BY NomImmeuble
+HAVING   COUNT(*) > 3
+```
+
+#### Les valeurs NULL : 
+
++ Certains attributs peuvent ne pas être renseignées. Par exemple, on ajoute un appart pour lequel, on ne connaît pas encore la superficie. Dans ce cas, on dit que Superficie prend la valeur **NULL(inconnue)**.
++ La présence de valeurs NULL introduisent une troisième valeur logique pour l'évaluation des conditions (VRAI,FAUX,Inconnu).
+
+*Exemple* : 
+
+|Nom|Salaire|
+|---|-------|
+|A  |100    |
+|B  |200    |
+|C  |**NULL**|
+
+```sql
+SELECT  Nom
+FROM    Employé
+WHERE   Salaire > 100
+```
+Cette requête retourne : {Nom : B}. C ne fait pas partie du résultat car on ne connaît pas son salaire. 
+
+Requête complémentaire : inférieure ou égal à 100. Retourne : {Nom : A}.
+
+Si on fait une union de ses deux requêtes, on obtiendra A et B mais pas C.
+
+*Exemple* : Afficher les employés pour lesquels on connaît le salaire. 
+```sql
+SELECT  *
+FROM    Employe
+WHERE   Salaire IS NOT NULL
+```
+
+*Remarque* : Ecrire Salaire <> NULL est **incorrect**. 
+
+
+
 ## III-Insertion, Suppression, Modification
 ### Modification de la structure d'une BD
 ## IV-Contrainte d'intégrité
