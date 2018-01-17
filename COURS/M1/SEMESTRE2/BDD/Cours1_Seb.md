@@ -393,7 +393,7 @@ HAVING   COUNT(*) > 3
 
 ```sql
 SELECT  Nom
-FROM    Employé
+FROM    Employe
 WHERE   Salaire > 100
 ```
 Cette requête retourne : {Nom : B}. C ne fait pas partie du résultat car on ne connaît pas son salaire. 
@@ -410,6 +410,22 @@ WHERE   Salaire IS NOT NULL
 ```
 
 *Remarque* : Ecrire Salaire <> NULL est **incorrect**. 
+
+Afficher le salaire Moyen.
+
+```sql
+SELECT  SUM(Salaire)/Count(Nom)
+FROM    Employe
+```
+
+Retourne la valeur 100 ((100+200)/3).
+
+```sql
+SELECT  AVG(Salaire)
+FROM    Employe
+```
+
+Retourne 150 (ne prend pas en compte les NULL).
 
 
 
