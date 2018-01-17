@@ -244,6 +244,71 @@ SELECT  NomImmeuble,NAppart
 FROM    Occupant
 ```
 
+Cas particulier des tables utilisée plusieurs fois : 
+
+*Exemple*:
+Afficher les paires de noms de personnes qui habitent le même immeuble.
+
+```sql
+SELECT  O1.NomOccupant AS Nom1, O2.NomOccupant AS Nom2
+FROM    Occupant O1, Occupant O2
+WHERE   O1.NomImmeuble = O2.NomImmeuble AND
+        O1.NomOccupant < O2.NomOccupant
+```
+
++ Quand une même table est utilisée plusieurs fois dans la clause FROM, il faut associer une **variable** (O1 et o2) à chaque copie de cette table.
++ Quand une table est mentionnée une seule, on peut associer une variable à cette table pour simplifier l'écriture des conditions dans la clause WHERE.
+
+#### Tri de résultat 
+
+**Exemple** : Afficher le nom des occupants et l'année d'arrivée par ordre croissant de l'année d'arrivée
+
+```sql
+SELECT  NomOccupant,AnneeArrivee
+FROM    Occupant
+ORDER BY        AnneeArrivee
+```
++ Pour trier par ordre décroissant, il faut utiliser :
+```sql
+ORDER BY DESC   AnneeArrivee
+```
++ Pour trier le résultat par ordre croissant des noms, il faut utiliser :
+```sql
+ORDER BY        NomOccupant
+```
++ Si pour 2 personnes on arrivait à la même année, on veut les trier par ordre alphabétique, on utilise : 
+```sql
+ORDER BY        AnneeArrivee,NomOccupant 
+```
+
+#### Fonctions d'agrégation
+
+*Exemple*: Afficher le nombre d'appartements gérés par l'agence.
+
+```sql
+SELECT COUNT(NomImmeuble)
+FROM    Appart
+```
++ On compte le nombre de valeurs prises par l'attribut NomImmeuble dans la table Appart.
++ La fonction COUNT ne fait pas de distinction vis à vis des valeurs qui se répètent.
+
+Dans l'exemple, le résultat sera : 
+
+|COUNT(NomImmeuble)|
+|------------------|
+|6                 |
+
+et non pas : 2
+
+*Remarque*:
++ Pour cette requête, on aurait pu utiliser n'importe quel autre attribut.
++ On peut expliciter le sens du contenu de la colonne en la renommant.
++ Pour renommer le nom de l'attribut COUNT(NomImmeuble) : 
+```sql
+SELECT COUNT(NomImmeuble) AS NombreAppart
+FROM    Appart
+```
+
 ## III-Insertion, Suppression, Modification
 ### Modification de la structure d'une BD
 ## IV-Contrainte d'intégrité
