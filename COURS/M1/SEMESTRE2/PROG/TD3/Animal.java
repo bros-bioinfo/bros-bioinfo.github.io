@@ -10,6 +10,7 @@ import java.io.*;
 public class Animal {
     private String id;
     private int age;
+    private boolean vivant;
 
     public void setId(String nom) {
         id = nom;
@@ -28,6 +29,12 @@ public class Animal {
         age = val;
     }
 
+    public Animal(String nom, int val, boolean boule) {
+        id = nom;
+        age = val;
+        vivant = boule;
+    }
+
     public Animal() {
         id = "default";
         age = 0;
@@ -42,8 +49,15 @@ public class Animal {
     }
 
     public void affiche() {
-        System.out.println("Je suis un animal");
-        System.out.println("Mon id est: " + id);
-        System.out.println("J'ai: " + age + " mois");
+        System.out.println("id: " + id);
+        System.out.println("Age: " + age + " mois");
+        System.out.println("Encore en vie: " + vivant+"\n"); 
     }
+
+
+    public String toString() {
+        String chaine = "id: " + id + "\nAge: " + age + " mois"+"\nEncore en vie: "+vivant+"\n\n";
+        return chaine;
+    }
+
 }
