@@ -77,7 +77,7 @@ Ex : R(A,B) \* S(B,C) &rarr; Résultat(A,**R.B**,**S.B**,C)
 
 Ex : afficher le nom des employés habitant Pessac.
 
-&pi;;<sub>Nom</sub> (&sigma;<sub>Vile = Pessac</sub>)(Employé)) &rarr; Résultat = {"Nom" :[Dupont,Martin]}
+&pi;<sub>Nom</sub> (&sigma;<sub>Vile = Pessac</sub>)(Employé)) &rarr; Résultat = {"Nom" :[Dupont,Martin]}
 
 On a d'abord fait une sélection et on a ensuite appliqué la projection.
 
@@ -112,7 +112,7 @@ Permet de changer le nom d'un ou de pluseiurs attributs.
 *Exemple*
 ![https://www.labri.fr/perso/maabout/M1BI/rel.pdf](img/exempleRenom.png)
 
-Ex : &pi;<sub>Nom</sub> (&sigma;<sub>Nom Service = Compta</sub>(&rho;<sub>Resp &rarr; N°SS</sub>(Service)&#8883;&8882;Employé))
+Ex : &pi;<sub>Nom</sub> (&sigma;<sub>Nom Service = Compta</sub>(&rho;<sub>Resp &rarr; N°SS</sub>(Service)&#8883;&#8882;Employé))
 
 #### 1.6-Opération ensembliste : Union, Intersection, Différence
 *Notation* : 
