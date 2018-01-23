@@ -134,116 +134,6 @@ Ex :
 
 &pi;<sub>N°SS,Nom</sub>(Employé) &#8899; &pi;<sub>N°SS,Nom</sub>(Etudiant)
 
-### TD-1 : Requêtes 
-1- Afficher le nom des personnes qui habitent Koudalou
-
-+ &pi;<sub>NomOccupant</sub>(&sigma;<sub>NomImmeuble=Koudalou</sub>(Occupant))
-
-2- Afficher le nom des immeubles.
-
-NomImmeuble : attribut retourvé dans table Immeuble, Appart et Occupant. Mais la table Immeuble est censé contenir tous les immeubles : projection.
-
-+ &pi;<sub>NomImmeuble</sub>(Immeuble)
-
-3- Superficie de l'appart occupé par Rachel
-
-+ Occupant **&#8883;&#8882;** Appart &rarr; 5 lignes et 6 colonnes
-+ &pi;<sub>Superficie</sub>(&sigma;<sub>NomOccupant = Rachel</sub>(Occupant **&#8883;&#8882;** Appart))
-
-*Remarque* : on a le même résultat avec 
-+ &pi;<sub>Superficie</sub>(&sigma;<sub>NomOccupant = Rachel</sub>(Occupant) **&#8883;&#8882;** Appart) 
-
-4- Profession du gérant de l'immeuble où Rachel habite
-
-+ &sigma;<sub>NomOccupant = Rachel</sub>(Occupant) &rarr; Res1
-+ Res1 **&#8883;&#8882;** Immeuble &rarr; Res2 (1 ligne et 8 colonnes)
-+ &rho;<sub>NomGérant &rarr; Nom</sub> &rarr; Res3 
-+ Res3 **&#8883;&#8882;** Personne &rarr; Res4 (1ligne et 10 colonnes)
-+ &pi;<sub>Profession</sub>(Res4) 
-
-**Résultat**:
-
-|Profession|
-|---------|
-|Rentier|
-
-5- Afficher la superficie de l'appart occupé par Rachel ainsi que la profession du gérant de cet appart
-
-+ &sigma;<sub>NomOccupant = Rachel</sub>(Occupant) &rarr; Res1
-+ Res1 **&#8883;&#8882;** Appart &rarr; Res2
-+ Res2 **&#8883;&#8882;** Immeuble &rarr; Res3
-+ &rho;<sub>NomGérant &rarr; Nom</sub> &rarr; Res4 
-+ Res4 **&#8883;&#8882;** Personne &rarr; Res5
-+ &pi;<sub>Superficie,Profession</sub>(Res5) 
-
-6- Afficher ke N° et le nom d'immeuble des apparts qui ne sont pas occupés
-
-+ &pi;<sub>NomImmeuble,N°Appart</sub>(Appart) - &pi;<sub>NomImmeuble,N°Appart</sub>(Occupant)
-
-7- Le nom des immeubles dont tous les apparts sont occupés.
-
-*Principe* : l'ensemble de tous les immeubles moins ceux qui ont au moins un appartement libre
-
-+ &pi;<sub>NomImmeuble</sub>(Immeuble) &rarr; Res1
-+ &pi;<sub>NomImmeuble</sub>(&pi;<sub>NomImmeuble,N°Appart</sub>(Appart) - &pi;<sub>NomImmeuble,N°Appart</sub>(Occupant)) &rarr; Res2
-+ Res1 - Res2 
-
-**Resultat** : 
-
-|NomImmeuble|
-|---------|
-|Barabas|
- 
- 8- Afficher les paires de personnes qui sont voisines cad habitent le même immeuble
-
-+ &pi;<sub>NomImmeuble,NomOccupant</sub>(Occupant) &rarr; Res1
-
-|NomImmeuble|NomOccupant|
-|-----------|-----------|
-|K          | Ra        |
-|B          | D         |
-|B          | Ro        |
-|K          | W         |
-|K          | A         |
-
-+ &rho;<sub> NomOccupant &rarr; NomOccupant1</sub>(&pi;<sub>NomImmeuble,NomOccupant</sub>(Occupant)) &rarr; Res2
-
-+ Res1 **&#8883;&#8882;** Res2 &rarr; Res3 (NomImmeuble,NomOccupant,NomOccupant1)
-
-|NomImmeuble|NomOccupant|NomOccupant1|
-|-----------|-----------|------------|
-|K          | Ra        |Ra          |
-|K          |Ra         |W           |
-|K          |Ra         |A           |
-|B          |D          |D           |
-|B          | D         |Ro          |
-|B          |Ro         |D           |
-|B          | Ro        |Ro          |
-|K          |W          |Ra          |
-|K          |W          |W           |
-|K          | W         |A           |
-|K          |A          |Ra          |
-|K          |A          |W           |
-|K          |A          |A           |
-
-Pour éliminer les liges où on a le même nom, il suffit de sélectionner celles où les noms sont différents.
-
-+ &sigma;<sub>NomOccupant != NomOccupant1</sub>(Res3) &rarr; Res4
-
-Pour éviter les paires de type (Ra,W) et (W,Ra), il suffit de comparer les deux noms : 
-
-+ &sigma;<sub>NomOccupant < NomOccupant1 </sub>(Res4) &rarr; Res5
-
-> Note : le **<** s'applique aux caractères (ordre alpahabetique) 
-
-9- Afficher le nom des personnes qui sont arrivés après Doug
-
-Année d'arrivée de Doug:
-
-+ &pi;<sub>AnnéeArrivée</sub>(&sigma;<sub>NomOccupant=Doug</sub>(Occupant)) &rarr; Res1
-+ Occupant * Res1 &rarr; Res2
-+ &pi;<sub>NomOccupant</sub>(&sigma;<sub>Occupant.AnnéeArrivée > Res1.AnnéeArrivée</sub>(Res2))
-
 ### SQL
 
 + Structured (ou Simple) Query Language
@@ -315,7 +205,7 @@ La profession du gérant de Koudalou.
 ```sql
 SELECT  Profession
 FROM    Personne,Immeuble
-WHERE   NomGerant = "Nom" AND
+WHERE   NomGerant = Nom AND
         Immeuble = "Koudalou"
 ```
 + Ex4
@@ -335,8 +225,209 @@ La profession du gérant de l'appart de Rachel.
 ```sql
 SELECT  Profession
 FROM    Personne,Occupant,Immeuble
-WHERE   
-````
+WHERE   NomOccupant = "Rachel" AND
+        Occupant.NomImmeuble = Immeuble.NomImmeuble AND
+        NomGerant = Nom
+```
+
+**Opérateurs ensemblistes** : UNION,INTESECTION,MINUS
+
+*Exemple*:
++ Ex1
+N° et NomImmeuble des apparts non occupés
+
+```sql
+SELECT  NomImmeuble,NAppart
+FROM    Appart
+MINUS
+SELECT  NomImmeuble,NAppart
+FROM    Occupant
+```
+
+Cas particulier des tables utilisée plusieurs fois : 
+
+*Exemple*:
+Afficher les paires de noms de personnes qui habitent le même immeuble.
+
+```sql
+SELECT  O1.NomOccupant AS Nom1, O2.NomOccupant AS Nom2
+FROM    Occupant O1, Occupant O2
+WHERE   O1.NomImmeuble = O2.NomImmeuble AND
+        O1.NomOccupant < O2.NomOccupant
+```
+
++ Quand une même table est utilisée plusieurs fois dans la clause FROM, il faut associer une **variable** (O1 et o2) à chaque copie de cette table.
++ Quand une table est mentionnée une seule, on peut associer une variable à cette table pour simplifier l'écriture des conditions dans la clause WHERE.
+
+#### Tri de résultat 
+
+**Exemple** : Afficher le nom des occupants et l'année d'arrivée par ordre croissant de l'année d'arrivée
+
+```sql
+SELECT  NomOccupant,AnneeArrivee
+FROM    Occupant
+ORDER BY        AnneeArrivee
+```
++ Pour trier par ordre décroissant, il faut utiliser :
+```sql
+ORDER BY DESC   AnneeArrivee
+```
++ Pour trier le résultat par ordre croissant des noms, il faut utiliser :
+```sql
+ORDER BY        NomOccupant
+```
++ Si pour 2 personnes on arrivait à la même année, on veut les trier par ordre alphabétique, on utilise : 
+```sql
+ORDER BY        AnneeArrivee,NomOccupant 
+```
+
+#### Fonctions d'agrégation
+
+*Exemple*: Afficher le nombre d'appartements gérés par l'agence.
+
+```sql
+SELECT COUNT(NomImmeuble)
+FROM    Appart
+```
++ On compte le nombre de valeurs prises par l'attribut NomImmeuble dans la table Appart.
++ La fonction COUNT ne fait pas de distinction vis à vis des valeurs qui se répètent.
+
+Dans l'exemple, le résultat sera : 
+
+|COUNT(NomImmeuble)|
+|------------------|
+|6                 |
+
+et non pas : 2
+
+*Remarque*:
++ Pour cette requête, on aurait pu utiliser n'importe quel autre attribut.
++ On peut expliciter le sens du contenu de la colonne en la renommant.
++ Pour renommer le nom de l'attribut COUNT(NomImmeuble) : 
+```sql
+SELECT COUNT(NomImmeuble) AS NombreAppart
+FROM    Appart
+```
+
++ Autre fonction d'agrégation : MIN,MAX,AVG,...
+
+*Exemple* : Afficher la superficie moyenne des apparts
+
+```sql
+SELECT  AVG(SUperficie)
+FROM    Appart
+```
+
+#### Requêtes imbriquées
+
+Dans la clause WHERE on peut utiliser des requêtes pour exprimer les conditons.
+
+*Exemple* : Afficher les plus grands appartements (tous les attributs).
+
+```sql
+SELECT  A1.*
+FROM    Appart A1
+WHERE   Superficie = (SELECT MAX(A2.Superficie)
+                     FROM   Appart A2)
+```
++ **A1.\*** : tous les attributs de A1.
+
+#### Regroupement : 
+
+On peut vouloir appliquer les fonctions d'agrégations à des groupes d'enregistrements.
+
+*Exemple* : Pour chaque immeuble, afficher son nom ainsi que la supericie maximum de ses apparts.
+
+On veut donc construire des groupes de lignes de sorte que deux lignes sont dans le même groupe si et seulement si elles partagent la valeur du nom d'immeuble.
+
+```sql
+SELECT  NomImmeuble, MAX(Superficie)
+FROM    Appart
+GROUP BY NomImmeuble
+```
+Dans l'exemple, la clause GROUP BY construit deux groupes. Chacun correspond à une valeur de NomImmeuble (et il y a 2 valeurs distincts pour cet attribut).
+
+A chacun de ces 2 groupes, la fonction MAX(Superficie) est appliqué.
+
+**Résultat**:
+
+|NomImmeuble|MAX(Superfcie)|
+|-----------|--------------|
+| Koudalou  |200           |
+|Barabas    |250           |
+
++ Pour chaque immeuble, afficher son nom ainsi que le nombre de ses apparts ayant une superifcie supérieure à 100.
+
+```sql
+4 SELECT  NomImmeuble,COUNT(*)
+1 FROM    Appart
+2 WHERE   Superficie > 100
+3 GROUP BY NomImmeuble
+```
+
+#### Condition sur les fonctions d'aggrégation
+
+La clause WHERE permet de poser des conditons sur des lignes.
+
+*Exemple* : Afficher le nom des immeubles qui ont plus de 3 apparts.
+
+```sql
+SELECT  NomImmeuble
+FROM    Appart
+GROUP BY NomImmeuble
+HAVING   COUNT(*) > 3
+```
+
+#### Les valeurs NULL : 
+
++ Certains attributs peuvent ne pas être renseignées. Par exemple, on ajoute un appart pour lequel, on ne connaît pas encore la superficie. Dans ce cas, on dit que Superficie prend la valeur **NULL(inconnue)**.
++ La présence de valeurs NULL introduisent une troisième valeur logique pour l'évaluation des conditions (VRAI,FAUX,Inconnu).
+
+*Exemple* : 
+
+|Nom|Salaire|
+|---|-------|
+|A  |100    |
+|B  |200    |
+|C  |**NULL**|
+
+```sql
+SELECT  Nom
+FROM    Employe
+WHERE   Salaire > 100
+```
+Cette requête retourne : {Nom : B}. C ne fait pas partie du résultat car on ne connaît pas son salaire. 
+
+Requête complémentaire : inférieure ou égal à 100. Retourne : {Nom : A}.
+
+Si on fait une union de ses deux requêtes, on obtiendra A et B mais pas C.
+
+*Exemple* : Afficher les employés pour lesquels on connaît le salaire. 
+```sql
+SELECT  *
+FROM    Employe
+WHERE   Salaire IS NOT NULL
+```
+
+*Remarque* : Ecrire Salaire <> NULL est **incorrect**. 
+
+Afficher le salaire Moyen.
+
+```sql
+SELECT  SUM(Salaire)/Count(Nom)
+FROM    Employe
+```
+
+Retourne la valeur 100 ((100+200)/3).
+
+```sql
+SELECT  AVG(Salaire)
+FROM    Employe
+```
+
+Retourne 150 (ne prend pas en compte les NULL).
+
+
 
 ## III-Insertion, Suppression, Modification
 ### Modification de la structure d'une BD
