@@ -47,7 +47,9 @@ public class Animal {
     public int getAge() {
         return age;
     }
-
+    public boolean getStatus() {
+        return vivant;
+    }
     public void affiche() {
         System.out.println("id: " + id);
         System.out.println("Age: " + age + " mois");
