@@ -94,4 +94,7 @@ racine(A) = None
 pere(A,s) = {}
 fils(A,p) = {}
 
+*Arbre dans un arbre* : 
+
++ A = {a&rarr;(A={0,1,2};racine = 0 ; pere{0:None;1:0;2:0};fils : {0:{1,2};1:{};2:{}})}) ; b&rarr;(A = &empty;; racine = None, pere:{}; fils:{})}
 
