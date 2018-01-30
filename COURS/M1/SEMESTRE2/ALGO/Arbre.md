@@ -46,4 +46,4 @@ Est-ce que le quadruplet(A,racine,pere,fils) est un arbre ? Si oui dessinez le :
     - 8:{}
     - 7:{}
 
-Non ce n'est pas un arbre car la règle 5 n'est pas vérifiée : pere(pere(pere(2))) = 2. De plus la règle 3 n'est pas vérifiée non plus : pere(8)=9 et 9&notin;fils(8).
+Non ce n'est pas un arbre car la règle 5 n'est pas vérifiée : pere(pere(pere(2))) = 2. De plus la règle 3 n'est pas vérifiée non plus : pere(8)=9 et 8&notin;fils(9).
