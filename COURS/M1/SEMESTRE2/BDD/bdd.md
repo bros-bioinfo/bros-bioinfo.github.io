@@ -77,22 +77,22 @@ Ex : R(A,B) \* S(B,C) &rarr; Résultat(A,**R.B**,**S.B**,C)
 
 Ex : afficher le nom des employés habitant Pessac.
 
-&pi;<sub>Nom</sub> (&sigma;<sub>Vile = Pessac</sub>)(Employé)) &rarr; Résultat = {"Nom" :[Dupont,Martin]}
+&pi;<sub>Nom</sub> (&sigma;<sub>Vile = Pessac</sub>)(Employé)) &rarr; Résultat = {'Nom' :[Dupont,Martin]}
 
 On a d'abord fait une sélection et on a ensuite appliqué la projection.
 
 Ex : afficher le nom des employés qui travaillent au Service Compta. 
 + On extrait le n° du Service dont le nom est Compta.
 
-&pi;<sub>N°Service</sub> (&sigma;<sub>NomService = Compta</sub>(Service)) &rarr; Res1 : {"N°Service" : [1]}
+&pi;<sub>N°Service</sub> (&sigma;<sub>NomService = Compta</sub>(Service)) &rarr; Res1 : {'N°Service' : [1]}
 
 + On combine Res 1 avec Employé :
 
-Employé * Res1 &rarr; Res2 = {"N°SS":[123,321,312],"Nom":[Dupond,Dupont,Martin],"Ville":[Bx,Pessac,Pessac],"Employé.N°Service":[1,1,2],"Res1.N°Service":[1,1,1]}
+Employé * Res1 &rarr; Res2 = {'N°SS':[123,321,312],'Nom':[Dupond,Dupont,Martin],'Ville':[Bx,Pessac,Pessac],'Employé.N°Service':[1,1,2],'Res1.N°Service':[1,1,1]}
 
 + On sélectionne le nom des employés où il y a égalité des N°Service.
 
-&pi;<sub>Nom</sub> (&sigma;<sub>Employé.N°Service = Res1.N°Service</sub>(Res2)) &rarr; Res3={"Nom":[Dupond,Dupond]}
+&pi;<sub>Nom</sub> (&sigma;<sub>Employé.N°Service = Res1.N°Service</sub>(Res2)) &rarr; Res3={'Nom':[Dupond,Dupond]}
 
 #### 1.4-Jointure
 C'est un cas particulier de produit cartésien : 2 lignes sont concaténées si et seulement si elles ont les mêmes valeurs sur les attributs communs : 
@@ -171,7 +171,7 @@ Résultat :
 ```sql
 3- SELECT   NomImmeuble
 1- FROM     Immeuble
-2- WHERE    NomGerant = "Doug"
+2- WHERE    NomGerant = 'Doug'
 ```
 
 est équivalent à : &pi;<sub>NomImmeuble</sub>(&sigma;<sub>NomGérant=Doug</sub>(Immeuble))
@@ -206,7 +206,7 @@ La profession du gérant de Koudalou.
 SELECT  Profession
 FROM    Personne,Immeuble
 WHERE   NomGerant = Nom AND
-        Immeuble = "Koudalou"
+        Immeuble = 'Koudalou'
 ```
 + Ex4
 La superficie de l'appart de Rachel
@@ -216,7 +216,7 @@ SELECT  Supercie
 FROM    Appart,Occupant
 WHERE   Appart.NomImmeuble=Occupant.NomImmeuble AND
         Appart.NAppart=Occupant.NOccupant AND
-        NomOccupant = "Rachel"
+        NomOccupant = 'Rachel'
 ```
 
 + Ex5
@@ -225,7 +225,7 @@ La profession du gérant de l'appart de Rachel.
 ```sql
 SELECT  Profession
 FROM    Personne,Occupant,Immeuble
-WHERE   NomOccupant = "Rachel" AND
+WHERE   NomOccupant = 'Rachel' AND
         Occupant.NomImmeuble = Immeuble.NomImmeuble AND
         NomGerant = Nom
 ```
