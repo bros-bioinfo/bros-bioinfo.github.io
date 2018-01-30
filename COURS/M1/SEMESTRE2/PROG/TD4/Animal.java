@@ -62,4 +62,15 @@ public class Animal {
         return chaine;
     }
 
+
+    public void save(BufferedWriter buff)throws IOException{
+        buff.write(getId());
+        buff.newLine();
+        buff.write((new Integer(age)).toString());
+        buff.newLine();
+        if (getStatus()) buff.write("vivant");
+        else
+            buff.write("mort");
+        buff.newLine();
+    }
 }

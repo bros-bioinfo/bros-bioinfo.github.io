@@ -13,6 +13,13 @@ class gerer_animalerie {
     }
 
     static void menuanimalerie() {
+        try{
+            ecrire(liste_animalerie);            
+        }
+        catch(Exception exp){
+            System.out.println("Erreur bouuu");
+            return;
+        }
         System.out.println("\n");
         System.out.println("[1]\t Créer une animalerie");
         System.out.println("[2]\t Editer une animalerie");
@@ -31,6 +38,19 @@ class gerer_animalerie {
         }
         return null;
     }
+
+    public static void ecrire(Vector liste_animalerie) throws IOException {
+        for (Iterator it = liste_animalerie.iterator(); it.hasNext();) {
+            Animalerie courant = (Animalerie) it.next();
+            String filename = courant.getNom_animalerie()+".txt";
+            BufferedWriter buff = new BufferedWriter(new FileWriter(filename));
+            courant.saveanimals(buff);
+            buff.flush();
+            buff.close();
+        }
+    }
+
+
 
     public static void editer_animalerie() {
         System.out.println("[2]\t Quel animalerie voulez-vous editer ?");

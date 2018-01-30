@@ -50,6 +50,14 @@ public class Animalerie {
         }
     }
 
+    public void saveanimals(BufferedWriter buff) throws IOException{
+            for (int i = 0; i < tab.size(); i++) {
+                tab.get(i).save(buff);
+            }
+    }
+
+
+
     private String nom;
     public static Vector<Animal> tab = new Vector<Animal>();
     public static int compteur = 0;
