@@ -17,7 +17,28 @@ Pour que (A,racine,fils,pere) soit un arbre, il faut que les propriétés suivan
 Ref : [Openclassroom : Algo](https://openclassrooms.com/courses/algorithmique-pour-l-apprenti-programmeur/arbres?q=&hPP=8&idx=prod_v2_COURSES_en&p=0&fR%5Bcertificate%5D%5B0%5D=true&fR%5BisWeb%5D%5B0%5D=true)
 
 3. Les fils d'un sommet s ont pour père s. **&forall;s &isin;A, &forall;f &isin;fils(A,s)  pere(A,f) = s** &rarr; Traduction : pour tout sommet de A, pour tout sommert appartenant aux fils de s, le pere de f est s.
-4. A partir de tout sommet, on peut accéder à la racine par la relation de paternité. **&forall;s &isin;A, &ni;k&isin;N  pere<sup>k</sup>(A,s) = None. Où pere<sup>k</sup> se définit récursivement par : 
+4. A partir de tout sommet, on peut accéder à la racine par la relation de paternité. **&forall;s &isin;A, &ni;k&isin;N  pere<sup>k</sup>(A,s) = None**. Où pere<sup>k</sup> se définit récursivement par : 
     + pere<sup>0</sup>(A,s) = s
     + pere<sup>k</sup>(A,s) = pere(pere<sup>k-1</sup>(A,s))
 5. Il ya un unique sommet s tels que pere(s) = None et le sommet est la racine.
+
+*Exemple* : 
+
+Est-ce que le quadruplet(A,racine,pere,fils) est un arbre ? Si oui dessinez le : 
+
++ A = {1,2,8,9,5,7}
++ pere : 
+    - 9:1
+    - 2:9
+    - 5:9
+    - 7:None
+    - 1:2
+    - 8:9
++ racine(A) = 7
++ fils : 
+    - 1:{9}
+    - 2:{1}
+    - 9:{2,5}
+    - 5:{}
+    - 8:{}
+    - 7:{}
