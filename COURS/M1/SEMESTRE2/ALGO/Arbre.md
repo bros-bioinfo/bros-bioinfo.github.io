@@ -98,3 +98,28 @@ fils(A,p) = {}
 
 + A = {a&rarr;(A={0,1,2};racine = 0 ; pere{0:None;1:0;2:0};fils : {0:{1,2};1:{};2:{}})}) ; b&rarr;(A = &empty;; racine = None, pere:{}; fils:{})}
 
+**En python** : 
+
+```py
+def creer_arbre_vide():
+    A=[]
+    pere = {}
+    fils = {}
+    racine = None
+    return [A,pere,fils,racine]
+
+def ajouter_racine(T,s):
+    #ajoute dans A un sommet
+    #s et le définis comme une 
+    #racine
+    T[0].append(s)
+    T([][s]) = None
+    T([2][s]) = {}
+    T([3][s]) = s
+
+def ajouter_sommet(T,s,p):
+    #ajoute dans T le sommets
+    #et definit p comme son père
+    #p existe dans T
+    #s n'exsire pas dans T
+```
