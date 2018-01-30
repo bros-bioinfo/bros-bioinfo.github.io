@@ -9,6 +9,8 @@ Un arbre est une structure de donnée A contenant des éléments, tous distincts
 + la fonction racine(A) qui prends en paramètre un arbre A et renvoie un sommet de A appelé racine de A.
 
 Pour que (A,racine,fils,pere) soit un arbre, il faut que les propriétés suivantes soient vérifiées : 
++ la fonction racine(A) prends en paramètre un arbre A et renvoie un sommet de A appelé racine ou None si A est vide.
++ Par convention on étend pere de sorte que pere(A,None) = None.
 1. Une racine n'a pas de père : père(A,racine(*)) = None.
 2. Tout sommet a un père à l'exception de la racine : **&forall;s &isin;A/{racine(A)}  pere(A,s)&isin;A** &rarr; Traduction : pour tout sommet s de A privé des éléments de l'ensemble qui ne contient que la racine A.
 
@@ -47,3 +49,49 @@ Est-ce que le quadruplet(A,racine,pere,fils) est un arbre ? Si oui dessinez le :
     - 7:{}
 
 Non ce n'est pas un arbre car la règle 5 n'est pas vérifiée : pere(pere(pere(2))) = 2. De plus la règle 3 n'est pas vérifiée non plus : pere(8)=9 et 8&notin;fils(9).
+
+*Exercice* : 
+Est-ce que le quadruplet(A,racine,pere,fils) est un arbre ? Si oui dessinez le : 
+
++ A = {a,1,'toto',9}
++ pere : 
+    - a:1
+    - 9:1
+    - 1:'toto'
+    - 'toto'=None
++ racine(A) = 'toto'
++ fils : 
+    - a:{}
+    - 1:{a,9}
+    - 'toto':{1}
+    - 9:{}
+
+**Attention** : Pour l'instant nos arbres n'ont pas d'étiquettes !!
+
+*Exercice* : 
+Retranscrire un arbre en quadruplet : 
+
++ A{0,1,2,3,5,4}
++ pere : 
+    - 0:None
+    - 1:0
+    - 2:0
+    - 3:2
+    - 5:2
+    - 4:2
++ fils :
+    - 0:{1,2}
+    - 1:{}
+    - 2:{3,5,4}
+    - 3:{}
+    - 4:{}
+    - 5:{}
+
+**Note** : un arbre vide renvoie None.
+
+A = {}
+racine(A) = None
+pere(A,s) = {}
+fils(A,p) = {}
+
+
