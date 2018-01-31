@@ -1,3 +1,5 @@
+import java.io.*;
+
 class canari extends Animal {
     public canari(String nom) {
         super(nom);
@@ -19,5 +21,11 @@ class canari extends Animal {
     public void affiche() {
         System.out.println("\nCuiCUIIIIII");
         super.affiche();
+    }
+
+    public void save(BufferedWriter buff)throws IOException{
+        buff.write("CANARI");
+        buff.write(";");
+        super.save(buff);
     }
 }

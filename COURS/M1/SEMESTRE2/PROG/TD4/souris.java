@@ -1,3 +1,5 @@
+import java.io.*;
+
 class souris extends Animal {
     public souris(String nom) {
         super(nom);
@@ -18,5 +20,11 @@ class souris extends Animal {
     public void affiche() {
         System.out.println("\n...Koouikkk (bruit de souris)");
         super.affiche();
+    }
+
+    public void save(BufferedWriter buff)throws IOException{
+        buff.write("SOURIS");
+        buff.write(";");
+        super.save(buff);
     }
 }

@@ -63,14 +63,18 @@ public class Animal {
     }
 
 
-    public void save(BufferedWriter buff)throws IOException{
+    public void save(BufferedWriter buff) throws IOException{
         buff.write(getId());
-        buff.newLine();
+        buff.write(";");
         buff.write((new Integer(age)).toString());
-        buff.newLine();
-        if (getStatus()) buff.write("vivant");
+        buff.write(";");
+        if (getStatus()) buff.write("true");
         else
-            buff.write("mort");
+            buff.write("false");
+        
+        buff.write(";");          
         buff.newLine();
     }
+
 }
+

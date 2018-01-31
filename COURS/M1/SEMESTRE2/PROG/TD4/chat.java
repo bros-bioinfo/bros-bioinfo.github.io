@@ -1,3 +1,5 @@
+import java.io.*;
+
 class chat extends Animal {
     public chat(String nom) {
         super(nom);
@@ -19,5 +21,11 @@ class chat extends Animal {
     public void affiche() {
         System.out.println("\nMiaouuuu");
         super.affiche();
+    }
+
+    public void save(BufferedWriter buff) throws IOException{
+        buff.write("CHAT");
+        buff.write(";");
+        super.save(buff);
     }
 }
