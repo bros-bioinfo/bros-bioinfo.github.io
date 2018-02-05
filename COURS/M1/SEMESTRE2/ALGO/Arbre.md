@@ -112,7 +112,6 @@ def ajouter_racine(T,s):
     #ajoute dans A un sommet
     #s et le définis comme une 
     #racine
-    assert (T[0] is None)
     sommet = T[0]
     pere = T[1]
     fils = T[2]
@@ -127,6 +126,7 @@ def ajouter_fils(T,f,p):
     #et definit p comme son père
     #p existe dans T
     #s n'exsiste pas dans T
+    assert (p in sommet and not f in sommet)
     sommet = T[0]
     pere = T[1]
     fils = T[2]
