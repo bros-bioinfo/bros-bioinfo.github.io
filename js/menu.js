@@ -52,13 +52,13 @@ function getTree() {
     ]},
     {"type":"directory",href:"#fh5co-work",text:"SEMESTRE2",custom:"1301427",nodes:[
       {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"1301408",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/Arbre",text:"Arbre",custom:"1301658"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/Arbre",text:"Arbre",custom:"25 1506"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"BDD",custom:"1201030",nodes:[
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/bdd",text:"bdd",custom:"1301904"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/TD1",text:"TD1",custom:"1121627"},
       ]},
-      {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"1301427",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"25 1506",nodes:[
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/Java",text:"Java",custom:"1171042"},
       ]},
     ]},
