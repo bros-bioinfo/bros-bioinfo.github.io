@@ -119,6 +119,27 @@ def parcours_sommets_internes_rec(A,s,p):
     return p
 
 
+# Exo 8
+def ecrire(A):
+    nom = "arbre.dot"
+    fic=open(nom,"w")
+    fic.write('digraph A{')
+    fic.write('\n')
+    fic.write('\tgraph [ordering="out"];')
+    fic.write('\n')
+    for x in A[2]:
+        fic.write('\t')
+        fic.write(str(x))
+        fic.write(' -> {')
+        for y in fils(A,x):
+            fic.write(str(y))
+            fic.write('; ')
+        fic.write('}')
+        fic.write('\n')
+    fic.write("}")
+    fic.write('\n')
+    fic.close()
+
 A = creer_arbre()
 p = []
 n = []
@@ -143,3 +164,4 @@ parcours_feuille(A,o)
 print(o)
 parcours_sommets_internes(A,l)
 print(l)
+ecrire(A)
