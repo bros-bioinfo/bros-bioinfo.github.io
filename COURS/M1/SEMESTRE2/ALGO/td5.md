@@ -168,4 +168,6 @@ print(o)
 parcours_sommets_internes(A,l)
 print(l)
 ecrire(A)
+
+# ecrire dans Xterm : dot -Tpng arbre.dot -o arbre.png 
 ```
