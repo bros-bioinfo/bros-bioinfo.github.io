@@ -1,3 +1,7 @@
+# TD 5 - Arbre
+
+
+```py
 # Exo 1
 def pere(A,f):
     return A[1][f]
@@ -143,3 +147,5 @@ parcours_feuille(A,o)
 print(o)
 parcours_sommets_internes(A,l)
 print(l)
+
+```
