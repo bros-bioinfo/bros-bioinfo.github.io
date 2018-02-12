@@ -300,3 +300,4 @@ Un arbre binaire de recherche est un arbre binaire ettiqueté, dont les étiquet
 Un arbre binaire de recherche est **équilibré" si pour tous sommet s de l'arbre :
 
 **(hauteur\_sous\_arbre\_gauche(s)) - (hauteur\_sous\_arbre\_droit(s)) &le; 1**
+
