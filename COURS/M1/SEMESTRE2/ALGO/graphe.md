@@ -88,9 +88,13 @@ Les graphes complets sont des graphes non orienté à n sommets tels que toute p
 
 Définition allégé : 
 
-K<sub>n</sub> = (\[[1,n]], &Gamma;) &Gamma; = {{i,j} i < j et i = \[[1,n]] et j = \[[1,n]]}
+K<sub>n</sub> = (\[[1,n]], &Gamma;) &Gamma; = {{i,j}} i < j et i = \[[1,n]] et j = \[[1,n]]}
 
 **Exemple** :
 
-S = Sommet de L = {1,2,3,4}
-&Gamma; = Arrêtes de L = { {{1,2}} , {{1,3}} , {{1,4}} , {{2,3}} , {{2,4}} , {{3,4}} }
++ S = Sommet de L = {1,2,3,4}
++ &Gamma; = Arrêtes de L = { {{1,2}} , {{1,3}} , {{1,4}} , {{[[1,n]]2,3}} , {{2,4}} , {{3,4}} }
+
+#### Les graphes bipartis
+Un graphe biparti est un graphe non orienté tels que l'ensemble des sommets peut être partitionné en deux sous-ensemble A et B disjoint (pléonasme).
+
