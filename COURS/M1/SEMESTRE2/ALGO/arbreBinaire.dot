@@ -1,0 +1,2 @@
+digraph A{
+	graph [ordering="out"];
