@@ -22,3 +22,9 @@ Problème de cette table:
 - Anomalie de suppression:
 
     Supprimer les produits proposés par F1 fait disparaitre F1 de T.
+
+- Anomalie de modification:
+
+    - On sait que F1 est le seul à proposer NP1.
+    - On apprends que l'adresse F1 a changé, elle passe à A2
+    - Update T set Adr=A2 where NP=NP1. F1 peut se retrouver avec différentes adresses.

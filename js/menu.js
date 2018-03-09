@@ -59,7 +59,7 @@ function getTree() {
       {"type":"directory",href:"#fh5co-work",text:"BDD",custom:"39 1428",nodes:[
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/bdd",text:"bdd",custom:"1311157"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/TD1",text:"TD1",custom:"1181104"},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/TD2",text:"TD2",custom:"39 1434"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/TD2",text:"TD2",custom:"39 1438"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"1311148",nodes:[
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/Java",text:"Java",custom:"111  916"},
