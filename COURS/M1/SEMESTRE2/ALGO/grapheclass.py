@@ -112,19 +112,6 @@ class Graphe:
             print "Ce sommet n'existe pas !"
 
 
-    def ecrire_graphe_non_oriente(self):
-        nom = self.name+"_non_oriente.dot"
-        fic=open(nom,"w")
-        fic.write('graph {')
-        fic.write('\n')
-        for arc in self.incidence:
-            fic.write(str(self.incidence[arc][0]))
-            fic.write(" -- ")
-            fic.write(str(self.incidence[arc][1])+"[label=\""+str(arc)+"\"];")
-            fic.write("\n")
-        fic.write("}")
-        fic.close()
-
     def ecrire_graphe_oriente(self):
         c=0
         nom = self.name+"_oriente.dot"
