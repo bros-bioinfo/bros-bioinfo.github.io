@@ -166,10 +166,36 @@ class Graphe:
             os.system('libreoffice '+self.name+'_non_oriente.dot &')
 
 
-    # def parcours_en_profondeur(self):
+    def parcours_en_profondeur(self,S):
+        sommetParcourus = [];
+        for sommets in self.sommets:
+            for i in range(len(self.adjacence[sommets])):
+                if self.adjacence[sommets][i] not in sommetParcourus:
+                    sommetParcourus.append(self.adjacence[sommets][i])
 
-    ###AVANT D ALLER PLUS LOIN PENSER A IMPLEMENTER LA SUPPRESSION DES SOMMETS ET ARETES DANS LES FONCTION supprimer_sommet
-    ###ET supprimer_arete  POUR GERER LA LISTE D'ADJACENCE
+        print "\nSommets parcourus :",sommetParcourus
+
+    # def parcours_graphe(self,S):
+    #     sommetParcourus=[]
+    #     self.parcours_graphe_rec(str(S),sommetParcourus)
+    #
+    #     print "\nSommets parcourus :",sommetParcourus
+    #
+    #
+    # def parcours_graphe_rec(self,S,sommetParcourus):
+    #     sommetParcourus.append(S)
+    #
+    #     for i in range(len(self.adjacence[S])):
+    #         if self.adjacence[S][i] not in sommetParcourus:
+    #             self.parcours_graphe_rec(str(S),sommetParcourus)
+    #             return sommetParcourus
+
+
+
+
+
+
+
 
 
 
@@ -192,8 +218,10 @@ graphe1.ajouter_un_arc("A","E","arc6")
 graphe1.ajouter_un_arc("F","E","arc7")
 print graphe1.__dict__
 print "\n\n"
-graphe1.supprimer_sommet("A")
+# graphe1.supprimer_sommet("A")
 print graphe1.__dict__
+graphe1.parcours_en_profondeur("B")
+# graphe1.parcours_graphe("B")
 
 # print "Nombre de sommets : ",graphe1.get_nb_sommets()
 # print "Liste des incidences : ",graphe1.liste_incidence()
