@@ -99,8 +99,8 @@ class Graphe:
                         del copyAdjacence[cle][index]
                         index-=1
                     index +=1
-
-            for cle in self.
+                if cle == S:
+                    del copyAdjacence[cle]
 
 
             self.sommets = list(copySommets)
@@ -111,6 +111,19 @@ class Graphe:
         else:
             print "Ce sommet n'existe pas !"
 
+
+    def ecrire_graphe_non_oriente(self):
+        nom = self.name+"_non_oriente.dot"
+        fic=open(nom,"w")
+        fic.write('graph {')
+        fic.write('\n')
+        for arc in self.incidence:
+            fic.write(str(self.incidence[arc][0]))
+            fic.write(" -- ")
+            fic.write(str(self.incidence[arc][1])+"[label=\""+str(arc)+"\"];")
+            fic.write("\n")
+        fic.write("}")
+        fic.close()
 
     def ecrire_graphe_oriente(self):
         c=0
@@ -179,7 +192,7 @@ graphe1.ajouter_un_arc("A","E","arc6")
 graphe1.ajouter_un_arc("F","E","arc7")
 print graphe1.__dict__
 print "\n\n"
-# graphe1.supprimer_sommet("A")
+graphe1.supprimer_sommet("A")
 print graphe1.__dict__
 
 # print "Nombre de sommets : ",graphe1.get_nb_sommets()
