@@ -10,6 +10,11 @@ class Graphe:
         self.arcs = []
         self.incidence = {}
         self.adjacence = {}
+        self.couleur={}
+        self.pere={}
+        self.debut={}
+        self.fin={}
+        self.temps=0
         self.name=raw_input("Donnez un nom à votre fichier (sans extension)")
 
     def get_name(self):
@@ -31,7 +36,6 @@ class Graphe:
                 self.arcs.append(A)
                 self.incidence[A]=[S1,S2]
                 self.adjacence[S1].append(S2)
-                self.adjacence[S2].append(S1)
 
     def liste_incidence(self):
         return self.incidence
@@ -166,29 +170,34 @@ class Graphe:
             os.system('libreoffice '+self.name+'_non_oriente.dot &')
 
 
-    def parcours_en_profondeur(self,S):
-        sommetParcourus = [];
-        for sommets in self.sommets:
-            for i in range(len(self.adjacence[sommets])):
-                if self.adjacence[sommets][i] not in sommetParcourus:
-                    sommetParcourus.append(self.adjacence[sommets][i])
+    def PP(self):
+        for i in range(len(self.sommets)):
+            self.temps=0
+            self.couleur[self.sommets[i]]="blanc"
+            self.pere[self.sommets[i]]=None
+            self.debut[self.sommets[i]]=0
+            self.fin[self.sommets[i]]=0
 
-        print "\nSommets parcourus :",sommetParcourus
+        for i in range(len(self.sommets)):
+            print self.sommets[i]
+            if self.couleur[self.sommets[i]]=="blanc":
+                print "coucou"
+                self.visiterPP(self.sommets[i])
 
-    # def parcours_graphe(self,S):
-    #     sommetParcourus=[]
-    #     self.parcours_graphe_rec(str(S),sommetParcourus)
-    #
-    #     print "\nSommets parcourus :",sommetParcourus
-    #
-    #
-    # def parcours_graphe_rec(self,S,sommetParcourus):
-    #     sommetParcourus.append(S)
-    #
-    #     for i in range(len(self.adjacence[S])):
-    #         if self.adjacence[S][i] not in sommetParcourus:
-    #             self.parcours_graphe_rec(str(S),sommetParcourus)
-    #             return sommetParcourus
+    def visiterPP(self,S):
+        print "coucou"
+        self.couleur[S]="gris"
+        self.temps +=1
+        self.debut[S]=self.temps
+
+        for cle in self.adjacence[S]:
+            if self.couleur[cle]=="blanc":
+                self.pere[cle]=S
+                self.visiterPP(cle)
+
+        self.couleur[S]="noir"
+        self.temps+=1
+        self.fin[S]=self.temps
 
 
 
@@ -216,12 +225,14 @@ graphe1.ajouter_un_arc("A","C","arc4")
 graphe1.ajouter_un_arc("C","G","arc5")
 graphe1.ajouter_un_arc("A","E","arc6")
 graphe1.ajouter_un_arc("F","E","arc7")
+graphe1.ajouter_un_arc("A","A","arc8")
 print graphe1.__dict__
 print "\n\n"
 # graphe1.supprimer_sommet("A")
-print graphe1.__dict__
-graphe1.parcours_en_profondeur("B")
+graphe1.PP()
+# graphe1.parcours_en_profondeur("B")
 # graphe1.parcours_graphe("B")
+print graphe1.__dict__
 
 # print "Nombre de sommets : ",graphe1.get_nb_sommets()
 # print "Liste des incidences : ",graphe1.liste_incidence()
@@ -230,4 +241,4 @@ graphe1.parcours_en_profondeur("B")
 
 
 graphe1.ecrire_graphe_oriente()
-graphe1.ecrire_graphe_non_oriente()
+# graphe1.ecrire_graphe_non_oriente()
