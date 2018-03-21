@@ -37,11 +37,20 @@ class Graphe:
                 self.incidence[A]=[S1,S2]
                 self.adjacence[S1].append(S2)
 
+    def liste_pere(self):
+        return self.pere
+
+    def liste_debut(self):
+        return self.debut
+
     def liste_incidence(self):
         return self.incidence
 
     def liste_adjacence(self):
         return self.adjacence
+
+    def liste_fin(self):
+        return self.fin
 
     def nb_aretes(self):
         arcs = 0
@@ -97,8 +106,6 @@ class Graphe:
             for cle in self.adjacence:
                 index=0
                 for i in range(len(self.adjacence[cle])):
-                    print i
-                    print self.adjacence[cle][index]
                     if self.adjacence[cle][index] == S:
                         del copyAdjacence[cle][index]
                         index-=1
@@ -179,13 +186,10 @@ class Graphe:
             self.fin[self.sommets[i]]=0
 
         for i in range(len(self.sommets)):
-            print self.sommets[i]
             if self.couleur[self.sommets[i]]=="blanc":
-                print "coucou"
                 self.visiterPP(self.sommets[i])
 
     def visiterPP(self,S):
-        print "coucou"
         self.couleur[S]="gris"
         self.temps +=1
         self.debut[S]=self.temps
@@ -199,6 +203,54 @@ class Graphe:
         self.temps+=1
         self.fin[S]=self.temps
 
+
+    def tri_topologique(self):
+        self.PP()
+        sommetsTries=[]
+        tri=[]
+        while len(sommetsTries)<len(self.liste_fin()):
+            maxi=0
+            for i in self.fin:
+                if self.fin[i]>maxi  and self.fin[i] not in sommetsTries:
+                    maxi=self.fin[i]
+            sommetsTries.append(maxi)
+
+        sommetsTries=sommetsTries[::-1]#on inverse pour avoir l'ordre croissant
+        for i in range(len(sommetsTries)):
+            for j in self.fin:
+                if sommetsTries[i]==self.fin[j]:
+                    tri.append(j)
+
+        return tri
+
+    def inverser_arcs(self):
+        self.adjacence={}
+        for cle in self.incidence:
+            self.incidence[cle]=self.incidence[cle][::-1]
+
+        for sommets in self.sommets:
+            self.adjacence[sommets]=[]
+
+        for cle in self.incidence:
+            self.adjacence[self.incidence[cle][0]].append(self.incidence[cle][1])
+
+        print "\n\nLIste d'adjacence de l'inverse : ",self.liste_adjacence(),"\n\n"
+        self.PP()
+        sommetsTries=[]
+        tri=[]
+        while len(sommetsTries)<len(self.liste_fin()):
+            maxi=0
+            for i in self.fin:
+                if self.fin[i]>maxi  and self.fin[i] not in sommetsTries:
+                    maxi=self.fin[i]
+            sommetsTries.append(maxi)
+
+        for i in range(len(sommetsTries)):
+            for j in self.fin:
+                if sommetsTries[i]==self.fin[j]:
+                    tri.append(j)
+
+        print "\n Sommets par ordre décroissants de fin : ",tri
 
 
 
@@ -230,6 +282,15 @@ print graphe1.__dict__
 print "\n\n"
 # graphe1.supprimer_sommet("A")
 graphe1.PP()
+
+print "Tri topologique : ",graphe1.tri_topologique()
+
+# graphe1.inverser_arcs()
+# graphe1.inverser_arcs()
+
+# graphe1.PP()
+
+print "\n\n"
 # graphe1.parcours_en_profondeur("B")
 # graphe1.parcours_graphe("B")
 print graphe1.__dict__
@@ -239,6 +300,7 @@ print graphe1.__dict__
 # print "Nombre arêtes  : ",graphe1.nb_aretes()
 
 
-
 graphe1.ecrire_graphe_oriente()
+
+# graphe1.ecrire_graphe_oriente()
 # graphe1.ecrire_graphe_non_oriente()
