@@ -157,7 +157,7 @@ Solution pour délimiter : **courbe de Jordan**
     + maths : que des nombres. 
 + Qu'est-ce qu'une couleur : couleur dominante sur un ensemble de longueur d'onde. 
  + Rouge : photon renvoyé par l'objet rouge et les autres sont absorbés. 
- + Couleur ar-en-ciel : **R**OJ**VB**IVi
+ + Couleur arc-en-ciel : **R**OJ**VB**IVi
 + Comment fait-on l'échantillonage de la couleur ? 
  + Spectroscopie (il faut un laser)
  + Mesurer l'énergie (compter le nombre de photon et mesurer l'énergie moyenne) : Etalonnage des capteurs (etalonnage de l'oeil dans l'enfance).
@@ -165,5 +165,45 @@ Solution pour délimiter : **courbe de Jordan**
  ### Lumière
  (voir diapo)
 
- 
+ ### Système des couleurs 
+ + Echantillonnage standard (Munsell, Patone) : chaque personne doivent faire ces couleurs Pantone (choix)
+ + Système artistique : système d'Oswald (rapproche des objectifs de la chimie)
+  + 3 valeurs à partir de la couleurs pures: teinte, saturation, luminance (rouge + blanc : rose + ou - clair)
+
+Problème : 
++ méthodes subjectives. Elle dépendent :
+    + de l'observateur 
+    + de l'éclairage
+    + de la taille de l'échantillonnage
++ Trouver un moyen objectif quantitatif pour spécifier les couleurs : COLORIMETRIE (X,Y,Z CIE)
+
+### Modèle de couleur - RVB
++ ecran 
++ R,V,B sont des primaires additives (tend vers le blanc)
+
+### Modèle de couleur - CMJ(N)
++ Dispositif d'impression couleur
++ Couleurs complémentaires du R,V,B
++ Ce sont des primaires soustractive 
+
+### Modèle de couleur - YIQ
++ Utilisé dans la TV commerciale aux Etats-Unis
++ Y= Luminance; I,Q: chrominance
++ Domaine = polyhèdre convexe
+(voir diapo)
+
+### Modèle de couleur - YUV
++ Similaire à YIQ
++ Optimisé pour la photo
++ Ecrêtage de certaines valeurs
++ Utilisation JPEG et MPEG ... 
++ Plus utilisé numériquement actuellement
+
+### Modèle de couleur - TSL
++ RVB, CMJ, YIQ orientés matériel
++ TSL (Teinte, Saturation, Luminance) orienté utilisateur
++ Représentation : hexacône
+
+### Codage
+(voir diapo)
 
