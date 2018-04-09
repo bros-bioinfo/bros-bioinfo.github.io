@@ -121,3 +121,49 @@ Sur-échantillonnage (course à l'acquisition)
 
 (voir diapo pour les sur-échantillonnage non uniforme)
 
+## Jeu : quel est le meilleur ? 
+
+
+Appareil photo numérique ou argentique ? &rarr; Argentique 
++ Résolution de l'argentique : le grain. (à compléter) 
++ En terme d'échantillonnage, l'argentique est meilleur. En terme de quantification, c'est autre chose.
+
+Pour un document papier : Scanner à plat ou appareil photo numérique (APN) ? &rarr; Scanner à plat
++ Problème du scanner : vitesse d'acquisition
+
+## Voisinage et connexité (2D)
+
+L'image est segmenté, on mesure les objets (sans le fond). Comment retrouver les objets et les coder ?
++ Retrouver les objets : segmentation (Seuillage etc ...)
++ Les coder, délimiter un intérieur et un extérieur : 
+    + 4-connexité
+    + 8-connexité
+Solution pour délimiter : **courbe de Jordan**
+
+### Paradoxe de connexité (2D)
+(voir diapo) 
++ Paradoxe de Jordan : si on part sur du 8-connexe, alors on part du fait que l'intérieur et l'extérieur sont à 4-connexe (frontière efficace, éviter le contact entre l'intérieur et l'extérieur)
+
+## Voisinage et connexité (3D)
+(diapo)
++ 6-connexité : connexité par faces
++ 18-connexité : connexité par arrètes
++ 26-connexité : connexité par points
+
+## Rappel 
++ Image = matrice à deux dimensions codée sous forme de tableau unidimentionnel.
++ Valeur dans les cases : 
+    + informatique : niveau de gris (0 à 255), RGB (r : 0 à 255,g,b), température etc ... (valeur queqlconque). En-tête de l'image important pour l'ouverture.
+    + maths : que des nombres. 
++ Qu'est-ce qu'une couleur : couleur dominante sur un ensemble de longueur d'onde. 
+ + Rouge : photon renvoyé par l'objet rouge et les autres sont absorbés. 
+ + Couleur ar-en-ciel : **R**OJ**VB**IVi
++ Comment fait-on l'échantillonage de la couleur ? 
+ + Spectroscopie (il faut un laser)
+ + Mesurer l'énergie (compter le nombre de photon et mesurer l'énergie moyenne) : Etalonnage des capteurs (etalonnage de l'oeil dans l'enfance).
+
+ ### Lumière
+ (voir diapo)
+
+ 
+
