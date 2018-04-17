@@ -178,9 +178,9 @@ Notation Absurde : si il n'y a pas d'ambiguité, on enlève les arêtes de la re
 
 ## Exo durant le cours
 
-[!Img1](1.jpg)
-[!Img2](2.jpg)
-[!Img3](3.jpg)
-[!Img4](4.jpg)
-[!Img5](5.jpg)
-[!Arbre exe](arbreExe.jpg)
+![Img1](1.jpg)
+![Img2](2.jpg)
+![Img3](3.jpg)
+![Img4](4.jpg)
+![Img5](5.jpg)
+![Arbre exe](arbreExe.jpg)
