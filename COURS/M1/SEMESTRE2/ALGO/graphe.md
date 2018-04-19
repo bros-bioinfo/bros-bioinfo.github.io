@@ -104,6 +104,7 @@ Un graphe biparti est un graphe non orienté tels que l'ensemble des sommets peu
 + matrice d'adjacence 
 
 [Théorie des graphes-Nymphomath](https://www.apprendre-en-ligne.net/graphes/graphes.pdf)
+[Théorie des graphes-Nymphomath Corrige](https://www.apprendre-en-ligne.net/graphes/corriges.pdf)
 
 [Wikipédia produit matriciel](https://fr.wikipedia.org/wiki/Matrice_d%27incidence)
 ### Liste d'adjacence
