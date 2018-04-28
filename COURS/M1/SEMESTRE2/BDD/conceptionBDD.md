@@ -101,7 +101,7 @@ Dans T(NomF,NomProduit,Adr,Prix) :
 + Etant donné F un ensemble de DF, X<sup>+</sup> est calculé comme suit :
 
 + X<sup>0</sup> = X
-+ X<sup>i</sup> = X<sup>i-1</sup> &cup; { Y|X<sub>j</sub>} &rarr; Y &isin; F avec X<sub>j</sub> &sub; X<sup>i-1</sup>}
++ X<sup>i</sup> = X<sup>i-1</sup> &cup; { Y X<sub>j</sub>} &rarr; Y &isin; F avec X<sub>j</sub> &sub; X<sup>i-1</sup>}
 
 *Exemple*
 
