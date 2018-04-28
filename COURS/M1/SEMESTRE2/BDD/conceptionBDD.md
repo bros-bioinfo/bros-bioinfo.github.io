@@ -101,7 +101,7 @@ Dans T(NomF,NomProduit,Adr,Prix) :
 + Etant donné F un ensemble de DF, X<sup>+</sup> est calculé comme suit :
 
 + X<sup>0</sup> = X
-+ X<sup>i</sup> = X<sup>i-1</sup> &cup; { Y | X<sub>j</sub> &rarr; Y &isin; F avec  X<sub>j</sub> &sub; X<sup>i-1</sup>}
++ X<sup>i</sup> = X<sup>i-1</sup> &cup; { Y | X<sub>j</sub>} &rarr; Y &isin; F avec  X<sub>j</sub> &sub; X<sup>i-1</sup>}
 
 *Exemple*
 
@@ -113,7 +113,7 @@ Calculer AC<sup>+</sup> :
 + AC<sup>1</sup> = AC &cup; BE = ABCE
 + AC<sup>2</sup> = ABCE &cup; D = ABCDE
 + AC<sup>3</sup> = ABCDE &cup; &empty; = ABCDE
-+ &Rarr;  AC<sup>+</sup> = ABCDE
++ AC<sup>+</sup> = ABCDE
 
 *Est-ce que AC est une clé ?*
 
@@ -135,8 +135,8 @@ Pour trouver toutes les clés, on procède par niveau :
 + Si X est clé, alors pas besoin de tester ses sous ensembles.
 
 *Application à l'exemple :*
-+ Niveau 1 : A<sup>+</sup> = AB, B<sup>+</sup> = B, C<sup>+</sup> = C , D<sup>+</sup> = D, E<sup>+</sup> = E &Rarr; pas de clé avec un seul attribut
-+ Niveau 2 : AB<sup>+</sup> = AB, AC<sup>+</sup> = ABCDE, AD<sup>+</sup> = ADB, AE<sup>+</sup> = AEB, BC<sup>+</sup> = BCDE, BD<sup>+</sup> = BD, BE<sup>+</sup> = BE, CD<sup>+</sup> = CDE, CE<sup>+</sup> = CE, DE<sup>+</sup> = DE &Rarr; Une seule clé de taille 2 qui est AC.
++ Niveau 1 : A<sup>+</sup> = AB, B<sup>+</sup> = B, C<sup>+</sup> = C , D<sup>+</sup> = D, E<sup>+</sup> = E &rarr; pas de clé avec un seul attribut
++ Niveau 2 : AB<sup>+</sup> = AB, AC<sup>+</sup> = ABCDE, AD<sup>+</sup> = ADB, AE<sup>+</sup> = AEB, BC<sup>+</sup> = BCDE, BD<sup>+</sup> = BD, BE<sup>+</sup> = BE, CD<sup>+</sup> = CDE, CE<sup>+</sup> = CE, DE<sup>+</sup> = DE &rarr; Une seule clé de taille 2 qui est AC.
 + Niveau 3 : ABD<sup>+</sup> = ABD, ABE<sup>+</sup> = ABE, ADE<sup>+</sup> = ADEB, BCD<sup>+</sup> = BCDE, CDE<sup>+</sup> = CDE
 + Niveau 4 : ABDE<sup>+</sup> = ABDE, BCDE<sup>+</sup> = BCDE &Rarr; pas de clé 
 + Niveau 5 : pas de candidat car ABCDE contient AC qui est une clé.
