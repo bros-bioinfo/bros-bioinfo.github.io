@@ -92,7 +92,9 @@ Dans T(NomF,NomProduit,Adr,Prix) :
 1. NomF &rarr; Adr et NomF,NomP &rarr; Prix
 2. R1(NomF,Adr) et R2(NomF,NomP,Prix)
 3. Clés de T ?
-    + Définition d'une clé : X est clé de T si (i)X déterminent tous les attributs de T et (ii) il n'existe pas Y &sub; X tels que Y détermine tous les attributs de T.
+    + Définition d'une clé : X est clé de T si 
+        1. X déterminent tous les attributs de T et 
+        2. il n'existe pas Y &sub; X tels que Y détermine tous les attributs de T.
 
 **Comment vérifier si X est une clé ?**
 + On calcule la fermeture X<sup>+</sup> de X. X<sup>+</sup> représente l'ensemble des attributs que X détermine.
