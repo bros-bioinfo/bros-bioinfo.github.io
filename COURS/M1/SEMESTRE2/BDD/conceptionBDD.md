@@ -128,7 +128,7 @@ Il faut vérifier que ni A<sup>+</sup> ni C<sup>+</sup> ne sont égaux à ABCDE.
 + C<sup>1</sup> = C &cup; E = CE
 + C<sup>2</sup> = CE &cup; &empty; = CE &rarr; **C n'est pas une clé**
 
-**A et C ne sont pas des clés**
+**A et C ne sont pas des clés mais AC est une clé**
 
 Pour trouver toutes les clés, on procède par niveau : 
 + On trouve les clés de taille 1, puis de taille 2 , ...
