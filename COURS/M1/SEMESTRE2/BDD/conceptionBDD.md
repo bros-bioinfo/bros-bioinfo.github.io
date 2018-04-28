@@ -157,6 +157,6 @@ F = {A &rarr; B, B &rarr; C, C &rarr; D, D &rarr; E, E &rarr; F}
 
 Clés = ?
 
-A n'est à droite d'aucune DF &Rarr; toute clé contient A.
+A n'est à droite d'aucune DF &rarr; toute clé contient A.
 
-A<sup>+</sup> = ABCDEF &Rarr; A est une clé et c'est l'unique clé.
+A<sup>+</sup> = ABCDEF &rarr; A est une clé et c'est l'unique clé.
