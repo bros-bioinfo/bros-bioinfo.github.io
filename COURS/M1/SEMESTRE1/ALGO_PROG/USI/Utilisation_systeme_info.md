@@ -62,7 +62,7 @@ Le temps est "discret". Il n'est pas continue, mais s'execute à des temps défi
 
 ***Règle***:  A un instant donné, le processeur *(considéré comme monocore - avec une seule unité)* ne peut effectuer qu'une seule opération élémentaire: lire une case mémoire sur la RAM, écrire sur la RAM, executer une instruction élementaire...).
 
-####Le contenu de la RAM:
+#### Le contenu de la RAM:
 
 L'information est stocké sous forme binaire. La taille de la case mémoire est généralement de 64 bits qui contiennent des data ou des instructions.
 
