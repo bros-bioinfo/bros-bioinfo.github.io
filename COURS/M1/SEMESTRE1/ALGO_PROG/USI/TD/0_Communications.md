@@ -1,7 +1,7 @@
 # TD1
 ## Bureaux
 - Léger
-  - XFCE
+  - Xfce
 - Lourd
   - Gnome
   - KDE
