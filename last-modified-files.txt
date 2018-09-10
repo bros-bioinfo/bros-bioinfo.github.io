@@ -1,4 +1,5 @@
 <!DOCTYPE html> <html> <head></head> <body>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/0_Communications">0_Communications</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/Utilisation_systeme_info">Utilisation_systeme_info</a><br>
+<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/CM/CM2">CM2</a><br>
+<a href="https://bros-bioinfo.github.io/Welcome file">Welcome file</a><br>
 </body></html>
