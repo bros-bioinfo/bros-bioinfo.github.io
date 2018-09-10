@@ -1,7 +1,6 @@
 function getTree() {
   var data = 
 [
-  {"type":"directory",href:"#fh5co-work",nodes:[  ]},
   {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
     {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"9101754",nodes:[
       {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"9101754",nodes:[
@@ -45,9 +44,6 @@ function getTree() {
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"9101754"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"STATS",custom:"9101806",nodes:[
-        {"type":"directory",href:"#fh5co-work",text:"CM",custom:"9101806",nodes:[
-          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/CM/CM2",text:"CM2",custom:"9101806"},
-        ]},
         {"type":"directory",href:"#fh5co-work",text:"TD2",custom:"9101754",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD2/TD2",text:"TD2",custom:"9101754"},
         ]},
