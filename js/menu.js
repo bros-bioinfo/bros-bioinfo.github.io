@@ -94,7 +94,7 @@ function getTree() {
       {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-3.pdf",text:"IMAJS-3.pdf",custom:"9111352"},
       {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-4.pdf",text:"IMAJS-4.pdf",custom:"9111352"},
     ]},
-    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/Tuto_jithub",text:"Tuto_jithub",custom:"9111432"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/Tuto_jithub",text:"Tuto_jithub",custom:"9111520"},
   ]}
 ]
 ;
