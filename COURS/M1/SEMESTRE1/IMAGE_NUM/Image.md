@@ -1,6 +1,6 @@
 # IMAGE PROCESSING : DIGITAL IMAGE
 
-> This course is proposed by all the sources at the end of this document. The data below are not own by us. It's a filtering of all the data that we could gather to ehance our notes.
+> This course is proposed by all the sources at the end of this document. The data below are not own by us. It's a filtering of all the data that we could gather to enhance our notes.
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=3 orderedList=false} -->
 <!-- code_chunk_output -->
@@ -53,19 +53,27 @@ In image processing softwares like ImageJ, what's a digital image? how the grays
 
 There are different type of images :
 
-- **2D** : photo, Optical microscopy, Electron microscopy
+- **2D** :
+	- Photography
+	- Optical microscopy
+	- Electron microscopy
 - **2,5D** : Stereoscopy, Scan electron microscopy (like an actual 3D movie)
-- **3D** : COnfocal microscopy
+- **3D** : Confocal microscopy, Tomography
 
   > 2,5D = pair of 2D images 3D = several 2D images
 
+	> 3D = Serial sections ==> Several 2D images  
+	> 3D = ??? ==> Several 2D images
+
 **Digital image :** it's an array of pixels (= picture+element) composed by width and height.
+> The first pixel (0,0) is always on the top left corner  
+> The last one is therefore (w-1,h-1)
 
 An image is defined by :
 
-- **Resolution** : pixels number per unit of length (or dpi : dots per inch)
+- **Resolution** : pixels number per unit of length (or dpi : dots per inch (ppp in French))
 - Range of gray levels or color, wich define the **dynamic range**. The dynamic range is a **value** (1 bit, 8 bit, RGB, etc ...)
-
+- **Color Images** : One pixel per chanel (color space), either RGB, CMYK, etc.
 ### A. Binary images
 
 Binary images (black and white) are everywhere in ImageJ. In a binary image, the pixels are in two states: ON or OFF. Better than saying ON and OFF, the TRUE and FALSE keywords are used.
@@ -130,7 +138,16 @@ In this color space, **(0,0,0)CMY is white and (255,255,255)CMY is black**. As s
 ![CMY](https://2.bp.blogspot.com/-f1G2TbTobWo/TvmOEMFUb_I/AAAAAAAAAJs/aq5zFhz1sQk/s1600/color_CMY.png)
 
 ## 2\. IMAGE FILE
-
+### From 1D to 2D
+The image is stocked as an 1D array in the memory, so to know the composition of the 2D image, we use a formula using the width (or the length)
+$$2D:p(i,j)=p(i+w*j):1D$$
+$$3D:p(i,j,k)=p(i+w*j+w*h*k):1D$$
+### Hexadecimal
+To take less time, informatician invented the **hexadecimal** which allows to communicate more information with less signs. To do so, they cut the 24 bits of RGB into pieces of 4, and those 4 bits are converted into an hexadecimal formt which goes from 0 to F, F worthing 15 and 0, 0.
+>1000.1001.1011.1000.1010.0110  
+>1000 1001 1011 1000 1010 0110  
+>$\hspace{15px}8\hspace{30px}9\hspace{30px}B\hspace{30px}8\hspace{30px}A\hspace{30px}6$  
+>$\hspace{90px}$#89B8A6
 ### Signed, Unsigned pixel values
 
 Among the various image types proposed to import a **gray-level image**, even though you know the dynamic range of your image, you have to choose **'signed' or 'unsigned'**...
@@ -281,7 +298,7 @@ Let's see the influence of these two parameters on the image :
 
 ![Ramp image](https://2.bp.blogspot.com/--LsNzKZCaxo/VIG0xZ9s09I/AAAAAAAABzE/Jy0WOSArc4U/s1600/lut.jpg)
 
-##### 1.1 The y-intercept
+##### 1.1 The y-Intercept ~ The Brightness
 
 If we modify the Y-intercept, the transfer function is now ...
 
@@ -293,7 +310,7 @@ In this case, a pixel value of 50 in the input image is displayed as a **black (
 
 ![Output image](https://3.bp.blogspot.com/-zUbMzPBOPnI/VIG4tZQQo0I/AAAAAAAABzs/1NwkXf9Stuw/s1600/lut_B.jpg)
 
-##### 1.2\. The slope
+##### 1.2\. The Slope ~ The Contrast
 
 In this case, the **slope is equal to 3.5** leading to a variation of grays (gradient) from black to white restrained in the range of [60;130].
 
@@ -309,9 +326,10 @@ In conclusion, the **brightness** corresponds to the y-intercept and the **contr
 
 There are multiple others transfer functions possible:
 
-- Y = log(X)
-- Y = \sqrt(X)
-- Y = exp(X)
+$$Logarithme : Y = log(X)$$
+$$Racine : Y = \sqrt{X}$$
+$$Exponentielle : Y = e^{X}$$
+$$Sigmoide : Y = K\frac{1}{1+ae^{-rX}}$$
 
 #### 2\. Playing with the histogram
 
@@ -507,7 +525,7 @@ The simplest method of image segmentation is called the **thresholding method**.
 The key of this method is to select the threshold value (or values when multiple-levels are selected). Several popular methods are used in industry including the maximum entropy method, Otsu's method (maximum variance), and **k-means clustering**.
 
 ### Otsu's method (ImageJ)
-Finir avec une image binaire : "background","Zone of interest". 
+Finir avec une image binaire : "background","Zone of interest".
 
 ### Clustering methods
 
