@@ -27,7 +27,7 @@ Les étudiants auront la possiblité de préparer le **TOEIC** au **Centre de La
 | 4       | 03/10               | Activités de compréhension et de restitution de données à partir de documents vidéo et audio                                                                                  |
 | 5       | 10/10               | **EVALUATION** : Compréhension orale (audio seul ou vidéo) et restitution écrite. Si temps restant, travail préparatoire aux présentations orales                             |
 | 6       | 17/10               | Activité de communication orale, de pronociation et consolidation du vocabulaire de spécialité et/ou début des présentations                                                  |
-| 7  8  9 | 24/11  07/11  14/11 | **EVALUATION** : Présentations orales individuelles et débats (4/5 présentations par séances)                                                                                 |
+| 7   8  9 | 24/11  07/11  14/11 | **EVALUATION** : Présentations orales individuelles et débats (4/5 présentations par séances)                                                                                 |
 | 10      | 21/11               | Bilan du semestre. Remise des notes. Activités diverses                                                                                                                       |
 ## ÉVALUATION
 - La présentation orale (+ synthèse + support visuel) donnera lieu à une note coefficient 0,6
