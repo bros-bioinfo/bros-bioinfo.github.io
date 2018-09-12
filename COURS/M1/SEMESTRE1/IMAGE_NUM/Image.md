@@ -139,7 +139,7 @@ In this color space, **(0,0,0)CMY is white and (255,255,255)CMY is black**. As s
 
 ## 2\. IMAGE FILE
 ### From 1D to 2D
-The image is stocked as an 1D array in the memory, so to know the composition of the 2D image, we use a formula using the width (or the length)
+The image is stocked as an 1D array in the memory, so to know the composition of the 2D image, we use a formula using the width (or the length)  
 $$2D:p(i,j)=p(i+w*j):1D$$
 $$3D:p(i,j,k)=p(i+w*j+w*h*k):1D$$
 ### Hexadecimal
@@ -148,6 +148,7 @@ To take less time, informatician invented the **hexadecimal** which allows to co
 >1000 1001 1011 1000 1010 0110  
 >$\hspace{15px}8\hspace{30px}9\hspace{30px}B\hspace{30px}8\hspace{30px}A\hspace{30px}6$  
 >$\hspace{90px}$#89B8A6
+
 ### Signed, Unsigned pixel values
 
 Among the various image types proposed to import a **gray-level image**, even though you know the dynamic range of your image, you have to choose **'signed' or 'unsigned'**...
