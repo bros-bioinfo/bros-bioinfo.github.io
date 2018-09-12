@@ -39,12 +39,17 @@ git pull
 ```
 
 Ensuite vous pouvez modifier des fichiers, en créer de nouveaux, bref, faire votre vie !  
+
 ## Le partage
-Une fois que vous aurez fini cette dite vie et que vous souhaitez transmettre votre héritage au monde grâce au **WEB**, il vous suffira alors de réaliser cette commande, toujours depuis votre dossier /bros-bioinfo.github.io
+Une fois que vous aurez fini cette dite vie et que vous souhaitez transmettre votre héritage au monde grâce au **WEB**, il vous suffira alors de réaliser cette commande, toujours depuis votre dossier /bros-bioinfo.github.io.
+> **ATTENTION** : le commentaire est obligatoire sinon ça ne marche pas
 
 ```shell
 ./jithub.sh Message_decrivant_les_modifs_aportees_sans_espace
 ```
+> Ca prend environ 5 min aux nouveaux fichiers pour être accessible sur le site, mais c'est immédiat sur github 
+
+
 Et voila, le fruit de votre dûr labeur ce trouve sur le **W**orld **W**ide **W**eb  
 Toutes mes félicitations
 ## PS
