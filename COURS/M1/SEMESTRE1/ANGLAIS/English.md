@@ -2,7 +2,8 @@
 ## **Objectifs**
 ### **Approcher du statut d'utilisateur indépendant** (B2) défini par le *Cadre Européen Commun de Référence en Langues*
 - **Comprendre** le contenu eesentiel de sujets concrets ou abstraits dans un document complexe, et/ou une discussion technique dans sa spécialité
-- **Communiquer** avec un degré d'aisance tel qu'un échange avec un locuteur natif ne comporte pas de tension
+- **Communiquer** avec un degré d'aisance tel qu'un échange avec un locuteur natif ne comporte pas de tension  
+
 ### **Se préparer à "fonctionner" en anglais dans le monde de la recherche ou en milieu professionnel:**
 - **Prendre la parole** dans des situations diverses (prise de parole préparée et spontanée)
 - **Comprendre** une comunication orale, une conférance, un compte rendu de projet, un reportage, une interview, etc.
