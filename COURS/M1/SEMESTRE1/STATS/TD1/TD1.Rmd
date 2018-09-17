@@ -1,0 +1,136 @@
+---
+title: "TD1"
+output: 
+  html_document: 
+    theme: cerulean
+---
+## Exercice 1
+  1. Create a vector of number
+    - The list from 1 to 100 
+    ```{r}
+seq(1,100)
+```
+    - A number list/sequence for 10, 20, 25, 50, repeated 5 times ( 10 20 25 50 10 20 25 50 10 20 25 50 10 20 25 50 10 20 25 50)
+    ```{r}
+rep(c(10,20,25,50),5)
+```
+    - a list from 1 to 100, with a step of 5
+    ```{r}
+seq(1,100,5)
+```
+    - Repeat 10 times the number 12
+    ```{r}
+rep(12,10)
+```
+  2. A vector with the number 1, 2, 3 with a repetition of each 4 times with in addition a repetition of the sequence of 4 times
+    - Put this vector in the object « VEC »
+    ```{r}
+VEC = rep(c(1,2,3),each = 4, times = 4)
+VEC
+```
+    
+    - Multiply all the element of VEC by 5
+    ```{r}
+VEC = VEC * 5
+VEC
+```
+
+    - Calculate the median and the quantile of 75%
+    ```{r}
+quantile(VEC, 0.5) # Median
+    quantile(VEC, 0.75)
+```
+
+  3. Create a vector with a serie of number from 1 to 2000 with a step of 10
+    - Put it in the object « vec »
+    ```{r}
+vec = seq(1,2000,10)
+    vec
+```
+    - Extract the 10 th value of vec
+    ```{r}
+vec[10]
+```
+    - Display a sub-vector called « vec2 » that corresponds to the values from 2 to 6
+    ```{r}
+vec2 = vec[2:6]
+    vec2
+```
+    - Replace the last value of vec2 by 100
+    ```{r}
+vec2[length(vec2)] = 100
+    vec2
+```
+    - Display vec2 without its 3th value and store it in vec3
+    ```{r}
+vec3 = vec2[-3]
+    vec3
+```
+    - Replace all the values >= 30 by 30
+    ```{r}
+vec3[vec3 >= 30] = 30
+    vec3
+```
+
+
+## Exercice 2 : Opérations avec les tables
+Create a matric with 5 columns and 20 lines with the values from 1 to 100, by lines
+  - Call it MAT
+```{r}
+MAT = matrix(1:100,byrow = TRUE, ncol = 5)
+MAT
+```
+  
+  - Display the value at the second line and 5 th column et replace it by NA
+```{r}
+MAT[2,5] = NA
+MAT
+```
+  - Create “mat “ with only the columns 2,3 and 4 (taking them from MAT)
+```{r}
+mat = MAT[,2:4]
+mat
+```
+  - Replace the values between 40 and 60 by 50 in the matrix « mat »
+```{r}
+mat[mat>40 && mat<60] = 50
+mat
+```
+  
+## Exercise 3. Operations with a table of decimal numbers
+1. Get the file (moodle) M&Ms.xls and open it with excel or open-office
+  - save it as MetMs.txt
+  - Import it in R and store it in data
+```{r}
+library(readxl)
+data <- read_excel("~/Téléchargements/MetMs.xlsx")
+```
+
+2. Create data2 by removing the variable largeur (width) from MetMs and the missing data
+```{r}
+data2 = subset(data, select = -Forme)
+data2 = na.omit(data2)
+data2
+```
+
+  - Determine for which colors the lengths are minimal and maximal
+```{r}
+with(data2, Couleur[`Longueur maximale (mm)` == min(`Longueur maximale (mm)`)])
+with(data2, Couleur[`Longueur maximale (mm)` == max(`Longueur maximale (mm)`)])
+```
+  
+  - Sort the lines of data2 according to an increasing order of the length
+```{r}
+data2[order(data2$`Longueur maximale (mm)`),]
+```
+## Exercice 4. Graphics
+```{r}
+hist(data2$`Longueur maximale (mm)`, xlab = "Longueur", main = "Longueur des M & M's")
+```
+
+```{r}
+par(mfrow=c(1,2))
+boxplot(data = data2,`Longueur maximale (mm)`~ Couleur , main = "Longueur des M & M's par couleur", xlab= "Couleur", ylab= "Taille")
+boxplot(data = data2,`Poids (g)`~ Couleur , main = "Poid des M & M's par couleur", xlab= "Couleur", ylab= "Poid")
+```
+

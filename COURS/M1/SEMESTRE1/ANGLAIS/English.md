@@ -19,17 +19,16 @@ Les étudiants auront la possiblité de préparer le **TOEIC** au **Centre de La
 - Présentation à l'oral d'un sujet choisi par l'étudiant en lien avec la spécialité (avec support visuel et synthèse courte remise avant la présentation)  
 
 ### **Calendrier et organisatoin previsionnels des séances, susceptible d'être adapté de manière *ad hoc***  
-
-
-| 1       | 12/09               | Présentation du module, sensibilisation au TOEIC, activité de mise en route. Réfléchir à un sujet de présentation pour séances (6), 7, 8, 9. À annoncer le 03/10 au plus tard |
-| :-----: | :-----------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| 2       | 19/09               | Activités de compréhension et de restitution de données à partir de documents vidéo ou audio                                                                                  |
-| 3       | 26/09               | Activités de compréhension et de restitution de données à partir de documents écrits                                                                                          |
-| 4       | 03/10               | Activités de compréhension et de restitution de données à partir de documents vidéo et audio                                                                                  |
-| 5       | 10/10               | **EVALUATION** : Compréhension orale (audio seul ou vidéo) et restitution écrite. Si temps restant, travail préparatoire aux présentations orales                             |
-| 6       | 17/10               | Activité de communication orale, de pronociation et consolidation du vocabulaire de spécialité et/ou début des présentations                                                  |
-| 7   8  9 | 24/11  07/11  14/11 | **EVALUATION** : Présentations orales individuelles et débats (4/5 présentations par séances)                                                                                 |
-| 10      | 21/11               | Bilan du semestre. Remise des notes. Activités diverses                                                                                                                       |
+|N° |Date|Contenu|
+|:-:|:--:|:-----:|
+| 1 | 12/09               | Présentation du module, sensibilisation au TOEIC, activité de mise en route. Réfléchir à un sujet de présentation pour séances (6), 7, 8, 9. À annoncer le 03/10 au plus tard |
+| 2 | 19/09               | Activités de compréhension et de restitution de données à partir de documents vidéo ou audio                                                                                  |
+| 3 | 26/09               | Activités de compréhension et de restitution de données à partir de documents écrits                                                                                          |
+| 4 | 03/10               | Activités de compréhension et de restitution de données à partir de documents vidéo et audio                                                                                  |
+| 5 | 10/10               | **EVALUATION** : Compréhension orale (audio seul ou vidéo) et restitution écrite. Si temps restant, travail préparatoire aux présentations orales                             |
+| 6 | 17/10               | Activité de communication orale, de pronociation et consolidation du vocabulaire de spécialité et/ou début des présentations                                                  |
+| 7  8  9 | 24/11  07/11  14/11 | **EVALUATION** : Présentations orales individuelles et débats (4/5 présentations par séances)                                                                                 |
+| 10 | 21/11               | Bilan du semestre. Remise des notes. Activités diverses                                                                                                                       |
 ## ÉVALUATION
 - La présentation orale (+ synthèse + support visuel) donnera lieu à une note coefficient 0,6
 - La compréhension orale (audio seul ou vidéo) et l'expression écrite donneront lieu à une note coefficiant 0,3
