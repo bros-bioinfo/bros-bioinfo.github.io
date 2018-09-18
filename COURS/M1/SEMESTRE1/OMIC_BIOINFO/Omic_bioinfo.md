@@ -124,12 +124,12 @@ and algorythm of words (k-tuples):
 
 #### Needleman & Wunsch
 - $S(i,j) = max \ of:$  
-  1) $S_{i-1, j-1} + C(X_i,Y_j)\ for \ diagonal$  
+  1) $S_{i-1, j-1} + M(X_i,Y_j)\ for \ diagonal$  
   2) $S_{i-1,j} + P$  
   3) $S_{i,j-1} + P$  
 
 > $P = -2$  
-> $C =  BLOSSUM$
+> $M =  BLOSSUM65$
 
 |       |       | C        | A       | V        | A        | L        | E        |
 | :---: | :---: | :------: | :-----: | :------: | :------: | :------: | :------: |
