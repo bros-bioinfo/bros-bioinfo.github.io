@@ -451,7 +451,11 @@ One method to remove noise is by **convolving** the original image with a **mask
 > By Convolution_of_box_signal_with_itself.gif: Brian Ambergderivative work: Tinos (talk) - Convolution_of_box_signal_with_itself.gif, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11003835
 
 In image processing, the filter is therefore a **convolution mask** (*kernel*) which is basically a small matrix by which every pixel on the original image is multiplied  
-
+|?|?|?\|| |  
+|:-:|:-:|:-:|:-:|  
+|**?**|\|\|**x**|**x**\||x|  
+__?__|__\|\|x__|__x__\||x|  
+||\|\|x|x|x|  
 For example, the **Gaussian mask** comprises elements determined by a Gaussian function. This convolution brings the value of each pixel into closer harmony with the values of its neighbors. In general, a smoothing filter sets each pixel to the **average value**, or a weighted average, of itself and its nearby neighbors; the Gaussian filter is just one possible set of weights.
 
 Smoothing filters tend to **blur** an image, because pixel intensity values that are significantly higher or lower than the surrounding neighborhood would **"smear"**(salir) across the area. Because of this blurring, linear filters are seldom (rarement) used in practice for noise reduction; they are, however, often used as the basis for **nonlinear noise reduction filters**.
@@ -468,12 +472,14 @@ A **median filter** is an example of a non-linear filter and, if properly design
 
 A median filter is a **rank-selection (RS) filter**, a particularly harsh member of the family of rank-conditioned rank-selection (RCRS) filters; a much milder member of that family, for example one that selects the closest of the neighboring values when a pixel's value is external in its neighborhood, and leaves it unchanged otherwise, is sometimes preferred, especially in photographic applications.
 
-Median and other RCRS filters are **good at removing salt and pepper noise** from an image, and also cause relatively **little blurring of edges**, and hence are often used in computer vision applications.
+Median and other RCRS filters are **good at removing salt and pepper noise** from an image, and also cause relatively **little blurring of edges**, and hence are often used in computer vision applications.  
 
 ![Median_filter_example](https://i.imgur.com/vJQtNJi.jpg)
 > By Debivort at en.wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=17001283
 
 ##### 1.6 Anisotropic diffusion
+- Bilateral filter (extension of Gaussian filter)
+- Filtre à diffusion anisotropique (based on partial differential equations *Too slow for us because too complicated*)
 
 In image processing and computer vision, anisotropic diffusion, also called **Perona–Malik diffusion**, is a technique aiming at reducing image noise without removing significant parts of the image content, typically edges, lines or other details that are important for the interpretation of the image. Anisotropic diffusion resembles the process that creates a **scale space**, where an image generates a parameterized family of successively more and more blurred images based on a diffusion process. Each of the resulting images in this family are given as a **convolution** between the image and a 2D isotropic Gaussian filter, where the width of the filter increases with the parameter. This diffusion process is a **linear and space-invariant** transformation of the original image. Anisotropic diffusion is a generalization of this diffusion process: it produces a **family of parameterized images**, but each resulting image is a combination between the original image and a filter that depends on the local content of the original image. As a consequence, anisotropic diffusion is a **non-linear and space-variant** transformation of the original image
 
@@ -489,7 +495,13 @@ Non-local means is an algorithm in image processing for image denoising. Unlike 
 
 **Common Names:** Fourier Transform, Spectral Analysis, Frequency Analysis
 
-The Fourier Transform is an important image processing tool which is used to **decompose** an image into its **sine and cosine components**. The output of the transformation represents the image in the Fourier or **frequency domain**, while the input image is the **spatial domain** equivalent. In the Fourier domain image, each point represents a particular frequency contained in the spatial domain image.
+The Fourier Transform is an important image processing tool which is used to **decompose** an image into its **sine and cosine components**. In fact every complex signal can be decomposed into addition of sine and cosine adjusted with coefficiants, giving an linear application : $complex_{signal}=a_1\cdot \cos{x} + a_2\cdot \cos{2x} + a_3\cdot \cos{3x} + ...$The output of the transformation represents the image in the Fourier or **frequency domain**, while the input image is the **spatial domain** equivalent. In the Fourier domain image, each point represents a particular frequency contained in the spatial domain image.  
+
+When you are close to the center of the fourrier transformed image, you look at the low frequencies, and when you're near from the edges, you're looking at the high frequences, so the small details.  
+
+Therefore, to reduce noise, you can use Fourrier Transform (**FT**), then add a circular mask to hide high frequencies and then invert the **FT** to get the image without the noise.  
+
+**FT** are the best way to retrieve periodic noise.
 
 The Fourier Transform is used in a wide range of applications, such as image analysis, image filtering, image reconstruction and image compression.
 
