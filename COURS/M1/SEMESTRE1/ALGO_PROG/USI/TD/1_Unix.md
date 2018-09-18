@@ -258,7 +258,6 @@ rm : supprimer fichier vide 'doc2.html' ? y
 ```
 
 ### 5.3 Déplacement et renommage
-#### 5.3.1
 ```shell
 pnom@pc:~$ cd ~/test/
 
@@ -284,6 +283,8 @@ pnom@pc:~/test$ ls -F ..
 pnom@pc:~/test$ ls -F
 doc.html
 ```
+#### 5.4 Créez à partir de votre répertoire d’accueil l’arborescence
+![Arborescence 1](SEMESTRE1/ALGO_PROG/USI/imgs/)
 ```shell
 pnom@pc:~$ mkdir test_dir
 
@@ -310,6 +311,7 @@ pnom@pc:~/test_dir$ touch texte1.txt texte2.txt
 pnom@pc:~/test_dir$ ls
 essai  texte1.txt  texte2.txt
 ```
+#### 5.5 Placez-vous dans le répertoire test_dir, et ramenez-vous en deux commandes à 
 ```shell
 pnom@pc:~/test_dir$ mkdir textes
 
