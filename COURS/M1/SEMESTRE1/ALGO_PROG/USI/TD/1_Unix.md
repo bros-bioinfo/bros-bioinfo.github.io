@@ -25,7 +25,7 @@ s3b@s3b-N750BU:~$ echo
 #### 1.3 man cal
 (voir terminal)
 
-#### 1.4 du sh ~
+#### 1.4 du -sh ~
 ```console
 s3b@s3b-N750BU:~$ du sh ~
 4	/home/s3b/.gnupg/private-keys-v1.d
@@ -53,65 +53,86 @@ On peut éditer la ligne de commande :
 
 +   déplacement dans la liste des commandes (historique)
 
-| Ctrl + ..... | Explication |
-| ------- | --------------------------- |
-| p ou Up | (previous) : commande précédente |
-| n ou Down | (next) : commande suivante |
-| r | (reverse search) : recherche dans l’historique |
+|                          | Explication                                     |
+| ------------------------ | ----------------------------------------------- |
+| Ctrl + **p** ou **Up**   | (previous) : commande précédente                |
+| Ctrl + **n** ou **Down** | (next) : commande suivante                      |
+| Ctrl + **r**             | (reverse search) : recherche dans l’historique |
 
 +   déplacement du curseur dans la ligne
 
-| Ctrl + ..... | Explication |
-| ------- | --------------------------- |
-| a ou Home | (abcdef...) : début de ligne |
-| e ou End | (end) : fin de ligne |
-| b ou Left | (backward) : caractère précédent |
-| f ou Right  | (forward) : caractère suivant |
+|                           | Explication                      |
+| ------------------------- | -------------------------------- |
+| Ctrl + **a** ou **Home**  | (abcdef...) : début de ligne     |
+| Ctrl + **e** ou **End**   | (end) : fin de ligne             |
+| Ctrl + **b** ou **Left**  | (backward) : caractère précédent |
+| Ctrl + **f** ou **Right** | (forward) : caractère suivant    |
 
 +   suppressions :
 
-| Ctrl + ..... | Explication |
-| ------- | --------------------------- |
-| d ou Suppr | (delete) : caractère sous le curseur
-| _(pas ctlr)_ DEL | caractère précédent le curseur |
-| k | (kill) : jusqu’à la fin de ligne |
+|                            | Explication                          |
+| -------------------------- | ------------------------------------ |
+| Ctrl +  **d** ou **Suppr** | (delete) : caractère sous le curseur |
+| **DEL**                    | caractère précédent le curseur       |
+| Ctrl +  **k**              | (kill) : jusqu’à la fin de ligne    |
 
 +   validation/annulation
 
-| Ctrl + .....                  | Explication                                |
-| ----------------------------- | ------------------------------------------ |
-| _(pas ctrl)_ Return ou Ctlr-j | validation de la ligne                     |
-| c                             | (cancel) : annulation de la ligne en cours |
+|                      | Explication                                |
+| -------------------- | ------------------------------------------ |
+| Return ou Ctlr-**j** | validation de la ligne                     |
+| Ctrl + **c**         | (cancel) : annulation de la ligne en cours |
 
 ## 3) Visite de l'arborescence utilisateur
-### 3.1
+### 3.1 Commandes de base
+- pwd = Affiche le nom du répertoire de travail actuel
+- cd .. = Remonte l'arborescence d'un étage
+- ls = Liste les fichiers et dossiers dans le dossier actuel
 ```console
-s3b@s3b-N750BU:~$ pwd
+s3b@s3b-N750BU:~$ pwd  
 /home/s3b
 s3b@s3b-N750BU:~$ cd ..
 s3b@s3b-N750BU:/home$ pwd
 /home
-s3b@s3b-N750BU:/home$ ls
+s3b@s3b-N750BU:/home$ ls 
 s3b
-s3b@s3b-N750BU:/home$
 ```
-### 3.2
+### 3.2 TAB
+- TAB permet de compléter automatiquement
 ```console
 s3b@s3b-N750BU:/home$ ls e s3b/ //après TAB
 s3b@s3b-N750BU:/home$ cd e s3b/
 ```
-### 3.3
+### 3.3 Clique molette
+- Clique molette permet de coller dans le terminal un texte préalablement sélectionné
+### 3.4 Bureau
 ```console
 s3b@s3b-N750BU:~$ cd Bureau/
 s3b@s3b-N750BU:~/Bureau$ pwd
 /home/s3b/Bureau
 s3b@s3b-N750BU:~/Bureau$ cd
+s3b@s3b-N750BU:~$
 ```
 ### 3.5 Arborescence dessin
 
 ![arb.png_001](https://i.imgur.com/kiHLjeV.png)
 
 ### 3.6 ls -option
+
+| ls                   | Explication                                                |
+| -------------------: | :--------------------------------------------------------- |
+| -a                   | inclue les entrées cachées (débutant par .)                |
+| -A                   | omettre les fichiers « . » et « .. »                       |
+| --author             | avec -l, afficher l'auteur de chaque fichier               |
+| -b                   | avec -l, afficher l'auteur de chaque fichier               |
+| --block-size=TAILLE  | utiliser   cette   TAILLE   de   bloc   pour   l'affichage |
+| -B, --ignore-backups | omettre les entrées se terminant par « ~ »                 |
+| -c                   | trier selon différents paramètres                          |
+| -C                   | afficher en colonnes                                       |
+| -l                   | utiliser un format d'affichage long                        |
+| -r                   | inverser l'ordre du tri                                    |
+| -t                   | trier selon la date de modification                        |
+| -h                   | afficher les tailles en format lisible                     |
 
 ```console
 s3b@s3b-N750BU:/$ ls -larth
