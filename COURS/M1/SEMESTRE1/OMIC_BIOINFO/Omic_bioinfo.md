@@ -123,13 +123,13 @@ and algorythm of words (k-tuples):
 - FASTA & BLAST: heuristics
 
 #### Needleman & Wunsch
-- $S(i,j) = max \ of:$  
-  1) $S_{i-1, j-1} + M(X_i,Y_j)\ for \ diagonal$  
+- $S(i,j) = \text{max of :}$  
+  1) $S_{i-1, j-1} + M(X_i,Y_j)\ \text{for diagonal}$  
   2) $S_{i-1,j} + P$  
   3) $S_{i,j-1} + P$  
 
 > $P = -2$  
-> $M =  BLOSSUM65$
+> $M =  \text{BLOSSUM65}$
 
 |       |       | C        | A       | V        | A        | L        | E        |
 | :---: | :---: | :------: | :-----: | :------: | :------: | :------: | :------: |
@@ -148,7 +148,7 @@ and algorythm of words (k-tuples):
   - $CCAVALE\\
      CHEVALE$
   - $C-AVALE\\
-     CHEVALE$ 
+     C\hspace{1px}H\hspace{1px} EVALE$ 
 
 
 # Multiple Sequence Alignements (MSA)
