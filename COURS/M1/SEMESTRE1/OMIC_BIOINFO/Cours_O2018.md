@@ -95,8 +95,8 @@ pqrstuvwxyz{|}~
 Small reminder about sequence alignment 
 
 **%Identities :** Measure the number of identities between 2 sequences 
-  |A| C| G| T|
-  :-:|:-:|:-:|:-:|
+|  |A| C| G| T|
+|:-:|:-:|:-:|:-:|:-:|
 A| 1| 0| 0| 0|
 C |0| 1| 0| 0|
 G |0 |0| 1 |0|
