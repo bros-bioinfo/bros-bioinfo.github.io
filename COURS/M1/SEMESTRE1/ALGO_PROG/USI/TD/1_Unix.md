@@ -111,7 +111,8 @@ pnom@pc:/home$ ls e s3b/ //après TAB
 pnom@pc:/home$ cd e s3b/
 ```
 ### 3.3 Clique molette  
-- Clique molette permet de coller dans le terminal un texte préalablement sélectionné
+- Clique molette permet de coller dans le terminal un texte préalablement sélectionné  
+
 ### 3.4 Bureau  
 
 ```shell
