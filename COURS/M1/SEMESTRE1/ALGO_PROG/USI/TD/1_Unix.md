@@ -132,13 +132,13 @@ pnom@pc:~$
 ### 3.6 ls -option  
 
 | ls                   | Explication                                                |
-| -------------------: | :--------------------------------------------------------- |
+| ------------------- | --------------------------------------------------------- |
 | -a                   | inclue les entrées cachées (débutant par .)                |
 | -A                   | omettre les fichiers « . » et « .. »                       |
 | --author             | avec -l, afficher l'auteur de chaque fichier               |
 | -b                   | avec -l, afficher l'auteur de chaque fichier               |
 | --block-size=TAILLE  | utiliser   cette   TAILLE   de   bloc   pour   l'affichage |
-| -B, --ignore-backups | omettre les entrées se terminant par « ~ »                 |
+| -B, --ignore-backups | soumettre les entrées se terminant par « ~ »                 |
 | -c                   | trier selon différents paramètres                          |
 | -C                   | afficher en colonnes                                       |
 | -F                   | ajouter un caractère (parmi « */=>@\|») à chaque entrée    |
