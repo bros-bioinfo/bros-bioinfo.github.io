@@ -6,11 +6,13 @@
 #### 1.2 Commandes
 
 ```console
-s3b@s3b-N750BU:~$ who
+pnom@pc:~$ who
 s3b      tty7         2017-09-14 12:31 (:0)
-s3b@s3b-N750BU:~$ date
+
+pnom@pc:~$ date
 jeudi 14 septembre 2017, 12:33:41 (UTC+0200)
-s3b@s3b-N750BU:~$ cal
+
+pnom@pc:~$ cal
    Septembre 2017
 di lu ma me je ve sa
                 1  2
@@ -19,7 +21,7 @@ di lu ma me je ve sa
 17 18 19 20 21 22 23
 24 25 26 27 28 29 30
 
-s3b@s3b-N750BU:~$ echo
+pnom@pc:~$ echo
 
 ```
 #### 1.3 man cal
@@ -27,7 +29,7 @@ s3b@s3b-N750BU:~$ echo
 
 #### 1.4 du -sh ~
 ```console
-s3b@s3b-N750BU:~$ du sh ~
+pnom@pc:~$ du sh ~
 4	/home/s3b/.gnupg/private-keys-v1.d
 12	/home/s3b/.gnupg
 4	/home/s3b/Public
@@ -45,7 +47,7 @@ s3b@s3b-N750BU:~$ du sh ~
 
 #### 1.5 man en anglais
 ```
-s3b@s3b-N750BU:~$ man -L en du
+pnom@pc:~$ man -L en du
 ```
 
 ### 2) Interprète de commandes
@@ -89,29 +91,34 @@ On peut éditer la ligne de commande :
 - cd .. = Remonte l'arborescence d'un étage
 - ls = Liste les fichiers et dossiers dans le dossier actuel
 ```console
-s3b@s3b-N750BU:~$ pwd  
+pnom@pc:~$ pwd  
 /home/s3b
-s3b@s3b-N750BU:~$ cd ..
-s3b@s3b-N750BU:/home$ pwd
+
+pnom@pc:~$ cd ..
+pnom@pc:/home$ pwd
 /home
-s3b@s3b-N750BU:/home$ ls 
+
+pnom@pc:/home$ ls 
 s3b
 ```
 ### 3.2 TAB
 - TAB permet de compléter automatiquement
 ```console
-s3b@s3b-N750BU:/home$ ls e s3b/ //après TAB
-s3b@s3b-N750BU:/home$ cd e s3b/
+pnom@pc:/home$ ls e s3b/ //après TAB
+
+pnom@pc:/home$ cd e s3b/
 ```
 ### 3.3 Clique molette
 - Clique molette permet de coller dans le terminal un texte préalablement sélectionné
 ### 3.4 Bureau
 ```console
-s3b@s3b-N750BU:~$ cd Bureau/
-s3b@s3b-N750BU:~/Bureau$ pwd
+pnom@pc:~$ cd Bureau/
+
+pnom@pc:~/Bureau$ pwd
 /home/s3b/Bureau
-s3b@s3b-N750BU:~/Bureau$ cd
-s3b@s3b-N750BU:~$
+
+pnom@pc:~/Bureau$ cd
+pnom@pc:~$
 ```
 ### 3.5 Arborescence dessin
 
@@ -136,7 +143,7 @@ s3b@s3b-N750BU:~$
 | -h                   | afficher les tailles en format lisible                     |
 
 ```console
-s3b@s3b-N750BU:/$ ls -larth
+pnom@pc:/$ ls -larth
 total 52M
 drwxr-xr-x   2 root root 4,0K avril 19  2016 snap
 drwxr-xr-x   2 root root 4,0K avril 21  2016 srv
@@ -172,15 +179,21 @@ drwxrwxrwt  20 root root 4,0K sept. 15 09:58 tmp
 ## 4) Création et supression de répertoire
 
 ```console
-s3b@s3b-N750BU:~$ mkdir Projets
-s3b@s3b-N750BU:~$ mkdir tmp
-s3b@s3b-N750BU:~$ mkdir eclair
-s3b@s3b-N750BU:~$ cd eclair/
-s3b@s3b-N750BU:~/eclair$ rmdir ../eclair/
-s3b@s3b-N750BU:~/eclair$ cd ..
-s3b@s3b-N750BU:~$ rmdir eclair
+pnom@pc:~$ mkdir Projets
+
+pnom@pc:~$ mkdir tmp
+
+pnom@pc:~$ mkdir eclair
+
+pnom@pc:~$ cd eclair/
+
+pnom@pc:~/eclair$ rmdir ../eclair/
+
+pnom@pc:~/eclair$ cd ..
+
+pnom@pc:~$ rmdir eclair
 rmdir: échec de suppression de 'eclair': Aucun fichier ou dossier de ce type
-s3b@s3b-N750BU:~$ ls -F
+pnom@pc:~$ ls -F
 backups/                         htop-2.0.2/                   R/
 backups_suppr/                   htop-2.0.2.tar.gz             README
 Bureau/                          Images/                       resultats.log
@@ -193,115 +206,172 @@ examples.desktop                 nohup.out                     TouchpadIndicator
 fichiers/                        notes.csv.gz                  upgrade
 fichiers.tar                     Projets/                      Vidéos/
 fichiers.tar.gz                  Public/
-s3b@s3b-N750BU:~$ rmdir ~
+
+pnom@pc:~$ rmdir ~
 rmdir: échec de suppression de '/home/s3b': Permission non accordée
 ```
 ## 5) Manipilation de fichiers
 ### 5.1 Copie
 ```console
-s3b@s3b-N750BU:~$ mkdir test
-s3b@s3b-N750BU:~$ cd test
-s3b@s3b-N750BU:~/test$ touch doc1.html
-s3b@s3b-N750BU:~/test$ touch doc2.html
-s3b@s3b-N750BU:~/test$ ls
+pnom@pc:~$ mkdir test
+
+pnom@pc:~$ cd test
+
+pnom@pc:~/test$ touch doc1.html
+
+pnom@pc:~/test$ touch doc2.html
+
+pnom@pc:~/test$ ls
 doc1.html  doc2.html
-s3b@s3b-N750BU:~/test$ mkdir ~/temp
-s3b@s3b-N750BU:~/test$ cp doc1.html doc2.html ~/temp
-s3b@s3b-N750BU:~/test$ ls ~/tmp/
-s3b@s3b-N750BU:~/test$ ls ~/temp/
+
+pnom@pc:~/test$ mkdir ~/temp
+
+pnom@pc:~/test$ cp doc1.html doc2.html ~/temp
+
+pnom@pc:~/test$ ls ~/temp/
 doc1.html  doc2.html
 ```
 ### 5.2 Suppression
 ```console
-s3b@s3b-N750BU:~/test$ rm doc2.html
-s3b@s3b-N750BU:~/test$ ls
+pnom@pc:~/test$ rm doc2.html
+
+pnom@pc:~/test$ ls
 doc1.html
-s3b@s3b-N750BU:~/test$ rm ~/temp/doc1.html
-s3b@s3b-N750BU:~/test$ ls
+
+pnom@pc:~/test$ rm ~/temp/doc1.html
+
+pnom@pc:~/test$ ls
 doc1.html
-s3b@s3b-N750BU:~/test$ cd ~/temp/
-s3b@s3b-N750BU:~/temp$ ls
+
+pnom@pc:~/test$ cd ~/temp/
+
+pnom@pc:~/temp$ ls
 doc2.html
-s3b@s3b-N750BU:~/temp$ rm -i doc2.html
+
+pnom@pc:~/temp$ rm -i doc2.html
 rm : supprimer fichier vide 'doc2.html' ? y
 ```
 
 ### 5.3 Déplacement et renommage
 #### 5.3.1
 ```console
-s3b@s3b-N750BU:~$ cd ~/test/
-s3b@s3b-N750BU:~/test$ ls
+pnom@pc:~$ cd ~/test/
+
+pnom@pc:~/test$ ls
 doc1.html
-s3b@s3b-N750BU:~/test$ mv doc1.html doc.html
-s3b@s3b-N750BU:~/test$ ls -F
+
+pnom@pc:~/test$ mv doc1.html doc.html
+
+pnom@pc:~/test$ ls -F
 doc.html
-s3b@s3b-N750BU:~/test$ mv doc.html ..
-s3b@s3b-N750BU:~/test$ ls -F
-s3b@s3b-N750BU:~/test$ ls -F ..
+
+pnom@pc:~/test$ mv doc.html ..
+
+pnom@pc:~/test$ ls -F
+
+pnom@pc:~/test$ ls -F ..
 doc.html
-s3b@s3b-N750BU:~/test$ mv ../doc.html .
-s3b@s3b-N750BU:~/test$ ls -F ..
-s3b@s3b-N750BU:~/test$ ls -F
+
+pnom@pc:~/test$ mv ../doc.html .
+
+pnom@pc:~/test$ ls -F ..
+
+pnom@pc:~/test$ ls -F
 doc.html
 ```
 ```console
-s3b@s3b-N750BU:~$ mkdir test_dir
-s3b@s3b-N750BU:~$ mkdir test_dir/essai
-s3b@s3b-N750BU:~$ cd test_dir/
-s3b@s3b-N750BU:~/test_dir$ ls
+pnom@pc:~$ mkdir test_dir
+
+pnom@pc:~$ mkdir test_dir/essai
+
+pnom@pc:~$ cd test_dir/
+
+pnom@pc:~/test_dir$ ls
 essai
-s3b@s3b-N750BU:~/test_dir$ cd essai/
-s3b@s3b-N750BU:~/test_dir/essai$ ls
-s3b@s3b-N750BU:~/test_dir/essai$ touch essai.txt autre_essai
-s3b@s3b-N750BU:~/test_dir/essai$ ls
+
+pnom@pc:~/test_dir$ cd essai/
+
+pnom@pc:~/test_dir/essai$ ls
+
+pnom@pc:~/test_dir/essai$ touch essai.txt autre_essai
+
+pnom@pc:~/test_dir/essai$ ls
 autre_essai  essai.txt
-s3b@s3b-N750BU:~/test_dir/essai$ cd ..
-s3b@s3b-N750BU:~/test_dir$ touch texte1.txt texte2.txt
-s3b@s3b-N750BU:~/test_dir$ ls
+
+pnom@pc:~/test_dir/essai$ cd ..
+
+pnom@pc:~/test_dir$ touch texte1.txt texte2.txt
+
+pnom@pc:~/test_dir$ ls
 essai  texte1.txt  texte2.txt
 ```
 ```console
-s3b@s3b-N750BU:~/test_dir$ mkdir textes
-s3b@s3b-N750BU:~/test_dir$ mv texte1.txt texte2.txt textes/
-s3b@s3b-N750BU:~/test_dir$ ls
+pnom@pc:~/test_dir$ mkdir textes
+
+pnom@pc:~/test_dir$ mv texte1.txt texte2.txt textes/
+
+pnom@pc:~/test_dir$ ls
 essai  textes
-s3b@s3b-N750BU:~/test_dir$ cd textes/
-s3b@s3b-N750BU:~/test_dir/textes$ ls
+
+pnom@pc:~/test_dir$ cd textes/
+
+pnom@pc:~/test_dir/textes$ ls
 texte1.txt  texte2.txt
 ```
 ```console
-s3b@s3b-N750BU:~/test_dir/textes$ mv t* ..
-s3b@s3b-N750BU:~/test_dir/textes$ ls
-s3b@s3b-N750BU:~/test_dir/textes$ ls ..
+pnom@pc:~/test_dir/textes$ mv t* ..
+
+pnom@pc:~/test_dir/textes$ ls
+
+pnom@pc:~/test_dir/textes$ ls ..
 essai  texte1.txt  texte2.txt  textes
-s3b@s3b-N750BU:~/test_dir/textes$ cd ..
-s3b@s3b-N750BU:~/test_dir$ mv t*.txt essai
-s3b@s3b-N750BU:~/test_dir$ ls
+
+pnom@pc:~/test_dir/textes$ cd ..
+
+pnom@pc:~/test_dir$ mv t*.txt essai
+
+pnom@pc:~/test_dir$ ls
 essai  textes
-s3b@s3b-N750BU:~/test_dir$ mv essai/*essai.txt textes/
-s3b@s3b-N750BU:~/test_dir$ cd textes/
-s3b@s3b-N750BU:~/test_dir/textes$ ls
+
+pnom@pc:~/test_dir$ mv essai/*essai.txt textes/
+
+pnom@pc:~/test_dir$ cd textes/
+
+pnom@pc:~/test_dir/textes$ ls
 essai.txt
-s3b@s3b-N750BU:~/test_dir/textes$ mv ../essai/autre_essai autre_essai.txt
-s3b@s3b-N750BU:~/test_dir/textes$ cd ../essai/
-s3b@s3b-N750BU:~/test_dir/essai$ ls
+
+pnom@pc:~/test_dir/textes$ mv ../essai/autre_essai autre_essai.txt
+
+pnom@pc:~/test_dir/textes$ cd ../essai/
+
+pnom@pc:~/test_dir/essai$ ls
 texte1.txt  texte2.txt
-s3b@s3b-N750BU:~/test_dir/essai$ cd ../textes/
-s3b@s3b-N750BU:~/test_dir/textes$ ls
+
+pnom@pc:~/test_dir/essai$ cd ../textes/
+
+pnom@pc:~/test_dir/textes$ ls
 autre_essai.txt  essai.txt
 ```
 ```console
-s3b@s3b-N750BU:~/test_dir/textes$ cd ..
-s3b@s3b-N750BU:~/test_dir$ cp essai textes
+pnom@pc:~/test_dir/textes$ cd ..
+
+pnom@pc:~/test_dir$ cp essai textes
 cp: omission du répertoire 'essai'
-s3b@s3b-N750BU:~/test_dir$ cp -R  essai textes
-s3b@s3b-N750BU:~/test_dir$ ls
+
+pnom@pc:~/test_dir$ cp -R  essai textes
+
+pnom@pc:~/test_dir$ ls
 essai  textes
-s3b@s3b-N750BU:~/test_dir$ cd essai/
-s3b@s3b-N750BU:~/test_dir/essai$ ls
+
+pnom@pc:~/test_dir$ cd essai/
+
+pnom@pc:~/test_dir/essai$ ls
 texte1.txt  texte2.txt
-s3b@s3b-N750BU:~/test_dir/essai$ cd ../textes/
-s3b@s3b-N750BU:~/test_dir/textes$ ls
+
+pnom@pc:~/test_dir/essai$ cd ../textes/
+
+pnom@pc:~/test_dir/textes$ ls
 autre_essai.txt  essai  essai.txt
-s3b@s3b-N750BU:~/test_dir/textes$ cd ..
+
+pnom@pc:~/test_dir/textes$ cd ..
 ```
