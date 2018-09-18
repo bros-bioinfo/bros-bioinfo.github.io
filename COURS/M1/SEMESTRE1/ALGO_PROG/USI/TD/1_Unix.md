@@ -284,7 +284,8 @@ pnom@pc:~/test$ ls -F
 doc.html
 ```
 #### 5.4 Créez à partir de votre répertoire d’accueil l’arborescence
-![Arborescence 1](SEMESTRE1/ALGO_PROG/USI/imgs/)
+<img src="../imgs/arbo1.png" width="450px"> 
+
 ```shell
 pnom@pc:~$ mkdir test_dir
 
@@ -312,6 +313,8 @@ pnom@pc:~/test_dir$ ls
 essai  texte1.txt  texte2.txt
 ```
 #### 5.5 Placez-vous dans le répertoire test_dir, et ramenez-vous en deux commandes à 
+<img src="../imgs/arbo2.png" width="450px">  
+
 ```shell
 pnom@pc:~/test_dir$ mkdir textes
 
