@@ -89,7 +89,8 @@ On peut éditer la ligne de commande :
 ### 3.1 Commandes de base
 - pwd = Affiche le nom du répertoire de travail actuel
 - cd .. = Remonte l'arborescence d'un étage
-- ls = Liste les fichiers et dossiers dans le dossier actuel
+- ls = Liste les fichiers et dossiers dans le dossier actuel  
+
 ```shell
 pnom@pc:~$ pwd  
 /home/s3b
@@ -102,7 +103,8 @@ pnom@pc:/home$ ls
 s3b
 ```
 ### 3.2 TAB
-- TAB permet de compléter automatiquement
+- TAB permet de compléter automatiquement  
+
 ```shell
 pnom@pc:/home$ ls e s3b/ //après TAB
 
