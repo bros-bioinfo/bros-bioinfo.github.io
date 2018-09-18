@@ -46,7 +46,7 @@ pnom@pc:~$ du sh ~
 - du : Permet de visualiser l'utilisation du disque dur par l'ensemble des fichiers, récursivement des dossiers.
 
 #### 1.5 man en anglais
-```
+```shell
 pnom@pc:~$ man -L en du
 ```
 
@@ -85,8 +85,8 @@ On peut éditer la ligne de commande :
 | Return ou Ctlr-**j** | validation de la ligne                     |
 | Ctrl + **c**         | (cancel) : annulation de la ligne en cours |
 
-## 3) Visite de l'arborescence utilisateur
-### 3.1 Commandes de base
+## 3) Visite de l'arborescence utilisateur  
+### 3.1 Commandes de base  
 - pwd = Affiche le nom du répertoire de travail actuel
 - cd .. = Remonte l'arborescence d'un étage
 - ls = Liste les fichiers et dossiers dans le dossier actuel  
@@ -102,7 +102,7 @@ pnom@pc:/home$ pwd
 pnom@pc:/home$ ls 
 s3b
 ```
-### 3.2 TAB
+### 3.2 TAB  
 - TAB permet de compléter automatiquement  
 
 ```shell
@@ -110,9 +110,9 @@ pnom@pc:/home$ ls e s3b/ //après TAB
 
 pnom@pc:/home$ cd e s3b/
 ```
-### 3.3 Clique molette
+### 3.3 Clique molette  
 - Clique molette permet de coller dans le terminal un texte préalablement sélectionné
-### 3.4 Bureau
+### 3.4 Bureau  
 ```shell
 pnom@pc:~$ cd Bureau/
 
@@ -126,7 +126,7 @@ pnom@pc:~$
 
 ![arb.png_001](https://i.imgur.com/kiHLjeV.png)
 
-### 3.6 ls -option
+### 3.6 ls -option  
 
 | ls                   | Explication                                                |
 | -------------------: | :--------------------------------------------------------- |
