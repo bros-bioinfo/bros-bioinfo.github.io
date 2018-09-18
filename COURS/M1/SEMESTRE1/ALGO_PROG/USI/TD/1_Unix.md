@@ -283,85 +283,52 @@ pnom@pc:~/test$ ls -F ..
 pnom@pc:~/test$ ls -F
 doc.html
 ```
-#### 5.4 Créez à partir de votre répertoire d’accueil l’arborescence
-<img src="../imgs/arbo1.png" width="450px"> 
+<img src="../imgs/arbo1.png" width="450px">
 
 ```shell
-pnom@pc:~$ mkdir test_dir
+pnom@pcid:~$ mkdir test_dir
 
-pnom@pc:~$ mkdir test_dir/essai
+pnom@pcid:~$ cd test_dir
 
-pnom@pc:~$ cd test_dir/
+pnom@pcid:~/test_dir$ touch texte1
 
-pnom@pc:~/test_dir$ ls
-essai
+pnom@pcid:~/test_dir$ touch texte2
 
-pnom@pc:~/test_dir$ cd essai/
+pnom@pcid:~/test_dir$ ls
+texte1  texte2
 
-pnom@pc:~/test_dir/essai$ ls
+pnom@pcid:~/test_dir$ mkdir essai
 
-pnom@pc:~/test_dir/essai$ touch essai.txt autre_essai
+pnom@pcid:~/test_dir$ cd essai
 
-pnom@pc:~/test_dir/essai$ ls
-autre_essai  essai.txt
+pnom@pcid:~/test_dir/essai$ touch essai
 
-pnom@pc:~/test_dir/essai$ cd ..
+pnom@pcid:~/test_dir/essai$ touch autre_essai
 
-pnom@pc:~/test_dir$ touch texte1.txt texte2.txt
-
-pnom@pc:~/test_dir$ ls
-essai  texte1.txt  texte2.txt
+pnom@pcid:~/test_dir/essai$ ls
+autre_essai  essai
 ```
-#### 5.5 Placez-vous dans le répertoire test_dir, et ramenez-vous en deux commandes à 
+
+#### 5.4 Placez-vous dans le répertoire test_dir, et ramenez-vous en deux commandes à 
 <img src="../imgs/arbo2.png" width="450px">  
 
 ```shell
-pnom@pc:~/test_dir$ mkdir textes
+pnom@pcid:~/test_dir$ mkdir textes
 
-pnom@pc:~/test_dir$ mv texte1.txt texte2.txt textes/
-
-pnom@pc:~/test_dir$ ls
-essai  textes
-
-pnom@pc:~/test_dir$ cd textes/
-
-pnom@pc:~/test_dir/textes$ ls
-texte1.txt  texte2.txt
+pnom@pcid:~/test_dir$ mv texte1 texte2 ./textes
 ```
+#### 5.5 List avec *
+
 ```shell
-pnom@pc:~/test_dir/textes$ mv t* ..
+pnom@pcid:~/test_dir/textes$ mv t* ..
 
-pnom@pc:~/test_dir/textes$ ls
+pnom@pcid:~/test_dir/textes$ ls
 
-pnom@pc:~/test_dir/textes$ ls ..
-essai  texte1.txt  texte2.txt  textes
-
-pnom@pc:~/test_dir/textes$ cd ..
-
-pnom@pc:~/test_dir$ mv t*.txt essai
-
-pnom@pc:~/test_dir$ ls
-essai  textes
-
-pnom@pc:~/test_dir$ mv essai/*essai.txt textes/
-
-pnom@pc:~/test_dir$ cd textes/
-
-pnom@pc:~/test_dir/textes$ ls
-essai.txt
-
-pnom@pc:~/test_dir/textes$ mv ../essai/autre_essai autre_essai.txt
-
-pnom@pc:~/test_dir/textes$ cd ../essai/
-
-pnom@pc:~/test_dir/essai$ ls
-texte1.txt  texte2.txt
-
-pnom@pc:~/test_dir/essai$ cd ../textes/
-
-pnom@pc:~/test_dir/textes$ ls
-autre_essai.txt  essai.txt
+pnom@pcid:~/test_dir/textes$ ls ..
+essai  texte1  texte2  textes
 ```
+#### 5.6
+
 ```shell
 pnom@pc:~/test_dir/textes$ cd ..
 
@@ -382,6 +349,4 @@ pnom@pc:~/test_dir/essai$ cd ../textes/
 
 pnom@pc:~/test_dir/textes$ ls
 autre_essai.txt  essai  essai.txt
-
-pnom@pc:~/test_dir/textes$ cd ..
 ```
