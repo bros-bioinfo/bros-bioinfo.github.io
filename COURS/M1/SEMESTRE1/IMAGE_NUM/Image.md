@@ -374,9 +374,14 @@ All the techniques available tried to model the background image and then to sub
 In ImageJ, only the 'Rolling Ball' filter is implemented to subtract the background.
 
 ### Noise
-
+#### Intrinsic Noise
 Image noise is random (not present in the object imaged) **variation of brightness or color information** in images, and is usually an aspect of electronic noise. It can be produced by the sensor and circuitry of a scanner or digital camera. Image noise can also originate in film grain and in the unavoidable shot noise of an ideal photon detector. Image noise is an undesirable by-product of image capture that adds spurious and extraneous information. (random)
-
+#### External Noise
+ - Dust
+ - "Moves" of sensor or of the object of interest
+ - Perturbation of atmosqpheric parameters (clouds, humidity, fog ...)
+ - Perturbations electromagnetic (can direcly act on sensor)
+#### Noise due to digital processing 
 #### Different type of noise
 
 ##### 1 Gaussian noise
@@ -397,8 +402,16 @@ Salt-and-pepper noise is a form of noise sometimes seen on images. It is also kn
 Dead pixels in an LCD monitor produce a similar, but non-random, display.
 
 ![Noise_salt_and_pepper](https://i.imgur.com/Hpjn9Il.png)
-> By User Markome on en.wikipedia, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1352731
+> By User Markome on en.wikipedia, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1352731  
 
+###### 3 Additive noise
+Soit une image non bruitée R et I la même image avec un bruit **additif** A, chaque pixel j
+$$I_j=A_j+R_j$$
+Où $A_j$est une variable **aléatoire** de moyenne égale à 0  
+###### 4 Multiplicative noise
+Soit une image non bruitée R et I la même image avec un bruit **additif** B, chaque pixel j
+$$I_j=B_j*R_j$$
+Où $B_j$est une variable **aléatoire** de moyenne égale à 0     
 [More noise in Wiki](https://en.wikipedia.org/wiki/Image_noise)
 
 > **Note for each type** : In either case, the noise at different pixels can be either correlated or uncorrelated; in many cases, noise values at different pixels are modeled as being independent and identically distributed, and hence uncorrelated.
@@ -411,7 +424,9 @@ All recording devices, both analog and digital, have traits that make them susce
 Images taken with both digital cameras and conventional film cameras will pick up noise from a variety of sources. Further use of these images will often require that the noise be (partially) removed – for aesthetic purposes as in artistic work or marketing, or for practical purposes such as computer vision.
 
 ##### 1 Removal
-###### 1.1 Tradeoffs
+###### 1.1 Mean of several images
+A good way to reduce noise is taking several pictures and averaging pixels from all the pictures to reduce the random part of the image
+###### 1.2 Tradeoffs
 
 In selecting a noise reduction algorithm, one must weigh several factors:
 
@@ -419,30 +434,31 @@ In selecting a noise reduction algorithm, one must weigh several factors:
 + whether **sacrificing some real detail** is acceptable if it allows more noise to be removed (how aggressively to decide whether variations in the image are noise or not)
 + the **characteristics** of the noise and the detail in the image, to better make those decisions
 
-##### 1.2 Chroma and luminance noise separation
+##### 1.3 Chroma and luminance noise separation
 
 In real-world photographs, the highest spatial-frequency detail consists mostly of variations in **brightness** ("luminance detail") rather than variations in **hue** ("chroma detail"). Since any noise reduction algorithm should attempt to remove noise without sacrificing real detail from the scene photographed, one risks a **greater loss** of detail from luminance noise reduction than chroma noise reduction simply because most scenes have little high frequency chroma detail to begin with.
 
 Most dedicated noise-reduction computer software allows the user to control chroma and luminance noise reduction separately.
 
-##### 1.3 Linear smoothing filters
+##### 1.4 Linear smoothing filters
 One method to remove noise is by **convolving** the original image with a **mask** that represents a low-pass filter or smoothing operation.
 
-**{**
-**Convolution**
 
-In mathematics (and, in particular, functional analysis) convolution is a mathematical operation on **two functions** (f and g); it **produces a third function**, that is typically viewed as a modified version of one of the original functions, giving the integral of the pointwise multiplication of the two functions as a **function of the amount** that one of the original functions is translated. Convolution is similar to cross-correlation. It has applications that include probability, statistics, computer vision, natural language processing, **image and signal processing**, engineering, and differential equations.
+>**Convolution**  
+>In mathematics (and, in particular, functional analysis) convolution is a mathematical operation on **two functions** (f and g); it **produces a third function**, that is typically viewed as a modified version of one of the original functions, giving the integral of the pointwise multiplication of the two functions as a **function of the amount** that one of the original functions is translated. Convolution is similar to cross-correlation. It has applications that include probability, statistics, computer vision, natural language processing, **image and signal processing**, engineering, and differential equations.
 
 ![Convolution_of_box_signal_with_itself2](https://i.imgur.com/Q00Uhfn.gif)
 > By Convolution_of_box_signal_with_itself.gif: Brian Ambergderivative work: Tinos (talk) - Convolution_of_box_signal_with_itself.gif, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11003835
 
-**}**
+In image processing, the filter is therefore a **convolution mask** (*kernel*) which is basically a small matrix by which every pixel on the original image is multiplied  
 
 For example, the **Gaussian mask** comprises elements determined by a Gaussian function. This convolution brings the value of each pixel into closer harmony with the values of its neighbors. In general, a smoothing filter sets each pixel to the **average value**, or a weighted average, of itself and its nearby neighbors; the Gaussian filter is just one possible set of weights.
 
 Smoothing filters tend to **blur** an image, because pixel intensity values that are significantly higher or lower than the surrounding neighborhood would **"smear"**(salir) across the area. Because of this blurring, linear filters are seldom (rarement) used in practice for noise reduction; they are, however, often used as the basis for **nonlinear noise reduction filters**.
-
-##### 1.4 Nonlinear filters
+###### Edge managment
+ - Smaller resulting images
+ - Edges of the image identical to those of the original images
+##### 1.5 Nonlinear filters
 
 A **median filter** is an example of a non-linear filter and, if properly designed, is very good at preserving image detail. To run a median filter:
 
@@ -457,12 +473,12 @@ Median and other RCRS filters are **good at removing salt and pepper noise** fro
 ![Median_filter_example](https://i.imgur.com/vJQtNJi.jpg)
 > By Debivort at en.wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=17001283
 
-##### 1.5 Anisotropic diffusion
+##### 1.6 Anisotropic diffusion
 
 In image processing and computer vision, anisotropic diffusion, also called **Perona–Malik diffusion**, is a technique aiming at reducing image noise without removing significant parts of the image content, typically edges, lines or other details that are important for the interpretation of the image. Anisotropic diffusion resembles the process that creates a **scale space**, where an image generates a parameterized family of successively more and more blurred images based on a diffusion process. Each of the resulting images in this family are given as a **convolution** between the image and a 2D isotropic Gaussian filter, where the width of the filter increases with the parameter. This diffusion process is a **linear and space-invariant** transformation of the original image. Anisotropic diffusion is a generalization of this diffusion process: it produces a **family of parameterized images**, but each resulting image is a combination between the original image and a filter that depends on the local content of the original image. As a consequence, anisotropic diffusion is a **non-linear and space-variant** transformation of the original image
 
 
-##### 1.6 Non-local means
+##### 1.7 Non-local means
 
 Non-local means is an algorithm in image processing for image denoising. Unlike **"local mean"** filters, which take the mean value of a group of pixels surrounding a target pixel to smooth the image, non-local means filtering takes a **mean of all pixels in the image**, weighted by how similar these pixels are to the target pixel. This results in much greater post-filtering clarity, and less loss of detail in the image compared with local mean algorithms.
 
