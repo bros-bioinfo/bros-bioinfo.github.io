@@ -451,11 +451,9 @@ One method to remove noise is by **convolving** the original image with a **mask
 > By Convolution_of_box_signal_with_itself.gif: Brian Ambergderivative work: Tinos (talk) - Convolution_of_box_signal_with_itself.gif, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11003835
 
 In image processing, the filter is therefore a **convolution mask** (*kernel*) which is basically a small matrix by which every pixel on the original image is multiplied  
-|?|?|?\|| |  
-|:-:|:-:|:-:|:-:|  
-|**?**|\|\|**x**|**x**\||x|  
-|__?__|__\|\|x__|__x__\||x|  
-||\|\|x|x|x|  
+
+![Kernel calculation](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/M1/SEMESTRE1/IMAGE_NUM/Kernel.JPG)  
+
 For example, the **Gaussian mask** comprises elements determined by a Gaussian function. This convolution brings the value of each pixel into closer harmony with the values of its neighbors. In general, a smoothing filter sets each pixel to the **average value**, or a weighted average, of itself and its nearby neighbors; the Gaussian filter is just one possible set of weights.
 
 Smoothing filters tend to **blur** an image, because pixel intensity values that are significantly higher or lower than the surrounding neighborhood would **"smear"**(salir) across the area. Because of this blurring, linear filters are seldom (rarement) used in practice for noise reduction; they are, however, often used as the basis for **nonlinear noise reduction filters**.
