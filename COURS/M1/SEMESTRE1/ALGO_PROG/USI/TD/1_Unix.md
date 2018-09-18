@@ -1,7 +1,7 @@
 # TD2_UNIX
 ### 1) Description et utilisation de commandes Unix
 #### 1.1 Commande exit
-Permet de sortir du terminal.
+- Permet de sortir du terminal.
 
 #### 1.2 Commandes
 
@@ -23,7 +23,7 @@ s3b@s3b-N750BU:~$ echo
 
 ```
 #### 1.3 man cal
-(voir terminal)
+- (voir terminal)
 
 #### 1.4 du -sh ~
 ```console
@@ -41,7 +41,7 @@ s3b@s3b-N750BU:~$ du sh ~
 8	/home/s3b/htop-2.0.2/scripts
 ...
 ```
-du : Permet de visualiser l'utilisation du disque dur par l'ensemble des fichiers, récursivement des dossiers.
+- du : Permet de visualiser l'utilisation du disque dur par l'ensemble des fichiers, récursivement des dossiers.
 
 #### 1.5 man en anglais
 ```
@@ -129,6 +129,7 @@ s3b@s3b-N750BU:~$
 | -B, --ignore-backups | omettre les entrées se terminant par « ~ »                 |
 | -c                   | trier selon différents paramètres                          |
 | -C                   | afficher en colonnes                                       |
+| -F                   | ajouter un caractère (parmi « */=>@\|») à chaque entrée    |
 | -l                   | utiliser un format d'affichage long                        |
 | -r                   | inverser l'ordre du tri                                    |
 | -t                   | trier selon la date de modification                        |
