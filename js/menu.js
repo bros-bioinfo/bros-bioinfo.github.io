@@ -17,13 +17,14 @@ function getTree() {
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/Intro_programmation",text:"Intro_programmation",custom:"9181321"},
         ]},
         {"type":"directory",href:"#fh5co-work",text:"USI",custom:"9181321",nodes:[
-          {"type":"directory",href:"#fh5co-work",text:"TD",custom:"9181321",nodes:[
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/0_Communications",text:"0_Communications",custom:"9181321"},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/1_Unix",text:"1_Unix",custom:"9181555"},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"9181321"},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/3_Processus",text:"3_Processus",custom:"9181321"},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/4_Shell",text:"4_Shell",custom:"9181321"},
+          {"type":"directory",href:"#fh5co-work",text:"TD",custom:"9181601",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/1_Communications",text:"1_Communications",custom:"9181600"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"9181600"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/3_Emacs",text:"3_Emacs",custom:"9181601"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/4_Unix",text:"4_Unix",custom:"9181559"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/5_Processus",text:"5_Processus",custom:"9181600"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/7_Utilitaires",text:"7_Utilitaires",custom:"9181321"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/8_Shell",text:"8_Shell",custom:"9181600"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/shell_seb",text:"shell_seb",custom:"9181321"},
           ]},
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/Utilisation_systeme_info",text:"Utilisation_systeme_info",custom:"9181321"},
