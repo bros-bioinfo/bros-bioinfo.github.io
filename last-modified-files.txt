@@ -2,4 +2,5 @@
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/English">English</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image">Image</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Cours_O2018">Cours_O2018</a><br>
+<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Omic_bioinfo">Omic_bioinfo</a><br>
 </body></html>
