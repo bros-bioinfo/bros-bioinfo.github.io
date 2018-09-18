@@ -454,7 +454,7 @@ In image processing, the filter is therefore a **convolution mask** (*kernel*) w
 |?|?|?\|| |  
 |:-:|:-:|:-:|:-:|  
 |**?**|\|\|**x**|**x**\||x|  
-__?__|__\|\|x__|__x__\||x|  
+|__?__|__\|\|x__|__x__\||x|  
 ||\|\|x|x|x|  
 For example, the **Gaussian mask** comprises elements determined by a Gaussian function. This convolution brings the value of each pixel into closer harmony with the values of its neighbors. In general, a smoothing filter sets each pixel to the **average value**, or a weighted average, of itself and its nearby neighbors; the Gaussian filter is just one possible set of weights.
 
