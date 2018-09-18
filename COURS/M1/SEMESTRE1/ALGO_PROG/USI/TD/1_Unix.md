@@ -132,13 +132,13 @@ pnom@pc:~$
 ### 3.6 ls -option  
 
 | ls                   | Explication                                                |
-| ------------------- | --------------------------------------------------------- |
+| -------------------- | ---------------------------------------------------------- |
 | -a                   | inclue les entrées cachées (débutant par .)                |
 | -A                   | omettre les fichiers « . » et « .. »                       |
 | --author             | avec -l, afficher l'auteur de chaque fichier               |
 | -b                   | avec -l, afficher l'auteur de chaque fichier               |
 | --block-size=TAILLE  | utiliser   cette   TAILLE   de   bloc   pour   l'affichage |
-| -B, --ignore-backups | soumettre les entrées se terminant par « ~ »                 |
+| -B, --ignore-backups | soumettre les entrées se terminant par « ~ »               |
 | -c                   | trier selon différents paramètres                          |
 | -C                   | afficher en colonnes                                       |
 | -F                   | ajouter un caractère (parmi « */=>@\|») à chaque entrée    |
@@ -309,7 +309,7 @@ pnom@pcid:~/test_dir/essai$ ls
 autre_essai  essai
 ```
 
-#### 5.4 Placez-vous dans le répertoire test_dir, et ramenez-vous en deux commandes à 
+### 5.4 Placez-vous dans le répertoire test_dir, et ramenez-vous en deux commandes à 
 <img src="../imgs/arbo2.png" width="450px">  
 
 ```shell
@@ -317,7 +317,7 @@ pnom@pcid:~/test_dir$ mkdir textes
 
 pnom@pcid:~/test_dir$ mv texte1 texte2 ./textes
 ```
-#### 5.5 List avec *
+### 5.5 List avec *
 
 ```shell
 pnom@pcid:~/test_dir/textes$ mv t* ..
@@ -327,7 +327,7 @@ pnom@pcid:~/test_dir/textes$ ls
 pnom@pcid:~/test_dir/textes$ ls ..
 essai  texte1  texte2  textes
 ```
-#### 5.6
+### 5.6
 
 ```shell
 pnom@pc:~/test_dir/textes$ cd ..
@@ -350,3 +350,83 @@ pnom@pc:~/test_dir/essai$ cd ../textes/
 pnom@pc:~/test_dir/textes$ ls
 autre_essai.txt  essai  essai.txt
 ```
+### 5.7  Dans un répertoire vide, essayez les commandes suivantes :
+
+```shell
+pnom@pcid:~/test_dir$ touch fichier
+
+pnom@pcid:~/test_dir$ ln fichier hardlink
+
+pnom@pcid:~/test_dir$ ln -s fichier symblink
+
+pnom@pcid:~/test_dir$ ls -F
+fichier  hardlink  symblink@
+
+pnom@pcid:~/test_dir$ rm fichier
+
+pnom@pcid:~/test_dir$ ls -l
+total 0
+-rw-r--r-- 1 pnom grp30001 0 sept. 18 15:25 hardlink
+lrwxrwxrwx 1 pnom grp30001 7 sept. 18 15:26 symblink -> fichier
+
+pnom@pcid:~/test_dir$ more hardlink
+
+pnom@pcid:~/test_dir$ more symblink
+more: échec de stat sur symblink: Aucun fichier ou dossier de ce type
+```
+## 6 Examen de fichiers réguliers  
+### 6.1 Essayer `cat <fichier>`
+### 6.2 Essayez `more ≺fichier>`. De même avec la commande less. Vaut-il mieux utiliser la commande more ou less et pourquoi ?
+### 6.3 vile
+- `file` determine le type de fichier
+```shell
+pnom@pcid:~/Bureau$ file terminal.desktop
+terminal.desktop: UTF-8 Unicode text
+
+pnom@pcid:~/Bureau$ file *
+espaces:          symbolic link to ../espaces
+terminal.desktop: UTF-8 Unicode text
+
+pnom@pcid:~/Bureau$ file .*
+.:  directory
+..: directory
+```
+
+### 6.4 wc
+- `wc` Affiche le nombre de lignes, de mots et d'octets d'un fichier
+
+```shell
+pnom@pcid:~/Bureau$ wc terminal.desktop
+ 18  39 452 terminal.desktop
+
+pnom@pcid:~/Bureau$ wc *
+wc: espaces: est un dossier
+      0       0       0 espaces
+     18      39     452 terminal.desktop
+     18      39     452 total
+
+pnom@pcid:~/Bureau$ wc .*
+wc: .: est un dossier
+      0       0       0 .
+wc: ..: est un dossier
+      0       0       0 ..
+      0       0       0 total
+
+pnom@pcid:~/Bureau$ wc :
+wc: ':': Aucun fichier ou dossier de ce type
+pnom@pcid:~/Bureau$ wc
+
+qjdvc
+# CTRL + d
+      2       1       7
+```
+
+## 7  Comparaison de fichiers 
+- La commande `diff` sert à afficher les différences entre deux fichiers.
+
+## 8 Que faire si un programme plante
+Pour avoir la liste de tous vos processus : `ps ux`.
+Notez les identifiants (pid) des processus. Pour tuer un processus essayez :  
+- la manière diplomatique : `kill -s SIGTERM ≺pid>`
+- la manière forte : `kill -s SIGKILL ≺pid>`
+
