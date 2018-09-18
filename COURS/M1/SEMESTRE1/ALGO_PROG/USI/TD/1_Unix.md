@@ -5,7 +5,7 @@
 
 #### 1.2 Commandes
 
-```console
+```shell
 pnom@pc:~$ who
 s3b      tty7         2017-09-14 12:31 (:0)
 
@@ -28,7 +28,7 @@ pnom@pc:~$ echo
 - (voir terminal)
 
 #### 1.4 du -sh ~
-```console
+```shell
 pnom@pc:~$ du sh ~
 4	/home/s3b/.gnupg/private-keys-v1.d
 12	/home/s3b/.gnupg
@@ -90,7 +90,7 @@ On peut éditer la ligne de commande :
 - pwd = Affiche le nom du répertoire de travail actuel
 - cd .. = Remonte l'arborescence d'un étage
 - ls = Liste les fichiers et dossiers dans le dossier actuel
-```console
+```shell
 pnom@pc:~$ pwd  
 /home/s3b
 
@@ -103,7 +103,7 @@ s3b
 ```
 ### 3.2 TAB
 - TAB permet de compléter automatiquement
-```console
+```shell
 pnom@pc:/home$ ls e s3b/ //après TAB
 
 pnom@pc:/home$ cd e s3b/
@@ -111,7 +111,7 @@ pnom@pc:/home$ cd e s3b/
 ### 3.3 Clique molette
 - Clique molette permet de coller dans le terminal un texte préalablement sélectionné
 ### 3.4 Bureau
-```console
+```shell
 pnom@pc:~$ cd Bureau/
 
 pnom@pc:~/Bureau$ pwd
@@ -142,7 +142,7 @@ pnom@pc:~$
 | -t                   | trier selon la date de modification                        |
 | -h                   | afficher les tailles en format lisible                     |
 
-```console
+```shell
 pnom@pc:/$ ls -larth
 total 52M
 drwxr-xr-x   2 root root 4,0K avril 19  2016 snap
@@ -178,7 +178,7 @@ drwxrwxrwt  20 root root 4,0K sept. 15 09:58 tmp
 
 ## 4) Création et supression de répertoire
 
-```console
+```shell
 pnom@pc:~$ mkdir Projets
 
 pnom@pc:~$ mkdir tmp
@@ -212,7 +212,7 @@ rmdir: échec de suppression de '/home/s3b': Permission non accordée
 ```
 ## 5) Manipilation de fichiers
 ### 5.1 Copie
-```console
+```shell
 pnom@pc:~$ mkdir test
 
 pnom@pc:~$ cd test
@@ -232,7 +232,7 @@ pnom@pc:~/test$ ls ~/temp/
 doc1.html  doc2.html
 ```
 ### 5.2 Suppression
-```console
+```shell
 pnom@pc:~/test$ rm doc2.html
 
 pnom@pc:~/test$ ls
@@ -254,7 +254,7 @@ rm : supprimer fichier vide 'doc2.html' ? y
 
 ### 5.3 Déplacement et renommage
 #### 5.3.1
-```console
+```shell
 pnom@pc:~$ cd ~/test/
 
 pnom@pc:~/test$ ls
@@ -279,7 +279,7 @@ pnom@pc:~/test$ ls -F ..
 pnom@pc:~/test$ ls -F
 doc.html
 ```
-```console
+```shell
 pnom@pc:~$ mkdir test_dir
 
 pnom@pc:~$ mkdir test_dir/essai
@@ -305,7 +305,7 @@ pnom@pc:~/test_dir$ touch texte1.txt texte2.txt
 pnom@pc:~/test_dir$ ls
 essai  texte1.txt  texte2.txt
 ```
-```console
+```shell
 pnom@pc:~/test_dir$ mkdir textes
 
 pnom@pc:~/test_dir$ mv texte1.txt texte2.txt textes/
@@ -318,7 +318,7 @@ pnom@pc:~/test_dir$ cd textes/
 pnom@pc:~/test_dir/textes$ ls
 texte1.txt  texte2.txt
 ```
-```console
+```shell
 pnom@pc:~/test_dir/textes$ mv t* ..
 
 pnom@pc:~/test_dir/textes$ ls
@@ -352,7 +352,7 @@ pnom@pc:~/test_dir/essai$ cd ../textes/
 pnom@pc:~/test_dir/textes$ ls
 autre_essai.txt  essai.txt
 ```
-```console
+```shell
 pnom@pc:~/test_dir/textes$ cd ..
 
 pnom@pc:~/test_dir$ cp essai textes
