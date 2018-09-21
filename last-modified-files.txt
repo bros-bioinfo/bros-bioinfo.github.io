@@ -6,7 +6,6 @@
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/4_Unix">4_Unix</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/5_Processus">5_Processus</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/8_Shell">8_Shell</a><br>
-<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/English">English</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image">Image</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1">ImageJ_td1</a><br>
 <a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Cours_O2018">Cours_O2018</a><br>
