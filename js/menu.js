@@ -49,8 +49,9 @@ function getTree() {
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"9111352"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"STATS",custom:"9171409",nodes:[
-        {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"9171558",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"9212208",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD1/R_EN_TUTORIAL.pdf",text:"R_EN_TUTORIAL.pdf",custom:"9171435"},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD1/TD1.pdf",text:"TD1.pdf",custom:"9212207"},
         ]},
         {"type":"directory",href:"#fh5co-work",text:"TD2",custom:"9111352",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD2/TD2",text:"TD2",custom:"9111352"},

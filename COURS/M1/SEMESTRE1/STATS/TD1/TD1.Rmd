@@ -1,66 +1,59 @@
 ---
 title: "TD1"
 output: 
-  html_document: 
-    theme: cerulean
+  pdf_document: 
+    toc: yes
 ---
 ## Exercice 1
   1. Create a vector of number
     - The list from 1 to 100 
-  
-```{r}
+    ```{r}
 seq(1,100)
 ```
+<br><br>
     - A number list/sequence for 10, 20, 25, 50, repeated 5 times ( 10 20 25 50 10 20 25 50 10 20 25 50 10 20 25 50 10 20 25 50)
-
-```{r}
+    ```{r}
 rep(c(10,20,25,50),5)
 ```
     - a list from 1 to 100, with a step of 5
-
-```{r}
+    ```{r}
 seq(1,100,5)
 ```
     - Repeat 10 times the number 12
-
-```{r}
+    ```{r}
 rep(12,10)
 ```
   2. A vector with the number 1, 2, 3 with a repetition of each 4 times with in addition a repetition of the sequence of 4 times
     - Put this vector in the object « VEC »
-
-```{r}
+    ```{r}
 VEC = rep(c(1,2,3),each = 4, times = 4)
 VEC
 ```
+    
     - Multiply all the element of VEC by 5
-
-```{r}
+    ```{r}
 VEC = VEC * 5
 VEC
 ```
-    - Calculate the median and the quantile of 75%
 
-```{r}
+    - Calculate the median and the quantile of 75%
+    ```{r}
 quantile(VEC, 0.5) # Median
     quantile(VEC, 0.75)
 ```
 
   3. Create a vector with a serie of number from 1 to 2000 with a step of 10
     - Put it in the object « vec »
-
-```{r}
+    ```{r}
 vec = seq(1,2000,10)
     vec
 ```
     - Extract the 10 th value of vec
-
-```{r}
+    ```{r}
 vec[10]
 ```
     - Display a sub-vector called « vec2 » that corresponds to the values from 2 to 6
-
-```{r}
+    ```{r}
 vec2 = vec[2:6]
     vec2
 ```
@@ -138,7 +131,11 @@ hist(data2$`Longueur maximale (mm)`, xlab = "Longueur", main = "Longueur des M &
 
 ```{r}
 par(mfrow=c(1,2))
-boxplot(data = data2,`Longueur maximale (mm)`~ Couleur , main = "Longueur des M & M's par couleur", xlab= "Couleur", ylab= "Taille")
-boxplot(data = data2,`Poids (g)`~ Couleur , main = "Poid des M & M's par couleur", xlab= "Couleur", ylab= "Poid")
+boxplot(data = data2,`Longueur maximale (mm)`~ Couleur , 
+        main = "Longueur des M & M's par couleur",
+        xlab= "Couleur", ylab= "Taille")
+boxplot(data = data2,`Poids (g)`~ Couleur , 
+        main = "Poid des M & M's par couleur", 
+        xlab= "Couleur", ylab= "Poid")
 ```
 
