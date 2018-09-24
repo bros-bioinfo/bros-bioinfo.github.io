@@ -19,15 +19,15 @@ $$ \text{Centrée réduite} = \frac{x - \bar{x}}{\sigma}$$
 | 38                  | 1.43                          | 0.92                                                  | 0.16 *[27,28]*               | 2.11                          | 2                 |
 
   
- $\chi²_{obs}=\sum\frac{(Freq_{obs}-Freq_{théorique})²}{Freq_{théorique}}$  
- $\chi²_{obs}=\frac{(0-0.21²)}{0.21} + \frac{(1-0.78²)}{0.78} + ... +\frac{(2-2.11²)}{2.11} = 7.46$  <br><br>
- $\chi²_{théorique} = 7.185 \\ ddl = n - 1 - k = 6 - 1 - 2 = 3 \\n = nombre de classes,\\ k = \text{Loi normale} \Rightarrow 2$  
- $\chi²_{obs} < \chi²_{théorique} \Rightarrow \text{Distribution normale}$
+ $\chi ²_{obs}=\sum\frac{(Freq_{obs}-Freq_{théorique})²}{Freq_{théorique}}$  
+ $\chi ²_{obs}=\frac{(0-0.21)²}{0.21} + \frac{(1-0.78²)}{0.78} + ... +\frac{(2-2.11)²}{2.11} = 7.46$  <br><br>
+ $\chi ²_{théorique} = 7.185 \\ ddl = n - 1 - k = 6 - 1 - 2 = 3 \\n = nombre de classes,\\ k = \text{Loi normale} \Rightarrow 2$  
+ $\chi ²_{obs} < \chi ²_{théorique} \Rightarrow \text{Distribution normale}$
     
-- Interval de confiance à 95 %
-$$\bar{X}_{F1}\pm t_{\alpha = 5\%,\hspace{2px}ddl = n -1}\cdot\frac{\sigma}{\sqrt{n}}$$
-$$\bar{X}_{F1}\pm 2.179\cdot\frac{1.4}{\sqrt{13}}$$
-$$[25.17 , 26.83]$$
+- Interval de confiance à 95 %  
+$\bar{X}_{F1}\pm t_{\alpha = 5\%,\hspace{2px}ddl = n -1}\cdot\frac{\sigma}{\sqrt{n}}$  
+$\bar{X}_{F1}\pm 2.179\cdot\frac{1.4}{\sqrt{13}}$
+$[25.17 , 26.83]$
 
 ## Comparaison de moyennes d'échantillons indépendants
 ### Hypothèse
@@ -41,7 +41,7 @@ $$[25.17 , 26.83]$$
     - $F_{obs}<F_{théorique} \Rightarrow \text{Homoscédaticité}$  
 
 - Test t de student pour échantillons indépendants
-    - $S²=\frac{(n_{F1}-1)\cdot\sigma²_{F1}+(n_{F2}-1)\cdot\sigma²_{F2}}{n_{F1} +n_{F2} - 2} = 2.52$
+    - $S ² =\frac{(n_{F1}-1)\cdot\sigma ²_{F1}+(n_{F2}-1)\cdot\sigma ²_{F2}}{n_{F1} +n_{F2} - 2} = 2.52$
     - $t_{obs}=\frac{\bar{X}_{F1}-\bar{X}_{F2}}{\sqrt{\frac{S²}{n_{F1}}+\frac{S²}{n_{F2}}}}=0.98$
     - $ddl=n_{F1}+n_{F2}-2=25\hspace{20px}\alpha = 0.5$ 
     - $t_{théorique} = 2.06\Rightarrow t_{obs}< t_{théorique}\Rightarrow H_0 \text{ acceptée}\Rightarrow\mu_{F1} = \mu_{F2}$ 
