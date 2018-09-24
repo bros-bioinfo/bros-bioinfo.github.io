@@ -9,7 +9,7 @@
         - Test $\chi²$ 
 $$ \text{Centrée réduite} = \frac{x - \bar{x}}{\sigma}$$
 
-| Limites des classes | Valeurs centrées réduites     | Probabilité de la loi normale cumulée $\\P (z < x_1)$ | Proba par interval de classe | **Freq théorique** $P\cdot n$ | **Freq observée** |
+| Limites des classes | Valeurs centrées réduites     | Probabilité de la loi normale cumulée $\\ P (z < x_1)$ | Proba par interval de classe | **Freq théorique** $P\cdot n$ | **Freq observée** |
 | ------------------- | ----------------------------- | :---------------------------------------------------: | :--------------------------: | :---------------------------: | :---------------: |
 | 23                  | $\frac{23 - 26}{1.4} = -2.12$ | $P(z < -2.12) \\= 1 - P(z<2.12) \\= 0.0162$           | 0.0162 *<2.3*                | 0.0162 * 13 = 0.21            | O                 |
 | 24                  | - 1.43                        | 0.076                                                 | 0.06 *[23,24]*               | 0.75                          | 1                 |
@@ -17,6 +17,8 @@ $$ \text{Centrée réduite} = \frac{x - \bar{x}}{\sigma}$$
 | 26                  | 0                             | 0.5                                                   | 0.26 *[25,26]*               | 3.38                          | 0                 |
 | 27                  | 0.71                          | 0.76                                                  | 0.26 *[26,27]*               | 3.38                          | 6                 |
 | 38                  | 1.43                          | 0.92                                                  | 0.16 *[27,28]*               | 2.11                          | 2                 |
+
+  
  $\chi²_{obs}=\sum\frac{(Freq_{obs}-Freq_{théorique})²}{Freq_{théorique}}$  
  $\chi²_{obs}=\frac{(0-0.21²)}{0.21} + \frac{(1-0.78²)}{0.78} + ... +\frac{(2-2.11²)}{2.11} = 7.46$  <br><br>
  $\chi²_{théorique} = 7.185 \\ ddl = n - 1 - k = 6 - 1 - 2 = 3 \\n = nombre de classes,\\ k = \text{Loi normale} \Rightarrow 2$  
@@ -36,11 +38,12 @@ $$[25.17 , 26.83]$$
 - Homoscédasticité -> test de Fischer (*var.test*)  
     - $F_{obs}=\frac{\sigma²_{F2}}{\sigma²_{F1}} = \frac{3.14}{1.85}=1.7$
     - $F_{théorique} = 2.62$
-    - $F_{obs}<F_{théorique} \Rightarrow \text{Homoscédaticité}$
+    - $F_{obs}<F_{théorique} \Rightarrow \text{Homoscédaticité}$  
+
 - Test t de student pour échantillons indépendants
     - $S²=\frac{(n_{F1}-1)\cdot\sigma²_{F1}+(n_{F2}-1)\cdot\sigma²_{F2}}{n_{F1} +n_{F2} - 2} = 2.52$
     - $t_{obs}=\frac{\bar{X}_{F1}-\bar{X}_{F2}}{\sqrt{\frac{S²}{n_{F1}}+\frac{S²}{n_{F2}}}}=0.98$
     - $ddl=n_{F1}+n_{F2}-2=25\hspace{20px}\alpha = 0.5$ 
     - $t_{théorique} = 2.06\Rightarrow t_{obs}< t_{théorique}\Rightarrow H_0 \text{ acceptée}\Rightarrow\mu_{F1} = \mu_{F2}$ 
 
-![Plot](COURS/M1/SEMESTRE1/STATS/TD papier/Rplot.png)
+![Plot](/COURS/M1/SEMESTRE1/STATS/TD_papier/Rplot.png)
