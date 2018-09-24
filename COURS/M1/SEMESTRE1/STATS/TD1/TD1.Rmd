@@ -3,7 +3,6 @@ title: "TD1"
 output: 
   pdf_document: 
     toc: yes
-    keep_tex: TRUE
 ---
 ## Exercice 1
   1. Create a vector of number
