@@ -148,7 +148,7 @@ and algorythm of words (k-tuples):
   - $CCAVALE\\
      CHEVALE$
   - $C-AVALE\\
-     C\hspace{1px}H\hspace{1px} EVALE$ 
+     C \hspace{1px} H \hspace{1px} EVALE$ 
 
 
 # Multiple Sequence Alignements (MSA)
@@ -189,13 +189,13 @@ and algorythm of words (k-tuples):
 - Step 2 : Guide Tree
 
   - Calcul distance :
-    -  1-y/x ; x = number of non gap position ; y = identical position
+    - $1 - \frac{y}{x}$ ; $x$ = number of non gap position ; $y$ = identical position
   - Build the guide tree using :
 
     - UPGMA
     - Neighbor-Joining
 
-  - Use to build the phylogenic tree
+  - Used to build the phylogenic tree
 
 - Step 3 : Aggregating the alignements
 
@@ -207,12 +207,12 @@ and algorythm of words (k-tuples):
   - Three possible cases :
 
     - Seq vs Seq
-    - Seq vs Partial ALignement
+    - Seq vs Partial Alignement
     - .....
 
 - Or aggregating - Computing the scores with Sum of Pairs (SOPs)
 
-- COns : non re evaluation of the alignements during greedy period Iterative Algorithm : MUSCLE
+- Cons : non re evaluation of the alignements during greedy period Iterative Algorithm : MUSCLE
 
 - Optimization of global scores by iterations
 
@@ -226,3 +226,6 @@ Newest version of clustal : Clustal O (Clustal omega) Best :
 
 
 (Work in progress)
+
+
+$$\text{log-odds} (S) = \log _2  \left( \frac{P(S)}{0.25 ^L} \right)$$
