@@ -22,12 +22,17 @@ $$ \text{Centrée réduite} = \frac{x - \bar{x}}{\sigma}$$
  $$\chi ^2_{obs}=\sum\frac{(Freq_{obs}-Freq_{théorique})^2}{Freq_{théorique}}$$  
  $$\chi ^2_{obs}=\frac{(0-0.21)^2}{0.21} + \frac{(1-0.78)^2}{0.78} + ... +\frac{(2-2.11)^2}{2.11} = 7.46 $$  
  <br><br>
+   
  $\chi ^2_{théorique} = 7.185 \\ ddl = n - 1 - k = 6 - 1 - 2 = 3 \\ n = nombre de classes, \\ k = \text{Loi normale} \Rightarrow 2$  
+   
  $\chi ^2_{obs} < \chi ^2_{théorique} \Rightarrow \text{Distribution normale}$
     
 - Interval de confiance à 95 %  
-$\bar{X}_{F1}\pm t_{\alpha = 5\%,\hspace{2px}ddl = n -1}\cdot\frac{\sigma}{\sqrt{n}}$  
-$\bar{X}_{F1}\pm 2.179\cdot\frac{1.4}{\sqrt{13}}$
+
+$\bar{X} _{F1} \pm t_{ \alpha = 5 \%, \hspace{2px} ddl = n -1} \cdot \frac{ \sigma }{ \sqrt{n}}$ 
+
+$\bar{X} _{F1} \pm 2.179 \cdot \frac{1.4}{\sqrt{13}}$  
+
 $[25.17 , 26.83]$
 
 ## Comparaison de moyennes d'échantillons indépendants
@@ -57,23 +62,28 @@ $[25.17 , 26.83]$
 | Port    | 12     | 8      | **20** |
 | Vairao  | 9      | 11     | **20** |
 | TOTAL   | **21** | **19** | **40** |
+
 > Règle de Cochran :chaque case doit avoir au moins 5
 
 Test $\chi^2$ d'homogénéité   
 Table de contingence théorique
+
 | Station | Mc                       | Mg                       | TOTAL  |
 | :-----: | :----------------------: | :----------------------: | :----: |
 | Port    | $\frac{20 \cdot 21}{40}$ | $\frac{20 \cdot 19}{40}$ | **20** |
 | Vairao  | $\frac{20 \cdot 21}{40}$ | $\frac{20 \cdot 19}{40}$ | **20** |
 | TOTAL   | **21**                   | **19**                   | **40** |
 
+  
 | Station | Mc     | Mg     | TOTAL  |
 | :-----: | :----: | :----: | :----: |
 | Port    | 10.5   | 9.5    | **20** |
 | Vairao  | 10.5   | 9.5    | **20** |
 | TOTAL   | **21** | **19** | **40** |
-
+  
 $\chi ^2_{obs}=\sum \frac{(\text{Eff}_{obs} - \text{Eff}_{théorique}) ^2 }{\text{Eff}_{théorique}} = 0.9$  
+
 $\chi^2_{théorique} : ddl = (\text{Nombre de modalité }V_1 - 1)\cdot(\text{Nombre de modalité }V_2 - 1)$  
+
 $\chi^2_{théorique}: ddl = 1, \alpha = 0.05 \Rightarrow \chi^2_{théorique}= 3.841$  
 $0.9<3.841 \Rightarrow H_0 \text{ validée}$
