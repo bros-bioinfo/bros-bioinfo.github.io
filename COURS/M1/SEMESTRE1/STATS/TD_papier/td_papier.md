@@ -46,7 +46,7 @@ $$[25.17 , 26.83]$$
     - $F _{obs} < F _{théorique} \Rightarrow \text{Homoscédaticité}$  
 
 - Test t de student pour échantillons indépendants
-    - $S ^2 =\frac{(n _{F1} - 1) \cdot \sigma ^2 _{F1} + (n _{F2} - 1) \cdot \sigma ^2_{F2}}{n _{F1} +n _{F2} - 2} = 2.52$
+    - $S ^2 =\frac{(n _{F1} - 1) \cdot \sigma ^2 _{F1} + (n _{F2} - 1) \cdot \sigma ^2 _{F2}}{n _{F1} +n _{F2} - 2} = 2.52$
     - $t _{obs} = \frac{ \bar{X} _{F1} - \bar{X} _{F2}}{ \sqrt{ \frac{S ^2}{n _{F1}} + \frac{S ^2}{n _{F2}}}} = 0.98$
     - $ddl = n _{F1} + n _{F2} - 2 = 25 \hspace{20px} \alpha = 0.5$ 
     - $t _{théorique} = 2.06 \Rightarrow t _{obs} < t _{théorique} \Rightarrow H _0 \text{ acceptée} \Rightarrow \mu _{F1} = \mu _{F2}$ 
@@ -79,7 +79,9 @@ Table de contingence théorique
 | Port    | 10.5   | 9.5    | **20** |
 | Vairao  | 10.5   | 9.5    | **20** |
 | TOTAL   | **21** | **19** | **40** |
+
 <br>  
+
 $$\chi ^2 _{obs}= \sum \frac{( \text{Eff} _{obs} - \text{Eff} _{théorique}) ^2 }{ \text{Eff} _{théorique}} = 0.9$$  
 $$\chi ^2 _{théorique} : ddl = ( \text{Nombre de modalité }V_1 - 1) \cdot ( \text{Nombre de modalité } V _2 - 1)$$  
 $$\chi ^2 _{théorique} : ddl = 1, \alpha = 0.05 \Rightarrow \chi^2_{théorique}= 3.841$$  
