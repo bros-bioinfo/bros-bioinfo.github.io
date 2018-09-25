@@ -22,20 +22,16 @@ $$ \text{Centrée réduite} = \frac{x - \bar{x}}{\sigma}$$
  $$\chi ^2_{obs}=\sum\frac{(Freq_{obs}-Freq_{théorique})^2}{Freq_{théorique}}$$  
  $$\chi ^2_{obs}=\frac{(0-0.21)^2}{0.21} + \frac{(1-0.78)^2}{0.78} + ... +\frac{(2-2.11)^2}{2.11} = 7.46 $$  
  <br><br>
-   
  $$\chi ^2_{théorique} = 7.185$$  
  $$ddl = n - 1 - k = 6 - 1 - 2 = 3$$  
- $$n = nombre de classes,$$  
+ $$n = \text{nombre de classes,}$$  
  $$k = \text{Loi normale} \Rightarrow 2$$  
-   
  $$\chi ^2_{obs} < \chi ^2_{théorique} \Rightarrow \text{Distribution normale}$$
     
 - Interval de confiance à 95 %  
 
-$$\bar{X} _{F1} \pm t_{ \alpha = 5 \%, \text{  } ddl = n -1} \cdot \frac{ \sigma }{ \sqrt{n}}$$ 
-
+$$\bar{X} _{F1} \pm t_{ \alpha = 5 \%, \text{  } ddl = n -1} \cdot \frac{ \sigma }{ \sqrt{n}}$$  
 $$\bar{X} _{F1} \pm 2.179 \cdot \frac{1.4}{\sqrt{13}}$$  
-
 $$[25.17 , 26.83]$$
 
 ## Comparaison de moyennes d'échantillons indépendants
@@ -45,9 +41,9 @@ $$[25.17 , 26.83]$$
 ### CA
 - Normalité => test Shapiro-Wilks (*shapiro.test*)
 - Homoscédasticité -> test de Fischer (*var.test*)  
-    - $F_{obs}=\frac{\sigma^2_{F2}}{\sigma^2_{F1}} = \frac{3.14}{1.85}=1.7$
-    - $F_{théorique} = 2.62$
-    - $F_{obs}<F_{théorique} \Rightarrow \text{Homoscédaticité}$  
+    - $F _{obs} = \frac{ \sigma ^2 _{F2}}{ \sigma ^2 _{F1}} = \frac{3.14}{1.85}=1.7$
+    - $F _{théorique} = 2.62$
+    - $F _{obs} < F _{théorique} \Rightarrow \text{Homoscédaticité}$  
 
 - Test t de student pour échantillons indépendants
     - $S ^2 =\frac{(n_{F1}-1)\cdot\sigma ^2_{F1}+(n_{F2}-1)\cdot\sigma ^2_{F2}}{n_{F1} +n_{F2} - 2} = 2.52$
@@ -85,8 +81,6 @@ Table de contingence théorique
 | TOTAL   | **21** | **19** | **40** |
   
 $$\chi ^2 _{obs}= \sum \frac{( \text{Eff} _{obs} - \text{Eff} _{théorique}) ^2 }{ \text{Eff} _{théorique}} = 0.9$$  
-
 $$\chi ^2 _{théorique} : ddl = ( \text{Nombre de modalité }V_1 - 1) \cdot ( \text{Nombre de modalité } V _2 - 1)$$  
-
 $$\chi ^2 _{théorique} : ddl = 1, \alpha = 0.05 \Rightarrow \chi^2_{théorique}= 3.841$$  
 $$0.9<3.841 \Rightarrow H_0 \text{ validée}$$
