@@ -108,6 +108,162 @@ Ce code est stocké dans la variable ?
 - Le sortie de la cmd1 va dans l'entrée du sous shell
 - La sortie de la cmd2 va s'ajouter dans l'entrée du sous shell
 - le sous shell fait sa sortie sur la sortie standard (terminal si non specifié)
+## Processus avant-plan ou arrière plan (détaché)
+> def: Processus en avant-plan est un processus sur lequel le clavier est connecté à STDIN
+
+> Si le clavier n'est pas connecté au STDINalors le processus est dit être en arrière_plan (détaché)
+
+> Par défaut, un seul processus est à un instant t est en avant plan
+
+>Par défaut une commande s'execute en avant-plan  
+
+`commande &` lance la commande en arrière plan
+`Ctrl + z` permet de stopper le processus en avant plan  
+`Ctrl + c` permet de tuer le processus en avant plan  
+`bg` permet de mettre la tâche stoppée en arrière plan  
+`fg` permet de mettre la tâche stoppée en avant plan 
+
+# MÉCANISMES DE SUBSTITUTION
+## Substitution de variables
+```bash
+RAC =/bin
+pnom@pcid:~$ echo $RAC 
+                      # Substitution de var
+             echo /bin
+                      # Execution
+/bin
+```
+```bash
+pnom@pcid:~$ echo $RAC/pwd 
+                          # Substitution de var et donc de chemin
+             echo /bin/pwd
+                          # Execution
+/bin/pwd
+```
+```bash
+pnom@pcid:~$ $RAC/pwd 
+                     # Substitution de var et donc de la commande
+             /bin/pwd
+                     # Execution
+/bin/pwd
+```
+
+## Substitution de commande
+```bash
+$(cmd) # Place la STDOUT de la commande dans la ligne
+echo $(date) : $(who|wc -l) utilisateur sur $(hostname)
+Mard 25 Septembre : 1 utilisateur sur pcid
+```
+## Substitution de chemin
+3 motifs de substitution de chemin:
+- `*` suite eventuellement vide de charactères mais n'intercèpte pas le . quand * est le premier charactère 
+- `?` un seul charactère 
+- `[a-z] ou [A-z] ou [aeiouy]` alphabet regex  
+
+'' inhibe toute susbstitution
+Une chaine placée entre " " est partiellement quoté: seule les susbstituions de chemins sont inhibées  
+
+# Vectorisation des variables
+```bash
+set mot1 mot2 ...
+```
+
+> Stocke mot1 dans \$1 et mot2 dans \$2, l'ensemble est disponible sous `$*` ou sous `$@`
+
+`shift` permet de shifter à gauche toutes les variables (\$3 devient \$2; \$2 devient \$1 et \$1 est supprimé)  
+Le nombre d'élément du vecteur est accessible avec `$#`  
+
+| Variables spéciales | Signification                        |
+| ------------------- | ------------------------------------ |
+| $0                  | Variable courante                    |
+| $?                  | Valeur retour (avec ou sans erreur)  |
+| $$                  | **pid** du processus actuel          |
+| $!                  | **pid** du dernier processus détaché |
+
+```bash
+pnom@pcid:~$ PREFIXE="TMP_"
+pnom@pcid:~$ N1=${PREFIXE}1
+pnom@pcid:~$ N2=${PREFIXE}2
+pnom@pcid:~$ echo $N1
+TMP_1
+pnom@pcid:~$ echo $N2
+TMP_2
+```
+# Les structures de contrôles de shell
+| Commande         | Description                        |
+| ---------------- | ---------------------------------- |
+| `test arg1 arg2` | Test qui renvoie 0 si True dans $? |
+| `[ arg1 arg2 ]`  | Idem                               |
+
+- f Fichier existe ?
+- r is Readable ?
+- w is Writable ?
+- s is Size non nulle
+- d is Directory 
+
+```bash
+if expr
+then 
+exprs
+(else) (elif)
+exprs
+fi
+```
+| Commande           | Description                           |
+| ------------------ | ------------------------------------- |
+| `expr 2 + 3`       | calculatrice arithmétique sur entiers |
+| `N=$(expr $N + 1)` | incrémente $N                         |
+
+| Commande | Description      |
+| -------- | ---------------- |
+| `-lt`    | lower than       |
+| `-gt`    | greater than     |
+| `-eq`    | equal            |
+| `-ne`    | not equal        |
+| `-ge`    | greater or equal |
+| `-le`    | lower or equal   |
+  
+```bash
+while exp
+do
+exps
+done
+```
+   
+```bash
+for NOM_VARIABLE in liste_element
+do
+exps
+done
+```
+Exemple:
+```bash
+for i in .bash*
+do
+echo $i
+done
+```
+## Charactère d'échappement
+```bash
+exit n # Termine le processus, n=0 si sortie correcte
+break n # Sort de n itérations
+eval cmd # Relance un nouveau cycle de substitution
+```
+## Definition fonction
+```bash
+nom_fonction ()
+{
+exps
+}
+```
+Exemple:
+```bash
+cdc ()
+{
+cd $1
+clear
+}
+```
 # 1- Alias
 
 ```bash
