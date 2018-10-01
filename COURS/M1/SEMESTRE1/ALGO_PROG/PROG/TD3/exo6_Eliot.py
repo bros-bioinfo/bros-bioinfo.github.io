@@ -1,7 +1,7 @@
 import time
 
-n1 = input("Nombre 1 = ")
-n2 = input("Nombre 2 = ")
+n1 = int(input("Nombre 1 = "))
+n2 = int(input("Nombre 2 = "))
 t_start = time.time()
 x = n1
 while x <= n2:
@@ -13,7 +13,7 @@ while x <= n2:
     x += 1
 
 print('===================================================')
-t1 = time.time()- t_start
+t1 = time.time() - t_start
 t_start = time.time()
 x = n1
 for x in range(x, n2 + 1):
@@ -22,15 +22,15 @@ for x in range(x, n2 + 1):
         print("{} x {} = {}".format(x, i, x*i))
 
 print('===================================================')
-t2 = time.time()- t_start
+t2 = time.time() - t_start
 t_start = time.time()
 x = n1
 
 print('\n'.join(["\nTable de {}\n\n".format(x) + '\n'.join(["{} x {} = {}".format(x, i, x*i)
                                                             for i in range(1, 11)]) for x in range(x, n2 + 1)]))
 print('===================================================')
-t3 = time.time()- t_start
-t_start = time.time()                                                          
+t3 = time.time() - t_start
+t_start = time.time()
 
 print(t1)
 print(t2)
