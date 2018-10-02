@@ -926,8 +926,7 @@ D _{8-dir} = \text{Nombres de pixels d'une ligne en 8-dir} \\
 D _{NSEW} = \text{Nombres de pixels d'une ligne en NSEW}
 $$
 
-![Exemple anal to num](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/M1/SEMESTRE1/IMAGE_NUM/lines.png)
-
+![Exemple anal to num](COURS/M1/SEMESTRE1/IMAGE_NUM/lines.png)
 # Sources
 + Wikipedia contributors, "Digital image processing," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Digital_image_processing&oldid=803425387 (accessed October 5, 2017).
 + Wikipedia contributors, "Noise reduction," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Noise_reduction&oldid=798926923 (accessed October 5, 2017).
