@@ -99,6 +99,8 @@
 		- [Distance transform](#distance-transform)
 			- [Euclidean distance](#euclidean-distance)
 		- [Watershed](#watershed)
+- [Measurment](#measurment)
+	- [Length](#length)
 - [Sources](#sources)
 
 ## 1\. DIGITAL IMAGE
@@ -909,6 +911,22 @@ In the study of image processing, a **watershed** is a transformation defined on
 
 There are different technical definitions of a watershed. In graphs, watershed lines may be defined on the **nodes, on the edges, or hybrid lines** on both nodes and edges. Watersheds may also be defined in the continuous domain. There are also many different algorithms to compute watersheds. Watershed algorithm is used in image processing primarily for segmentation purposes.
 
+# Measurment
+
+## Length
+
+The length of a line in **ImageJ** can be quite hard to get, in fact, because o the numeristation of anaogical world, a diagonal or a curve are described discretly by two differents ways:  
+
+- **NSEW** : all connected so  you have only four directions North South East West
+- **8-dir** : not connected because there is 8 directions 
+
+$$
+D _{Real} = D _{8-dir} / 0.9 = D _{NSEW} / 1.273 \\
+D _{8-dir} = \text{Nombres de pixels d'une ligne en 8-dir} \\
+D _{NSEW} = \text{Nombres de pixels d'une ligne en NSEW}
+$$
+
+![Exemple anal to num](https://github.com/bros-bioinfo/bros-bioinfo.github.io/blob/master/COURS/M1/SEMESTRE1/IMAGE_NUM/lines.png)
 
 # Sources
 + Wikipedia contributors, "Digital image processing," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Digital_image_processing&oldid=803425387 (accessed October 5, 2017).

@@ -1,2 +1,4 @@
 <!DOCTYPE html> <html> <head></head> <body>
+<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image">Image</a><br>
+<a href="https://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript">Javascript</a><br>
 </body></html>
