@@ -3,18 +3,19 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Javascript](#javascript)
-	- [Introduction](#introduction)
-		- [JavaScript (or JS) Versions](#javascript-or-js-versions)
-		- [Features](#features)
-	- [JS: The Basics](#js-the-basics)
-		- [Comments](#comments)
-		- [Semicolon](#semicolon)
-		- [Variables](#variables)
-			- [Number](#number)
-			- [String](#string)
-			- [Array](#array)
-			- [Array of Arrays](#array-of-arrays)
-			- [Object in JS](#object-in-js)
+  - [Introduction](#introduction)
+    - [JavaScript (or JS) Versions](#javascript-or-js-versions)
+    - [Features](#features)
+  - [JS: The Basics](#js-the-basics)
+    - [Comments](#comments)
+    - [Semicolon](#semicolon)
+    - [Variables](#variables)
+      - [Number](#number)
+      - [String](#string)
+      - [Array](#array)
+      - [Array of Arrays](#array-of-arrays)
+      - [Object in JS](#object-in-js)
+    - [Loop](#loop)
 
 <!-- /TOC -->
 
@@ -30,6 +31,7 @@
 - Not all the specs are implemented (browser checking required)
 
 ### Features
+
 - **Imperative** and structured programming (if statement, loops, etc.)
 - **Object-oriented** programming language based on **prototype** for inheritance (no class).
 
@@ -44,19 +46,20 @@
 
 
 In a HTML page, the code is written within a \<script> element. It may be located:
-+ within the \<head> element
+
+- within the \<head> element
   ```html
   <script type="text/javascript">
   console.log("Hello World");
   </script>
   ```
-+ By calling an external file in html:
+- By calling an external file in html:
   ```html
   <script type="text/javascript" src="myScript.js"></script>
   ```
-+ Everywhere in the \<body> element. **Best place**: At the end of \<body> when the
+- Everywhere in the \<body> element. **Best place**: At the end of \<body> when the
   page is fully loaded.
-+ **Deprecated!!** Directly in HTML element `<p
+ **Deprecated!!** Directly in HTML element `<p
   onclick="alert('Hello');">Click on me </p>`
 
 
