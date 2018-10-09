@@ -927,6 +927,19 @@ D _{NSEW} = \text{Nombres de pixels d'une ligne en NSEW}
 $$
 
 ![Exemple anal to num](COURS/M1/SEMESTRE1/IMAGE_NUM/lines.png)
+Caracteristics of complex wormly object:
+- Length 
+	1. Skeletonize
+	2. Get number of pixel (Hist ou AREA) 
+- Width 
+	3. Euclidian Distance Map
+	4. Width = $Hist_{max\ pixel}$ x 2 
+
+Number and diameter of many circles:
+- Ultimate Points
+- Histogram of result 
+	- Number of points = Number of Centers of circle
+	- Diameter = Value of center pixels x 2
 # Sources
 + Wikipedia contributors, "Digital image processing," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Digital_image_processing&oldid=803425387 (accessed October 5, 2017).
 + Wikipedia contributors, "Noise reduction," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=Noise_reduction&oldid=798926923 (accessed October 5, 2017).

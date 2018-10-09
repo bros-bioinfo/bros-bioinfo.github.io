@@ -161,3 +161,28 @@ echo $5
 ```
 
 Le passage d'argument à 1 script-shell
+
+```bash
+#!/bin/bash
+for args in $* # Print all args given
+do
+    echo $args
+done
+```
+Enregistrer en foo.**sh**  
+Les arguments placer à doite du script shell lors de son application sont disponibles sous forme de vecteur => 
+- $1 = Premier argument
+- $2 = Deuxième argument
+- $# = Nombre d'arguments
+
+Ne **JAMAIS** mettre de . dans la variable $PATH
+
+Commandes utiles:
+- sed
+- gawk
+
+Comment se connecter au CREMI depuis chez nous:
+```bash
+ssh -Y votre_login@borderhost.emi.u-bordeaux.fr
+ssh -Y votre_login@machine_CREMI.emi.u-bordeaux.fr
+```

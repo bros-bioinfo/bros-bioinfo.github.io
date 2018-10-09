@@ -17,14 +17,14 @@ function getTree() {
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/Intro_programmation",text:"Intro_programmation",custom:"9272112"},
         ]},
         {"type":"directory",href:"#fh5co-work",text:"USI",custom:"9272112",nodes:[
-          {"type":"directory",href:"#fh5co-work",text:"TD",custom:"9272112",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"TD",custom:"109 1418",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/1_Communications",text:"1_Communications",custom:"9272112"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"9272112"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/3_Emacs",text:"3_Emacs",custom:"9272112"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/4_Unix",text:"4_Unix",custom:"9272112"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/5_Processus",text:"5_Processus",custom:"9272112"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/7_Utilitaires",text:"7_Utilitaires",custom:"9272112"},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/8_Shell",text:"8_Shell",custom:"9272112"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/8_Shell",text:"8_Shell",custom:"102 1736"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/shell_seb",text:"shell_seb",custom:"9272112"},
           ]},
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/Utilisation_systeme_info",text:"Utilisation_systeme_info",custom:"9272112"},
@@ -39,7 +39,7 @@ function getTree() {
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"9272112"},
           ]},
         ]},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image",text:"Image",custom:"102 1026"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image",text:"Image",custom:"109  906"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript",text:"Javascript",custom:"102  849"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"OMIC_BIOINFO",custom:"9272112",nodes:[
