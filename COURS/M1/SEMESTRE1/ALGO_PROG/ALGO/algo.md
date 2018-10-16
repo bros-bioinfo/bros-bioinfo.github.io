@@ -2,16 +2,16 @@
 
 ## I. Rappel
 
-Un ordinateur est unsystème constitué d'une unité de calcule et d'une mémoire. La mémoire contient un ensemble de données coder par une suite de 0 et de 1.
+Un ordinateur est un système constitué d'une unité de calcul et d'une mémoire. La mémoire contient un ensemble de données codées par une suite de 0 et de 1.
 L'**unité de calcul** (UC) est la partie de l'ordinateur qui permet de lire, écrire et modifier la mémoire.
 
-Il existe différentes façon de réaliser un ordinateur. Par exemple la machine de Turing (que nous ne présenterons pas dans cette UE) est un model théorique de l'ordinateur **(voir sur internet lol)**.
+Il existe différentes façon de réaliser un ordinateur. Par exemple la machine de Turing (que nous ne présenterons pas dans cette UE) est un model théorique de l'ordinateur *(voir sur internet lol)*.
 
-Unb modèle théorique d'un ordinateur est une réprésentation abstraite d'un ordinateur à l'aide du language mathématique. Dans la pratique il n'est pas utilisé pour écrire des programmes. Il est utilisé pour démontrer qu'un problème peut être résolu par un ordinateur. Dans les ordinateurs modernes, l'UC et la mémoire sont situés dans plusieurs endroits différents. L'ordinateur est aussi accompagné de nombreux périphériques: clavier, enceintes, etc...
+Un modèle théorique d'un ordinateur est une réprésentation abstraite d'un ordinateur à l'aide du language mathématique. Dans la pratique il n'est pas utilisé pour écrire des programmes. Il est utilisé pour démontrer qu'un problème peut être résolu par un ordinateur. Dans les ordinateurs modernes, l'UC et la mémoire sont situés dans plusieurs endroits différents. L'ordinateur est aussi accompagné de nombreux périphériques: clavier, enceintes, etc...
 
 Voici un exemple d'ordinateur:
 
-*Need dessin d'une Ame charitable*
+![Need dessin d'une Ame charitable](http://3.bp.blogspot.com/_VDmxk13I3SA/TVGlojyd9GI/AAAAAAAAAdE/kVdhUg-WwR8/s1600/Computer.jpg)
 
 [lololololol](http://www.st.com/content/ccc/resource/technical/document/datasheet/55/53/3e/86/29/61/41/d9/DM00039193.pdf/files/DM00039193.pdf/jcr:content/translations/en.DM00039193.pdf
 )
@@ -60,10 +60,10 @@ def depiler(pile):
 ### Les files (FIFO = First in first OUT)
 
 Les files sont des structures de données contenant des elements qui peuvent apparaître en plusieurs exemplaires et qui possèdent 2 opération:
-- enfiler (F,e) qui ajoute un élemetn dans la file
+- enfiler (F,e) qui ajoute un élement dans la file
 - defiler (F) qui enlève un élement de la file
 
-Un élement **e** est ajouté avant l'élément **b** alors l'élément **e** sera enlevé avant l'élément **b**.
+Un élément **e** est ajouté avant l'élément **b** alors l'élément **e** sera enlevé avant l'élément **b**.
 
 ## III. La récursivité
 
@@ -81,12 +81,12 @@ L'execution du programme continue alors à la ligne courante d'execution de la f
 
 Par exemple, lorsque l'on execute le programme suivant :
 
-```py
+```python
 def g(a):
-    print "g("+str(a)+")"
+    print("g("+str(a)+")")
     return 1000
 def h(a):
-  print "h("+str(a)+")"
+  print("h("+str(a)+")")
   return 2000
 
 def f(a):
@@ -112,7 +112,7 @@ La pile evolue suivant le schema suivant : (dans cette figure nous avons décid�
 
 Sous python, il est possible d'inspecter la pile avec le module **inspect**. Voici un exemple :
 
-```py
+```python
 import inspect
 def f(a,b):
   g(a+1,b+1)
@@ -120,10 +120,10 @@ def g(c,d):
   print("La pile est :")
   print(inspect.stack())
   print("")
-  print("les donnees de la fonction sont :")
+  print("les données de la fonction sont :")
   print(inspect.stack()[0])
   print("")
-  print("les variables de la fonction situees en haut de la pile sont :")
+  print("les variables de la fonction situées en haut de la pile sont :")
   print(inspect.getargvalues(inspect.stack()[0][0]))
   f(1,2)
 ```
@@ -143,7 +143,7 @@ On dit qu'une fonction f est recursive ,si, durant l'execution de f, la fonction
 
 Voici un exemple de programme recursif qui permet de calculer n!=1*2*3*....\*n :
 
-```py
+```python
 def factoriel(n):
   if n == 0:
     return 1
