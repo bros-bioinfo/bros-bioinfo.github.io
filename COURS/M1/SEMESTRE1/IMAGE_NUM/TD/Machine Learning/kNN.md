@@ -1,3 +1,4 @@
+```js
 /*
 * Author: Eliot Ragueneau
 * Aim : Count different shapes frmo an image full of squares, circles and triangles
@@ -76,3 +77,4 @@ let model = kNN_fit(train_feature, train_target);
 let predicted = kNN_predict(test_feature, model);
 
 Console.log(TML.accuracy(test_target, predicted));
+```

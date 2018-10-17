@@ -38,6 +38,9 @@ function getTree() {
       ]},
       {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"102 1014",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"TD",custom:"10171134",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"Machine Learning",custom:"10171138",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Machine Learning/kNN",text:"kNN",custom:"10171138"},
+          ]},
           {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"9272112",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"9272112"},
           ]},
