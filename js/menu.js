@@ -4,7 +4,10 @@ function getTree() {
   {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
     {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"9272112",nodes:[
       {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"9272112",nodes:[
-        {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"10161500",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"10162306",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"Eliot",custom:"10161747",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/Eliot/Algo_Eliot",text:"Algo_Eliot",custom:"10161530"},
+          ]},
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/algo",text:"algo",custom:"10161500"},
         ]},
         {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"102  758",nodes:[
@@ -34,7 +37,7 @@ function getTree() {
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/English",text:"English",custom:"9272112"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"102 1014",nodes:[
-        {"type":"directory",href:"#fh5co-work",text:"TD",custom:"9272112",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"TD",custom:"10171134",nodes:[
           {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"9272112",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"9272112"},
           ]},

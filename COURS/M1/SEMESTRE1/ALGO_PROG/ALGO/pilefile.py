@@ -1,3 +1,6 @@
+from collections import deque
+
+
 def creer_pile():
     return []
 
@@ -54,16 +57,22 @@ def supprimer_element(T, id):
 
 
 def creer_file():
-    return []
+    return deque()
 
 
 def enfiler(file, element):
     file.append(element)
 
 
+def defiler(file: deque):
+    return file.popleft()
+
+
 def renverser_pile(P):
     # depiler P et peupler P2 et P3
-    for i in range(taille(P)):
+    P2 = []
+    P3 = []
+    for i in range(len(P)):
         a = depiler(P)
         empiler(P2, a)
         empiler(P3, a)
@@ -71,7 +80,7 @@ def renverser_pile(P):
     print(P2)
 
     # reconstruction de P
-    for j in range(taille(P3)):
+    for j in range(len(P3)):
         b = depiler(P3)
         empiler(P, b)
 
