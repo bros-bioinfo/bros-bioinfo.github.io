@@ -1,3 +1,5 @@
+# K-Nearest Neighbors algorithm
+
 ```js
 /*
 * Author: Eliot Ragueneau
@@ -66,8 +68,10 @@ let feature = TDS.filter(TDS.byFeatures(['Circ.', 'Round']))(data);
 
 // Partitioning between training and test dataset
 let len = Math.floor(data.length * 0.6);
+
 let train_feature = feature.slice(0, len);
 let train_target = target.slice(0, len);
+
 let test_feature = feature.slice(len + 1, data.length);
 let test_target = target.slice(len + 1, data.length);
 
