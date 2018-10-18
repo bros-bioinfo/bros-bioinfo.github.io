@@ -1,5 +1,5 @@
 import turtle
-from turtle import*
+from turtle import *
 
 def flocon(i,p):
     if p==0:
