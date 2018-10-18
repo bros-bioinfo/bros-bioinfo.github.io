@@ -1,7 +1,7 @@
 ```js
 /*
 * Author: Eliot Ragueneau
-* Aim : Count different shapes frmo an image full of squares, circles and triangles
+* Aim : Count different shapes from an image full of squares, circles and triangles
 * Circle = 78       <- 0.87 - 1.00
 * Squares = 87      <- 0.69 - 0.86
 * Triangles = 80    <- 0.00 - 0.68
@@ -62,11 +62,10 @@ let target = targetFunc(data).Vertices;
 
 
 // Clean data
-
 let feature = TDS.filter(TDS.byFeatures(['Circ.', 'Round']))(data);
 
+// Partitioning between training and test dataset
 let len = Math.floor(data.length * 0.6);
-
 let train_feature = feature.slice(0, len);
 let train_target = target.slice(0, len);
 let test_feature = feature.slice(len + 1, data.length);
@@ -76,5 +75,6 @@ let test_target = target.slice(len + 1, data.length);
 let model = kNN_fit(train_feature, train_target);
 let predicted = kNN_predict(test_feature, model);
 
+// Show accuracy
 Console.log(TML.accuracy(test_target, predicted));
 ```
