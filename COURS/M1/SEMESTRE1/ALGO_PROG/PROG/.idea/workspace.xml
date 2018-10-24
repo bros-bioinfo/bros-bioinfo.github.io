@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2745886c-a300-40ef-bc70-ffbdff34736a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ALGO/composition.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/composition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ALGO/turtle2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/turtle2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eliot/Molfunc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eliot/Visual_Molecule.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../IMAGE_NUM/TD/Machine Learning/digit NN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py" beforeDir="false" afterPath="$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,49 +21,58 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="" value="1" />
-          <entry key="Python Console" value="30" />
-          <entry key="dummy" value="6" />
+          <entry key="Python Console" value="133" />
+          <entry key="cure" value="57" />
+          <entry key="dummy" value="9" />
           <entry key="fasta" value="122" />
           <entry key="md" value="4132" />
-          <entry key="py" value="10790" />
+          <entry key="py" value="14288" />
           <entry key="txt" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="4125" />
-          <entry key="PLAIN_TEXT" value="161" />
-          <entry key="Python" value="10828" />
+          <entry key="PLAIN_TEXT" value="164" />
+          <entry key="Python" value="14486" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="3" />
-          <entry key="project.open.time.8" value="3" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fasta" value="1" />
+          <entry key="gif" value="1" />
           <entry key="iris" value="1" />
           <entry key="md" value="4" />
-          <entry key="py" value="35" />
-          <entry key="txt" value="4" />
+          <entry key="py" value="57" />
+          <entry key="pyi" value="1" />
+          <entry key="sequence_pizza" value="1" />
+          <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="1" />
           <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="35" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Python" value="57" />
+          <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -71,89 +83,82 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/seq.txt">
+        <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Condorcet/condorcet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1635">
-              <caret line="109" selection-end-line="232" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cure.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/exe_2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
+            <state relative-caret-position="530">
+              <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
               <folding>
-                <marker date="1539884243954" expanded="true" signature="413:420" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="464:471" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="1340:1341" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="1487:1494" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="1717:2655" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="2025:2655" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="2350:2655" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="3317:5586" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="5630:9023" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="6649:9023" ph="..." />
-                <marker date="1539884243954" expanded="true" signature="8390:9023" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/recursive.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
-              <folding>
-                <element signature="e#428#448#0" expanded="true" />
-                <marker date="1539900109925" expanded="true" signature="157:158" ph="..." />
-                <marker date="1539900109925" expanded="true" signature="192:197" ph="..." />
-                <marker date="1539900109925" expanded="true" signature="318:319" ph="..." />
-                <marker date="1539900109925" expanded="true" signature="692:693" ph="..." />
-                <marker date="1539900109925" expanded="true" signature="910:911" ph="..." />
-                <marker date="1539900109925" expanded="true" signature="910:1024" ph="..." />
-                <marker date="1539900109925" expanded="true" signature="910:1026" ph="..." />
-                <marker date="1539900109925" expanded="true" signature="1085:1352" ph="..." />
+                <marker date="1540389392122" expanded="true" signature="64:70" ph="..." />
+                <marker date="1540389392122" expanded="true" signature="64:189" ph="..." />
+                <marker date="1540389392122" expanded="true" signature="203:208" ph="..." />
+                <marker date="1540389392122" expanded="true" signature="544:731" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../ALGO/composition.py">
+        <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cure.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ALGO/turtle2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="105">
+              <caret line="7" column="47" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="47" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#19#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cured.txt">
+        <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cured_sequence_pizza.txt">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/sequence_pizza">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Eliot/Molfunc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1380">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <marker date="1540201580205" expanded="true" signature="338:339" ph="..." />
+                <marker date="1540201580205" expanded="true" signature="1121:1247" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Eliot/Visual_Molecule.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+              <folding>
+                <marker date="1540202472960" expanded="true" signature="35:40" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="45" column="25" selection-start-line="25" selection-start-column="8" selection-end-line="45" selection-end-column="25" />
+              <folding>
+                <marker date="1540197508222" expanded="true" signature="413:520" ph="..." />
+                <marker date="1540197508222" expanded="true" signature="515:520" ph="..." />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -194,10 +199,12 @@
       <find>__for</find>
       <find>demo</find>
       <find>/</find>
+      <find>stats</find>
     </findStrings>
     <replaceStrings>
       <replace>p</replace>
       <replace>//</replace>
+      <replace>self</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -216,7 +223,6 @@
         <option value="$PROJECT_DIR$/../ALGO/inspect_pile.py" />
         <option value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Machine learning/Hello_world.py" />
         <option value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Machine learning/tuto_2.py" />
-        <option value="$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py" />
         <option value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Machine learning/pipeline.py" />
         <option value="$PROJECT_DIR$/../../ANGLAIS/Oral_English2.md" />
         <option value="$USER_HOME$/seq.txt" />
@@ -226,16 +232,23 @@
         <option value="$PROJECT_DIR$/../ALGO/dico.py" />
         <option value="$PROJECT_DIR$/../ALGO/Eliot/exe_2.py" />
         <option value="$PROJECT_DIR$/../ALGO/turtle2.py" />
-        <option value="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" />
         <option value="$PROJECT_DIR$/../ALGO/composition.py" />
+        <option value="$PROJECT_DIR$/../../IMAGE_NUM/TD/Machine Learning/digit NN.py" />
+        <option value="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" />
+        <option value="$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py" />
+        <option value="$PROJECT_DIR$/Eliot/Molfunc.py" />
+        <option value="$PROJECT_DIR$/Eliot/Visual_Molecule.py" />
+        <option value="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" />
+        <option value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Condorcet/condorcet.py" />
+        <option value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cure" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
+    <option name="x" value="993" />
     <option name="y" value="27" />
-    <option name="width" value="917" />
-    <option name="height" value="1051" />
+    <option name="width" value="927" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -243,6 +256,26 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Travail/Dublin/ProgrammingForBiologist" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Travail/Dublin/ProgrammingForBiologist" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="DNA manipulations" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,58 +287,6 @@
               <item name="PROG" type="b2602c69:ProjectViewProjectNode" />
               <item name="PROG" type="462c0819:PsiDirectoryNode" />
               <item name="TD3" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Eliot" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="OMIC_BIOINFO" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/Travail/Dublin/ProgrammingForBiologist" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Documents/Travail/Dublin/ProgrammingForBiologist" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="DNA manipulations" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -329,8 +310,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.composition">
-    <configuration name="composition" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.cure">
+    <configuration name="Molfunc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROG" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -338,11 +319,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ALGO" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Eliot" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/composition.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Eliot/Molfunc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -351,7 +332,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="exe_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Pokedex_Eliot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROG" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -359,12 +340,54 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ALGO/Eliot" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TUTORAT" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/Eliot/exe_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="condorcet" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PROG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Condorcet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Condorcet/condorcet.py" />
+      <option name="PARAMETERS" value="sequence_pizza cured_seq_pizza.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cure" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PROG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cure.py" />
+      <option name="PARAMETERS" value="sequence_pizza cured_seq_pizza.txt" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -393,62 +416,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="turtle1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PROG" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ALGO" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/turtle1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="turtle2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PROG" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ALGO" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/turtle2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.exe_2" />
-      <item itemvalue="Python.turtle2" />
       <item itemvalue="Python.recursive" />
-      <item itemvalue="Python.turtle1" />
-      <item itemvalue="Python.composition" />
+      <item itemvalue="Python.Pokedex_Eliot" />
+      <item itemvalue="Python.Molfunc" />
+      <item itemvalue="Python.condorcet" />
+      <item itemvalue="Python.cure" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.composition" />
+        <item itemvalue="Python.cure" />
+        <item itemvalue="Python.condorcet" />
+        <item itemvalue="Python.Molfunc" />
+        <item itemvalue="Python.Pokedex_Eliot" />
         <item itemvalue="Python.recursive" />
-        <item itemvalue="Python.turtle2" />
-        <item itemvalue="Python.turtle1" />
-        <item itemvalue="Python.exe_2" />
       </list>
     </recent_temporary>
   </component>
@@ -471,10 +452,10 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" sideWeight="0.5016129" side_tool="true" weight="0.27614832" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.1438849" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.15218595" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -502,25 +483,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../ALGO/composition.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../ALGO/composition.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TUTORAT/pokedex/pokedex.py">
@@ -576,13 +538,6 @@
     <entry file="file://$PROJECT_DIR$/TD2/td2pierre.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/TD3/exo6_Eliot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TUTORAT/pokedex/pokedexmenutest.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -610,17 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
-          <folding>
-            <marker date="1539757383995" expanded="true" signature="415:522" ph="..." />
-            <marker date="1539757383995" expanded="true" signature="517:522" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Machine learning/Hello_world.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -632,16 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="5" column="18" selection-start-line="4" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/seq.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="109" selection-end-line="232" />
         </state>
       </provider>
     </entry>
@@ -649,6 +583,165 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/tableautrie.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/dico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/turtle1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/seq.txt" />
+    <entry file="file://$PROJECT_DIR$/../ALGO/turtle2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cured.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../IMAGE_NUM/TD/Machine Learning/digit NN.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TD3/exo6_Eliot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/composition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/turtle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="1615" column="8" selection-start-line="1615" selection-start-column="8" selection-end-line="1615" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TD4/molfunc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TD4/mol.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUTORAT/pokedex/pokedex.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="1634" column="4" selection-start-line="1634" selection-start-column="4" selection-end-line="1634" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eliot/mols.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/exe_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5235">
+          <caret line="349" selection-start-line="349" selection-end-line="349" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/recursive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="831" selection-start-line="831" selection-end-line="831" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="344" column="8" selection-start-line="344" selection-start-column="8" selection-end-line="344" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/833766329/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="299" column="4" selection-start-line="299" selection-start-column="4" selection-end-line="299" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/TD3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <marker date="1540306753455" expanded="true" signature="27:87" ph="..." />
+            <marker date="1540306753455" expanded="true" signature="100:162" ph="..." />
+            <marker date="1540306753455" expanded="true" signature="173:231" ph="..." />
+            <marker date="1540306753455" expanded="true" signature="249:331" ph="..." />
+            <marker date="1540306753455" expanded="true" signature="347:382" ph="..." />
+            <marker date="1540306753455" expanded="true" signature="347:384" ph="..." />
+            <marker date="1540306753455" expanded="true" signature="349:381" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TD4/molecule_eliot.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eliot/Molfunc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <marker date="1540201580205" expanded="true" signature="338:339" ph="..." />
+            <marker date="1540201580205" expanded="true" signature="1121:1247" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eliot/Visual_Molecule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+          <folding>
+            <marker date="1540202472960" expanded="true" signature="35:40" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="25" selection-start-line="25" selection-start-column="8" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <marker date="1540197508222" expanded="true" signature="413:520" ph="..." />
+            <marker date="1540197508222" expanded="true" signature="515:520" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -669,95 +762,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/turtle.py">
+    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Condorcet/condorcet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="998" column="28" selection-start-line="998" selection-start-column="24" selection-end-line="998" selection-end-column="28" />
+        <state relative-caret-position="530">
+          <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding>
+            <marker date="1540389392122" expanded="true" signature="64:70" ph="..." />
+            <marker date="1540389392122" expanded="true" signature="64:189" ph="..." />
+            <marker date="1540389392122" expanded="true" signature="203:208" ph="..." />
+            <marker date="1540389392122" expanded="true" signature="544:731" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cured_sequence_pizza.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/sequence_pizza">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cure.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cured.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/tableautrie.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/dico.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/exe_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="349" lean-forward="true" selection-start-line="349" selection-end-line="349" />
+        <state relative-caret-position="105">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="47" />
           <folding>
-            <marker date="1539884243954" expanded="true" signature="413:420" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="464:471" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="1340:1341" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="1487:1494" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="1717:2655" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="2025:2655" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="2350:2655" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="3317:5586" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="5630:9023" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="6649:9023" ph="..." />
-            <marker date="1539884243954" expanded="true" signature="8390:9023" ph="..." />
+            <element signature="e#19#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/turtle1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/turtle2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/recursive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
-          <folding>
-            <element signature="e#428#448#0" expanded="true" />
-            <marker date="1539900109925" expanded="true" signature="157:158" ph="..." />
-            <marker date="1539900109925" expanded="true" signature="192:197" ph="..." />
-            <marker date="1539900109925" expanded="true" signature="318:319" ph="..." />
-            <marker date="1539900109925" expanded="true" signature="692:693" ph="..." />
-            <marker date="1539900109925" expanded="true" signature="910:911" ph="..." />
-            <marker date="1539900109925" expanded="true" signature="910:1024" ph="..." />
-            <marker date="1539900109925" expanded="true" signature="910:1026" ph="..." />
-            <marker date="1539900109925" expanded="true" signature="1085:1352" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/composition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>

@@ -28,27 +28,30 @@ def binomial(n, k):
 from turtle import *
 import turtle
 
-turtle.speed(0)
+tur = turtle.Turtle()
+tur.speed(0)
+
+
 
 
 def droite(n):
     if n == 3:
-        forward(3)
+        tur.forward(3)
     else:
         droite(n // 3)
-        left(60)
+        tur.left(60)
         droite(n // 3)
-        right(120)
+        tur.right(120)
         droite(n // 3)
-        left(60)
+        tur.left(60)
         droite(n // 3)
 
 
 def triangle(n):
     droite(n)
-    right(120)
+    tur.right(120)
     droite(n)
-    right(120)
+    tur.right(120)
     droite(n)
     done()
 
@@ -60,18 +63,19 @@ import math
 def dragon(n, alter):
     print(n)
     if n <= 10:
-        forward(10)
+        tur.forward(10)
     else:
         dragon(math.sqrt((n ** 2) / 2), 1)
-        right(90 * alter)
+        tur.right(90 * alter)
         dragon(math.sqrt((n ** 2) / 2), -1)
 
 
-# dragon(10 * 2 ** 5, 1)
-# done()
+dragon(10 * 2 ** 5, 1)
+done()
 
 def composition(n: int):
-    compos = [[1 for i in range(n)]]
+    source = [1 for i in range(n)]
+    compos = [source]
     for i in compos:
         for j in range(len(i) - 1):
             new = i.copy()
@@ -82,7 +86,7 @@ def composition(n: int):
     return compos
 
 
-print(composition(4))
+# print(composition(4))
 
 
 def composition_longue(n: int):
@@ -96,3 +100,22 @@ def composition_longue(n: int):
             if new not in compos:
                 compos.append(new)
     return compos
+
+
+def permutation(ls: list):
+    liste = [[x] for x in ls]
+    for i in range(len(ls) - 1):
+        new_list = []
+        for p in liste:
+            cls = ls.copy()
+            for i in p:
+                cls.remove(i)
+            for x in cls:
+                new_list.append(p + [x])
+        liste = new_list.copy()
+    return liste
+
+
+p = permutation(['a', 'b', 'c', 'd', 'e', 'f'])
+print(len(p))
+print(factoriel(6))

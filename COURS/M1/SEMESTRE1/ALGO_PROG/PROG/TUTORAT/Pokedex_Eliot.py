@@ -18,12 +18,13 @@ class Pokemon:
 
 
 class Pokedex(list):
-    def close_gui(self, gui: Toplevel, pokenom : Entry, poketype : Entry, pokepv: Entry):
+    def close_gui(self, gui: Toplevel, pokenom: Entry, poketype: Entry, pokepv: Entry):
         self.append(Pokemon(pokenom.get(), poketype.get(), int(pokepv.get())))
         gui.destroy()
 
     def add(self):
         gui_append = Toplevel(menu)
+        gui_append.title('Ajout de pokémon')
 
         Label(gui_append, text='Nom').pack()
         poke_nom = Entry(gui_append)
@@ -65,26 +66,32 @@ class Pokedex(list):
                 Label(gui_show, text=i.nom).pack()
         gui_show.mainloop()
 
+    def close_gui_sst(self, gui: Toplevel, entree: Entry):
+        typ = entree.get().upper()
+        gui.destroy()
+        gui_show = Toplevel(menu)
+        gui_show.title(typ)
+        for i in self:
+            if i.type.upper() == typ:
+                Label(gui_show, text=i.nom).pack()
+        gui_show.mainloop()
+
     def show_same_type(self):
         gui_show_same_type = Toplevel(menu)
+        gui_show_same_type.title('Afficher les pokémons du type')
         Label(gui_show_same_type, text='Type :').pack()
         des_type = Entry(gui_show_same_type)
         des_type.pack()
-        close_gui = lambda: gui_show_same_type.destroy()
+
+        close_gui = lambda: self.close_gui_sst(gui_show_same_type, des_type)
         Button(gui_show_same_type, text="Chercher", command=close_gui).pack()
         gui_show_same_type.mainloop()
-
-        gui_show = Toplevel(menu)
-        for i in self:
-            if i.type.upper() == des_type.get().upper():
-                Label(gui_show, text=i.nom).pack()
-        gui_show.mainloop()
 
 
 pokedex = Pokedex([Pokemon('Truc', 'feu', 19)])
 
-
 menu = Tk()
+menu.title('Pokédex')
 Button(menu, text='Ajouter Pokemon', command=pokedex.add).pack()
 Button(menu, text='Montrer tous les Pokemons du Pokedex', command=pokedex.show_all).pack()
 Button(menu, text='Montrer la moyenne des PV', command=pokedex.show_mean_stats).pack()
