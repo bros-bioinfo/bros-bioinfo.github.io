@@ -38,7 +38,10 @@ function getTree() {
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/Oral_English2",text:"Oral_English2",custom:"10171701"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"10242256",nodes:[
-        {"type":"directory",href:"#fh5co-work",text:"TD",custom:"10171134",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"TD",custom:"10242259",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"Line_Detection",custom:"10242300",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Line_Detection/line",text:"line",custom:"10242209"},
+          ]},
           {"type":"directory",href:"#fh5co-work",text:"Machine Learning",custom:"10211240",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Machine Learning/kNN",text:"kNN",custom:"1019  059"},
           ]},
