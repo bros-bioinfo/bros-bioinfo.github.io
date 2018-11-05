@@ -239,19 +239,40 @@ $$D _{15} (x _1, x _2) = \sqrt{\sum\limits _{j = 1} ^{p} \frac{1}{y _{+j}}\left 
     - Mieux vaut utiliser le lien moyen
 - Analyse de groupement hiérarchique ascendante en mode R
     - On cherche à regrouper les espèces (descripteurs)
-    - La matrice de similarité entre espèces (descripteurs)
         - Beaucoup d'espèces sont très peu abondantes et vont obscurcir l'analyse. Il est nécessaire de les éliminer et donc de réduire le jeu des données
-        - La base la plus employée pour cela est un critère d'abondance relative maximale (i.e. L'espèce doit représenter au minimum 5% de l'abondance totale à une station donnée)
-        - Les espèces les plus abondantes vont avoir tendance à être similaires même si leurs profils de distribution sont différents.
-        - A contrario deux espèces peuvent avoir exactement le même profil mais des abondances très différentes. Ils conviendraient alors qu'elles soient regroupées  lors d'une analyse en mode indirect. Pour régler ce problème, on va standardiser
+            - La base la plus employée pour cela est un critère d'abondance relative maximale (i.e. L'espèce doit représenter au minimum 5% de l'abondance totale à une station donnée)
+            - Les espèces les plus abondantes vont avoir tendance à être similaires même si leurs profils de distribution sont différents.
+            - A contrario deux espèces peuvent avoir exactement le même profil mais des abondances très différentes. Ils conviendraient alors qu'elles soient regroupées  lors d'une analyse en mode indirect. 
+        - Pour régler ce problème, on va standardiser
             - Diviser chaque abondance par la somme des abondances de l'espèce considérée dans le jeu de données ("profils")
             - Peut être remplacé par un centrage des données (pour d'autres descripteurs)
+    - La matrice de similarité entre espèces (descripteurs)
     - Reste de l'analyse similaire au mode direct
     - Calcul de la matrice de similarité entre espèces (descripteurs)
     - Analyses de groupement hiérarchique ascendant des espèces
 
-## V. L'Analyse de proximité
-
+## V. L'Analyse de proximité (Multi Dimensional Scaling MDS)
+- La méthode s'applique surtout à la comparaison d'objets (Q)
+- La méthode est basée sur la comparaison des dissimilarités d'une matrice d'association et les distances entre stations positionnées dans un espace réduit (le plus souvent un plan)
+- La première étape consiste à choisir le nombre de dimensions de l'espace réduit (en général 2, parfois 3)
+- L'objectif consiste ensuite à déterminer le positionnement des stations dans l'espace réduit qui permet d'obtenir la meilleur corrélation possible entre les dissimilarités $\delta _{jk}$ et les distances $d _{jk}$
+- Ceci nécessite de développer une méthode pour estimer cette corrélation
+- Le Diagramme de Shepard représente la relation liant les dissimilarités dans la matrice d'association et les distances dans l'espace réduit de l'analyse de proximité
+    - Le stress est un indice qui permet de mesurer la manière dont les distances dans l'espace réduit de l'analyse de proximité reflète les dissimilarités avec les dissimilarités de la matrice d'association
+    - Existe également une MDS non métrique (nMDS) ==> Modèle non linéaire mais monotone
+- Clef d'interprétation des valeurs du stress:
+    - s = 0
+        - Ajustement parfait, en général quand n est faible. Rare. Faire attention à l'existence possible de plusieurs solutions
+    - s < 0.05
+        - Excellente représentation
+    - 0.05 < s < 0.1
+        - Bonne représentation
+    - 0.1 < s < 0.2
+        - Bonne représentation mais attention au structures locales
+    - 0.2 < s < 0.3
+        - Difficilement utilisable
+    - 0.3 < s < 1
+        - Un peu mieux que le hasard
 ## VI. L'Analyse en Composante Principale (ACP)
 
 ## VII. L'analyse factorielle des correspondances 
