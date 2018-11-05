@@ -11,11 +11,6 @@
 
 
 def list_max(list_number: list):
-    """ Give the maximum of a list of numbers
-
-    :param liste:
-    :return maximum of the list:
-    """
     return max(list_number)
 
 

@@ -11,9 +11,10 @@ def end(l):  # renvoie la cellule de fin de liste
 
 
 def next(l, cell):  # renvoie la cellule qui suit cell et None si c’est la cellule de fin de list
-
+    pass
 
 def value(cell):  # renvoie la valeure de la liste
-
+    pass
 
 class list_chaine:
+    pass

@@ -29,7 +29,7 @@ Hard to navigate through key of identification -> needs of software
   
     
       
-
+$\rule{8cm}{0.4pt}$
 ## The Earth BioGenome Project
 ### Marina
 #### Aim
@@ -61,7 +61,7 @@ Why sequencing Eukaryotes' DNA:
 
 
 
-
+$\rule{8cm}{0.4pt}$
 ## Races & Biology (Social Ethics)
 ### Antoine
 #### History of "Race"
@@ -79,6 +79,7 @@ But ethnicity can be useful for medecine.
 - Origins = geographical
 - Populations = Neutral
 
+$\rule{8cm}{0.4pt}$
 ## Using metabarcoding for environmental studies
 ### Claire
 #### What is metaboardcoding
@@ -98,4 +99,32 @@ But ethnicity can be useful for medecine.
 
 #### Limitations
 - Sensitive to degragation of DNA 
-- Abundance data is limited (How many is there ?)
+- Abundance data is limited (How many is there ?)  
+
+$\rule{8cm}{0.4pt}$
+## Evolution of Behaviors
+### Charlotte
+#### Behaviors:
+- Mutually beneficial
+- Egoistic
+- Altruistic
+- Spiteful
+#### Why species evolve to acquire one of those behaviors?
+To determine the **behavior** according to traits, you **genetics** are complementary of **social study**.  
+$\rule{8cm}{0.4pt}$
+
+## Gut Microbiome study techniques 
+### Elsa
+#### Old method : Linear model
+#### New technique : Phylogenetic linear modellling
+- Draw the tree
+- Include the prevalence of microbes
+- Presence or abscence of genes in the clades
+
+$\rule{8cm}{0.4pt}$
+## Automated Diagnostic of Melanoma
+### Mirna Marie-Joseph
+- CNN
+
+## Genomics and Genomic editing in treatment
+### Eden
