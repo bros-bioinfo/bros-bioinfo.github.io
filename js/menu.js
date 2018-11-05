@@ -69,7 +69,7 @@ function getTree() {
         {"type":"directory",href:"#fh5co-work",text:"TD_papier",custom:"9272112",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD_papier/td_papier",text:"td_papier",custom:"9272112"},
         ]},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Analyses_Multidimensionelles",text:"Analyses_Multidimensionelles",custom:"115 1201"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Analyses_Multidimensionelles",text:"Analyses_Multidimensionelles",custom:"115 1535"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Intro_stats",text:"Intro_stats",custom:"9272112"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Sequence_chronologique",text:"Sequence_chronologique",custom:"9272112"},
       ]},

@@ -108,13 +108,13 @@ L'analyse **multidimensionnelle** (multivariée / multifactorielle) concerne **d
 | e1     | 1   | 1   | 0   |
 | e2     | 1   | 0   | 0   |
 | e1     | 0   | 0   | 1   |
--   - Coef standard:
+-   - Coefficient standard:
         - $S _{y1y2} sans objet y3 = 50$
         - $S _{y1y2} avec objet y3 = 66.7$
-    - Coef de Jaccard : $S _{jk} = 100\times\frac{a}{a + b + c}$
+    - Coefficient de Jaccard : $S _{jk} = 100\times\frac{a}{a + b + c}$
         - $S _{y1y2} sans objet y3 = 50$
         - $S _{y1y2} avec objet y3 = 50$
-    - Coef de Sorenson (Dice) : $S _{jk} = 100\times\frac{2a}{2a + b + c}$
+    - Coefficient de Sorenson (Dice) : $S _{jk} = 100\times\frac{2a}{2a + b + c}$
         - $S _{y1y2} sans objet y3 = 66.7$
         - $S _{y1y2} avec objet y3 = 66.7$
 - Les concepts de dissimilarité et de distance 
@@ -166,13 +166,89 @@ $$S _{jk} = 100 \left\{ 1 - \frac{\sum\limits _{i=1} ^{p} \lvert {y _{ij} - y _{
             - Abondances relatives de j à i
     - Distance euclidienne entre les profils d'espèces des stations X1 et X2 
 
+ $$ y _{ij} = 
+ \begin{bmatrix}
+    x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
+    x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
+    \vdots & \vdots & \vdots & x _{ij} & \vdots \\
+    x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
+\end{bmatrix}    
+\begin{bmatrix}
+    \sum x_{1}\\
+    \sum x_{2} \\
+    \vdots \\
+    \sum x_{n} 
+\end{bmatrix} = y _{i+}  
+ $$
+
+ $$ y _{j+} = 
+ \begin{bmatrix}
+    \sum x_{1} & \sum x_{2} & \sum x_{3} & \dots & \sum x_{d}
+\end{bmatrix}
+ $$
 Distance Euclidienne
 $$D _{15} (x _1, x _2) = \sqrt{\sum\limits _{j = 1} ^{p} \left ( \frac{y _{1,j}}{y _{1+}} - \frac{y _{2,j}}{y _{2+}} \right ) }$$
-Métrique: Pondérée par 
+Métrique: Pondérée par le total des station afin d'éviter la surinterprétation des espèces dominantes
 $$D _{15} (x _1, x _2) = \sqrt{\sum\limits _{j = 1} ^{p} \frac{1}{y _{+j}}\left ( \frac{y _{1,j}}{y _{1+}} - \frac{y _{2,j}}{y _{2+}} \right ) }$$
- 
-## IV. Les analyses de groupement
 
+
+ Distance chi2:
+ $$D _{16} (x _1, x _2) = \sqrt{\sum\limits _{j = 1} ^{p} \frac{1}{y _{+j} / y _{++}}\left ( \frac{y _{1,j}}{y _{1+}} - \frac{y _{2,j}}{y _{2+}} \right ) }$$
+ 
+- La matrice d'association est une matrice symétrique qui rassemble des mesures de similarité (ressemblance/dépendance) ou de dissimilarité (difference/indépendance) de tous les couples possibles d'objets ou de descripteurs
+    - Matrice carrée symétrique / Diagonale
+    - Similarité d'une station avec elle même = 100
+    - $\frac{N(N-1)}{2}$ couples de stations composées de 2 éléments différents
+    - Mode Q = Objets x Objets
+        - Ressemblance
+    - Mode R: Variables x Variables
+        - Dépendance
+## IV. Les analyses de groupement
+- Réaliser des partitions d'ensemble d'objets (mode Q) ou de descripteurs (mode R) sur la base de leur ressemblance (ou dépendance)
+- Il existe un grand nombre de méthodes de groupement
+    - Fuzzy vs **Hard**
+        - Possibilité pour une entité d'appartenir à plusieurs groupes ou **non**
+    - Ascendante vs **Descendante**
+        - Point de départ un élément ou **un groupe unique**
+    - Hiérarchique ou **non**
+        - Les membres des groupes inférieurs deviennent automatiquement membres de groupes "supérieurs" ou **non**
+- Analyse de groupement hiérarchique ascendante
+    - Base : Matrice de similarité
+    - Sélection de la plus forte similarité (A1:A3)
+    - Définition d'un groupe A1:A3 
+    - Calcul d'une nouvelle matrice de similarité incluant ce groupe
+        - **Lien moyen**
+            - "Group average linking"
+                - Valeur moyenne des similarité
+        - Lien complet
+            - "Farthest Neighbor"
+                - Valeur minimale des similarités
+        - Lien simple 
+            - "Nearest Neighbor"
+                - Valeur maximale des similarités
+    - Représentation:
+        - Dendrogramme
+            - Attention : Multitude de représentations équivalentes suite à des rotations de chaque articulation
+            - Conclusion: Seul le niveau auquel les stations se rejoignent comptent 
+        - Lien simple
+            - Favorise l'aggregation à des groupes existants
+        - Lien complet 
+            - Favorise la création de nouveaux groupes
+        - Lien moyen
+            - Intermédiaire (Plus proche du complet)
+    - Mieux vaut utiliser le lien moyen
+- Analyse de groupement hiérarchique ascendante en mode R
+    - On cherche à regrouper les espèces (descripteurs)
+    - La matrice de similarité entre espèces (descripteurs)
+        - Beaucoup d'espèces sont très peu abondantes et vont obscurcir l'analyse. Il est nécessaire de les éliminer et donc de réduire le jeu des données
+        - La base la plus employée pour cela est un critère d'abondance relative maximale (i.e. L'espèce doit représenter au minimum 5% de l'abondance totale à une station donnée)
+        - Les espèces les plus abondantes vont avoir tendance à être similaires même si leurs profils de distribution sont différents.
+        - A contrario deux espèces peuvent avoir exactement le même profil mais des abondances très différentes. Ils conviendraient alors qu'elles soient regroupées  lors d'une analyse en mode indirect. Pour régler ce problème, on va standardiser
+            - Diviser chaque abondance par la somme des abondances de l'espèce considérée dans le jeu de données ("profils")
+            - Peut être remplacé par un centrage des données (pour d'autres descripteurs)
+    - Reste de l'analyse similaire au mode direct
+    - Calcul de la matrice de similarité entre espèces (descripteurs)
+    - Analyses de groupement hiérarchique ascendant des espèces
 
 ## V. L'Analyse de proximité
 
