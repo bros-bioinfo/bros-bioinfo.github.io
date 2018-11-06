@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2745886c-a300-40ef-bc70-ffbdff34736a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/Algo_Eliot.md" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/Algo_Eliot.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +21,7 @@
           <entry key="dummy" value="11" />
           <entry key="fasta" value="123" />
           <entry key="md" value="4132" />
-          <entry key="py" value="25620" />
+          <entry key="py" value="26057" />
           <entry key="txt" value="49" />
         </counts>
       </usages-collector>
@@ -30,7 +29,7 @@
         <counts>
           <entry key="Markdown" value="4125" />
           <entry key="PLAIN_TEXT" value="183" />
-          <entry key="Python" value="26087" />
+          <entry key="Python" value="26524" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -109,8 +108,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/TD3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="493">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <marker date="1541517834532" expanded="true" signature="697:794" ph="..." />
+                <marker date="1541517834532" expanded="true" signature="812:817" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -519,13 +522,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="out" language="Python" />
-      </configuration>
-    </watches-manager>
-  </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
@@ -833,8 +829,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/TD3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="493">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <marker date="1541517834532" expanded="true" signature="697:794" ph="..." />
+            <marker date="1541517834532" expanded="true" signature="812:817" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

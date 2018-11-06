@@ -11,13 +11,13 @@ d'algorithme, c'est à dire de processus systématiques de résolution d'un prob
 Les piles sont des structures de données contenant des éléments qui peuvent apparaître en plusieurs exemplaires.
 Les piles possèdent 2 opérations:
 
-- empiler (P,e) qui ajoute l'élément
+- empiler (P,$e$) qui ajoute l'élément
 - dépiler (P) qui enlève un élément
 
 et qui vérifie la propriété suivante:  
-"Si un élément **e** est ajoute avant l'élément **f** alors **e** sera enlevé après **f**"
+"Si un élément $e$ est ajoute avant l'élément **f** alors $e$ sera enlevé après **f**"
 
-Les pile sont aussi appelées LIFO pour "Last un First out". Voici un emplacement possible des piles:  
+Les pile sont aussi appelées LIFO pour "end un First out". Voici un emplacement possible des piles:  
 
 ```python
 def creer_pile():
@@ -33,18 +33,18 @@ def depiler(pile):
 - P= créer pile()
 - empiler(P,2)
 - empiler(P,1)
-- e=depiler(P)
-- print (e)
-- e=depiler(P)
-- print(e)
+- $e$=depiler(P)
+- print ($e$)
+- $e$=depiler(P)
+- print($e$)
 
 ### Les files (FIFO = First In First Out)
 
 Les files sont des structures de données contenant des elements qui peuvent apparaître en plusieurs exemplaires et qui possèdent 2 opération:
-- enfiler (F,e) qui ajoute un élément dans la file
+- enfiler (F,$e$) qui ajoute un élément dans la file
 - defiler (F) qui enlève un élément de la file
 
-Un élément **e** est ajouté avant l'élément **b** alors l'élément **e** sera enlevé avant l'élément **b**.
+Un élément $e$ est ajouté avant l'élément **b** alors l'élément $e$ sera enlevé avant l'élément **b**.
 
 ### Les listes de données
 Les listes sont des structures de données qui contiennent une séquence d'éléments dont les éléments peuvent apparaître en plusieurs exemplaires. Chaque élément est encapsulé dans une structure de données appelée cellule qui permet de récupérer l'élément et qui permet de récupérer la cellule encapsulant l'élément suivant dan sla séquence. On parle alors de liste simplement chaînée.
@@ -54,24 +54,24 @@ Une liste chainée est une structure de donnée encadrant une séquence d'élém
 Dans une liste simplement chaînée , chaque élément $L_i$ est encapsulé dans une cellule $C_i$ qui sont des structures que nous allons définir un peu plus tard .  
 Une cellule $C _{n+1}$ supplémentaire est utilisée pour coder la fin de la liste.  
 Les cellules $C _1$, $C _2$, ..., $C _{n+1}$ sont toutes deux à deux distinctes même si deux cellules peuvent contenir le même élément. Une cellule Ci est une structure qui contient deux informations:
-1. Valeur = Élément que contient la cellule. cette valeur valant $L _i$ si $i \leqslant n$ et None sinon
-2. Successeur = Référence vers la cellule $C _{i+1}$ si $i \leqslant n$ et None sinon.
+1. Valeur = Élément que contient la cellule. cette valeur valant $L _i$ si $i \leqslant n$ et `None` sinon
+2. Successeur = Référence vers la cellule $C _{i+1}$ si $i \leqslant n$ et `None` sinon.
 
 On appelle liste vide, la liste qui ne contient que la cellule de fin de liste.  
 Par exemple, le schéma suivant montre la représentation de la liste [1, 2, 4, 2]  
-Remarque: Selon les problèmes et les bibliothèques, la cellule de fin  de liste n'exist pas et est remplacée par None
+Remarque: Selon les problèmes et les bibliothèques, la cellule de fin  de liste n'exist pas et est remplacée par `None`
 Généralement, on a la référence de la premiere cellule l dans le schéma, c'est L  
 Les listes chaînées sont généralement  munies des fonctions suivantes:
 - create_liste()
   - Créer une liste vide (qui contient la cellule fin de liste) et retourne cette liste
-- push_front($L$, e)
-  - Augmente la taille de la liste de 1 en créant une nouvelle cellule contenant e et en positionnant cette cellule en début de liste
-- begin($L$)
+- push_front($L$, $e$)
+  - Augmente la taille de la liste de 1 en créant une nouvelle cellule contenant $e$ et en positionnant cette cellule en début de liste
+- first($L$)
   - Renvoie la première cellule de la liste 
 - end($L$)
   - Renvoie la dernière cellule de la liste
 - next($L$, $C_i$)
-  - Renvoie la cellule $C _{i+1}$ si $i \leqslant n$ et None sinon
+  - Renvoie la cellule $C _{i+1}$ si $i \leqslant n$ et `None` sinon
 - value($L$, $C_i$)
   - Renvoie la valeur de la cellule  $C _i$ qui vaut $L _i$
 
@@ -81,15 +81,15 @@ def create_cell(value, next):
     return {'value': value, 'next': next}
 
 def create_list():
-    end_cell = create_cell(None, None)
-    return {'begin': end_cell, 'end': end_cell}
+    end_cell = create_cell(`None`, `None`)
+    return {'first': end_cell, 'end': end_cell}
 
-def push_front(l, e):
-    cell = create_cell(e, l['begin'])
-    l['begin'] = cell
+def push_front(l, $e$):
+    cell = create_cell($e$, l['first'])
+    l['first'] = cell
 
-def begin(l):
-    return l['begin']
+def first(l):
+    return l['first']
 
 def end(l):
     return l['end']
@@ -108,8 +108,24 @@ push_front(l, 4)
 push_front(l, 2)
 push_front(l, 4)
 
-it = begin(l)
+it = first(l)
 while not it is end(l):
     print(value(l, it))
     it = next(it)
+```
+#### Liste doublement chaînée
+Une liste doublement chaînée est une liste chaînée dont les cellules $C _i$ contiennent une information supplémentaire nommée prédécesseur qui est une référence  vers la cellule $C _{i-1}$ si $2 \leqslant i \leqslant n+1$. Vers la cellule de fin de liste $C _{n+1}$ si $i = 1$ et renvoie `None` pour la cellule de fin:  
+
+
+La liste doublement chaînée contient en plus les fonctions suivantes:
+- push_back($L$, $e$)
+  - Créer une nouvelle cellule et l'ajoute en fin de liste
+- last($L$)
+  - Renvoie la cellule $C _n$ si $n \gt 0$ et la cellule de fin $C _{n+1}$ si la taille $n = 0$ 
+- previous($L$, $C _i$)
+  - Renvoie la cellule $C _{i-1}$ si $1 \leqslant i \leqslant n$ et ``None`` sinon
+
+
+```python
+
 ```
