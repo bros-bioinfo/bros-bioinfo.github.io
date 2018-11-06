@@ -1,20 +1,40 @@
-def push_front(l: list, e):  # Ajoute un élément en debut de list
-    l.insert(0, e)
+def create_cell(value, next):
+    return {'value': value, 'next': next}
 
 
-def first(l):  # renvoie la première cellule de la liste
-    return l[0]
+def create_list():
+    end_cell = create_cell(None, None)
+    return {'begin': end_cell, 'end': end_cell}
 
 
-def end(l):  # renvoie la cellule de fin de liste
-    return l[-1]
+def push_front(l, e):
+    cell = create_cell(e, l['begin'])
+    l['begin'] = cell
 
 
-def next(l, cell):  # renvoie la cellule qui suit cell et None si c’est la cellule de fin de list
-    pass
+def begin(l):
+    return l['begin']
 
-def value(cell):  # renvoie la valeure de la liste
-    pass
 
-class list_chaine:
-    pass
+def end(l):
+    return l['end']
+
+
+def next_(l, cell):
+    return cell['next']
+
+
+def value(l, cell):
+    return cell['value']
+
+
+l = create_list()
+push_front(l, 2)
+push_front(l, 4)
+push_front(l, 2)
+push_front(l, 4)
+push_front(l, 5)
+it = begin(l)
+while it is not end(l):
+    print(value(l, it))
+    it = next_(l, it)

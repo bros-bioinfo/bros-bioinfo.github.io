@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2745886c-a300-40ef-bc70-ffbdff34736a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ALGO/Eliot/anales.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eliot/Enzyme.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eliot/Enzyme_dict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/exe_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/exe_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eliot/Molfunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Eliot/Molfunc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eliot/Visual_Molecule.py" beforeDir="false" afterPath="$PROJECT_DIR$/Eliot/Visual_Molecule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eliot/mols.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Eliot/mols.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ANGLAIS/Oral_English2.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ANGLAIS/Oral_English2.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,12 +17,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="" value="1" />
-          <entry key="Python Console" value="383" />
+          <entry key="Python Console" value="402" />
           <entry key="cure" value="57" />
           <entry key="dummy" value="11" />
           <entry key="fasta" value="123" />
           <entry key="md" value="4132" />
-          <entry key="py" value="25263" />
+          <entry key="py" value="25620" />
           <entry key="txt" value="49" />
         </counts>
       </usages-collector>
@@ -37,24 +30,24 @@
         <counts>
           <entry key="Markdown" value="4125" />
           <entry key="PLAIN_TEXT" value="183" />
-          <entry key="Python" value="25711" />
+          <entry key="Python" value="26087" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="3" />
-          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="7" />
           <entry key="project.open.time.8" value="4" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -63,7 +56,7 @@
           <entry key="gif" value="1" />
           <entry key="iris" value="1" />
           <entry key="md" value="5" />
-          <entry key="py" value="83" />
+          <entry key="py" value="86" />
           <entry key="pyi" value="1" />
           <entry key="sequence_pizza" value="1" />
           <entry key="txt" value="15" />
@@ -75,7 +68,7 @@
           <entry key="Image" value="1" />
           <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="83" />
+          <entry key="Python" value="86" />
           <entry key="PythonStub" value="1" />
           <entry key="XML" value="3" />
         </counts>
@@ -87,16 +80,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Eliot/Visual_Molecule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
+            <state relative-caret-position="165">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <marker date="1540680582541" expanded="true" signature="31:247" ph="..." />
                 <marker date="1540680582541" expanded="true" signature="49:247" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/recursive.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#435#455#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/TD3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -113,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/anales.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
+            <state relative-caret-position="3660">
               <caret line="244" column="23" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
               <folding>
                 <marker date="1540979531879" expanded="true" signature="3212:3213" ph="..." />
@@ -192,7 +206,6 @@
         <option value="$PROJECT_DIR$/../ALGO/turtle2.py" />
         <option value="$PROJECT_DIR$/../ALGO/composition.py" />
         <option value="$PROJECT_DIR$/../../IMAGE_NUM/TD/Machine Learning/digit NN.py" />
-        <option value="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" />
         <option value="$PROJECT_DIR$/TUTORAT/Pokedex_Eliot.py" />
         <option value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/Condorcet/condorcet.py" />
         <option value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cure" />
@@ -207,9 +220,10 @@
         <option value="$PROJECT_DIR$/Eliot/Enzyme.py" />
         <option value="$PROJECT_DIR$/Eliot/compréhension.py" />
         <option value="$PROJECT_DIR$/Eliot/Enzyme_dict.py" />
-        <option value="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" />
         <option value="$PROJECT_DIR$/Eliot/Visual_Molecule.py" />
         <option value="$PROJECT_DIR$/../ALGO/Eliot/anales.py" />
+        <option value="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" />
+        <option value="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" />
       </list>
     </option>
   </component>
@@ -264,14 +278,14 @@
               <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ALGO" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ALGO" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Eliot" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -286,7 +300,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Téléchargements/uniprot-gene%3Ains+length%3A%5B100+TO+120%5D+NOT+name%3Alike-filtered-reviewed%3--.fasta" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -300,8 +314,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.anales">
-    <configuration name="Enzyme" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.TD3">
+    <configuration name="TD3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROG" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,32 +323,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Eliot" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ALGO/Eliot" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Eliot/Enzyme.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Enzyme_dict" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PROG" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Eliot" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Eliot/Enzyme_dict.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -364,6 +357,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="algojammer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PROG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Algojammer" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Algojammer/algojammer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="anales" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROG" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -385,7 +399,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cure" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="recursive" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROG" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -393,12 +407,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ALGO/Eliot" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/cure.py" />
-      <option name="PARAMETERS" value="sequence.fasta cured_seq_pizza.txt" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -407,19 +421,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.cure" />
       <item itemvalue="Python.Visual_Molecule" />
-      <item itemvalue="Python.Enzyme" />
-      <item itemvalue="Python.Enzyme_dict" />
       <item itemvalue="Python.anales" />
+      <item itemvalue="Python.recursive" />
+      <item itemvalue="Python.algojammer" />
+      <item itemvalue="Python.TD3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.TD3" />
+        <item itemvalue="Python.algojammer" />
+        <item itemvalue="Python.recursive" />
         <item itemvalue="Python.anales" />
         <item itemvalue="Python.Visual_Molecule" />
-        <item itemvalue="Python.Enzyme_dict" />
-        <item itemvalue="Python.Enzyme" />
-        <item itemvalue="Python.cure" />
       </list>
     </recent_temporary>
   </component>
@@ -448,10 +462,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" sideWeight="0.5016129" side_tool="true" weight="0.27614832" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.16380742" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.16712783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
@@ -526,7 +541,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Téléchargements/uniprot-gene%3Ains+length%3A%5B100+TO+120%5D+NOT+name%3Alike-filtered-reviewed%3--.fasta" />
     <entry file="file://$PROJECT_DIR$/../ALGO/tableautrie.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -743,20 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/TD3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/recursive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Eliot/enzyme_data.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -774,6 +774,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Eliot/Visual_Molecule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1540680582541" expanded="true" signature="31:247" ph="..." />
+            <marker date="1540680582541" expanded="true" signature="49:247" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/exe_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -781,16 +793,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/pdst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="91" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/anales.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="3660">
           <caret line="244" column="23" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
           <folding>
             <marker date="1540979531879" expanded="true" signature="3212:3213" ph="..." />
@@ -802,15 +807,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eliot/Visual_Molecule.py">
+    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/pdst.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="360">
+          <caret line="24" column="91" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Algojammer/algojammer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/recursive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1540680582541" expanded="true" signature="31:247" ph="..." />
-            <marker date="1540680582541" expanded="true" signature="49:247" ph="..." />
+            <element signature="e#435#455#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/TD3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>

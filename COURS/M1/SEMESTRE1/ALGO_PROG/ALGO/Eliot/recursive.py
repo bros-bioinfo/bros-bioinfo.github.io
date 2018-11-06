@@ -1,37 +1,29 @@
 def factoriel(n):
+    """ Renvoie n!
+    Example :
+    >>> a = factoriel(3)
+    >>> a
+    6
+    """
     return n * factoriel(n - 1) if n != 0 else 1
 
 
-# print(factoriel(3))
-
-
 def suite(n):
-    return 2 * suite(n - 1) + 1 if n != 0 else 3
-
-
-# print(suite(2))
+    """ Renvoie le n ième terme de la suite définie par un+1 = 2un +1 ; u0 = 3
+    """
+    return 2 * suite(n - 1) + 1 if n else 3
 
 
 def suite2(n):
     return 0 if n == 0 else 1 if n == 1 else 2 * suite2(n - 1) - suite2(n - 2) + 1
 
 
-# print(suite2(3))
-
-
 def binomial(n, k):
     return 1 if k == 0 else 1 if n == k else binomial(n - 1, k - 1) + binomial(n - 1, k)
 
 
-# print(binomial(5, 2))
-
 from turtle import *
 import turtle
-
-tur = turtle.Turtle()
-tur.speed(0)
-
-
 
 
 def droite(n):
@@ -56,7 +48,6 @@ def triangle(n):
     done()
 
 
-# triangle(3 ** 5)
 import math
 
 
@@ -70,9 +61,6 @@ def dragon(n, alter):
         dragon(math.sqrt((n ** 2) / 2), -1)
 
 
-dragon(10 * 2 ** 5, 1)
-done()
-
 def composition(n: int):
     source = [1 for i in range(n)]
     compos = [source]
@@ -84,9 +72,6 @@ def composition(n: int):
             print(i, new)
             compos.append(new)
     return compos
-
-
-# print(composition(4))
 
 
 def composition_longue(n: int):
@@ -116,6 +101,30 @@ def permutation(ls: list):
     return liste
 
 
-p = permutation(['a', 'b', 'c', 'd', 'e', 'f'])
-print(len(p))
-print(factoriel(6))
+if __name__ == '__main__':
+    import doctest
+
+    doctest.testmod()
+
+    # print(factoriel(3))
+    #
+    print(suite(2))
+    #
+    # print(suite2(3))
+    #
+    # print(binomial(5, 2))
+    #
+    tur = turtle.Turtle()
+    tur.speed(0)
+    #
+    # triangle(3 ** 5)
+    #
+    # dragon(10 * 2 ** 5, 1)
+    #
+    # done()
+    #
+    # print(composition(4))
+    #
+    # p = permutation(['a', 'b', 'c', 'd', 'e', 'f'])
+    # print(len(p))
+    # print(factoriel(6))
