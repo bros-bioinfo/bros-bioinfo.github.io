@@ -84,8 +84,8 @@ def create_list():
     end_cell = create_cell(`None`, `None`)
     return {'first': end_cell, 'end': end_cell}
 
-def push_front(l, $e$):
-    cell = create_cell($e$, l['first'])
+def push_front(l, e):
+    cell = create_cell(e, l['first'])
     l['first'] = cell
 
 def first(l):

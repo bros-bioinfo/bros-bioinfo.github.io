@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2745886c-a300-40ef-bc70-ffbdff34736a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/Algo_Eliot.md" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/Algo_Eliot.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ALGO/Eliot/Simple_Nested_List.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,23 +20,23 @@
           <entry key="" value="1" />
           <entry key="Python Console" value="402" />
           <entry key="cure" value="57" />
-          <entry key="dummy" value="11" />
+          <entry key="dummy" value="30" />
           <entry key="fasta" value="123" />
           <entry key="md" value="4132" />
-          <entry key="py" value="26057" />
+          <entry key="py" value="27344" />
           <entry key="txt" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="4125" />
-          <entry key="PLAIN_TEXT" value="183" />
-          <entry key="Python" value="26524" />
+          <entry key="PLAIN_TEXT" value="202" />
+          <entry key="Python" value="27811" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
@@ -55,7 +57,7 @@
           <entry key="gif" value="1" />
           <entry key="iris" value="1" />
           <entry key="md" value="5" />
-          <entry key="py" value="86" />
+          <entry key="py" value="87" />
           <entry key="pyi" value="1" />
           <entry key="sequence_pizza" value="1" />
           <entry key="txt" value="15" />
@@ -67,7 +69,7 @@
           <entry key="Image" value="1" />
           <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="86" />
+          <entry key="Python" value="87" />
           <entry key="PythonStub" value="1" />
           <entry key="XML" value="3" />
         </counts>
@@ -96,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/recursive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#435#455#0" expanded="true" />
               </folding>
@@ -106,13 +108,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/TD3.py">
+        <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="363">
+              <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
               <folding>
-                <marker date="1541517834532" expanded="true" signature="697:794" ph="..." />
-                <marker date="1541517834532" expanded="true" signature="812:817" ph="..." />
+                <marker date="1541525565054" expanded="true" signature="799:805" ph="..." />
+                <marker date="1541525565054" expanded="true" signature="939:1068" ph="..." />
+                <marker date="1541525565054" expanded="true" signature="1145:1176" ph="..." />
               </folding>
             </state>
           </provider>
@@ -227,6 +230,7 @@
         <option value="$PROJECT_DIR$/../ALGO/Eliot/anales.py" />
         <option value="$PROJECT_DIR$/../ALGO/Eliot/recursive.py" />
         <option value="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" />
+        <option value="$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py" />
       </list>
     </option>
   </component>
@@ -317,7 +321,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TD3">
+  <component name="RunManager" selected="Python.Double_Nested_List">
+    <configuration name="Double_Nested_List" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PROG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ALGO/Eliot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="TD3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROG" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -330,28 +355,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/Eliot/TD3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Visual_Molecule" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PROG" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Eliot" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Eliot/Visual_Molecule.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ALGO/Eliot/Simple_Nested_List.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -424,19 +428,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Visual_Molecule" />
       <item itemvalue="Python.anales" />
       <item itemvalue="Python.recursive" />
       <item itemvalue="Python.algojammer" />
       <item itemvalue="Python.TD3" />
+      <item itemvalue="Python.Double_Nested_List" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Double_Nested_List" />
         <item itemvalue="Python.TD3" />
         <item itemvalue="Python.algojammer" />
         <item itemvalue="Python.recursive" />
         <item itemvalue="Python.anales" />
-        <item itemvalue="Python.Visual_Molecule" />
       </list>
     </recent_temporary>
   </component>
@@ -465,14 +469,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" sideWeight="0.5016129" side_tool="true" weight="0.27614832" />
       <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.16712783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -522,8 +525,34 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../ALGO/Eliot/Simple_Nested_List.py</url>
+          <line>122</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="l" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>l</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>out</expression-string>
         <language-id>Python</language-id>
@@ -537,9 +566,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ALGO/tableautrie.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ALGO/dico.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -817,23 +843,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/Simple_Nested_List.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <marker date="1541522454424" expanded="true" signature="697:884" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="902:907" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="1426:1526" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="1549:1919" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="1551:1919" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="1949:2549" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="1961:2032" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="1961:2549" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="2570:2940" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="2961:3022" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="3044:3244" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="3273:3794" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="3273:3798" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="3829:3903" ph="..." />
+            <marker date="1541522454424" expanded="true" signature="3829:3904" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/recursive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#435#455#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/TD3.py">
+    <entry file="file://$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="363">
+          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
           <folding>
-            <marker date="1541517834532" expanded="true" signature="697:794" ph="..." />
-            <marker date="1541517834532" expanded="true" signature="812:817" ph="..." />
+            <marker date="1541525565054" expanded="true" signature="799:805" ph="..." />
+            <marker date="1541525565054" expanded="true" signature="939:1068" ph="..." />
+            <marker date="1541525565054" expanded="true" signature="1145:1176" ph="..." />
           </folding>
         </state>
       </provider>
