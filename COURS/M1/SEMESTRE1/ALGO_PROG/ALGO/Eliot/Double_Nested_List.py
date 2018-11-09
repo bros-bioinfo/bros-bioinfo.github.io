@@ -28,6 +28,7 @@ class ListeChaine:
         return cell.previous
 
     def __repr__(self):
+        """Représente la fonction"""
         out = []
         it = self.first
         while it is not self.end:
@@ -47,7 +48,9 @@ class ListeChaine:
         self.last = self.previous(self.end)
 
     def push_back(self, e):  # Ajoute un élément en fin de liste
-        self.end = Cell(e, self.end, self.end)
+        new_cell = Cell(e, self.last, self.end)
+        self.first = new_cell
+        self.last = new_cell
 
 
 l = ListeChaine()

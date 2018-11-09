@@ -31,7 +31,42 @@ class Menu:
         Button(self.io, bg="black", fg="white", text='Importer', command=self.import_data).grid(row=1, column=1, padx=5)
         Button(self.io, bg="black", fg="white", text='Exporter', command=self.export_data).grid(row=1, column=2, padx=5)
         self.io.grid(pady=10)
+        self.dessein = Canvas(self.main, width=500, height=500)
+        self.y = 45
+        self.y2 = 50
+
+        self.left = self.dessein.create_oval(275, self.y, 200, self.y + 155, fill="deeppink2", outline="")
+        self.right = self.dessein.create_oval(225, self.y, 300, self.y + 155, fill="deeppink2", outline="")
+        self.corps = self.dessein.create_polygon(200, self.y2, 300, self.y2, 300, 400, 200, 400, fill="salmon1")
+        self.shadow1 = self.dessein.create_polygon(275, self.y2, 300, self.y2, 300, 400, 275, 400, fill="salmon2")
+        self.shadow2 = self.dessein.create_polygon(290, self.y2, 300, self.y2, 300, 400, 290, 400, fill="salmon3")
+        self.giggle = True
+        self.ball_left = self.dessein.create_oval(275, 345, 100, 445, fill="salmon1", outline="")
+        self.ball_right = self.dessein.create_oval(225, 345, 400, 445, fill="salmon1", outline="")
+        self.main.bind("<Down>", self.grow_penis)
+        self.dessein.grid(pady=10)
+        Button(self.main, width=14, bg="black", fg="white", text='Enlarge your penis !!!',
+               command=self.grow_penis).grid()
         self.main.mainloop()
+
+    def grow_penis(self, event=None):
+        if self.y >= 0:
+            self.y -= 2
+        if self.y2 <= 75:
+            self.y2 += 1
+        self.dessein.coords(self.left, 275, self.y, 200, self.y + 155)
+        self.dessein.coords(self.right, 225, self.y, 300, self.y + 155)
+        self.dessein.coords(self.corps, 200, self.y2, 300, self.y2, 300, 400, 200, 400)
+        self.dessein.coords(self.shadow1, 275, self.y2, 300, self.y2, 300, 400, 275, 400)
+        self.dessein.coords(self.shadow2, 290, self.y2, 300, self.y2, 300, 400, 290, 400)
+        if self.giggle:
+            self.giggle = False
+            self.dessein.coords(self.ball_left, 275, 350, 100, 450)
+            self.dessein.coords(self.ball_right, 225, 350, 400, 450)
+        else:
+            self.giggle = True
+            self.dessein.coords(self.ball_left, 275, 345, 100, 445)
+            self.dessein.coords(self.ball_right, 225, 345, 400, 445)
 
     def add_molecule(self):
         GUIAdd(self)
