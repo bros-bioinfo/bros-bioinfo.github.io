@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2745886c-a300-40ef-bc70-ffbdff34736a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../USI/TD/PROBLEME/MDer.py" afterDir="false" />
-    </list>
+    <list default="true" id="2745886c-a300-40ef-bc70-ffbdff34736a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +18,7 @@
           <entry key="dummy" value="31" />
           <entry key="fasta" value="123" />
           <entry key="md" value="4134" />
-          <entry key="py" value="36747" />
+          <entry key="py" value="36786" />
           <entry key="txt" value="49" />
         </counts>
       </usages-collector>
@@ -29,7 +26,7 @@
         <counts>
           <entry key="Markdown" value="4127" />
           <entry key="PLAIN_TEXT" value="203" />
-          <entry key="Python" value="37698" />
+          <entry key="Python" value="37737" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -104,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME/MDer.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -116,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/site-packages/path.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="363" column="11" selection-start-line="363" selection-start-column="11" selection-end-line="363" selection-end-column="11" />
+            <state relative-caret-position="179">
+              <caret line="413" column="11" selection-start-line="413" selection-start-column="8" selection-end-line="413" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -163,6 +160,7 @@
       <find>realpa</find>
       <find>proper</find>
       <find>@proper</find>
+      <find>dir</find>
     </findStrings>
     <replaceStrings>
       <replace>p</replace>
@@ -315,6 +313,16 @@
               <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="PROBLEME" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="PROBLEME_1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="PROBLEME_ELIOT" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -333,6 +341,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT" />
       <recent name="$PROJECT_DIR$/../USI/TD/PROBLEME" />
     </key>
   </component>
@@ -500,10 +509,10 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" sideWeight="0.5016129" side_tool="true" weight="0.27614832" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.17985612" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.17985612" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -904,20 +913,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME/MDer.py">
+    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/site-packages/path.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="179">
+          <caret line="413" column="11" selection-start-line="413" selection-start-column="8" selection-end-line="413" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/site-packages/path.py">
+    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="363" column="11" selection-start-line="363" selection-start-column="11" selection-end-line="363" selection-end-column="11" />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
