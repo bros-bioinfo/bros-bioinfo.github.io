@@ -104,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="180">
+              <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -270,60 +270,6 @@
             <path>
               <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PROBLEME" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PROBLEME" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PROBLEME_1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PROBLEME_ELIOT" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -922,8 +868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="180">
+          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
