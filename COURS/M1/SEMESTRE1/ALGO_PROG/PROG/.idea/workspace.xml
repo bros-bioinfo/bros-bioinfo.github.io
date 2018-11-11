@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2745886c-a300-40ef-bc70-ffbdff34736a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eliot/JeuCarreau.py" beforeDir="false" afterPath="$PROJECT_DIR$/Eliot/JeuCarreau.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../USI/TD/PROBLEME/MDer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +21,7 @@
           <entry key="dummy" value="31" />
           <entry key="fasta" value="123" />
           <entry key="md" value="4134" />
-          <entry key="py" value="36657" />
+          <entry key="py" value="36747" />
           <entry key="txt" value="49" />
         </counts>
       </usages-collector>
@@ -30,7 +29,7 @@
         <counts>
           <entry key="Markdown" value="4127" />
           <entry key="PLAIN_TEXT" value="203" />
-          <entry key="Python" value="37608" />
+          <entry key="Python" value="37698" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -55,8 +54,8 @@
           <entry key="fasta" value="2" />
           <entry key="gif" value="1" />
           <entry key="iris" value="1" />
-          <entry key="md" value="8" />
-          <entry key="py" value="98" />
+          <entry key="md" value="9" />
+          <entry key="py" value="100" />
           <entry key="pyi" value="1" />
           <entry key="sequence_pizza" value="1" />
           <entry key="txt" value="15" />
@@ -66,9 +65,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="Markdown" value="8" />
+          <entry key="Markdown" value="9" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="98" />
+          <entry key="Python" value="100" />
           <entry key="PythonStub" value="1" />
           <entry key="XML" value="3" />
         </counts>
@@ -105,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME/MDer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="105">
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -117,33 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/fasta.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/aa-le-plus-present.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="240">
-                <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/site-packages/path.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2609">
-              <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+            <state relative-caret-position="209">
+              <caret line="363" column="11" selection-start-line="363" selection-start-column="11" selection-end-line="363" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -183,6 +160,9 @@
       <find>[self.turn]</find>
       <find>self.main.bind</find>
       <find>files</find>
+      <find>realpa</find>
+      <find>proper</find>
+      <find>@proper</find>
     </findStrings>
     <replaceStrings>
       <replace>p</replace>
@@ -252,8 +232,9 @@
         <option value="$PROJECT_DIR$/Eliot/Visual_Molecule.py" />
         <option value="$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py" />
         <option value="$PROJECT_DIR$/Eliot/JeuCarreau.py" />
-        <option value="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py" />
         <option value="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/aa-le-plus-present.md" />
+        <option value="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py" />
+        <option value="$PROJECT_DIR$/../USI/TD/PROBLEME/MDer.py" />
       </list>
     </option>
   </component>
@@ -325,6 +306,15 @@
               <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="PROBLEME" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="PROBLEME_ELIOT" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -340,6 +330,11 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Téléchargements/uniprot-gene%3Ains+length%3A%5B100+TO+120%5D+NOT+name%3Alike-filtered-reviewed%3--.fasta" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../USI/TD/PROBLEME" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -505,10 +500,10 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" sideWeight="0.5016129" side_tool="true" weight="0.27614832" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.17985612" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.17985612" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -604,20 +599,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ALGO/composition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/turtle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="1615" column="8" selection-start-line="1615" selection-start-column="8" selection-end-line="1615" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TD4/molfunc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-810" />
@@ -890,10 +871,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/site-packages/path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2609">
-          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/aa-le-plus-present.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="240">
+            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -905,23 +889,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/aa-le-plus-present.md">
+    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/extrait-toutes-les-sous-chaines.sh.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          </first_editor>
+          <first_editor />
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py">
+    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="359">
+          <caret line="554" column="6" selection-start-line="554" selection-end-line="554" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME/MDer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/site-packages/path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="363" column="11" selection-start-line="363" selection-start-column="11" selection-end-line="363" selection-end-column="11" />
         </state>
       </provider>
     </entry>
