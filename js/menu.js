@@ -21,6 +21,19 @@ function getTree() {
         ]},
         {"type":"directory",href:"#fh5co-work",text:"USI",custom:"9272112",nodes:[
           {"type":"directory",href:"#fh5co-work",text:"TD",custom:"109 1418",nodes:[
+            {"type":"directory",href:"#fh5co-work",text:"PROBLEME_ELIOT",custom:"11111205",nodes:[
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/aa-le-plus-present",text:"aa-le-plus-present",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/extrait-toutes-les-sous-chaines",text:"extrait-toutes-les-sous-chaines",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/extrait-une-sous-chaine",text:"extrait-une-sous-chaine",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/fasta",text:"fasta",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/histogramme-proteine",text:"histogramme-proteine",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/nb-aa-de-type",text:"nb-aa-de-type",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/plus-petite-chaine-non-repetee",text:"plus-petite-chaine-non-repetee",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/prepa",text:"prepa",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/sous-chaine-la-plus-frequente",text:"sous-chaine-la-plus-frequente",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/statbio",text:"statbio",custom:"11111205"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/test_sous_sequence",text:"test_sous_sequence",custom:"11111205"},
+            ]},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/1_Communications",text:"1_Communications",custom:"9272112"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"9272112"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/3_Emacs",text:"3_Emacs",custom:"9272112"},

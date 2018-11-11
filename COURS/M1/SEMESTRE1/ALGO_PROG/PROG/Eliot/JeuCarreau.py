@@ -47,6 +47,11 @@ class Plateau:
             self.areas["total"].memorize(rectangle_initial)
             self.areas[color].memorize(rectangle_initial)
 
+        self.labels = {color: Label(self.main, fg=color, bg="gray22") for color in self.list_color}
+        for color in self.labels:
+            self.labels[color].pack()
+
+        self.update_stats()
         self.turn = 0
         self.rec = Rectangle(self.canvas, self.list_color[self.turn])
 
@@ -54,20 +59,22 @@ class Plateau:
 
         self.main.mainloop()
 
-    def next_turn(self, event):
+    def next_turn(self, _):
         if self.is_valid_place():
+            self.update_stats()
             self.turn_passed = 0
             self.areas["total"].memorize(self.rec)
             self.rec.darkening_color()
             self.areas[self.list_color[self.turn]].memorize(self.rec)
-            print(self.areas[self.list_color[self.turn]].area * 100 / self.areas["total"].area)
 
-            self.turn += 1 if self.turn < self.nb_player - 1 else - self.nb_player - 2
-            print(self.list_color[self.turn])
+            self.turn += 1
+            if self.turn == self.nb_player:
+                self.turn = 0
+
             self.rec = Rectangle(self.canvas, self.list_color[self.turn])
             self.rebind()
 
-    def pass_turn(self, event):
+    def pass_turn(self, _):
         if self.turn_passed == self.nb_player - 1:  # End of the game
             scores = {key: self.areas[key].area for key in self.areas}
             scores["total"] = 0
@@ -81,7 +88,9 @@ class Plateau:
         self.turn_passed += 1
         self.rec.clear()
 
-        self.turn += 1 if self.turn < self.nb_player - 1 else - self.nb_player - 2
+        self.turn += 1
+        if self.turn == self.nb_player:
+            self.turn = 0
         self.rec = Rectangle(self.canvas, self.list_color[self.turn])
         self.rebind()
 
@@ -125,8 +134,13 @@ class Plateau:
                 return True
         return False
 
+    def update_stats(self):
+        total = self.areas["total"].area
 
-    def quit(self, event):
+        for color in self.labels:
+            self.labels[color].config(text="{}: {:.2f}%".format(color, 100 * self.areas[color].area / total))
+
+    def quit(self, _):
         self.root.destroy()
 
 
@@ -182,7 +196,7 @@ class Rectangle:
                            self.Cx, self.Cy,
                            self.Dx, self.Dy)
 
-    def switch(self, event):
+    def switch(self, _):
         if self.oriented:
             self.Bx = self.Ax + self.h
             self.By = self.Ay
@@ -205,7 +219,7 @@ class Rectangle:
             self.oriented = True
         self._draw()
 
-    def move_up(self, event):
+    def move_up(self, _):
         if self.Ay > 0:
             self.canvas.move(self.rectangle, 0, -10)
             self.Ax, self.Ay, \
@@ -213,7 +227,7 @@ class Rectangle:
             self.Cx, self.Cy, \
             self.Dx, self.Dy = self.canvas.coords(self.rectangle)
 
-    def move_down(self, event):
+    def move_down(self, _):
         if self.Cy < Plateau.h:
             self.canvas.move(self.rectangle, 0, +10)
             self.Ax, self.Ay, \
@@ -221,7 +235,7 @@ class Rectangle:
             self.Cx, self.Cy, \
             self.Dx, self.Dy = self.canvas.coords(self.rectangle)
 
-    def move_left(self, event):
+    def move_left(self, _):
         if self.Ax > 0:
             self.canvas.move(self.rectangle, -10, 0)
             self.Ax, self.Ay, \
@@ -229,7 +243,7 @@ class Rectangle:
             self.Cx, self.Cy, \
             self.Dx, self.Dy = self.canvas.coords(self.rectangle)
 
-    def move_right(self, event):
+    def move_right(self, _):
         if self.Bx < Plateau.w:
             self.canvas.move(self.rectangle, 10, 0)
             self.Ax, self.Ay, \
@@ -238,17 +252,9 @@ class Rectangle:
             self.Dx, self.Dy = self.canvas.coords(self.rectangle)
 
     def set_top_left(self):
-        self.Ax = 0
-        self.Ay = 0
-
-        self.Bx = self.w
-        self.By = 0
-
-        self.Cx = self.w
-        self.Cy = self.h
-
-        self.Dx = 0
-        self.Dy = self.h
+        self.Ax = self.Ay = self.By = self.Dx = 0
+        self.Bx = self.Cx = self.w
+        self.Cy = self.Dy = self.h
         self._draw()
 
     def set_bottom_left(self):
@@ -260,31 +266,19 @@ class Rectangle:
         self._draw()
 
     def set_top_right(self):
-        self.Ax = Plateau.w - self.w
-        self.Ay = 0
+        self.Ax = self.Dx = Plateau.w - self.w
+        self.Ay = self.By = 0
+        self.Bx = self.Cx = Plateau.w
+        self.Cy = self.Dy = self.h
 
-        self.Bx = Plateau.w
-        self.By = 0
-
-        self.Cx = Plateau.w
-        self.Cy = self.h
-
-        self.Dx = Plateau.w - self.w
-        self.Dy = self.h
         self._draw()
 
     def set_bottom_right(self):
-        self.Ax = Plateau.w - self.w
-        self.Ay = Plateau.h - self.h
+        self.Ax = self.Dx = Plateau.w - self.w
+        self.Ay = self.By = Plateau.h - self.h
+        self.Bx = self.Cx = Plateau.w
+        self.Cy = self.Dy = Plateau.h
 
-        self.Bx = Plateau.w
-        self.By = Plateau.h - self.h
-
-        self.Cx = Plateau.w
-        self.Cy = Plateau.h
-
-        self.Dx = Plateau.w - self.w
-        self.Dy = Plateau.h
         self._draw()
 
     def clear(self):
@@ -293,7 +287,7 @@ class Rectangle:
 
 class Area:
     def __init__(self):
-        self.matrice = [["." for x in range(Plateau.w // 10 + 1)] for y in range(Plateau.h // 10 + 1)]
+        self.matrice = [["." for _ in range(Plateau.w // 10 + 1)] for _ in range(Plateau.h // 10 + 1)]
 
     def memorize(self, r: Rectangle):
         for x in range(int(r.Ax // 10), int(r.Bx // 10)):

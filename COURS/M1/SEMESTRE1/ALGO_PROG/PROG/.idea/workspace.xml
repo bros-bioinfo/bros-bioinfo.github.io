@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2745886c-a300-40ef-bc70-ffbdff34736a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eliot/Visual_Molecule.py" beforeDir="false" afterPath="$PROJECT_DIR$/Eliot/Visual_Molecule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eliot/JeuCarreau.py" beforeDir="false" afterPath="$PROJECT_DIR$/Eliot/JeuCarreau.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,20 +17,20 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="" value="1" />
-          <entry key="Python Console" value="878" />
+          <entry key="Python Console" value="886" />
           <entry key="cure" value="57" />
           <entry key="dummy" value="31" />
           <entry key="fasta" value="123" />
-          <entry key="md" value="4132" />
-          <entry key="py" value="35518" />
+          <entry key="md" value="4134" />
+          <entry key="py" value="36657" />
           <entry key="txt" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="4125" />
+          <entry key="Markdown" value="4127" />
           <entry key="PLAIN_TEXT" value="203" />
-          <entry key="Python" value="36461" />
+          <entry key="Python" value="37608" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -46,8 +46,8 @@
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="8" />
           <entry key="project.open.time.8" value="5" />
-          <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.open.time.9" value="6" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,8 +55,8 @@
           <entry key="fasta" value="2" />
           <entry key="gif" value="1" />
           <entry key="iris" value="1" />
-          <entry key="md" value="5" />
-          <entry key="py" value="94" />
+          <entry key="md" value="8" />
+          <entry key="py" value="98" />
           <entry key="pyi" value="1" />
           <entry key="sequence_pizza" value="1" />
           <entry key="txt" value="15" />
@@ -66,9 +66,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="Markdown" value="5" />
+          <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="94" />
+          <entry key="Python" value="98" />
           <entry key="PythonStub" value="1" />
           <entry key="XML" value="3" />
         </counts>
@@ -93,26 +93,57 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Eliot/JeuCarreau.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+            <state relative-caret-position="405">
+              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1541782610646" expanded="true" signature="6614:6620" ph="..." />
-                <marker date="1541782610646" expanded="true" signature="9395:9681" ph="..." />
-                <marker date="1541782610646" expanded="true" signature="10284:10286" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/pdst.py">
+        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/fasta.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/aa-le-plus-present.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="240">
+                <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/site-packages/path.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="91" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="91" />
+            <state relative-caret-position="2609">
+              <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -151,6 +182,7 @@
       <find>self.turn</find>
       <find>[self.turn]</find>
       <find>self.main.bind</find>
+      <find>files</find>
     </findStrings>
     <replaceStrings>
       <replace>p</replace>
@@ -220,6 +252,8 @@
         <option value="$PROJECT_DIR$/Eliot/Visual_Molecule.py" />
         <option value="$PROJECT_DIR$/../ALGO/Eliot/Double_Nested_List.py" />
         <option value="$PROJECT_DIR$/Eliot/JeuCarreau.py" />
+        <option value="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py" />
+        <option value="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/aa-le-plus-present.md" />
       </list>
     </option>
   </component>
@@ -274,15 +308,24 @@
               <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Eliot" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/bros-bioinfo.github.io/COURS/M1" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="SEMESTRE1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ALGO_PROG" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="USI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="TD" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="PROBLEME_ELIOT" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="PROG" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -296,7 +339,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Téléchargements/uniprot-gene%3Ains+length%3A%5B100+TO+120%5D+NOT+name%3Alike-filtered-reviewed%3--.fasta" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -310,7 +353,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.JeuCarreau">
+  <component name="RunManager" selected="Python.MDer">
     <configuration name="Double_Nested_List" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PROG" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -345,7 +388,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Eliot/JeuCarreau.py" />
-      <option name="PARAMETERS" value="25 40 3" />
+      <option name="PARAMETERS" value="25 40 4" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MDer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PROG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -395,41 +459,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="algojammer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PROG" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Algojammer" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Algojammer/algojammer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.algojammer" />
       <item itemvalue="Python.TD3" />
       <item itemvalue="Python.Double_Nested_List" />
       <item itemvalue="Python.Visual_Molecule" />
       <item itemvalue="Python.JeuCarreau" />
+      <item itemvalue="Python.MDer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MDer" />
         <item itemvalue="Python.JeuCarreau" />
         <item itemvalue="Python.Visual_Molecule" />
         <item itemvalue="Python.Double_Nested_List" />
         <item itemvalue="Python.TD3" />
-        <item itemvalue="Python.algojammer" />
       </list>
     </recent_temporary>
   </component>
@@ -462,17 +505,17 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" sideWeight="0.5016129" side_tool="true" weight="0.27614832" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.1776425" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4983871" visible="true" weight="0.17985612" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32972974" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32972974" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32864866" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002767" side_tool="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32864866" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -561,24 +604,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ALGO/turtle1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/seq.txt" />
-    <entry file="file://$PROJECT_DIR$/../ALGO/turtle2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../IMAGE_NUM/TD/Machine Learning/digit NN.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ALGO/composition.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -813,20 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3660">
           <caret line="244" column="23" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
-          <folding>
-            <marker date="1540979531879" expanded="true" signature="3212:3213" ph="..." />
-            <marker date="1540979531879" expanded="true" signature="5823:5868" ph="..." />
-            <marker date="1540979531879" expanded="true" signature="5882:5887" ph="..." />
-            <marker date="1540979531879" expanded="true" signature="6109:6114" ph="..." />
-            <marker date="1540979531879" expanded="true" signature="6380:6385" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/pdst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="91" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="91" />
         </state>
       </provider>
     </entry>
@@ -841,10 +852,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="31" column="112" selection-start-line="31" selection-start-column="112" selection-end-line="31" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="647" column="8" selection-start-line="647" selection-start-column="8" selection-end-line="647" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Travail/Dublin/ProgrammingForBiologist/DNA manipulations/pdst.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="91" selection-start-line="24" selection-start-column="91" selection-end-line="24" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eliot/JeuCarreau.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1541671908145" expanded="true" signature="31:247" ph="..." />
-            <marker date="1541671908145" expanded="true" signature="49:247" ph="..." />
           </folding>
         </state>
       </provider>
@@ -860,22 +890,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/tkinter/__init__.py">
+    <entry file="file://$USER_HOME$/anaconda/envs/PycharmProjects/lib/python3.6/site-packages/path.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="647" column="8" selection-start-line="647" selection-start-column="8" selection-end-line="647" selection-end-column="8" />
+        <state relative-caret-position="2609">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eliot/JeuCarreau.py">
+    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/fasta.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/aa-le-plus-present.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="240">
+            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../USI/TD/PROBLEME_ELIOT/MDer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1541782610646" expanded="true" signature="6614:6620" ph="..." />
-            <marker date="1541782610646" expanded="true" signature="9395:9681" ph="..." />
-            <marker date="1541782610646" expanded="true" signature="10284:10286" ph="..." />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
