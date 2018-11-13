@@ -3,14 +3,14 @@ function getTree() {
 [
   {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
     {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"9272112",nodes:[
-      {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"9272112",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"11131412",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"1019  012",nodes:[
-          {"type":"directory",href:"#fh5co-work",text:"Eliot",custom:"118 1413",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"Eliot",custom:"11131636",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/Eliot/Algo_Eliot",text:"Algo_Eliot",custom:"116 1833"},
           ]},
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/algo",text:"algo",custom:"10161500"},
         ]},
-        {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"1022  945",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"11131413",nodes:[
           {"type":"directory",href:"#fh5co-work",text:"PROJET",custom:"9272112",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/PROJET/Compte_rendu",text:"Compte_rendu",custom:"9272112"},
           ]},
@@ -61,8 +61,8 @@ function getTree() {
         ]},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"ANGLAIS",custom:"10171701",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/English",text:"English",custom:"9272112"},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/Oral_English2",text:"Oral_English2",custom:"10271657"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/English",text:"English",custom:"11111422"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/Oral_English2",text:"Oral_English2",custom:"1112  904"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"10242256",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"TD",custom:"10242259",nodes:[
@@ -85,13 +85,16 @@ function getTree() {
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Philogenie",text:"Philogenie",custom:"9272112"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"9272112"},
       ]},
-      {"type":"directory",href:"#fh5co-work",text:"STATS",custom:"115  901",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"STATS",custom:"11121306",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"9272112",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD1/R_EN_TUTORIAL.pdf",text:"R_EN_TUTORIAL.pdf",custom:"9272112"},
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD1/TD1.pdf",text:"TD1.pdf",custom:"9272112"},
         ]},
         {"type":"directory",href:"#fh5co-work",text:"TD2",custom:"9272112",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD2/TD2",text:"TD2",custom:"9272112"},
+        ]},
+        {"type":"directory",href:"#fh5co-work",text:"TD3_Analyse_Groupement",custom:"11121307",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD3_Analyse_Groupement/analyse_groupement",text:"analyse_groupement",custom:"11121307"},
         ]},
         {"type":"directory",href:"#fh5co-work",text:"TD_papier",custom:"9272112",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD_papier/td_papier",text:"td_papier",custom:"9272112"},

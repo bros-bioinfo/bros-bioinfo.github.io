@@ -116,7 +116,7 @@ $\rule{8cm}{0.4pt}$
 ## Gut Microbiome study techniques 
 ### Elsa
 #### Old method : Linear model
-#### New technique : Phylogenetic linear modellling
+#### New technique : Phylogenetics linear modelling
 - Draw the tree
 - Include the prevalence of microbes
 - Presence or abscence of genes in the clades
@@ -128,3 +128,18 @@ $\rule{8cm}{0.4pt}$
 
 ## Genomics and Genomic editing in treatment
 ### Eden
+
+$\rule{8cm}{0.4pt}$
+## Mind reading and ANN
+### Vincent 
+#### Artificial Neural Network
+- Input layer
+- Hidden layer
+- Output Layer
+
+Types:
+- Convolutionnal (CNN)
+- Recursive
+- Recurrent
+- Deep
+- 

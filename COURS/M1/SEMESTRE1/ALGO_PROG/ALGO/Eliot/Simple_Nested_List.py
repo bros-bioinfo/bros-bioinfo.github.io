@@ -158,8 +158,8 @@ class ListeChaine:
 
 
 l = ListeChaine()
-l.push_front(1)
-l.push_front(2)
+# l.push_front(1)
+# l.push_front(2)
 l.push_back(0)
 
 print(l)
