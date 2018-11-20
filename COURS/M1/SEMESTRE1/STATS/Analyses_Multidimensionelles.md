@@ -274,6 +274,41 @@ $$D _{15} (x _1, x _2) = \sqrt{\sum\limits _{j = 1} ^{p} \frac{1}{y _{+j}}\left 
     - 0.3 < s < 1
         - Un peu mieux que le hasard
 ## VI. L'Analyse en Composante Principale (ACP)
+ - Nature des données 
+    - Ensemble d'objets (individus) décrits par des descripteurs (variables) quantitatifs
+- Nuage des individus
+    - Espace à $p$ dimensions
+    - $p$ est le nombre de variables
+    - G : centre de gravité du nuage
+        - Ses coordonnées sont les moyennes des $p$ variables
+    - Si $p>3$, nuage non visualisable mais ...
+        - La distance euclidienne peut toujours être utilisée pour mesurer la ressemblance entre les individus
+            - $d _{jk} = \sqrt{\sum\limits _{i=1} ^{p} (y _{ij} - y _{ik}) ^2}$
+- Le centrage et réduction des données
+    - $x _{ij} \rightarrow \frac{x _{ij} - \bar x _{j}}{\sigma(X _j)}$
+    - Le centrage fait coïncider l'origine du repère avec le centre de gravité du nuage
+        - En effet, les moyennes correspondent à 0 après centrage
+    - La réduction résout les questions liées à la déformation du nuage du fait de choix d'unités différents
+- Principe: produire une image approchée du nuage des individus dans un espace avec un nombre réduit de dimensions (visualisable) (= Projection)
+    - Définir un critère de la minimisation de la déformation
+        - Conservation de la plus grande proportion des distances de l'espace originel
+    - Application à une réduction dans un espace à une dimension
+        - $H _i$ projection orthogonale de l'individu I sur un axe $u$
+        - Trouver l'axe $u _1$ tel que la somme des $||OH _{i,u1}|| ^2$
+        - Maximiser la somme des $1/P _i \times ||OH _{i,u1}|| ^2$ si des poids différents sont donnés aux individus $i \rightarrow P _i$
+        - Notion d'inertie
+        - Assimilable à une variable
+        - Trouver l'axe $u _1$ présentant la variabilité maximale
+        - Trouver l'axe $u _1$ présentant l'élongation maximale
+        - Axe $u _1$ est une composante linéaire des axes originels
+        - Axe $u _1$ : première composante principale
+- Une propriété remarquable de l'ACP: **L'emboîtement des solutions**
+    - Propriété liée à l'utilisation d'un critère de maximalisation
+    - La première composante principale est incluse dans le premier plan principal
+    - La deuxième dimension de ce plan est définie par l'axe $u _2$ qui est orthogonal à $u _1$ 
+        - l'axe $u _2$ maximise la somme des $1/P _i \times ||OH _{i,s}|| ^2$ si des poids différents sont donnés aux individus 
+- Afin de quantifier un équivalent du stress pour les ACP permettant de déterminer le nombre de dimensions optimal,on calcul le pourcentage de variance expliquée par les CP:
+$$\frac{\sum 1 / P _i \times OH _{i} ^2}{\sum 1 / P _i \times OI _{i} ^2} \times 100 $$
 
 ## VII. L'analyse factorielle des correspondances 
 

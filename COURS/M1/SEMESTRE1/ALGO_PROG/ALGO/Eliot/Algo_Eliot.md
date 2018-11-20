@@ -46,10 +46,10 @@ Les files sont des structures de données contenant des elements qui peuvent app
 
 Un élément $e$ est ajouté avant l'élément **b** alors l'élément $e$ sera enlevé avant l'élément **b**.
 
-### Les listes de données
+## Les listes de données
 Les listes sont des structures de données qui contiennent une séquence d'éléments dont les éléments peuvent apparaître en plusieurs exemplaires. Chaque élément est encapsulé dans une structure de données appelée cellule qui permet de récupérer l'élément et qui permet de récupérer la cellule encapsulant l'élément suivant dan sla séquence. On parle alors de liste simplement chaînée.
 
-#### Listes chaînées
+### Listes chaînées
 Une liste chainée est une structure de donnée encadrant une séquence d'éléments ($L _1$, $L _2$, ... , $L _n$) où les éléments peuvent apparaître avec répétition.  
 Dans une liste simplement chaînée , chaque élément $L_i$ est encapsulé dans une cellule $C_i$ qui sont des structures que nous allons définir un peu plus tard .  
 Une cellule $C _{n+1}$ supplémentaire est utilisée pour coder la fin de la liste.  
@@ -113,7 +113,7 @@ while not it is end(l):
     print(value(l, it))
     it = next(it)
 ```
-#### Liste doublement chaînée
+### Liste doublement chaînée
 Une liste doublement chaînée est une liste chaînée dont les cellules $C _i$ contiennent une information supplémentaire nommée prédécesseur qui est une référence  vers la cellule $C _{i-1}$ si $2 \leqslant i \leqslant n+1$. Vers la cellule de fin de liste $C _{n+1}$ si $i = 1$ et renvoie `None` pour la cellule de fin:  
 
 
@@ -128,4 +128,106 @@ La liste doublement chaînée contient en plus les fonctions suivantes:
 
 ```python
 
+```
+
+## Récursivité
+### 1. La pile d'execution
+Dans un programme, à chaque exectution d'une  fonction, le contenu des variables locales 
+
+
+
+
+La pile est commune à tout le programme.
+Au début du progrramme, la ligne courante d'execution ainsi que les variables du programmes sont empilés dans la pile.
+
+Ensuite, au cours de l'execution du programme, à chaque execution d'une fonction f, les variables locales de f, la ligne courante dans f ainsi que ses paramètres sont empilés dans la pile.
+
+L'execution du programme continue donc à partir de la ligne courante de f qui a été initialisé à la première ligne de f.  Lorsque la fonction f se termine, toutes les données empilées par f sont dépilées et perdues. Seule la valeur de retour de f est gardée en mémoire.
+
+L'execution du programme continue alors à la ligne courrante d'execution de la fonction située en haut de la pile.
+
+Cela correspond à la dernière fonction appelée durant l'execution du programme
+
+Par exemple, lorsque l'on execute le programme suivant:
+```python
+1    def g(a):
+2      print("g(" + str(a) + ")")
+3      return 1000
+4    
+5    def h(a):
+6      print("h(" + str(a) + ")")
+7      return 2000
+8    
+9    def f(a):
+10     print("f(" + str(a) + ")")
+11     v = g(a + 1)
+12     print(v)
+13     v = h(a + 2)
+14     print(v)
+15   
+16   f(1)
+17   print("fin")
+```
+
+On obtient sur le terminal le résultat suivant:
+```
+f(1)
+g(2)
+1000
+g(3)
+2000
+fin
+```
+
+La pile évolue suivant le schéma ci dessous. Dans ce schéma, nous avons décidé d'empiler les valeurs de retour des fonctions
+```
+"""     
+           _________
+           |f|1 (a)|
+Line 1 --> | |l. 9 | -->
+  |        =========
+Main       |/|l. 13|
+           ¯¯¯¯¯¯¯¯¯
+"""
+```
+
+Dans python, il est possible d'inspecter la pile d'execution avec le module inspect. Voici un exemple:
+
+```python
+import inspect
+def f(a,b):
+  g(a+1, b+1)
+
+def g(c,d):
+  print("La pile est : ")
+  print(inspect.stack())
+  print()
+  print("Les données de la fonction rentrée en haut de la pile sont : ")
+
+  print(inspect.stack()[0])
+  print()
+
+  print("Les variables de cette fonction sont : ")
+  print(inspect.getargvalues(inspect.stack()[0][0]))
+
+f(1, 2)
+```
+
+### La récursivité
+On dit qu'une fonction f est récursive si durant l'exécution de f, la fonction f est de nouveau appelée .
+
+Autrement dir, la fonction f est récursive si au cours de son execution, la fonction apparaît au moins deux fois en même temps dans la pile d'exécution.
+Voici un exemple de programme récursif:
+```python
+def factoriel(n):
+  return n * factoriel(n - 1) if n != 0 else 1
+```
+Ou plus simplement 
+```python
+def factoriel(n):
+  if n == 0:  
+    return 1
+  return n * factoriel(n - 1) 
+
+print(factoriel(2))
 ```

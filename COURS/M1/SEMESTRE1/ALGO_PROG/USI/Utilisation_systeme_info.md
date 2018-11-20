@@ -2,42 +2,38 @@
 
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-<!-- code_chunk_output -->
-
-* [Utilisation des Systèmes Informatiques](#utilisation-des-systèmes-informatiques)
-	* [I. Ordinateur](#i-ordinateur)
-		* [A. Composants basiques:](#a-composants-basiques)
-			* [Le contenu de la RAM:](#le-contenu-de-la-ram)
-		* [B. Le processeur](#b-le-processeur)
-	* [II. Les processus](#ii-les-processus)
-		* [A. Jeux d'instructions du processeur](#a-jeux-dinstructions-du-processeur)
-		* [B. Etats des Processus:](#b-etats-des-processus)
-		* [C. Filiation des processus](#c-filiation-des-processus)
-		* [D. Les librairies de langages](#d-les-librairies-de-langages)
-	* [III. Environnements UNIX](#iii-environnements-unix)
-		* [Propriétaire et groupe (unix)](#propriétaire-et-groupe-unix)
-		* [Comment tuer un processus](#comment-tuer-un-processus)
-		* [Système de Fichiers](#système-de-fichiers)
-			* [Physique](#physique)
-			* [Logique](#logique)
-		* [Désignation des fichiers et répertoire](#désignation-des-fichiers-et-répertoire)
-	* [IV. Protections et accès](#iv-protections-et-accès)
-	* [V. SHELL](#v-shell)
-		* [A. Variable exportées / Non exportées](#a-variable-exportées-non-exportées)
-		* [B. Fenêtre "TERMINAL"](#b-fenêtre-terminal)
-		* [C. Redirections](#c-redirections)
-			* [1. Redirection ENTREE STANDARD (STDIN)](#1-redirection-entree-standard-stdin)
-			* [2. Redirection SORTIE STANDARD (STDOUT)](#2-redirection-sortie-standard-stdout)
-			* [3. Redirection SORTIE D'ERREUR STANDARD (STDERR)](#3-redirection-sortie-derreur-standard-stderr)
-		* [D. Pipe](#d-pipe)
-		* [E. Accéder au contenu d'une variable](#e-accéder-au-contenu-dune-variable)
-		* [F. Code de retour d'un processus:](#f-code-de-retour-dun-processus)
-		* [G. Enchaînement de pipe (= pipeline)](#g-enchaînement-de-pipe-pipeline)
-		* [H. Enchaînement de processus](#h-enchaînement-de-processus)
-* [Annexe](#annexe)
-	* [Outils Libres et Non Libres sur PC](#outils-libres-et-non-libres-sur-pc)
-
-<!-- /code_chunk_output -->
+- [Utilisation des Systèmes Informatiques](#utilisation-des-syst%C3%A8mes-informatiques)
+    - [I. Ordinateur](#i-ordinateur)
+        - [A. Composants basiques:](#a-composants-basiques)
+            - [Le contenu de la RAM:](#le-contenu-de-la-ram)
+        - [B. Le processeur](#b-le-processeur)
+    - [II. Les processus](#ii-les-processus)
+        - [A. Jeux d'instructions du processeur](#a-jeux-dinstructions-du-processeur)
+        - [B. États des Processus:](#b-%C3%A9tats-des-processus)
+        - [C. Filiation des processus](#c-filiation-des-processus)
+        - [D. Les librairies de langages](#d-les-librairies-de-langages)
+    - [III. Environnements UNIX](#iii-environnements-unix)
+        - [Propriétaire et groupe (unix)](#propri%C3%A9taire-et-groupe-unix)
+        - [Comment tuer un processus](#comment-tuer-un-processus)
+        - [Système de Fichiers](#syst%C3%A8me-de-fichiers)
+            - [Physique](#physique)
+            - [Logique](#logique)
+        - [Désignation des fichiers et répertoire](#d%C3%A9signation-des-fichiers-et-r%C3%A9pertoire)
+    - [IV. Protections et accès](#iv-protections-et-acc%C3%A8s)
+    - [V. SHELL](#v-shell)
+        - [A. Variable exportées / Non exportées](#a-variable-export%C3%A9es--non-export%C3%A9es)
+        - [B. Fenêtre "TERMINAL"](#b-fen%C3%AAtre-%22terminal%22)
+        - [C. Redirections](#c-redirections)
+            - [1. Redirection ENTREE STANDARD (STDIN)](#1-redirection-entree-standard-stdin)
+            - [2. Redirection SORTIE STANDARD (STDOUT)](#2-redirection-sortie-standard-stdout)
+            - [3. Redirection SORTIE D'ERREUR STANDARD (STDERR)](#3-redirection-sortie-derreur-standard-stderr)
+        - [D. Pipe](#d-pipe)
+        - [E. Accéder au contenu d'une variable](#e-acc%C3%A9der-au-contenu-dune-variable)
+        - [F. Code de retour d'un processus:](#f-code-de-retour-dun-processus)
+        - [G. Enchaînement de pipe (= pipeline)](#g-encha%C3%AEnement-de-pipe--pipeline)
+        - [H. Enchaînement de processus](#h-encha%C3%AEnement-de-processus)
+- [Annexe](#annexe)
+    - [Outils Libres et Non Libres sur PC](#outils-libres-et-non-libres-sur-pc)
 
 
 
@@ -78,18 +74,20 @@ Le processeur contient l'**UAL** : Unité Arithmétique et Logique.
 
 A est appelé R1 par le prof, B est R2, Y est R3. L'UAL lit les cases A et B et affiche le résultat sur Y (instruction: save R3 sur la RAM).
 
-Pour additionner deux réels, on a 6 "top horloges":
+Pour additionner deux réels, on a 7 "top horloges":
 
 - lire R1
+- Save R1
 - lire R2
+- Save R2
 - calculer R3
 - save R3
-- afficher R3
-- ?
+- Afficher R3
+
 
 Les **FLOPS** sont *les nombres d'opérations en virgule flottante par seconde.*
 
-Il faut une puissance de calcul de 1 GFLOPS (lire gigaFLOPS) avec un processeur de 6GHz.
+Il faut une puissance de calcul de 1 GFLOPS (lire gigaFLOPS) avec un processeur de 7GHz.
 
 **Temps d'accès moyen à une case mémoire:**
 
@@ -103,12 +101,12 @@ Il faut une puissance de calcul de 1 GFLOPS (lire gigaFLOPS) avec un processeur 
 
 ## II. Les processus
 
-Un processus est une **"occurence"** en mémoire d'un programme éxecutable.
+Un processus est une **"occurrence"** en mémoire d'un programme executable.
 
 Le noyau du système gère le stockage mémoire de la RAM. Cela garantie l'intégrité de fonctionnement de l'ordinateur et protège le matériel présent qui a des ressource **critique**.
 
 Le code du noyau se trouve sur le DD et il est chargé dans la RAM au **boot** de l'ordinateur.
-Le processur attribue un identifiant unique à chaque processus, le **PID**. C'est un nombre entier (exemple: PID = 8112). Le noyau lui n'a **pas**  de PID.
+Le processeur attribue un identifiant unique à chaque processus, le **PID**. C'est un nombre entier (exemple: PID = 8112). Le noyau lui n'a **pas**  de PID.
 
 
 
@@ -148,13 +146,13 @@ Un processus peut "s'auto-geler" s'il n'a plus rien à faire pendant $\Delta$t, 
 
 ### A. Jeux d'instructions du processeur
 
-Les **instructions critiques** du processeur accèdent au matériel (par exemple: écriture sur le disque dur) et les **non critiques** ne peuvent pas y accéder. Pour protéger le matériel de demandes illégitimes de processus (malveillants notemment), ils ont rajoutés dans le processeur une case mémoire de 1 bit (0 ou 1) appelé le **mode**.
+Les **instructions critiques** du processeur accèdent au matériel (par exemple: écriture sur le disque dur) et les **non critiques** ne peuvent pas y accéder. Pour protéger le matériel de demandes illégitimes de processus (malveillants notamment), ils ont rajoutés dans le processeur une case mémoire de 1 bit (0 ou 1) appelé le **mode**.
 
 En effet seul le noyau doit executer les appels systèmes et peut demander aux processeur d'écrire sur le disque par exemple. Si on ne met pas en classe cette sécurité supplémentaire, des programmes pourrait copier un bout du code du noyau et executer des appels systèmes à la place de ce dernier.
 
-Quand la case mémoire est sur 0: ***mode user***
+Quand la case mémoire est sur 0: ***mode protégé***
 
-Quand la case mémoire est sur 1: ***mode protégé***
+Quand la case mémoire est sur 1: ***mode user***
 
 Exemple (les nombres et les instructions sont arbitraires)
 
@@ -169,17 +167,17 @@ A[Début du processus] -->B(Demande d'écriture <br>sur le disque: x.x.x.x)
     C -->| Protégé | E[Processus executé]
 ```
 
-En fait, si l'instruction est critique (ici commence par **1**), il faut absolument que le mode du processeur corresponde et soit sur 1 aussi sinon le processus est détruit. Dans tous les autres cas le processus est executé. Dans le graph avec les processus plus haut, c'est au moment où l'horloge envoie ces courants électriques que le basculement du mode se fait. Lorsque ce sont les processus courrants qui sont sur le processeur le mode est **0**, lorsque le noyau passe sur le processeur, l'horloge bascule le mode sur **1**. Ainsi seul le noyau peut executer les instructions critiques (incluant les appels systèmes).
+En fait, si l'instruction est critique (ici commence par **0**), il faut absolument que le mode du processeur corresponde et soit sur 0 aussi sinon le processus est détruit. Dans tous les autres cas le processus est exécuté. Dans le graph avec les processus plus haut, c'est au moment où l'horloge envoie ces courants électriques que le basculement du mode se fait. Lorsque ce sont les processus courants qui sont sur le processeur le mode est **1**, lorsque le noyau passe sur le processeur, l'horloge bascule le mode sur **0**. Ainsi seul le noyau peut executer les instructions critiques (incluant les appels systèmes).
 
 ***Comment le processeur sait où trouver le code du noyau dans la RAM puisque le noyau n'a pas de PID ?***
 
 Le noyau n'a pas de PID mais étant chargé en premier lors du démarrage de l'ordinateur il se trouve "tout en bas" de la RAM au début. Donc le processeur a chaque fois qu'il doit aller chercher le noyau dans la RAM il va "chercher" dans l'adresse électronique la plus basse (imaginer la RAM comme un immeuble, le noyau est au rez de chaussée).
 
-Pour que le noyau soit chargé en premier lors du démarage de l'ordinateur il y a un composant à coté du processeur qui contient un peu de mémoire la **ROM** qui contient le **BIOS**, un petit utitilitaire qui permet de choisir le système d'exploitation ( et le noyau ) en cherchant dans le disque dur si il y a un noyau.
+Pour que le noyau soit chargé en premier lors du démarrage de l'ordinateur il y a un composant à coté du processeur qui contient un peu de mémoire la **ROM** qui contient le **BIOS**, un petit utilitaire qui permet de choisir le système d'exploitation ( et le noyau ) en cherchant dans le disque dur si il y a un noyau.
 
 
 
-### B. Etats des Processus:
+### B. États des Processus:
 
 - En création (en cours de copie sur la RAM et attribution de PID)
 - En attente
@@ -199,7 +197,7 @@ Plus la valeur est élevé plus le processus est prioritaire. Une fois le proces
 
 On identifie ainsi le Parent PID (**PPID**) qui est le PID du processus initiateur.
 
-Le noyau crée le tout premier processus au démarage de l'ordinateur (init), qui lui même crée d'autre processus et ainsi de suite. Si le processus meurt les fils peuvent mourir ou continuer à exister en fonction de ce que prévoit le programmeur. Si un processus devient orphelin sont PPID correspond à celui de *init* (1). Et si *init* meurt ça crash.
+Le noyau crée le tout premier processus au démarrage de l'ordinateur (init), qui lui même crée d'autre processus et ainsi de suite. Si le processus meurt les fils peuvent mourir ou continuer à exister en fonction de ce que prévoit le programmeur. Si un processus devient orphelin sont PPID correspond à celui de *init* (1). Et si *init* meurt ça crash.
 
 
 
@@ -330,9 +328,9 @@ Un fichier/répertoire (considéré de la même manière par le système) appart
 
 On définit le mode d'accès : accès à la lecture **( r )**, écriture **(w)**, execution/traverser **(x)** pour propriétaire **(u)**, les membres du groupe Unix **(g)**, tous les autres **(o)**.
 
-rwx | rwx | rwx
---- | --- | ---
-u   | g   | o
+| rwx | rwx | rwx |
+| --- | --- | --- |
+| u   | g   | o   |
 
 Exemple : rw-r----- foot.txt
 
