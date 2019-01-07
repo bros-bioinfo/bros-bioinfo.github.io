@@ -1,0 +1,20 @@
+em.figure {
+    font-family: "Proxima Nova Soft";
+}
+
+div.legend {
+    text-align: center;
+}
+
+div.small {
+    font-size: small;
+}
+
+img.image {
+    width: 800px;
+    height: 600px;
+}
+body{
+    margin-left: 25%;
+    margin-right: 25%;
+}

@@ -11,9 +11,17 @@ class Cell:
 class ListeChaine:
     def __init__(self):
         end_cell = Cell(None)
-        self.first = end_cell
-        self.last = end_cell
+        end_cell.previous = end_cell
+        end_cell.next = end_cell
         self.end = end_cell
+
+    @property
+    def first(self):
+        return self.end.next
+
+    @property
+    def last(self):
+        return self.end.previous
 
     @staticmethod
     def next(cell: Cell):
@@ -37,45 +45,34 @@ class ListeChaine:
 
         return str(out)
 
-    def clear(self):
-        end_cell = Cell(None)
-        self.first = end_cell
-        self.last = end_cell
-
-    def push_front(self, e):
-        new_cell = Cell(e, previous_cell=self.end, next_cell=self.first)
-        if self.last is self.end:
-            self.last = new_cell
-        self.first.previous = new_cell
-        self.first = new_cell
-
-        self.end.next = self.first
-
-    def push_back(self, e):  # Ajoute un élément en fin de liste
-        new_cell = Cell(e, previous_cell=self.last, next_cell=self.end)
-        if self.first is self.end:
-            self.first = new_cell
-        self.last.next = new_cell
-        self.last = new_cell
-        self.end.previous = self.last
-
-    def insert(self, cell, e):
+    def insert_next(self, cell, e):
         """Créé une nouvelle cellule contenant l’élément e et
         insère cette cellule dans la liste juste après la cellule cell."""
-        it = self.first
-        temp = ListeChaine()
-        while self.value(it) != cell and it is not self.end:
-            temp.push_front(it.value)
-            it = self.next(it)
-        temp.push_front(e)
-        while it is not self.end:
-            temp.push_front(it.value)
-            it = self.next(it)
-        it = temp.first
-        self.clear()
-        while it is not temp.end:
-            self.push_front(it.value)
-            it = self.next(it)
+        new_cell = Cell(e, cell, cell.next)
+        cell.next.previous = new_cell
+        cell.next = new_cell
+
+    def insert_prev(self, cell, e):
+        """Créé une nouvelle cellule contenant l’élément e et
+        insère cette cellule dans la liste juste après la cellule cell."""
+        new_cell = Cell(e, cell.previous, cell)
+        cell.previous.next = new_cell
+        cell.previous = new_cell
+
+    def clear(self):
+        self.end.next = self.end
+        self.end.previous = self.end
+
+    def push_front(self, e):
+        self.insert_next(self.end, e)
+
+    def push_back(self, e):  # Ajoute un élément en fin de liste
+        self.insert_prev(self.end, e)
+
+    @staticmethod
+    def remove(cell):
+        cell.previous.next = cell.next
+        cell.next.previous = cell.previous
 
     def copy(self):
         out = ListeChaine()
@@ -99,7 +96,7 @@ x.push_front("Paf")
 print(x)
 print(l)
 
-l.insert(3, 11)
+l.insert_next(3, 11)
 print(l)
 print()
 

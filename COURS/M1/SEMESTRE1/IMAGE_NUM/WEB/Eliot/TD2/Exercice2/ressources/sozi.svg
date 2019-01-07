@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="111.71867mm"
+   height="111.71867mm"
+   viewBox="0 0 111.71867 111.71867"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="sozi.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="125.92921"
+     inkscape:cy="259.04122"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-others="true"
+     inkscape:snap-nodes="true"
+     inkscape:window-width="1857"
+     inkscape:window-height="1028"
+     inkscape:window-x="63"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-69.490078,-46.568447)">
+    <circle
+       style="fill:#6fc1ba;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path815"
+       cx="125.34941"
+       cy="102.42778"
+       r="55.859333" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#141414;fill-opacity:0.44705882;stroke:none;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 134.66214,82.898044 -8.07924,12.30763 -0.94516,-10.394201 -15.52058,1.322843 -8.95339,15.875074 -2.740394,-0.66146 6.908964,-11.853343 -5.20777,-4.116223 L 85.487282,84.617467 70.059215,110.2864 c 3.889936,27.53552 27.441985,48.01615 55.250895,48.04565 9.44335,-0.022 18.727,-2.43762 26.98336,-7.02128 l 15.29985,-29.2685 -0.94517,-34.962717 -4.53549,-3.590774 -19.27701,34.395611 -3.77961,-0.56689 15.49673,-32.506027 z"
+       id="path815-3"
+       sodipodi:nodetypes="ccccccccccccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:62.67295837px;line-height:1.25;font-family:Uroob;-inkscape-font-specification:Uroob;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.56682384"
+       x="80.31852"
+       y="122.01308"
+       id="text819"><tspan
+         sodipodi:role="line"
+         id="tspan817"
+         x="80.31852"
+         y="122.01308"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Uroob;-inkscape-font-specification:Uroob;fill:#ffffff;stroke-width:1.56682384">SOZI</tspan></text>
+  </g>
+</svg>

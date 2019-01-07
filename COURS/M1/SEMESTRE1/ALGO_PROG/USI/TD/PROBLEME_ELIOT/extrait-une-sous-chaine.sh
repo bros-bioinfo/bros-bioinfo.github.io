@@ -5,13 +5,13 @@ CODE_ERREUR_NB_PARAMETRES=1
 
 affiche_usage ()
 {
-  echo Usage: $0 fichier_protéine_normalisé liste_positions_des_acides_aminés
+    echo Usage: $0 fichier_protéine_normalisé liste_positions_des_acides_aminés
 }
 
 usage ()
 {
-  affiche_usage
-  exit $CODE_ERREUR_NB_PARAMETRES
+    affiche_usage
+    exit $CODE_ERREUR_NB_PARAMETRES
 }
 
 test $# -ne $NB_PARAMETRES && usage

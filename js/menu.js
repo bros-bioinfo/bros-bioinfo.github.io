@@ -2,10 +2,10 @@ function getTree() {
   var data = 
 [
   {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
-    {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"9272112",nodes:[
+    {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"12191714",nodes:[
       {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"11131412",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"1019  012",nodes:[
-          {"type":"directory",href:"#fh5co-work",text:"Eliot",custom:"11131636",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"Eliot",custom:"12191302",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/Eliot/Algo_Eliot",text:"Algo_Eliot",custom:"11201707"},
           ]},
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/algo",text:"algo",custom:"10161500"},
@@ -35,7 +35,7 @@ function getTree() {
                 {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/sous-chaine-la-plus-frequente",text:"sous-chaine-la-plus-frequente",custom:"11111230"},
               ]},
             ]},
-            {"type":"directory",href:"#fh5co-work",text:"PROBLEME_ELIOT",custom:"11111231",nodes:[
+            {"type":"directory",href:"#fh5co-work",text:"PROBLEME_ELIOT",custom:"12191738",nodes:[
               {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/aa-le-plus-present",text:"aa-le-plus-present",custom:"11111229"},
               {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/extrait-toutes-les-sous-chaines",text:"extrait-toutes-les-sous-chaines",custom:"11111229"},
               {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/extrait-une-sous-chaine",text:"extrait-une-sous-chaine",custom:"11111229"},
@@ -64,10 +64,11 @@ function getTree() {
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/English",text:"English",custom:"11111422"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/Oral_English2",text:"Oral_English2",custom:"1112  904"},
       ]},
-      {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"10242256",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"12172003",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"TD",custom:"10242259",nodes:[
-          {"type":"directory",href:"#fh5co-work",text:"Line_Detection",custom:"10242300",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"Line_Detection",custom:"12171813",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Line_Detection/line",text:"line",custom:"10242209"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Line_Detection/line.pdf",text:"line.pdf",custom:"12171813"},
           ]},
           {"type":"directory",href:"#fh5co-work",text:"Machine Learning",custom:"10211240",nodes:[
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Machine Learning/kNN",text:"kNN",custom:"1019  059"},
@@ -76,8 +77,10 @@ function getTree() {
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"9272112"},
           ]},
         ]},
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image",text:"Image",custom:"109  906"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image",text:"Image",custom:"12172003"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image.pdf",text:"Image.pdf",custom:"12172003"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript",text:"Javascript",custom:"102  849"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript.pdf",text:"Javascript.pdf",custom:"12171959"},
       ]},
       {"type":"directory",href:"#fh5co-work",text:"OMIC_BIOINFO",custom:"9272112",nodes:[
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Cours_O2018",text:"Cours_O2018",custom:"9272112"},
@@ -121,7 +124,7 @@ function getTree() {
       {"type":"directory",href:"#fh5co-work",text:"NGS",custom:"9272112",nodes:[
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/NGS/TD_GALAXY.pdf",text:"TD_GALAXY.pdf",custom:"9272112"},
       ]},
-      {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"9272112",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"17 1633",nodes:[
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/Java",text:"Java",custom:"9272112"},
       ]},
     ]},

@@ -29,7 +29,8 @@ def inserer_association(D, cle, valeur):
     while i < index:  # on dépile tout le dico dans une pile P2
         valeurlue = depiler(D)
         clelue = depiler(D)
-        if clelue != cle:  # on empile pas la clé dans P2 si elle correspond à la nouvelle clé (on la supprime)
+        # on empile pas la clé dans P2 si elle correspond à la nouvelle clé (on la supprime)
+        if clelue != cle:
             empiler(P2, clelue)
             empiler(P2, valeurlue)
             indexP2 = indexP2 + 1
@@ -61,7 +62,8 @@ def supprimer_association(D, cle):
     while i < index:  # on dépile tout le dico dans une pile P2
         valeurlue = depiler(D)
         clelue = depiler(D)
-        if clelue != cle:  # on empile pas la clé dans P2 si elle correspond à la nouvelle clé (on la supprime)
+        # on empile pas la clé dans P2 si elle correspond à la nouvelle clé (on la supprime)
+        if clelue != cle:
             empiler(P2, clelue)
             empiler(P2, valeurlue)
             indexP2 = indexP2 + 1
