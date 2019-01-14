@@ -38,7 +38,7 @@ LIST_AA=$(echo A C D E F G H I K L M N O P Q R S T U V W Y)
 touch tmp
 chmod +rwx tmp
 
-for AA in ${LIST_AA}
+for AA in ${LIST_AA} 
 do
     echo ${AA} $(cat ${PROTEIN_FILE} | grep -o ${AA} | wc -l) >> tmp
 done

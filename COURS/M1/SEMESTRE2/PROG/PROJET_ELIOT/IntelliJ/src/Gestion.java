@@ -1,46 +1,77 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.Scanner;
 
 public class Gestion {
+    private static boolean exit = false;
+
     public static void main(String[] args) {
-//        Animal[] tableau = new Animal[3];
-        List<Animal> animaux = new ArrayList<Animal>();
-
-        for (int i = 0; i < 3; i++) {
-            String name = input("Nom de l'animal");
-            int age = intInput("Age de l'animal");
-
-            animaux.add(Animal.newInstance(name, age));
-        }
-
-        for (Animal bete : animaux) {
-            bete.affiche();
+        while (!exit) {
+            menu();
         }
     }
+
+    public static void menu() {
+        print("1 : Ajouter de nouveaux animal(ux)");
+        print("2 : Afficher tous les animaux");
+        print("3 : Afficher un animal selon son nom");
+        print("4 : Afficher la moyenne des âges");
+        print("5 : Faire vieillir tous les animaux");
+        print("6 : Tuer un animal selon son numéro");
+        print("7 : Exit");
+
+        int in = intInput();
+
+        switch (in) {
+            case 1:
+                Animalerie.addAnimal(intInput("Combien d'animaux voulez-vous ajouter ?"));
+                break;
+            case 2:
+                Animalerie.presentation();
+                break;
+            case 3:
+                try {
+                    Animalerie.search(input("Quel est le nom de l'animal ?")).affiche();
+                } catch (NameException e) {
+                    print(e.getMessage());
+                }
+                break;
+            case 4:
+                print(Float.toString(Animalerie.calcMeanAge()));
+                break;
+            case 5:
+                Animalerie.setAllOlder();
+                break;
+            case 6:
+                Animalerie.killByNumber(intInput("Numéro de l'animal à tuer = "));
+                break;
+            case 7:
+                exit = true;
+                break;
+
+            default:
+                print("Entrée non valide");
+        }
+    }
+
 
     public static void print(String message) {
         System.out.println(message);
     }
 
-    public static void print(int nombre) {
+    static void print(int nombre) {
         System.out.println(Integer.toString(nombre));
     }
 
     public static String input() {
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            String out = br.readLine();
-            return out;
+//        try {
+//            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//            String out = br.readLine();
+//            return out;
+        return new Scanner(System.in).next();
 
-        } catch (IOException e) {
-            System.out.println("dope " + e);
-            return "";
-        }
+//        } catch (IOException e) {
+//            System.out.println("dope " + e);
+//            return "";
+//        }
     }
 
     public static String input(String message) {
