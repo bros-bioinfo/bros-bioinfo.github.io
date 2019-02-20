@@ -236,9 +236,9 @@ Ces opérations vérifient les propriétés suivantes:
 - A partir de tout sommet on peut acceder à la racine par la relation de paternité
   - $\forall s \in A : \exists k \in \mathbb{N}\ tq\ pere^k(A,s) = None$
 - Le fils gauche d'un sommet s a pour père s:
-  - $\forall s \in A , fils\_gauche(A,s) \neq None \Rightarrow pere(A,fils\_gauche(A,s)) = s$
+  - $\forall s \in A , fils\_ gauche(A,s) \neq None \Rightarrow pere(A,fils\_gauche(A,s)) = s$
 - Le fils droit d'un sommet s a pour père s:
-  - $\forall s \in A , fils\_droit(A,s) \neq None \Rightarrow pere(A,fils\_droit(A,s)) = s$
+  - $\forall s \in A , fils\_ droit(A,s) \neq None \Rightarrow pere(A,fils\_droit(A,s)) = s$
 
 On appelle arbre binaire étiqueté un arbre binaire A muni de l'opération étiquette(A,s) qui à un sommet s renvoie son étiquette 
 
