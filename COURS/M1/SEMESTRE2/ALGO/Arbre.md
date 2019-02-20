@@ -236,9 +236,9 @@ Ces opérations vérifient les propriétés suivantes:
 - A partir de tout sommet on peut acceder à la racine par la relation de paternité
   - $\forall s \in A : \exists k \in \mathbb{N}\ tq\ pere^k(A,s) = None$
 - Le fils gauche d'un sommet s a pour père s:
-  - $\forall s \in A , fils\_ gauche(A,s) \neq None \Rightarrow pere(A,fils\_gauche(A,s)) = s$
+  - $\forall s \in A , fils_{gauche}(A,s) \neq None \Rightarrow pere(A,fils_gauche(A,s)) = s$
 - Le fils droit d'un sommet s a pour père s:
-  - $\forall s \in A , fils\_ droit(A,s) \neq None \Rightarrow pere(A,fils\_droit(A,s)) = s$
+  - $\forall s \in A , fils_{droit}(A,s) \neq None \Rightarrow pere(A,fils_droit(A,s)) = s$
 
 On appelle arbre binaire étiqueté un arbre binaire A muni de l'opération étiquette(A,s) qui à un sommet s renvoie son étiquette 
 
@@ -269,21 +269,21 @@ On appelle arbre binaire étiqueté un arbre binaire A muni de l'opération éti
 
 ### Parcours d'un arbre binaire
 
-Il existe plusieur façon de parcourir les sommets d'un arbre. On peut les parcourir par niveau. Mais pour les arbres binaires, il existe 3 parcours supplémentaires : **prefixe, infixe et postfixe**.
+Il existe plusieurs façon de parcourir les sommets d'un arbre. On peut les parcourir par niveau. Mais pour les arbres binaires, il existe 3 parcours supplémentaires : **prefixe, infixe et postfixe**.
 
 Le parcours prefixe se définit récursivement par :
 - $prefixe(A) = prefixe(A,racine(A))$
-- $prefixe(A,s) = [s] + prefixe(fils\_ gauche(A,s)) + prefixe(fils\_ droit(A,s))$
+- $prefixe(A,s) = [s] + prefixe(fils_{gauche}(A,s)) + prefixe(fils_{droit}(A,s))$
 - $prefixe(A,None) = []$
 
 Le parcours infixe n'est disponible que pour les arbres binaires, il se définit ainsi: 
 - $infixe(A) = infixe(A,racine(A))$
-- $infixe(A,s) = infixe(A,fils\_ gauche(A,s)) + [s] + infixe(A,fils\_ droit(A,s)))$
+- $infixe(A,s) = infixe(A,fils_{gauche}(A,s)) + [s] + infixe(A,fils_{droit}(A,s)))$
 - $infixe(A,None) = []$
 
 Le parcours postfixe se définit de la façon suivante : 
 - $postfixe(A) = postfixe(A,racine(A))$
-- $postfixe(A,s) = postfixe(A,fils\_ gauche(A,s)) + postfixe(A,fils\_ droit(A,s))) + [s]$
+- $postfixe(A,s) = postfixe(A,fils_{gauche}(A,s)) + postfixe(A,fils_{droit}(A,s))) + [s]$
 - $(A,None) = []$
 
 Ces parcours jouent un rôle important dans l'étude des programmes.
@@ -291,9 +291,9 @@ Ces parcours jouent un rôle important dans l'étude des programmes.
 >Note : 
 >- prefixe utile pour savoir dans quel **ordre les programmes se sont exécutés**
 >- prefixe utile pour savoir dans quel **ordre les programmes se sont terminés**
->- infixe pratique pour le **trie**
+>- infixe pratique pour le **trie** dans le cas des arbres binaires de recherche 
 
-Un arbre binaire de recherche est un arbre binaire ettiqueté, dont les étiquettes sont des éléments totalement ordonnés (par exemple des entiers), tels que pour tout sommet s les étiquettes du sous arbre gauche sont toutes **plus petites ou égales** que l'étiquette de s. Et, les étiquettes du sous arbre droit sont **toutes strictement plus grande** que l'étiquette de s. 
+Un arbre binaire de recherche est un arbre binaire étiqueté, dont les étiquettes sont des éléments totalement ordonnés (par exemple des entiers), tels que pour tout sommet s les étiquettes du sous arbre gauche sont toutes **plus petites ou égales** que l'étiquette de s. Et, les étiquettes du sous arbre droit sont **toutes strictement plus grande** que l'étiquette de s. 
 
 *Note* : on rappelle qu'un ensemble E est totalement ordonné si toutes paires d'élement est comparable par une relation de comparaison <).
 
@@ -301,5 +301,5 @@ Un arbre binaire de recherche est un arbre binaire ettiqueté, dont les étiquet
 
 Un arbre binaire de recherche est **équilibré** si pour tous sommet s de l'arbre :
 
-**(hauteur\_sous\_arbre\_gauche(s)) - (hauteur\_sous\_arbre\_droit(s)) &le; 1**
+**(hauteur_sous_arbre_gauche(s)) - (hauteur_sous_arbre_droit(s)) &le; 1**
 
