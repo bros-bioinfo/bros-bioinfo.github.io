@@ -272,26 +272,26 @@ On appelle arbre binaire étiqueté un arbre binaire A muni de l'opération éti
 Il existe plusieur façon de parcourir les sommets d'un arbre. On peut les parcourir par niveau. Mais pour les arbres binaires, il existe 3 parcours supplémentaires : **prefixe, infixe et postfixe**.
 
 Le parcours prefixe se définit récursivement par :
-+ prefixe(A) = prefixe(A,racine(A))
-+ prefixe(A,s) = [s] + prefixe(fils\_gauche(A,s)) + prefixe(fils\_droit(A,s))
-+ prefixe(A,None) = []
+- $prefixe(A) = prefixe(A,racine(A))$
+- $prefixe(A,s) = [s] + prefixe(fils\_ gauche(A,s)) + prefixe(fils\_ droit(A,s))$
+- $prefixe(A,None) = []$
 
-Le parcours infixe se définit de la façon suivante : 
-+ infixe(A) = infixe(A,racine(A))
-+ infixe(A,s) = infixe(A,fils\_gauche(A,s)) + [s] + infixe(A,fils\_droit(A,s)))
-+ infixe(A,None) = []
+Le parcours infixe n'est disponible que pour les arbres binaires, il se définit ainsi: 
+- $infixe(A) = infixe(A,racine(A))$
+- $infixe(A,s) = infixe(A,fils\_ gauche(A,s)) + [s] + infixe(A,fils\_ droit(A,s)))$
+- $infixe(A,None) = []$
 
 Le parcours postfixe se définit de la façon suivante : 
-+ postfixe(A) = postfixe(A,racine(A))
-+ postfixe(A,s) = postfixe(A,fils\_gauche(A,s)) + postfixe(A,fils\_droit(A,s))) + [s]
-+ postfixe(A,None) = []
+- $postfixe(A) = postfixe(A,racine(A))$
+- $postfixe(A,s) = postfixe(A,fils\_ gauche(A,s)) + postfixe(A,fils\_ droit(A,s))) + [s]$
+- $(A,None) = []$
 
 Ces parcours jouent un rôle important dans l'étude des programmes.
 
-*Note* : 
-+ prefixe utile pour savoir dans quel **ordre les programmes se sont exe**
-+ prefixe utile pour savoir dans quel **ordre les programmes se sont terminés**
-+ infixe pratique pour le **trie**
+>Note : 
+>- prefixe utile pour savoir dans quel **ordre les programmes se sont exécutés**
+>- prefixe utile pour savoir dans quel **ordre les programmes se sont terminés**
+>- infixe pratique pour le **trie**
 
 Un arbre binaire de recherche est un arbre binaire ettiqueté, dont les étiquettes sont des éléments totalement ordonnés (par exemple des entiers), tels que pour tout sommet s les étiquettes du sous arbre gauche sont toutes **plus petites ou égales** que l'étiquette de s. Et, les étiquettes du sous arbre droit sont **toutes strictement plus grande** que l'étiquette de s. 
 
@@ -299,7 +299,7 @@ Un arbre binaire de recherche est un arbre binaire ettiqueté, dont les étiquet
 
 **Propriété** : le parcours infixe d'un arbre binaire de recherche renvoie la liste des sommets trié par ordre croissant. (marche pour l'ordre lexicographique).
 
-Un arbre binaire de recherche est **équilibré" si pour tous sommet s de l'arbre :
+Un arbre binaire de recherche est **équilibré** si pour tous sommet s de l'arbre :
 
 **(hauteur\_sous\_arbre\_gauche(s)) - (hauteur\_sous\_arbre\_droit(s)) &le; 1**
 
