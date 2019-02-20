@@ -22,8 +22,8 @@ def binomial(n, k):
     return 1 if k == 0 else 1 if n == k else binomial(n - 1, k - 1) + binomial(n - 1, k)
 
 
-from turtle import *
 import turtle
+from turtle import *
 
 
 def droite(n):
@@ -101,29 +101,54 @@ def permutation(ls: list):
     return liste
 
 
+def compositions(n):
+    """
+    Renvoie les compositions de n.
+
+    Exemple:
+        >>> compositions(0)
+        [[]]
+        >>> compositions(1)
+        [[1]]
+        >>> compositions(2)
+        [[1, 1], [2]]
+        >>> compositions(3)
+        [[1, 1, 1], [1, 2], [2, 1], [3]]
+        >>> compositions(4)
+        [[1, 1, 1, 1], [1, 1, 2], [1, 2, 1], [1, 3], [2, 1, 1], [2, 2], [3, 1], [4]]
+    """
+    if n == 0:
+        return [[]]
+    res = []
+    for i in range(1, n + 1):
+        for c in compositions(n - i):
+            res.append([i] + c)
+    return res
+
+
 if __name__ == '__main__':
-    import doctest
-
-    doctest.testmod()
-
+    # import doctest
+    #
+    # doctest.testmod()
+    #
     # print(factoriel(3))
     #
-    print(suite(2))
+    # print(suite(2))
     #
     # print(suite2(3))
     #
     # print(binomial(5, 2))
     #
-    tur = turtle.Turtle()
-    tur.speed(0)
+    # tur = turtle.Turtle()
+    # tur.speed(0)
     #
-    # triangle(3 ** 5)
+    # triangle(3 ** 2)
     #
-    # dragon(10 * 2 ** 5, 1)
+    dragon(10 * 2 ** 5, 1)
     #
     # done()
     #
-    # print(composition(4))
+    print(compositions(4))
     #
     # p = permutation(['a', 'b', 'c', 'd', 'e', 'f'])
     # print(len(p))

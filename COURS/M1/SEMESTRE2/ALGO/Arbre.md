@@ -222,23 +222,25 @@ Ref : [Developpez.com](http://rmdiscala.developpez.com/cours/LesChapitres.html/C
 *Note* : Dans ce cours, profondeur et hauteur sont des synonymes.
 
 ## Arbres binaires
+Un arbre binaire est une structure de données A contenant des éléments appelés sommets munis des fonctions suivantes:
+- La fonction fils gauche(A,P) prends en paramètre un arbre A, un sommet P et renvoie un sommet de A appelé fils gauche de P ou None si P n'a pas de fils gauche.
+- La fonction fils droit(A,P) prends en paramètre un arbre A, un sommet P et renvoie un sommet de A appelé fils droit de P ou None si P n'a pas de fils doit.
+- La fonction père(A,F) qui prend en paramètre un arbre A et un sommet F et qui retourne un sommet de A ou None.. Ce sommet est appelé le père de F.
+- La fonction racine(A) prends en paramètres un arbre A et renvoie un sommet de A appelé racine de l'arbre.
 
-Un arbre binaire esr une structure A contenant des éléments appelés sommets munis de fonctions suivantes : 
-+ la fonction fils_gauche(A,p) qui prend en paramètre un arbre A, un sommet p et qui renvoie un sommet de A appelé fils gauche, ou None si p n'a pas de fils gauche.
-+ la fonction fils_droit(A,p) qui prend en paramètre un arbre A, un sommet p et qui renvoie un sommet de A appelé fils droit, ou None si p n'a pas de fils droit.
-+ la fonction pere(A,f) qui prend en paramètre un arbre A et un sommet f et qui renvoit un sommet de A ou None; ce sommet est appelé père de f.
-+ la fonction racine(A) qui prend en paramètre un arbre et renvoie un sommet de A ou None. Ce sommet est appelé la racine de l'arbre.
+Ces opérations vérifient les propriétés suivantes:
+- Une racine n'as pas de père
+  - $pere(A, racine(A)) = None$
+- Tout sommet a un père à l'exception de la racine
+  - $\forall s \in A / {racine} : pere(A,s) \in A$
+- A partir de tout sommet on peut acceder à la racine par la relation de paternité
+  - $\forall s \in A : \exists k \in \mathbb{N}\ tq\ pere^k(A,s) = None$
+- Le fils gauche d'un sommet s a pour père s:
+  - $\forall s \in A , fils\_gauche(A,s) \neq None \Rightarrow pere(A,fils\_gauche(A,s)) = s$
+- Le fils droit d'un sommet s a pour père s:
+  - $\forall s \in A , fils\_droit(A,s) \neq None \Rightarrow pere(A,fils\_droit(A,s)) = s$
 
-Ces opérations respectent les propriétés suivantes : 
-1. Si A est vide racine(A) = None; sinon racine(A)&ne; None
-2. Tout sommet a un père à l'exception de la racine : **&forall;s &isin;A/{racine(A)}  pere(A,s)&isin;A**
-3. A partir de tout sommet, on peut accéder à la racine par la relation de paternité : **&forall;s &isin;A, &ni;k&isin;N  racine(A) = pere<sup>t</sup>(A,0).
-4. Les fils gauche (resp drot) d'un sommet s ont pour père s: 
-+ **&forall;s &isin;A, &forall;f &isin;fils_gauche(A,s)&ne;None &rarr;pere(A,fils_gauche(A,s)) = s** 
-+ et
-+ **&forall;s &isin;A, &forall;f &isin;fils_droit(A,s)&ne;None &rarr;pere(A,fils_droit(A,s)) = s** 
-
-On appelle arbre binaire ettiqueté un arbre binaire A muni de l'opération ettiquete(A,s) qui a un sommet s renvoir un élément appellé etiquette de s.
+On appelle arbre binaire étiqueté un arbre binaire A muni de l'opération étiquette(A,s) qui à un sommet s renvoie son étiquette 
 
 *Exemple* :
 

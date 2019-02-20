@@ -1,0 +1,36 @@
+<New Animalerie>
+Le Club
+
+Canary
+Charlotte
+23
+vivant
+
+Chat
+Eliot
+21
+vivant
+
+Chien
+Antoine
+22
+vivant
+
+<New Animalerie>
+Zoo
+
+Chat
+Elsa
+21
+vivant
+
+Chien
+Alexis
+24
+vivant
+
+Chien
+Théo
+22
+vivant
+
