@@ -5,13 +5,13 @@
 #include <iostream>
 #include "Chien.h"
 #include "Dauphin.h"
+#include "../../TD7/QueueList.h"
 
 
 using namespace std;
 
 
 int main() {
-    Dauphin flipper("Flipper", 4, false, 0, 0);
-    flipper.presenter();
-    flipper.engendrer();
+
+
 }

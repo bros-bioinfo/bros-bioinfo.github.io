@@ -3,5 +3,5 @@ project(POO)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Ex5 TD5-6/Ex5/main.cpp TD5-6/Ex5/Animal.cpp TD5-6/Ex5/Chien.cpp TD5-6/Ex5/Poisson.cpp TD5-6/Ex5/Mammifere.cpp TD5-6/Ex5/Dauphin.cpp)
+add_executable(TD9 TD9/main.cpp TD9/People.cpp TD9/Registre.cpp)
 

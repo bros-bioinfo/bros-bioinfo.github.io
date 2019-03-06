@@ -108,8 +108,8 @@ function getTree() {
       ]},
     ]},
     {"type":"directory",href:"#fh5co-work",text:"SEMESTRE2",custom:"18  815",nodes:[
-      {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"9272112",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/Arbre",text:"Arbre",custom:"2201140"},
+      {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"36 1119",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/Arbre",text:"Arbre",custom:"36 1153"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/graphe",text:"graphe",custom:"9272112"},
         {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/td5",text:"td5",custom:"9272112"},
       ]},

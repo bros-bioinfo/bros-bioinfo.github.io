@@ -18,8 +18,8 @@ Pour que (A,racine,fils,pere) soit un arbre, il faut que les propriétés suivan
 ![Arbre](https://user.oc-static.com/files/166001_167000/166664.png)
 Ref : [Openclassroom : Algo](https://openclassrooms.com/courses/algorithmique-pour-l-apprenti-programmeur/arbres?q=&hPP=8&idx=prod_v2_COURSES_en&p=0&fR%5Bcertificate%5D%5B0%5D=true&fR%5BisWeb%5D%5B0%5D=true)
 
-3. Les fils d'un sommet s ont pour père s, et le pere p d'un sommet s admet s comme fils. 
- - **&forall;s &isin;A, &forall;f &isin;fils(A,s)  pere(A,f) = s** &rarr; Traduction : pour tout sommet de A, pour tout sommert appartenant aux fils de s, le pere de f est s.
+3. Les fils d'un sommet s ont pour père s, et le pere p d'un sommet s admet s comme fils.
+ - **&forall;s &isin;A, &forall;f &isin;fils(A,s)  pere(A,f) = s** &rarr; Traduction : pour tout sommet de A, pour tout sommet appartenant aux fils de s, le pere de f est s.
  - **&forall;s &isin;&mu;, &forall;p &isin;pere(A,&mu;)  &mu;&isin;fils(A,p)**
 4. Il y a un unique sommet s tels que pere(s) = None et le sommet est la racine.
 5. A partir de tout sommet, on peut accéder à la racine par la relation de paternité. **&forall;s &isin;A, &ni;k&isin;N  pere<sup>k</sup>(A,s) = None**. Où pere<sup>k</sup> se définit récursivement par : 
@@ -177,8 +177,11 @@ Dans de très nombreux cas l'identifiant des sommets sont unis et remplacés par
 
 *Définiton* : 
 
-La tailler d'un arbre est son nombre de sommets. Dans un arbre, la hauteur d'un sommet s est le plus petit entier h >= 0 tel que:  
+La taille d'un arbre est son nombre de sommets. Dans un arbre, la hauteur d'un sommet s est le plus petit entier h >= 0 tel que:  
 **pere<sup>h</sup>(T,s)= racine(T)**
+$$min(h \in \mathbb{N}) \Rightarrow pere ^h (A,s) = racine(A)$$
+
+La hauteur d'un arbre est la hauteur maximale de ses sommets.  
 
 *Exemple*:
 
@@ -186,17 +189,18 @@ La tailler d'un arbre est son nombre de sommets. Dans un arbre, la hauteur d'un 
 
 Ref : [Site Epita](https://algo.infoprepa.epita.fr/index.php/Epita:Algo:Cours:Info-Sup:Structures_arborescentes)
 
-+ pere<sup>2</sup>(T,s) = 1 = racine(T)
-    - hauteur(8) = 2
-+ pere<sup>0</sup>(T,s) = 1
++ $pere ^2 (A,4) = 1 = racine(T)$
+    - hauteur(4) = 2
++ $pere ^0 (A,1) = 1 = racine(T)$
     - hauteur(1) = 0
 
-On dit qu'un sommet s est un ancêtre de t ou bien que t est un descendant de s s'il existe un entier h >=0 tel que 
-**pere<sup>h</sup>(T,t) = s**
+On dit qu'un sommet s est un ancêtre de t ou bien que t est un descendant de s si:
+$$\exists k \in \mathbb{N} \Rightarrow pere ^k (A,t)=s$$
 
-On appelle un **sous arbre T'** d'un arbre T un sommet s, l'arbre dont :
-+ les sommets sont les descendants de s dans T'
-+ les fonctions peres et fils de T' sont les restrictions de père et fils de T aux descendants de s dans T ormis pour le sommet s où **pere(T',s) = None
+
+On appelle un **sous arbre A'** d'un arbre A au sommet s, l'arbre dont :
++ les sommets sont les descendants de s dans A
++ les fonctions peres et fils de A' sont les restrictions de père et fils de A aux descendants de s hormis pour le sommet s où $pere(A',s) = None$
 + la racine est s.
 
 *Exemple* : 
@@ -290,7 +294,7 @@ Ces parcours jouent un rôle important dans l'étude des programmes.
 
 >Note : 
 >- prefixe utile pour savoir dans quel **ordre les programmes se sont exécutés**
->- prefixe utile pour savoir dans quel **ordre les programmes se sont terminés**
+>- postfixe utile pour savoir dans quel **ordre les programmes se sont terminés**
 >- infixe pratique pour le **trie** dans le cas des arbres binaires de recherche 
 
 Un arbre binaire de recherche est un arbre binaire étiqueté, dont les étiquettes sont des éléments totalement ordonnés (par exemple des entiers), tels que pour tout sommet s les étiquettes du sous arbre gauche sont toutes **plus petites ou égales** que l'étiquette de s. Et, les étiquettes du sous arbre droit sont **toutes strictement plus grande** que l'étiquette de s. 
@@ -302,4 +306,8 @@ Un arbre binaire de recherche est un arbre binaire étiqueté, dont les étiquet
 Un arbre binaire de recherche est **équilibré** si pour tous sommet s de l'arbre :
 
 **(hauteur_sous_arbre_gauche(s)) - (hauteur_sous_arbre_droit(s)) &le; 1**
+
+ 
+
+
 
