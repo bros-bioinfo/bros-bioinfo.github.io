@@ -1,3 +1,6 @@
+import graphviz.files
+
+
 class Arbre:
     def __init__(self, root=None, label=None):
         self.__root = None
@@ -10,9 +13,10 @@ class Arbre:
     def father(self, fils):
         return self.__fathers[fils]
 
-    def son(self, pere):
+    def sons(self, pere) -> list:
         return self.__sons[pere]
 
+    @property
     def root(self):
         return self.__root
 
@@ -47,18 +51,87 @@ class Arbre:
 
     def __recur_fill__(self, node, to_fill: list):
         to_fill.append(node)
-        for son in self.son(node):
+        for son in self.sons(node):
             self.__recur_fill__(son, to_fill)
 
     def level_browse(self, level: int, to_fill: list):
-        pass
+        return self.__sub_level_browse__(level, to_fill, self.root, 0)
+
+    def __sub_level_browse__(self, level: int, to_fill: list, current_node, current_level: int):
+        if current_level == level:
+            return to_fill.append(current_node)
+        for son in self.sons(current_node):
+            self.__sub_level_browse__(level, to_fill, son, current_level + 1)
+
+    def distance_from_node(self, target_node, deepness: int):
+        to_fill = []
+        self.__sub_level_browse__(deepness, to_fill, target_node, 0)
+        return to_fill
+
+    @property
+    def leaves(self):
+        to_fill = []
+        self.__sub_browse_leaves__(self.root, to_fill)
+        return to_fill
+
+    def __sub_browse_leaves__(self, current_node, to_fill: list):
+        sons = self.sons(current_node)
+        if not sons:
+            return to_fill.append(current_node)
+        for son in sons:
+            self.__sub_browse_leaves__(son, to_fill)
+
+    @property
+    def intern_nodes(self):
+        to_fill = []
+        self.__sub_browse_intern_nodes__(self.root, to_fill)
+        return to_fill
+
+    def __sub_browse_intern_nodes__(self, current_node, to_fill: list):
+        sons = self.sons(current_node)
+        if sons:
+            to_fill.append(current_node)
+
+        for son in sons:
+            self.__sub_browse_intern_nodes__(son, to_fill)
+
+    def show(self):
+        with open("tree.dot", 'w') as dot_file:
+            dot_file.write('digraph G{\n\tgraph [ordering="out"];\n')
+            list_of_relation_strings = []
+            self.__sub_write__(dot_file, list_of_relation_strings, self.root)
+            dot_file.write("\n")
+            dot_file.writelines(list_of_relation_strings)
+            dot_file.write("}")
+
+        graphviz.render("dot", "png", "tree.dot")
+
+    def __sub_write__(self, dot_file, list_of_relation_strings: list, current_node):
+        dot_file.write('\tn{} [ label="{}" ];\n'.format(current_node, self.label(current_node)))
+        for son in self.sons(current_node):
+            list_of_relation_strings.append('\tn{} -> n{};\n'.format(current_node, son))
+            self.__sub_write__(dot_file, list_of_relation_strings, son)
 
 
-test = Arbre(1, 'a')
-test.add_node(2, 1, 'b')
-test.add_node(3, 1, 'c')
-print(test.son(1))
-print(len(test))
+arbre = Arbre(1, 'a')
+arbre.add_node(2, 1, 'b')
+arbre.add_node(3, 1, 'c')
+arbre.add_node(4, 2, 'd')
+arbre.add_node(5, 2, 'e')
+arbre.add_node(6, 5, 'f')
+print(arbre.sons(1))
+print(len(arbre))
+
 p = []
-test.post_fixe_browse(p)
+arbre.post_fixe_browse(p)
 print(p)
+
+p = []
+arbre.level_browse(1, p)
+print(p)
+
+print(arbre.leaves)
+
+print(arbre.intern_nodes)
+
+arbre.show()
