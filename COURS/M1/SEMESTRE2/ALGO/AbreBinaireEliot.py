@@ -124,43 +124,79 @@ class BinaryTree:
         right_son = self.right_son(current_node)
         if left_son or right_son:
             if left_son:
-                list_of_relation_strings.append('\tn{} -> n{};\n'.format(current_node, left_son))
-                self.__sub_write__(dot_file, list_of_relation_strings, left_son)
+                list_of_relation_strings.append(
+                    '\tn{} -> n{};\n'.format(current_node, left_son))
+                self.__sub_write__(
+                    dot_file, list_of_relation_strings, left_son)
             else:
                 self.__nb_null += 1
-                dot_file.write('\tnull{} [ label="." ];\n'.format(self.__nb_null))
-                list_of_relation_strings.append('\tn{} -> null{};\n'.format(current_node, self.__nb_null))
+                dot_file.write(
+                    '\tnull{} [ label="." ];\n'.format(self.__nb_null))
+                list_of_relation_strings.append(
+                    '\tn{} -> null{};\n'.format(current_node, self.__nb_null))
 
             if right_son:
-                list_of_relation_strings.append('\tn{} -> n{};\n'.format(current_node, right_son))
-                self.__sub_write__(dot_file, list_of_relation_strings, right_son)
+                list_of_relation_strings.append(
+                    '\tn{} -> n{};\n'.format(current_node, right_son))
+                self.__sub_write__(
+                    dot_file, list_of_relation_strings, right_son)
             else:
                 self.__nb_null += 1
-                dot_file.write('\tnull{} [ label="." ];\n'.format(self.__nb_null))
-                list_of_relation_strings.append('\tn{} -> null{};\n'.format(current_node, self.__nb_null))
+                dot_file.write(
+                    '\tnull{} [ label="." ];\n'.format(self.__nb_null))
+                list_of_relation_strings.append(
+                    '\tn{} -> null{};\n'.format(current_node, self.__nb_null))
+
+    @property
+    def height(self):
+        return self.__sub_height(self.root, 0)
+
+    def __sub_height(self, current_node, current_height):
+        if not current_node:
+            return current_height
+
+        left_son = self.left_son(current_node)
+        right_son = self.right_son(current_node)
+
+        if not left_son and not right_son:
+            return current_height
+
+        left_height = self.__sub_height(left_son, current_height + 1)
+        right_height = self.__sub_height(right_son, current_height + 1)
+
+        if left_height > right_height:
+            return left_height
+        else:
+            return right_height
 
     def is_perfect(self):
-        """Doesn't work"""
-        counter = 0
-        return self.__sub_is_perfect(self.root, counter)
+        node = self.root
+        height = 0
+        while node is not None:
+            height += 1
+            node = self.left_son(node)
+        return self.__sub_is_perfect(self.root, height)
 
-    def __sub_is_perfect(self, current_node, counter):
+    def __sub_is_perfect(self, current_node, height, current_height=0):
+        # An empty tree is perfect
         if not current_node:
-            return False
-
-        if not self.left_son(current_node) and not self.right_son(current_node):
-            if counter < len(self):
-                return False
-            else:
-                return True
-
-        left_flag = self.__sub_is_perfect(self.left_son(current_node), counter + 1)
-        right_flag = self.__sub_is_perfect(self.right_son(current_node), counter + 1)
-
-        if not left_flag and not right_flag:
-            return False
-        else:
             return True
+
+        left_son = self.left_son(current_node)
+        right_son = self.right_son(current_node)
+
+        # If leaf node, then its depth must
+        # be same as depth of all other leaves.
+        if not left_son and not right_son:
+            return (height == current_height + 1)
+
+        # If internal node and one child is empty
+        if not left_son or not right_son:
+            return False
+
+        # Left and right subtrees must be perfect.
+        return (self.__sub_is_perfect(left_son, height, current_height + 1) and
+                self.__sub_is_perfect(right_son, height, current_height + 1))
 
     def is_complete(self):
         """Doesn't work"""
@@ -249,8 +285,10 @@ binary_research_tree = BinaryResearchTree([5, 3, 7, 2, 4])
 binary_research_tree.show()
 print(binary_research_tree.search(6))
 print(binary_research_tree.search(20))
+
 print(binary_research_tree.is_perfect())
 binary_research_tree.insert(6)
 binary_research_tree.insert(8)
 binary_research_tree.show()
 print(binary_research_tree.is_perfect())
+500
