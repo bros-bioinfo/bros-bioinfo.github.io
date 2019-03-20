@@ -108,7 +108,7 @@ function getTree() {
       ]},
     ]},
     {"type":"directory",href:"#fh5co-work",text:"SEMESTRE2",custom:"18  815",nodes:[
-      {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"313  852",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"3201216",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"exos_tris",custom:"313  852",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/exos_tris/readme",text:"readme",custom:"313  852"},
         ]},
