@@ -81,7 +81,7 @@ Le graphe **G = (S,A,&Gamma;)** définit par :
     a<sub>3</sub> &rarr; {{s2,s3}}
     a<sub>4</sub> &rarr; {{s4,s4}}
 
-### Le Bestaires
+### Le Bestaire
 
 #### Les graphes complets
 Les graphes complets sont des graphes non orienté à n sommets tels que toute paires de sommet est relié par arrêtes (pentagramme étoile).
@@ -152,7 +152,7 @@ On écrit aussi les chaines et les chemins avec leurs sommets quand cela aide à
 + s<sub>i</sub> et s<sub>i+1</sub> sont les extrémités de e<sub>i</sub> pour une chaîne.
 + s<sub>i</sub> et s<sub>i+1</sub> sont respectivement l'origine et la fin de e<sub>i</sub> pour un arc.
 
-Dans cette notation on peut avoir une chaine/cheminvide d'origine le sommet s, il s'agit de : (s).
+Dans cette notation on peut avoir une chaine/chemin vide d'origine le sommet s, il s'agit de : (s).
 
 Une **chaîne élémentaire** est une chaîne qui ne rencontre pas deux fois le même sommet.
 
@@ -170,12 +170,12 @@ Un **chemin est élémentaire** si il ne passe pas deux fois par le même sommet
 
 Notation Absurde : si il n'y a pas d'ambiguité, on enlève les arêtes de la requête pour ne garder que les sommets. 
 
-| Orienté | Orienté et non orienté |
-|---------|------------------------|
-|Chemin | Chaîne|
-|Chemin éléementaire | Chaîne non élémentaire|
-|Cycle | Circuit|
-|Cycle élémentaire | Circuit élémentaire|
+| Orienté            | Orienté et non orienté |
+| ------------------ | ---------------------- |
+| Chemin             | Chaîne                 |
+| Chemin élémentaire | Chaîne non élémentaire |
+| Cycle              | Circuit                |
+| Cycle élémentaire  | Circuit élémentaire    |
 
 ## Exo durant le cours
 
@@ -185,3 +185,36 @@ Notation Absurde : si il n'y a pas d'ambiguité, on enlève les arêtes de la re
 ![Img4](4.jpg)
 ![Img5](5.jpg)
 ![Arbre exe](arbreExe.jpg)
+
+#### Paramètres de chemins
+
+La taille d'un chemin/chaîne est le nombre d'arrête contenu dans le chemin/chaîne.  
+On appelle composante connexe d'un graphe tout sous ensemble MAXIMAL de sommets tel que pour tout couple de sommets(u,v) de ce sous ensemble il existe une chaîne qui relie u à v. 
+
+#### Fonctions de chemins
+Soit $p = ( s _0 , e _0, s _1 , e _1, ..., s _{k-1} , e _{k-1}, s _k )$  
+Soit $q = ( t _0 , f _0, t _1 , f _1, ..., t _{k-1} , f _{k-1}, t _k )$  
+Deux chemins/ chaînes.  
+Si $t _0$ = $s _{k+1}$ alors on peut construire un nouveau chemin noté $p.q$ et appelée concaténation de $p$ avec $q$ et définie par :
+$$p.q = ( s _0 , e _0, s _1 , e _1, ..., s _{k-1} , e _{k-1}, s _k , f _0, t _1 , f _1, ..., t _{k-1} , f _{k-1}, t _k )$$ 
+Exemple :  
+$$(0,a,5,b,8).(8,d,5,e,4) = (0,a,5,b,8,d,5,e,4)$$
+
+On appelle $\Phi(W)$ l'opération qui à un chemin/chaîne w renvoie le chemin/chaîne u.v tel que
+$$
+    \Phi(W)= 
+\begin{cases}
+    u.v,& \text{si il existe }i , j \text{ deux sommets distincts et } \alpha \text{ un arc/arrête tel que }\\
+    & W = u.(i,\alpha, j, \alpha, i) . v \\
+    & \text{ et tel que u est de taille minimale}\\
+    W,              & \text{sinon}
+\end{cases}
+$$ 
+> Remarque :  
+> Pour tout cycle/chemin, $\forall n \in \mathbb{N} \Rightarrow \Phi ^n (c) = \Phi ^{n+1} (c)$. On note par $\Phi ^\infty (c)$ le cycle $\Phi ^n (c)$.  
+> On appelle cycle non trivial tout cycle tel que $taille(\Phi ^\infty (c)\ne 0)$
+
+Si $C$ est un cycle/circuit non trivial alors $\Phi ^\infty (c)$ contient un cycle/circuit élémentaire dans le sens qu'il existe des chemins $u,v,w$ tel que $\Phi ^\infty (c) = u.v.w$ et $v$ est un cycle/circuit élémentaire  
+
+> Définition :  
+> Un arbre est un graphe connexe et sans cycles non triviaux
