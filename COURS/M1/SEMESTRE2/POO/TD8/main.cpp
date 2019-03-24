@@ -10,14 +10,14 @@ using namespace std;
 
 int main() {
     Annuaire annuaire;
-    annuaire.insertInPlace(People("Ragueneau", "Eliot", "02.41.43.32.11", "06.50.55.80.57",
+    annuaire.insertInPlace(People("Ragueneau", "Eliot", "02.**.**.**.**", "06.**.**.**.**",
             15, "Beaufleury", "Bordeaux", 33800));
-    annuaire.insertInPlace(People("Bouquet", "Matthieu", "02.00.00.00.00", "06.17.80.75.08",
+    annuaire.insertInPlace(People("Bouquet", "Matthieu", "02.00.00.00.00", "06.**.**.**.**",
             15, "Beaufleury", "Bordeaux", 33800));
 
     annuaire.insertInPlace(People());
 
-    annuaire.insertInPlace(People("Ragueneau", "Bébé", "02.41.43.32.11", "06.50.55.80.57",
+    annuaire.insertInPlace(People("Ragueneau", "Bébé", "02.**.**.**.**", "06.**.**.**.**",
                                   15, "Beaufleury", "Bordeaux", 33800));
 
     annuaire.show();
