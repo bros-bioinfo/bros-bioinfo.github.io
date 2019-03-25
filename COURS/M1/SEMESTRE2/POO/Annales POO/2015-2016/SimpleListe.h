@@ -12,6 +12,10 @@ public:
     E value;
     CElement *next;
 
+    virtual ~CElement() {
+        delete next;
+    }
+
     CElement(E &value) : value(value) {
         next = nullptr;
     }
@@ -19,6 +23,10 @@ public:
 
 template<class E>
 class SimpleListe {
+private:
+public:
+    virtual ~SimpleListe();
+
 private:
     CElement<E> *first;
     unsigned int size;
@@ -38,6 +46,8 @@ public:
     void afficherContenu() const;
 
     void trier();
+
+    void swap(CElement<E> *a, CElement<E> *b);
 };
 
 #include "SimpleListe.cpp"

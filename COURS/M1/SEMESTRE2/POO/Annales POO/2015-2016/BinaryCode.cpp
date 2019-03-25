@@ -16,14 +16,14 @@ BinaryCode::BinaryCode(const char *string) {
 }
 
 BinaryCode::~BinaryCode() {
-    delete[] data;
+        delete[] data;
 }
 
-BinaryCode& BinaryCode::operator+(BinaryCode b) {
+BinaryCode BinaryCode::operator+(BinaryCode &b) {
     char * newData = new char[size + b.size];
     strcat(newData, data);
     strcat(newData, b.data);
-    static BinaryCode out(newData);
+    BinaryCode out(newData);
     return out;
 }
 

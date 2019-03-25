@@ -33,7 +33,7 @@ bool QueueList<T>::push(T element) {
 
 template<class T>
 T QueueList<T>::shift() {
-    CElement <T> *current = first;
+    CElement<T> *current = first;
     T value = current->value;
     first = first->next;
     delete current;
@@ -49,7 +49,7 @@ bool QueueList<T>::isEmpty() {
 template<class T>
 void QueueList<T>::show() {
     cout << "Queue de taille " << size << " :\n";
-    CElement <T> *current = first;
+    CElement<T> *current = first;
     for (int i = 0; i < size; i++) {
         current->show();
         current = current->next;
@@ -59,9 +59,9 @@ void QueueList<T>::show() {
 
 template<class T>
 QueueList<T>::~QueueList() {
-    CElement <T> *current = first;
+    CElement<T> *current = first;
     for (int i = 0; i < size; i++) {
-        CElement <T> *next = current->next;
+        CElement<T> *next = current->next;
         delete current;
         current = next;
     }
@@ -70,9 +70,9 @@ QueueList<T>::~QueueList() {
 template<class T>
 void QueueList<T>::sort() {
     for (int i = 0; i < size - 1; i++) {
-        CElement <T> *current = first;
+        CElement<T> *current = first;
         for (int j = 0; j < size - i - 1; j++) {
-            CElement <T> *next = current->next;
+            CElement<T> *next = current->next;
             if (current->value < next->value) {
                 swap(current, next);
             }
@@ -98,7 +98,7 @@ T &QueueList<T>::get(int index) {
     if (index > size - 1) {
         throw out_of_range(to_string(index) + " > " + to_string(size));
     }
-    CElement <T> *current = first;
+    CElement<T> *current = first;
     for (int i = 0; i < index; i++) {
         current = current->next;
     }
@@ -119,8 +119,8 @@ template<class T>
 QueueList<T>::QueueList(const QueueList<T> &src) {
     size = src.size;
     first = new CElement<T>(src.first->value);
-    CElement <T> *currentNew = first;
-    CElement <T> *currentSrc = src.first->next;
+    CElement<T> *currentNew = first;
+    CElement<T> *currentSrc = src.first->next;
     for (int i = 0; i < size - 1; i++) {
         currentNew->next = new CElement<T>(currentSrc->value);
         currentSrc = currentSrc->next;
@@ -130,7 +130,7 @@ QueueList<T>::QueueList(const QueueList<T> &src) {
 
 template<class T>
 void QueueList<T>::set(int index, T value) {
-    CElement <T> *current = first;
+    CElement<T> *current = first;
     for (int i = 0; i < index; i++) {
         current = current->next;
     }

@@ -69,7 +69,8 @@ int main() {
     liste.ajouterEnTete(3.4);
     liste.afficherContenu();
     liste.trier();
-    liste.afficherContenu();
+    SimpleListe<double> listeB(liste);
+    listeB.afficherContenu();
 
 //    Exercice 5
     Pile<int> pile;
@@ -78,7 +79,8 @@ int main() {
     pile.empiler(3);
     cout << pile.depiler() << endl;
     cout << pile.depiler() << endl;
-    cout << pile[2] << endl;
+    cout << pile[1] << endl;
+    cout << pile.taille();
 
     return 0;
 }

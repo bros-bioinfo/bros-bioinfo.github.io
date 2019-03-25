@@ -17,7 +17,7 @@ public:
 
     ~BinaryCode();
 
-    BinaryCode& operator+(BinaryCode b);
+    BinaryCode operator+(BinaryCode &b);
 
     friend std::ostream &operator<<(std::ostream &os, BinaryCode &patient);
 };

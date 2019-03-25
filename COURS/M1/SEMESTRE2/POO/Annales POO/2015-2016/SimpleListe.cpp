@@ -17,14 +17,14 @@ template<class E>
 SimpleListe<E>::SimpleListe(const SimpleListe<E> &src) : SimpleListe() {
     if (src.first != nullptr) {
         size = src.size;
-        CElement<E> srcNode = *src.first;
-        first = &CElement<E>(srcNode.value);
-        CElement<E> currentNode = *first;
-        for (int i = 0; i < size; i++) {
-            CElement<E> newNode(srcNode.next->value);
-            currentNode.next = &newNode;
-            currentNode = newNode;
-            srcNode = *srcNode.next;
+        CElement<E>* srcNode = src.first;
+        first = new CElement<E>(srcNode->value);
+        CElement<E>* currentNode = first;
+        for (int i = 0; i < size - 1; i++) {
+            CElement<E>* newNode = new CElement<E>(srcNode->next->value);
+            currentNode->next = newNode;
+            currentNode = currentNode->next;
+            srcNode = srcNode->next;
         }
     }
 }
@@ -69,5 +69,26 @@ void SimpleListe<E>::afficherContenu() const {
 
 template<class E>
 void SimpleListe<E>::trier() {
+    for (int i = 0; i < size - 1; i++) {
+        CElement<E> *current = first;
+        for (int j = 0; j < size - i - 1; j++) {
+            CElement<E> *next = current->next;
+            if (current->value < next->value) {
+                swap(current, next);
+            }
+            current = next;
+        }
+    }
+}
 
+template<class E>
+void SimpleListe<E>::swap(CElement<E> *a, CElement<E> *b) {
+    E temp = a->value;
+    a->value = b->value;
+    b->value = temp;
+}
+
+template<class E>
+SimpleListe<E>::~SimpleListe() {
+    delete first;
 }

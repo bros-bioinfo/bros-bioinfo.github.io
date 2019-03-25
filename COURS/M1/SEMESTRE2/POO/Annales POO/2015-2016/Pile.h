@@ -42,6 +42,8 @@ public:
     }
 
     unsigned long taille() {
+        cout << "Capacity : " << data.capacity() << endl;
+        cout << "Max_Size : " << data.max_size() << endl;
         return data.size();
     }
 
