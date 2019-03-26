@@ -12,7 +12,7 @@ class Sphere : public Cercle {
 protected:
     double z;
 public:
-    Sphere(double _x, double _y, double _r, double _z) : Cercle(_x, _y, _r), z(_z) {}
+    Sphere(float _x, float _y, float _r, float _z) : Cercle(_x, _y, _r), z(_z) {}
 
     virtual void affiche() {
         std::cout << "Affiche sphere x=" << x << " y=" << y << " z=" << z << " r=" << rayon << std::endl;

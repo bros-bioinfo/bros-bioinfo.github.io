@@ -2,6 +2,9 @@
 // Created by eliot on 24/03/19.
 //
 #include <iostream>
+#include <list>
+#include <map>
+
 #include "BinaryCode.h"
 #include "Tableau.h"
 #include "SimpleListe.h"
@@ -40,7 +43,6 @@ int main() {
     A objet;
     cout << objet.a << objet.b << objet.c << endl;
 
-
 //    Exercice 2
     BinaryCode a("01001");
     cout << a << endl;
@@ -73,6 +75,7 @@ int main() {
     listeB.afficherContenu();
 
 //    Exercice 5
+
     Pile<int> pile;
     pile.empiler(1);
     pile.empiler(2);

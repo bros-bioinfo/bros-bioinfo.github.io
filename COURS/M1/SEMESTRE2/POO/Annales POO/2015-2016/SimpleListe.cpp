@@ -1,8 +1,6 @@
 //
 // Created by eliot on 24/03/19.
 //
-
-#include "SimpleListe.h"
 #include <iostream>
 
 using namespace std;
