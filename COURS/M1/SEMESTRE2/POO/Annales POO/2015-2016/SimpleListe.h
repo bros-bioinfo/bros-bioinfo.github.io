@@ -24,16 +24,14 @@ public:
 template<class E>
 class SimpleListe {
 private:
-public:
-    virtual ~SimpleListe();
-
-private:
     CElement<E> *first;
     unsigned int size;
 public:
     SimpleListe();
 
     SimpleListe(const SimpleListe<E> &src);
+
+    virtual ~SimpleListe();
 
     void ajouterEnTete(E value);
 

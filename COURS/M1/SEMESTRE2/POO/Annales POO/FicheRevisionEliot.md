@@ -36,6 +36,8 @@
       - [1.4.3.4. std::vector](#1434-stdvector)
       - [1.4.3.5. std::map](#1435-stdmap)
     - [1.4.4. Algorithmes standards](#144-algorithmes-standards)
+- [Exemples de code](#exemples-de-code)
+  - [Liste simplement chaînée](#liste-simplement-cha%C3%AEn%C3%A9e)
 ## 1.1. Concepts de base
 ### 1.1.1. Namespace
 Un namespace est un ensemble de méthodes, variables, constante et classes qui permet de délimiter la portée de ces éléments.  
@@ -555,10 +557,10 @@ Conteneur séquentiel contigu (tableau dynamique).
 
 #### 1.4.3.5. std::map
 Conteneur associatif (Dictionnaire ou HashMap).
-> `dict[key]` donne accès à l'élément associé à la clé, avec la possibilite =é de le modifié.
+> `dict[key]` donne accès à l'élément associé à la clé, avec la possibilité de le modifier.
 
 > Attention :  
-> L'iterateur ici ne contient pas directement les variables mais first et second, où first est la clé et second la valeur associée.
+> L'itérateur ici ne contient pas directement les variables mais first et second, où first est la clé et second la valeur associée.
 
 ```c++
 #include <map>
@@ -575,3 +577,169 @@ for (it = dict.begin(); it != dict.end(); it++) {
 
 ### 1.4.4. Algorithmes standards
 
+# Exemples de code
+## Liste simplement chaînée
+**SimpleList.h**
+```c++
+#ifndef POO_SIMPLELISTE_H
+#define POO_SIMPLELISTE_H
+
+
+template<class E>
+class CElement {
+public:
+    E value;
+    CElement *next;
+
+    virtual ~CElement() {
+        delete next;
+    }
+
+    CElement(E &value) : value(value) {
+        next = nullptr;
+    }
+};
+
+template<class E>
+class SimpleListe {
+private:
+    CElement<E> *first;
+    unsigned int size;
+public:
+    SimpleListe();
+
+    SimpleListe(const SimpleListe<E> &src);
+
+    virtual ~SimpleListe();
+
+    void ajouterEnTete(E value);
+
+    E retirerEnTete();
+
+    unsigned int nombreElements() const;
+
+    bool estVide() const;
+
+    void afficherContenu() const;
+
+    void trier();
+
+    void swap(CElement<E> *a, CElement<E> *b);
+};
+
+#include "SimpleListe.cpp"
+
+#endif //POO_SIMPLELISTE_H
+```
+
+**SimpleListe.cpp (NE PAS COMPILER)**
+```c++
+#include <iostream>
+
+using namespace std;
+
+template<class E>
+SimpleListe<E>::SimpleListe() {
+    size = 0;
+    first = nullptr;
+}
+
+template<class E>
+SimpleListe<E>::SimpleListe(const SimpleListe<E> &src) : SimpleListe() {
+    if (src.first != nullptr) {
+        size = src.size;
+        CElement <E> *srcNode = src.first;
+        first = new CElement<E>(srcNode->value);
+        CElement <E> *currentNode = first;
+        for (int i = 0; i < size - 1; i++) {
+            CElement <E> *newNode = new CElement<E>(srcNode->next->value);
+            currentNode->next = newNode;
+            currentNode = currentNode->next;
+            srcNode = srcNode->next;
+        }
+    }
+}
+
+template<class E>
+void SimpleListe<E>::ajouterEnTete(E value) {
+    auto newNode = new CElement<E>(value);
+    newNode->next = first;
+    first = newNode;
+    size++;
+}
+
+template<class E>
+E SimpleListe<E>::retirerEnTete() {
+    E toReturn = first->value;
+    first = first->next;
+    size--;
+    return toReturn;
+}
+
+template<class E>
+unsigned int SimpleListe<E>::nombreElements() const {
+    return size;
+}
+
+template<class E>
+bool SimpleListe<E>::estVide() const {
+    return size == 0;
+}
+
+template<class E>
+void SimpleListe<E>::afficherContenu() const {
+    cout << "Taille de la liste = " << size << endl;
+    CElement <E> node = *first;
+    cout << "[0] : " << node.value << endl;
+
+    for (int i = 1; i < size; ++i) {
+        node = *node.next;
+        cout << "[" << i << "] : " << node.value << endl;
+    }
+}
+
+template<class E>
+void SimpleListe<E>::trier() {
+    for (int i = 0; i < size - 1; i++) {
+        CElement <E> *current = first;
+        for (int j = 0; j < size - i - 1; j++) {
+            CElement <E> *next = current->next;
+            if (current->value < next->value) {
+                swap(current, next);
+            }
+            current = next;
+        }
+    }
+}
+
+template<class E>
+void SimpleListe<E>::swap(CElement <E> *a, CElement <E> *b) {
+    E temp = a->value;
+    a->value = b->value;
+    b->value = temp;
+}
+
+template<class E>
+SimpleListe<E>::~SimpleListe() {
+    delete first;
+}
+```
+**main.cpp**
+```c++
+#include "SimpleListe.h"
+
+int main() {
+    SimpleListe<double> liste;
+    liste.ajouterEnTete(1.1);
+    liste.ajouterEnTete(2.1);
+    liste.ajouterEnTete(3.1);
+    liste.ajouterEnTete(4.1);
+    liste.ajouterEnTete(3.4);
+    liste.afficherContenu();
+    liste.trier();
+    SimpleListe<double> listeB(liste);
+    listeB.afficherContenu();
+
+    return 0;
+}
+```
