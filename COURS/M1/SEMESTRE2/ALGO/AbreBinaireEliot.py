@@ -181,37 +181,36 @@ class BinaryTree:
     def __sub_is_perfect(self, current_node, height, current_height, level_up: bool):
         # An empty tree is perfect
         if not current_node:
-            return True
+            return True, False
 
         left_son = self.left_son(current_node)
         right_son = self.right_son(current_node)
 
-        # If leaf node, then its depth must
-        # be same as depth of all other leaves.
-        if not left_son and not right_son:
-            if level_up and current_height != height - 1:  # If leveled up, perfect is leaves being at height - 1
+        if not left_son and not right_son:  # SI c'est une feuille
+            if level_up and current_height != height - 1:  # Si on a level up, alors la feuille doit être à h - 1 pour passer
                 return False, level_up
-            if height == current_height:
-                return True, level_up
-            elif current_height == height - 1:
-                return True, True
+            if current_height == height:  # Si la feuille est à la bonne hauteur
+                return True, level_up  # Tout va bien on continue
+            elif current_height == height - 1:  # Sinon si on est à h - 1, on a level up
+                return True, True  # Donc c'est toujours éligible à la perfection, mais on notifie le level up
             else:
-                return False, level_up
+                return False, level_up  # Mais si c'est ni à h, ni à h - 1 alors c'est pas parfait
 
-        # If internal node and one child is empty
-        if not left_son or not right_son:
+        if not left_son or not right_son:  # Si on a une feuille d'un côté mais pas de l'autre
+            # Si on a un fils gauche qui est une feuille, pas de fils droit, et qu'on est à h - 1
             if left_son and not right_son and current_height == height - 1 and not (
                     self.left_son(left_son) or self.right_son(left_son)):
-                return True, True
-            return False, level_up
+                return True, True  # alors on a juste level up
+            return False, level_up  # Sinon ce n'est pas parfait
 
+        # Si on est ici, alors c'est que le current_node possède ses deux fils, donc on poursuit la recursive
         left, leveled_up = self.__sub_is_perfect(left_son, height, current_height + 1, level_up)
-        if leveled_up:
-            level_up = True
+        if leveled_up:  # Si à gauche on a leveled_up
+            level_up = True  # On update le flag level_up
         right, leveled_up = self.__sub_is_perfect(right_son, height, current_height + 1, level_up)
         if leveled_up:
             level_up = True
-        # Left and right subtrees must be perfect.
+        # Pour être parfait, on doit avoir la gauche ET la droite de parfait. On transmet le level_up
         return left and right, level_up
 
     def is_complete(self):
