@@ -1,3 +1,4 @@
+```python
 class Arbre:
     def __init__(self, root_id=None, root_label=None):
         self.sons = {}
@@ -124,3 +125,4 @@ assert sommets_rouge(rayure) == [1, 4, 5, 6, 7], sommets_rouge(rayure)
 assert est_rouge(rayure) is False, rayure
 assert sous_arbres_rouge(rayure) == [4, 5, 6, 7]
 assert a_des_rayures(rayure) is True, rayure
+```

@@ -53,12 +53,12 @@ class BinaryTree:
                 if not self.__left_sons[father]:
                     self.__left_sons[father] = node
                 else:
-                    raise (ValueError("Ce père a éjà un fils gauche"))
+                    raise (ValueError("Ce père a déjà un fils gauche"))
             else:
                 if not self.__right_sons[father]:
                     self.__right_sons[father] = node
                 else:
-                    raise (ValueError("Ce père a éjà un fils droit"))
+                    raise (ValueError("Ce père a déjà un fils droit"))
 
             self.__fathers[node] = father
             self.__left_sons[node] = None
