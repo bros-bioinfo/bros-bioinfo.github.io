@@ -1,17 +1,25 @@
 digraph G{
 	graph [ordering="out"];
-	n5 [ label="5" ];
-	n3 [ label="3" ];
-	n2 [ label="2" ];
-	n4 [ label="4" ];
+	n10 [ label="10" ];
+	n9 [ label="9" ];
+	n8 [ label="8" ];
 	n7 [ label="7" ];
 	n6 [ label="6" ];
-	n8 [ label="8" ];
+	n5 [ label="5" ];
+	null1 [ label="." ];
+	null2 [ label="." ];
+	null3 [ label="." ];
+	null4 [ label="." ];
+	null5 [ label="." ];
 
-	n5 -> n3;
-	n3 -> n2;
-	n3 -> n4;
-	n5 -> n7;
+	n10 -> n9;
+	n9 -> n8;
+	n8 -> n7;
 	n7 -> n6;
-	n7 -> n8;
+	n6 -> n5;
+	n6 -> null1;
+	n7 -> null2;
+	n8 -> null3;
+	n9 -> null4;
+	n10 -> null5;
 }

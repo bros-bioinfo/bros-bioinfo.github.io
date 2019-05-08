@@ -175,9 +175,10 @@ class BinaryTree:
         while node is not None:
             height += 1
             node = self.left_son(node)
-        return self.__sub_is_perfect(self.root, height)
+        perfect, leveled_up = self.__sub_is_perfect(self.root, height, 1, False)
+        return perfect
 
-    def __sub_is_perfect(self, current_node, height, current_height=0):
+    def __sub_is_perfect(self, current_node, height, current_height, level_up: bool):
         # An empty tree is perfect
         if not current_node:
             return True
@@ -188,30 +189,39 @@ class BinaryTree:
         # If leaf node, then its depth must
         # be same as depth of all other leaves.
         if not left_son and not right_son:
-            return (height == current_height + 1)
+            if level_up and current_height != height - 1:  # If leveled up, perfect is leaves being at height - 1
+                return False, level_up
+            if height == current_height:
+                return True, level_up
+            elif current_height == height - 1:
+                return True, True
+            else:
+                return False, level_up
 
         # If internal node and one child is empty
         if not left_son or not right_son:
-            return False
+            if left_son and not right_son and current_height == height - 1 and not (
+                    self.left_son(left_son) or self.right_son(left_son)):
+                return True, True
+            return False, level_up
 
+        left, leveled_up = self.__sub_is_perfect(left_son, height, current_height + 1, level_up)
+        if leveled_up:
+            level_up = True
+        right, leveled_up = self.__sub_is_perfect(right_son, height, current_height + 1, level_up)
+        if leveled_up:
+            level_up = True
         # Left and right subtrees must be perfect.
-        return (self.__sub_is_perfect(left_son, height, current_height + 1) and
-                self.__sub_is_perfect(right_son, height, current_height + 1))
+        return left and right, level_up
 
     def is_complete(self):
-        """Doesn't work"""
-        return self.__sub_is_complete(self.root)
-
-    def __sub_is_complete(self, current_node):
-        left_son = self.left_son(current_node)
-        right_son = self.right_son(current_node)
-
-        if not left_son and not right_son:
-            return True
-        elif left_son and right_son:
-            return self.__sub_is_complete(left_son) and self.__sub_is_complete(right_son)
-        else:
-            return False
+        node = self.root
+        height = 0
+        while node is not None:
+            height += 1
+            node = self.left_son(node)
+        perfect, leveled_up = self.__sub_is_perfect(self.root, height, 1, False)
+        return perfect and not leveled_up
 
     def is_binary_research_tree(self):
         infixe = self.infixe_browse()
@@ -281,14 +291,19 @@ print(binary_tree.postfixe_browse())
 
 binary_tree.show()
 
-binary_research_tree = BinaryResearchTree([5, 3, 7, 2, 4])
+binary_research_tree = BinaryResearchTree([5, 3, 7, 2, 4, 6])
 binary_research_tree.show()
 print(binary_research_tree.search(6))
 print(binary_research_tree.search(20))
 
 print(binary_research_tree.is_perfect())
-binary_research_tree.insert(6)
+print(binary_research_tree.is_complete())
 binary_research_tree.insert(8)
 binary_research_tree.show()
 print(binary_research_tree.is_perfect())
-500
+print(binary_research_tree.is_complete())
+
+binary_research_tree = BinaryResearchTree([10, 9, 8, 7, 6, 5])
+binary_research_tree.show()
+print(binary_research_tree.is_perfect())
+print(binary_research_tree.is_complete())

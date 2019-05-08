@@ -1,11 +1,10 @@
+import Exception.NameException;
 import Utils.IO;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Vector;
-
-import Exception.NameException;
 
 
 class Animalerie extends Vector<Animal> {
@@ -16,7 +15,7 @@ class Animalerie extends Vector<Animal> {
         this.name = name;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
