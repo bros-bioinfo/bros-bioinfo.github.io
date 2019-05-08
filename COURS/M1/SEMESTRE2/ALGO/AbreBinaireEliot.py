@@ -42,7 +42,7 @@ class BinaryTree:
         self.__right_sons[root] = []
         self.__labels[root] = label
 
-    def add_node(self, node: int, father: int, left_son: bool, label: str = None):
+    def add_node(self, node: int, father: int, left_son: bool, label=None):
         if father not in self.__fathers:
             print("Le père du noeud donné n'existe pas")
             return
@@ -229,6 +229,35 @@ class BinaryTree:
                 return False
         return True
 
+    def is_tas(self):
+        node = self.root
+        height = 0
+        while node is not None:
+            height += 1
+            node = self.left_son(node)
+        return self.__sub_is_tas(self.root, 1, height, None)
+
+    def __sub_is_tas(self, current_node, current_height, height, previous_value):
+        if not current_node:
+            return True
+
+        current_value = self.label(current_node)
+        if previous_value:
+            if current_value < previous_value:
+                return False
+
+        left_son = self.left_son(current_node)
+        right_son = self.right_son(current_node)
+
+        if not left_son and not right_son:
+            return current_height == height
+
+        if not left_son or not right_son:
+            return False
+
+        return self.__sub_is_tas(left_son, current_height + 1, height, current_value) and \
+               self.__sub_is_tas(right_son, current_height + 1, height, current_value)
+
 
 class BinaryResearchTree(BinaryTree):
     def __init__(self, elements: list = None):
@@ -292,7 +321,9 @@ binary_tree.show()
 
 binary_research_tree = BinaryResearchTree([5, 3, 7, 2, 4, 6])
 binary_research_tree.show()
+print("Search 6 --> True")
 print(binary_research_tree.search(6))
+print("Search 20 --> False")
 print(binary_research_tree.search(20))
 
 print(binary_research_tree.is_perfect())
@@ -306,3 +337,15 @@ binary_research_tree = BinaryResearchTree([10, 9, 8, 7, 6, 5])
 binary_research_tree.show()
 print(binary_research_tree.is_perfect())
 print(binary_research_tree.is_complete())
+
+tas = BinaryTree(1, 1)
+tas.add_node(2, 1, True, 2)
+tas.add_node(3, 1, False, 2)
+tas.add_node(4, 2, True, 3)
+tas.add_node(5, 2, False, 3)
+tas.add_node(6, 3, True, 3)
+tas.show()
+print(tas.is_tas())
+tas.add_node(7, 3, False, 3)
+tas.show()
+print(tas.is_tas())
