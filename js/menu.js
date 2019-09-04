@@ -1,189 +1,194 @@
 function getTree() {
-  var data =
-      [
-        {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
-            {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"12191714",nodes:[
-                {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"11131412",nodes:[
-                    {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"1019  2018",nodes:[
-                        {"type":"directory",href:"#fh5co-work",text:"Eliot",custom:"26 1210",nodes:[
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/Eliot/Algo_Eliot",text:"Algo_Eliot",custom:"11201707"},
-                          ]},
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/algo",text:"algo",custom:"1016  2018"},
-                      ]},
-                    {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"4151050",nodes:[
-                        {"type":"directory",href:"#fh5co-work",text:"PROJET",custom:"927  2018",nodes:[
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/PROJET/Compte_rendu",text:"Compte_rendu",custom:"927  2018"},
-                          ]},
-                        {"type":"directory",href:"#fh5co-work",text:"TD",custom:"927  2018",nodes:[
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/TD/Exos_baldacci_py",text:"Exos_baldacci_py",custom:"927  2018"},
-                          ]},
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/Intro_programmation",text:"Intro_programmation",custom:"927  2018"},
-                      ]},
-                    {"type":"directory",href:"#fh5co-work",text:"USI",custom:"1119  823",nodes:[
-                        {"type":"directory",href:"#fh5co-work",text:"TD",custom:"109  2018",nodes:[
-                            {"type":"directory",href:"#fh5co-work",text:"PROBLEME",custom:"11111231",nodes:[
-                                {"type":"directory",href:"#fh5co-work",text:"PROBLEME_1",custom:"11111230",nodes:[
-                                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_1/normalise",text:"normalise",custom:"11111230"},
-                                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_1/statBio",text:"statBio",custom:"11111230"},
-                                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_1/test_sous_sequence",text:"test_sous_sequence",custom:"11111230"},
-                                  ]},
-                                {"type":"directory",href:"#fh5co-work",text:"PROBLEME_2",custom:"11111230",nodes:[
-                                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/aa-le-plus-present",text:"aa-le-plus-present",custom:"11111230"},
-                                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/extrait-une-sous-chaine",text:"extrait-une-sous-chaine",custom:"11111230"},
-                                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/histogramme-proteine",text:"histogramme-proteine",custom:"11111230"},
-                                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/nb-aa-de-type",text:"nb-aa-de-type",custom:"11111230"},
-                                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/sous-chaine-la-plus-frequente",text:"sous-chaine-la-plus-frequente",custom:"11111230"},
-                                  ]},
-                              ]},
-                            {"type":"directory",href:"#fh5co-work",text:"PROBLEME_ELIOT",custom:"12191738",nodes:[
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/aa-le-plus-present",text:"aa-le-plus-present",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/extrait-toutes-les-sous-chaines",text:"extrait-toutes-les-sous-chaines",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/extrait-une-sous-chaine",text:"extrait-une-sous-chaine",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/fasta",text:"fasta",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/histogramme-proteine",text:"histogramme-proteine",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/nb-aa-de-type",text:"nb-aa-de-type",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/plus-petite-chaine-non-repetee",text:"plus-petite-chaine-non-repetee",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/prepa",text:"prepa",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/sous-chaine-la-plus-frequente",text:"sous-chaine-la-plus-frequente",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/statbio",text:"statbio",custom:"11111229"},
-                                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/test_sous_sequence",text:"test_sous_sequence",custom:"11111229"},
-                              ]},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/1_Communications",text:"1_Communications",custom:"927  2018"},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"927  2018"},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/3_Emacs",text:"3_Emacs",custom:"927  2018"},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/4_Unix",text:"4_Unix",custom:"927  2018"},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/5_Processus",text:"5_Processus",custom:"927  2018"},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/7_Utilitaires",text:"7_Utilitaires",custom:"927  2018"},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/8_Shell",text:"8_Shell",custom:"102  2018"},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/shell_seb",text:"shell_seb",custom:"927  2018"},
-                          ]},
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/Utilisation_systeme_info",text:"Utilisation_systeme_info",custom:"11191110"},
-                      ]},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"ANGLAIS",custom:"1017  2018",nodes:[
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/English",text:"English",custom:"11111422"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/Oral_English2",text:"Oral_English2",custom:"1112  904"},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"12172003",nodes:[
-                    {"type":"directory",href:"#fh5co-work",text:"TD",custom:"1024  2018",nodes:[
-                        {"type":"directory",href:"#fh5co-work",text:"Line_Detection",custom:"12171813",nodes:[
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Line_Detection/line",text:"line",custom:"1024  2018"},
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Line_Detection/line.pdf",text:"line.pdf",custom:"12171813"},
-                          ]},
-                        {"type":"directory",href:"#fh5co-work",text:"Machine Learning",custom:"1021  2018",nodes:[
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Machine Learning/kNN",text:"kNN",custom:"1019  2018"},
-                          ]},
-                        {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"927  2018",nodes:[
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"927  2018"},
-                          ]},
-                      ]},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image",text:"Image",custom:"12172003"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image.pdf",text:"Image.pdf",custom:"12172003"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript",text:"Javascript",custom:"102  2018"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript.pdf",text:"Javascript.pdf",custom:"12171959"},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"OMIC_BIOINFO",custom:"927  2018",nodes:[
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Cours_O2018",text:"Cours_O2018",custom:"927  2018"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Omic_bioinfo",text:"Omic_bioinfo",custom:"102  2018"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Philogenie",text:"Philogenie",custom:"927  2018"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"927  2018"},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"STATS",custom:"11121306",nodes:[
-                    {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"927  2018",nodes:[
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD1/R_EN_TUTORIAL.pdf",text:"R_EN_TUTORIAL.pdf",custom:"927  2018"},
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD1/TD1.pdf",text:"TD1.pdf",custom:"927  2018"},
-                      ]},
-                    {"type":"directory",href:"#fh5co-work",text:"TD2",custom:"927  2018",nodes:[
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD2/TD2",text:"TD2",custom:"927  2018"},
-                      ]},
-                    {"type":"directory",href:"#fh5co-work",text:"TD3_Analyse_Groupement",custom:"11121307",nodes:[
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD3_Analyse_Groupement/analyse_groupement",text:"analyse_groupement",custom:"11191406"},
-                      ]},
-                    {"type":"directory",href:"#fh5co-work",text:"TD_papier",custom:"927  2018",nodes:[
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD_papier/td_papier",text:"td_papier",custom:"927  2018"},
-                      ]},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Analyses_Multidimensionelles",text:"Analyses_Multidimensionelles",custom:"11191406"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Intro_stats",text:"Intro_stats",custom:"927  2018"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Sequence_chronologique",text:"Sequence_chronologique",custom:"927  2018"},
-                  ]},
-              ]},
-            {"type":"directory",href:"#fh5co-work",text:"SEMESTRE2",custom:"18  815",nodes:[
-                {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"58 2340",nodes:[
-                    {"type":"directory",href:"#fh5co-work",text:"exos_tris",custom:"313  852",nodes:[
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/exos_tris/readme",text:"readme",custom:"313  852"},
-                      ]},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/Arbre",text:"Arbre",custom:"36 1153"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/CorrectionArbre_Annales_2018",text:"CorrectionArbre_Annales_2018",custom:"58 2340"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/graphe",text:"graphe",custom:"3201208"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/graphOriente.dot.pdf",text:"graphOriente.dot.pdf",custom:"3271217"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/td5",text:"td5",custom:"927  2018"},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"BDD",custom:"927  2018",nodes:[
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/bdd",text:"bdd",custom:"927  2018"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/conceptionBDD",text:"conceptionBDD",custom:"927  2018"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/TD1",text:"TD1",custom:"927  2018"},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"MODELISATION",custom:"927  2018",nodes:[
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/MODELISATION/topo",text:"topo",custom:"927  2018"},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"NGS",custom:"927  2018",nodes:[
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/NGS/TD_GALAXY.pdf",text:"TD_GALAXY.pdf",custom:"927  2018"},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"POO",custom:"326  036",nodes:[
-                    {"type":"directory",href:"#fh5co-work",text:"Annales POO",custom:"326  130",nodes:[
-                        {"type":"directory",href:"#fh5co-work",text:"2017-2018",custom:"3252025",nodes:[
-                            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/POO/Annales POO/2017-2018/Exam 20172018.pdf",text:"Exam 20172018.pdf",custom:"813  2018"},
-                          ]},
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/POO/Annales POO/FicheRevisionEliot",text:"FicheRevisionEliot",custom:"326  129"},
-                        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/POO/Annales POO/FicheRevisionEliot.pdf",text:"FicheRevisionEliot.pdf",custom:"326  130"},
-                      ]},
-                  ]},
-                {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"41 2231",nodes:[
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/AnnaleJava2017.pdf",text:"AnnaleJava2017.pdf",custom:"3282313"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/AnnaleJava2018.pdf",text:"AnnaleJava2018.pdf",custom:"3282313"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/Java",text:"Java",custom:"927  2018"},
-                  ]},
-              ]},
+  var data = 
+[
+  {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
+    {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"94 1007",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"94 1007",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"94 1007",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"Eliot",custom:"94 1007",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/Eliot/Algo_Eliot",text:"Algo_Eliot",custom:"94 1007"},
           ]},
-        {"type":"directory",href:"#fh5co-work",text:"POUR_ALLER_PLUS_LOIN",nodes:[
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/POUR_ALLER_PLUS_LOIN/emacs",text:"emacs",custom:"927  2018"},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/POUR_ALLER_PLUS_LOIN/LaTex",text:"LaTex",custom:"927  2018"},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/ALGO/algo",text:"algo",custom:"94 1007"},
+        ]},
+        {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"94 1007",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"PROJET",custom:"94 1007",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/PROJET/Compte_rendu",text:"Compte_rendu",custom:"94 1007"},
           ]},
-        {"type":"directory",href:"#fh5co-work",text:"TUTO_FICHES",nodes:[
-            {"type":"directory",href:"#fh5co-work",text:"PYTHON",custom:"927  2018",nodes:[
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/1-variables-et-types-python.pdf",text:"1-variables-et-types-python.pdf",custom:"927  2018"},
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/2-conditionnelles-boucles.pdf",text:"2-conditionnelles-boucles.pdf",custom:"927  2018"},
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/3-fonctions.pdf",text:"3-fonctions.pdf",custom:"927  2018"},
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/apprendre_python3_5(G_Swinnen).pdf",text:"apprendre_python3_5(G_Swinnen).pdf",custom:"927  2018"},
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/reponse_tutorat",text:"reponse_tutorat",custom:"927  2018"},
+          {"type":"directory",href:"#fh5co-work",text:"TD",custom:"94 1007",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/TD/Exos_baldacci_py",text:"Exos_baldacci_py",custom:"94 1007"},
+          ]},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/PROG/Intro_programmation",text:"Intro_programmation",custom:"94 1007"},
+        ]},
+        {"type":"directory",href:"#fh5co-work",text:"USI",custom:"94 1007",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"TD",custom:"94 1007",nodes:[
+            {"type":"directory",href:"#fh5co-work",text:"PROBLEME",custom:"94 1007",nodes:[
+              {"type":"directory",href:"#fh5co-work",text:"PROBLEME_1",custom:"94 1007",nodes:[
+                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_1/normalise",text:"normalise",custom:"94 1007"},
+                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_1/statBio",text:"statBio",custom:"94 1007"},
+                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_1/test_sous_sequence",text:"test_sous_sequence",custom:"94 1007"},
               ]},
-            {"type":"directory",href:"#fh5co-work",text:"USI",custom:"927  2018",nodes:[
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/USI/correctionQCM",text:"correctionQCM",custom:"927  2018"},
+              {"type":"directory",href:"#fh5co-work",text:"PROBLEME_2",custom:"94 1007",nodes:[
+                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/aa-le-plus-present",text:"aa-le-plus-present",custom:"94 1007"},
+                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/extrait-une-sous-chaine",text:"extrait-une-sous-chaine",custom:"94 1007"},
+                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/histogramme-proteine",text:"histogramme-proteine",custom:"94 1007"},
+                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/nb-aa-de-type",text:"nb-aa-de-type",custom:"94 1007"},
+                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME/PROBLEME_2/sous-chaine-la-plus-frequente",text:"sous-chaine-la-plus-frequente",custom:"94 1007"},
               ]},
-            {"type":"directory",href:"#fh5co-work",text:"WEB",custom:"927  2018",nodes:[
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-1.pdf",text:"IMAJS-1.pdf",custom:"927  2018"},
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-2.pdf",text:"IMAJS-2.pdf",custom:"927  2018"},
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-3.pdf",text:"IMAJS-3.pdf",custom:"927  2018"},
-                {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-4.pdf",text:"IMAJS-4.pdf",custom:"927  2018"},
-              ]},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/Tuto_jithub",text:"Tuto_jithub",custom:"927  2018"},
-          ]}
-      ]
-  ;
-  return data;
+            ]},
+            {"type":"directory",href:"#fh5co-work",text:"PROBLEME_ELIOT",custom:"94 1007",nodes:[
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/aa-le-plus-present",text:"aa-le-plus-present",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/extrait-toutes-les-sous-chaines",text:"extrait-toutes-les-sous-chaines",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/extrait-une-sous-chaine",text:"extrait-une-sous-chaine",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/fasta",text:"fasta",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/histogramme-proteine",text:"histogramme-proteine",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/nb-aa-de-type",text:"nb-aa-de-type",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/plus-petite-chaine-non-repetee",text:"plus-petite-chaine-non-repetee",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/prepa",text:"prepa",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/sous-chaine-la-plus-frequente",text:"sous-chaine-la-plus-frequente",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/statbio",text:"statbio",custom:"94 1007"},
+              {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/PROBLEME_ELIOT/test_sous_sequence",text:"test_sous_sequence",custom:"94 1007"},
+            ]},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/1_Communications",text:"1_Communications",custom:"94 1007"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/2_Unix",text:"2_Unix",custom:"94 1007"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/3_Emacs",text:"3_Emacs",custom:"94 1007"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/4_Unix",text:"4_Unix",custom:"94 1007"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/5_Processus",text:"5_Processus",custom:"94 1007"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/7_Utilitaires",text:"7_Utilitaires",custom:"94 1007"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/8_Shell",text:"8_Shell",custom:"94 1007"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/TD/shell_seb",text:"shell_seb",custom:"94 1007"},
+          ]},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ALGO_PROG/USI/Utilisation_systeme_info",text:"Utilisation_systeme_info",custom:"94 1007"},
+        ]},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"ANGLAIS",custom:"94 1007",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/English",text:"English",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANGLAIS/Oral_English2",text:"Oral_English2",custom:"94 1007"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"IMAGE_NUM",custom:"94 1007",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"TD",custom:"94 1007",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"Line_Detection",custom:"94 1007",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Line_Detection/line",text:"line",custom:"94 1007"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Line_Detection/line.pdf",text:"line.pdf",custom:"94 1007"},
+          ]},
+          {"type":"directory",href:"#fh5co-work",text:"Machine Learning",custom:"94 1007",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/Machine Learning/kNN",text:"kNN",custom:"94 1007"},
+          ]},
+          {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"94 1007",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/TD/TD1/ImageJ_td1",text:"ImageJ_td1",custom:"94 1007"},
+          ]},
+        ]},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image",text:"Image",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Image.pdf",text:"Image.pdf",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript",text:"Javascript",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/IMAGE_NUM/Javascript.pdf",text:"Javascript.pdf",custom:"94 1007"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"OMIC_BIOINFO",custom:"94 1007",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Cours_O2018",text:"Cours_O2018",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Omic_bioinfo",text:"Omic_bioinfo",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Philogenie",text:"Philogenie",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/OMIC_BIOINFO/Recherche_sequence",text:"Recherche_sequence",custom:"94 1007"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"STATS",custom:"94 1007",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"TD1",custom:"94 1007",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD1/R_EN_TUTORIAL.pdf",text:"R_EN_TUTORIAL.pdf",custom:"94 1007"},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD1/TD1.pdf",text:"TD1.pdf",custom:"94 1007"},
+        ]},
+        {"type":"directory",href:"#fh5co-work",text:"TD2",custom:"94 1007",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD2/TD2",text:"TD2",custom:"94 1007"},
+        ]},
+        {"type":"directory",href:"#fh5co-work",text:"TD3_Analyse_Groupement",custom:"94 1007",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD3_Analyse_Groupement/analyse_groupement",text:"analyse_groupement",custom:"94 1007"},
+        ]},
+        {"type":"directory",href:"#fh5co-work",text:"TD_papier",custom:"94 1007",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/TD_papier/td_papier",text:"td_papier",custom:"94 1007"},
+        ]},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Analyses_Multidimensionelles",text:"Analyses_Multidimensionelles",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Intro_stats",text:"Intro_stats",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/STATS/Sequence_chronologique",text:"Sequence_chronologique",custom:"94 1007"},
+      ]},
+    ]},
+    {"type":"directory",href:"#fh5co-work",text:"SEMESTRE2",custom:"94 1007",nodes:[
+      {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"94 1007",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"exos_tris",custom:"94 1007",nodes:[
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/exos_tris/readme",text:"readme",custom:"94 1007"},
+        ]},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/Arbre",text:"Arbre",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/CorrectionArbre_Annales_2018",text:"CorrectionArbre_Annales_2018",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/graphe",text:"graphe",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/graphOriente.dot.pdf",text:"graphOriente.dot.pdf",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/ALGO/td5",text:"td5",custom:"94 1007"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"BDD",custom:"94 1007",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/bdd",text:"bdd",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/conceptionBDD",text:"conceptionBDD",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/BDD/TD1",text:"TD1",custom:"94 1007"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"MODELISATION",custom:"94 1007",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/MODELISATION/topo",text:"topo",custom:"94 1007"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"NGS",custom:"94 1007",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/NGS/TD_GALAXY.pdf",text:"TD_GALAXY.pdf",custom:"94 1007"},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"POO",custom:"94 1007",nodes:[
+        {"type":"directory",href:"#fh5co-work",text:"Annales POO",custom:"94 1007",nodes:[
+          {"type":"directory",href:"#fh5co-work",text:"2017-2018",custom:"94 1007",nodes:[
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/POO/Annales POO/2017-2018/Exam 20172018.pdf",text:"Exam 20172018.pdf",custom:"94 1007"},
+          ]},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/POO/Annales POO/FicheRevisionEliot",text:"FicheRevisionEliot",custom:"94 1007"},
+          {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/POO/Annales POO/FicheRevisionEliot.pdf",text:"FicheRevisionEliot.pdf",custom:"94 1007"},
+        ]},
+      ]},
+      {"type":"directory",href:"#fh5co-work",text:"PROG",custom:"94 1224",nodes:[
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/AnnaleJava2017.pdf",text:"AnnaleJava2017.pdf",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/AnnaleJava2018.pdf",text:"AnnaleJava2018.pdf",custom:"94 1007"},
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE2/PROG/Java",text:"Java",custom:"94 1007"},
+      ]},
+    ]},
+  ]},
+  {"type":"directory",href:"#fh5co-work",text:"M2",nodes:[
+    {"type":"directory",href:"#fh5co-work",text:"AdvancedJava",custom:"94 1012",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M2/AdvancedJava/Cours",text:"Cours",custom:"94 1012"},
+    ]},
+  ]},
+  {"type":"directory",href:"#fh5co-work",text:"POUR_ALLER_PLUS_LOIN",nodes:[
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/POUR_ALLER_PLUS_LOIN/emacs",text:"emacs",custom:"94 1007"},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/POUR_ALLER_PLUS_LOIN/LaTex",text:"LaTex",custom:"94 1007"},
+  ]},
+  {"type":"directory",href:"#fh5co-work",text:"TUTO_FICHES",nodes:[
+    {"type":"directory",href:"#fh5co-work",text:"PYTHON",custom:"94 1007",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/1-variables-et-types-python.pdf",text:"1-variables-et-types-python.pdf",custom:"94 1007"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/2-conditionnelles-boucles.pdf",text:"2-conditionnelles-boucles.pdf",custom:"94 1007"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/3-fonctions.pdf",text:"3-fonctions.pdf",custom:"94 1007"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/apprendre_python3_5(G_Swinnen).pdf",text:"apprendre_python3_5(G_Swinnen).pdf",custom:"94 1007"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/PYTHON/reponse_tutorat",text:"reponse_tutorat",custom:"94 1007"},
+    ]},
+    {"type":"directory",href:"#fh5co-work",text:"USI",custom:"94 1007",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/USI/correctionQCM",text:"correctionQCM",custom:"94 1007"},
+    ]},
+    {"type":"directory",href:"#fh5co-work",text:"WEB",custom:"94 1007",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-1.pdf",text:"IMAJS-1.pdf",custom:"94 1007"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-2.pdf",text:"IMAJS-2.pdf",custom:"94 1007"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-3.pdf",text:"IMAJS-3.pdf",custom:"94 1007"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/WEB/IMAJS-4.pdf",text:"IMAJS-4.pdf",custom:"94 1007"},
+    ]},
+    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/TUTO_FICHES/Tuto_jithub",text:"Tuto_jithub",custom:"94 1007"},
+  ]}
+]
+;
+return data;
 }
 
 var $searchableTree=$("#tree").treeview({
-  data: getTree(),
-  enableLinks: true,
-  showBorder: false,
-  showIcon: true,
-  showCheckbox: false,
-  expandIcon: "fa fa-folder",
-  collapseIcon: "fa fa-folder-open",
-  emptyIcon: "fa fa-file-text-o",
-  tags: ["available"],
-  showTags: true,
+data: getTree(),
+enableLinks: true,
+showBorder: false,
+showIcon: true,
+showCheckbox: false,
+expandIcon: "fa fa-folder",
+collapseIcon: "fa fa-folder-open",
+emptyIcon: "fa fa-file-text-o",
+tags: ["available"],
+showTags: true,
 
 // colors
   color: "#428bca",
@@ -195,7 +200,7 @@ var $searchableTree=$("#tree").treeview({
   searchResultColor: "#D9534F",
   searchResultBackColor: undefined,
 
-  onNodeSelected: function(event, node) {
+onNodeSelected: function(event, node) {
     if (node.nodes == undefined) {
       // sends node info to another element
     } else if (node.state.expanded) {
@@ -205,7 +210,7 @@ var $searchableTree=$("#tree").treeview({
       // TODO expand children
       expandNode(node.nodeId);
     }
-    //  var children = node["nodes"];
+  //  var children = node["nodes"];
 //    alert( node["nodes"][0].custom ) ;
   }
 
