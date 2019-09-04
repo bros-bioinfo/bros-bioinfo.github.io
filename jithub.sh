@@ -10,7 +10,7 @@ echo 'function getTree() {
 /usr/bin/tree COURS/* -f --noreport -D -P '*\.md|*\.pdf' --dirsfirst --prune -C -J >> js/menu.js #output JSON TREE \o/ YEAHHH
 
 
-filename="js/menu.js"
+filename="./js/menu.js"
 sed -i -e 's/\"name\"/href/g' js/menu.js #replace name by href to match bootstrap standards
 lineNo=1
 
