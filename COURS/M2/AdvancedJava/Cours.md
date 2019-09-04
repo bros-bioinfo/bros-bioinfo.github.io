@@ -1,0 +1,166 @@
+# JAVA Avancé
+
+## Introduction
+
+Xavier Blanc : xavier.blanc@u-bordeaux.com
+
+LinkedIn et Youtube
+
+GitHub
+
+Notation :
+- 1 QCM en TD de 20 min au hasard
+- 1 TD sur machine 1h
+- Pas de projet
+- 1 Exam sur papier (Particulièrement difficile)
+
+## Bases (4 semaines)
+
+### Objet
+
+#### L'objet
+
+- Identifiant
+- Données
+- Traitement
+
+L'identifiant n'est pas la référence de l'objet. 
+Une référence est quelque chose qui permet à un objet d'agir sur un autre objet, il se sert de l'id, mais ce dernier n'est jamais visible. 
+
+Il peut ne pas y avoir de données dans un objet.
+
+Java donne par défaut des traitements donc il y en a forcément 
+
+Ce qui définie vraiment un objet, c'est qu'ils échangent des messages pour réaliser des traitements complexes.
+
+La POO c'est découper un problème en entités contenant des données et pouvant interagir à l'aide des traitements et de l'identifiant.
+
+Un diagramme de séquence UML résume les interactions entre objets définis par leurs identifiants
+
+En paradigme impératif, l'objectif est de découper le problème en traitements (fonctions)
+
+En objet on doit faire de la partition, c'est à dire qu'il est hors de question que deux objets partagent les mêmes données, et on ne partage pas les traitements non plus.
+
+L'objectif ici est de faire une bonne conception, donc de limiter au maximum les interactions entre objets, et donc bien sûr aussi d'éviter toute redondance dans la mémoire.
+
+```java
+String s;
+s = "Hello";
+s = s + "Comment "
+s = s + "Allez vous ?"
+```
+Il y a ici 3 objets de créés car à chaque addition, la machine virtuelle (jvm) créer un nouvel objet qui contient le nouveau texte
+
+#### Responsabilité et encapsulation
+
+> L'objet est responsable des traitements qu'il propose !
+
+L'objet dispose donc de **tous les éléments** pour réaliser les traitements qu'il propose.
+
+Ces éléments sont grosso modo :
+ - Suite d'instruction
+ - Paramètre en entrée
+    - Données de l'objet ou paramètre en entrées ?
+ - Résultat
+ 
+>Exemple
+>
+>Une calculatrice n'a pas besoin d'avoir de données
+>
+>En revanche une calculatrice à mémoire devra avoir des données propre
+
+
+> **Responsabilité** : 
+> L'objet a tout pour réaliser ses traitements
+>
+> **Encapsulation** :
+> Si l'objet utilise ses données pour réaliser ses traitements, il doit protéger ses données
+
+#### Couplage et Cohérence
+
+Les deux notions sont antagonistes !
+
+> **Couplage** : Pour réaliser le traitement dont l'objet est responsable, il peut demander l'aide d'autre objets.
+
+Plus on a besoin d'autres objets, plus on est couplé. Donc afin de limiter le nombre d'interactions, on tend a limiter le couplage.
+
+La conséquence logique serait alors de partitioner tout le problème en un seul objet. On manquerait alors de cohérence !
+
+> **Cohérence** : C'est ne pas être incohérent, et donc proposer des traitements qui n'ont pas de rapport entre eux
+
+Concrètement, un objet est cohérent si il est insécable, dans le sens où tout ses traitements dépendent bien de toutes les données.
+
+L'idéal de la POO est donc un faible couplage malgré une forte cohérence.
+
+(Explication du TD)
+
+Quand on donne un objet et qu'on l'analyse, il faut avoir un sens critique.
+
+80% de nos intuitions sont fausses, le sens critique est donc de chercher à savoir si nos intuition sont justes ou non ?
+
+Question d'analyse d'objet:
+- L'objet possède t'il des données ?
+   - Non 
+        - Pas de problème d'encapsulation puisque pas de données
+        - Traitement stateless
+        - Toutes méthodes devraient donc être statiques (**static**) ou au pire n'être instancier qu'une fois, plus serait inutile
+   - Oui
+        - A t'il que des données constantes ?
+            - Oui
+                - Les données constantes n'ont pas à être protégées, l'objet doit donc être immutable
+            - Non
+                - Couplage ?
+                - Cohérence ?
+
+#### Cycle de vie
+
+1. Création
+2. Reçoit des messages & Réalise des traitements
+3. Si un objet ne peut plus avoir de message, alors l'objet est détruit. C'est le cas quand un objet n'est pas référencé
+ 
+En java les traitements sont, de bases, synchrones, on peut voir ça comme un jeton de qui a le droit de s'éxécuter.
+  
+Quand un objet utilise un traitement d'une autre fonction, alors il donne son jeton à cette fonction qui lui rend à la fin de son traitement. 
+
+N'importe quel objet peut créer un autre objet (l'objet créateur a alors la référence)
+
+#### Synthèse
+Definition:
+> Objet = #Id + (Data)? + Traitements
+
+On référence des objets.
+
+Java exception pour boolean, int, double, ... Tous les types primaires.
+
+-----
+
+**Responsabilité & Encapsulation**:
+
+> **Responsabilité** : 
+> L'objet a tout pour réaliser ses traitements
+>
+> **Encapsulation** :
+> Si l'objet utilise ses données pour réaliser ses traitements, il doit protéger ses données
+
+-----
+
+**Couplage et Cohérence**
+> **Couplage** : L'objet peut demander déléguer ses responsabilités à d'autres objets
+>
+> **Cohérence** : On peut pas couper l'objet en deux
+
+
+### Classes
+
+### Interface
+
+### Test & Lint
+
+## Domain Driven Design (3 semaines)
+
+## Architecture objet (3 semaines)
+
+## Avancée (2 semaines)
+
+
+
