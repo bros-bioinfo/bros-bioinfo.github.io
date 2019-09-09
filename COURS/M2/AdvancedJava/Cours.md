@@ -152,6 +152,140 @@ Java exception pour boolean, int, double, ... Tous les types primaires.
 
 ### Classes
 
+Langage Orienté Objet à Classe:
+
+Le développeur "décrit" des classes d'objets.
+
+Il existe deux relations entre classes et objets
+- Construction: Une classe peut construire plusieurs objets, mais un objet n'auras qu'une classe constructrice. Se fait grâce au `new`
+- Conformité: Un objet peut "ressembler" à plusieurs classes 
+
+Le terme instantiation couvre les deux définitions.
+
+Une classe est donc 
+- Un moule (`new`)
+- Un contrat (conformité)
+
+Tout objet construit est conforme. La fonction patron est statique, mais la conformité peut évoluer et est plus une question dynamique.
+
+#### La classe comme moule/contrat
+- Data
+    - `visibilité Type nom; // Pour la classe`
+    - Conforme => L'objet possède les données définies par la classe
+- Traitements
+    - `visibilté TypeRetour nom(Params(Type nom)) exceptions {}`
+    - Conforme => L'objet est responsable des traitements définis par la classe
+
+```java
+public class Point {
+    int x;
+    int y;
+    
+    public Point(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+    
+    // getters
+}
+```
+Conformité = Typage
+
+**Code** = Compilation => **Code compilé** = Run => **VM**
+
+Compilation:
+- Prévenir les erreurs
+- Aide votre IDE
+
+Run:
+- 2nd contrôle de de typage
+
+2 Solutions pour avoir des entiers positifs:
+- Créer sa propre classe PositiveInt
+- Lever une exception à la construction
+```java
+class Point {
+    Point (int x, int y) {
+        if (x < 0) throw new TypeConstructException();
+    }
+}
+```
+
+#### Visibilité et Encapsulation des données
+
+- public => Pas de verrous => Pas d'encapsulation
+- private => Protégé sauf pour les objets sortis du même moule
+
+
+#### Visibilité et Encapsulation des traitements
+
+Traitements qui modifient les données :
+- Normal ? => public
+- Pas normal ? => private
+
+Sur un traitement private, l'idée est qu'un autre développeur ne pourras pas utiliser le traitement.
+
+#### L'héritage
+
+L'héritage est une relation entre classes qui a un impact sur les objets instances des classes en relation.
+
+Pour préciser qu'une classe hérite d'une autre, il suffit d'utiliser le mot clé `extends`.
+
+>Principe de substitution:
+>
+>Si j'ai besoin d'un A, on peut me donner un B qui est conforme à A.
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+public class Shape {
+    private List<Point> pointList;
+    
+    public Shape() {
+        pointList = new ArrayList<Point>();
+    }
+    
+    public List<Point> getPointList(){
+        return new ArrayList<Point>(pointList); 
+        // Attention à ne pas directement donner pointList, qui est une référence, 
+        // ce qui reviendrait donc à ruiner l'encapsulation !
+    }
+}
+
+public class Rectangle extends Shape {
+    public Rectangle(Point origin, int width, int height) {
+        
+    }
+    public int getWidth() {
+        
+    }
+    public int getHeight() {
+        
+    }
+}
+```
+
+#### Polymorphisme et surcharge
+Contrat des classes sur les objets (typage) ne porte jamais sur le code mais sur les signatures !
+
+Le polymorphisme, c'est changer le code dans une sous classe (`@Override`), mais pas le contrat !
+
+La surcharge, c'est changer le type, donc en gros ajouter des contraintes de typage (moins d'individus)
+
+La covariance dit qu'on a le droit de sous typer des paramètres.
+
+```java
+public class Transformer <T extends Shape> {
+    T transform(T in) {
+        return in;
+    }
+}
+```
+#### Quand faut-il hériter ?
+Héritage pourrait être une bonne solution si:
+1. Vous êtes en train de dupliquer du code dans 2 classes ?  
+2. Si vous voulez réutiliser sans changer
+3. Le plus intéressant, vous êtes en train de définir un contrat qui **DEVRA** être complété par un autre développeur. => Classe abstraite
 ### Interface
 
 ### Test & Lint
