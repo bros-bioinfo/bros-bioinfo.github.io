@@ -284,10 +284,246 @@ public class Transformer <T extends Shape> {
 #### Quand faut-il hériter ?
 Héritage pourrait être une bonne solution si:
 1. Vous êtes en train de dupliquer du code dans 2 classes ?  
-2. Si vous voulez réutiliser sans changer
+2. Si vous voulez réutiliser des traitements en les adaptant
 3. Le plus intéressant, vous êtes en train de définir un contrat qui **DEVRA** être complété par un autre développeur. => Classe abstraite
-### Interface
+### Délégations, classes et interfaces
+Peut on réaliser le cas 2. sans héritage ?
 
+
+Oui grâce à la délégation, c'est à dire que l'on peut utiliser les méthodes d'un attribut.
+
+
+Exemple:
+```java
+public class A {
+    public void f() {
+        System.out.println(1);
+    }
+}
+
+public class B extends A {  // Héritage
+    public void g() {
+        f();
+    }
+}
+
+public class C {  // Délégations
+    private A a;
+    public void g() {
+        a.f();
+    }
+}
+```
+
+- Héritage
+    - Avantages :
+        - Moins d'objets
+        - Moins d'appel de méthode
+        - *"Moins de dépendances directes"*
+        - Substituabilité
+    - Inconvénients :
+        - .
+- Délégation
+    - Avantages :
+        - .
+    - Inconvénients :
+        - Plus d'objets
+        - Plus d'appels de méthode
+        - *"Plus de dépendances directes"*
+        - Pas de substituabilité
+
+#### L'interface
+
+> Interface : Définition d'un ensemble "cohérent" de méthodes (signature)
+>
+>  Pas de code (Sauf dans java récent => Code par défaut)
+
+On dissocie la définition du code (signature) de la façon dont elles sont implémentées (code)
+
+```java
+public interface BItf {
+    void f(); // J'ai besoin de f(), peut importe la façon dont c'est codé
+}
+```
+
+J'ai B qui réalise f() {}
+```java
+public class B implements BItf {
+    public void f() {
+        // code
+    }
+}
+
+public class BHeritage extends B {
+    public void f() {
+        super.f(); // J'utilise le code de B
+    }
+}
+
+public class BDelegation {
+    private B b;
+    public void f() {
+        b.f();
+    }
+}
+
+public class Main {
+    public static void main(String[] args){
+      BHeritage bh = new BHeritage();
+      BDelegation bd = new BDelegation();
+      bh.f();  // dépends du code de B
+      bd.f();  // dépends pas du code b
+    }
+}
+```
+
+- Héritage
+    - Avantages :
+        - Moins d'objets
+        - Moins d'appel de méthode
+        - *"Moins de dépendances directes"*
+        - Substituabilité
+    - Inconvénients :
+        - .
+- Délégation
+    - Avantages :
+        - **On ne dépend pas du code de réalisation grâce à l'interface**
+    - Inconvénients :
+        - Plus d'objets
+        - Plus d'appels de méthode
+        - *"Plus de dépendances directes"*
+        - Pas de substituabilité
+        
+```java
+public  class Point {
+    private int x;
+    private int y;
+    
+    public int getX() {
+    return x;
+    }
+    
+    public int getY() {
+    return y;
+    }
+}
+
+// Rectangle => new Point();
+// Carre => new Point();
+// Droite => new Point();
+// Pas top
+
+public interface PointFactoryItf {
+    public Point createPoint(int x, int y);
+}
+
+public class PointFactoryImpl implements PointFactoryItf {
+    public Point createPoint(int x, int y) {
+        return new Point();
+    }
+}
+```
+ 
+```java
+public class BenchMarkTri extends Tri {
+    public int bench() {
+        int time = 0;
+        for (int n = 0; n < N; n++) {
+            int start = Time.time();
+            tri();
+            int stop = Time.time();
+            time += stop - start;            
+        }
+        return time / N;
+    }
+}
+
+// ==============================
+
+public interface SortAlgo {
+    public String[] sort(String[] in);
+}
+
+public class BenchMark {
+    private SortAlgo sa;
+    public void setSortAlgo(SortAlgo sa) {
+        this.sa = sa; 
+    }
+    
+    public int bench() {
+        int time = 0;
+        for (int n = 0; n < N; n++) {
+            int start = Time.time();
+            sa.sort();
+            int stop = Time.time();
+            time += stop - start;            
+        }
+        return time / N;
+    }
+}
+```
+
+```java
+// Héritage
+public class PNJ extends PlayerFinder {
+    public void findAndKill() {
+        findPlayer();
+        // ...
+        
+    }
+    
+    public void findAndRun() {
+        findPlayer();
+        // ...
+    }
+}
+
+// Délégation
+public interface PlayerFinderItf {
+    Player findPlayer;
+}
+
+public class PlayerFinderA implements PlayerFinderItf {
+    Player findPlayer() {
+        // ...
+    }
+}
+
+// Niveau j'ai pas compris, y a pas d'intérets
+
+public class PNJ {
+    private PlayerFinderItf playerFinder = new PlayerFinderA(); // @ compile time
+}
+
+// Niveau OK mais pas très souple
+
+public  class PNJ {
+    private PlayerFinderItf playerFinder;
+    public PNJ(PlayerFinderItf playerFinder) {
+        this.playerFinder = playerFinder; // @ runtime instantiate
+    }
+}
+
+// Niveau souplesse 
+
+public  class PNJ {
+    private PlayerFinderItf playerFinder;
+    public void setPlayerFinder (PlayerFinderItf playerFinder) {
+        this.playerFinder = playerFinder; // @ runtime whenever i want
+    }
+}
+
+```
+
+A lire :
+- Design Patterns:
+    - Gang of Four (GOF)
+    - Explication de l'intérêt de la délégation
+    - Golden Rule:
+        - Reuse dynamics VS Perf.
+        
+
+      
 ### Test & Lint
 
 ## Domain Driven Design (3 semaines)
