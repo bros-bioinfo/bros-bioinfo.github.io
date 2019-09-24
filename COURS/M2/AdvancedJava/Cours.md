@@ -526,6 +526,45 @@ A lire :
       
 ### Test & Lint
 
+#### Les tests (4pts à l'examen)
+Un bon tester est un tester qui cherche ce qui ne marche pas.
+
+Donc il faut avoir une définition de "ça marche" (Oracle = Résultat attendu) et montrer l'inverse !
+
+Quand a-t-on terminé de tester ?
+
+Dans l'absolu, jamais ! Mais dans la pratique, on va essayer de définir le paramètre des tests et on va le partitioner en classes d'équivalences.
+Après je fais un test par partition et on considère l'ensemble couvert.
+
+
+Pour tester:
+1. Avoir l'oracle
+2. Définir votre partition
+3. 1 test / partition
+
+Exemple : 
+
+Tester `String[] sort(String[])`
+```java
+class Test {
+
+    // Oracle
+    boolean oracleSort(String[] sorted) {
+        for(int i = 0; i < sorted.length - 1; i++) {
+            if (sorted[i] >= sorted[i+1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    // Partition = Quelques points, mais là il y a surtout un tableau aléatoire de mots
+}
+
+
+```
+ 
+
 ## Domain Driven Design (3 semaines)
 
 ## Architecture objet (3 semaines)
