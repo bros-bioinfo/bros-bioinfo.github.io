@@ -567,6 +567,132 @@ class Test {
 
 ## Domain Driven Design (3 semaines)
 
+Le principe fondamental: le code fait autorité !
+
+Il y a 3 endroits où la vérité peut se trouver:
+- Cahier des charges : besoins exprimés par le propriétaire
+- Spécifications du futur/présent logiciel (UML)
+- Code
+- Data
+
+Selon le DDD, la vérité se trouve dans le code, et plus spécifiquement dans la couche domain.
+
+Exemple: Application de gestion de compétition
+- Joueur (Nom, Prénom) *Immutable*
+- Match (Début, Fin, ajouter points, Gagnant)
+- Compétition (Ouverte aux inscriptions, plusieurs joueurs, elle démarre, on peut jouer des matchs, on a le grand gagnant) 
+```java
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+public class Joueur {
+    public final ChaineAlphabetique nom;
+    public final ChaineAlphabetique prenom;
+}
+
+
+public class ChaineAlphabetique {
+    private final static Pattern pattern = Pattern.compile("[a-zA-Z -]*");
+    private static Matcher matcher; 
+    private final String valeur;
+    
+    public ChaineAlphabetique(String valeur) {
+        matcher = pattern.matcher(valeur);
+        if (matcher.find()) {
+            this.valeur = valeur;
+        } else {
+            throw RuntimeException;
+        }
+    }
+    
+    @Override public boolean equals(Object autre) {
+        if (!autre instanceof ChaineAlphabetique) {
+            return false;
+        }
+        ChaineAlphabetique autreChaine = (ChaineAlphabetique) autre; 
+    return valeur.equals(autreChaine.valeur);
+    }}
+```
+
+Value Object (du DDD):
+
+objet défini par la valeur de ses propriétés (=> Immutable)
+
+(Bob, L'éponge) != (Bob, The Sponge).
+
+Il est important pour un value object de redéfinir equals.
+
+```java
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+public class Joueur {
+    public final ChaineAlphabetique nom;
+    public final ChaineAlphabetique prenom;
+    
+    @Override public boolean equals(Object autre) {
+        if (!autre instanceof Joueur) {
+            return false;
+        }
+        Joueur autreJoueur = (Joueur) autre;
+        return nom.equals(autreJoueur.nom) && prenom.equals(autreJoueur.prenom);
+    }
+}
+```
+
+Avec un Value Object, il est aussi très intéressant de créer une factory puisque les instances sont immutables
+
+Ici le match peut changer d'états, donc il n'est pas immutable, donc ce n'est pas un value object;
+
+```java
+public class Match { // Entity
+    private final ID id;
+    private Joueur j1, j2;
+    private EtatDuMatch etatMatch;
+    private Score nbPointJ1, nbPointJ2;
+    private Date debut, fin;
+    
+    public void joueur1Marque(Score points) {
+        nbPointJ1.incremente(points);
+    }
+    
+    public void joueur2Marque(Score points) {
+        nbPointJ2.incremente(points);
+    }
+}
+```
+L'entity n'est donc pas immutable, elle nécessite un identifiant
+L'aggregate est l'objet qui donne du sens à un ensemble d'entity.
+
+```java
+import java.util.Set;
+public class Competition { // Aggregate
+    Set<Joueur> joueurs;
+    Set<Match> matches;
+    
+    public void inscrireJoueur(Joueur j){
+        if (joueurs.contains(j)) {
+            throw new RuntimeException("Le joueur est déjà inscrit");
+        }
+        joueurs.add(j);
+    }
+    
+    public void fermerInscription(){
+        // créer les différents matchs à partir de l'ensemble des joueurs
+    }
+}
+```
+La root de l'aggregate est la porte d'accès qui permet de manipuler l'ensemble des entités, et ce à partir de l'instance.
+
+Il est interdit à un aggregate de rendre une entity comme ça, il faut impérativement créer une méthode qui englobe et contrôle à l'aide de paramètres.
+
+Si on veut faire évoluer le CdC, par exemple en ajoutant les statistiques aux joueurs, on change le contexte (le joueur n'est plus immutable). 
+
+De façon général à chaque nouveau contexte il faut donc recoder l'ensemble de l'application.
+
+### Tactical Pattern du Domain
+- Value Object => Immutable et equals by values
+- Entity => State et equals by id
+- Aggregate => Groupe, Racine ATTENTION Encapsulation des Entity 
+
 ## Architecture objet (3 semaines)
 
 ## Avancée (2 semaines)
