@@ -180,29 +180,32 @@ Tout objet construit est conforme. La fonction patron est statique, mais la conf
 public class Point {
     int x;
     int y;
-    
     public Point(int x, int y){
         this.x = x;
         this.y = y;
     }
-    
     // getters
 }
 ```
+
 Conformité = Typage
 
 **Code** = Compilation => **Code compilé** = Run => **VM**
 
 Compilation:
+
 - Prévenir les erreurs
 - Aide votre IDE
 
 Run:
+
 - 2nd contrôle de de typage
 
 2 Solutions pour avoir des entiers positifs:
+
 - Créer sa propre classe PositiveInt
 - Lever une exception à la construction
+
 ```java
 class Point {
     Point (int x, int y) {
@@ -220,6 +223,7 @@ class Point {
 #### Visibilité et Encapsulation des traitements
 
 Traitements qui modifient les données :
+
 - Normal ? => public
 - Pas normal ? => private
 
@@ -563,13 +567,13 @@ class Test {
 
 
 ```
- 
 
 ## Domain Driven Design (3 semaines)
 
 Le principe fondamental: le code fait autorité !
 
 Il y a 3 endroits où la vérité peut se trouver:
+
 - Cahier des charges : besoins exprimés par le propriétaire
 - Spécifications du futur/présent logiciel (UML)
 - Code
@@ -578,9 +582,11 @@ Il y a 3 endroits où la vérité peut se trouver:
 Selon le DDD, la vérité se trouve dans le code, et plus spécifiquement dans la couche domain.
 
 Exemple: Application de gestion de compétition
+
 - Joueur (Nom, Prénom) *Immutable*
 - Match (Début, Fin, ajouter points, Gagnant)
-- Compétition (Ouverte aux inscriptions, plusieurs joueurs, elle démarre, on peut jouer des matchs, on a le grand gagnant) 
+- Compétition (Ouverte aux inscriptions, plusieurs joueurs, elle démarre, on peut jouer des matchs, on a le grand gagnant)
+
 ```java
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
@@ -592,7 +598,7 @@ public class Joueur {
 
 public class ChaineAlphabetique {
     private final static Pattern pattern = Pattern.compile("[a-zA-Z -]*");
-    private static Matcher matcher; 
+    private static Matcher matcher;
     private final String valeur;
     
     public ChaineAlphabetique(String valeur) {
@@ -613,7 +619,7 @@ public class ChaineAlphabetique {
     }}
 ```
 
-Value Object (du DDD):
+### Value Object (du DDD) :
 
 objet défini par la valeur de ses propriétés (=> Immutable)
 
@@ -642,6 +648,8 @@ Avec un Value Object, il est aussi très intéressant de créer une factory puis
 
 Ici le match peut changer d'états, donc il n'est pas immutable, donc ce n'est pas un value object;
 
+### Entity
+
 ```java
 public class Match { // Entity
     private final ID id;
@@ -659,7 +667,11 @@ public class Match { // Entity
     }
 }
 ```
+
 L'entity n'est donc pas immutable, elle nécessite un identifiant
+
+### Aggregate
+
 L'aggregate est l'objet qui donne du sens à un ensemble d'entity.
 
 ```java
@@ -680,18 +692,191 @@ public class Competition { // Aggregate
     }
 }
 ```
+
 La root de l'aggregate est la porte d'accès qui permet de manipuler l'ensemble des entités, et ce à partir de l'instance.
 
 Il est interdit à un aggregate de rendre une entity comme ça, il faut impérativement créer une méthode qui englobe et contrôle à l'aide de paramètres.
 
-Si on veut faire évoluer le CdC, par exemple en ajoutant les statistiques aux joueurs, on change le contexte (le joueur n'est plus immutable). 
+Si on veut faire évoluer le CdC, par exemple en ajoutant les statistiques aux joueurs, on change le contexte (le joueur n'est plus immutable).
 
 De façon général à chaque nouveau contexte il faut donc recoder l'ensemble de l'application.
 
 ### Tactical Pattern du Domain
+
 - Value Object => Immutable et equals by values
+  - Typage plus fort que Java
+  - Pas de soucis avec l'encapsulation
 - Entity => State et equals by id
-- Aggregate => Groupe, Racine ATTENTION Encapsulation des Entity 
+  - L'objet classique mais attention à bien définir l'id
+- Aggregate => Groupe, Racine ATTENTION Encapsulation des Entity
+  - Gestion des entity (Aide à la save)
+
+### Exemples
+
+- Echiquier
+  - Colonnes identifiées par des lettres de A à H
+  - Lignes identifiées par des chiffres de 1 à 8
+  - Location serait un value object car immutable (A,1) 
+
+```java
+public class Location {
+    public final char column;
+    public final int line;
+    public Location(char column, int line) {
+        if (line < 1 || line > 8) {
+            throw new IllegalParameter("Line should be between 1 and 8")
+        }
+        if (column < 'A' || column > 'H') {
+            throw new IllegalParameter("Column should be between A and H")
+        }
+        this.line = line;
+        this.column = column;
+    }
+}
+```
+
+En aggregate => Game
+
+```java
+public class Game {
+    public Game() {
+        //
+    }
+    public void move(Location from, Location to) {
+        //
+    }
+}
+```
+
+- Piece
+  - Couleur
+    - Immutable
+  - Position
+    - Mutable
+  - Importance
+    - Dépend de l'implémentation
+  - Vivante | Morte
+    - Mutable
+  - Mouvement
+    - Dépend de l'implémentation
+
+==>
+
+Value objects:
+
+- Color
+  - Enum
+
+```java
+public class Piece {
+    private Location location;
+    public abstract void move(Location newLoc) {
+        //
+    }
+}
+```
+
+Sauf que d'après Applying UML et son pattern GASP, une méthode va dans la classe qui possède ou peut obtenir toutes infos pour executer la méthode.
+
+Ici ça serait donc Aggregate qui devrait donc être responsable du mouvement. La localisation devrait donc se trouver également dans le aggregate.
+
+```java
+public abstract class Piece {
+    private Color;
+    public boolean isLegalMove(Location from, Location to) {
+        if (from.equals(to)) {
+            return false;
+        }
+    }
+}
+```
+
+```java
+public class King extends Piece {
+    public boolean isLegalMove(Location from, Location to) {
+        super.isLegalMove(from, to)
+        if (Math.abs(from.x - to.x) > 1 || Math.abs(from.y - to.y) > 1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+```
+
+Au choix dans le game pour avoir les coordonnées, on peut:
+
+- `Map<Location, Piece>`
+- `Map<Piece, Location>`
+- `List<Case>`
+  
+On va choisir la troisième:
+
+```java
+public class Case {
+    Piece p;
+    Location l; // Il ne peut y avoir 2 cases avec la même location (id)
+}
+public class Game {
+    private List<Case> cases;
+
+    public void move(Location from, Location to) {
+        Case case = getCaseFromLocation(from);
+        Piece pieceFrom = case.getPiece();
+        boolean isLegal = pieceFrom.isLegalMove(from, to);
+
+    }
+
+    private Case getCaseFromLocation(Location location) {
+        for (Case case: cases) {
+            if (location = case.getLocation()) {
+                return case;
+            }
+        }
+    }
+
+    private List<Location> getIntermediaryLocation(Location from, Location to) {
+        //
+    }
+
+}
+```
+
+Afin de deséppaissir la classe Game, on peut sortir des méthodes stateless de Game vers une classe dite Service. Service serait alors un regrouppement de méthodes statiques prenant comme argument des value object (pas d'entity). Il est recommandé de faire une classe stateless par méthode service.
+
+DDD Tactiques en pratique:
+
+1. Value Objects
+2. Aggregate -> Méthode métier (params VO)
+3. Structuration aggregate => Entity
+4. Création des services
+
+#### Factory
+
+Game
+
+- Ajout de méthodes utiles
+  - Location intermédiaires
+  - Mouvements possibles
+  - etc
+- Améliorer la cohérence, peut être au dépend du couplage, en créant des services
+
+```java
+public class Game {
+    public Game() {
+        // Générer la liste des cases
+        // Y placer les pièces
+        // Environ 100 objets à créer
+    }
+}
+```
+
+Quand le new est compliqué comme ci-dessus, et qu'il nécessite trop de sous abstractions, on le sort dans une classe dite Factory. On va donc y soigner le code de construction en construisant toutes les sous méthodes qui décomposent la création (sous niveau d'abstraction). 
+
+Problème : Comment la factory accède aux attributs pour construire l'aggregate (Le mieux: friendly, en java: héritage).
+
+On peut également vouloir faire des factory pour limiter le nombre d'instance de VO
+
 
 ## Architecture objet (3 semaines)
 
