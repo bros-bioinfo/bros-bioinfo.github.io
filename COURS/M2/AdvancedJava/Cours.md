@@ -14,6 +14,42 @@ Notation :
 - Pas de projet
 - 1 Exam sur papier (Particulièrement difficile)
 
+
+- [JAVA Avancé](#java-avanc%c3%a9)
+  - [Introduction](#introduction)
+  - [Bases (4 semaines)](#bases-4-semaines)
+    - [Objet](#objet)
+      - [L'objet](#lobjet)
+      - [Responsabilité et encapsulation](#responsabilit%c3%a9-et-encapsulation)
+      - [Couplage et Cohérence](#couplage-et-coh%c3%a9rence)
+      - [Cycle de vie](#cycle-de-vie)
+      - [Synthèse](#synth%c3%a8se)
+    - [Classes](#classes)
+      - [La classe comme moule/contrat](#la-classe-comme-moulecontrat)
+      - [Visibilité et Encapsulation des données](#visibilit%c3%a9-et-encapsulation-des-donn%c3%a9es)
+      - [Visibilité et Encapsulation des traitements](#visibilit%c3%a9-et-encapsulation-des-traitements)
+      - [L'héritage](#lh%c3%a9ritage)
+      - [Polymorphisme et surcharge](#polymorphisme-et-surcharge)
+      - [Quand faut-il hériter ?](#quand-faut-il-h%c3%a9riter)
+    - [Délégations, classes et interfaces](#d%c3%a9l%c3%a9gations-classes-et-interfaces)
+      - [L'interface](#linterface)
+    - [Test & Lint](#test--lint)
+      - [Les tests (4pts à l'examen)](#les-tests-4pts-%c3%a0-lexamen)
+  - [Domain Driven Design (3 semaines)](#domain-driven-design-3-semaines)
+    - [Value Object (du DDD) :](#value-object-du-ddd)
+    - [Entity](#entity)
+    - [Aggregate](#aggregate)
+    - [Tactical Pattern du Domain](#tactical-pattern-du-domain)
+    - [Exemples](#exemples)
+      - [Factory](#factory)
+    - [Architecture hexagonale (la couche Infra)](#architecture-hexagonale-la-couche-infra)
+      - [Quelle signature ?](#quelle-signature)
+      - [Quel schéma ?](#quel-sch%c3%a9ma)
+      - [Ou mettre le code ?](#ou-mettre-le-code)
+    - [Exécution](#ex%c3%a9cution)
+  - [Architecture objet (3 semaines)](#architecture-objet-3-semaines)
+  - [Avancée (2 semaines)](#avanc%c3%a9e-2-semaines)
+
 ## Bases (4 semaines)
 
 ### Objet
@@ -877,10 +913,145 @@ Problème : Comment la factory accède aux attributs pour construire l'aggregate
 
 On peut également vouloir faire des factory pour limiter le nombre d'instance de VO
 
+### Architecture hexagonale (la couche Infra)
+
+Rappels: La couche domaine
+
+- Le typage (Value objects)
+- Les règles métiers (Entity, Aggregate)
+
+Il faut donc un package domain.
+
+- Pas d'IHM
+- Pas de sauvegarde
+- Pas d'autre chose
+- **Aucune dépendance**
+  - Ca compile donc tout le temps
+  - Si on a un framework, alors le couche domain doit être indépendante du framework
+  - Ca compile même avec les vieilles version de java pour que ça fonctionne partout
+
+Comment alors faire des sauvegardes:
+
+- Avant / Sans approche DDD:
+  - On part d'un schéma des données (SQL, Mongo, etc...)
+  - On utilise un framework pour générer des classes qui font le pont vers la VM
+  - On créer nos classes personelles et on hérite des classes générées.
+  - Exemple:
+    1. Game.sql
+    2. GameHibernate.java
+    3. Game extends GameHibernate
+    - La fonction save de Game provient alors de ce qui a été généré par Hibernate, celle ci contient alors tous les appels à la base SQL
+  - Questions:
+    - Ou mettre le code de sauvegarde ?
+    - Quel schéma ?
+    - Quelle signature de sauvegarde ?
+    - Autorité / Autonomie ?
+
+Exemple avec Game:
+
+#### Quelle signature ?
+
+> void save dans Game / void save dans une classe GameSaver
+
+> Game load(id) dans Game/ Game load(id) dans GameSaver
+
+`findGameById()` = `load()`
+
+`findGameByManyMoves(int nb_moves)`
+
+`update()`
+
+- Après approche DDD:
+  - L'interface / classe abstraite Repository (Gestionnaire de sauvegarde)
+    - Uniquement pour les aggregate
+
+```java
+package domain;
+
+public interface GameRepository {
+    void save(Game game);
+    Game load(int gameID);
+    Game findByETC(...);
+    void update(Game game);
+}
+```
+
+- Cette interface doit être mise dans la couche domain puisque cela fait parti de la conception.
+- L'implémentation en revanche doit être dans la couche infrastructure
+
+#### Quel schéma ?
+
+> Comment je sauvegarde mon Aggregate ?
+
+- Quel format ?
+  - SQL ?
+  - CSV ?
+  - JSON ?
+- On va partir sur SQL:
+![Schema SQL](SQL.png)
+
+#### Ou mettre le code ?
+
+```java
+package infra;
+
+import java.sql.*;
+
+public class GameSQLRepository implements GameRepository{
+    public void save(Game game) {
+        String url = "jdbc:msql://200.210.220.1:1114/Demo";
+        Connection conn = DriverManager.getConnection(url,"","");
+        Statement st = conn.createStatement();
+        st.executeUpdate("INSERT INTO Game " +
+            "VALUES (" + game.id + ")");
+
+        conn.close();
+    }
+}
+```
+
+### Exécution
+
+1. Qui/Où/Comment appele le repository ?
+2. Comment échanger la référence du repository ?
+   1. (Dans le aggregate)
+   2. Dans les services à l'extérieur
+
+```java
+package domain;
+
+public class Game {
+    GameRepository rep;
+    public void setRepository(GameRepository rep) {
+        this.rep = rep;
+    }
+
+    public void move(Location from, Location to) {
+        // ...
+        rep.save()
+    }
+}
+```
+
+Le main ne peut pas être dans le domain puisque c'est lui qui défini les implémentations => En général on le met en dehors de toutes les couches.
+
+```java
+import domain.*;
+import infra.GameSQLRepository;
+
+public class Main {
+    public static void main(String[] args) {
+        GameRepository rep = new GameSQLRepository();
+        Game game = new Game();
+        game.setRepository(rep);
+    }
+}
+```
+
+Dans le DDD il y a donc inversion de la dépendance : c'est bien la sauvegarde qui dépend de la couche domain et pas l'inverse.
+
+Un autre intérêt est que l'on peut facilement créer et intervertir différentes implémentations, par exmple une en mémoire JVM pour pouvoir tester facilement.
 
 ## Architecture objet (3 semaines)
 
 ## Avancée (2 semaines)
-
-
-

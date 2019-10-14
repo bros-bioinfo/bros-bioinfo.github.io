@@ -2,7 +2,7 @@ function getTree() {
   var data = 
 [
   {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
-    {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"94 1007",nodes:[
+    {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"10141017",nodes:[
       {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"94 1007",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"94 1007",nodes:[
           {"type":"directory",href:"#fh5co-work",text:"Eliot",custom:"94 1007",nodes:[
@@ -146,8 +146,8 @@ function getTree() {
     ]},
   ]},
   {"type":"directory",href:"#fh5co-work",text:"M2",nodes:[
-    {"type":"directory",href:"#fh5co-work",text:"AdvancedJava",custom:"9301156",nodes:[
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M2/AdvancedJava/Cours",text:"Cours",custom:"107 1200"},
+    {"type":"directory",href:"#fh5co-work",text:"AdvancedJava",custom:"10141116",nodes:[
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M2/AdvancedJava/Cours",text:"Cours",custom:"10141151"},
     ]},
   ]},
   {"type":"directory",href:"#fh5co-work",text:"POUR_ALLER_PLUS_LOIN",nodes:[
