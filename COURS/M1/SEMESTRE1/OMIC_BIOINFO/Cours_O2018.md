@@ -95,12 +95,15 @@ pqrstuvwxyz{|}~
 Small reminder about sequence alignment 
 
 **%Identities :** Measure the number of identities between 2 sequences 
-|  |A| C| G| T|
-|:-:|:-:|:-:|:-:|:-:|
-A| 1| 0| 0| 0|
-C |0| 1| 0| 0|
-G |0 |0| 1 |0|
-T| 0| 0| 0| 1|
+
+|     |  A  |  C  |  G  |  T  |
+| :---: | :---: | :---: | :---: | :---: |
+| A   | 1   | 0   | 0   | 0   |
+| C   | 0   | 1   | 0   | 0   |
+| G   | 0   | 0   | 1   | 0   |
+| T   | 0   | 0   | 0   | 1   |
+
+
 
 **Quantification of similarity between 2 sequences :**
 * Scores computed from a score matrix (substitution matrices based on evolution)
