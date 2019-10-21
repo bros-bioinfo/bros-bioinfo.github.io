@@ -147,7 +147,7 @@ function getTree() {
   ]},
   {"type":"directory",href:"#fh5co-work",text:"M2",nodes:[
     {"type":"directory",href:"#fh5co-work",text:"AdvancedJava",custom:"10171914",nodes:[
-      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M2/AdvancedJava/Cours",text:"Cours",custom:"10171914"},
+      {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M2/AdvancedJava/Cours",text:"Cours",custom:"10211342"},
     ]},
     {"type":"directory",href:"#fh5co-work",text:"StrubiGL",custom:"10181659",nodes:[
       {"type":"directory",href:"#fh5co-work",text:"doc",custom:"10181135",nodes:[

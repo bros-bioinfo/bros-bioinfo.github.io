@@ -47,6 +47,7 @@ Notation :
       - [Quel schéma ?](#quel-sch%c3%a9ma)
       - [Ou mettre le code ?](#ou-mettre-le-code)
     - [Exécution](#ex%c3%a9cution)
+    - [Synthèse DDD (Ajouter des rdv, etc...)](#synth%c3%a8se-ddd-ajouter-des-rdv-etc)
   - [Architecture objet (3 semaines)](#architecture-objet-3-semaines)
   - [Avancée (2 semaines)](#avanc%c3%a9e-2-semaines)
 
@@ -1051,6 +1052,142 @@ public class Main {
 Dans le DDD il y a donc inversion de la dépendance : c'est bien la sauvegarde qui dépend de la couche domain et pas l'inverse.
 
 Un autre intérêt est que l'on peut facilement créer et intervertir différentes implémentations, par exmple une en mémoire JVM pour pouvoir tester facilement.
+
+### Synthèse DDD (Ajouter des rdv, etc...)
+
+Exemple: l'Agenda (Ajouter des rdv, etc)
+
+| Concepts métiers |       DDD        | Techno (Abstrait) |
+| ---------------- | :--------------: | ----------------- |
+| Agenda(2)        | (1) Value Object |                   |
+| Rendez-vous(3)   |  (2) Aggregate   |                   |
+| Date(1)          |    (3) Entity    |                   |
+| Sujet(1)         |   (4) Factory    |                   |
+| Lieu(1)          |  (5) Repository  |                   |
+|                  |   (6) Service    |                   |
+
+```java
+public class Date { // Value Object
+    private int mois;
+    private int jour;
+
+    public Date(int mois, int jour) {
+        this.mois = mois;
+        this.jour = jour;
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Date)) return false;
+        Date date = (Date) o;
+        return mois == date.mois &&
+               jour == date.jour;
+    }
+
+    public int hashCode() {
+        return Objects.hash(mois, jour);
+    }
+}
+```
+
+```java
+public class Agenda { // Agregate
+    private int id;
+    private int genId = 0;
+    private Set<RdV> rdvSet;
+
+    public int ajouterRdV(Date debut, Date fin, Sujet sujet, Lieu lieu) {
+        RdV rdv = new RdV(genId++, ...)
+        return id;
+    }
+
+    public void modifierSujetRdV(Sujet sujet, int idRdV) {
+
+    }
+
+    public int trouverRdVParDebut(Date date) {
+
+    }
+
+    public List<Map<String, String>> getRdVsDAO() {
+        List<Map<String, String>> daos = new ArrayList<>();
+        for (RdV rdv: rdvSet) {
+            daos.add(new HashMap<>) ...
+        }
+        return new ArrayList<Map<String, String>>()
+    }
+}
+```
+
+```java
+public class RdV { // Entity
+    private int id;
+    private Sujet sujet;
+    private Lieu lieu;
+    private Date debut;
+    private Date fin;
+
+    public RdV(int id, Sujet sujet, Lieu lieu, Date debut, Date fin) {
+        this.id = id;
+        ...
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof RdV)) return false;
+        RdV rdv = (RdV) o;
+        return id == rdv.id;
+    }
+
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+}
+```
+
+> Services
+>
+> Métode métier sans état qu'on ne peut ranger dans Agg, Ent, VO ...
+
+Exemple: Trouver une date libre communne à plusieurs agendas à partir d'une certaine date et pour une certaine durée
+
+```java
+package domain;
+
+public class AgendaService {
+    Date creneauLibreCommun(Set<Agenda> agendas, Date debut, int duree) {
+        ...
+    }
+}
+```
+
+> Repository / Factory
+>
+> Le premier fais les sauvegardes et les chargement, le deuxième la construction
+>
+> Les deux concernent plutôt l'aggregate
+
+```java
+package domain;
+
+public interface AgendaRepository {
+    void save(Agenda agenda);
+    Agenda load();
+}
+```
+
+Data Access Object
+
+```java
+package infra;
+
+public class AgendaFileRepository {
+    void save(Agenda agenda) {
+        // Save in a file
+    }
+}
+
+```
 
 ## Architecture objet (3 semaines)
 
