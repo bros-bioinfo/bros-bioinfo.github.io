@@ -49,6 +49,10 @@ Notation :
     - [Exécution](#ex%c3%a9cution)
     - [Synthèse DDD (Ajouter des rdv, etc...)](#synth%c3%a8se-ddd-ajouter-des-rdv-etc)
   - [Architecture objet (3 semaines)](#architecture-objet-3-semaines)
+    - [CQRS (Couche application)](#cqrs-couche-application)
+      - [Command](#command)
+      - [Le pattern Command (GoF) EXAMEN](#le-pattern-command-gof-examen)
+      - [Query](#query)
   - [Avancée (2 semaines)](#avanc%c3%a9e-2-semaines)
 
 ## Bases (4 semaines)
@@ -1190,5 +1194,161 @@ public class AgendaFileRepository {
 ```
 
 ## Architecture objet (3 semaines)
+
+La couche application contient le code qui permet la manipulation *efficace* des concepts métiers
+
+> Exemple : Service de la couche application  
+>
+> ```java
+> void moveAutoSave() {
+>     move();
+>     save();
+> }
+> ```
+
+Code qui décrit l'autorité = couche domaine  
+Code qui facilite efficacité = couche application
+
+Par efficacité on entend le temps de traitement et la rapidité de la réponse (ASYNC).
+
+```java
+void moveAutoSave() {
+    move();
+    async save();
+}
+```
+
+### CQRS (Couche application)
+
+CQRS = Command Query Responsibility Segregation  
+Séparation des responsabilité entre les requêtes et les commandes.
+
+Query c'est du read only sur la couche Domain, la commande c'est du write sur la couche Domain. En CQRS, toutes les méthodes d'écritures doivent être asynchrones.
+
+#### Command
+
+On va partir d'un code bof synchrone pour ensuite aller vers un code bon asynchrone.
+
+```java
+package application;
+
+public class ServiceApplication {
+    private GameRepository gr;
+    public void moveAutoSave(Location from, Location to, int gameId) {
+        Game game = gr.getGameByID(gameId);
+        game.move(from, to);
+        gr.save(g)
+    }
+}
+```
+
+Il y a là deux accès à la base de données :
+
+- Ligne 1 = Query
+- Ligne 3 = Command
+
+Le problème est que ces deux accès peuvent être longs, donc pour optimiser, pour la query, on peut sauvegarder en cache la dernière référence du jeu modifiée.
+
+Pour la commande en revanche le mieux est d'utiliser une méthode asynchrone.
+
+#### Le pattern Command (GoF) EXAMEN
+
+moveAutoSave() va retourner un entier qui va correspondre au numéro de la commande qu'il a créer.
+
+On va donc avoir quelque part un conteneur de commande: une queue.
+
+Il va également y avoir un worker qui va récupérer les commandes et effectuer les saves. C'est du côté des workers qu'on va alors utiliser le multithreading pour optimiser le travail de sauvegarde.
+
+```java
+package application;
+
+public class SaveGameCommand { // Command
+    private GameDTO gameToSave;
+
+    public SaveGameCommand(GameDTO gameToSave) {
+        this.gameToSave = gameToSave;
+    }
+
+    public exec(GameRepository gr) {
+        gr.save(gameToSave);
+    }
+}
+```
+
+```java
+package application;
+
+public class ServiceApplication { // Service
+    private GameRepository gr;
+    private CommandQueue queue;
+
+    public void moveAutoSave(Location from, Location to, int gameId) {
+        Game game = gr.getGameByID(gameId);
+        game.move(from, to);
+        SaveGameCommand command = new SaveGameCommand(game);
+        queue.add(command);
+    }
+}
+```
+
+```java
+public class CommandQueue { // Queue
+    private Queue<Command> commandQueue;
+
+    public synchronized void add(SaveGameCommand saveGameCommand) {
+        commandQueue.add(saveGameCommand);
+    }
+
+    public synchronized SaveGameCommand pop() {
+        return commandQueue.remove();
+    }
+}
+```
+
+```java
+public class SaveGameWorker extends Thread {
+    private CommandQueue queue;
+
+    public void run() {
+        while(true) {
+            queue.pop().exec();
+        }
+    }
+}
+```
+
+#### Query
+
+getGameById ==> Query
+
+```java
+public class GetGameServiceApplication {
+    private Game currentGame;
+    private GameRepository gr;
+
+    public Game getGame(int id) {
+        if (id != currentGame.id) {
+            currentGame = gr.getGameById(id);
+        }
+        return currentGame;
+    }
+}
+```
+
+```java
+package application;
+
+public class ServiceApplication { // Service
+    private CommandQueue queue;
+    private GetGameServiceApplicaiton getterGame;
+
+    public void moveAutoSave(Location from, Location to, int gameId) {
+        Game game = getterGame.getGame(gameId);
+        game.move(from, to);
+        queue.add(new SaveGameCommand(game));
+    }
+}
+```
+
 
 ## Avancée (2 semaines)

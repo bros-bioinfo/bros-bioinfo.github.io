@@ -12,6 +12,7 @@ const getContents = (event) => {
     let text = reader.result;
     let struct = parsePDB(text);
     console.log(struct);
+    let second_struct = getSecondaryStructure(struct);
   };
   reader.readAsText(f);
 
