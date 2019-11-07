@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fr.ubordeaux.ao.domain.model.QuestionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-11-07T09:20:53" hostname="eliot-X510UAR" time="0.001">
+  <properties/>
+  <testcase name="candidateAnswerSetShouldNotOnlyContainTrueAnswers" classname="fr.ubordeaux.ao.domain.model.QuestionTest" time="0.0"/>
+  <testcase name="encapsulationShouldBePreserved" classname="fr.ubordeaux.ao.domain.model.QuestionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
