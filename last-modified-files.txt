@@ -1,3 +1,2 @@
 <!DOCTYPE html> <html> <head></head> <body>
-<a href="https://bros-bioinfo.github.io/COURS/M2/AdvancedJava/Cours">Cours</a><br>
 </body></html>

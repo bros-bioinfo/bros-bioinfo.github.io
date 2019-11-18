@@ -2,6 +2,7 @@ package fr.ubordeaux.ao.domain.model;
 
 import static org.junit.Assert.*;
 
+import java.awt.*;
 import java.util.HashSet;
 import java.util.Set;
 

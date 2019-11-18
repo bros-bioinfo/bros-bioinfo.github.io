@@ -49,11 +49,13 @@ Notation :
     - [Exécution](#ex%c3%a9cution)
     - [Synthèse DDD (Ajouter des rdv, etc...)](#synth%c3%a8se-ddd-ajouter-des-rdv-etc)
   - [Architecture objet (3 semaines)](#architecture-objet-3-semaines)
+  - [Avancée (2 semaines)](#avanc%c3%a9e-2-semaines)
     - [CQRS (Couche application)](#cqrs-couche-application)
       - [Command](#command)
       - [Le pattern Command (GoF) EXAMEN](#le-pattern-command-gof-examen)
       - [Query](#query)
-  - [Avancée (2 semaines)](#avanc%c3%a9e-2-semaines)
+    - [Couche application / UI](#couche-application--ui)
+    - [La couche UI](#la-couche-ui)
 
 ## Bases (4 semaines)
 
@@ -1195,6 +1197,10 @@ public class AgendaFileRepository {
 
 ## Architecture objet (3 semaines)
 
+
+
+## Avancée (2 semaines)
+
 La couche application contient le code qui permet la manipulation *efficace* des concepts métiers
 
 > Exemple : Service de la couche application  
@@ -1350,5 +1356,155 @@ public class ServiceApplication { // Service
 }
 ```
 
+### Couche application / UI
 
-## Avancée (2 semaines)
+Conférences :
+
+- Agile tour  
+- Meet up  
+- BDX 1/O  
+- Disponibles sur youtube
+
+La couche application a pour but d'isoler la couche domaine de la couche UI, en proposant des services.  
+Les services de la couche domaine sont des services qui ont une utilité métier (Ex: SearchEngine).  
+Les services de la couche application sont en grande majorité des fonctions stateless, dont les argiuments sont majoritirement des VO.  
+Pour trouver ces service, une bonne solution est de s'imaginer le parcours de l'utilisateur sur l'interface.  
+
+- Il cherche un produit dans un catalogue
+  - `List<Reference> search(String searchString)`
+- Il veut ajouter des produits dans un panier
+  - `IDBASKET createBasketAndAddAReference(Reference ref)`
+
+Ce sont des services transactionelles car ils opérent une suite de fonctions dans la couche domaine.
+
+```java
+package application;
+
+class ServiceBasket {
+    private BasketRepository rep;
+
+    public ServiceBsaket(BasketRepository rep) {
+        this.rep = rep;
+    }
+
+    public int createBasketAndAddReference(Reference ref) {
+        Basket basket = new Basket();
+        basket.order(ref, 1);
+        rep.add(b);
+        return b.getId();
+    }
+
+    public void addRefToBasket(int basketId, Reference ref, int q) {
+        Basket b = rep.findBy(basketId);
+        b.order(ref, q);
+        rep.update(b);
+    }
+}
+```
+
+-----
+
+```java
+package domain;
+
+public class Game {
+    private int id;
+
+    public void move(Location from, Location to) {
+        ...
+    }
+}
+```
+
+```java
+package domain;
+
+public interface GameRepository {
+    public void add(Game g);
+    public Game findGameById(int id);
+    public void update(Game g);
+}
+```
+
+```java
+package infra;
+
+public class JSONGameRepository implements GameRepository {
+    public void add(Game g) {
+        int id = g.getId();
+        File f = new File(id.toString() + ".json")
+        String json = "{"
+        json += "id:" + id + ",";
+        List<LocationDTO> dtos = g.getDTO();
+        for (LocationDTO dto: dtos) {
+            ...
+        }
+    }
+
+    public Game findGameById(int id) {
+        // Ouvrir le bon fichier et parser
+    }
+
+    public void update(Game g) {
+        // Ouvrir le fichier et modifier juste les bonnes lignes
+    };
+}
+```
+
+```java
+package application;
+
+public class GameService {
+    private GameRepository rep;
+    private Game cacheGame;
+
+    public GameService(GameRepository rep) {
+        this.rep = rep;
+    }
+
+    public int newGame() {
+        Game g = new Game();
+        rep.add(g);
+        return g.getId();
+    }
+
+    public void move(int gameId, Location from, Location to) {
+        Game g = (gameId == cacheGame.getId()) ? cacheGame : rep.findById(gameId);
+        g.move(from, to);
+        //rep.update(g);  // CQRS Magueule
+        queue.add(new UpdateCommand(g));
+    }
+}
+```
+
+### La couche UI
+
+La couche UI ne va dépendre que de la couche application.  
+La petite question c'est est ce qu'on parle de fronte ou de back end, et si on parle de client lourd ou un client léger.
+
+- Client lourd => Application installée sur la machine utilisateur qui n'a pas besoin d'être connectée
+- Client légéer => Application qui a besoin d'un serveur
+
+L'UI doit elle aller sur le serveur et rester en backend, mais accessible avec une API Web (API REST ou OpenAPI) ou être en FrontEnd.
+
+Partons sur une API web  
+Route localhost/newgame  
+En js
+
+```js
+app.get('/newgame', (req, res) =>  {
+    GameService gs = new GameService();
+    res.send(gs.newGame());
+})
+
+```
+
+En Java Swift
+
+```java
+Button sg = new Button("Start Game");
+sg.addListener(() => {
+    GameService gs = new GameService();
+    gs.newGame();
+})
+```
