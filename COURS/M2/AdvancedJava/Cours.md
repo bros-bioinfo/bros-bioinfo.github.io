@@ -56,6 +56,10 @@ Notation :
       - [Query](#query)
     - [Couche application / UI](#couche-application--ui)
     - [La couche UI](#la-couche-ui)
+  - [From tactic to strategic](#from-tactic-to-strategic)
+    - [Le Shared Kernel](#le-shared-kernel)
+    - [Fournisseur / Consommateur](#fournisseur--consommateur)
+    - [Anti corruption layer](#anti-corruption-layer)
 
 ## Bases (4 semaines)
 
@@ -1508,3 +1512,164 @@ sg.addListener(() => {
     gs.newGame();
 })
 ```
+
+## From tactic to strategic
+
+Tactic +-= Internal Design (One module)
+
+- Domain:
+  - VO
+  - Entity
+  - Aggregate
+  - Repository Itf
+  - Event
+  - Service
+- Infrastructure:
+  - Repository Impl
+- Application:
+  - Services
+  - CQRS
+- UI:
+  - Accès graphique / Textuel / Web
+
+Le système est composé de N>1 apllications:
+
+- 1 module gestion des paniers  
+- 1 module gestion des catalogues  
+- 1 module gestion des stocks
+- 1 module gestion des livraison
+
+La stratégie c'est comment relier ces différentes applications:  
+Le problème se pose à la fois au niveau du runtime et du dévelopment.  
+Considérons pour que nous n'avons que les deux premiers modules.
+
+- Panier
+  - Route REST qui mène à l'application
+    - create
+    - addProduit
+    - validate
+- Catalogue
+  - Route REST qui mène à l'application
+    - findBy
+    - addRef
+    - updateRef
+  
+1 ère solution: Le repository est partagé entre les deux applications  
+Pour que ça marche, il faut que le panier et le catalogue aient la même façon de coder Reference.java ==> Il faut donc au moins une intersection non vide.  
+Le meilleur moyen est alors de créer un héritage de Reference. On appel cette stratégie le Shared Kernel. Elle pue un peu du cul car risque de poser des conflits de qui a authorité sur tel ou tel entrée.
+
+### Le Shared Kernel
+
+2 modules partagent une partie de la base de données.  
+Cela implique que l'infra a une partie commune entre les deux modules.  
+Donc bien souvent le domaine a une partie commune.
+
+Intéret:
+
+- Alignement (pas besoin de synchro entre les Repository)
+  
+Inconvéniant:
+
+- Risque de divergence dans le developpement entre les modules
+- Must have un noyau stable
+
+### Fournisseur / Consommateur
+
+On peut aussi envisager que les modules communiquent via leurs APIs REST.
+Par exemple, le catalogue fournit une API REST permettant de récupérer les Reférences.
+
+Le panier va, dans son infrastructure, appeler cette API pour récupérer les références.
+Il faut alors que la couche domaine fournisse un Repository de Reference qui ne fournit que des get, puisque les set sont gérer par l'infra via l'API REST.
+
+```java
+package catalogue.domain;
+
+public class Reference {  //Entity
+    private int id;
+    private String description;
+    private int prix;
+    // ...
+    public void setPrice() {
+        ...
+    }
+}
+```
+
+```java
+package catalogue.domain;
+
+public interface ReferenceRepository {}
+    public void addRef(Ref r);
+    public Reference getRefById(int id);
+    public Reference findBy(...);
+}
+```
+
+```java
+package catalogue.infrastructure;
+
+public class ReferenceRepositoryImpl implements ReferenceRepository {  
+    public void addRef(Ref r) {
+        ...
+    }
+    public Reference getRefById(int id) {
+        ...
+    }
+    public Reference findBy(...) {
+        ...
+    }
+}
+```
+
+-----
+
+```java
+package panier.domain;
+
+public class Reference {  // VO
+    private int id;
+    private int price;
+    // Getters mais pas de setters
+}
+```
+
+```java
+package panier.domain;
+
+public interface ReferenceRep { 
+    public Reference findBy(...){
+        ...
+    }
+}
+```
+
+```java
+package panier.infrastructure;
+
+public class ReferenceREST implements ReferenceRep {
+    public Reference findBy(...) {
+        response = HTTP.send(...)
+        reference = response.parse()
+    }
+}
+```
+
+On a donc une relation consommateur et fournisseur.  
+L'autorité, c'est à dire qui détient la vérité, est détenue par le fournisseur (Ici le catalogue)
+L'autonomie, c'est à dire qui a le droit de changer, dépend de l'état du marché.
+
+### Anti corruption layer
+
+L'idée c'est que le consommateur va avoir un adapteur dans une couche "anti corruption" qui va dupliquer le modèle du fournisseur, et qui va la synchronier avec la vrai à temps régulier si cette dernière n'est pas down.
+
+4 Valeurs d'un produit logiciel:
+
+- Feature
+  - Fonctions métiers (Services que l'application fournis)
+- Bug
+  - Pas cool les bugs
+- Dette Technique
+  - Est ce que le code est propre, maintenu, et si vous en prenez soin
+- Risque
+  - Est ce que votre produit logiciel dépend d'autres logiciels, alors ces dépendances apportent un risque si elles s'effondrent
+
