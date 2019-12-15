@@ -1311,7 +1311,7 @@ public class CommandQueue { // Queue
         commandQueue.add(command);
     }
 
-    public synchronized SaveGameCommand pop() {
+    public synchronized Command pop() {
         return commandQueue.remove();
     }
 }
