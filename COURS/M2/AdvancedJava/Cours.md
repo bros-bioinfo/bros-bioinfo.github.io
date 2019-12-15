@@ -60,6 +60,8 @@ Notation :
     - [Le Shared Kernel](#le-shared-kernel)
     - [Fournisseur / Consommateur](#fournisseur--consommateur)
     - [Anti corruption layer](#anti-corruption-layer)
+  - [Valeurs d'un produit logiciel](#valeurs-dun-produit-logiciel)
+    - [La carte des contextes](#la-carte-des-contextes)
 
 ## Bases (4 semaines)
 
@@ -1305,8 +1307,8 @@ public class ServiceApplication { // Service
 public class CommandQueue { // Queue
     private Queue<Command> commandQueue;
 
-    public synchronized void add(SaveGameCommand saveGameCommand) {
-        commandQueue.add(saveGameCommand);
+    public synchronized void add(Command command) {
+        commandQueue.add(command);
     }
 
     public synchronized SaveGameCommand pop() {
@@ -1662,6 +1664,8 @@ L'autonomie, c'est à dire qui a le droit de changer, dépend de l'état du marc
 
 L'idée c'est que le consommateur va avoir un adapteur dans une couche "anti corruption" qui va dupliquer le modèle du fournisseur, et qui va la synchronier avec la vrai à temps régulier si cette dernière n'est pas down.
 
+## Valeurs d'un produit logiciel
+
 4 Valeurs d'un produit logiciel:
 
 - Feature
@@ -1673,3 +1677,13 @@ L'idée c'est que le consommateur va avoir un adapteur dans une couche "anti cor
 - Risque
   - Est ce que votre produit logiciel dépend d'autres logiciels, alors ces dépendances apportent un risque si elles s'effondrent
 
+### La carte des contextes
+
+Exemple : Université de Bordeaux
+
+- Emploi du temps
+- Formations
+- Gestion des étudiants
+- Notes et diplomes
+- Gestion du personnel
+- Mails
