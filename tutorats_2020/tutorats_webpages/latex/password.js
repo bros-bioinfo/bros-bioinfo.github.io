@@ -8,9 +8,9 @@ function modify_password(password){
 }
 
 function check_password() {
-    let pass = modify_password(password)
+    let pass = modify_password(password);
     if (prompt("Entrez le mot de passe : ") == pass){
-        window.open("https://google.com");
+        window.open("https://bros-bioinfo.github.io/tutorats_2020/tutorats_webpages/latex/rapport/get_rapport.html");
     } else {
         alert("Erreur : mauvais mot de passe !");
     }
