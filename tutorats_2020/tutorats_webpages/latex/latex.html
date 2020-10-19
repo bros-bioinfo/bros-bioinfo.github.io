@@ -287,9 +287,6 @@
 				<p>
 					C'est la zone tout à gauche. Elle correspond à l'arborescence des fichiers du projet. Elle contiendra tous les fichiers dont vous aurez besoin, notamment les figures que vous importerez. Pour importer un fichier ou une image, il suffit de cliquer sur le bouton d'import.
 				</p>
-				<p>
-					D'ailleurs, importe cette image : <a href="./capture_2.png"> boby.png</a>, tu t'en serviras tout à l'heure.
-				</p>
 
 				<h3>Zone 2 (la plus importante)</h3>
 				<p>
@@ -369,8 +366,8 @@
 			
 			<img src="./bobby-s_toc.png" alt="" >
 			<div>
-				<p>Il faut que réussisse à refaire ce sommaire. Je te laisse créer les chapitres et les sections. </p>
-				<p>Pour ajouter le sommaire au rapport, il faut utiliser la commande <code>\tableofcontents</code> avant le premier chapitre. Mais Bobby se souvient qu'il faut modifier cette commande car elle écrit "Table des matières" et il n'aime pas du tout. Il préfère "Sommaire". Aussi, de manière générale le sommaire n'est pas numéroté et la pagination débute qu'au premier chapitre. Du coup il faut écrire :</p>
+				<p>Il faut que réussisse à refaire ce sommaire. Je te laisse créer les chapitres et les sections. Ne t'occupes de la Bibliograpie, on l'importa plus tard de façon automatique. </p>
+				<p>Pour ajouter le sommaire au rapport, il faut utiliser la commande <code>\tableofcontents</code> avant le premier chapitre. Ainsi, le sommaire est créé automatiquement (les numéros de pages s'adaptent aussi tous seuls). Mais Bobby se souvient qu'il faut modifier cette commande car elle écrit "Table des matières" et il n'aime pas du tout. Il préfère "Sommaire". Aussi, de manière générale le sommaire n'est pas numéroté et la pagination débute qu'au premier chapitre. Du coup il faut écrire :</p>
 				<div class="latex-white">
 					<code>
 						\renewcommand{\contentsname}{Sommaire}  &emsp;&emsp;# Renomme "Table des matières" en "Sommaire"<br>
@@ -423,6 +420,7 @@
 				<p>
 				À noter que le titre est écrit en gros : <code>{\Huge blabla}</code> permet de le faire. Cherche parmis les commande <code>\texttt, \textbf, ...</code> pour modifier le texte. Pour la couleur tu auras besoin d'importer le package <code>color</code> (<code>\textcolor{green}{text in gren}</code>). Autre commande utile : <code>\underline</code>. Tu auras remarqué que le premier paragraphe n'a pas d'indentation à la première ligne alors que le second paragraphe si. Aussi, info de Bobby : "il y avait un lien cliquable sur l'adresse mail. En cliquant dessus ça me permettait d'ouvrir le logiciel de messagerie par défaut". Tips : <code>mailto:</code> ; <code>hyperref</code> -> <code>href</code>
 				</p>
+				<p>Tu auras besoin d'importer le package "color", pour utiliser la couleur : <code>\usepackage{color}</code></p>
 			</div>
 			<div class="row">
 				<br><br><br>
@@ -449,7 +447,7 @@
 					</code>
 				</div>
 				<p>
-					<code>\caption{...}</code> est la légende. <code>\label{...}</code> est le label que l'on donne à la figure. Il sert a faire référence à la figure. En effet, dans le paragraphe au-dessus de la figure, <code>\ref{...}</code> permet de mettre une référence à la figure en qeustion. De plus, quand on clique sur le numéro de la figure, cela nous conduit directement à l'emplacement de la figure. Un lien est présent dans le PDF.
+					Tu auras besoin d'importer le package "graphicx". <code>\caption{...}</code> est la légende. <code>\label{...}</code> est le label que l'on donne à la figure. Il sert a faire référence à la figure. En effet, dans le paragraphe au-dessus de la figure, <code>\ref{...}</code> permet de mettre une référence à la figure en qeustion. De plus, quand on clique sur le numéro de la figure, cela nous conduit directement à l'emplacement de la figure. Un lien est présent dans le PDF.
 				</p>	
 				<p>
 					Le <code>[h]</code> permet de fixer la figure à l'endroit où elle est dans le code. H pour "Here". Le "<code>~</code>" entre "\textsc{Figure}" et "\ref{fig:clown}" représente un <b>espace insécable</b>.
@@ -482,7 +480,7 @@
 					</code>
 					
 				</div></p>
-				<p>Pour pouvoir citer la référence dans le texte, il suffit de faire <code>\cite{nom_reference}</code> où l'on veut avoir la citation. A note que le nom de la référence est sur la première ligne de la référence. Ici, on a <code>@article{hamming_error_1950,</code>, donc le nom de la référence est "hamming_error_1950". Tu remarqueras dans le PDF que tu peux cliquer sur le numéro de la citation. Cela t'ammènera à la référence dans la bibliographie. A noter que d'autres package existe pour gérer la bibliographie. </p>
+				<p>Pour pouvoir citer la référence dans le texte, il suffit de faire <code>\cite{nom_reference}</code> où l'on veut avoir la citation. A note que le nom de la référence est sur la première ligne de la référence. Ici, on a <code>@article{hamming_error_1950,</code>, donc le nom de la référence est "hamming_error_1950". Tu remarqueras dans le PDF que tu peux cliquer sur le numéro de la citation. Cela t'ammènera à la référence dans la bibliographie. A noter que d'autres packages existent pour gérer la bibliographie. </p>
 				<p>Si tu vas à la fin de ton document, tu devrais voir la bibliographie comme celle-ci :</p>
 				<img src="./capture_biblio.png" alt="">
 			</div>
@@ -583,10 +581,10 @@
 				</div>
 				<br><br><br>
 				<h1>Tu es arrivé.e à la fin de ce tutorat. J'espère que ça t'a aidé.</h1>
-				<p>Si tu veux la correction tu peux cliquer sur le bouton ci-dessous. Mais il va falloir un peu galérer et trouver le mot de passe! Bon courage !</p>
+				<p>Si tu veux la correction tu peux cliquer sur le bouton ci-dessous. Mais il va falloir un peu galérer et trouver le mot de passe! Il n'est pas dans la page web, mais cherches plus dans le code ;) <i>(Tips : GitHub, HTML, JavaScript, ... seront tes alliés)</i> Bon courage !</p>
 			</div>
 		</div>
-
+			
 			<button onclick="check_password()" type="button" class="btn btn-primary" id="next" style="margin-right:auto;margin-left:auto;display:table;background:#393e46!important;">Correction</button>
 		
 	</section>
