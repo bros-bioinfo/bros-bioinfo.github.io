@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bros-bioinfo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Le site des cours du Master de Bioinfo de Bordeaux !" />
+	<meta name="keywords" content="Bioinfo Unix Stallman bioinfofr Master Bordeaux" />
+	<meta name="author" content="Mathieu BOLTEAU for Bros-Bioinfo" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="./../../../css/template/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="./../../../css/template/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="./../../../css/template/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="./../../../css/template/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="./../../../css/template/bootstrap.css">
+
+	<link rel="stylesheet" href="./../../../css/template/style.css">
+
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="./../../../css/template/style.css">
+	<!-- End demo purposes only -->
+
+	<!-- psswd -->
+	<script type="text/javascript" src="./password.js"></script>
+
+	<style>
+		#colour-variations {
+			padding: 10px;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			width: 140px;
+			position: fixed;
+			left: 0;
+			top: 100px;
+			z-index: 999999;
+			background: #fff;
+			/*border-radius: 4px;*/
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			-webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			-moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			-ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+		}
+
+		#colour-variations.sleep {
+			margin-left: -140px;
+		}
+
+		#colour-variations h3 {
+			text-align: center;
+			;
+			font-size: 11px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: #777;
+			margin: 0 0 10px 0;
+			padding: 0;
+			;
+		}
+
+		#colour-variations ul,
+		#colour-variations ul li {
+			padding: 0;
+			margin: 0;
+		}
+
+		#colour-variations li {
+			list-style: none;
+			display: block;
+			margin-bottom: 5px!important;
+			float: left;
+			width: 100%;
+		}
+
+		#colour-variations li a {
+			width: 100%;
+			position: relative;
+			display: block;
+			overflow: hidden;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-ms-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-transition: 0.4s;
+			-o-transition: 0.4s;
+			transition: 0.4s;
+		}
+
+		#colour-variations li a:hover {
+			opacity: .9;
+		}
+
+		#colour-variations li a>span {
+			width: 33.33%;
+			height: 20px;
+			float: left;
+			display: -moz-inline-stack;
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+		}
+
+
+		.option-toggle {
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin-top: 5px;
+			margin-right: -30px;
+			width: 30px;
+			height: 30px;
+			background: #b85061;
+			text-align: center;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			color: #fff;
+			cursor: pointer;
+			-webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			-moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			-ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+			box-shadow: 0 0 9px 0 rgba(0, 0, 0, .1);
+		}
+
+		.option-toggle i {
+			top: 2px;
+			position: relative;
+		}
+
+		.option-toggle:hover,
+		.option-toggle:focus,
+		.option-toggle:active {
+			color: #fff;
+			text-decoration: none;
+			outline: none;
+        }
+        
+        .latex-white {
+            background-color: #f1f1f1;
+		}
+		
+		.latex-blue {
+            background-color: #777;
+        }
+
+        code {
+            font-family: Consolas,"courier new";
+            color: #000000;  
+            padding: 2px;
+            font-size: 105%;
+        }
+	</style>
+
+	<link rel="stylesheet" href="css/bootstrap-treeview.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Modernizr JS -->
+	<script src="js/template/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<header role="banner" id="fh5co-header">
+		<div class="container">
+			<!-- <div class="row"> -->
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					 aria-controls="navbar">
+						<i></i>
+					</a>
+					<a class="navbar-brand" href="index.html">Bros-bioinfo</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active">
+							<a href="https://bros-bioinfo.github.io/">
+								<span>Home</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="https://github.com/bros-bioinfo/bros-bioinfo.github.io">
+								<span>Github</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- </div> -->
+		</div>
+    </header>
+    
+
+	<a href="./../img/mclb.mp4" style="height:6vw; width:10%;position: absolute;top: 2vw;left: 9%;max-width: 150px;"></a>
+
+	<section id="fh5co-home" data-section="home" style="background-image: url(./../../../img/backgroundblured.png);" data-stellar-background-ratio="0.5">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h1 class="to-animate">Tutorats LaTeX</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slant"></div>
+	</section>
+
+	<a href="#" class="gotop js-gotop" id="tothetop">
+		<i class="icon-arrow-up2"></i>
+    </a>
+    
+    <section id="fh5co-intro">
+		<div class="container">
+            <div class="row">
+                <br><br><br><br><br><br>
+                <h1>LaTeX, qu'est-ce que c'est ?</h1>
+
+                <p>
+                    C'est un système de composition de haute qualité; il comprend des fonctionnalités conçues pour la production de documentation technique et scientifique. LaTeX est l'un des standards pour la communication et la publication de documents scientifiques. Libre et gratuit, vous pouvez utiliser LaTex facilement. Il est assez aisé de l'installer sur sa machine. Cependant plusieurs éditeurs en ligne existent. 
+                </p>
+                <p>
+                    Basé sur un système de balisage, semblable au langage XML (<i>tu verras ça plus tard dans le master ;)</i>), il permet l'écriture de rapport facilement (<i>Bon OK, il faut un peu de bouteille avant que ça soit facile, mais ça vient vite</i>). L'idée est de se soucier que sur le contenu et non sur la forme et le rendu (comme le fait Word). 
+                </p>
+
+                <h3>Bon ... Un peu de concret ?</h3>
+            </div>
+
+            <div class ="row">
+                <h1>Commençons par le commencement !</h1>
+
+                <p>Pour vous faciliter la tâche, nous allons utiliser un éditeur en ligne. Ce dernier sera <a href="https://www.overleaf.com/">OverLeaf</a>. Cet éditeur est très utilisé (au moins dans le Master ahah). Le truc cool est qu'on peut <u> travailler à plusieurs sur le même document</u> : <b>gavé pratique pour les rapport en groupe ;)</b>. </p> 
+                <p>Tout d'abord, il vous faudra créé un compte sur le site <a href="https://www.overleaf.com/">OverLeaf</a>. Jusque là ça devrait le faire.</p>
+            </div>
+
+            
+        </div>
+    </section>
+
+	
+	<section id="fh5co-work" data-section="work">
+		<div class="container" id="menucours">
+			<div class="row">
+                <h1>Passons aux choses sérieuses ...</h1>
+                <p>Tu vas d'abord créer un projet vierge. Le document une fois le projet créé ressemble à ça :</p>
+				<img src="./capture_2.png" alt="" width="1300">
+				<br><br>
+				<p>Tu peux voir que la page est composée de 3 zones. </p>
+				<h3>Zone 1</h3>
+				<p>
+					C'est la zone tout à gauche. Elle correspond à l'arborescence des fichiers du projet. Elle contiendra tous les fichiers dont vous aurez besoin, notamment les figures que vous importerez. Pour importer un fichier ou une image, il suffit de cliquer sur le bouton d'import.
+				</p>
+				<p>
+					D'ailleurs, importe cette image : <a href="./capture_2.png"> boby.png</a>, tu t'en serviras tout à l'heure.
+				</p>
+
+				<h3>Zone 2 (la plus importante)</h3>
+				<p>
+					Cette zone c'est là où tu vas écrire tout ce que tu veux. Tu peux voir déjà que ça ressemble un peu à du "code". On y reviendra juste après.
+				</p>
+
+				<h3>Zone 3</h3>
+				<p>Cette dernière zone permet de visualiser ce que tu as écris à gauche. En gros, ça convertit ton code à gauche en fichier PDF. Ici, tu vois à quoi ressemble le fichier du coup ;) En cliquant sur "Recompile" le fichier PDF est généré. Dès que tu as apporté une modification à gauche, tu recompiles pour voir le résultat. Truc cool : tu peux faire un <b>CTRL + S</b> pour recompiler ;)</p>
+
+				<div>
+					<h1>Le code : partie centrale du LaTeX</h1>
+					<p>Bien, maintenant expliquons un peu le code.</p>
+
+
+					<div class="latex-blue">
+						<code>
+							1.&emsp;&emsp;\documentclass{article} <br>
+							2.&emsp;&emsp;\usepackage[utf8]{inputenc} <br>
+							3.&emsp;&emsp;<br>
+							4.&emsp;&emsp;\title{Welcome in Bioinfo} <br>
+							5.&emsp;&emsp;\author{Bobby le bioinformaticien} <br>
+							6.&emsp;&emsp;\date{October 2020} <br>
+							7.&emsp;&emsp;<br>
+							8.&emsp;&emsp;\begin{document} <br>
+							9.&emsp;&emsp;<br>
+							10.&emsp;&emsp;\maketitle <br>
+							11.&emsp;&emsp;<br>
+							12.&emsp;&emsp;\section{Introduction} <br>
+							13.&emsp;&emsp;<br>
+							14.&emsp;&emsp;\end{document} <br>
+						</code>
+					</div>
+				</div>
+				
+				<p>
+					Comme dit précédement, LaTeX est un langage de balisage. On retrouve donc la première balise à la première ligne. Cette balise (<code>\documentclass{article}</code>) indique le type de document que l'on souhaite produire en PDF. Ici le type (que l'on peut aussi appeler classe) est <code>article</code>. Or, pour les rapports demandés dans le master, <font size="+3"><b> le type de document désiré est <code>report</code></b></font>. Donc il faut que tu modifies le type du document ;). 
+				</p>
+				<p>
+					<code>\usepackage</code> permet d'importer un package. C'est un peu comme quand on importe la librairie <code>matplotlib</code> en Python. Entre crochets <code>[ ... ]</code> on met les paramètres et dans les <code>{ ... }</code> on nomme le package que l'on veut importer. Ici, on import le package <code>inputenc</code> en donnant comme paramètre <code>utf8</code>. Dit autrement, ce dit que le document utilisera le code utf8.
+				</p>
+
+				<p>
+					<code>\title, \author, \date</code> sont des paramètres permettant de donner des informations au document.
+				</p>
+				
+				<p>
+					<code>\begin{document}</code> et <code>\end{document}</code> sont les balises, qui comme leur nom l'indique, déterminent le début et la fin du document. Tout ce qui est à l'extérieur de ces balises ne sera pas considéré dans le document.
+				</p>
+
+				<p>
+					Les documents de type <code>report</code> permettent de faire  des documents comportant des chapitres et des sections. La classe <code>report</code> s'articule de cette manière :
+				</p>
+
+				<img src="./toc.png" alt="" >
+
+				<p>
+					De base le langage utilisé en l'anglais. Pour changer la langue, tu peux importer le package "babel" en utilisant le paramètre "french". Ainsi, la langue du document sera du français. A toi de jouer ;)
+				</p>
+
+
+			</div>
+
+		</div>
+	</section>
+
+    <section id="fh5co-intro">
+		<div class="container">
+            <div class="row">
+				<br><br><br><br><br><br>
+				<h1>Bobby le bioinformaticien a besoin de ton aide !</h1>
+				<h3>Il avait rédigé un rapport sur son arrivée dans le master mais il l'a perdu ...</h3>
+				<img src="./bobby-s_sad.jpeg" alt="">
+				<p>
+					Il avait fait une capture de son sommaire ouf!
+				<p>
+			</div>
+			
+			<img src="./bobby-s_toc.png" alt="" >
+			<div>
+				<p>Il faut que réussisse à refaire ce sommaire. Je te laisse créer les chapitres et les sections. </p>
+				<p>Pour ajouter le sommaire au rapport, il faut utiliser la commande <code>\tableofcontents</code> avant le premier chapitre. Mais Bobby se souvient qu'il faut modifier cette commande car elle écrit "Table des matières" et il n'aime pas du tout. Il préfère "Sommaire". Aussi, de manière générale le sommaire n'est pas numéroté et la pagination débute qu'au premier chapitre. Du coup il faut écrire :</p>
+				<div class="latex-white">
+					<code>
+						\renewcommand{\contentsname}{Sommaire}  &emsp;&emsp;# Renomme "Table des matières" en "Sommaire"<br>
+						\tableofcontents  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Affiche la table des matières <br>
+						\thispagestyle{empty}  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Permet d'enlever le numéro de page du sommaire <br><br>
+						\newpage  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Débute une nouvelle page <br>
+						\setcounter{page}{1} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Réinitialise le compteur de page à 1 <br>
+						\chapter{Les Cours en M1} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Déclaration du chapitre <br>
+					</code>
+				</div>
+			</div>
+		
+			<div class="row">
+				<br><br><br>
+
+				<h3>C'est un bon début !</h3>
+
+				<br><br>
+				<p>Bobby avait aussi pris quelques notes pendant la rédaction de son rapport. Il est noté que :
+					<ul>
+						<li><i>USI</i> contient une description brève du cours</li>
+						<li><i>Programmation</i> -> explication d'une fonction en Python3.</li>
+						<li><i>ANGLAIS</i> : sujet de l'oral</li>
+						<li><i>BIOSTATS</i> contenait la loi de gravitation de Newton</li>
+						<li><i>IMAJS</i> -> Image avec un bruit gaussien</li>
+						<li><i>OBI</i> contenait un paragraphe contenant une référence à un article très important! </li>
+						<li><i>Bordeaux - Pleins d'activités</i> -> Liste des activités à faire à Bdx</li>
+						<li><i>AMBB</i> : tableau récapitulatif du bureau de l'asso</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="fh5co-work" data-section="work">
+		<div class="container" id="menucours">
+			<div class="row">
+				<h1>A toi de jouer maintenant, Bobby compte sur toi !!</h1>
+				<br><br><br>
+				<h1>ANGLAIS</h1>
+				<p>Voilà à quoi ressemblait le sujet :</p>
+				<img src="./sujet_anglais.png" alt="">
+			
+				<p>Le texte non formaté :</p>
+				<p>Sujet de l’oral d’Anglais <br>
+					Vous devrez trouver une application mobile ayant un lien avec la bioinformatique. Un diaporama sera à présenter devant les autres ́etudiants expliquant l’application choisie. Durée : 10 min. d’oral + 5 min. de questions. Un résumé devra aussi être rendu la veille de votre oral à l’adresse : oral-anglais@u-bdx.fr. Vous nommerez le fichier de cette manière : NOM_Prenom_NomDeLApplication.pdf.
+				</p>
+
+				<p>
+				À noter que le titre est écrit en gros : <code>{\Huge blabla}</code> permet de le faire. Cherche parmis les commande <code>\texttt, \textbf, ...</code> pour modifier le texte. Pour la couleur tu auras besoin d'importer le package <code>color</code> (<code>\textcolor{green}{text in gren}</code>). Autre commande utile : <code>\underline</code>. Tu auras remarqué que le premier paragraphe n'a pas d'indentation à la première ligne alors que le second paragraphe si. Aussi, info de Bobby : "il y avait un lien cliquable sur l'adresse mail. En cliquant dessus ça me permettait d'ouvrir le logiciel de messagerie par défaut". Tips : <code>mailto:</code> ; <code>hyperref</code> -> <code>href</code>
+				</p>
+			</div>
+			<div class="row">
+				<br><br><br>
+				<h1>BIOSTATS</h1>
+				<p>Il faut importer des packages (<code>\usepackage{amsmath,amsfonts,amssymb}</code>, ici on importe 3 packages d'un coup). Pour rappel, la loi de la gravition de Newton a pour formule : <img src="./loi_gravitation.png" alt="">. <a href="https://www.xm1math.net/doculatex/intromath.html">TIPS</a> </p>
+			</div>
+
+			<div>
+				<br><br><br>
+				<h1>IMAJS</h1>
+				<p>Clique <a href="./clown_Noise-gaussian_Filter_Median-1-3fois.png">ICI</a> pour télécharger l'image à insérer.</p>
+
+				<div class="latex-blue">
+					<code>
+						\section{IMAJS} <br>
+						Dans ce cours, l'utilisation du logiciel ImageJ a une grande importance. Il permet de modifer des images en améliorant la netteté ou bien au contraire ajouter du bruit (\textsc{Figure}~\ref{fig:clown}). <br><br>
+						
+						\begin{figure}[h] <br>
+							\centering <br>
+							\includegraphics[scale=0.4]{clown_Noise-gaussian_Filter_Median-1-3fois.png} <br>
+							\caption{Image ayant subit un bruit gaussien à l'aide d'ImageJ} <br>
+							\label{fig:clown} <br>
+						\end{figure} <br>
+					</code>
+				</div>
+				<p>
+					<code>\caption{...}</code> est la légende. <code>\label{...}</code> est le label que l'on donne à la figure. Il sert a faire référence à la figure. En effet, dans le paragraphe au-dessus de la figure, <code>\ref{...}</code> permet de mettre une référence à la figure en qeustion. De plus, quand on clique sur le numéro de la figure, cela nous conduit directement à l'emplacement de la figure. Un lien est présent dans le PDF.
+				</p>	
+				<p>
+					Le <code>[h]</code> permet de fixer la figure à l'endroit où elle est dans le code. H pour "Here". Le "<code>~</code>" entre "\textsc{Figure}" et "\ref{fig:clown}" représente un <b>espace insécable</b>.
+				</p>
+				<p>Le rendu est :</p>
+				<img src="./capture_figure_clown.png" alt="">
+			</div>
+
+			<div class="row">
+				<br><br><br>
+				<h1>OBI</h1>
+				<p>Ce paragraphe était présent :</p>
+				<p>To estimate the true substitutions number, we calculate the Hamming distance between the initial sequence and the mutate sequence created. For that, we have used the definition of the distance between two string given by R. Hamming [1]. While comparing two strings of equal length, Hamming distance is the number of positions in which the two nucleotides are different.</p>
+				<p>Pour citer des références on peut utiliser un bibliographie contenue dans un fichier externe. Heureusement Bobby avait sauvegardé celui-ci, <a href="./biblio.bib">ICI</a>. Il faut ensuite insérer la bibliographie au document avant de pouvoir citer des références. Pour cela, le package <code>biblatex</code> peut être utilisé : </p>
+				<div class="latex-blue">
+					<code>
+						\usepackage[
+							backend=biber,
+							style=ieee,
+							citestyle=ieee
+						]{biblatex}
+						\addbibresource{biblio.bib}
+					</code>
+				</div>
+				<p>Tu sais sûrement que plusieurs formats de citation existent. Ici, on utilise le format "IEEE". À la fin du document, il faut insérer la ligne : <div class="latex-blue">
+					<code>
+						\newpage <br>
+						\addcontentsline{toc}{chapter}{Bibliographie} # Ajoute la biblio au sommaire<br>
+						\printbibliography
+					</code>
+					
+				</div></p>
+				<p>Pour pouvoir citer la référence dans le texte, il suffit de faire <code>\cite{nom_reference}</code> où l'on veut avoir la citation. A note que le nom de la référence est sur la première ligne de la référence. Ici, on a <code>@article{hamming_error_1950,</code>, donc le nom de la référence est "hamming_error_1950". Tu remarqueras dans le PDF que tu peux cliquer sur le numéro de la citation. Cela t'ammènera à la référence dans la bibliographie. A noter que d'autres package existe pour gérer la bibliographie. </p>
+				<p>Si tu vas à la fin de ton document, tu devrais voir la bibliographie comme celle-ci :</p>
+				<img src="./capture_biblio.png" alt="">
+			</div>
+
+			<div class="row">
+				<br><br><br>
+				<h1>Programmation</h1>
+				<p>Voici la fonction que Bobby voulais insérer dans son rapport pour cette partie :</p>
+				<div class="latex-blue">
+					<code>
+						def hamming(seq1, seq2): <br>
+						&emsp;&emsp;""" <br>
+						&emsp;&emsp;Calculate the hamming distance between two sequences passed in arguments <br>
+						&emsp;&emsp;""" <br>
+						&emsp;&emsp;hamming_distance = 0 <br>
+						&emsp;&emsp;# If sequences have not the same size, the calcul of hamming distance is impossible <br>
+						&emsp;&emsp;if len(seq1) != len(seq2): <br>
+						&emsp;&emsp;&emsp;&emsp;print("Error : Length of the two sequences are not the same.\n") <br>
+						&emsp;&emsp;# Convertion of the two sequence string to lists <br>
+						&emsp;&emsp;seq1_list = list(seq1) <br>
+						&emsp;&emsp;seq2_list = list(seq2) <br>
+						&emsp;&emsp;# For each nucleotides, verification of the equality between the two sequences <br>
+						&emsp;&emsp;for i in range(len(seq1)): <br>
+						&emsp;&emsp;&emsp;&emsp;# If no equality, put +1 to the hamming distance <br>
+						&emsp;&emsp;&emsp;&emsp;if seq1_list[i] != seq2_list[i]: <br>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;hamming_distance += 1 <br>
+						&emsp;&emsp;return hamming_distance
+					</code>
+				</div>
+				<p>Le but ici est d'insérer cette fonction au document LaTeX. Pour cela des packages existent tels que <code>listing</code> ou <code>minted</code>. Nous allons utiliser le dernier. Deux possibilités existent : soit mettre le code en "dur" dans le document LaTeX, soit utiliser un fichier que le document LaTeX va lire. Pour la dernière méthode, tu peux faire comme ça :</p>
+
+				<div class="latex-blue">
+					<code>
+						\subsection{Programmation} <br>
+            			&emsp;&emsp;Python le fameux serpent ! <br>
+						&emsp;&emsp;\inputminted{python}{hamming_function.py} <br>
+					</code>
+				</div>
+				<p>Ici, on importe via la commande <code>\inputminted</code>, le contenu du fichier "hamming_distance.py". En indiquant que c'est du Python, la mise en forme sera réalisée sur le PDF.</p>
+			</div>
+		</div>
+
+		
+		
+
+
+
+	</section>
+
+	<section id="fh5co-intro">
+		<div class="container">
+			<div class="row">
+				<br><br><br><br><br><br>
+				<h1>Bordeaux - Pleins d'activités</h1>
+				<p>Bobby se souvient avoir pris les activités sur le <a href="https://www.camilleinbordeaux.fr/visiter-bordeaux-100-idees-dactivites/"> site</a> de son amie Camille.</p>
+				<p>Il avait fait une liste des choses à faire à Bordeaux. Je te laisse chercher un peu pour trouver comment on fait des listes sur LaTeX. Google est ton ami :)</p>
+			</div>
+
+			<div>
+				<br><br><br>
+				<h1>L'AMBB</h1>
+				<p>Bobby avait fait un tableau récapitulatif des membres du bureau de l'association AMBB. Il ressemblait à l'image ci-dessous. Bon courage pour trouver comment on fait. Que le sort puisse t'être favorable!</p>
+				<img src="./tableau_ambb.png" alt="">
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<p>Bon si tu galères trop, tu peux allez voir ce <a href="https://www.tablesgenerator.com/">site</a>, c'est plutôt cool.</p>
+			</div>
+			
+		</div>
+	</section>
+
+
+	<section id="fh5co-work" data-section="work">
+		<div class="container" id="menucours">
+			<div class="row">
+				<br><br><br>
+				<h1>Super ! Tu as bien aidé Bobby ! </h1>
+				<img src="./bobby-s_thanks.jpeg" alt="">
+				<h3>Il ne reste plus qu'à convertir ton fichier en LaTeX.</h3>
+				<p>Pour cela, rien de plus facile, il suffit de cliquer sur le bouton "Download PDF" et c'est bon :D</p>
+				<br><br><br><br><br><br><br><br>
+				<div class="row">
+					<p>
+						<h3>Quelques liens qui pourront t'être utiles plus tard :</h3> <br>
+						Des templates pour écrire des rapport (la mise en forme est déjà toute prête -ou presque ahah-) : <a href="https://fr.overleaf.com/latex/templates">Link</a> <br>
+						Documentation : <a href="https://www.xm1math.net/doculatex/">Link</a> <br>
+						BibTex (autre moyen pour la biblio) : <a href="https://www.overleaf.com/learn/latex/bibliography_management_with_bibtex">Link</a> <br>
+						Mise en forme : <a href="https://www.xm1math.net/doculatex/mise_en_forme.html">Link</a> <br>
+						Sommaire/Structure : <a href="https://www.xm1math.net/doculatex/structure.html">Link</a> <br>
+						Figures : <a href="https://www.tuteurs.ens.fr/logiciels/latex/figures.html">Link</a> <br>
+						Tableaux - Documentation : <a href="https://fr.wikibooks.org/wiki/LaTeX/Tableaux">Tableau simple</a> - <a href="https://www.xm1math.net/doculatex/tableaux.html">Tableau complexe</a> <br>
+						Générateur de Tableau auto : <a href="https://www.tablesgenerator.com/">Link</a> <br>
+						Listes (Personnalisation, listes numérotées, <i>etc.</i>) : <a href="https://www.xm1math.net/doculatex/listes.html">Link</a> <br>
+						Hyperliens : <a href="https://en.wikibooks.org/wiki/LaTeX/Hyperlinks">Link</a> <br>
+						Insertion de code : <a href="https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted">Link</a> <br>
+						Équations mathématiques : <a href="https://www.xm1math.net/doculatex/equations.html">Link</a> <br>
+						Sinon, Google est ton ami ;)
+					</p>
+				</div>
+				<br><br><br>
+				<h1>Tu es arrivé.e à la fin de ce tutorat. J'espère que ça t'a aidé.</h1>
+				<p>Si tu veux la correction tu peux cliquer sur le bouton ci-dessous. Mais il va falloir un peu galérer et trouver le mot de passe! Bon courage !</p>
+			</div>
+		</div>
+
+			<button onclick="check_password()" type="button" class="btn btn-primary" id="next" style="margin-right:auto;margin-left:auto;display:table;background:#393e46!important;">Correction</button>
+		
+	</section>
+
+
+
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop">
+			<i class="icon-arrow-up2"></i>
+		</a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					Auteur : Mathieu BOLTEAU <br>
+					<a href="https://github.com/mablt/">GitHub</a> <br>
+					<a href="mailto:mathieu.bolteau1@gmail.com">mathieu.bolteau1@gmail.com</a>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	
+    
+</body>
+
+</html>
