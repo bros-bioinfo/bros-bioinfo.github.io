@@ -4,7 +4,7 @@ function getTree() {
   {"type":"directory",href:"#fh5co-work",text:"M1",nodes:[
     {"type":"directory",href:"#fh5co-work",text:"SEMESTRE1",custom:"10171914",nodes:[
       {"type":"directory",href:"#fh5co-work",text:"ANNALES",custom:"10171914",nodes:[
-        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANNALES/M1_S1_Biostats.pdf",text:"Biostats",custom:"10171914"}
+        {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/SEMESTRE1/ANNALES/M1_S1_Biostats.pdf",text:"M1_S1_Biostats.pdf",custom:"10171914"}
       ]},
       {"type":"directory",href:"#fh5co-work",text:"ALGO_PROG",custom:"10171914",nodes:[
         {"type":"directory",href:"#fh5co-work",text:"ALGO",custom:"10171914",nodes:[
