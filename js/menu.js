@@ -33,9 +33,9 @@ function getTree() {
         ]},
         {"type":"directory",href:"#fh5co-work",text:"BIOSTATS",custom:"10171914",nodes:[
             {"type":"directory",href:"#fh5co-work",text:"CC_BIOSTATS",custom:"10171914",nodes:[
-                {"type":"directory",href:"#fh5co-work",text:"CC2_BIOSTATS",custom:"10171914",nodes:[
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_1/BIOSTATS/CC_BIOSTATS/CC2_BIOSTATS/2025_CC2_BIOSTATS.md",text:"2025_CC2_BIOSTATS.pdf",custom:"10171914"},
-                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_1/BIOSTATS/CC_BIOSTATS/CC2_BIOSTATS/hydrol.txt",text:"hydrol.txt",custom:"10171914"},
+                {"type":"directory",href:"#fh5co-work",text:"2025_CC2_BIOSTATS",custom:"10171914",nodes:[
+                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_1/BIOSTATS/CC_BIOSTATS/2025_CC2_BIOSTATS/2025_CC2_BIOSTATS.pdf",text:"2025_CC2_BIOSTATS.pdf",custom:"10171914"},
+                    {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_1/BIOSTATS/CC_BIOSTATS/2025_CC2_BIOSTATS/hydrol.txt",text:"hydrol.txt",custom:"10171914"},
                   ]},
                 {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_1/BIOSTATS/CC_BIOSTATS/2025_CC1_BIOSTATS.md",text:"2025_CC1_BIOSTATS.md",custom:"10171914"},
               ]},
@@ -66,10 +66,10 @@ function getTree() {
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_ALGO/2025_NGS_ALGO.pdf",text:"2025_NGS_ALGO.pdf",custom:"10171914"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_ALGO/2026_NGS_ALGO.pdf",text:"2026_NGS_ALGO.pdf",custom:"10171914"}]},
           {"type":"directory",href:"#fh5co-work",text:"NGS_BIO",custom:"10171914",nodes:[
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_BIO/2020_NGS.pdf",text:"2020_NGS_BIO.pdf",custom:"10171914"},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_BIO/2021_NGS.pdf",text:"2021_NGS_BIO.pdf",custom:"10171914"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_BIO/2020_NGS_BIO.pdf",text:"2020_NGS_BIO.pdf",custom:"10171914"},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_BIO/2021_NGS_BIO.pdf",text:"2021_NGS_BIO.pdf",custom:"10171914"},
             {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_BIO/2025_NGS_BIO.pdf",text:"2025_NGS_BIO.pdf",custom:"10171914"},
-            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_ALGO/2026_NGS_BIO.pdf",text:"2026_NGS_BIO.pdf",custom:"10171914"},]},
+            {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/NGS/NGS_BIO/2026_NGS_BIO.pdf",text:"2026_NGS_BIO.pdf",custom:"10171914"},]},
         ]},
         {"type":"directory",href:"#fh5co-work",text:"POO",custom:"10171914",nodes:[
           {"type":"file",href:"http://bros-bioinfo.github.io/COURS/M1/ANNALES/SEMESTRE_2/POO/2020_POO.pdf",text:"2020_POO.pdf",custom:"10171914"},
