@@ -2902,6 +2902,16 @@ function initCalendar() {
     updateCalendar();
 }
 
+// Les ICS arrivent de facon asynchrone, bien apres le premier updateCalendar()
+// de initCalendar(). On redessine a chaque arrivee, en groupant les reponses
+// pour ne pas relancer un rendu complet 23 fois de suite.
+var calendarRefreshTimer = null;
+
+function scheduleCalendarRefresh() {
+    clearTimeout(calendarRefreshTimer);
+    calendarRefreshTimer = setTimeout(updateCalendar,50);
+}
+
 function loadCalendarICS(ueID) {
     // HACK console.log('LOAD ' + ueID);
     var xhr = new XMLHttpRequest();
@@ -2912,6 +2922,7 @@ function loadCalendarICS(ueID) {
             let data = parse_ics(ueID,xhr.responseText);
             // Merge events...
             Object.assign(calendar_data,data);
+            scheduleCalendarRefresh();
         }
     };
     const path = "https://master-bioinfo-bordeaux.github.io/data/";
