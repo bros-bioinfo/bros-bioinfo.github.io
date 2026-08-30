@@ -164,6 +164,7 @@
 	</style>
 
 	<link rel="stylesheet" href="css/bootstrap-treeview.css">
+	<link rel="stylesheet" href="css/calendar.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 	<!-- Modernizr JS -->
@@ -217,7 +218,7 @@
 						<div class="col-md-8 col-md-offset-2">
 							<h1 class="to-animate">We
 								<a href="https://bros-bioinfo.github.io/img/mclb.mp4" style="border-bottom:0px!important">💙</a> Bioinfo !</h1>
-							<h2 class="to-animate">Les COURS du M1 de Bioinformatique de Bordeaux</h2>
+							<h2 class="to-animate">Les COURS du Master de Bioinformatique de Bordeaux</h2>
 						</div>
 					</div>
 				</div>
@@ -381,7 +382,89 @@
 			</div>
 
 		</div>
-		<div id="calendar" style="overflow:hidden"></div>
+		<div id="calendar" style="overflow:hidden">
+			<div class="container">
+
+				<div id="calendar-options" class="row">
+					<div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+						<a class="btn btn-default" href="javascript:void(0)" onclick="previousWeek()" role="button">
+							<i class="fa fa-backward fa-fw"></i>
+						</a>
+						<span id="weeknum" class="week"></span>
+						<a class="btn btn-default" href="javascript:void(0)" onclick="nextWeek()" role="button">
+							<i class="fa fa-forward fa-fw"></i>
+						</a>
+					</div>
+					<div class="hidden-lg hidden-md col-sm-3 col-xs-4">
+						<a class="btn btn-xs" href="javascript:void(0)" onclick="previousWeek()" role="button">
+							<i class="fa fa-backward fa-fw"></i>
+						</a>
+						<span id="weeknum-small" class="week"></span>
+						<a class="btn btn-xs" href="javascript:void(0)" onclick="nextWeek()" role="button">
+							<i class="fa fa-forward fa-fw"></i>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+						<select id="masterYear" class="form-control" onchange="setMasterOptions('')">
+							<option value="1">Master 1</option>
+							<option value="2">Master 2</option>
+						</select>
+					</div>
+					<div class="hidden-lg hidden-md col-sm-3 col-xs-3">
+						<select id="masterYear-small" class="form-control" onchange="setMasterOptions('-small')">
+							<option value="1">M1</option>
+							<option value="2">M2</option>
+						</select>
+					</div>
+
+					<div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+						<select id="masterTrack" class="form-control" onchange="setMasterOptions('')">
+							<option value="1">Computational Biology</option>
+							<option value="2">DataScience in Biology and Environment</option>
+							<option value="4">BioProduction and Bio-informatics</option>
+							<option value="8">Formation continue</option>
+						</select>
+					</div>
+					<div class="hidden-lg hidden-md col-sm-5 col-xs-5">
+						<select id="masterTrack-small" class="form-control" onchange="setMasterOptions('-small')">
+							<option value="1">CompBio</option>
+							<option value="2">SDBE</option>
+							<option value="4">BioProd</option>
+							<option value="8">F.cont.</option>
+						</select>
+					</div>
+				</div>
+
+				<table class="calendar table table-condensed table-bordered">
+					<thead id="calendar-lg-head"></thead>
+					<tbody id="calendar-lg-body"></tbody>
+				</table>
+
+			</div>
+		</div>
+
+
+		<script>
+			// Restaure le choix annee/parcours et garde les selects "large" et "small" synchronises
+			(function () {
+				var pairs = [['masterYear', 'masterYear-small'], ['masterTrack', 'masterTrack-small']];
+				pairs.forEach(function (pair) {
+					var stored = localStorage[pair[0]];
+					pair.forEach(function (id) {
+						var select = document.getElementById(id);
+						if (!select) { return; }
+						if (stored) { select.value = stored; }
+						select.addEventListener('change', function () {
+							pair.forEach(function (other) {
+								var twin = document.getElementById(other);
+								if (twin) { twin.value = select.value; }
+							});
+						});
+					});
+				});
+			})();
+		</script>
 	</section>
 
 
@@ -488,10 +571,9 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="js/template/main.js"></script>
 	<!--CALENDAR-->
-	<script>$('#calendar').load('https://master-bioinfo-bordeaux.github.io #calendar');</script>
 	<script type="text/javascript" src="https://master-bioinfo-bordeaux.github.io/data/news_json.js"></script>
-	<script type="text/javascript" src="js/msbifub.js"></script>
-	<script type="text/javascript" src="js/calendar.js"></script>
+	<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="calendarModalLabel" aria-hidden="true"></div>
+	<script type="text/javascript" src="js/template/calendar.js"></script>
 </body>
 
 </html>

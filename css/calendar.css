@@ -1,0 +1,99 @@
+/* Emploi du temps - vue semaine (voir js/calendar_OLD.js)
+   Regles reprises du site master-bioinfo-bordeaux.github.io et adaptees
+   a la charte du site (police Source Sans Pro, section sur fond blanc). */
+
+#calendar {
+	padding: 0 15px;
+	color: #333;
+	text-align: left;
+}
+
+#calendar-options {
+	margin-bottom: 20px;
+}
+
+#calendar-options > div {
+	margin-bottom: 8px;
+}
+
+/* Numero de semaine encadre par les fleches < / > */
+.week {
+	display: inline-block;
+	min-width: 90px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 300;
+	color: #333;
+	vertical-align: middle;
+}
+
+/* Grille hebdomadaire */
+.calendar {
+	font-size: 12px;
+	color: #000;
+	background: #fff;
+	table-layout: fixed;
+}
+
+.calendar th,
+.calendar td {
+	vertical-align: top !important;
+	word-wrap: break-word;
+}
+
+.calendar th.centered,
+.calendar .centered {
+	text-align: center;
+}
+
+/* Colonne des horaires */
+.calendar tbody td:first-child {
+	width: 60px;
+	color: #888;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.calendar ul {
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+
+/* Bloc d'un cours dans une case */
+.course,
+.student-group {
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 2px 5px;
+	margin: 5px;
+}
+
+.course a {
+	white-space: normal;
+}
+
+@media screen and (max-width: 768px) {
+	#calendar-options {
+		font-size: 12px;
+	}
+
+	#weeknum-small {
+		font-size: 14px;
+	}
+
+	#masterYear-small,
+	#masterTrack-small {
+		font-size: 10px;
+	}
+
+	.calendar ul {
+		font-size: 10px;
+	}
+
+	.course,
+	.student-group {
+		margin: 2px;
+		padding: 1px 3px;
+	}
+}

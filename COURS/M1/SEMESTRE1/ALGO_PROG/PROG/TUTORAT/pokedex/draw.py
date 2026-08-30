@@ -60,20 +60,20 @@ def versus():
                         888880C.                                                              888888G08888
                      888:;;;:;;8888                                                             8C8CG88C8G
               ffffGGGff:ff:::::::;;8                                                            80808 80G08
-             8CCCCCCCCCC;:CC;;:::;;;CC                                                          88888 88CC8
-           80CCCCCCCCCCCCC;;CC:;;:::88                                                          88888  8C8G8
-           80CCCCCCCCCCC;;CC;;C:;;;:88888G                                                    Lf00G0:  8G888
+             8CCCCCCCCCC;:CC_IMAJS;;:::;;;CC_IMAJS                                                          88888 88CC8
+           80CCCCCCCCCCCCC;;CC_IMAJS:;;:::88                                                          88888  8C8G8
+           80CCCCCCCCCCC;;CC_IMAJS;;C:;;;:88888G                                                    Lf00G0:  8G888
            80CCCCCCCCCCCCCCCCCCCCCC      ,8                                                             888
             .CCC08888CCCCCCCCCC.      888G
              80000000000008888 80;:888
              88888888888888880:88  8
-              8888888888888888;88   CC
+              8888888888888888;88   CC_IMAJS
               CC888888888888CC8;;   88
                 CC888888GC;;:;;:;;;8
        ..  CG888888GCCCC0000CCC88CC
-     .C;:CC:;:;;::;;;:;880CC88 88CC
-      8CC;:CG;CC:;C;:888CC88;;     8
-    80CCC8880C;:CC;88CCCCC88:;   88 88   ,888CC
+     .C;:CC_IMAJS:;:;;::;;;:;880CC88 88CC
+      8CC;:CG;CC_IMAJS:;C;:888CC88;;     8
+    80CCC8880C;:CC_IMAJS;88CCCCC88:;   88 88   ,888CC
     80888    8CCCCC08CCCCC88:;:88     888G     8
   88 .CCC8888888888CCCCCCC88;:8;;     88;:     8
   8888CCCCCCCCCC008CCCCC08iiiiG:;;:.    GGL::   GG
