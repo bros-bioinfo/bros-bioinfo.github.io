@@ -475,9 +475,15 @@ background-image: -ms-repeating-linear-gradient(top left, #abcef2 0%, #2b3262 10
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
 }
+#fh5co-intro .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #fh5co-intro .fh5co-block {
-  width: 33.33%;
-  float: left;
+  width: auto;
+  float: none;
+  flex: 1 1 20%;
   text-align: center;
   font-size: 16px;
   min-height: 300px;
