@@ -1,6 +1,11 @@
 
 // var university_path = "http://www.u-bordeaux.fr/formation/2015/PRMABS_121/master-recherche-professionnel-mention-biologie-sante-specialite-bioinformatique/enseignement/";
-var university_path = "https://www.u-bordeaux.fr/formation/2016/PRMA_74/bio-informatique/enseignement/";
+var u_path = "https://www.u-bordeaux.fr/formation/";
+var master_path = "/PRMA_74/bio-informatique/enseignement/";
+var u_year = "2020";
+var university_path = u_path + u_year + master_path;
+
+
 /**
  * 2016 - 2020
  */
@@ -8,7 +13,7 @@ var university_path = "https://www.u-bordeaux.fr/formation/2016/PRMA_74/bio-info
 var course_data = {
   "4TBIEVNT": {
     "acronym": "Event",
-    "background_color": "#FA5858",
+    "background_color": "#FC9272",
     "contents": {
       "en": "Coming soon.",
       "fr": "Bient&ocirc;t disponible."
@@ -16,7 +21,7 @@ var course_data = {
     "ects": 0,
     "icon": "fa fa-graduation-cap",
     "id": "4TBIEVNT",
-    "image": "headinfo.jpg",
+    "image": "headconf.jpg",
     "semester": 11,
     "title": "Event",
     "tracks": "0x00",
@@ -54,6 +59,10 @@ var course_data = {
     "tracks": "0x00",
     "visibility": "visible"
   },
+
+/********************************
+  S E M E S T R E  7
+ ********************************/
   "4TBI701U": {
     "apogee": "4TBI701U",
     "short": "Image Processing",
@@ -64,7 +73,7 @@ var course_data = {
     "contents": {
       "en": {
         "program": `
-        <p>First, this course presents an overview of the main image processings and analyses
+        <p>First, this course presents an overview of the main image processings and analyses 
         completed by tutorials based on the &mdash; very popular in the biological community &mdash; ImageJ software.
         Second, an introduction to the JavaScript programming language is performed in order to automate image processing tasks via ImageJ.</p>
         <ul>
@@ -108,44 +117,6 @@ var course_data = {
     "tracks": "0x0F",
     "visibility": "visible",
     "html": "FRUAI0333298FCOEN_3586/initiation-a-l-exploration-d-images-numeriques"
-  },
-  "4TBI702U": {
-    "apogee": "4TBI702U",
-    "short" : "Algo-Prog-USI",
-    "acronym": "APU",
-    "language": "English + French",
-    "coordinators": 'Beurton-Aimar M',
-    "background_color": "#0095FF",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": {
-        'program': "<ul><li>Algorithmique de base, structures itératives et prédicats.</li>"+
-                "<li>Les tableaux : parcours, recherches séquentielle et dichotomique, tris.</li>"+
-                "<li>Complexité : quelques notions à partir d'exemples</li>"+
-				"<li>Programmation : "+
-                "Mise en application des différents concepts vues en algorithmique : structures de contrôle, "+
-                "tests logiques, boucles.</li>"+
-				"<li>Traitement des accès fichiers séquentiels : lecture /écriture</li>"+
-                "<li>Bases de la modélisation orientée objet : élaboration de classes, utilisation de bibliothèques "+
-                "ou de modules prédéfinis.</li></ul>",
-        'objectives': "<ul><li>Analyser un problème donné et concevoir l'algorithme correspondant.</li>"+
-                "<li>Apprentissage de la programmation au travers de différents langages classiques ou orientés objet.</li>"+
-                "<li>Conception de modules de traitement pour les données biologiques.</li>"+
-				"</ul>",
-		'skills': "<ul><li>Convertir un problème concret en une suite d'instructions programmables.</li>"+
-                "<li>Maitrise des concepts essentiels d'un langage de programmation.</li>"+
-                "</ul>"
-      }
-    },
-    "ects": 9,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBI702U",
-    "image": "ue_algoprogusi.jpg",
-    "semester": 7,
-    "title": "Algorithmique, Programmation et Utilisation des Syst\u00e8mes Informatiques",
-    "tracks": "0x0F",
-    "visibility": "hidden",
-    "html": "FRUAI0333298FCOEN_2942/algorithmique-programmation-et-utilisation-des-systemes-informatiques"
   },
   "4TBI702U-Prog": {
     "acronym": "APU-Prog",
@@ -203,16 +174,16 @@ var course_data = {
     "short": "Omics & Bioinformatics",
     "language": "English",
     "acronym": "OBI",
-    "coordinators": 'Taveau JC, Th&eacute;bault P',
+    "coordinators": 'Karkar S.',
     "background_color": "#eef409",
     "contents": {
       "en": {
-        'program': `<p>In this course, we will explore the bioinformatician core activities ranging from the data mining using databases
-        in molecular biology to the design of bioanalysis while exploiting methods dedicated to alignment sequences or phylogen. </p>
-        <p>The Big Data era will also be introduced regarding the massive production of omics data and will be linked to algorithmics
+        'program': `<p>In this course, we will explore the bioinformatician core activities ranging from the data mining using databases 
+        in molecular biology to the design of bioanalysis while exploiting methods dedicated to sequence alignments. </p>
+        <p>The Big Data era will also be introduced regarding the massive production of omics data and will be linked to algorithmics 
         approaches dedicated to the exploitation of biological data. </p>
         <h4>References</h4>
-        <ul><li>Introduction to Bioinformatics - Arthur M. Lesk, by Arthur M. Lesk. Paperback 1st Edition (Sept 2002)
+        <ul><li>Introduction to Bioinformatics - Arthur M. Lesk, by Arthur M. Lesk. Paperback 1st Edition (Sept 2002) 
         Oxford University Press; ISBN: 0199251967</li></ul>`,
         "objectives": `<ul>
         <li>Use of classical software packages like EMBOSS (European Molecular Biology Open Software Suite) to develop new analytical pipelines.</li>
@@ -226,11 +197,11 @@ var course_data = {
       },
       "fr": {
         "program": `<p> Dans ce cours, nous explorerons les activités principales de la bioinformatique allant de l'exploration de données à l'aide de bases de données
-        en biologie moléculaire à la bioanalyse tout en exploitant des méthodes dédiées aux séquences d'alignement ou à la phylogénie. </p>
-        <P> L'ère des <em>Big Data</em> sera également présentée dans le cadre de la production massive de données omiques et sera liée aux approches algorithmiques
+        en biologie moléculaire à la bioanalyse tout en exploitant des méthodes dédiées aux séquences d'alignement. </p>
+        <P> L'ère des <em>Big Data</em> sera également présentée dans le cadre de la production massive de données omiques et sera liée aux approches algorithmiques 
         dédiées à l'exploitation des données biologiques. </p>
         <h4> Références </h4>
-        <ul> <li>Introduction to Bioinformatics - Arthur M. Lesk, by Arthur M. Lesk. Paperback 1st Edition (Sept 2002)
+        <ul> <li>Introduction to Bioinformatics - Arthur M. Lesk, by Arthur M. Lesk. Paperback 1st Edition (Sept 2002) 
         Oxford University Press; ISBN: 0199251967</li></ul> `,
         "objectives": `<ul>
         <li> Utilisation de logiciels classiques comme EMBOSS (European Molecular Biology Open Software Suite) pour développer de nouveaux pipelines analytiques. </li>
@@ -306,12 +277,12 @@ var course_data = {
     "visibility": "visible",
     "html": "FRUAI0333298FCOEN_2923/anglais"
   },
-  "4TEC701U": {
-    "apogee": "4TEC701U",
+  "4TBI705U": {
+    "apogee": "4TBI705U",
     "short": "BioStatistics",
     "language": "English (tutorials) + French (lectures).",
-    "acronym": "TDE",
-    "coordinators": 'David V',
+    "acronym": "BSTATS",
+    "coordinators": 'Nogues X',
     "background_color": "#D0A6FF",
     "contents": {
       "en": {
@@ -320,50 +291,126 @@ var course_data = {
         'skills': "Coming soon."
       },
       "fr": {
-        'program': `<h4>Statistiques Inférentielles</h4>
-            <ul>
-            <li> Comparaison d'échantillons d'une variable
-              <ul>
-                <li>Conditions d'application</li>
-                <li>Tests paramétriques et non paramétriques: Shapiro-Wilk, Fisher, Student, U.</li>
-              </ul>
-            </li>
-            <li> Comparaison d'échantillons de variables
-              <ul>
-                <li>Relier une variable qualitative à une variable qualitative</li>
-                <li>Utilisation de modèles linéaires: Régressions et Analyses de variance</li>
-              </ul>
-            </li>
-            </ul>
-            <h4>Initiation au langage R</h4>
-            <ul>
-            <li>Installation et Environnement</li>
-            <li>Import et Manipulation de Données</li>
-            <li>Edition de Graphiques</li>
-            </ul>`,
-        'objectives': `Savoir choisir, mettre en œuvre et interpréter des analyses numériques en adéquation
-        avec les objectifs et les plans d’échantillonnage/expérimentaux adoptés`,
+        'program': `<ul>
+          <li>Consolider la capacité à mettre en œuvre les outils statistiques pour la conception de plans d'expériences et l'analyse de donnée en biologie.</li>
+          <li>Approfondir l'utilisation de certaines méthodes normalement déjà connues telles que l'analyse de variance, la régression linéaire notamment par l'initiation aux analyses de variances à 2 facteurs, la régression linéaire multiple,etc.</li>
+          <li>Initier aux analyses multivariées.</li>
+          <li>Permettre la mise en œuvre de ces analyses avec le logiciel R et former à l'interprétation des résultats.</li></ul>`,
+        'objectives': `Les objectifs principaux sont:<ul> <li>(i) de pouvoir réaliser une analyse des données correctement et en routine,</li> 
+                        et <li>(ii) d'élargir le spectre des outils maîtrisés.</li></ul>`,
         'skills': "Bient&ocirc;t disponible."
+      },
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBI705U",
+    "image": "ue_biostats.jpg",
+    "semester": 7,
+    "title": "Biostatistiques",
+    "tracks": "0x0F",
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_146310/biostatistiques"
+  },
+  "4TBI706U": {
+    "apogee": "4TBI706U",
+    "short" : "Init-Python",
+    "acronym": "INITPYTHON",
+    "language": "English + French",
+    "coordinators": 'Beurton-Aimar M',
+    "background_color": "#0095FF",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        'program': "<ul><li>Apprentissage des bases d\'un langage de programmation à travers l\'exemple du langage Python</li>"+
+                "<li>Variables, Types,</li>"+
+                "<li>Conditionnelles, Boucles</li>"+
+                "<li>Fonctions</li>"+
+                "</ul>"
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBI706U",
+    "image": "ue_python.jpg",
+    "semester": 7,
+    "title": "Initiation à Python",
+    "tracks": "0x0F",
+    "visibility": "hidden",
+    "html": "test"
+  },
+  "4TBI707U": {
+    "apogee": "4TBI707U",
+    "short" : "Algo-Prog-USI",
+    "acronym": "APU",
+    "language": "English + French",
+    "coordinators": 'Beurton-Aimar M',
+    "background_color": "#0095FF",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        'program': "<ul><li>Algorithmique de base, structures itératives et prédicats.</li>"+
+                "<li>Les tableaux : parcours, recherches séquentielle et dichotomique, tris.</li>"+
+                "<li>Complexité : quelques notions à partir d'exemples</li>"+
+				"<li>Programmation : "+
+                "Mise en application des différents concepts vues en algorithmique : structures de contrôle, "+
+                "tests logiques, boucles.</li>"+
+				"<li>Traitement des accès fichiers séquentiels : lecture /écriture</li>"+
+                "<li>Bases de la modélisation orientée objet : élaboration de classes, utilisation de bibliothèques "+
+                "ou de modules prédéfinis.</li></ul>",
+        'objectives': "<ul><li>Analyser un problème donné et concevoir l'algorithme correspondant.</li>"+
+                "<li>Apprentissage de la programmation au travers de différents langages classiques ou orientés objet.</li>"+
+                "<li>Conception de modules de traitement pour les données biologiques.</li>"+
+				"</ul>",
+		'skills': "<ul><li>Convertir un problème concret en une suite d'instructions programmables.</li>"+
+                "<li>Maitrise des concepts essentiels d'un langage de programmation.</li>"+
+                "</ul>"
       }
     },
     "ects": 6,
     "icon": "fa fa-graduation-cap",
-    "id": "4TEC701U",
-    "image": "ue_biostats.jpg",
+    "id": "4TBI707U",
+    "image": "ue_algoprogusi.jpg",
     "semester": 7,
-    "title": "Traitement des donn\u00e9es environnementales",
+    "title": "Algorithmique, Programmation et Utilisation des Syst\u00e8mes Informatiques",
     "tracks": "0x0F",
-    "visibility": "visible",
-    "html": "FRUAI0333298FCOEN_3699/traitement-des-donnees-environnementales"
+    "visibility": "hidden",
+    "html": "FRUAI0333298FCOEN_2942/algorithmique-programmation-et-utilisation-des-systemes-informatiques"
   },
+
+
+/********************************
+  S E M E S T R E  8
+    #1a9850 4TBA804U
+    #006837 4TBA806U
+    #9e0142 4TBE801U
+    #d53e4f 4TBE802U
+    #f46d43 4TBE803U
+    #fdae61 4TBC801U
+    #fee08b 4TBI801U
+    #ffffbf 4TBI802U
+    #e6f598 4TBI803U
+    #abdda4 4TBI804U
+    #66c2a5 4TBI806U
+    #3288bd 4TBI809U
+    #5e4fa2
+ ********************************/
   "4TBA804U": {
+    "apogee": "4TBA804U",
     "short": "Plant Biotechnology",
     "language": "French",
     "acronym": "BBP",
-    "background_color": "#0a0a0a",
+    "background_color": "#1a9850",
     "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
     },
     "ects": 6,
     "icon": "fa fa-graduation-cap",
@@ -375,13 +422,22 @@ var course_data = {
     "visibility": "visible"
   },
   "4TBA806U": {
+    "apogee": "4TBA806U",
     "short": "Plant Genetics",
     "language": "French",
     "acronym": "Genepi",
-    "background_color": "#0a0a0a",
+    "background_color": "#de77ae",
     "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
     },
     "ects": 6,
     "icon": "fa fa-graduation-cap",
@@ -392,7 +448,390 @@ var course_data = {
     "tracks": "0x60",
     "visibility": "visible"
   },
+  "4TBE801U": {
+    "apogee": "4TBE801U",
+    "short" : "Biodiversity",
+    'language': "French",
+    "acronym": "BioDiv",
+    "background_color": "#a4ff80",
+    "contents": {
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBE801U",
+    "image": "ue_biodiversity.jpg",
+    "semester": 8,
+    "title": "Biodiversit\u00e9",
+    "tracks": "0x60",
+    "visibility": "visible"
+  },
+  "4TBE802U": {
+    "apogee": "4TBE802U",
+    "short" : "Terrestrial Ecosystems",
+    'language': "French",
+    "acronym": "EcoTerr",
+    "background_color": "#d53e4f",
+    "contents": {
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBE802U",
+    "image": "ue_terrestrial.jpg",
+    "semester": 8,
+    "title": "Gestion, conservation et restauration des \u00e9cosyst\u00e8mes terrestres",
+    "tracks": "0x60",
+    "visibility": "visible"
+  },
+  "4TBE803U": {
+    "apogee": "4TBE803U",
+    "short" : "Aquatic Environments",
+    'language': "French",
+    "acronym": "Aqua",
+    "background_color": "#f46d43",
+    "contents": {
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBE803U",
+    "image": "ue_aquatic.jpg",
+    "semester": 8,
+    "title": "Gestion des milieux aquatiques continentaux",
+    "tracks": "0x60",
+    "visibility": "visible"
+  },
+  "4TBC801U" : {
+    "apogee": "4TBC801U",
+    "short" : "Object Programming",
+    "language": "French",
+    "acronym": "POO",
+    "background_color": "#fdae61",
+    "contents": {
+      "en": {
+        "program": `See French Version`,
+        "objectives": 'Coming soon',
+        "skills": 'Coming soon'
+      },
+      "fr": {
+        "program": `
+          <ul>
+            <li>Modélisation objet:
+              <ul><li>Héritage simple.</li>
+            <li>Héritage complexe.</li>
+            <li>Classes abstraites.</li>
+          </ul>
+          </li>
+          <li>Traduction en langages C++, java.</li>
+          <li>Gestion dynamique: exceptions</li>
+          <li>Modèles de classes templates.</li>
+          </ul>`,
+        "objectives": `
+          <h4>Objectifs pédagogiques</h4>
+          <ul><li>Maîtriser les concepts de la programmation objet.</li></ul>`,
+        "skills": 'Bientôt disponible'
+      }
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBC801U",
+    "image": "ue_oop.jpg",
+    "semester": 9,
+    "title": "Programmation orientée Objet",
+    "tracks": "0x10",
+    "visibility": "visible"
+  },
+  "4TBI801U": {
+    "apogee": "4TBI801U",
+    "short": "Algo-Prog 2",
+    "language": "French",
+    "acronym": "AlgoPrg2",
+    "background_color": "#fee08b",
+    "contents": {
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBI801U",
+    "image": "ue_algoprog2.jpg",
+    "semester": 8,
+    "title": "Algorithmique et Programmation Avanc\u00e9es",
+    "tracks": "0x01",
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_3601/algorithmique-et-programmation-avancees"
+  },
+  "4TBI802U": {
+    "apogee": "4TBI802U",
+    "short": "R&D Project",
+    "language": "English or French depending of the tutor",
+    "acronym": "CPRD",
+    "background_color": "#ffffbf",
+    "contents": {
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': `<p>Ce module - réalisé sous la supervision d'un maître de stage - consiste 
+          en une réalisation informatique d'un logiciel de taille importante.</p> 
+          <p>Elle sera suivie d'un rapport écrit et d'une soutenance.</p>`,
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 9,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBI802U",
+    "image": "ue_project_s8.jpg",
+    "semester": 8,
+    "title": "Conception d'un Projet de Recherche et de D\u00e9veloppement",
+    "tracks": "0x07",
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_3594/conception-d-un-projet-de-recherche-et-de-developpement"
+  },
+  "4TBI803U": {
+    "apogee": "4TBI803U",
+    "short": "Databases",
+    "language": "French",
+    "acronym": "BDD",
+    "background_color": "#e6f598",
+    "contents": {
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBI803U",
+    "image": "ue_datacenter.jpg",
+    "semester": 8,
+    "title": "Bases de Donn\u00e9es : fondements et applications",
+    "tracks": "0x01",
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_3593/bases-de-donnees-fondements-et-applications"
+  },
+  "4TBI804U": {
+    "apogee": "4TBI804U",
+    "short": "NGS and Tools",
+    "language": "French",
+    "acronym": "NGS",
+    "background_color": "#00b7ff",
+    "contents": {
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBI804U",
+    "image": "ue_ngs.jpg",
+    "semester": 8,
+    "title": "Nouvelles G\u00e9n\u00e9rations de Sequen\u00e7age",
+    "tracks": "0x07",
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_2631/nouvelles-generations-de-sequencage"
+  },
+  "4TBC802U": {
+    "apogee": "4TBC802U",
+    "short": "Web Tech",
+    "language": "English or French depending of the teacher",
+    "acronym": "Web",
+    "background_color": "#66c2a5",
+    "contents": {
+      "en": {
+
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+
+      "fr": {
+        'program': "Comprendre et maîtriser les bases des technologies HTML, CSS et JavaScript",
+        'objectives': "",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBC802U",
+    "image": "ue_videos.jpg",
+    "semester": 8,
+    "title": "Technologies Web",
+    "tracks": "0x70",
+
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_13196/traitement-de-videos-et-modelisation-des-processus-dynamiques"
+  },
+  "4TBI810U": {
+    "apogee": "4TBI810U",
+    "short": "Blended Intensive Programme",
+    "language": "English",
+    "acronym": "BIP",
+    "background_color": "#3288bd",
+    "contents": {
+      "en": {
+
+        'program': "European Course about Artificial Intelligence in Forestry Remote Sensing",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+
+      "fr": {
+        'program': "Le cours est entièrement en anglais, voir le descriptif en anglais",
+        'objectives': "",
+        'skills': ""
+      }
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBI810U",
+    "image": "ue_bip.jpg",
+    "semester": 8,
+    "title": "Blended Intensive Programme",
+    "tracks": "0x70",
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_13196/traitement-de-videos-et-modelisation-des-processus-dynamiques"
+  },
+  "4TDE801U": {
+    "apogee": "4TDE801U",
+    "short": "OBI 2",
+    "language": "English",
+    "acronym": "OBI2",
+    "background_color": "#eef409",
+    "contents": {
+      "en": {
+        'program': "Coming soon",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Suite de l\'UE de 1er semestre avec une présentation des méthodes de phylogénie.",
+        'objectives': "",
+        'skills': ""
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TDE801U",
+    "image": "ue_obi.jpg",
+    "semester": 8,
+    "title": "Omiques et Bioinformatique 2",
+    "tracks": "0x70",
+    "visibility": "visible",
+    "html": ""
+  },
+  "4TDE802U": {
+    "apogee": "4TDE802U",
+    "short": "Python DataSci.",
+    "language": "English",
+    "acronym": "PyDS",
+    "background_color": "#D0A6FF", // "#3288bd", "#fee08b",
+    "contents": {
+      "en": {
+        'program': "Coming Soon",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Le cours est constitué de deux parties: (i) Python avancé (ii) Machine Learning",
+        'objectives': "",
+        'skills': ""
+      }
+    },
+    "ects": 6,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TDE802U",
+    "image": "ue_datascience.jpg",
+    "semester": 8,
+    "title": "Python et Science des Données",
+    "tracks": "0x70",
+    "visibility": "visible",
+    "html": ""
+  },
+  "4TBIN01U": {
+    "apogee": "4TBIN01U",
+    "acronym": "StgVol",
+    "background_color": "#009558",
+    "contents": {
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBIN01U",
+    "image": "headinfo.jpg",
+    "semester": 8,
+    "title": "Stage volontaire",
+    "tracks": "0xF0",
+    "visibility": "visible"
+  },
+
+/*************************
+   S E M E S T R E   9
+ *************************/
+
   "4TBA903U": {
+    "apogee": "4TBA903U",
     "short" : "Population Genetics",
     "language": "English",
     "acronym": "QPG",
@@ -401,13 +840,13 @@ var course_data = {
     "contents": {
       "en": {
         'program': `
-        <h4>Prerequisites</h4>
+        <h4>Prerequisites</h4> 
         <ul>
         <li>First year of Master in Biological science</li>
         <li>Basis Statistics and R, basis genetics and genomics.</li>
         </ul>
         <h4>Description</h4>
-        <p>This course is organized via in-class face-to-face, seminars, flipped classroom,
+        <p>This course is organized via in-class face-to-face, seminars, flipped classroom, 
         Data and <em>in silico</em> study, work on dataset and professional seminars. Focus will be put on dataset work.
         <br>Work on dataset will be co-coordinated with statistics and R
             teaching. The project will be conducted on a dataset integrating population
@@ -452,6 +891,7 @@ var course_data = {
     "visibility": "visible"
   },
   "4TBA904U": {
+    "apogee": "4TBA904U",
     "short" : "Plant Development",
     "acronym": "PDR",
     'language': "English",
@@ -490,61 +930,8 @@ var course_data = {
     "tracks": "0x60",
     "visibility": "visible"
   },
-  "4TBE801U": {
-    "short" : "Biodiversity",
-    'language': "French",
-    "acronym": "BioDiv",
-    "background_color": "#0a0a0a",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 6,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBE801U",
-    "image": "ue_biodiversity.jpg",
-    "semester": 8,
-    "title": "Biodiversit\u00e9",
-    "tracks": "0x60",
-    "visibility": "visible"
-  },
-  "4TBE802U": {
-    "short" : "Terrestrial Ecosystems",
-    'language': "French",
-    "acronym": "EcoTerr",
-    "background_color": "#0a0a0a",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 6,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBE802U",
-    "image": "ue_terrestrial.jpg",
-    "semester": 8,
-    "title": "Gestion, conservation et restauration des \u00e9cosyst\u00e8mes terrestres",
-    "tracks": "0x60",
-    "visibility": "visible"
-  },
-  "4TBE803U": {
-    "short" : "Aquatic Environments",
-    'language': "French",
-    "acronym": "Aqua",
-    "background_color": "#0a0a0a",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 6,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBE803U",
-    "image": "ue_aquatic.jpg",
-    "semester": 8,
-    "title": "Gestion des milieux aquatiques continentaux",
-    "tracks": "0x60",
-    "visibility": "visible"
-  },
   "4TBE901U": {
+    "apogee": "4TBE901U",
     "short" : "BioStatistics 2",
     "language": "French",
     "acronym": "TDE++",
@@ -557,7 +944,7 @@ var course_data = {
       },
       "fr": {
         "program": `
-          Cette UE abordera sous forme de cours, TD machines diverses types de statistiques avancées comme
+          Cette UE abordera sous forme de cours, TD machines diverses types de statistiques avancées comme 
           la classification et les méthodes de <em>clustering</em>.<br>
           Les notions abordées &mdash; entre autres &mdash; sont:
           <ul>
@@ -584,6 +971,7 @@ var course_data = {
     "visibility": "visible"
   },
   "4TBE902U": {
+    "apogee": "4TBE902U",
     "short": "Evolutionary Ecology",
     "language": "French",
     "acronym": "EvoComm",
@@ -623,187 +1011,8 @@ var course_data = {
     "tracks": "0x60",
     "visibility": "visible"
   },
-  "4TBI001U": {
-    "acronym": "Stage",
-    "short":  "Stage",
-    "language": "French or English",
-    "background_color": "#7FD8BC",
-    "contents": {
-      "en": {
-        'program': "See french version",
-        'objectives': "Coming soon.",
-        'skills': "Coming soon."
-      },
-      "fr": {
-        "program": `
-             <ul><li>Stage en laboratoire de recherche ou en entreprise d'une durée de 5 à 6 mois.</li>
-            <li>Il repose sur un projet scientifique préalablement rédigé et soumis aux responsables de la spécialité.</li>
-            <li>Ce stage peut avoir lieu en France ou à l'étranger.
-            <ul><li><b>Parcours recherche</b>: Sujet de stage proposé par le Maître de Stage après validation par la commission pédagogique
-            de Master et choisi par l’étudiant en accord avec le responsable du stage.</li>
-            <li><b>Parcours professionnel</b>: Sujet de stage défini par le Maître de Stage et l’étudiant en accord avec le responsable pédagogique.</li></ul>
-            </li></ul></li></ul>`,
-         "objectives": `
-            <ul><li>Mise en situation dans un environnement professionnel pour la réalisation d'un projet de recherche
-            et/ou développement</li>
-            <li>Application des notions fondamentales de gestion d'un projet de recherche et/ou développement:
-                <ul><li>Préparation</li>
-                <li>Réalisation</li>
-                <li>Analyse critique des résultats</li>
-                <li>Synthèse et Présentation des résultats</li>
-                <li>Applications de \"bonnes pratiques\" et de la \"démarche qualité\".</li>
-                </ul>
-            </li></ul>`,
-         "skills": `
-            <ul><li>Compétence dans la gestion d'un projet de recherche et/ou développement.</li>
-            <li>Acquérir l'autonomie nécessaire pour mener un projet de recherche et/ou de développement</li>
-            <li>Acquérir la notion de travail en équipe projet.</li>
-            <li>Compétences , à analyser et critiquer les résultats, à synthétiser des résultats, à présenter à l'écrit
-            et à l'oral un projet et les résultats obtenus dans le cadre de ce projet.</li>
-            <li>Maîtrise de l’anglais pour les étudiants qui partent à l’étranger.</li>
-            </ul>`
-        }
-    },
-    "ects": 30,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBI001U",
-    "image": "ue_stagem2.jpg",
-    "semester": 10,
-    "title": "Stage Recherche , Pro ou R&D",
-    "tracks": "0x0F",
-    "visibility": "visible"
-  },
-  "4TBC801U" : {
-    "short" : "Object Programming",
-    "language": "French",
-    "acronym": "POO",
-    "background_color": "#EEF409",
-    "contents": {
-      "en": {
-        "program": `See French Version`,
-        "objectives": 'Coming soon',
-        "skills": 'Coming soon'
-      },
-      "fr": {
-        "program": `
-          <ul>
-            <li>Modélisation objet:
-              <ul><li>Héritage simple.</li>
-            <li>Héritage complexe.</li>
-            <li>Classes abstraites.</li>
-          </ul>
-          </li>
-          <li>Traduction en langages C++, java.</li>
-          <li>Gestion dynamique: exceptions</li>
-          <li>Modèles de classes templates.</li>
-          </ul>`,
-        "objectives": `
-          <h4>Objectifs pédagogiques</h4>
-          <ul><li>Maîtriser les concepts de la programmation objet.</li></ul>`,
-        "skills": 'Bientôt disponible'
-      }
-    },
-    "ects": 6,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBC801U",
-    "image": "ue_oop.jpg",
-    "semester": 9,
-    "title": "Programmation orientée Objet",
-    "tracks": "0x10",
-    "visibility": "visible"
-  },
-  "4TBI801U": {
-    "apogee": "4TBI801U",
-    "short": "Algo-Prog 2",
-    "language": "French",
-    "acronym": "AlgoPrg2",
-    "background_color": "#0a0a0a",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 6,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBI801U",
-    "image": "ue_algoprog2.jpg",
-    "semester": 8,
-    "title": "Algorithmique et Programmation Avanc\u00e9es",
-    "tracks": "0x01",
-    "visibility": "visible"
-  },
-  "4TBI802U": {
-    "short": "R&D Project",
-    "language": "English or French depending of the tutor",
-    "acronym": "CPRD",
-    "background_color": "#0a0a0a",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 9,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBI802U",
-    "image": "ue_project_s8.jpg",
-    "semester": 8,
-    "title": "Conception d'un Projet de Recherche et de D\u00e9veloppement",
-    "tracks": "0x07",
-    "visibility": "visible"
-  },
-  "4TBI803U": {
-    "short": "Databases",
-    "language": "French",
-    "acronym": "BDD",
-    "background_color": "#0a0a0a",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 6,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBI803U",
-    "image": "ue_datacenter.jpg",
-    "semester": 8,
-    "title": "Bases de Donn\u00e9es : fondements et applications",
-    "tracks": "0x07",
-    "visibility": "visible"
-  },
-  "4TBI804U": {
-    "short": "NGS and Tools",
-    "language": "French",
-    "acronym": "NGS",
-    "background_color": "#0a0a0a",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 3,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBI804U",
-    "image": "ue_ngs.jpg",
-    "semester": 8,
-    "title": "Nouvelles G\u00e9n\u00e9rations de Sequen\u00e7age",
-    "tracks": "0x07",
-    "visibility": "visible"
-  },
-  "4TBI805U": {
-    "short": "Video & Dynamic Process",
-    "language": "English or French depending of the teacher",
-    "acronym": "ViMod",
-    "background_color": "#0a0a0a",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 6,
-    "icon": "fa fa-graduation-cap",
-    "id": "4TBI805U",
-    "image": "ue_videos.jpg",
-    "semester": 8,
-    "title": "Traitement de Vid\u00e9os et Mod\u00e9lisation des Processus Dynamiques",
-    "tracks": "0x70",
-    "visibility": "visible"
-  },
   "4TBC901U" : {
+    "apogee": "4TBC901U",
     "short" : "Object Programming 2",
     "language": "French",
     "acronym": "POO++",
@@ -840,9 +1049,11 @@ var course_data = {
     "semester": 9,
     "title": "Approche Objet",
     "tracks": "0x10",
-    "visibility": "visible"
+    "visibility": "visible",
+    "html": "PRMA_68/informatique/enseignement/FRUAI0333298FCOEN_2464/approche-objet"
   },
   "4TBI901U": {
+    "apogee": "4TBI901U",
     "short": "Structural Bioinformatics",
     "language": "French or English depending of the audience",
     "acronym": "StrubiGL",
@@ -853,13 +1064,13 @@ var course_data = {
         <h4>Prerequisites</h4>
         <ul><li>Knowledge of main algorithms used in bioinformatics (e.g. 2D exact alignments: Needleman & Wunsch, Smith & Waterman).</li>
         <li>Programming skill in JavaScript programming language is highly recommended.</li></ul>
-        <h4>Protein Structure</h4>
+        <h4>Protein Structure</h4> 
         <ul>
         <li>Exploring the PDB file format.</li>
         <li>Secondary Structures: DSSP.</li>
-        <li>3D Alignments</li>
+        <li>3D Alignments</li> 
         </ul>
-        <h4>Visualization: WebGL 2.x</h4>
+        <h4>Visualization: WebGL 2.x</h4> 
         <ul>
         <li>Principles of hardware-accelerated 2D and 3D graphics</li>
         <li>WebGL: Graphics primitives, texture, shaders &mdash; vector and fragment &mdash; , GLSL, </li>
@@ -880,16 +1091,26 @@ var course_data = {
     "semester": 9,
     "title": "Bioinformatique Structurale",
     "tracks": "0x61",
-    "visibility": "visible"
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_5228/bioinformatique-structurale"
   },
   "4TBI902U": {
+    "apogee": "4TBI902U",
     "short": "Bioinformatics Sector",
     "language": "French",
     "acronym": "FILBI",
     "background_color": "#A4FF80",
     "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
     },
     "ects": 3,
     "icon": "fa fa-graduation-cap",
@@ -898,16 +1119,26 @@ var course_data = {
     "semester": 9,
     "title": "Fili\u00e8res de la Bioinformatique",
     "tracks": "0x0F",
-    "visibility": "visible"
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_5226/filieres-de-la-bioinformatique"
   },
   "4TBI903U": {
+    "apogee": "4TBI903U",
     "short": "Software Engineering",
     "language": "French",
     "acronym": "GLog",
     "background_color": "#009558",
     "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
     },
     "ects": 6,
     "icon": "fa fa-graduation-cap",
@@ -916,16 +1147,26 @@ var course_data = {
     "semester": 9,
     "title": "G\u00e9nie Logiciel et Gestion de Projet",
     "tracks": "0x61",
-    "visibility": "visible"
+    "visibility": "visible",
+    "html": "FRUAI0333298FCOEN_5219/genie-logiciel-et-gestion-de-projet"
   },
   "4TBI904U": {
+    "apogee": "4TBI904U",
     "short": "Data Science",
     "language": "French",
     "acronym": "DEA",
     "background_color": "#ffbc00",
     "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
     },
     "ects": 6,
     "icon": "fa fa-graduation-cap",
@@ -934,16 +1175,26 @@ var course_data = {
     "semester": 9,
     "title": "Donn\u00e9es: De l'Entrep\u00f4t \u00e0 l'Analyse",
     "tracks": "0x07",
-    "visibility": "visible"
+    "visibility": "visible",
+    "html":"FRUAI0333298FCOEN_3607/donnees-de-l-entrepot-a-l-analyse"
   },
   "4TBI905U": {
+    "apogee": "4TBI905U",
     "short": "Research & Dev",
     "language": "French",
     "acronym": "IRD",
     "background_color": "#cef6ce",
     "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
     },
     "ects": 3,
     "icon": "fa fa-graduation-cap",
@@ -955,13 +1206,22 @@ var course_data = {
     "visibility": "visible"
   },
   "4TBI906U": {
+    "apogee": "4TBI906U",
     "short" : "Modeling Cell",
     "language": "French",
     "acronym": "MOCELL",
     "background_color": "#EEF409",
     "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Bient&ocirc;t disponible.",
+        'objectives': "Bient&ocirc;t disponible.",
+        'skills': "Bient&ocirc;t disponible."
+      }
     },
     "ects": 6,
     "icon": "fa fa-graduation-cap",
@@ -972,55 +1232,44 @@ var course_data = {
     "tracks": "0x70",
     "visibility": "visible"
   },
-  "4TBIN01U": {
-    "acronym": "StgVol",
-    "background_color": "#0a0a0a",
+  "4TBI907U": {
+    "apogee": "4TBI907U",
+    "short" : "Données et IA",
+    "language": "French",
+    "acronym": "IA",
+    "background_color": "#807dba",
     "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
+      "en": {
+        'program': "See French Version. English version coming soon.",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        'program': "Cette UE est enseignée dans le cadre du master informatique 2ème année MIAGE",
+        'objectives': `Ce cours a pour objectif l'acquisition des aspects suivants:
+          - Régression linéaire simple et multiple : approche empirique et probabiliste.
+          - Analyse en composantes principales.
+          - Classification hiérarchique ascendante et regroupement par la méthode des centres mobiles.
+          - Analyse de variance et mise en place de groupes homogènes éventuels.
+          - Etude de liaison entre deux variables qualitatives : test du chi deux d'indépendance.
+          - Analyse factorielle des correspondances.`,
+        'skills': `- Maîtriser l'expression écrite et orale de la langue française et ses techniques d'expression
+          - Etre en capacité de stocker, gérer, extraire et indexer de l'information
+          - Mise en lien des connaissances pour la prise de décisions d'ordre technique, stratégique, commercial et financière`
+      }
     },
-    "ects": 3,
+    "ects": 6,
     "icon": "fa fa-graduation-cap",
-    "id": "4TBIN01U",
-    "image": "headinfo.jpg",
-    "semester": 8,
-    "title": "Stage volontaire",
-    "tracks": "0xF0",
-    "visibility": "visible"
-  },
-  "4TBIPRSS": {
-    "acronym": "Press",
-    "background_color": "#FA5858",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 0,
-    "icon": "fa fa-newspaper-o",
-    "id": "4TBIPRSS",
-    "image": "headpress.jpg",
-    "semester": 11,
-    "title": "Press Highlights",
-    "tracks": "0x07",
-    "visibility": "visible"
-  },
-  "4TBIVACA": {
-    "acronym": "Holidays",
-    "background_color": "#FA5858",
-    "contents": {
-      "en": "Coming soon.",
-      "fr": "Bient&ocirc;t disponible."
-    },
-    "ects": 0,
-    "icon": "fa fa-bicycle",
-    "id": "4TBIVACA",
-    "image": "headholidays.jpg",
-    "semester": 11,
-    "title": "Holidays",
-    "tracks": "0x0F",
-    "visibility": "visible"
+    "id": "4TBI907U",
+    "image": "ue_mocell.jpg",
+    "semester": 9,
+    "title": "Données et Intelligence Artificielle",
+    "tracks": "0x70",
+    "visibility": "visible",
+    "html":"PRMA_64/methodes-informatiques-appliquees-a-la-gestion-des-entreprises-miage/enseignement/FRUAI0333298FCOEN_6621/donnees-et-intelligence-artificielle"
   },
   "4TDE901U": {
+    "apogee": "4TDE901U",
     "short": "GIS: Geo. Info. Systems",
     "language": "French",
     "acronym": "SIG",
@@ -1047,7 +1296,7 @@ var course_data = {
 <p><a href="http://www.geocean.net/wikisig/doku.php?id=master:start">Plus de détails...</a></p>
 <p>La deuxième semaine est constituée par la réalisation d'un projet SIG. Pour les étudiants de l'Ecole doctorale et des Masters recherche ces sujets porteront obligatoirement sur leurs sujets de thèse ou sur leurs stages de Master 2. Pour les étudiants du master pro les sujets seront choisis en fonctions de leurs stages en entreprise ou de leurs projets professionnels.</p>`,
               "objectives": `Au terme de cette formation vous serez en mesure de gérer un projet cartographique depuis <ul><li>l'acquisition des données sur le terrain,</li> <li>la prise en compte des informations géodésiques,</li> <li>le traitement des données via un Système d'Information Géographique (QGIS, ArcGIS), </li><li>le couplage à d'autres informations (photos aériennes, images satellites…) et </li><li>la réalisation de documents cartographiques publiables.</li></ul>`,
-              "skills": `Contenu des UEs d'origine <a href="http://www.u-bordeaux.fr/formation/2016/PRMA_25/sciences-de-la-mer/enseignement/FRUAI0333298FCOEN_4820/systemes-d-information-geographique-1"><i class="fa fa-university fa-2x"></i></a> et <a href="http://www.u-bordeaux.fr/formation/2016/PRMA_25/sciences-de-la-mer/enseignement/FRUAI0333298FCOEN_4823/systemes-d-information-geographique-2"><i class="fa fa-university fa-2x"></i></a>`
+              "skills": `Contenu des UEs d'origine <a href="http://www.u-bordeaux.fr/formation/2020/PRMA_25/sciences-de-la-mer/enseignement/FRUAI0333298FCOEN_4820/systemes-d-information-geographique-1"><i class="fa fa-university fa-2x"></i></a> et <a href="http://www.u-bordeaux.fr/formation/2020/PRMA_25/sciences-de-la-mer/enseignement/FRUAI0333298FCOEN_4823/systemes-d-information-geographique-2"><i class="fa fa-university fa-2x"></i></a>`
       }
     },
     "ects": 6,
@@ -1080,11 +1329,62 @@ var course_data = {
     "tracks": "0x60",
     "visibility": "visible"
   },
-    "BILBAO_001": {
+  "4TBI001U": {
+    "apogee": "4TBI001U",
+    "acronym": "Stage",
+    "short":  "Stage",
+    "language": "French or English",
+    "background_color": "#7FD8BC",
+    "contents": {
+      "en": {
+        'program': "See french version",
+        'objectives': "Coming soon.",
+        'skills': "Coming soon."
+      },
+      "fr": {
+        "program": `
+             <ul><li>Stage en laboratoire de recherche ou en entreprise d'une durée de 5 à 6 mois.</li>
+            <li>Il repose sur un projet scientifique préalablement rédigé et soumis aux responsables de la spécialité.</li>
+            <li>Ce stage peut avoir lieu en France ou à l'étranger.
+            <ul><li><b>Parcours recherche</b>: Sujet de stage proposé par le Maître de Stage après validation par la commission pédagogique 
+            de Master et choisi par l’étudiant en accord avec le responsable du stage.</li>
+            <li><b>Parcours professionnel</b>: Sujet de stage défini par le Maître de Stage et l’étudiant en accord avec le responsable pédagogique.</li></ul>
+            </li></ul></li></ul>`,
+         "objectives": `
+            <ul><li>Mise en situation dans un environnement professionnel pour la réalisation d'un projet de recherche 
+            et/ou développement</li>
+            <li>Application des notions fondamentales de gestion d'un projet de recherche et/ou développement:
+                <ul><li>Préparation</li>
+                <li>Réalisation</li>
+                <li>Analyse critique des résultats</li>
+                <li>Synthèse et Présentation des résultats</li>
+                <li>Applications de \"bonnes pratiques\" et de la \"démarche qualité\".</li>
+                </ul>
+            </li></ul>`,
+         "skills": `
+            <ul><li>Compétence dans la gestion d'un projet de recherche et/ou développement.</li>
+            <li>Acquérir l'autonomie nécessaire pour mener un projet de recherche et/ou de développement</li>
+            <li>Acquérir la notion de travail en équipe projet.</li>
+            <li>Compétences , à analyser et critiquer les résultats, à synthétiser des résultats, à présenter à l'écrit 
+            et à l'oral un projet et les résultats obtenus dans le cadre de ce projet.</li>
+            <li>Maîtrise de l’anglais pour les étudiants qui partent à l’étranger.</li>
+            </ul>`
+        }
+    },
+    "ects": 30,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBI001U",
+    "image": "ue_stagem2.jpg",
+    "semester": 10,
+    "title": "Stage Recherche , Pro ou R&D",
+    "tracks": "0x0F",
+    "visibility": "visible"
+  },
+  "BILBAO_001": {
     "short": "NGS & Methods",
     "language": "English",
     "acronym": "NGS",
-    "background_color": "#D0A6FF",
+    "background_color": "#00b7ff", /*#D0A6FF", */
     "contents": {
       "en": {
         "program": `
@@ -1146,7 +1446,7 @@ var course_data = {
     "tracks": "0x0F",
     "visibility": "visible"
   },
-    "BILBAO_003": {
+  "BILBAO_003": {
     "apogee": "None",
     "short": "Population Genomics",
     "language": "English",
@@ -1197,1151 +1497,64 @@ var course_data = {
     "title": "Internship",
     "tracks": "0x0F",
     "visibility": "visible"
+  },
+  "4TBIPRSS": {
+    "acronym": "Press",
+    "background_color": "#FA5858",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": "Bient&ocirc;t disponible."
+    },
+    "ects": 0,
+    "icon": "fa fa-newspaper-o",
+    "id": "4TBIPRSS",
+    "image": "headpress.jpg",
+    "semester": 11,
+    "title": "Press Highlights",
+    "tracks": "0x07",
+    "visibility": "visible"
+  },
+  "4TBIVACA": {
+    "acronym": "Holidays",
+
+    "background_color": "#FA5858",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": "Bient&ocirc;t disponible."
+    },
+    "ects": 0,
+    "icon": "fa fa-bicycle",
+
+    "id": "4TBIVACA",
+    "image": "headholidays.jpg",
+    "semester": 11,
+    "title": "Holidays",
+
+    "tracks": "0x0F",
+    "visibility": "visible"
+  },
+  "4TBIALTR": {
+    "acronym": "Alternance",
+
+    "background_color": "#FA5858",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": "Semaine d'alternance en entreprise"
+    },
+    "ects": 0,
+    "icon": "fa fa-bicycle",
+
+    "id": "4TBIALTR",
+    "image": "ue_internship.jpg",
+    "semester": 11,
+    "title": "Alternance",
+
+    "tracks": "0x0F",
+    "visibility": "visible"
   }
 };
 
-
-/**********************************************
- *
- * 2011 - 2015
- *
- **********************************************/
-
-var course_data_2015 = {
-
-
-    'CONFERENCE' : {
-        'acronym'           : "Conf",
-        'title'             : "Conference",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : '#FA5858',
-        'icon'              : 'fa fa-comments',
-        'image'             : 'headconf.jpg'
-
-    },
-    'HOLIDAYS' : {
-        'acronym'   : "Holidays",
-        'title'     : "Jours Fériés, Vacances | Bank Holidays, Holidays",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : '#FA5858',
-        'icon'              : 'fa fa-bicycle',
-        'image'             : 'headholidays.jpg'
-
-    },
-    'PRESS' : {
-        'acronym'   : "Press",
-        'title'             : "Press Highlights",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : '#FA5858',
-        'icon'              : 'fa fa-newspaper-o',
-        'image'             : 'headpress.jpg'
-
-
-    },
-
-/**********************************************
-Semester 7:
-Anglais	                                                3   30h
-Projet tutoré : réalisation logicielle	                3   27h
-Approches expérimentales en biologie	                6	26h 28h
-Biomodélisation et simulation de processus biologiques	9	27h
-Algorithmique et Programmation                          9	27h
-**********************************************/
-
-    'B1BS7M06' : {
-        'id'        : "B1BS7M06",
-        'acronym'   : "Anglais",
-        'ects'      : 3,
-        'semester'  : 7, // semester 7 and 8 = M1, 9 and 10 = M2
-        'students'  : 'C++BIO[required],GENORG[required],ORGECO[required],BSC[elective]',
-        "block"     : {
-            "c++bio": "Fondements de la Bioinformatique",
-            "geneco": "Fondements de la Bioinformatique",
-            "bao"   : "Fundamentals of Bioinformatics"
-        },
-        "tracks"    : "0x7",
-        'visibility': 'visible', // <visible|hidden>
-        'title'     : "Anglais",
-        'contents'  : {
-            'fr':
-                "<ul>"+
-                "<li>Construire une communication scientifique orale en anglais à partir de l’analyse de documents "+
-                "de divers genres scientifiques et répondre en anglais aux questions sur ce travail.</li>"+
-                "<li>Prendre la parole et interagir dans des situations diverses.</li>"+
-                "<li>Renforcer la compréhension écrite et orale.</li>"+
-                "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Objectifs pédagogiques</h3>"+
-                "<ul>"+
-                "<li>développer les compétences de communication scientifique pertinentes aux contextes "+
-                "professionnels de la recherche. Renforcer les quatre compétences langagières (compréhension "+
-                "et production de l’anglais, orale et écrite).</li></ul>"+
-                "<h3>Compétences acquises</span></h3>"+
-                "<ul><li>Compétences langagières en anglais : à partir et en fonction du niveau initial vers "+
-                "le niveau B2 et au delà selon les critères du Cadre Européen Commun de Référence.</li>"+
-                "<li>Techniques de compréhension de l’anglais scientifique</li>"+
-                "<liCommunication scientifique orale et écrite en anglais.</li>"+
-                "</ul>",
-            'en':
-                "",
-        },
-        'html'      : "ENB1BS7M06_01/anglais",
-    },
-
-    'F1BS7201' : {
-    	"id": "F1BS7201",
-        "acronym"   : "GLog",
-        "title"     : "Projet tutoré: réalisation logicielle",
-        "ects"      : 3,
-        "semester"  : 7,
-        "students"  : 'C++BIO[required],GENORG[required],ORGECO[required],BSC[elective]',
-        "block"     : {
-            "c++bio": "Fondements de la Bioinformatique",
-            "geneco": "Fondements de la Bioinformatique",
-            "bao"   : "Fundamentals of Bioinformatics"
-        },
-        "tracks"    : "0x7",
-        "visibility": 'visible', // <visible|hidden>
-        "contents": {
-            'fr':
-                "<ul><li>Mise à niveau notions et principes de base."+
-                "<ul>"+
-                "<li>Le système d'exploitation."+
-                "</li>"+
-				"<li>Les interpréteurs de commandes.</li>"+
-                "</ul>"+
-                "</li>"+
-				"<li>Réseau et archivage</li>"+
-				"<li>la veille "+
-                "scientifique: utilisation de mots-clefs, méta-analyse des banques de données d’informations et "+
-                "des brevets.</li>"+
-				"<li>élaboration d'un projet scientifique: de l'idée à la formalisation du projet.</li>"+
-                "</ul>",
-            'en': ""
-        },
-        'html'      : "ENF1BS7201_01/projet-tutore-realisation-logicielle",
-    },
-
-
-    'F6BS7M02' : {
-        'id'        : "F6BS7M02", // F6BS7M02 ou KM1BS10U
-        'acronym'   : "AEB",
-        'ects'      : 6,
-        'semester'  : 7, // semester 7 and 8 = M1  9 and 10 = M2
-        'students'  : 'C++BIO[required],GENORG[required],ORGECO[required],BSC[elective]',
-        "block"     : {
-            "c++bio": "Fondements de la Bioinformatique",
-            "geneco": "Fondements de la Bioinformatique",
-            "bao"   : "Fundamentals of Bioinformatics"
-        },
-        "tracks"    : "0x7",
-        'visibility': 'hidden', // <visible|hidden>
-        'background_color': '#eef409',
-        'title'     : "Approches Expérimentales en Biologie",
-        'contents'  : {
-            'fr':
-                "<h2>Programme</h2>"+
-                "<h3>Les Omics (30 h)</h3>"+
-                "<ul>"+
-                "<li>Génome: Approche de sequençage haut débit et exploitation des données</li>"+
-                "<li>Transcriptome: Étude des transcriptomes : les différentes technologies d’exploration "+
-                "(méthode SAGE, Puces à ADN) et les méthodes d’analyse des données.</li>"+
-                "<li>Protéome: Étude des protéomes: séparation (chromatographie, électrophorèse monodimensionnelle, "+
-                "bidimensionnelle, Blue Native SDS-PAGE) et identification des protéines (séquençage d’Edman, "+
-                "spectrométrie de masse, puces protéines).</li>"+
-                "<li>Métabolome: Etude du métabolome en 6 points : design expérimental, méthodes d’extractions, "+
-                "variétés et complémentarité des méthodes analytiques, traitement des données, outils de visualisation "+
-                "pour l’exploitation des données, intégration des données.</li>"+
-                "</ul>"+
-                "<h3>Statistiques pour la biologie (14 h)</h3>"+
-                "<ul>"+
-                "<li>Evaluation des connaissances pré-requises: maîtrise du langage statistique (fréquence, "+
-                "effectif, variable, diagramme de dispersion…), les méthodes univariées (tests d’hypothèse paramétriques), "+
-                "la construction et la gestion de grands tableaux de données.</li>"+
-                "<li>Analyse multidimensionnelle des données: régression linéaire, analyse de variance, analyse des "+
-                "variables quantitatives en composantes principales (ACP), la classification.</li>"+
-                "<li>La formation est faite en reprenant les notions de théorie indispensable à la compréhension et en "+
-                "s’appuyant sur des exemples pédagogiques réels. Les deux tiers des enseignements seront réalisés sous "+
-                "forme de travaux dirigés et pratiques dans une salle équipée du logiciel libre R et autres logiciels "+
-                "accessibles en ligne.</li>"+
-                "</ul>"+
-                "<h3>Exploitation des bases de données (16 h)</h3>"+
-                "<ul>"+
-                "<li>Contenu des bases de données en biologie. Méthodes bioinformatiques.</li>"+
-                "<li>Comparaison et analyse des séquences biologiques.</li>"+
-                "<li>Prédictions de structure et de fonction (y compris structure 3D).</li>"+
-                "</ul>",
-            'en':
-                "<h2>Omics (30 h)</h2>"+
-                "<ul>"+
-                "<li>Genomics: High throughput sequencing and data analysis.</li>"+
-                "<li>Transcriptomics</li>"+
-                "<li>Proteomics</li>"+
-                "<li>Metabolomics</li>"+
-                "</ul>"+
-                "<h2>Statistics in biology (14 h)</h2>"+
-                "<ul>li>Evaluation des connaissances pré-requises: maîtrise du langage statistique (fréquence, "+
-                "effectif, variable, diagramme de dispersion…), les méthodes univariées (tests d’hypothèse paramétriques), "+
-                "la construction et la gestion de grands tableaux de données.</li>"+
-                "<li>Multidimensional analysis  of data: linear regression, variance analysis, analysis des "+
-                "variables quantitatives en principal components (PCA), classification.</li>"+
-                "<li>La formation est faite en reprenant les notions de théorie indispensable à la compréhension et en "+
-                "s’appuyant sur des exemples pédagogiques réels. Les deux tiers des enseignements seront réalisés sous "+
-                "forme de travaux dirigés et pratiques dans une classroom equipped du logiciel libre R et other softwares "+
-                "available on-line.</li></ul>"+
-                "<h2>Exploitation of databases (16 h)</h2>"+
-                "<ul><li>Contenu des bases de données en biologie. Méthodes bioinformatiques.</li>"+
-                "<li>Comparaison et analyse des séquences biologiques.</li>"+
-                "<li>Prédictions de structure et de fonction (y compris structure 3D).</li></ul>",
-        },
-        'html'      : "ENF6BS7M02_01/approches-experimentales-en-biologie",
-    },
-    'F6BS7M02-Omics' : {
-        'id'                : "F6BS7M02-Omics",
-        'acronym'           : "AEB-Omics",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : '#eef409',
-        'color'             : "#fff",
-        'link'              : "F6BS7M02"
-    },
-    'F6BS7M02-Stats' : {
-        'id'                : "F6BS7M02-Stats",
-        'acronym'           : "AEB-Stats",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : '#eef409',
-        'color'             : "#fff",
-        'link'              : "F6BS7M02"
-    },
-    'F6BS7M02-Info' : {
-        'id'                : "F6BS7M02-Info",
-        'acronym'           : "AEB-Info",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : '#eef409',
-        'color'             : "#fff",
-        'link'              : "F6BS7M02"
-    },
-
-    'J1BS7M01' : {
-        'id'        : "J1BS7M01",
-        'acronym'   : "BioMod",
-        'ects'      : 9,
-        'semester'  : 7, // semester 7 and 8 = M1 			"<li>9 and 10 = M2
-        'students'  : 'C++BIO[required],GENORG[required],ORGECO[required],BSC[elective]',
-        "block"     : {
-            "c++bio": "Fondements de la Bioinformatique",
-            "geneco": "Fondements de la Bioinformatique",
-            "bao"   : "Fundamentals of Bioinformatics"
-        },
-        "tracks"    : "0x7",
-        'visibility': 'hidden', // <visible|hidden>
-        'title'     : "Biomodélisation, simulation de processus biologiques",
-        'contents'  : {
-            'fr': "<h2>Programme</h2>"+
-                "<h3>Statistiques</h3>"+
-                "<ul>"+
-			    "<li>Mise en œuvre d'une analyse statistique – utilisation d’un logiciel tel que R et élaboration de programme.</li>"+
-			    "<li>Analyse descriptive : analyse des fréquences, des moyennes, analyse de "+
-			    "variance, régression linéaire et corrélations, tests non paramétriques, analyse multi-variée.</li>"+
-                "</ul>"+
-			    "<h3>Programmation</h3>"+
-                "<ul>"+
-			    "<li>Développement de programmes en langage Python.</li></ul>"+
-                "<h3>Imagerie</h3>"+
-                "<ul><li>Partie théorique</li>"+
-        			"<ul>"+
-        			"<li>Image numérique. Formats d'images. Espaces de couleurs.</li>"+
-        			"<li>Amélioration d'images et de traitements (filtrations en espace réel, en espace fréquentiel).</li>"+
-        			"<li>Analyse des images: Mesures, Reconnaissance de formes.</li>"+
-        			"<li>Notion de programmation en vue de l'automatisation de tâches pour le traitement et l'analyse de vidéos.</li>"+
-        			"</ul>"+
-                "<li>Partie pratique"+
-                    "<ul>"+
-        			"<li>Application à des images de microscopie optique et électronique et des vidéos.</li>"+
-			        "<li>Utilisation d'ImageJ, installation de greffons (plugins).</li>"+
-			        "<li>Programmation de Macros/Scripts.</li></ul>"+
-			     "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<span style=\"font-weight: bold;\">Objectifs pédagogiques</span>"+
-                "<ul><li>Donner les éléments nécessaires pour l'analyse et le traitement de données biologiques dans les domaines de:</li>"+
-			        "<ul>"+
-			            "<li>biostatistiques</li>"+
-			            "<li>réalisation de programme de traitement de données.</li>"+
-			            "<li>traitement et analyse d'images scientifiques.</li>"+
-			        "</ul>"+
-			     "</ul>"+
-                "<span style=\"font-weight: bold;\">Compétences acquises</span>"+
-			    "<ul><li>Modélisation: Elaborer un modèle pour les données biologiques et sa mise en oeuvre informatique.</li>"+
-			    "<li>Programmation: Maitrise du langage Python.</li>"+
-			    "<li>Imagerie: Appréhender les divers moyens d'amélioration des images scientifiques dans les "+
-			    "domaines des microscopies (optique et électronique) en vue de leur analyse.</li>"+
-                "<li>Imagerie: Savoir utiliser une librairie de traitement d'images.</li>"+
-                "</ul>",
-            'en': ""
-        },
-        'html'      : "ENJ1BS7M01_01/biomodelisation-et-simulation-de-processus-biologiques",
-
-    },
-     'J1BS7M01-Prog' : {
-        'id'                : "J1BS7M01-Prog",
-        'acronym'           : "BioMod-Prog",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : "#0a0a0a",
-        'color'             : "#fff",
-        'link'              : "J1BS7M01"
-    },
-    'J1BS7M01-Imag' : {
-        'id'                : "J1BS7M01-Imag",
-        'acronym'           : "BioMod-Imag",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : "#0a0a0a",
-        'color'             : "#fff",
-        'link'              : "J1BS7M01"
-    },
-    'J1BS7M01-Stats' : {
-        'id'                : "J1BS7M01-Stats",
-        'acronym'           : "BioMod-Stats",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : "#0a0a0a",
-        'color'             : "#fff",
-        'link'              : "J1BS7M01"
-    },
-
-    "J1BS7202" : {
-        "id": "J1BS7202",
-        "acronym": "AlgoProg",
-        "title": "Algorithmique et Programmation",
-        "ects": 9,
-        "semester": 7,
-        'students'  : 'C++BIO[required],GENORG[required],ORGECO[required],BSC[required]',
-        "block"     : {
-            "c++bio": "Fondements de la Bioinformatique",
-            "geneco": "Fondements de la Bioinformatique",
-            "bao"   : "Fundamentals of Bioinformatics"
-        },
-        "tracks"    : "0x7",
-        'visibility': 'visible', // <visible|hidden>
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Algorithmique de base, structures itératives et prédicats.</li>"+
-                "<li>Les tableaux : parcours, recherches séquentielle et dichotomique, tris.</li>"+
-                "<li>Complexité : quelques notions à partir d'exemples</li>"+
-				"<li>Programmation : "+
-                "Mise en application des différents concepts vues en algorithmique : structures de contrôle, "+
-                "tests logiques, boucles.</li>"+
-				"<li>Traitement des accès fichiers séquentiels : lecture /écriture</li>"+
-                "<li>Bases de la modélisation orientée objet : élaboration de classes, utilisation de bibliothèques "+
-                "ou de modules prédéfinis.</li></ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<ul><li>"+
-                "<h3>Objectifs pédagogiques</h3></li>"+
-                "<li>Analyser un problème donné et concevoir l'algorithme correspondant.</li>"+
-                "<li>Apprentissage de la programmation au travers de différents langages classiques ou orientés objet.</li>"+
-                "<li>Conception de modules de traitement pour les données biologiques.</li>"+
-				"<li>"+
-                "<h3>Compétences acquises</h3></li>"+
-                "<li>Convertir un problème concret en une suite d'instructions programmables.</li>"+
-                "<li>Maitrise des concepts essentiels d'un langage de programmation.</li>"+
-                "</ul>",
-            "en": ""
-        },
-        "html": "ENJ1BS7202_01/algorithmique-et-programmation"
-    },
-
-
-/**********************************************
-Semester 8:
-
-Enseignements obligatoires                                                  ECTS	CM	TD	TP
-Initiation à la Recherche et/ou Développement	 F1BS8201                   12		45h
-Méthodes et outils pour la biologie des systèmes	J1BS8203                9	27h
-
-Choix 1 UE de 9 ECTS                                                        ECTS	CM	TD	TP
-Informatique appliquée à la biologie: modélisation et ima	C0BS8M01  KM2BS04U      9	10h	5h
-Programmation orienté objet                             	                9	27h
-
-**********************************************/
-
-    "F1BS8201" : {
-        "id": "F1BS8201",
-        "acronym": "InitR&D",
-        "title": "Initiation à la Recherche et/ou Développement",
-        "ects": 12,
-        "semester": 8,
-        "students": "C++BIO[required],GENORG[required],ORGECO[required],BSC[required]",
-        "block"     : {
-            "c++bio": "Systèmes de gestion de données et Applications",
-            "geneco": "Systèmes de gestion de données et Applications",
-            "bao"   : "Databases and Applications"
-        },
-        "tracks"    : "0x7",
-        "visibility": "visible",
-        "contents": {
-            "fr": "<h2>Programme</h2>"+
-                "<p>Ce module - réalisé sous la supervision d'un maître de stage - consiste en une réalisation informatique "+
-                "d'un logiciel de taille importante.</p>"+
-                "<p>Elle sera suivie d'un rapport écrit et d'une soutenance.</p>",
-            "en": ""
-        },
-        "html": "ENF1BS8201_01/initiation-a-la-recherche-et-ou-developpement"
-    },
-
-    "J1BS8203" : {
-        "id": "J1BS8203",
-        "acronym": "MOBioS",
-        "title": "Méthodes et outils pour la biologie des systèmes",
-        "ects": 9,
-        "semester": 8,
-        "students": "C++BIO[required],GENORG[required],ORGECO[required],BSC[required]",
-        "block"     : {
-            "c++bio": "Systèmes de gestion de données et Applications",
-            "geneco": "Systèmes de gestion de données et Applications",
-            "bao"   : "Databases and Applications"
-        },
-        "tracks"    : "0x7",
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul>"+
-                "<li>Récursivité, structures linéaires, structures arborescentes.</li>"+
-                "<li>Arbre binaire, arbre binaire de recherche, tas, graphes: algorithme de parcours.</li>"+
-                "<li>Approfondissements des notions statistiques vues dans l'UE <b>Approches expérimentales en biologie</b></li>"+
-                "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Nécessaire:</h3>"+
-                "<p>Avoir acquis les concepts de base des UE programmation et algorithmique du semestre 1</p>",
-            "en": ""
-        },
-        "html": "ENJ1BS8203_01/methodes-et-outils-pour-la-biologie-des-systemes"
-    },
-
-    "C0BS8M01" : {
-        "id": "C0BS8M01",
-        "acronym": "InfoApp",
-        "title": "Informatique appliquée à la biologie: modélisation et imagerie",
-        "ects": 9,
-        "semester": 8,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        "block"     : {
-            "c++bio": "Liste à choix d'UE obligatoires 1 UE de 9 ECTS",
-            "geneco": "Liste à choix d'UE obligatoires 1 UE de 9 ECTS",
-            "bao"   : "Elective Courses - 1 unit of 9 ECTS"
-        },
-        "visibility": "hidden",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<h3>Modélisation</h3>"+
-                "<ul>"+
-                "<li>Introduction générales sur les neurosciences computationnelles : modélisation, intérêt et principes de base en neurosciences</li"+
-                "<li>Principes et modélisation des systèmes dynamiques, applications aux neurosciences</li>"+
-                "<li>Dynamique des réseaux corticaux</li>"+
-				"<li>Codage et décodage du signal neuronal</li>"+
-                "<li>Modélisation de l’excitabilité neuronale (modèles ioniques, modèle de Hodgkin-Huxley, modèles cinétiques)</li>"+
-                "<li>Les modèles \"integrate and fire\" et apparentés et les modèles de grands réseaux</li>"+
-                "<li>Des données expérimentales à la construction d’un modèle : préparer l’un pour l’autre.</li>"+
-                "<li>Modifications des propriétés intrinsèques et synaptiques : modéliser la plasticité</li>"+
-                "<li>Interaction synaptiques au sein de réseaux simples</li>"+
-                "<li>Neuro-ingénierie (interfaces cerveau-machine, Neuro-électronique, Neuro-prothèses)</li>"+
-                "<li>Implémentation d'un miniprojet de modélisation (contrôle continu)</li>"+
-                "<li>Synthèse sur un article de recherche en neurosciences computationnelles (examen)</li>"+
-                "</ul>"+
-                "<h3>Imagerie</h3>"+
-                "<h4>Partie théorique</h4>"+
-                "<ul><li>Image numérique. Vidéos.</li>"+
-                "<li>Amélioration d'images et de traitements (débruitage, correction luminosité/contraste et défaut d'illumination).</li>"+
-                "<li>Analyse des images: Mesures, Reconnaissance de formes. Suivi de formes.</li>"+
-                "<li>Notion de programmation en vue de l'automatisation de tâches pour le traitement et l'analyse de vidéos.</li>"+
-                "</ul>"+
-                "<h4>Partie pratique:</h4>"+
-                "<ul><li>Application à des vidéos (suivi du chemin d'une souris dans un labyrinthe, "+
-                "croissance d'un neurone en vidéomicroscopie à fluorescence,etc.).</li>"+
-                "<li>Utilisation d'ImageJ, installation de greffons (plugins).</li>"+
-                "<li>Programmation de Macros/Scripts.</li>"+
-                "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Objectifs pédagogiques</h3>"+
-                "<h4>Modélisation</h4>"+
-                "<ul><li>Comprendre et savoir mettre en œuvre les principes et outils logiciels utilisés pour modéliser la biologie du "+
-                "système nerveux, de l'échelle de la cellule à celle du réseau</li>"+
-				"<li>Acquérir les bases des sciences théoriques appliquées "+
-                "à la compréhension de la dynamique du système nerveux</li></ul>"+
-                "<h4>Imagerie</h4>"+
-                "<ul><li>Donner les éléments nécessaires du point de vue des outils informatiques</li></ul>"+
-                "<h3>Compétences acquises</h3>"+
-                "<h4>Modélisation</h4>"+
-                "<ul><li>Compréhension des méthodes et principes de base de la modélisation en biologie</li>"+
-                "<li>Maîtrise des outils et logiciels dédiés à la modélisation en neuroscience</li>"+
-                "<li>Compréhension des méthodes en Neurosciences Théoriques et Computationnelles</li>"+
-                "<li>Connaissance de l’apport des Neurosciences Théoriques en Neurosciences Fondamentales "+
-                "et dans le domaine de la Neuro-ingénierie.</li>"+
-                "</ul>"+
-                "<h4>Imagerie</h4>"+
-                "<ul><li>Appréhender les divers moyens d'amélioration des images scientifiques en vue de leur analyse.</li>"+
-                "<li>Savoir utiliser des fonctions simples de programmation (scripting) pour traiter des vidéos.</li>"+
-                "<li>Utilisation du logiciel ImageJ.</li></ul>",
-        "en": ""
-        },
-        "html": "ENC0BS8M01_01/informatique-appliquee-a-la-biologie-modelisation-et-ima"
-    },
-
-    'C0BS8M01-Model' : {
-        'id'                : "C0BS8M01-Model",
-        'acronym'           : "InfoApp-Model",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : "#7FD8BC",
-        'color'             : "#fff",
-        'link'              : "C0BS8M01"
-    },
-    'C0BS8M01-Imag' : {
-        'id'                : "C0BS8M01-Imag",
-        'acronym'           : "InfoApp-Imag",
-        'visibility'        : 'visible', // visible or hidden
-        'background_color'  : "#7FD8BC",
-        'color'             : "#fff",
-        'link'              : "C0BS8M01"
-    },
-
-    "J1BS8202" : {
-        "id": "J1BS8202",
-        "acronym": "POO",
-        "title": "Programmation orientée objet",
-        "ects": 9,
-        "semester": 8,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        "block"     : {
-            "c++bio": "Liste à choix d'UE obligatoires 1 UE de 9 ECTS",
-            "geneco": "Liste à choix d'UE obligatoires 1 UE de 9 ECTS",
-            "bao"   : "Elective Courses - 1 unit of 9 ECTS"
-        },
-        "visibility": "visible",
-        'background_color': '#a4ff80',
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                    "<ul>"+
-                    "<li>Modélisation objet:"+
-                    "<ul><li>Héritage simple.</li>"+
-                    "<li>Héritage complexe.</li>"+
-                    "<li>Classes abstraites.</li>"+
-                    "</ul>"+
-                "</li>"+
-                "<li>Traduction en langages C++, java.</li>"+
-                "<li>Gestion dynamique: exceptions</li>"+
-                "<li>Modèles de classes templates.</li>"+
-                "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Objectifs pédagogiques</h3>"+
-                "<ul><li>Maîtriser les concepts de la programmation objet.</li>"+
-                "</ul>"+
-                "<h3>Compétences acquises</h3>"+
-                "<ul><li>Développer une application en langage objet.</li></ul>",
-            "en": ""
-        },
-        "html": "ENJ1BS8202_01/programmation-oriente-objet"
-    },
-
-/**********************************************
-Semester 9:
-Enseignements obligatoires                                                  ECTS	CM	TD	TP
-Modélisation des systèmes biologiques	                                    3		15h
-Communication et conception d'un projet de recherche et/ou développement	9
-Connaissance de l'entreprise	                                            3		15h
-Visualisation de la Structure de Proteines	                                3
-Classification des données issues des banques de données biologiques	    3		15h
-
-Choix 1 UE de 3 ECTS                                                        ECTS	CM	TD	TP
-Anglais	                                                                    3		60h
-Architecture du génome	                                                    3	10h	10h
-Génétique Humaine	                                                        3	10h	10h
-Division et cycle cellulaire	                                            3	10h	10h
-Algorithmique pour la bio-informatique et graphe	                        3		15h
-http://www.u-bordeaux.fr/formation/2015/PRMASB_171/master-biologie-sante-specialite-bioimagerie/enseignement/ENJ1SB9700_01/visualisation-et-exploration-de-donnees-3d
-
-Choix 1 UE de 6 ECTS                                                        ECTS	CM	TD	TP
-Programmation Objet Avancée	                                                6		30h
-Approche objet	                                                            6	28h	30h
-Outils d'indexation et de classification de l'information	                6		24h
-Systemes Autonomes	                                                        6		24h
-**********************************************/
-
-    "J1BS9204" : {
-        "id": "J1BS9204",
-        "acronym": "ClassData",
-        "title": "Classification des données issues des banques de données biologiques",
-        "ects": 3,
-        "semester": 9,
-        "students": "C++BIO[required],GENORG[required],ORGECO[required],BSC[required]",
-        "tracks"    : "0x7",
-        'background_color': '#ff9100',
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Data mining : introduction du concept d'extraction de connaissances à partir de données brutes.</li>"+
-                "<li>Algorithmes de classification (bayesienne et par arbres de décision) et étude des problèmes de regroupement (clustering).</li>"+
-                "<li>Algorithmique des mots et des arbres : applications aux structures macromoléculaires.Présentation des méthodes et algorithmes "+
-                "de base pour le traitement algorithmique des mots et des arbres, et leurs applications dans les problèmes de comparaison et "+
-                "d'alignement de séquences, de repliement de séquences (structures secondaires).</li>"+
-                "<li>Traitement des graphes et visualisation des grands jeux de données.</li>"+
-                "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Objectifs pédagogiques</h3>"+
-                "<p>Apprentissage des techniques avancées de traitement de données biologiques de la génomique à la métabolomique.</p>"+
-                "<h3>Compétences acquises</h3>"+
-                "<ul>"+
-                "<li>Méthode de fouille de données</li>"+
-                "<li>Méthodes de classification</li>"+
-                "<li>Recherche de motifs</li>"+
-                "<li>Etiquetage</li>"+
-                "<li>Analyse de séquences à grande échelle</li>"+
-                "</ul>",
-            "en": ""
-        },
-        "html": "ENJ1BS9204_01/classification-des-donnees-issues-des-banques-de-donnees-b"
-    },
-
-    "F1BS9201" : {
-        "id": "F1BS9201",
-        "acronym": "CommPR&D",
-        "title": "Communication et conception d'un projet de recherche et/ou développement",
-        "ects": 9,
-        "semester": 9,
-        "students": "C++BIO[required],GENORG[required],ORGECO[required],BSC[required]",
-        "tracks"    : "0x7",
-        'background_color': '#a4ff80',
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<p>Programme des enseignements théoriques</p>"+
-                "<ul><li>Méthodes d'analyse et de conception des systèmes informatiques:</li>"+
-                "<li>UML</li>"+
-                "<li>Design Patterns</li>"+
-                "<li>Etude de la mise en oeuvre d'un cahier des charges, de la définition des besoins, de techniques de gestion de configuration.</li>"+
-                "<li>Formalisation de connaissances, outils de structuration de données langage de type XML pour la biologie.</li>"+
-                "</ul>"+
-                "<p>Programme des enseignements dirigés</p>"+
-                "<p>Les étudiants appliqueront les techniques de génie logiciel dans le cadre d'un projet comportant la conception "+
-                "et la mise en oeuvre d'une application informatique.</p>"+
-                "<p>Contenu générique pour cette UE commune</p>"+
-                "<ul>"+
-                "<li>Présentation des principales phases du processus dans un projet scientifique et/ou de développement (définition "+
-                "stratégique, opérationnelle, réalisation et suivi, évaluation)</li>"+
-                "<li>Présentation des liaisons vertueuses \"Méthodologie du projet et démarche qualité\" avec une introduction à l'assurance "+
-                "qualité au laboratoire, en système de production, cahiers de laboratoire, bonnes pratiques de laboratoire, etc.</li>"+
-                "<li>Introduction aux brevets et régimes juridiques associés</li>"+
-                "<li>Projet tutoré de veille technologique et/ou d'analyse bibliographique ciblées sur des sujets d'actualité (rapport écrit "+
-                "et oral).</li>"+
-                "<li>Mise en place d'une formation pratique sur la valorisation et le transfert technologique</li>"+
-                "<li>Utilisation d'un ensemble d'outils informatiques (logiciels, bases de données, réseau WEB, progiciel, etc.) pour élaborer un "+
-                "rapport, une veille technologique</li>"+
-                "<li>Suivi d'une série de conférences organisées avec des chercheurs, des professionnels du secteur des biotechnologies</li>"+
-                "<li>Rencontre de professionnels porteurs de projets pour illustrer et documenter la création d'entreprises à partir d'un concept, "+
-                "d'une idée scientifique (notion de jeunes pousses)</li>"+
-                "<li>Visite d'entreprises, de laboratoires d'excellences ou de plateformes technologiques</li>"+
-                "</ul>",
-            "en": ""
-        },
-        "html": "ENF1BS9201_01/communication-et-conception-d-un-projet-de-recherche-et-ou-developpement"
-    },
-
-    "F6BS9202" : {
-        "id": "F6BS9202",
-        "acronym": "Entreprise",
-        "title": "Connaissance de l'entreprise",
-        "ects": 3,
-        "semester": 9,
-        "students": "C++BIO[required],GENORG[required],ORGECO[required],BSC[required]",
-        "tracks"    : "0x7",
-        "background_color" : "#FA5858",
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<p>Découverte du secteur et les métiers de la bioinformatique industrielle.</p>"+
-                "<p>Programme détaillé</p>"+
-                "<ul><li>L'enseignement théorique comprend d'une part des cours présentant les principes de la conduite de projet en "+
-                "milieu industriel et une série de conférences au cours desquelles des industriels viendront présenter leurs entreprises "+
-                "et métiers et répondre aux questions des étudiants concernant les perspectives de carrière offertes.</li>"+
-                "<li>L'enseignement dirigé se fait sous forme de projets réalisés individuellement ou en groupe. </li>"+
-                "<li>Les projets individuels comportent :"+
-                    "<ul>"+
-                        "<li>la recherche d'information sur une entreprise de bioinformatique "+
-                        "et débouche sur la remise d'un rapport et la présentation d'un exposé ;</li>"+
-                        "<li>la recherche d'une offre d'emploi conduisant à la simulation d'une procédure de recrutement "+
-                        "(écriture d'un CV, d'une lettre de motivation et entretien).</li>"+
-                        "<li>Les projets de groupe portent sur l'installation et l'évaluation d'un logiciel de bioinformatique commercial "+
-                        "et se font en collaboration avec les entreprises (qui sont sollicitées pour mettre à disposition une licence "+
-                        "gratuite du logiciel). Ces débouchent également sur l'écriture d'un rapport (remis aux entreprises partenaires "+
-                        "si elles le souhaitent) et la présentation d'un exposé.</li>"+
-                    "</ul>"+
-                "</li></ul>"+
-                "<p>Des intervenants issus du secteur industriel seront invités dans cette UE comme par exemple des utilisateurs "+
-                "d'outils bioinformatiques (Sanofi Aventis, Biomérieux, etc.) et des producteurs de logiciels (GenoMining, Biomax "+
-                "Informatics AG, etc.).</p>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Pré-requis</h3>"+
-                "<ul><li>Connaître les banques de données et logiciels de bioinformatique. Etre capable d'installer et configurer un "+
-                "logiciel dans un environnement UNIX ou WIndows.</li>"+
-                "</ul>",
-            "en": ""
-        },
-        "html": "ENF6BS9202_01/connaissance-de-l-entreprise"
-    },
-
-    "C1BS9205" : {
-        "id": "C1BS9205",
-        "acronym": "ModSysBio",
-        "title": "Modélisation des systèmes biologiques",
-        "ects": 3,
-        "semester": 9,
-        "students": "C++BIO[required],GENORG[required],ORGECO[required],BSC[required]",
-        "tracks"    : "0x7",
-        'background_color': '#ffffff',
-        "image"   : "headSysBio.jpg",
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<h3>Programme des enseignements théoriques</h3>"+
-                "<ul><li>Aperçu du métabolisme cellulaire</li>"+
-                "<li>Structure des réseaux métaboliques. Matrice de stoechiométrie. Modes élémentaires</li>"+
-                "<li>Théorie du contrôle du métabolisme.</li>"+
-				"<li>Les réseaux de régulation.</li>"+
-                "<li>Modélisation du métabolisme et des réseaux de régulation.</li>"+
-                "<li>Les outils de modélisation (Equations différentielles, Réseaux de Petri, Systèmes multi-agents,...)</li>"+
-                "</ul>"+
-                "<h3>Programme des enseignements dirigés et pratiques.</h3>"+
-                "<ul>"+
-                "<li>Sous forme d'analyse approfondie d'articles</li>"+
-                "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Objectifs pédagogiques</h3>"+
-                "<ul>"+
-                "<li>Acquisition de la maitrise des outils d'appréhension des réseaux métaboliques</li>"+
-                "</ul>"+
-                "<h3>Compétences acquises</h3>"+
-                "<ul>"+
-                "<li>Capacité à réaliser une analyse de réseaux biologiques depuis les données expérimentales "+
-                "jusqu'à la modélisation</li>"+
-                "</ul>",
-            "en": ""
-        },
-        "html": "ENC1BS9205_01/modelisation-des-systemes-biologiques"
-    },
-
-    "J1BS9203" : {
-        "id": "J1BS9203",
-        "acronym" : "Prot3D",
-        "title"   : "Visualisation de la Structure de Protéines",
-        "ects"    : 3,
-        "semester": 9,
-        "students": "C++BIO[required],GENORG[required],ORGECO[required],BSC[required]",
-        "tracks"    : "0x61",
-        "block"     : {
-            "c++bio": "Liste d'UE obligatoires",
-            "geneco": "Liste à choix d'UE obligatoires - choisir 1 UE de 6 ECTS",
-            "bao"   : "Elective Courses - select 1 course of 6 ECTS"
-        },
-        'background_color': '#eef409',
-        "image"   : 'headprot.jpg',
-        "visibility": "visible",
-        "contents": {
-            "fr":
-            "<h2>Programme</h2>"+
-            "<p>Initier les étudiants à la visualisation et à l'exploration des structures 3D.</p"+
-            "><p>Programme des enseignements théoriques</p><ul><li>Organisation structurale des macromolécules biologiques.</li>"+
-            "<li>Banques de données structurales (Protein Data Bank, SCOP,etc.).</li>"+
-            "<li>Format de fichier PDB (Protein Data Bank)</li>"+
-            "<li>Principes de la représentation graphique d'un objet 3D avec OpenGL.</li>"+
-            "<li>Algorithmes utilisés pour les divers types de représentation graphique.</li>"+
-            "</ul><p>Programme des enseignements dirigés et pratiques</p>"+
-            "<ul><li>Les enseignements pratiques et dirigés seront tous dispensés devant ordinateur.</li>"+
-            "<li>Extraction des informations structurales à partir des banques de données.</li>"+
-            "<li>Initiation à l'utilisation de la librairie OpenGL versions 3.x et supérieures pour la visualisation des structures protéiques 3D au format PDB.</li>"+
-            "</ul>"+
-            "<h2>Objectifs et compétences</h2>"+
-            "<h3>Pré-requis</h3>"+
-            "<p>Notion de programmation acquises en master 1 de bioinformatique</p>",
-            "en": ""
-        },
-        "html": "ENJ1BS9203_01/visualisation-de-la-structure-de-proteines"
-    },
-
-    "B0BS9319" : {
-        "id": "B0BS9319",
-        "acronym": "AnglaisM2",
-        "title": "Anglais",
-        "ects": 3,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x70",
-        'background_color': '#0095ff',
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Conférences scientifiques et débats par des scientifiques anglophones. Analyses d'articles scientifiques "+
-                "ou de rapport en anglais</li>"+
-                "<li>Initiation a la rédaction de productions scientifiques en anglais</li>"+
-                "</ul>",
-            "en": ""
-        },
-        "html": "ENB0BS9319_01/anglais"
-    },
-
-    "C6SB9M02" : {
-        "id"        : "C6SB9M02",
-        "acronym"   : "ArchiGen",
-        "title"     : "Architecture du génome",
-        "ects"      : 3,
-        "semester"  : 9,
-        "students"  : "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x70",
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Architecture du génome : centromère, télomère et topologie de la chromatine</li>"+
-                "<li>Organisation des génomes : séquences répétées, familles multigéniques et domaines répétés</li>"+
-                "<li>Plasticité des génomes eucaryotes, éléments transposables</li>"+
-                "<li>Architecture nucléaire : domaines nucléaires spécialisés (nucléole, corps de Cajal), territoires chromosomiques</li>"+
-                "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Objectifs pédagogiques</h3>"+
-                "<ul><li>L'objectif est de décrire l'architecture nucléaire et l'organisation des génomes eucaryotes et d'évoquer certains "+
-                "éléments impliqués dans l'évolution des génomes.</li>"+
-                "</ul>"+
-                "<h3>Compétences acquises</h3>"+
-                "<ul><li>Connaissances relatives à l'architecture nucléaire, l'architecture des génomes et leur évolution</li></ul>",
-            "en": ""
-        },
-        "html": "ENC6SB9M02_01/architecture-du-genome"
-    },
-
-    "C6SB9M03" : {
-        "id": "C6SB9M03",
-        "acronym": "GenHuman",
-        "title": "Génétique Humaine",
-        "ects": 3,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Génome humain </li>"+
-                "<li>Génétique médicale et conseil génétique</li>"+
-                "<li>Neurogénétique</li>"+
-                "<li>Oncogénétique</li>"+
-                "<li>Maladies mitochondriales</li>"+
-                "<li>Génétique du développement</li>"+
-                "<li>Approches thérapeutiques</li></ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Objectifs pédagogiques</h3>"+
-                "<p>Du génome humain à la physiopathologie et aux applications en génétique médicale.</p>"+
-                "<h3>Compétences acquises</h3>"+
-                "<p>Connaissances et savoir en génétique humaine ; aspects physiopathologiques.</p>",
-            "en": ""
-        },
-        "html": "ENC6SB9M03_01/genetique-humaine"
-    },
-
-    "C6SB9M04" : {
-        "id": "C6SB9M04",
-        "acronym": "DivCell",
-        "title": "Division et cycle cellulaire",
-        "ects": 3,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Machinerie du cycle cellulaire et check points. </li>"+
-                "<li>Le contrôle du cycle cellulaire chez les eucaryotes. </li>"+
-                "<li>Les points de contrôle en phase G1, G2 et à la sortie de mitose. </li>"+
-                "<li>Le contrôle de séparation des chromosomes. </li>"+
-                "<li>Les modèles KO des cyclines et des kinases cycline dépendantes chez la souris. </li>"+
-                "<li>Le cycle cellulaire chez les plantes.</li>"+
-                "<li>L'influence des voies de signalisation sur la régulation du cycle cellulaire.</li>"+
-                "</ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Objectifs pédagogiques</h3>"+
-                "<ul><li>Approfondir les connaissances sur le cycle cellulaire chez les eucaryotes inférieurs et supérieurs.</li></ul>"+
-                "<h3>Compétences acquises</h3>"+
-                "<ul><li>La régulation du cycle cellulaire. Les molécules qui interviennent dans cette régulation et les liens entre "+
-                "les fonctions de ces molécules et le développement de maladies néoplastiques.</li></ul>",
-            "en": ""
-        },
-        "html": "ENC6SB9M04_01/division-et-cycle-cellulaire"
-    },
-
-    "J1BS9207" : {
-        "id": "J1BS9207",
-        "acronym": "AlgoBioGraph",
-        "title": "Algorithmique pour la bio-informatique et graphe",
-        "ects": 3,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        "visibility": "visible",
-        "background_color" : "#CEF6CE",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Traitement automatique et analyse d'objets biologiques arborescents (structures secondaires d'ARNs, "+
-                "architecture de plantes, etc.): "+
-                "<ul><li>comparaison d'arborescences, </li>"+
-                "<li>distance d'édition (opérations structurelles élémentaires, opérations d'édition).</li>"+
-                "</ul></li>"+
-                "<li> Formulation en termes de problème d'optimisation, "+
-                "<ul><li>algorithmes efficaces en temps et en espace, </li>"+
-                "<li>solutions incrémentales, </li>"+
-                "<li>programmation dynamique. </li></ul>"+
-                "</li>"+
-				"<li>Réseaux d'interactions et métaboliques, voies métaboliques. </li>"+
-				"<li>Exploration des relations du type \"guilt by association\", recherche de chemins et sous-graphes indiquant des voies de signalisation, "+
-				"recherche de modes élémentaires.</li></ul>"+
-				"<h2>Objectifs et compétences</h2>"+
-				"<h3>Objectifs pédagogiques</h3>"+
-				"<p>Présenter les méthodes informatiques d'exploitation de grandes masses de données, dont la bioinformatique est l'un des domaines "+
-				"d'application. On présentera en particulier les algorithmes sur les mots et sur les arbres pour traiter des données biologiques.</p>"+
-				"<h3>Compétences acquises</h3>"+
-				"<ul><li>Modéliser un problème bio-informatique en termes de structures de données (mots, arbres, graphes). </li>"+
-				"<li>Utilisation des principaux algorithmes, méthodes et heuristiques développées en bio-informatique ou dans des domaines "+
-				"de l'informatique fondamentale et pertinent pour la bio-informatique. </li>"+
-				"<li>Mesurer le potentiel applicatif des méthodes et outils développés en bio-informatique pour d'autres champs "+
-				"applicatifs tels les sciences sociales. </li>"+
-				"<li>Avoir une vue sur l'ensemble des outils et implémentations mis à disposition par la communauté de recherche.</li></ul>",
-            "en": ""
-        },
-        "html": "ENJ1BS9207_01/algorithmique-pour-la-bio-informatique-et-graphe"
-    },
-
-    "J1SB9700" : {
-        "id": "J1SB9700",
-        "acronym": "Visu3D",
-        "title": "Visualisation et Exploration de Données 3D",
-        "ects": 3,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Traitement automatique et analyse d'objets biologiques arborescents (structures secondaires d'ARNs, "+
-                "architecture de plantes, etc.): "+
-                "<ul><li>comparaison d'arborescences, </li>"+
-                "<li>distance d'édition (opérations structurelles élémentaires, opérations d'édition).</li>"+
-                "</ul></li>"+
-                "<li> Formulation en termes de problème d'optimisation, "+
-                "<ul><li>algorithmes efficaces en temps et en espace, </li>"+
-                "<li>solutions incrémentales, </li>"+
-                "<li>programmation dynamique. </li></ul>"+
-                "</li>"+
-				"<li>Réseaux d'interactions et métaboliques, voies métaboliques. </li>"+
-				"<li>Exploration des relations du type \"guilt by association\", recherche de chemins et sous-graphes indiquant des voies de signalisation, "+
-				"recherche de modes élémentaires.</li></ul>"+
-				"<h2>Objectifs et compétences</h2>"+
-				"<h3>Objectifs pédagogiques</h3>"+
-				"<p>Présenter les méthodes informatiques d'exploitation de grandes masses de données, dont la bioinformatique est l'un des domaines "+
-				"d'application. On présentera en particulier les algorithmes sur les mots et sur les arbres pour traiter des données biologiques.</p>"+
-				"<h3>Compétences acquises</h3>"+
-				"<ul><li>Modéliser un problème bio-informatique en termes de structures de données (mots, arbres, graphes). </li>"+
-				"<li>Utilisation des principaux algorithmes, méthodes et heuristiques développées en bio-informatique ou dans des domaines "+
-				"de l'informatique fondamentale et pertinent pour la bio-informatique. </li>"+
-				"<li>Mesurer le potentiel applicatif des méthodes et outils développés en bio-informatique pour d'autres champs "+
-				"applicatifs tels les sciences sociales. </li>"+
-				"<li>Avoir une vue sur l'ensemble des outils et implémentations mis à disposition par la communauté de recherche.</li></ul>",
-            "en": ""
-        },
-        "path": "http://www.u-bordeaux.fr/formation/2015/PRMASB_171/master-biologie-sante-specialite-bioimagerie/enseignement",
-        "html": "ENJ1SB9700_01/visualisation-et-exploration-de-donnees-3d"
-    },
-
-
-    "J1BS9206" : {
-        "id": "J1BS9206",
-        "acronym": "POA",
-        "title": "Programmation Objet Avancée",
-        "ects": 6,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        'background_color': '#e8e8e8',
-        "visibility": "visible",
-        "contents": {
-            "fr": "",
-            "en": ""
-        },
-        "html": "ENJ1BS9206_01/programmation-objet-avancee"
-    },
-
-    "J1INAW12" : {
-        "id": "J1INAW12",
-        "acronym": "AppObj",
-        "title": "Approche objet",
-        "ects": 6,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<ul><li>Rappels de programmation objet</li>"+
-				"<li>Concepts avancés : exceptions, clonage, classes génériques, collections, itérations, classes internes...</li>"+
-				"<li>Utilisation de quelques modèles de conception objets : Adaptateur, Décorateur, Observable ...</li>"+
-				"<li>Utilisation de la programmation objet dans certains types de développements : IHM, Système ...</li>"+
-				"</ul>"+
-				"<h2>Objectifs et compétences</h2>"+
-				"<h3>Pré-requis</h3>"+
-				"<ul><li>Connaissances de la programmation impérative (langage C)</li>"+
-				"<li>Connaissance et première utilisation d'un langage de programmation à objet (Java,C++,...)</li></ul>",
-            "en": ""
-        },
-        "html": "ENJ1INAW12_01/approche-objet"
-    },
-
-    "J1IN9413" : {
-        "id": "J1IN9413",
-        "acronym": "OICI",
-        "title": "Outils d'indexation et de classification de l'information",
-        "ects": 6,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        "visibility": "visible",
-        "background_color": "#0af9f9",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2>"+
-                "<p>Analyse de données</p>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<h3>Pré-requis</h3>"+
-                "<p>Informatique : Algorithmique, Structures de Données et Programmation (niveau L3)</p>",
-            "en": ""
-        },
-        "html": "ENJ1IN9413_01/outils-d-indexation-et-de-classification-de-l-information"
-    },
-
-    "J1IN9523" : {
-        "id": "J1IN9523",
-        "acronym": "SysAuto",
-        "title": "Systémes Autonomes",
-        "ects": 6,
-        "semester": 9,
-        "students": "C++BIO[elective],GENORG[elective],ORGECO[elective],BSC[elective]",
-        "tracks"    : "0x7",
-        'background_color': '#ffa6fa',
-        "visibility": "visible",
-        "contents": {
-            "fr":
-                "<h2>Programme</h2><p>Le programme comprend en particulier les points suivants:</p>"+
-                "<h3>Configurations et plates-formes :</h3>"+
-                "<p>Les systèmes actuels les plus pertinents seront étudiés:</p>"+
-                "<ol><li>drones aériens</li>"+
-				"<li>robots terrestres</li>"+
-				"<li>capteurs</li>"+
-				"<li>drones sous-marins</li></ol>"+
-				"<p>L'accent sera mis en particulier sur l'autonomie et les environnements systèmes et logiciels associés, "+
-				"indispensables à la réalisation d'une mission l'envergure. En effet, le contrôle temps réel par un opérateur "+
-				"extérieur n'étant pas toujours possible, un certain nombre de décisions doivent donc être prises de manière autonome "+
-				"par le système embarqué. Néanmoins, de par la réglementation et pour des raisons opérationnelles, des informations "+
-				"doivent être ramenées vers un environnement logiciel de contrôle, qui lui, est à la disposition d'un opérateur, "+
-				"auquel il présente un certain nombre d'informations (signes vitaux - position, altitude, etc. - par exemple -). "+
-				"Cette chaine logicielle est une clef de voute de ces systèmes complexes qu'il est important de maîtriser.</p>"+
-				"<h3>Ecosystème :</h3>"+
-				"<p>Les domaines d'application sont nombreux et cette filière s'est structurée localement et nationalement, "+
-				"avec des interactions internationales fortes. Mais ce potentiel fort ne doit pas laisser croire que 'tout est "+
-				"permis', et il est donc crucial d'avoir une bonne connaissance des réglementations en cours.</p>"+
-				"<ol><li>domaines d'applications et cas concrets</li>"+
-				"<li>structuration du domaine, régionale/nationale/internationale</li>"+
-				"<li>règlementation</li></ol>"+
-				"<h3>Problématiques de recherche :</h3>"+
-				"<p>Ces systèmes offrent de nouvelles voies de développement mais soulèvent un certain nombre de problèmes théorique "+
-				"ou plus applicatifs qui relèvent d'activités de recherche. Par exemple :</p>"+
-				"<ol><li>la structuration en essaims (swarming) ou flotte d'appareils</li>"+
-				"<li>la mobilité, les graphes de communication sous-jacents, la dynamique du système, les modèles associés</li>"+
-				"<li>les techniques de type sense and avoid, la localisation en in-door et out-door</li>"+
-				"<li>les technologies associées, les problématiques applicatives tracking video, traitement d'images, radio, etc.</li></ol>"+
-				"<h3>Mise en oeuvre</h3>"+
-				"<p>Enfin, il est important que les étudiants qui choisissent cette UE puissent être opérationnels immédiatement. "+
-				"C'est pourquoi, ils seront formés aux bases de l'aéronautique et suivront une formation d'opérateur drone, indispensable "+
-				"aujourd'hui pour pouvoir faire voler un tel appareil.</p>"+
-				"<ol><li>Bases d'aéronautique</li>"+
-				"<li>Formation opérateur (pour l'essentiel an auto-apprentissage) + examen final</li></ol>"+
-				"<h2>Objectifs et compétences</h2>"+
-				"<h3>Pré-requis<br></h3>"+
-				"<p>UEs Réseaux, Administration Réseaux et Systèmes d'exploitation de M1</p>",
-            "en": ""
-        },
-        "html": "ENJ1IN9523_01/systemes-autonomes"
-    },
-
-/**********************************************
-Semester 10:
-Réalisation d'un projet de recherche et/ou développement
-**********************************************/
-
-    "F1BS0201" : {
-        "id": "F1BS0201",
-        "acronym": "StageM2",
-        "title": "Réalisation d'un projet de recherche et/ou développement",
-        "ects": 30,
-        "semester": 10,
-        "students": "C++BIO[required],GENORG[required],ORGECO[required],BSC[required]",
-        "tracks"    : "0x7",
-        'background_color': '#ffa6fa',
-        "visibility": "visible",
-        "contents": {
-            "fr": "<h2>Programme</h2>"+
-            "<ul><li>Stage en laboratoire de recherche ou en entreprise d'une durée de 5 à 6 mois.</li>"+
-            "<li>Il repose sur un projet scientifique préalablement rédigé et soumis aux responsables de la spécialité.</li>"+
-            "<li>Ce stage peut avoir lieu en France ou à l'étranger."+
-                "<ul><li>Parcours recherche:"+
-                "<ul><li>Sujet de stage proposé par le Maître de Stage après validation par la commission pédagogique "+
-                "de Master et choisi par l’étudiant en accord avec le responsable du stage.</li>"+
-                "</ul>"+
-                "</li>"+
-                "<li>Parcours professionnel:"+
-                "<ul><li>Sujet de stage défini par le Maître de Stage et l’étudiant en accord avec le responsable pédagogique.</li></ul>"+
-                "</li></ul></li></ul>"+
-                "<h2>Objectifs et compétences</h2>"+
-                "<ul><li>Objectifs pédagogiques"+
-                "<ul><li>Mise en situation dans un environnement professionnel pour la réalisation d'un projet de recherche "+
-                "et/ou développement en appliquant les notions fondamentales de gestion d'un projet de recherche et/ou développement:"+
-                "<ul><li>préparation</li>"+
-                "<li>réalisation</li>"+
-                "<li>analyse critique des résultats</li>"+
-                "<li>synthèse et présentation des résultats</li>"+
-                "<li>Applications de \"bonnes pratiques\" et de la \"démarche qualité\".</li>"+
-                "</ul></li>"+
-                "</ul></li>"+
-                "<li>Compétences acquises"+
-                "<ul><li>Compétence dans la gestion d'un projet de recherche et/ou développement.</li>"+
-                "<li>Acquérir l'autonomie nécessaire pour mener un projet de recherche et/ou de développement</li>"+
-                "<li>Acquérir la notion de travail en équipe projet.</li>"+
-                "<li>Compétences , à analyser et critiquer les résultats, à synthétiser des résultats, à présenter à l'écrit "+
-                "et à l'oral un projet et les résultats obtenus dans le cadre de ce projet.</li>"+
-                "<li>Maîtrise de l’anglais pour les étudiants qui partent à l’étranger.</li>"+
-                "</ul>"+
-                "</li></ul>",
-            "en": ""
-        },
-        "html": "ENF1BS0201_01/realisation-d-un-projet-de-recherche-et-ou-developpement"
-    }
-
-}
-;/************************************
+/************************************
  * Jean-Christophe Taveau
  * Calendar
  * 2015
@@ -2365,12 +1578,1174 @@ TableCal.prototype.reset = function() {
         }
     }
 }
-;
-/************************************
+/*
+ *  calendarmgr: Calendar Manager for the Master of Sciences in BioInformatics, Bordeaux, France Web Site
+ *  Copyright (C) 2015-2017  Jean-Christophe Taveau.
+ *
+ *  This file is part of calendarmgr
+ *
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with calendarmgr.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *../node_modules/.bin/babel tool_ics.js -o tool_ics_j5.js
+ *
+ * Authors:
  * Jean-Christophe Taveau
- * Calendar
- * 2015-2017
- ************************************/
+ */
+
+const calDB = {
+  "days": [
+    "--",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31"
+  ],
+  "hours": [
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "00"
+  ],
+  "locations": [
+    "None::None",
+    "Peixotto::A9",
+    "Peixotto::A21-OMEGA",
+    "Peixotto::A22",
+    "Peixotto::A28-CREMI",
+    "Peixotto::A29",
+    "Peixotto::A30-LaBRI",
+    "Peixotto::A33",
+    "Bordes::B5",
+    "Bordes::B6",
+    "Bordes::B7",
+    "Bordes::B18",
+    "Carreire::Amphi",
+    "Carreire::ED"
+  ],
+  "minutes": [
+    "00",
+    "10",
+    "20",
+    "30",
+    "40",
+    "50"
+  ],
+  "months": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12"
+  ],
+  "people": [
+    "------",
+    "Baldacci F",
+    "Beauvoit B",
+    "Benois-Pineau J",
+    "Benot ML",
+    "Bernaulte JJ",
+    "Beurton-Aimar M",
+    "Beven L",
+    "Bonnafous P",
+    "Bouffier L",
+    "Bourqui R",
+    "Boussicault A",
+    "Boutillier X",
+    "Bujan S",
+    "Carrere M",
+    "Chaumette S",
+    "Cl&eacute;ment L",
+    "Cochard D",
+    "Colombi&eacute; S",
+    "de Daruvar A",
+    "David V",
+    "Delmas O",
+    "Desbarats P",
+    "Dieuaide M",
+    "Domenger JP",
+    "Drouineau H",
+    "Dubois S",
+    "Fi&eacute;vet V",
+    "Garenne A",
+    "Giot R",
+    "Grelard A",
+    "Gr&eacute;mare A",
+    "Hanquiez V",
+    "Hernould M",
+    "Heric&eacute; C",
+    "H&eacute;ric&eacute; C",
+    "Karkar S",
+    "Lubac B",
+    "Master",
+    "Melan&ccedil;on G",
+    "Noelke N",
+    "Nogu&egrave;s X",
+    "Normandin C",
+    "Occala C",
+    "Pinaud B",
+    "Schurdi-Levraud V",
+    "S&eacute;n&eacute;chal N",
+    "Sirand-Pugnet P",
+    "Taveau JC",
+    "Th&eacute;bault P",
+    "Uricaru R",
+    "Valdenegro Toro M",
+    "Zaragosi S"
+  ],
+
+  "status" : [
+    "--",
+    "Mr",
+    "Ms",
+    "Dr",
+    "Pr"
+  ],
+  tracks : [
+    {
+        "key"  : 0,
+        "value": "None"
+    },
+    {
+        "key"  : 1,
+        "value": "C++BIO[required]"
+    },
+    {
+        "key"  : 2,
+        "value": "GenOrg[required]"
+    },
+    {
+        "key"  : 4,
+        "value": "OrgEco[required]"
+    },
+    {
+        "key"  : 8,
+        "value": "BSC[required]"
+    },
+    {
+        "key"  : 16,
+        "value": "C++BIO[elective]"
+    },
+    {
+        "key"  : 32,
+        "value": "GenOrg[elective]"
+    },
+    {
+        "key"  : 64,
+        "value": "OrgEco[elective]"
+    },
+    {
+        "key"  : 128,
+        "value": "BSC[elective]"
+    }
+  ],
+
+/*
+  0x01: Biocomp mandatory (A1)
+  0x02: SDBE mandatory (A2)
+  0x03: Biocomp + SDBE mandatory
+  0x04: Bioprod mandatory
+  0x07: Biocomp + SDBE + BioProd mandatory
+  0x08: Formation continue?
+  0x0F: All tracks - BC + DS + BP + FC mandatory
+  0x10: BioComp elective
+  0x20: SDBE elective
+  0x40: BioProd elective (A2)
+  0x60: SDBE + BioProd elective
+  0x61: BioComp mandatory + SDBE elective
+  0x70:
+
+
+*/
+  "courses" : {
+  // Semester 7
+      "4TBI701U": {
+        semester: "S07",
+        source: "S7_IMAJS",
+        acronym: "S07::IMAJS",
+        apogee: "4TBI701U",
+        isCourse: true,
+        tracks: "0x0F",
+        year: 1
+      },
+      "4TBI703U": {
+        semester: "S07",
+        source:"S7_OBI",
+        acronym: "S07::OBI",
+        apogee: "4TBI703U",
+        isCourse: true,
+        tracks: "0x0F",
+        year: 1
+      },
+      "4TBI704U": {
+        semester: "S07",
+        source:"S7_ANGLAIS",
+        acronym: "S07::Anglais",
+        apogee: "4TBI704U",
+        isCourse: true,
+        tracks: "0x0F",
+        year: 1
+      },
+      "4TBI705U": {
+        semester: "S07",
+        source:"S7_BSTATS",
+        acronym: "S07::BSTATS",
+        apogee: "4TBI705U",
+        isCourse: true,
+        tracks: "0x0F",
+        year: 1
+      },
+      "4TBI706U": {
+        semester: "S07",
+        source:"S7_PYTHON",
+        acronym: "S07::INITPYTHON",
+        apogee: "4TBI706U",
+        isCourse: true,
+        tracks: "0x0F",
+        year: 1
+      },
+      "4TBI707U": {
+        semester: "S07",
+        source:"S7_APU",
+        acronym: "S07::APU",
+        apogee: "4TBI707U",
+        isCourse: true,
+        tracks: "0x0F",
+        year: 1
+      },
+
+  // Semester 8
+      "4TBA804U": {
+        semester: "S08",
+        source: "S8_BBP",
+        acronym: "S08::BBP",
+        apogee: "4TBA804U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 1
+      },
+      "4TBA806U": {
+        semester: "S08",
+        source: "S8_GENEPI",
+        acronym: "S08::Genepi",
+        apogee: "4TBA806U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 1
+      },
+      "4TBC801U": {
+        semester: "S08",
+        source: "S8_POO2",
+        acronym: "S08::POO",
+        apogee: "4TBC801U",
+        isCourse: true,
+        tracks: "0x10",
+        year: 1
+      },
+      "4TBE801U": {
+        semester: "S08",
+        source: "S8_BIODIV",
+        acronym: "S08::BioDiv",
+        apogee: "4TBE801U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 1
+      },
+      "4TBE802U": {
+        semester: "S08",
+        source: "S8_ECOTERR",
+        acronym: "S08::EcoTerr",
+        apogee: "4TBE802U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 1
+      },
+      "4TBE803U": {
+        semester: "S08",
+        source: "S8_ECOAQUA",
+        acronym: "S08::EcoAqua",
+        apogee: "4TBE803U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 1
+      },
+      "4TBI801U": {
+        semester: "S08",
+        source: "S8_ALGOPRG2",
+        acronym: "S08::AlgoPrg2",
+        apogee: "4TBI801U",
+        isCourse: true,
+        tracks: "0x01",
+        year: 1
+      },
+      "4TBI802U": {
+        semester: "S08",
+        source: "S8_CPRD",
+        acronym: "S08::CPRD",
+        apogee: "4TBI802U",
+        tracks: "0x07",
+        year: 1
+      },
+      "4TBI803U": {
+        semester: "S08",
+        source: "S8_BDD",
+        acronym: "S08::BDD",
+        apogee: "4TBI803U",
+        isCourse: true,
+        tracks: "0x01",
+        year: 1
+      },
+      "4TBI804U": {
+        semester: "S08",
+        source: "S8_NGS",
+        acronym: "S08::NGS",
+        apogee: "4TBI804U",
+        isCourse: true,
+        tracks: "0x03",
+        year: 1
+      },
+      "4TBC802U": {
+        semester: "S08",
+        source: "S8_WEBMOD",
+        acronym: "S08::Web",
+        apogee: "4TBC802U",
+        isCourse: true,
+        tracks: "0x70",
+        year: 1
+      },
+      "4TBI810U": {
+        semester: "S08",
+        source: "S8_BIP",
+        acronym: "S08::BIP",
+        apogee: "4TBI810U",
+        isCourse: true,
+        tracks: "0x70",
+        year: 1
+      },
+      "4TDE801U": {
+        semester: "S08",
+        source: "S8_OBI2",
+        acronym: "S08::OBI2",
+        apogee: "4TDE801U",
+        isCourse: true,
+        tracks: "0x02",
+        year: 1
+      },
+      "4TDE802U": {
+        semester: "S08",
+        source: "S8_DS",
+        acronym: "S08::DS",
+        apogee: "4TDE802U",
+        isCourse: true,
+        tracks: "0x02",
+        year: 1
+      },
+  // Semester 9
+      "4TBI901U": {
+        semester: "S09",
+        source: "S9_STRUBIGL",
+        acronym: "S09::StrubiGL",
+        apogee: "4TBI901U",
+        isCourse: true,
+        tracks: "0x61",
+        year: 2
+      },
+      "4TBI902U": {
+        semester: "S09",
+        source: "S9_FILBI",
+        acronym: "S09::FILBI",
+        apogee: "4TBI902U",
+        isCourse: true,
+        tracks: "0x0F",
+        year: 2
+      },
+      "4TBI903U": {
+        semester: "S09",
+        source: "S9_GLOG",
+        acronym: "S09::GLog",
+        apogee: "4TBI903U",
+        isCourse: true,
+        tracks: "0x61",
+        year: 2
+      },
+      "4TBI904U": {
+        semester: "S09",
+        source: "S9_DEA",
+        acronym: "S09::DEA",
+        apogee: "4TBI904U",
+        isCourse: true,
+        tracks: "0x07",
+        year: 2
+      },
+      "4TBI905U": {
+        semester: "S09",
+        source: "S9_IRD",
+        acronym: "S09::IRD",
+        apogee: "4TBI905U",
+        isCourse: true,
+        tracks: "0x07",
+        year: 2
+      },
+      "4TBI906U": {
+        semester: "S09",
+        source: "S9_MOCELL",
+        acronym: "S09::MOCELL",
+        apogee: "4TBI906U",
+        isCourse: true,
+        tracks: "0x70",
+        year: 2
+      },
+      "4TBI907U": {
+        semester: "S09",
+        source: "S9_IA",
+        acronym: "S09::IA",
+        apogee: "4TBI907U",
+        isCourse: true,
+        tracks: "0x70",
+        year: 2
+      },
+      "4TBC901U": {
+        semester: "S09",
+        source: "S9_POO",
+        acronym: "S09::POO++",
+        apogee: "4TBC901U",
+        isCourse: true,
+        tracks: "0x10",
+        year: 2
+      },
+      "4TBA903U": {
+        semester: "S09",
+        source: "S9_QPG",
+        acronym: "S09::QPG",
+        apogee: "4TBA903U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 2
+      },
+      "4TBA904U": {
+        semester: "S09",
+        source: "S9_PDR",
+        acronym: "S09::PDR",
+        apogee: "4TBA904U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 2
+      },
+      "4TBIN01U": {
+        semester: "S09",
+        source: "S9_STGVOL",
+        acronym: "S08::StgVol",
+        apogee: "4TBIN01U",
+        isCourse: true,
+        tracks: "0xF0",
+        year: 2
+      },
+      "4TBE901U": {
+        semester: "S09",
+        source: "S9_TDE2",
+        acronym: "S09::TDE++",
+        apogee: "4TBE901U",
+        isCourse: true,
+        tracks: "0x70",
+        year: 2
+      },
+      "4TBE902U": {
+        semester: "S09",
+        source: "S9_EVOCOMM",
+        acronym: "S09::EvoComm",
+        apogee: "4TBE902U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 2
+      },
+      "4TDE901U": {
+        semester: "S09",
+        source: "S9_SIG",
+        acronym: "S09::SIG",
+        apogee: "4TDE901U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 2
+      },
+      "4TDE902U": {
+        semester: "S09",
+        source: "S9_IBS",
+        acronym: "S09::IBS",
+        apogee: "4TDE902U",
+        isCourse: true,
+        tracks: "0x60",
+        year: 2
+      },
+
+  // Semester 10
+      "4TBI001U": {
+        semester: "S10",
+        source: "S10_STAGE",
+        acronym: "S10::Stage",
+        apogee: "4TBI001U",
+        isCourse: true,
+        tracks: "0x0F",
+        year: 2
+      },
+
+  // MS Events
+      "4TBIEVNT": {
+        semester: "MS",
+        acronym: "Evt::Event",
+        source: "MS_EVENTS",
+        apogee: "4TBIEVNT",
+        isCourse: false,
+        tracks: "0x07",
+        year: 3
+      },
+      "4TBIMEET": {
+        acronym: "Evt::Conference",
+        apogee: "4TBIMEET",
+        isCourse: false,
+        tracks: "0x00",
+        year: 3
+      },
+      "4TBIPRSS": {
+        acronym: "Evt::Press",
+        apogee: "4TBIPRSS",
+        isCourse: false,
+        tracks: "0x07",
+        year: 3
+      },
+      "4TBIVACA": {
+        semester: "MS",
+        source: "MS_VACANCES",
+        acronym: "Evt::Holidays",
+        apogee: "4TBIVACA",
+        isCourse: false,
+        tracks: "0x07",
+        year: 3
+      },
+      "4TBIDFNS": {
+        acronym: "Evt::Defense",
+        apogee: "4TBIDFNS",
+        isCourse: false,
+        tracks: "0x0F",
+        year: 3
+      }
+  },
+
+  "events" : {
+      "4TBIEVNT": {
+        acronym: "Evt::Event",
+        apogee: "4TBIEVNT",
+        tracks: "0x00"
+      },
+      "4TBIMEET": {
+        acronym: "Evt::Conference",
+        apogee: "4TBIMEET",
+        tracks: "0x00"
+      },
+      "4TBIPRSS": {
+        acronym: "Evt::Press",
+        apogee: "4TBIPRSS",
+        tracks: "0x07"
+      },
+      "4TBIVACA": {
+        acronym: "Evt::Holidays",
+        apogee: "4TBIVACA",
+        tracks: "0x0F"
+      },
+      "4TBIDFNS": {
+        acronym: "Evt::Defense",
+        apogee: "4TBIDFNS",
+        tracks: "0x0F"
+      },
+      "Event": {
+        acronym: "Evt::Event",
+        apogee: "4TBIEVNT",
+        tracks: "0x00"
+      },
+      "Conference": {
+        acronym: "Evt::Conference",
+        apogee: "4TBIMEET",
+        tracks: "0x00"
+      },
+      "RevuePresse": {
+        acronym: "Evt::Press",
+        apogee: "4TBIPRSS",
+        tracks: "0x07"
+      },
+      "Vacances": {
+        acronym: "Evt::Holidays",
+        apogee: "4TBIVACA",
+        tracks: "0x0F"
+      },
+      "Alternance": {
+        acronym: "Evt::Alternance",
+        apogee: "4TBIALTR",
+        tracks: "0x0F"
+      },
+      "Soutenance": {
+        acronym: "Evt::Defense",
+        apogee: "4TBIDFNS",
+        tracks: "0x0F"
+      }
+
+  },
+  "eventTypes" : {
+      "Alternance"   : "4TBIALTR",
+      "Conference"   : "4TBIMEET",
+      "RevuePresse"  : "4TBIPRSS",
+      "Event"        : "4TBIEVNT",
+      "Vacances"     : "4TBIVACA",
+      "Presentation" : "4TBIWRKG",
+      "Soutenance"   : "4TBIDFNS"
+  },
+
+  "semesters": [
+    "--",
+    "S7",
+    "S8",
+    "S9",
+    "S10"
+  ],
+  "students": [
+    "All",
+    "A",
+    "B",
+    "A1",
+    "B1",
+    "A2",
+    "B2"
+  ],
+  "types": {
+    "?": "Unknown",
+    ALTERNANCE: "Alternance",
+    CONFERENCE: "Conference",
+    CONF: "Conference",
+    CI: "Cours+TD",
+    COURS: "Cours",
+    DISTANCIEL:"Online",
+    ELEARN:"E-learning",
+    MOOC:"E-learning",
+    EVENT:"Evenement",
+    EXAM:"Examen",
+    PRESENTATION:"Presentation",
+    PROJET:"Projet",
+    PRESS:"RevuePresse",
+    RENTREE:"Rentrée",
+    SOUTENANCE:"Soutenance",
+    STAGE:"Stage",
+    TD:"TD",
+    TDM:"TD machine",
+    TM:"TD machine",
+    TP:"TP",
+    VACANCES:"Vacances"
+  },
+  "years": [
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026",
+    "2027"
+  ]
+} // End of calDB
+
+
+/*
+ *  calendarmgr: Calendar Manager for the Master of Sciences in BioInformatics, Bordeaux, France Web Site
+ *  Copyright (C) 2015-2017  Jean-Christophe Taveau.
+ *
+ *  This file is part of calendarmgr
+ *
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with calendarmgr.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *../node_modules/.bin/babel tool_ics.js -o tool_ics_j5.js
+ *
+ * Authors:
+ * Jean-Christophe Taveau
+ */
+
+
+/***************** F U N C T I O N S  *****************/
+
+
+const capitalize = s => s && s[0].toUpperCase() + s.slice(1).toLowerCase();
+
+const getCourseType = (type) => calDB.types[type.toUpperCase()] || 'Cours + TD';
+
+
+function getLecturer(name = "------") {
+  for (let i in calDB.people) {
+    let upeople = calDB.people[i].toUpperCase().replace(/&[E].*;/,'E').replace(/&[C].*;/,'C');
+    if (upeople.indexOf(name) !== -1) {
+      return calDB.people[i];
+    }
+  }
+  return name;
+}
+
+
+/**
+ * General Syntax: <campus>::<building>@<Room|Amphi}_<name>
+ * Other simplified syntax are available:
+ * <building>@<Room|Amphi}_<name> - The campus (Peixotto | Bordes) is deduced from the building's name
+ * @<name> - Without specific building, it is assigned `CREMI (A28|A21)` with a `Room` whose name is <name>
+ * @ - Returns an object with default props { campus: 'Peixotto', building: 'CREMI (A28|A21)', type: 'Room', name: '???' }
+ * <nothing> - Returns an "empty" object with props { campus: '-', building: '-', type: '-', name: '-' }
+ *           - The fields about location are not shown (mainly for events like holidays)
+ */
+function getLocation(loc) {
+
+  const patterns = [
+    /^@$/,
+    /^@([A-Za-z0-9?]*)/,
+    /^([AB][0-9]{1,2})@([A-Za-z0-9?\-]*)/,
+    /^([AB][0-9]{2})@(\w*)_([A-Za-z0-9?]*)/,
+    /^(\w*)\:\:([A-Za-z0-9?]*)@(\w*)\_([A-Za-z0-9?]*)/
+  ];
+
+  const props = [
+    [],
+    ['name'],
+    ['building','name'],
+    ['building','type','name'],
+    ['campus','building','type','name'],
+  ]
+
+  const location = patterns.reduce( (accu,regex,i) => {
+    const matched = loc.match(regex);
+    if ( matched !== null) {
+      accu.index = i;
+      props[i].forEach( (prop,idx) => accu[prop] = matched[idx+1]);
+    }
+    return accu;
+  }, {index: -1,campus:'-',building:'-',type: '-',name:'-', loc: loc});
+
+  // Fill the missing props of `location`
+  console.log('LOCATION:',location);
+
+  // Must be improved
+  if (location.index === 0) {
+    location = {campus:'Peixotto',building:'CREMI (A28|A21)',type: 'Room',name:'???'};
+  }
+  else if (location.index === 1) {
+    location.campus = 'Peixotto';
+    location.building = 'CREMI (A28|A21)';
+    location.type = 'Room';
+  }
+  else if (location.index === 2) {
+    location.campus = (location.building[0].toUpperCase() === 'A') ? 'Peixotto' : 'Bordes';
+    location.type = 'Room|Amphi';
+  }
+  else if (location.index === 3) {
+    location.campus = (location.building[0].toUpperCase() === 'A') ? 'Peixotto' : 'Bordes';
+  }
+
+  // Check specific buildings { A21: 'A21-OMEGA', A28 : 'A28-CREMI',A30: 'A30-LaBRI'};
+  if (location.building === 'A28') {
+    location.building = 'A28-CREMI';
+  }
+  else if (location.building === 'A30') {
+    location.building = 'A30-LaBRI';
+  }
+
+  return location;
+}
+
+function yyyymmdd(date) {
+  return `${date.getFullYear()}${(date.getMonth()+1).toString().padStart(2,'0')}${date.getDate().toString().padStart(2,'0')}`;
+}
+
+function getDate(datetime) {
+  // Format with TimeZone ID= DTSTART;TZID=Europe/Paris:20170908T140000
+  // Format with GMT = DTSTART:20170908T140000
+  // HACK: console.log(datetime);
+  const yyyy = parseInt(datetime.substr(0,4));
+  const mm = parseInt(datetime.substr(4,2))-1; // Month from 0 to 11
+  const dd = parseInt(datetime.substr(6,2));
+  const HH = (datetime.length > 8) ? parseInt(datetime.substr(9,2)) : 0;
+  const MM = (datetime.length > 8) ? parseInt(datetime.substr(11,2)) : 0;
+
+  // UTC Time
+  // Timezone forced to Europe/Paris
+  const date = (datetime.indexOf('Z') !== -1) ? new Date( Date.UTC(yyyy,mm,dd,HH,MM)) : new Date(yyyy,mm,dd,HH,MM);
+
+  return {
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    time: `${date.getHours().toString().padStart(2,'0')}:${date.getMinutes().toString().padStart(2,'0')}`,
+    date: date
+  }
+}
+
+function getDescription(title = "None") {
+  return title;
+}
+
+function createCalendarID(e) {
+  let login = 'import';
+  let id = 'None@import';
+  if (e.acronym) {
+    let timestamp = new Date().toISOString().replace(/[-:.Z]/g,'');
+    timestamp = timestamp.substr(0,timestamp.length -3) + (++EVENT_COUNT).toString().padStart(3,'0');
+    id = ( (e.isCourse) ? "C" : "E") + e.year + e.tracks + timestamp + "@" + login;
+  }
+  return id;
+}
+
+/**
+ * Create event for Master Agenda
+ *
+ * The syntax is the following for the event/course description:
+ * - Course: <Acronym>**<Lecturer>**<Type>**<Group>
+ * - Event : <Acronym>**<Description>**<Lecturer>
+ *
+ * For the location, the syntax is:
+ * <campus>::<building>@<[Room|Amphi]_<number_or_name>
+ * Ex: Talence::A28-CREMI@Room_999
+ *
+ */
+function createEvent(ueID,e) {
+
+  let ev = {};
+  ev.date_start  = `${e.start.year}-${e.start.month.toString().padStart(2,'0')}-${e.start.day.toString().padStart(2,'0')}T`;
+  ev.date_end    = `${e.end.year}-${e.end.month.toString().padStart(2,'0')}-${e.end.day.toString().padStart(2,'0')}T`;
+  ev.date_start += e.start.time;
+  ev.date_end   += e.end.time;
+
+  ev.start = e.start;
+  ev.end = e.end;
+
+  const course = Object.values(calDB.courses).filter(c => c.source === ueID)[0];
+  // HACK console.log(course);
+  // HACK console.log(e);
+
+  ev.apogee = course.apogee;
+  ev.acronym = course.acronym;
+
+  let words = e.content.split('**');
+
+  ev.isCourse = calDB.courses[ev.apogee].isCourse;
+  ev.year = calDB.courses[ev.apogee].year;
+  ev.tracks = calDB.courses[ev.apogee].tracks.substr(2,2);
+
+  ev.allDay = e.allDay;
+  if (words.length > 1) {
+  ev.lecturer = getLecturer(words[1]);
+  ev.type = getCourseType(words[2]);
+  ev.group = capitalize(words[3]) || "All";
+  } else {
+   ev.lecturer = "TBD";
+  ev.type = "Cours";
+  ev.group =  "All";
+  }
+  ev.location = e.location || 'Unknown::Unknown@Room_unknown';
+  ev.title = e.title;
+  ev.description = e.description; // Sometimes used by Events
+  ev.ID = createCalendarID(ev);
+
+  return ev;
+}
+
+/**
+ * Parse ics file
+ *
+ * @author: Jean-Christophe Taveau
+ */
+function parse_ics(ueID,data) {
+  var all_events = {};
+  var ev;
+  const rows = data.split(/\r?\n/);
+  for (let i = 0; i < rows.length;i++) {
+    var str = rows[i];
+    if (str.indexOf('BEGIN:VEVENT') !== -1) {
+      // New event
+      ev = {sequence:0};
+    }
+    else if (str.indexOf('UID') !== -1) {
+      console.log('Process Event ',str);
+    }
+    else if (str.indexOf('DTSTART') !== -1 && ev !== undefined) {
+      const words = str.split(/[;:]+/);
+      // Check if event is all the day
+      ev.allDay =  (words.length === 3 && words[1] === 'VALUE=DATE') ? true : false;
+      // HACK console.log(words);
+      ev.start = getDate(words[words.length - 1]);
+      console.info(ev);
+    }
+    else if (str.indexOf('DTEND') !== -1) {
+      const words = str.split(/[;:]+/);
+      // HACK console.log(words);
+      ev.end = getDate(words[words.length - 1]);
+    }
+    else if (str.indexOf('SUMMARY') !== -1) {
+      ev.content = str.substr(str.indexOf(':')+1);
+    }
+    else if (str.indexOf('LOCATION') !== -1 && ev !== undefined) {
+      ev.location = getLocation(str.substr(str.indexOf('TION:')+5)) || {campus: 'None',building:'???', type: 'Room',name:'???'};
+    }
+    else if (str.indexOf('DESCRIPTION') !== -1) {
+      if (ueID.includes('MS_')) {
+        // Multiple Lines is possible
+        const matches = data.match(/DESCRIPTION:.*?\'\'\'([\s\S]*?)\'\'\'/);
+        if (Array.isArray(matches) && matches.length > 1) {
+          const cleaned = matches[1].split(/[\n\r]\ /).join('').replaceAll('\r','');
+          console.info('MULTILINE',cleaned);
+          const splits = cleaned.trim().split(']');
+          ev.title = splits[0].slice(1);
+          ev.description = splits[1];
+        }
+        else {
+          ev.title = str.substr(str.indexOf(':')+1);
+          ev.description = '';
+        }
+      }
+      // For course only
+      else {
+        ev.title = str.substr(str.indexOf(':')+1);
+        ev.description = '';
+      }
+
+    }
+    else if (str.indexOf('EXDATE') !== -1) {
+      // Exception dates for periodicity (RRULE)
+      const words = str.split(/[;:]+/).filter( w => /^[0-9T]+$/.test(w) );
+      console.log('EXDATES',words);
+      if (ev.exdates) {
+        ev.exdates.push(words[0].split('T')[0]);
+      }
+      else {
+        ev.exdates = [words[0].split('T')[0]];
+      }
+    }
+    else if (str.indexOf('RRULE') !== -1) {
+      // TODO
+      const params = str
+        .match(/RRULE:(.*)/)[1]
+        .split(';')
+        .reduce( (result,pair) => {
+          const kv = pair.split('=');
+          result[kv[0].trim().toLowerCase()] = kv[1].trim();
+          return result;
+        },{});
+      ev.periodic = true;
+      if (!ev.exdates) {
+        ev.exdates = [];
+      }
+      ev = {...ev,...params};
+      console.log('PERIODIC',ev);
+    }
+    else if (str.indexOf('END:VEVENT') !== -1) {
+      if (ev.periodic && ev.freq === 'WEEKLY') {
+        // Duplicate the event in function of periodicity
+        const today = {
+          y: ev.start.date.getFullYear(),
+          m: ev.start.date.getMonth(),
+          d: ev.start.date.getDate(),
+        };
+        for (let i=0; i < +ev.count;i++) {
+          let days = 7 * i;
+          let nextDate = new Date(today.y, today.m, today.d+days);
+          // Check if exceptions
+          if (!ev.exdates.includes(yyyymmdd(nextDate))) {
+            //console.log(ev.start.date,nextDate, `${yyyymmdd(nextDate)}`);
+            // Create copy of original event
+            let evi = {...ev};
+            // Update start and end dates
+            evi.start.year = nextDate.getFullYear();
+            evi.start.month = nextDate.getMonth() + 1;
+            evi.start.day = nextDate.getDate();
+            evi.start.date = nextDate;
+            evi.end.year = nextDate.getFullYear();
+            evi.end.month = nextDate.getMonth() + 1;
+            evi.end.day = nextDate.getDate();
+            evi.end.date = nextDate;
+            // Create object
+            let obj = createEvent(ueID,evi);
+            all_events[obj.ID] = obj;
+          }
+        }
+
+      }
+      else if (ev.periodic && ev.freq === 'DAILY') {
+        // Duplicate the event in function of periodicity
+        const today = {
+          y: ev.start.date.getFullYear(),
+          m: ev.start.date.getMonth(),
+          d: ev.start.date.getDate(),
+        };
+        console.log('DAILY',ev.count);
+        for (let i=0; i < +ev.count;i++) {
+          let days = i;
+          let nextDate = new Date(today.y, today.m, today.d+days);
+          // Check if exceptions
+          if (!ev.exdates.includes(yyyymmdd(nextDate))) {
+            //console.log(ev.start.date,nextDate, `${yyyymmdd(nextDate)}`);
+            // Create copy of original event
+            let evi = {...ev};
+            // Update start and end dates
+            evi.start.year = nextDate.getFullYear();
+            evi.start.month = nextDate.getMonth() + 1;
+            evi.start.day = nextDate.getDate();
+            evi.start.date = nextDate;
+            evi.end.year = nextDate.getFullYear();
+            evi.end.month = nextDate.getMonth() + 1;
+            evi.end.day = nextDate.getDate();
+            evi.end.date = nextDate;
+            // Create object
+            let obj = createEvent(ueID,evi);
+            all_events[obj.ID] = obj;
+          }
+        }
+
+      }
+
+      else {
+        let obj = createEvent(ueID,ev);
+        all_events[obj.ID] = obj;
+      }
+
+    }
+  } // End of for each row
+  return all_events;
+}
+
+/*
+Example #1: Periodic (Daily) the whole day
+----------------------------------------------
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20220221
+DTEND;VALUE=DATE:20220222
+RRULE:FREQ=DAILY;UNTIL=20220225
+DTSTAMP:20220211T090705Z
+UID:01t0itj2fm76mqkuqg97i9gdds@google.com
+CREATED:20220211T090538Z
+DESCRIPTION:
+LAST-MODIFIED:20220211T090638Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Vacances Hiver
+TRANSP:TRANSPARENT
+END:VEVENT
+
+
+Example #2: Periodic (Weekly) at a given time
+-----------------------------------------------
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Paris:20220906T080000
+DTEND;TZID=Europe/Paris:20220906T100000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20221101T225959Z;BYDAY=TU
+DTSTAMP:20220211T090357Z
+UID:27dv9lqhhqdgodcapjcoq8m1ia@google.com
+CREATED:20220211T090303Z
+DESCRIPTION:
+LAST-MODIFIED:20220211T090303Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:OBI**TEST
+TRANSP:OPAQUE
+END:VEVENT
+
+*/
+
+/*
+ *  calendarmgr: Calendar Manager for the Master of Sciences in BioInformatics, Bordeaux, France Web Site
+ *  Copyright (C) 2015-2017  Jean-Christophe Taveau.
+ *
+ *  This file is part of calendarmgr
+ *
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with calendarmgr.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *../node_modules/.bin/babel tool_ics.js -o tool_ics_j5.js
+ *
+ * Authors:
+ * Jean-Christophe Taveau
+ */
 
 
 // Polyfill
@@ -2443,14 +2818,24 @@ function nextWeek() {
 }
 
 
+function parseIcal(txt) {
+  let json = [];
+  // Parse ical
+
+
+  return json;
+}
+
 /******************************************************
  *
  * C A L E N D A R
  *
  ******************************************************/
 
+
 var calendar_data = {};
 var table = new TableCal();
+let EVENT_COUNT = 0;
 
 initCalendar();
 
@@ -2461,29 +2846,60 @@ initCalendar();
  **/
 
 function initCalendar() {
-    var now = new Date();
+    const now = new Date();
 
-    var cal = document.getElementById("calendar");
+    let cal = document.getElementById("calendar");
     cal.dataset.year  = now.getFullYear();
     cal.dataset.month = now.getMonth();
     cal.dataset.day   = now.getDate();
 
-    // Load M1 events
-    loadCalendarData('calendar_m1.json');
-    // Load M2 events
-    loadCalendarData('calendar_m2.json');
-    // Load not-course events
-    loadCalendarData('calendar_event.json');
+    // Check Spring of Fall Semesters
+    console.log('Month',cal.dataset.month);
+    let semesters = (cal.dataset.month < 7) ? ['S08', 'S10'] : ['S07','S09'];
+    if (cal.dataset.month >= 11) {
+      semesters = ['S07','S08', 'S09']
+    }
+    console.log(semesters);
 
+    // Load M1 + M2 events
+    const ues = Object.values(calDB.courses).filter( c => semesters.includes(c.semester) );
+    console.log(ues);
+    for (let ue of ues) {
+      loadCalendarICS(ue.source);
+    }
+
+    // Load M2 events
+    loadCalendarICS('MS_VACANCES');
+    loadCalendarICS('MS_EVENTS');
+
+    updateCalendar();
+}
+
+function loadCalendarICS(ueID) {
+    // HACK console.log('LOAD ' + ueID);
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        // HACK: console.info('Try to load...',ueID,xhr.readyState,xhr.status);
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+            let data = parse_ics(ueID,xhr.responseText);
+            // Merge events...
+            Object.assign(calendar_data,data);
+        }
+    };
+    const path = "https://master-bioinfo-bordeaux.github.io/data/";
+    // HACK: console.info(`Load ${path}${ueID}.ics`)
+    xhr.open("GET", `${path}${ueID}.ics`, true);
+    xhr.send(null);
 }
 
 function loadCalendarData(filename) {
-    console.log('LOAD ' + filename);
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
             let data = JSON.parse(xhr.responseText); // Données textuelles récupérées
+            // Merge events...
             Object.assign(calendar_data,data); // ECMAScript 2015
             updateCalendar();
         }
@@ -2496,6 +2912,7 @@ function loadCalendarData(filename) {
 
 function updateCalendar() {
 
+    // HACK: console.log(calendar_data);
     table.reset();
 
     var y = parseInt(document.getElementById("calendar").dataset.year);
@@ -2523,139 +2940,157 @@ function updateCalendarHeader(y,m,d) {
     document.getElementById('weeknum-small').innerHTML = getISOWeekNum(y,m,d);
 }
 
+// Core function doing the job
+
 function updateCalendarBody(y,m,d) {
-    var masterYear  = parseInt(localStorage.masterYear) || 1; // Default M1
-    var masterTrack = parseInt(localStorage.masterTrack) || 1; // Default track: C++Bio=1; GenEco=2,BAO=4;BSC=8
+  const masterYear  = parseInt(localStorage.masterYear) || 1; // Default M1
+  const masterTrack = parseInt(localStorage.masterTrack) || 1; // Default track: C++Bio=1; GenEco=2
 
-    // console.log(calendar_data);
-    var today = new Date(y,m,d);
-    var weekdays = [];
-    weekdays[0] = {events:[],boxes:[]}; // MON
-    weekdays[1] = {events:[],boxes:[]}; // TUE
-    weekdays[2] = {events:[],boxes:[]}; // WED
-    weekdays[3] = {events:[],boxes:[]}; // THU
-    weekdays[4] = {events:[],boxes:[]}; // FRI
+  console.log('ALL DATA',calendar_data);
 
+  var today = new Date(y,m,d);
+  var weekdays = [];
+  weekdays[0] = {events:[],boxes:[]}; // MON
+  weekdays[1] = {events:[],boxes:[]}; // TUE
+  weekdays[2] = {events:[],boxes:[]}; // WED
+  weekdays[3] = {events:[],boxes:[]}; // THU
+  weekdays[4] = {events:[],boxes:[]}; // FRI
 
-    // Search events occuring during this week
+  // Search events occuring during this week
 
-    for (var index in calendar_data) {
-        var element = calendar_data[index];
-        element.MSYear  = parseInt(element.ID[1]);
-        element.MSTrack = parseInt(element.ID.substr(2,2),16);
-        element.weekdayIndex = -1;
-        // HACK: console.log(element);
-        if (   (element.MSYear == masterYear || element.MSYear === 3)
-            && ((element.MSTrack & masterTrack) === masterTrack || (element.MSTrack & masterTrack*16) === masterTrack*16 ) ) {
-            var startDate = new Date(
-                parseInt(element.date_start.substr(0,4)),
-                parseInt(element.date_start.substr(5,2)) - 1,
-                parseInt(element.date_start.substr(8,2)),
-                parseInt(element.date_start.substr(11,2)),
-                parseInt(element.date_start.substr(14,2))
-            );
-            var endDate   = new Date(
-                parseInt(element.date_end.substr(0,4)),
-                parseInt(element.date_end.substr(5,2)) - 1,
-                parseInt(element.date_end.substr(8,2)),
-                parseInt(element.date_end.substr(11,2)),
-                parseInt(element.date_end.substr(14,2))
-            );
-
-            if (parseInt(element.date_start.substr(11,2)) == 0) {
-                element.allDay = true;
-            }
-            else {
-                element.allDay = false;
-            }
-            // HACK: console.log('START ' + startDate);
-
-            // From MON to FRI
-            for (var i = 1; i < 6; i++) {
-                var day = new Date(y,m,d - today.getDay() + i);
-                var dayD       = day.toCalString().substr(0,10);  // Days number since UTC
-                var startDateD = element.date_start.substr(0,10); // Days number since UTC
-                var endDateD   = element.date_end.substr(0,10);   // Days number since UTC
-                // HACK: console.log(dayD,startDateD,endDateD,day, day.toCalString());
-                if ( dayD >= startDateD && dayD <= endDateD ) { // HACK: What about multi-days event ?
-                    // HACK: console.log(day + ' creates an event with ' + element.ID + ' ' +  element.apogee);
-                    var timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
-                    element.startDate = startDate;
-                    element.endDate   = endDate;
-                    element.overlap   = false;
-                    // element.duration  = Math.ceil(timeDiff / (1000 * 60)); // ms -> min
-                    element.duration  = Math.round(timeDiff / (1000 * 60 * 60) * 2 ) * 30; // round to the nearest half hour (in minutes)
-                    if (element.weekdayIndex == -1) {
-                        element.weekdayIndex = i;
-                        weekdays[i-1].events.push(element);
-                    }
-                    else {
-                        // Already exists aka multiday event
-                        // Copy element
-                        var elementClone = element.constructor();
-                        for (var attr in element) {
-                            if (element.hasOwnProperty(attr)) elementClone[attr] = element[attr];
-                        }
-                        elementClone.weekdayIndex = i;
-                        weekdays[i-1].events.push(elementClone);
-                    }
-                }
-            }
-        }
+  for (let index in calendar_data) {
+    const element = calendar_data[index];
+    console.log(element);
+    element.MSYear  = parseInt(element.ID[1]);
+    element.MSTrack = parseInt(element.ID.substr(2,2),16);
+    // Special cases of MS_EVENTS
+    if (element.apogee === '4TBIEVNT' && element.lecturer === "MASTER1") {
+      element.MSYear = 1;
+    }
+    else if (element.apogee === '4TBIEVNT' && element.lecturer === "MASTER2") {
+      element.MSYear = 2;
+    }
+    // Special cases of groups; A1 = biocomp. A2 = SDBE+BioProd; All = No change
+    if (element.group.toUpperCase() === 'A1') {
+      element.MSTrack = element.MSTrack & 0x01 || element.MSTrack & 0x10;
+    }
+    else if (element.group.toUpperCase() === 'A2') {
+      element.MSTrack = element.MSTrack & 0x02 || element.MSTrack & 0x20;
+    }
+    if (element.apogee === "4TBI804U" || element.acronym === "S08::NGS") {
+      console.log('TTTTRACK',element.apogee,element.MSTrack,masterTrack);
     }
 
-    // Clean up daily events
-    for (var i = 0; i < 5; i++) {
-        // 1- Check Overlap(s)
-        a_day = weekdays[i];
-        for (var j = 0; j < a_day.events.length; j++) {
-            if (!a_day.events[j].allDay && !a_day.events[j].overlap) {
-                var box = {
-                    startDate: a_day.events[j].startDate,
-                    endDate  : a_day.events[j].endDate,
-                    weekdayIndex : a_day.events[j].weekdayIndex,
-                    children: []
-                };
-                box.children.push(a_day.events[j]);
-                a_day.boxes.push(box);
-                var start = a_day.events[j].startDate.getTime();
-                var end   = a_day.events[j].endDate.getTime();
-                for (var k = j + 1; k < a_day.events.length; k++) {
-                    if (start < a_day.events[k].endDate.getTime() && end > a_day.events[k].startDate.getTime() && !a_day.events[k].allDay) {
-                        a_day.events[k].overlap = true;
-                        box.startDate = new Date(Math.min(box.startDate,a_day.events[k].startDate) );
-                        box.endDate   = new Date(Math.max(box.endDate, a_day.events[k].endDate) );
-                        box.children.push(a_day.events[k]);
-                    }
-                }
-                var timeDiff = Math.abs(box.endDate.getTime() - box.startDate.getTime());
-                box.duration  = Math.round(timeDiff / (1000 * 60 * 60) * 2 ) * 30; // round to the nearest half hour (in minutes)
+    element.weekdayIndex = -1;
+    // HACK: console.log(element);
+    if (  (element.MSYear == masterYear || element.MSYear === 3)
+      && ((element.MSTrack & masterTrack) === masterTrack || (element.MSTrack & masterTrack*16) === masterTrack*16 ) ) {
+      const startDate = new Date(
+        element.start.year, element.start.month - 1, element.start.day,
+        element.start.hour,element.start.minute
+      );
+      const endDate = new Date(element.end.year, element.end.month - 1, element.end.day,element.end.hour,element.end.minute);
 
-            }
-        }
-        /*
-        console.log('BOX ' +i+':');
-        if (weekdays[i].boxes[0] !== undefined) {
-            console.log(weekdays[i].boxes[0].startDate.toString() + ' - ' +  weekdays[i].boxes[0].endDate.toString());
-             console.log(weekdays[i].boxes[0]);
-        }
-        */
+      // HACK: console.log('START ' + element.allDay);
 
-        // 2- Sort events by time from 0800 to 1900
-        weekdays[i].boxes.sort(function sort(a,b) {
-            if (a.startDate.getTime() > b.startDate.getTime() ) {
-                return 1;
+      // Gather events by weekdays from MON to FRI
+      for (let i = 1; i < 6; i++) {
+        const day = new Date(y,m,d - today.getDay() + i);
+        const dayD       = day.toCalString().substr(0,10);  // Days number since UTC
+        const startDateD = element.date_start.substr(0,10); // Days number since UTC
+        const endDateD   = element.date_end.substr(0,10);   // Days number since UTC
+        // HACK: console.log('DAYS',dayD,startDateD,endDateD,day, day.toCalString(),startDate,endDate);
+        if ( dayD >= startDateD && dayD <= endDateD ) { // HACK: What about multi-days event ?
+          // HACK: console.log(day + ' creates an event with ' + element.ID + ' ' +  element.apogee + ' at ' + startDate);
+          const timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
+          element.startDate = startDate;
+          element.endDate   = endDate;
+          element.overlap   = false;
+
+          // Round to the nearest half hour (in minutes)
+          element.duration  = Math.round(timeDiff / (1000 * 60 * 60) * 2 ) * 30;
+          if (element.weekdayIndex == -1) {
+            element.weekdayIndex = i;
+            weekdays[i-1].events.push(element);
+          }
+          else {
+            // HACK console.log('MULTIDAY',element);
+            // Already exists aka multiday event
+            // Copy element
+            var elementClone = element.constructor();
+            for (let attr in element) {
+                if (element.hasOwnProperty(attr)) elementClone[attr] = element[attr];
             }
-            else if (a.startDate.getTime() < b.startDate.getTime() ) {
-                return -1;
-            }
-            else {
-                return 0;
-            }
-        });
+            elementClone.weekdayIndex = i;
+            weekdays[i-1].events.push(elementClone);
+          }
+        } // if
+      } // for
+    } // if
+  } // for
+
+  // HACK: console.log('WEEKDAYS',weekdays);
+
+  // Clean up daily events for every weekday MON(0) to THU(4)
+  for (let i = 0; i < 5; i++) {
+    let a_day = weekdays[i];
+    // 1- Sort events by time from 0800 to 1900
+    a_day.events.sort(function sort(a,b) {
+      a_time = a.start.hour + a.start.minute / 60;
+      b_time = b.start.hour + b.start.minute / 60;
+      if (a_time > b_time ) {
+          return 1;
+      }
+      else if (a_time < b_time ) {
+          return -1;
+      }
+      else {
+          return 0;
+      }
+    });
+
+    // 2- Check Overlap(s)
+    for (let j = 0; j < a_day.events.length; j++) {
+      if (!a_day.events[j].allDay && !a_day.events[j].overlap) {
+        var box = {
+          startDate: a_day.events[j].startDate,
+          endDate  : a_day.events[j].endDate,
+          weekdayIndex : a_day.events[j].weekdayIndex,
+          children: []
+        };
+        box.children.push(a_day.events[j]);
+        a_day.boxes.push(box);
+        var start = box.startDate.getTime();
+        var end   = box.endDate.getTime();
+        for (let k = j + 1; k < a_day.events.length; k++) {
+          console.log('OVERLAP ',k,start,end,box.startDate,Date.parse(box.startDate),
+            a_day.events[k].acronym,
+            a_day.events[k].startDate.getTime(),a_day.events[k].endDate.getTime()
+          );
+          if (start <= a_day.events[k].endDate.getTime() && end > a_day.events[k].startDate.getTime() && !a_day.events[k].allDay) {
+            a_day.events[k].overlap = true;
+            box.startDate = new Date(Math.min(box.startDate,a_day.events[k].startDate) );
+            box.endDate   = new Date(Math.max(box.endDate, a_day.events[k].endDate) );
+            box.children.push(a_day.events[k]);
+            start = box.startDate.getTime();
+            end   = box.endDate.getTime();
+          }
+        }
+        var timeDiff = Math.abs(box.endDate.getTime() - box.startDate.getTime());
+        box.duration  = Math.round(timeDiff / (1000 * 60 * 60) * 2 ) * 30; // Round to the nearest half hour (in minutes)
+      }
     }
 
-    createEventCells(weekdays);
+      /*
+      console.log('BOX ' +i+':');
+      if (weekdays[i].boxes[0] !== undefined) {
+          console.log(weekdays[i].boxes[0].startDate.toString() + ' - ' +  weekdays[i].boxes[0].endDate.toString());
+           console.log(weekdays[i].boxes[0]);
+      }
+      */
+  }
+
+  createEventCells(weekdays);
 }
 
 
@@ -2669,7 +3104,7 @@ function getWeekDays(y,m,d) {
         weekdays.push(shortdays[day.getDay()] +' <sub>' + day.getDate() + ' ' + months[day.getMonth()] +'</sub>');
     }
 
-    // console.log(weekdays) ;
+    // HACK  console.log(weekdays) ;
     return weekdays;
 }
 
@@ -2688,33 +3123,33 @@ function getYYYYMMDD(date) {
  * By Taco van den Broek
  */
 function getISOWeekNum(y,m,d) {
-    var date = new Date(y,m,d);
-	// Create a copy of this date object
-	var target  = new Date(y,m,d);
+  const date = new Date(y,m,d);
+  // Create a copy of this date object
+  const target  = new Date(y,m,d);
 
-	// ISO week date weeks start on monday
-	// so correct the day number
-	var monday   = (date.getDay() + 6) % 7;
+  // ISO week date weeks start on monday
+  // so correct the day number
+  var monday   = (date.getDay() + 6) % 7;
 
-	// ISO 8601 states that week 1 is the week
-	// with the first thursday of that year.
-	// Set the target date to the thursday in the target week
-	target.setDate(target.getDate() - monday + 3);
+  // ISO 8601 states that week 1 is the week
+  // with the first thursday of that year.
+  // Set the target date to the thursday in the target week
+  target.setDate(target.getDate() - monday + 3);
 
-	// Store the millisecond value of the target date
-	var firstThursday = target.valueOf();
+  // Store the millisecond value of the target date
+  var firstThursday = target.valueOf();
 
-	// Set the target to the first thursday of the year
-	// First set the target to january first
-	target.setMonth(0, 1);
-	// Not a thursday? Correct the date to the next thursday
-	if (target.getDay() != 4) {
-		target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
-	}
+  // Set the target to the first thursday of the year
+  // First set the target to january first
+  target.setMonth(0, 1);
+  // Not a thursday? Correct the date to the next thursday
+  if (target.getDay() != 4) {
+    target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+  }
 
-	// The weeknumber is the number of weeks between the
-	// first thursday of the year and the thursday in the target week
-	return 1 + Math.ceil((firstThursday - target) / 604800000); // 604800000 = 7 * 24 * 3600 * 1000
+  // The weeknumber is the number of weeks between the
+  // first thursday of the year and the thursday in the target week
+  return 1 + Math.ceil((firstThursday - target) / 604800000); // 604800000 = 7 * 24 * 3600 * 1000
 }
 
 
@@ -2744,7 +3179,7 @@ function createCourseModal(ID) {
     // HACK: console.log(calendar_data[ID]);
     var courseID = calendar_data[ID].apogee;
     var the_course = course_data[courseID];
-    var image = the_course.image  || 'headinfo.jpg';
+    var image = the_course.image  || 'headinfo.jpg';
     var lang = /fr/i.test(navigator.language) ? 'fr' : 'en';
 
     // If the_course is a sub-course (ex: AEB-Info is a sub-part of AEB), then get the parent course for information
@@ -2822,21 +3257,24 @@ function createCourseModal(ID) {
 
 function createEventModal(ID) {
     var the_event = course_data[calendar_data[ID].apogee];
-
-    var html = '';
-    html += '<div class="modal-dialog"><div class="modal-content"><div class="modal-header">';
-    html += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
-    html += '<h4 class="modal-title">'+the_event.title +'<span class="pull-right"><i class="' + the_event.icon +'"> </i>&nbsp;&nbsp;&nbsp;&nbsp;</span></h4>';
-    html += '</div>';
-    html += '<div class="modal-body">';
-    html += '<p><img class="img-responsive" src="img/' + the_event.image + '" alt=""></p>';
-    html += '';
-    html += '<h2>' + calendar_data[ID].title + '</h2>';
-    html += calendar_data[ID].description;
-    html += '</div>';
-    html += '<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>';
-    html += '</div>'; // modal-content
-    html += '</div>'; // modal-dialog
+    console.log('EVENT',calendar_data[ID]);
+    const html = `
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">${the_event.title} <span class="pull-right"><i class="${the_event.icon}"> </i>&nbsp;&nbsp;&nbsp;&nbsp;</span></h4>
+        </div>
+        <div class="modal-body">
+          <p><img class="img-responsive" src="img/${the_event.image}" alt=""></p>
+          <h2>${calendar_data[ID].title}</h2>
+          ${calendar_data[ID].description} 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div> 
+    </div>`;
 
     return html;
 }
@@ -2844,6 +3282,8 @@ function createEventModal(ID) {
 function createEventCells(days) {
     //console.log("EVENTS OF THIS WEEK");
     // HACK: console.log(days);
+    console.log('DAYS');
+    console.log(days);
 
     var html='';
     // ROW 0 = ALL DAY events
@@ -2872,7 +3312,7 @@ function createEventCells(days) {
         for (var column = 0; column < 5; column++) {
             // Regular events
             var contents = findEvent(days[column].boxes,row,column);
-            if (table.cells[i][column] == 0) {
+            if (table.cells[i][column] === 0) {
                 html += createEmptyCell();
             }
             else {
@@ -2897,8 +3337,9 @@ function findEvent(events,start,col) {
     var stack = [];
     var max_duration = 0;
     var found;
-    for (var i = 0; i < events.length; i++) {
-        var startMin = Math.round((events[i].startDate.getHours() + events[i].startDate.getMinutes()/60.0) * 2 ) * 30; // round to the nearest half hour (in minutes)
+    for (let i = 0; i < events.length; i++) {
+        // round to the nearest half hour (in minutes)
+        var startMin = Math.round((events[i].startDate.getHours() + events[i].startDate.getMinutes()/60.0) * 2 ) * 30;
         var startMax = startMin + events[i].duration;
         var startDay = events[i].weekdayIndex;
 
@@ -2915,13 +3356,14 @@ function findEvent(events,start,col) {
     }
 
     if (found !== undefined) {
-            // Choose the duration max
+        // Choose the duration max
         // <td> with gray
         var background_color = (found.children.length > 1) ? '#eee' : course_data[found.children[0].apogee].background_color;
         html += '<td rowspan="'+ (found.duration / 60 * 2) +'" style="background-color: ' + background_color+';">';
         if (found.children.length > 1) {
+            // HACK: console.log('Overlapping ',found.children);
             html+= '<a title="Overlapping Events"><i class="fa fa-2x fa-object-ungroup"></i></a>';
-            for (var i=0; i < found.children.length; i++) {
+            for (let i=0; i < found.children.length; i++) {
                 // Add each colliding event
                 html += createEventCell(found.children[i]);
             }
@@ -2934,8 +3376,9 @@ function findEvent(events,start,col) {
         html += '</td>';
 
         // Update cells
-        for (var t=0; t < found.duration / 30; t++) {
+        for (let t=0; t < found.duration / 30; t++) {
             // HACK: console.log(max_duration + ' ' + 'table.cells[' + ( (start - 480 )/30 + t) +']['+col+']');
+            // HACK: console.log(t,start,(start - 480 )/30 + t,col);
             table.cells[(start - 480 )/30 + t][col]++;
         }
 
@@ -2944,6 +3387,97 @@ function findEvent(events,start,col) {
 
 
     return html;
+}
+//function findEvent(events,start,col) {
+//    var day = col + 1 // col#0 = MONDAY = day#1
+//    var html='';
+//    var stack = [];
+//    var max_duration = 0;
+//    var found = {is_found: false,children: []};
+//
+//    console.log(events);
+//    i = 0;
+//    while (!found.is_found && i < events.length) {
+//      // round to the nearest half hour (in minutes) - BUG ?
+//      var startMin = events[i].startDate.getHours() * 60 + Math.round((events[i].startDate.getMinutes()/60.0) * 2 ) * 30;
+//      var startMax = startMin + events[i].duration;
+//      var startDay = events[i].weekdayIndex;
+//
+//      // TODO: Take into account the overlapping events !!!!!!!!!!!!!!!!!!!!!!
+//      // Event #1: 14:00-18:00
+//      // Event #2: 15:00-16:30
+//      // if (startMin >= start && startDay == day) { <<<<<<<<<<<<< DOES NOT WORK
+//      if (startMin == start && startDay == day) {
+//        console.log('findEvent ' + startMin +' ' + start + ' ' + events[i].startDate + ' ' + events[i].children.length);
+//        found.day = day;
+//        found.index = i;
+//        found.children.push(events[i]);
+//        found.start_min = startMin;
+//        found.start_max = startMax;
+//        max_duration = Math.max(events[i].duration, max_duration);
+//        found.duration = max_duration;
+//        // Check if any overlapping events
+//        found = findOverlap(found,events);
+//        found.is_found = true;
+//      }
+//      i++;
+//    }
+//
+//    console.log('FOUND');
+//    console.log(found);
+//
+//    if (found.is_found) {
+//        // Choose the duration max
+//        // <td> with gray
+//        var background_color = (found.children.length > 1) ? '#eee' : course_data[found.children[0].apogee].background_color;
+//        html += '<td rowspan="'+ (found.duration / 60 * 2) +'" style="background-color: ' + background_color+';">';
+//        if (found.children.length > 1) {
+//            // HACK: console.log('Overlapping ',found.children);
+//            html+= '<a title="Overlapping Events"><i class="fa fa-2x fa-object-ungroup"></i></a>';
+//            for (let i=0; i < found.children.length; i++) {
+//                // Add each colliding event
+//                html += createEventCell(found.children[i]);
+//            }
+//        }
+//        else {
+//            html += createEventCell(found.children[0]);
+//        }
+
+//        // </td>
+//        html += '</td>';
+//
+//        // Update cells
+//        for (let t=0; t < found.duration / 30; t++) {
+//            // HACK: console.log(max_duration + ' ' + 'table.cells[' + ( (start - 480 )/30 + t) +']['+col+']');
+//            // HACK: console.log(t,start,(start - 480 )/30 + t,col);
+//            table.cells[(start - 480 )/30 + t][col]++;
+//        }
+//
+//    }
+//
+
+
+//    return html;
+//}
+
+// Added in 2025/01/07
+// JC Taveau
+function findOverlap(selected,all_events) {
+  for (let i = 0; i < all_events.length; i++) {
+    // round to the nearest half hour (in minutes)
+    let mins_from = all_events[i].startDate.getHours() * 60 + Math.round((all_events[i].startDate.getMinutes()/60.0) * 2 ) * 30;
+    let mins_upto = mins_from + all_events[i].duration;
+    let startDay = all_events[i].weekdayIndex;
+
+    if (selected.index != i && selected.day == startDay && selected.start_min <= mins_from && mins_from < selected.start_max) {
+      // Add overlapping event
+      selected.children.push(all_events[i]);
+      // Update
+      selected.start_max = (selected.start_max < mins_upto) ? mins_upto : selected.start_max;
+      selected.duration = selected.start_max - selected.start_min;
+    }
+  }
+  return selected;
 }
 
 function createEmptyCell() {
@@ -2960,19 +3494,25 @@ function createEventCell(cal_event) {
     if (ID[0] === 'C' || ID[0] === 'E') {
         var courseID = calendar_data[ID].apogee;
         var the_course = course_data[courseID];
-        var masterTrack = parseInt(localStorage.masterTrack) || 1; // Default track: C++Bio=1; GenEco=2,BAO=4;BSC=8
+        var masterTrack = parseInt(localStorage.masterTrack) || 1; // Default track: C++Bio=1; SDBE=2,BioProd=4;FC=8
         // HACK: console.log('TRACK ' + masterTrack + ' ' + the_course.tracks + '='+parseInt(the_course.tracks,16) + ' '
         // +((parseInt(the_course.tracks,16) & masterTrack)) );
-
+        let course_tracks = parseInt(the_course.tracks,16);
+        if (cal_event.lecturer.toUpperCase() == 'MASTER1') {
+          course_tracks = 15; // 0x0F
+        }
+        else if (cal_event.lecturer.toUpperCase() == 'MASTER2') {
+          course_tracks = 240; // 0xF0
+        }
         html += '<div class="course" style="background-color: '+the_course.background_color+';">';
         html += '<ul class="list-unstyled">';
         html += '<li>';
         html += '<a data-toggle="modal" ';
         html += 'href="javascript:void(0)" ';
-        if (ID[0] === 'C' && (parseInt(the_course.tracks,16) & masterTrack) === masterTrack) {
+        if (ID[0] === 'C' && (course_tracks & masterTrack) === masterTrack) {
             html += 'class="btn btn-danger btn-xs" '; // Color is Red: 'required course' btn-danger
         }
-        else if (ID[0] === 'C' && (parseInt(the_course.tracks,16) & masterTrack*16) === masterTrack*16) {
+        else if (ID[0] === 'C' && (course_tracks & masterTrack*16) === masterTrack*16) {
             html += 'class="btn btn-primary btn-xs" '; // Color is Green: 'elective' btn-success
         }
         else {
@@ -3004,23 +3544,26 @@ function createEventCell(cal_event) {
 
         html += '</li>';
         //html += '<li>'+ cal_event.comment +'</li>';
-        html += '<li class=" hidden-sm hidden-xs">'+ cal_event.lecturer+'<span class="pull-right">'+cal_event.type+'</span></li>';
+        html += `<li class=" hidden-sm hidden-xs">${cal_event.lecturer}<span class="pull-right">${cal_event.type}</span></li>`;
         html += '<li">Grp: '+ cal_event.group+'</li>';
 
         // Location: Campus::Bldg@[Room\Amphi]_name
-        var tmp = cal_event.location.match(/(.+)::/);
-        var campus = tmp[1];
-        if (campus !== "None") {
-            tmp = cal_event.location.match(/::(.+)@/);
-            var bldg = tmp[1];
-            tmp = cal_event.location.match(/@(\w+)/);
-            let room = 'Room';
-            let room_name = '000';
-            [room,room_name] = tmp[1].split('_');
+        if (cal_event.location.campus !== '-'
+          && cal_event.location.building !== '-'
+          && cal_event.location.type !== '-'
+          && cal_event.location.name !== '-' ) {
+
+            let campus = cal_event.location.campus;
+            let bldg = cal_event.location.building;
+            let room = cal_event.location.type;
+            let room_name = cal_event.location.name;
             html += '<li class="hidden-sm hidden-xs">Campus: '+ campus+'</li>';
             html += '<li class="hidden-sm hidden-xs">Bldg: '+ bldg  +'</li>';
             html += '<li class="hidden-lg hidden-md">'+ bldg  +'</li>';
             html += '<li>'+room +': '+ room_name  +'</li>';
+          }
+        else {
+          console.warn('No location',cal_event);
         }
 
         html += '</ul>';
@@ -3048,8 +3591,8 @@ function createEventCell(cal_event) {
     return html;
 }
 
-;
-displayNews(1);
+
+// displayNews(1);
 
 function NewsReader() {
 
