@@ -99,12 +99,78 @@ color:#ff8700 !important;
 }
 
 /* ---------CALENDAR----------- */
-
+/*Bordel mais azy ça marche*/
 
 #calendar .my-5{
   margin:0px!important;
 }
-#calendar #masterYear-small{
+/* Par défaut : tout sur une ligne */
+#calendar #calendar-options.row {
+  display: flex !important;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* En dessous de 470px : le bloc flèches passe seul sur sa ligne */
+@media screen and (max-width: 470px) {
+  #calendar #calendar-options.row {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+  #calendar .week-nav-small {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    justify-content: center;
+    margin-bottom: 14px !important;
+    margin-right: 0 !important;
+  }
+  #calendar .year-select-small,
+  #calendar .track-select-small {
+    flex: 0 0 auto !important;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  #calendar .year-select-small {
+    margin-right: 2px!important;
+  }
+  #calendar-options .col-lg-3.col-md-3.hidden-sm.hidden-xs,
+  #calendar-options .col-lg-4.col-md-4.hidden-sm.hidden-xs {
+    display: none !important;
+  }
+}
+
+#calendar .week-nav-small {
+  flex: 0 1 auto;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+#calendar .week-nav-small .btn {
+  flex-shrink: 0;
+}
+#calendar #weeknum-small {
+  font-size: 16px !important;
+  font-weight: 400;
+  margin: 0 4px;
+}
+
+#calendar .year-select-small,
+#calendar .track-select-small {
+  flex: 0 0 auto;
+  max-width: none;
+}
+#calendar .year-select-small select,
+#calendar .track-select-small select {
+  width: auto;
+  min-width: 0;
+  padding: 6px 24px 6px 10px;
+}
+/*#calendar #masterYear-small{
   display:none!important;
 }
 #calendar #masterTrack-small{
@@ -112,7 +178,7 @@ color:#ff8700 !important;
 }
 #calendar .hidden-lg{
   display: none!important;
-}
+}*/
 #calendar .pt-5{
   padding-top:35px!important;
 }
@@ -165,7 +231,7 @@ color:rgb(3, 54, 65) !important;
 }
 #calendar #weekForward{
 	padding: 0!important;
-border: 0!important;
+    border: 0!important;
 }
 #calendar #weekBackward{
 	border: 0!important;

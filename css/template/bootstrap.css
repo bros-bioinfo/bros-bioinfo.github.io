@@ -1976,6 +1976,7 @@ pre {
 .row {
   margin-left: -15px;
   margin-right: -15px;
+  margin-bottom: 10px;
 }
 .row:before, .row:after {
   content: " ";
