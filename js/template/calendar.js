@@ -2382,70 +2382,193 @@ function getLecturer(name = "------") {
 
 
 /**
- * General Syntax: <campus>::<building>@<Room|Amphi}_<name>
- * Other simplified syntax are available:
- * <building>@<Room|Amphi}_<name> - The campus (Peixotto | Bordes) is deduced from the building's name
+ * Buildings with a well-known nickname and campus of the buildings (A: Peixotto, B: Bordes)
+ */
+const BUILDINGS = {A21: 'A21-OMEGA', A28: 'A28-CREMI', A30: 'A30-LaBRI'};
+
+/**
+ * Campus written in the ICS files (Talence is the city, not a campus, but it is widely used)
+ */
+const CAMPUS = {
+  peixotto: 'Peixotto',
+  bordes: 'Bordes',
+  carreire: 'Carreire',
+  talence: 'Talence',
+  tallence: 'Talence', // Typo found in some ICS
+};
+
+/**
+ * General Syntax: <campus>::<building>@<Room|Amphi>_<name>
+ * The ICS are filled by hand, so a lot of variants must be accepted:
+ * <campus>::<building>@<Room|Amphi>_<name> - The reference syntax. Ex: `Talence::A28@Salle_005`
+ * <building>@<Room|Amphi>_<name> - The campus (Peixotto | Bordes) is deduced from the building's name
+ * The separators `@`, `/`, `_` are interchangeable and the blanks around them are ignored.
+ * Ex: `A21/Salle Informatique A`, `Talence::A21@Salle 153`, `A13/ Salle 9`
+ * The building may be buried in free text. Ex: `Talence::CREMI - Bât. A28@Salle_205`
+ * The room's name may contain blanks. Ex: `Salle_Informatique A`
+ * A remote course is detected with keywords. Ex: `Talence::DISTANCIEL@Salle_2`, `DISTANCIEL 3`
  * @<name> - Without specific building, it is assigned `CREMI (A28|A21)` with a `Room` whose name is <name>
  * @ - Returns an object with default props { campus: 'Peixotto', building: 'CREMI (A28|A21)', type: 'Room', name: '???' }
- * <nothing> - Returns an "empty" object with props { campus: '-', building: '-', type: '-', name: '-' }
- *           - The fields about location are not shown (mainly for events like holidays)
+ * <nothing> | `PAS DE SALLE` - Returns an "empty" object with props { campus: '-', building: '-', type: '-', name: '-' }
+ *           - The unknown fields are not shown (mainly for events like holidays)
  */
 function getLocation(loc) {
 
-  const patterns = [
-    /^@$/,
-    /^@([A-Za-z0-9?]*)/,
-    /^([AB][0-9]{1,2})@([A-Za-z0-9?\-]*)/,
-    /^([AB][0-9]{2})@(\w*)_([A-Za-z0-9?]*)/,
-    /^(\w*)\:\:([A-Za-z0-9?]*)@(\w*)\_([A-Za-z0-9?]*)/
-  ];
+  const unknown = {index: -1, campus: '-', building: '-', type: '-', name: '-', loc: loc};
 
-  const props = [
-    [],
-    ['name'],
-    ['building','name'],
-    ['building','type','name'],
-    ['campus','building','type','name'],
-  ]
+  if (typeof loc !== 'string') {
+    return unknown;
+  }
 
-  const location = patterns.reduce( (accu,regex,i) => {
-    const matched = loc.match(regex);
-    if ( matched !== null) {
-      accu.index = i;
-      props[i].forEach( (prop,idx) => accu[prop] = matched[idx+1]);
+  // Drop the CR of the ICS and the duplicated blanks
+  const raw = loc.replace(/\r/g,'').replace(/\s+/g,' ').trim();
+  if (raw === '' || raw === '-' || /^\(?(pas de salle|sans salle|no room|non sp[ée]cifi[ée]e?)\)?$/i.test(raw)) {
+    return Object.assign(unknown,{loc: raw});
+  }
+
+  // Legacy short syntax: `@` alone or `@<name>` means a room of the CREMI
+  const shorthand = raw.match(/^@([A-Za-z0-9?]*)$/);
+  if (shorthand !== null) {
+    return {
+      index: 1,
+      campus: 'Peixotto',
+      building: 'CREMI (A28|A21)',
+      type: 'Room',
+      name: shorthand[1] || '???',
+      loc: raw
+    };
+  }
+
+  const location = Object.assign({},unknown,{loc: raw});
+
+  // Split `<campus>::<the rest>`. The campus is optional
+  const parts = raw.split('::');
+  let tail = parts.pop().trim();
+  let campus = parts.join('::').trim();
+
+  // The building may be prefixed by free text like `CREMI - Bât.` and followed by its
+  // nickname like `A28-CREMI`
+  const building = tail.match(/\b([AB]) ?[-–]? ?([0-9]{1,2})(?: ?[-–] ?(?!salle|room|amphi|td|tp)[A-Za-zÀ-ÿ]+)?\b/i);
+  if (building !== null) {
+    const id = building[1].toUpperCase() + building[2];
+    location.building = BUILDINGS[id] || id;
+    // The campus deduced from the building is more accurate than the one written in the ICS
+    location.campus = (id[0] === 'A') ? 'Peixotto' : 'Bordes';
+    tail = tail.slice(building.index + building[0].length);
+  }
+  else if (/distanciel|visio|en ligne|remote/i.test(tail)) {
+    location.building = 'Distanciel';
+    tail = tail.replace(/^.*?(distanciel|visio|en ligne|remote)/i,'');
+  }
+  else if (campus === '' && CAMPUS[tail.toLowerCase()] !== undefined) {
+    // Only a campus was given. Ex: `Talence`
+    campus = tail;
+    tail = '';
+  }
+
+  // Remove the separators sitting between the building and the room
+  tail = tail.replace(/^[\s@/_.,;:-]+/,'').trim();
+
+  // The kind of room, when given, is followed by a separator. Ex: `Salle_005`, `Amphi C`
+  const kind = tail.match(/^(salle|room|amphi(?:th[eé]?[aâ]tre)?|td|tp)s?(?=$|[\s@/_.,;:-])[\s@/_.,;:-]*/i);
+  if (kind !== null) {
+    const word = kind[1].toLowerCase();
+    location.type = (word === 'td' || word === 'tp') ? word.toUpperCase()
+      : (word.startsWith('amphi')) ? 'Amphi' : 'Salle';
+    tail = tail.slice(kind[0].length);
+  }
+
+  // Whatever remains is the room's name, blanks included. Ex: `Informatique A`
+  const name = tail.replace(/_+/g,' ').replace(/\s+/g,' ').trim();
+  if (name !== '') {
+    location.name = name;
+    if (location.type === '-') {
+      location.type = 'Salle';
     }
-    return accu;
-  }, {index: -1,campus:'-',building:'-',type: '-',name:'-', loc: loc});
-
-  // Fill the missing props of `location`
-  console.log('LOCATION:',location);
-
-  // Must be improved
-  if (location.index === 0) {
-    location = {campus:'Peixotto',building:'CREMI (A28|A21)',type: 'Room',name:'???'};
-  }
-  else if (location.index === 1) {
-    location.campus = 'Peixotto';
-    location.building = 'CREMI (A28|A21)';
-    location.type = 'Room';
-  }
-  else if (location.index === 2) {
-    location.campus = (location.building[0].toUpperCase() === 'A') ? 'Peixotto' : 'Bordes';
-    location.type = 'Room|Amphi';
-  }
-  else if (location.index === 3) {
-    location.campus = (location.building[0].toUpperCase() === 'A') ? 'Peixotto' : 'Bordes';
   }
 
-  // Check specific buildings { A21: 'A21-OMEGA', A28 : 'A28-CREMI',A30: 'A30-LaBRI'};
-  if (location.building === 'A28') {
-    location.building = 'A28-CREMI';
+  if (location.campus === '-' && campus !== '') {
+    location.campus = CAMPUS[campus.toLowerCase()] || capitalize(campus);
   }
-  else if (location.building === 'A30') {
-    location.building = 'A30-LaBRI';
+
+  // Nothing was recognized: the location is not displayed
+  if (location.building === '-' && location.name === '-' && location.campus === '-') {
+    return Object.assign(unknown,{loc: raw});
   }
+
+  location.index = 4;
 
   return location;
+}
+
+/**
+ * One-line version of a location. Ex: `A28-CREMI - Salle 205`
+ * Returns an empty string when nothing is known about the location
+ */
+function formatLocation(location) {
+  if (location === undefined || location === null) {
+    return '';
+  }
+  if (typeof location === 'string') {
+    return location;
+  }
+  const words = [];
+  if (location.building !== '-') {
+    words.push(location.building);
+  }
+  if (location.name !== '-') {
+    words.push(location.type + ' ' + location.name);
+  }
+  return words.join(' - ');
+}
+
+/**
+ * Room of an event written by hand in `rooms.js`, `undefined` if there is none.
+ * The keys are tried from the most specific to the most general:
+ * `<source> YYYY-MM-DD HH:MM` - one course. Ex: `S9_IA 2026-09-15 14:00`
+ * `<source> YYYY-MM-DD`       - one day.    Ex: `S9_POO 2026-09-14`
+ * `<source> <type> <group>`   - Ex: `S7_PYTHON Cours+TD G1`
+ * `<source> <type>`           - Ex: `S7_PYTHON TD machine`
+ * `<source>`                  - the whole UE. Ex: `S9_IA`
+ */
+function getRoom(ueID,ev) {
+  if (typeof room_overrides === 'undefined') {
+    return undefined;
+  }
+  const day = `${ev.start.year}-${ev.start.month.toString().padStart(2,'0')}-${ev.start.day.toString().padStart(2,'0')}`;
+  const keys = [
+    `${ueID} ${day} ${ev.start.time}`,
+    `${ueID} ${day}`,
+    `${ueID} ${ev.type} ${ev.group}`,
+    `${ueID} ${ev.type}`,
+    `${ueID}`
+  ];
+  // The keys are compared without their case, to forgive `g1` instead of `G1`
+  const table = Object.entries(room_overrides).reduce( (accu,[k,v]) => {
+    accu[k.toLowerCase().replace(/\s+/g,' ').trim()] = v;
+    return accu;
+  },{});
+  const key = keys.map( k => k.toLowerCase()).find( k => table[k] !== undefined);
+
+  return (key !== undefined) ? table[key] : undefined;
+}
+
+/**
+ * Room written in the `Lieu:` of a description copied from ADE, `undefined` if there is none.
+ * The rows of the ICS are folded (RFC 5545): the description continues on the next rows
+ * as long as they begin with a blank
+ *
+ * @param rows - All the rows of the ICS
+ * @param index - Row of the `DESCRIPTION`
+ */
+function getPlace(rows,index) {
+  let description = rows[index];
+  for (let i = index + 1; i < rows.length && /^[ \t]/.test(rows[i]); i++) {
+    description += rows[i].substr(1);
+  }
+  const place = description.match(/Lieu ?: ?([^\\]*)/);
+
+  return (place !== null) ? place[1] : undefined;
 }
 
 function yyyymmdd(date) {
@@ -2538,7 +2661,11 @@ function createEvent(ueID,e) {
   ev.type = "Cours";
   ev.group =  "All";
   }
-  ev.location = e.location || 'Unknown::Unknown@Room_unknown';
+  // Rooms in order of priority: the ones written by hand in `rooms.js`, the ICS' LOCATION
+  // and, at last, the `Lieu:` of its description. The first one really usable wins
+  ev.location = [getRoom(ueID,ev), e.location, e.place]
+    .map(getLocation)
+    .find( loc => loc.index !== -1) || getLocation('');
   ev.title = e.title;
   ev.description = e.description; // Sometimes used by Events
   ev.ID = createCalendarID(ev);
@@ -2581,9 +2708,11 @@ function parse_ics(ueID,data) {
       ev.content = str.substr(str.indexOf(':')+1);
     }
     else if (str.indexOf('LOCATION') !== -1 && ev !== undefined) {
-      ev.location = getLocation(str.substr(str.indexOf('TION:')+5)) || {campus: 'None',building:'???', type: 'Room',name:'???'};
+      ev.location = str.substr(str.indexOf('TION:')+5);
     }
     else if (str.indexOf('DESCRIPTION') !== -1) {
+      // The descriptions copied from ADE contain a `Lieu:` used as a fallback room
+      ev.place = getPlace(rows,i);
       if (ueID.includes('MS_')) {
         // Multiple Lines is possible
         const matches = data.match(/DESCRIPTION:.*?\'\'\'([\s\S]*?)\'\'\'/);
@@ -3586,19 +3715,21 @@ function createEventCell(cal_event) {
         html += '<li">Grp: '+ cal_event.group+'</li>';
 
         // Location: Campus::Bldg@[Room\Amphi]_name
-        if (cal_event.location.campus !== '-'
-          && cal_event.location.building !== '-'
-          && cal_event.location.type !== '-'
-          && cal_event.location.name !== '-' ) {
-
+        if (cal_event.location.index !== -1) {
             let campus = cal_event.location.campus;
             let bldg = cal_event.location.building;
             let room = cal_event.location.type;
             let room_name = cal_event.location.name;
-            html += '<li class="hidden-sm hidden-xs">Campus: '+ campus+'</li>';
-            html += '<li class="hidden-sm hidden-xs">Bldg: '+ bldg  +'</li>';
-            html += '<li class="hidden-lg hidden-md">'+ bldg  +'</li>';
-            html += '<li>'+room +': '+ room_name  +'</li>';
+            if (campus !== '-') {
+              html += '<li class="hidden-sm hidden-xs">Campus: '+ campus+'</li>';
+            }
+            if (bldg !== '-') {
+              html += '<li class="hidden-sm hidden-xs">Bldg: '+ bldg  +'</li>';
+              html += '<li class="hidden-lg hidden-md">'+ bldg  +'</li>';
+            }
+            if (room_name !== '-') {
+              html += '<li>'+room +': '+ room_name  +'</li>';
+            }
           }
         else {
           console.warn('No location',cal_event);
@@ -3622,7 +3753,7 @@ function createEventCell(cal_event) {
         mm = (parseInt(cal_event.endDate.getMinutes()) < 10) ? ('0'+ cal_event.endDate.getMinutes()) : cal_event.endDate.getMinutes();
         html += hh + ':' + mm + '</span>';
         html += '</li>';
-        html += '<li>'+cal_event.location+'</li>';
+        html += '<li>'+ formatLocation(cal_event.location) +'</li>';
         html += '</ul>';
         html += '</div>';
     }
