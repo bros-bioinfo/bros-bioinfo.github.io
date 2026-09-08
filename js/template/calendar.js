@@ -2973,6 +2973,17 @@ function nextWeek() {
     updateCalendar();
 }
 
+// Retour a la semaine en cours (meme initialisation que initCalendar())
+function currentWeek() {
+    var cal = document.getElementById("calendar");
+    var now = new Date();
+    cal.dataset.year  = now.getFullYear();
+    cal.dataset.month = now.getMonth();
+    cal.dataset.day   = now.getDate();
+
+    updateCalendar();
+}
+
 
 function parseIcal(txt) {
   let json = [];

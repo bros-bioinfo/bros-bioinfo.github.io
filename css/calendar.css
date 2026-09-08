@@ -27,6 +27,11 @@
 	vertical-align: middle;
 }
 
+/* Bouton "semaine courante", detache des fleches < / > */
+.week-today {
+	margin-left: 18px;
+}
+
 /* Grille hebdomadaire */
 .calendar {
 	font-size: 12px;
@@ -78,8 +83,19 @@
 		font-size: 12px;
 	}
 
+	/* 3 boutons + le numero de semaine dans une colonne col-xs-4 :
+	   on resserre pour eviter le retour a la ligne */
 	#weeknum-small {
 		font-size: 14px;
+		min-width: 24px;
+	}
+
+	.week-nav-small .btn {
+		padding: 1px 4px;
+	}
+
+	.week-nav-small .week-today {
+		margin-left: 8px;
 	}
 
 	#masterYear-small,
