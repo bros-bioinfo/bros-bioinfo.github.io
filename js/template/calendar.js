@@ -994,7 +994,7 @@ var course_data = {
     "image": "ue_stats.jpg",
     "semester": 9,
     "title": "Traitement des donn\u00e9es environnementales - Perfectionnement",
-    "tracks": "0x70",
+    "tracks": "0x30",
     "visibility": "visible"
   },
   "4TBE902U": {
@@ -1145,7 +1145,7 @@ var course_data = {
     "image": "ue_sector.jpg",
     "semester": 9,
     "title": "Fili\u00e8res de la Bioinformatique",
-    "tracks": "0x0F",
+    "tracks": "0x0B",
     "visibility": "visible",
     "html": "FRUAI0333298FCOEN_5226/filieres-de-la-bioinformatique"
   },
@@ -1173,7 +1173,7 @@ var course_data = {
     "image": "ue_project_dev.jpg",
     "semester": 9,
     "title": "G\u00e9nie Logiciel et Gestion de Projet",
-    "tracks": "0x61",
+    "tracks": "0x21",
     "visibility": "visible",
     "html": "FRUAI0333298FCOEN_5219/genie-logiciel-et-gestion-de-projet"
   },
@@ -1201,7 +1201,7 @@ var course_data = {
     "image": "ue_data.jpg",
     "semester": 9,
     "title": "Donn\u00e9es: De l'Entrep\u00f4t \u00e0 l'Analyse",
-    "tracks": "0x07",
+    "tracks": "0x03",
     "visibility": "visible",
     "html":"FRUAI0333298FCOEN_3607/donnees-de-l-entrepot-a-l-analyse"
   },
@@ -1333,7 +1333,7 @@ var course_data = {
     "image": "ue_gis.jpg",
     "semester": 9,
     "title": "Syst\u00e8me d'information G\u00e9ographique",
-    "tracks": "0x60",
+    "tracks": "0x20",
     "visibility": "visible",
     "html":"FRUAI0333298FCOEN_13214/systeme-d-information-geographique"
   },
@@ -2036,7 +2036,7 @@ const calDB = {
         acronym: "S09::FILBI",
         apogee: "4TBI902U",
         isCourse: true,
-        tracks: "0x0F",
+        tracks: "0x0B",
         year: 2
       },
       "4TBI903U": {
@@ -2045,7 +2045,7 @@ const calDB = {
         acronym: "S09::GLog",
         apogee: "4TBI903U",
         isCourse: true,
-        tracks: "0x61",
+        tracks: "0x21",
         year: 2
       },
       "4TBI904U": {
@@ -2054,7 +2054,7 @@ const calDB = {
         acronym: "S09::DEA",
         apogee: "4TBI904U",
         isCourse: true,
-        tracks: "0x07",
+        tracks: "0x03",
         year: 2
       },
       "4TBI905U": {
@@ -2126,7 +2126,7 @@ const calDB = {
         acronym: "S09::TDE++",
         apogee: "4TBE901U",
         isCourse: true,
-        tracks: "0x70",
+        tracks: "0x30",
         year: 2
       },
       "4TBE902U": {
@@ -2144,7 +2144,7 @@ const calDB = {
         acronym: "S09::SIG",
         apogee: "4TDE901U",
         isCourse: true,
-        tracks: "0x60",
+        tracks: "0x20",
         year: 2
       },
       "4TDE902U": {
@@ -2384,7 +2384,7 @@ function getLecturer(name = "------") {
 /**
  * Buildings with a well-known nickname and campus of the buildings (A: Peixotto, B: Bordes)
  */
-const BUILDINGS = {A21: 'A21-OMEGA', A28: 'A28-CREMI', A30: 'A30-LaBRI'};
+const BUILDINGS = {A21: 'A21', A28: 'A28-CREMI', A30: 'A30-LaBRI'};
 
 /**
  * Campus written in the ICS files (Talence is the city, not a campus, but it is widely used)
