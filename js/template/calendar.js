@@ -1560,6 +1560,194 @@ var course_data = {
     "tracks": "0x0F",
     "visibility": "visible"
   },
+/********************************
+  S E M E S T R E  9 - B I O P R O D U C T I O N
+ ********************************/
+
+  "4TBP901U": {
+    "apogee": "4TBP901U",
+    "short": "Bioproduction 1",
+    "language": "French",
+    "acronym": "BioProd1",
+    "background_color": "#F2B705",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Le marché des bioproductions, les procédés de production et les grandes familles de produits biologiques.",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP901U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Bioproduction 1: March\u00e9, proc\u00e9d\u00e9s, produits",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
+  "4TBP902U": {
+    "apogee": "4TBP902U",
+    "short": "Bioproduction 2",
+    "language": "French",
+    "acronym": "BioProd2",
+    "background_color": "#F28705",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Les aspects industriels de la bioproduction, présentés par des intervenants du secteur (Genethon, Cytiva, Fermentalg, Smart Immune...).",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP902U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Bioproduction 2: Aspects industriels",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
+  "4TBP903U": {
+    "apogee": "4TBP903U",
+    "short": "Bioinformatics",
+    "language": "French",
+    "acronym": "BioInfo",
+    "background_color": "#6FB1FC",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Introduction à la bioinformatique appliquée à la bioproduction: cours, TD et travaux sur machine.",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP903U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Bioinformatique",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
+  "4TBP904U": {
+    "apogee": "4TBP904U",
+    "short": "Project Management",
+    "language": "French",
+    "acronym": "GestProj",
+    "background_color": "#9CCC65",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Méthodes et outils de gestion de projet appliqués à un projet industriel ou de recherche.",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP904U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Gestion de projet",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
+  "4TBP905U": {
+    "apogee": "4TBP905U",
+    "short": "Artificial Intelligence",
+    "language": "French",
+    "acronym": "IA",
+    "background_color": "#BA9CE8",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Concepts et usages de l'intelligence artificielle, sous forme de cours intégrés.",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP905U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Intelligence Artificielle",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
+  "4TBP906U": {
+    "apogee": "4TBP906U",
+    "short": "Business Strategy",
+    "language": "French",
+    "acronym": "Strategie",
+    "background_color": "#F08C9E",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Stratégie d'entreprise dans le secteur des biotechnologies.",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP906U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Stratégie d'entreprise",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
+  "4TBP907U": {
+    "apogee": "4TBP907U",
+    "short": "Pharma-Biotech Economics",
+    "language": "French",
+    "acronym": "EcoPharma",
+    "background_color": "#5BC8AF",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Economie des secteurs pharmaceutique et biotechnologique.",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP907U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Economie Pharma-Biotech",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
+  "4TBP908U": {
+    "apogee": "4TBP908U",
+    "short": "Collective Intelligence Project",
+    "language": "French",
+    "acronym": "EPICE",
+    "background_color": "#C9B27C",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Partie expérimentale du projet d'intelligence collective, en travaux pratiques.",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP908U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Projet Intelligence Collective : Partie expérimentale",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
   "4TBIALTR": {
     "acronym": "Alternance",
 
@@ -2157,6 +2345,90 @@ const calDB = {
         year: 2
       },
 
+  // Semester 9 - Parcours BioProduction (ENSTBB).
+  // Ces UE ne viennent pas d'un ICS par UE mais d'un unique export ADE, d'ou
+  // `bundle`; leur `source` est le code ADE qui les identifie dans cet export.
+      "4TBP901U": {
+        semester: "S09",
+        source: "BIO9-MBIO1",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::BioProd1",
+        apogee: "4TBP901U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+      "4TBP902U": {
+        semester: "S09",
+        source: "BIO9-MBIO2",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::BioProd2",
+        apogee: "4TBP902U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+      "4TBP903U": {
+        semester: "S09",
+        source: "BIO9-MBINF",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::BioInfo",
+        apogee: "4TBP903U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+      "4TBP904U": {
+        semester: "S09",
+        source: "BIO9-MGPRO",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::GestProj",
+        apogee: "4TBP904U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+      "4TBP905U": {
+        semester: "S09",
+        source: "BIO9-MIART",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::IA",
+        apogee: "4TBP905U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+      "4TBP906U": {
+        semester: "S09",
+        source: "BIO9-MSTRA",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::Strategie",
+        apogee: "4TBP906U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+      "4TBP907U": {
+        semester: "S09",
+        source: "BIO9-MECON",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::EcoPharma",
+        apogee: "4TBP907U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+      "4TBP908U": {
+        semester: "S09",
+        source: "BIO9-EPICE",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::EPICE",
+        apogee: "4TBP908U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+
   // Semester 10
       "4TBI001U": {
         semester: "S10",
@@ -2300,6 +2572,7 @@ const calDB = {
     CONFERENCE: "Conference",
     CONF: "Conference",
     CI: "Cours+TD",
+    CM: "Cours",
     COURS: "Cours",
     DISTANCIEL:"Online",
     ELEARN:"E-learning",
@@ -2411,6 +2684,10 @@ const CAMPUS = {
  * @ - Returns an object with default props { campus: 'Peixotto', building: 'CREMI (A28|A21)', type: 'Room', name: '???' }
  * <nothing> | `PAS DE SALLE` - Returns an "empty" object with props { campus: '-', building: '-', type: '-', name: '-' }
  *           - The unknown fields are not shown (mainly for events like holidays)
+ * `B<A|B>-<salle>` - Une salle de l'ENSTBB, telle qu'ADE l'ecrit. Ex: `BB-B21`,
+ * `BA-E4`, `BA- (AMPHITHEATRE)`. L'ENSTBB n'etant sur aucun des campus de la
+ * fac, le libelle est garde tel quel: en deduire un batiment ou un campus avec
+ * les regles ci-dessus donnerait une salle fausse.
  */
 function getLocation(loc) {
 
@@ -2437,6 +2714,11 @@ function getLocation(loc) {
       name: shorthand[1] || '???',
       loc: raw
     };
+  }
+
+  // Les salles de l'ENSTBB sont affichees telles qu'ADE les fournit
+  if (/^B[AB]\s*-/.test(raw)) {
+    return {index: 4, campus: 'ENSTBB', building: '-', type: '-', name: raw, loc: raw};
   }
 
   const location = Object.assign({},unknown,{loc: raw});
@@ -2517,7 +2799,7 @@ function formatLocation(location) {
     words.push(location.building);
   }
   if (location.name !== '-') {
-    words.push(location.type + ' ' + location.name);
+    words.push( ((location.type !== '-') ? location.type + ' ' : '') + location.name);
   }
   return words.join(' - ');
 }
@@ -2671,6 +2953,86 @@ function createEvent(ueID,e) {
   ev.ID = createCalendarID(ev);
 
   return ev;
+}
+
+/**
+ * Un export ADE regroupe plusieurs UE dans un seul ICS et ne suit pas la
+ * syntaxe du site: le nom de l'UE est dans le `SUMMARY`, tandis que le code de
+ * l'UE, le type de seance et l'intervenant sont noyes dans la `DESCRIPTION`.
+ * Les evenements sont regroupes par code ADE puis reecrits dans la syntaxe
+ * attendue par `parse_ics()`, qui les traite ensuite UE par UE.
+ */
+
+/** Les lignes d'un ICS sont repliees (RFC 5545): la suite commence par un blanc */
+function unfoldICS(text) {
+  return text.replace(/\r?\n[ \t]/g,'');
+}
+
+/** Les `\,` `\;` `\\` d'un ICS protegent un caractere, pas une fin de ligne */
+function unescapeICS(text) {
+  return text.replace(/\\([,;\\])/g,'$1');
+}
+
+/**
+ * Les salles d'ADE sont celles de l'ENSTBB (`BB-B21`, `BA-E4`,
+ * `BA- (AMPHITHEATRE)`) et sont gardees tel quel - voir `getLocation()`. Seuls
+ * les echappements de l'ICS sont leves, ADE separant par une virgule les
+ * seances qui occupent plusieurs salles.
+ */
+function readADELocation(loc) {
+  return unescapeICS(loc || '').split(',').map( r => r.trim()).filter( r => r !== '').join(', ');
+}
+
+/**
+ * La `DESCRIPTION` d'ADE est une suite de lignes separees par des `\n`
+ * litteraux: `<intervenant?>`, `<code UE>`, `<type>`, `<publics...>`,
+ * `<nom de l'UE>`, `<intervenant?>` puis `(Exporte le:...)`. L'intervenant est
+ * tantot avant le code, tantot apres le nom de l'UE, et parfois absent.
+ */
+function parseADEDescription(description,summary) {
+  const lines = unescapeICS(description).split('\\n').map( s => s.trim()).filter( s => s !== '');
+  const title = unescapeICS(summary).trim();
+  const codeIndex = lines.findIndex( l => /^[A-Z0-9]+-[A-Z0-9]+$/.test(l) );
+  // Ni le code, ni le type, ni un public (`3A FISE`, `AGB-3A CBI`), ni le nom
+  // de l'UE, ni la date d'export: il ne reste que l'intervenant
+  const lecturer = lines.find( (l,i) =>
+       i !== codeIndex && i !== codeIndex + 1
+    && l !== title
+    && !/^(?:[A-Z]{2,}-)?\d[A-Z]\b/.test(l)
+    && !/^\(Export/i.test(l)
+  );
+  return {
+    code    : (codeIndex !== -1) ? lines[codeIndex] : undefined,
+    type    : (codeIndex !== -1) ? lines[codeIndex + 1] : 'Cours',
+    lecturer: lecturer || 'TBD'
+  };
+}
+
+/**
+ * Decoupe un export ADE en un ICS par UE, reecrit dans la syntaxe du site.
+ * Les evenements dont le code ADE n'est rattache a aucune UE sont ignores.
+ */
+function splitADEBundle(data) {
+  const bundles = {};
+  const events = unfoldICS(data).split('BEGIN:VEVENT').slice(1);
+  for (let raw of events) {
+    const body = raw.split('END:VEVENT')[0];
+    const summary = (body.match(/^SUMMARY:(.*)$/m) || [])[1] || '';
+    const description = (body.match(/^DESCRIPTION:(.*)$/m) || [])[1] || '';
+    const ade = parseADEDescription(description,summary);
+    const course = Object.values(calDB.courses).find( c => c.source === ade.code );
+    if (course === undefined) {
+      console.warn('ADE: UE inconnue',ade.code,summary);
+      continue;
+    }
+    const location = readADELocation((body.match(/^LOCATION:(.*)$/m) || [])[1]);
+    // `<Acronyme>**<Intervenant>**<Type>**<Groupe>`, le groupe restant vide
+    const rewritten = body
+      .replace(/^SUMMARY:.*$/m,`SUMMARY:${course.acronym}**${ade.lecturer}**${ade.type}**`)
+      .replace(/^LOCATION:.*$/m,`LOCATION:${location}`);
+    bundles[course.source] = (bundles[course.source] || '') + 'BEGIN:VEVENT' + rewritten + 'END:VEVENT\n';
+  }
+  return bundles;
 }
 
 /**
@@ -3022,17 +3384,29 @@ function initCalendar() {
 
     // Check Spring of Fall Semesters
     console.log('Month',cal.dataset.month);
-    let semesters = (cal.dataset.month < 7) ? ['S08', 'S10'] : ['S07','S09'];
-    if (cal.dataset.month >= 11) {
+    const month = parseInt(cal.dataset.month);
+    let semesters = (month < 7) ? ['S08', 'S10'] : ['S07','S09'];
+    if (month >= 11) {
       semesters = ['S07','S08', 'S09']
+    }
+    else if (month === 0) {
+      // En janvier le S09 court encore, pendant que le S08 et le S10 demarrent
+      semesters = ['S08','S09','S10']
     }
     console.log(semesters);
 
     // Load M1 + M2 events
     const ues = Object.values(calDB.courses).filter( c => semesters.includes(c.semester) );
     console.log(ues);
-    for (let ue of ues) {
+    for (let ue of ues.filter( c => c.bundle === undefined) ) {
       loadCalendarICS(ue.source);
+    }
+
+    // Les UE regroupees dans un meme export ADE partagent un seul fichier:
+    // il est charge une fois puis reparti entre elles
+    const bundles = [...new Set(ues.filter( c => c.bundle !== undefined).map( c => c.bundle) )];
+    for (let bundle of bundles) {
+      loadCalendarBundleICS(bundle);
     }
 
     // Load M2 events
@@ -3068,6 +3442,27 @@ function loadCalendarICS(ueID) {
     const path = "https://master-bioinfo-bordeaux.github.io/data/";
     // HACK: console.info(`Load ${path}${ueID}.ics`)
     xhr.open("GET", `${path}${ueID}.ics`, true);
+    xhr.send(null);
+}
+
+/**
+ * Charge un export ADE local regroupant plusieurs UE et repartit ses evenements
+ * entre elles. Contrairement a `loadCalendarICS()`, le fichier est servi par le
+ * site lui-meme, d'ou un chemin relatif.
+ */
+function loadCalendarBundleICS(path) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+            const bundles = splitADEBundle(xhr.responseText);
+            for (let ueID in bundles) {
+                Object.assign(calendar_data,parse_ics(ueID,bundles[ueID]));
+            }
+            scheduleCalendarRefresh();
+        }
+    };
+    xhr.open("GET", path, true);
     xhr.send(null);
 }
 
@@ -3739,7 +4134,7 @@ function createEventCell(cal_event) {
               html += '<li class="hidden-lg hidden-md">'+ bldg  +'</li>';
             }
             if (room_name !== '-') {
-              html += '<li>'+room +': '+ room_name  +'</li>';
+              html += '<li>'+ ((room !== '-') ? room + ': ' : '') + room_name  +'</li>';
             }
           }
         else {
