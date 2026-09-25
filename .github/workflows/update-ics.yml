@@ -1,0 +1,42 @@
+name: Mise a jour EDT ENSTBB
+
+on:
+  schedule:
+    - cron: "0 5,17 * * *" # 7h et 19h (heure de Paris, ete)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  ADE_URL: "https://ade.bordeaux-inp.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=6772&projectId=1&calType=ical&firstDate=2026-08-17&lastDate=2027-08-22&displayConfigId=71"
+  ICS_PATH: data_calendar/bioprod_2026/ADECal.ics
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Telecharger l'export ADE
+        run: |
+          curl -fsSL --retry 3 -o /tmp/new.ics "$ADE_URL"
+          # Garde-fou : ne jamais remplacer l'EDT par une page d'erreur ou un export vide.
+          grep -q "BEGIN:VCALENDAR" /tmp/new.ics
+          grep -q "BEGIN:VEVENT" /tmp/new.ics
+
+      - name: Comparer et committer si l'EDT a change
+        run: |
+          python3 .github/scripts/ics_fingerprint.py "$ICS_PATH" > /tmp/old.fp
+          python3 .github/scripts/ics_fingerprint.py /tmp/new.ics > /tmp/new.fp
+          if cmp -s /tmp/old.fp /tmp/new.fp; then
+            echo "EDT inchange."
+            exit 0
+          fi
+          diff /tmp/old.fp /tmp/new.fp || true
+          cp /tmp/new.ics "$ICS_PATH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$ICS_PATH"
+          git commit -m "maj auto EDT ENSTBB Bioprod"
+          git push
