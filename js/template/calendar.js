@@ -2941,9 +2941,11 @@ function createEvent(ueID,e) {
 
   let words = e.content.split('**');
 
-  ev.isCourse = calDB.courses[ev.apogee].isCourse;
-  ev.year = calDB.courses[ev.apogee].year;
-  ev.tracks = calDB.courses[ev.apogee].tracks.substr(2,2);
+  // Annee et parcours de l'entree d'ou vient la seance, qui peut partager son
+  // `apogee` avec une autre (ex: `4TBPEVNT`, reserve a BioProd, et `4TBIEVNT`)
+  ev.isCourse = course.isCourse;
+  ev.year = course.year;
+  ev.tracks = course.tracks.substr(2,2);
 
   ev.allDay = e.allDay;
   if (words.length > 1) {
