@@ -2242,7 +2242,7 @@ const calDB = {
         acronym: "S09::DEA",
         apogee: "4TBI904U",
         isCourse: true,
-        tracks: "0x03",
+        tracks: "0x70",
         year: 2
       },
       "4TBI905U": {
@@ -2251,7 +2251,7 @@ const calDB = {
         acronym: "S09::IRD",
         apogee: "4TBI905U",
         isCourse: true,
-        tracks: "0x07",
+        tracks: "0x03",
         year: 2
       },
       "4TBI906U": {
