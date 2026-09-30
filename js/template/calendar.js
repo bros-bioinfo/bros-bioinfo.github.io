@@ -3956,10 +3956,14 @@ function findEvent(events,start,col) {
     }
 
     if (found !== undefined) {
+        // Une seance qui finit apres la derniere ligne (ex: evenement 14:00-23:00)
+        // est coupee au bas de la grille, sinon `table.cells` deborde et
+        // l'exception laisse affichee la semaine precedente
+        var rows = Math.min(found.duration / 30, TableCal.NROWS - (start - 480) / 30);
         // Choose the duration max
         // <td> with gray
         var background_color = (found.children.length > 1) ? '#eee' : course_data[found.children[0].apogee].background_color;
-        html += '<td rowspan="'+ (found.duration / 60 * 2) +'" style="background-color: ' + background_color+';">';
+        html += '<td rowspan="'+ rows +'" style="background-color: ' + background_color+';">';
         if (found.children.length > 1) {
             // HACK: console.log('Overlapping ',found.children);
             html+= '<a title="Overlapping Events"><i class="fa fa-2x fa-object-ungroup"></i></a>';
@@ -3976,7 +3980,7 @@ function findEvent(events,start,col) {
         html += '</td>';
 
         // Update cells
-        for (let t=0; t < found.duration / 30; t++) {
+        for (let t=0; t < rows; t++) {
             // HACK: console.log(max_duration + ' ' + 'table.cells[' + ( (start - 480 )/30 + t) +']['+col+']');
             // HACK: console.log(t,start,(start - 480 )/30 + t,col);
             table.cells[(start - 480 )/30 + t][col]++;
