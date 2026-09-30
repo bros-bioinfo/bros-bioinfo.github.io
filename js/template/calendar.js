@@ -2428,6 +2428,18 @@ const calDB = {
         tracks: "0x04",
         year: 2
       },
+      // Evenements de l'export ADE sans code d'UE (rentree, reunions...),
+      // affiches comme les autres evenements du site (`4TBIEVNT`)
+      "4TBPEVNT": {
+        semester: "S09",
+        source: "BIO9-EVENT",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "Evt::Event",
+        apogee: "4TBIEVNT",
+        isCourse: false,
+        tracks: "0x04",
+        year: 2
+      },
 
   // Semester 10
       "4TBI001U": {
@@ -2995,16 +3007,21 @@ function parseADEDescription(description,summary) {
   const codeIndex = lines.findIndex( l => /^[A-Z0-9]+-[A-Z0-9]+$/.test(l) );
   // Ni le code, ni le type, ni un public (`3A FISE`, `AGB-3A CBI`), ni le nom
   // de l'UE, ni la date d'export: il ne reste que l'intervenant
-  const lecturer = lines.find( (l,i) =>
+  const names = lines.filter( (l,i) =>
        i !== codeIndex && i !== codeIndex + 1
     && l !== title
     && !/^(?:[A-Z]{2,}-)?\d[A-Z]\b/.test(l)
     && !/^\(Export/i.test(l)
   );
+  // ADE peut aussi lister des etudiants inscrits a titre individuel
+  // (`Rossana-Maria Minica` en BIO9-MBINF). Les intervenants ont leur nom en
+  // majuscules (`LABARTHE Simon`): s'il y en a, seuls ceux-la sont gardes
+  const upper = names.filter( l => /\b[A-ZÀ-Ý]{2,}\b/.test(l) );
+  const lecturers = (upper.length > 0) ? upper : names;
   return {
     code    : (codeIndex !== -1) ? lines[codeIndex] : undefined,
     type    : (codeIndex !== -1) ? lines[codeIndex + 1] : 'Cours',
-    lecturer: lecturer || 'TBD'
+    lecturer: lecturers.join(', ') || 'TBD'
   };
 }
 
@@ -3020,16 +3037,24 @@ function splitADEBundle(data) {
     const summary = (body.match(/^SUMMARY:(.*)$/m) || [])[1] || '';
     const description = (body.match(/^DESCRIPTION:(.*)$/m) || [])[1] || '';
     const ade = parseADEDescription(description,summary);
-    const course = Object.values(calDB.courses).find( c => c.source === ade.code );
+    // Sans code d'UE, c'est un evenement (ex: `Rentree 3A FISE et CP`)
+    const isEvent = ade.code === undefined;
+    const source = (isEvent) ? 'BIO9-EVENT' : ade.code;
+    const course = Object.values(calDB.courses).find( c => c.source === source );
     if (course === undefined) {
       console.warn('ADE: UE inconnue',ade.code,summary);
       continue;
     }
     const location = readADELocation((body.match(/^LOCATION:(.*)$/m) || [])[1]);
+    const type = (isEvent) ? ((/rentr/i.test(summary)) ? 'Rentree' : 'Event') : ade.type;
     // `<Acronyme>**<Intervenant>**<Type>**<Groupe>`, le groupe restant vide
-    const rewritten = body
-      .replace(/^SUMMARY:.*$/m,`SUMMARY:${course.acronym}**${ade.lecturer}**${ade.type}**`)
+    let rewritten = body
+      .replace(/^SUMMARY:.*$/m,`SUMMARY:${course.acronym}**${ade.lecturer}**${type}**`)
       .replace(/^LOCATION:.*$/m,`LOCATION:${location}`);
+    if (isEvent) {
+      // Titre de la fenetre de l'evenement, voir `createEventModal()`
+      rewritten = rewritten.replace(/^DESCRIPTION:.*$/m,`DESCRIPTION:${unescapeICS(summary)}`);
+    }
     bundles[course.source] = (bundles[course.source] || '') + 'BEGIN:VEVENT' + rewritten + 'END:VEVENT\n';
   }
   return bundles;
