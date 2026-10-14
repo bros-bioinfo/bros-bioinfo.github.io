@@ -1729,7 +1729,7 @@ var course_data = {
     "apogee": "4TBP908U",
     "short": "Collective Intelligence Project",
     "language": "French",
-    "acronym": "EPICE",
+    "acronym": "PIC",
     "background_color": "#C9B27C",
     "contents": {
       "en": "Coming soon.",
@@ -2021,7 +2021,7 @@ const calDB = {
   0x40: BioProd elective (A2)
   0x60: SDBE + BioProd elective
   0x61: BioComp mandatory + SDBE elective
-  0x70:
+  0x70: tout le monde
 
 
 */
@@ -2233,7 +2233,7 @@ const calDB = {
         acronym: "S09::GLog",
         apogee: "4TBI903U",
         isCourse: true,
-        tracks: "0x21",
+        tracks: "0x01",
         year: 2
       },
       "4TBI904U": {
@@ -2287,7 +2287,7 @@ const calDB = {
         acronym: "S09::QPG",
         apogee: "4TBA903U",
         isCourse: true,
-        tracks: "0x60",
+        tracks: "0x00", // A Changer pour l'année pro, 26-27 option pas ouverte
         year: 2
       },
       "4TBA904U": {
@@ -2422,7 +2422,7 @@ const calDB = {
         semester: "S09",
         source: "BIO9-EPICE",
         bundle: "data_calendar/bioprod_2026/ADECal.ics",
-        acronym: "S09::EPICE",
+        acronym: "S09::PIC",
         apogee: "4TBP908U",
         isCourse: true,
         tracks: "0x04",
