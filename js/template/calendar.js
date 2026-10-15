@@ -1748,6 +1748,29 @@ var course_data = {
     "tracks": "0x04",
     "visibility": "visible"
   },
+  "4TBP909U": {
+    "apogee": "4TBP909U",
+    "short": "Collective Intelligence Project",
+    "language": "French",
+    "acronym": "PIC-Projet",
+    "background_color": "#A68B4F",
+    "contents": {
+      "en": "Coming soon.",
+      "fr": {
+        "program": "Projet d'intelligence collective.",
+        "objectives": "Bient&ocirc;t disponible.",
+        "skills": "Bient&ocirc;t disponible."
+      }
+    },
+    "ects": 3,
+    "icon": "fa fa-graduation-cap",
+    "id": "4TBP909U",
+    "image": "calendar.jpg",
+    "semester": 9,
+    "title": "Projet Intelligence Collective",
+    "tracks": "0x04",
+    "visibility": "visible"
+  },
   "4TBIALTR": {
     "acronym": "Alternance",
 
@@ -2424,6 +2447,16 @@ const calDB = {
         bundle: "data_calendar/bioprod_2026/ADECal.ics",
         acronym: "S09::PIC",
         apogee: "4TBP908U",
+        isCourse: true,
+        tracks: "0x04",
+        year: 2
+      },
+      "4TBP909U": {
+        semester: "S09",
+        source: "BIO9-EPICO",
+        bundle: "data_calendar/bioprod_2026/ADECal.ics",
+        acronym: "S09::PIC-Projet",
+        apogee: "4TBP909U",
         isCourse: true,
         tracks: "0x04",
         year: 2
