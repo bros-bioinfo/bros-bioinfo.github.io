@@ -3061,8 +3061,54 @@ function parseADEDescription(description,summary) {
 }
 
 /**
+ * Une UE apparue dans ADE (ex: `BIO9-EPICO`) n'est pas encore decrite dans
+ * `calDB` ni `course_data`: elle est declaree a la volee a partir de l'export,
+ * sur le modele des evenements du meme export, pour que ses seances
+ * s'affichent sans attendre une mise a jour a la main de ce fichier.
+ */
+function registerADECourse(code,summary) {
+  const model = Object.values(calDB.courses).find( c => c.source === 'BIO9-EVENT' );
+  const title = unescapeICS(summary).trim() || code;
+  calDB.courses[code] = {
+    semester: model.semester,
+    source: code,
+    bundle: model.bundle,
+    acronym: `${model.semester}::${code.split('-').pop()}`,
+    apogee: code,
+    isCourse: true,
+    tracks: model.tracks,
+    year: model.year
+  };
+  course_data[code] = {
+    apogee: code,
+    short: title,
+    language: "French",
+    acronym: code.split('-').pop(),
+    background_color: "#BDB5A6",
+    contents: {
+      en: "Coming soon.",
+      fr: {
+        program: title,
+        objectives: "Bient&ocirc;t disponible.",
+        skills: "Bient&ocirc;t disponible."
+      }
+    },
+    ects: 0,
+    icon: "fa fa-graduation-cap",
+    id: code,
+    image: "calendar.jpg",
+    semester: parseInt(model.semester.slice(1)),
+    title: title,
+    tracks: model.tracks,
+    visibility: "visible"
+  };
+  console.warn('ADE: UE inconnue, ajoutee automatiquement',code,title);
+  return calDB.courses[code];
+}
+
+/**
  * Decoupe un export ADE en un ICS par UE, reecrit dans la syntaxe du site.
- * Les evenements dont le code ADE n'est rattache a aucune UE sont ignores.
+ * Les codes ADE rattaches a aucune UE sont declares via `registerADECourse()`.
  */
 function splitADEBundle(data) {
   const bundles = {};
@@ -3075,11 +3121,8 @@ function splitADEBundle(data) {
     // Sans code d'UE, c'est un evenement (ex: `Rentree 3A FISE et CP`)
     const isEvent = ade.code === undefined;
     const source = (isEvent) ? 'BIO9-EVENT' : ade.code;
-    const course = Object.values(calDB.courses).find( c => c.source === source );
-    if (course === undefined) {
-      console.warn('ADE: UE inconnue',ade.code,summary);
-      continue;
-    }
+    const course = Object.values(calDB.courses).find( c => c.source === source )
+      || registerADECourse(source,summary);
     const location = readADELocation((body.match(/^LOCATION:(.*)$/m) || [])[1]);
     const type = (isEvent) ? ((/rentr/i.test(summary)) ? 'Rentree' : 'Event') : ade.type;
     // `<Acronyme>**<Intervenant>**<Type>**<Groupe>`, le groupe restant vide
